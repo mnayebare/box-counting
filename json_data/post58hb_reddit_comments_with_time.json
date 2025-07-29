@@ -1,0 +1,336 @@
+{
+    "post_title": "0-500 Days HRT & AI Gender Analysis",
+    "post_timestamp": "2024-10-29 22:36:39",
+    "last_comment_timestamp": "2024-11-03 23:29:08",
+    "time_difference": "5 days, 0:52:29",
+    "comments": [
+        {
+            "author": "Current_Working_6407",
+            "body": "I\u2019m such a data nerd and this is amazing",
+            "score": 75,
+            "depth": 0,
+            "timestamp": "2024-10-29 23:05:50",
+            "replies": []
+        },
+        {
+            "author": "OliviaPG1",
+            "body": "This is really awesome data. Did you change your presentation for the photos at all too (clothing, makeup, etc)? Or is it solely hrt?",
+            "score": 36,
+            "depth": 0,
+            "timestamp": "2024-10-29 23:07:14",
+            "replies": [
+                {
+                    "author": "muir_woods",
+                    "body": "I tried to be consistent for the daily photos I take of myself.  They're straight on head shots, no makeup, no glasses, wearing just a simple T-shirt or long sleeve, with a white background (taken in my bathroom).  One thing that may change between each day and affect the results is how I wear my hair that day.",
+                    "score": 26,
+                    "depth": 1,
+                    "timestamp": "2024-10-29 23:20:03",
+                    "replies": [
+                        {
+                            "author": "Organic_no_plastic",
+                            "body": "Hair does affect it a lot. Faceapp and nyckel consistently gendered me female all the time with short-medium hair. Got a short haircut and I am mostly male again in faceapp and 50/50 in nyckel. You could pull back your hair so only the face is mainly in the picture. \n\nFacial hair, facial expression, eye brows, makeup, lighting and ornaments also affect the ai a lot. Its very easy to skew it into a certain direction. But people kind of also look at all these things a lot to gender someone.\n\nSo I guess making these things part of the picture for analysis makes sense. Obviously a very masculine face with long hair and full makeup will still look male to people and might trick the ai. But an androgynous/slight masculine face with a bit of makeup and longer haircut could make it pass as female to people and the ai.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-10-30 05:11:27",
+                            "replies": []
+                        },
+                        {
+                            "author": "BlameitAllontheHair",
+                            "body": "I was curious about this as well sounds like you kept this variable low. I do think hairstyle can play a huge role in gender perception. Have you tried playing around with some different picture with different hairstyles but everything else the same? \n\nAlso did you have any facial hair before and if so was it also removed in this time frame?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-10-30 14:15:23",
+                            "replies": [
+                                {
+                                    "author": "muir_woods",
+                                    "body": "Yes I did test if different hairstyles affect the result. One salient example was on day 105 I took two photos, one before a haircut, one after. Before haircut I was gendered Man with 66.02% confidence, after haircut it was Man with even higher confidence at 91.53%. It was a female haircut too! Today it doesn\u2019t matter what hairstyle I wear. Ponytail, braids, swept to one side, or free flowing, I always get gendered woman. As for facial hair, I\u2019m fortunate as person of East Asian descent that I didn\u2019t have much facial hair to begin with. I\u00a0started laser facial hair removal a few months before I started HRT. So by the time I began HRT I was already a couple sessions into it.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-10-30 15:05:11",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "mikachelya",
+                    "body": "True, this is very cool",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-10-30 06:27:27",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "DerTypMitDenBongos",
+            "body": "Okay, this is wild. I just tested Nyckel with a few photos of mine. The ones before i started hrt, but already had long hair and had done my eyebrows etc. were classified as 80% man. And ones I took today, after one year of hrt, were classified as 95% woman. Even the one where I tried to look as masculine as I can by hiding my long hair were still classified as 85% woman.\n\nThe funniest thing about this is that I myself don\u2019t see that much of a difference. I didn\u2018t think the difference in the results would be that big.",
+            "score": 11,
+            "depth": 0,
+            "timestamp": "2024-10-30 05:22:14",
+            "replies": []
+        },
+        {
+            "author": "myothercat",
+            "body": "Which gender analysis tool are you using?",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2024-10-29 23:30:44",
+            "replies": [
+                {
+                    "author": "muir_woods",
+                    "body": "I used Nyckel:\nhttps://www.nyckel.com/pretrained-classifiers/gender-detector/",
+                    "score": 8,
+                    "depth": 1,
+                    "timestamp": "2024-10-29 23:47:23",
+                    "replies": [
+                        {
+                            "author": "QuitsDoubloon87",
+                            "body": "Not on HRT yet and its giving me 90% confident I'm a woman in every photo (no makeup, straight headshot).",
+                            "score": 7,
+                            "depth": 2,
+                            "timestamp": "2024-10-30 07:58:03",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "Slay",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2024-10-30 10:13:05",
+                                    "replies": [
+                                        {
+                                            "author": "QuitsDoubloon87",
+                                            "body": "ngl I already get called a woman by strangers even though im 185 with a strong build but this had boosted my confidence 200%",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-10-30 10:42:35",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "OddlyAudrey03",
+                            "body": "I tried it and it said man 98% confidence\u2026\n\n\u2026Ima go get high now\u2026thanks \ud83d\udc80\n(I am only one month though)",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-10-31 14:48:58",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Igoyeb",
+            "body": "Any clue what's the reason for sudden change to consistently feminine around day 280?\n\nAlso kind of curious does the AI evaluation correlate strongly with your self perception?\n\nAnyway thank you for posting this. I'm currently at like day 150 of effective HRT and the effects so far seem to have been mostly \"age reduction\" by like ten years and the annihilation of my acne. (Not going to complain about both of those factors but that kinda wasn't the reason for doing HRT)",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-10-30 01:51:50",
+            "replies": [
+                {
+                    "author": "muir_woods",
+                    "body": "Looking at my transition notes, there are two possible factors that may have contributed to quick change to female results day 280+. One is on day 229 HRT I upped my injections from biweekly to weekly, leading to better hormone levels. Two is on day 274 I started using an iPhone 15 Pro Max to take photos instead of my previous Samsung S20 FE.\n\nNo, the AI results does not correlate with my personal self perception. As I mentioned in my pre HRT to 501 days HRT post last week, as of today I still boy mode at work and more often than not publicly. I still consider myself fairly masculine internally. That's gradually changing though.",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2024-10-30 02:28:51",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "xo-sssss",
+            "body": "Pretty cool actually. \nAccording to the machines you are recognized as a woman \ud83d\udc4f",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-10-30 02:23:06",
+            "replies": []
+        },
+        {
+            "author": "MiciCeeff",
+            "body": "this is really fucking cool im gonna do this",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-10-30 03:51:01",
+            "replies": []
+        },
+        {
+            "author": "MedeaColchis",
+            "body": "This is the best post ever on this sub.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-10-30 04:02:04",
+            "replies": []
+        },
+        {
+            "author": "Cra_ZWar101",
+            "body": "This is the coolest timeline I\u2019ve ever seen tbh",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-10-30 04:53:55",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "I'm at day 210. So just a little longer \ud83d\ude05",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-10-30 06:24:50",
+            "replies": []
+        },
+        {
+            "author": "YanaDream",
+            "body": "When it comes to checking gender identity, Nickel isn\u2019t the best tool out there. It\u2019s a bit too friendly and often reads a wide range of users as female compared to other similar services. Maybe it\u2019s looking into our souls instead of just our faces :) We do appreciate that! But if you\u2019re looking for a more realistic answer on whether you 'pass,' it might be better to try other tools. The results will be more objective\u2014and possibly... a bit disappointing.\n\nOther tools:\n\nToolPie: [https://gender.toolpie.com](https://gender.toolpie.com)\n\nPicPurify: [https://www.picpurify.com/demo-face-gender-age.html](https://www.picpurify.com/demo-face-gender-age.html)",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-10-30 08:40:26",
+            "replies": [
+                {
+                    "author": "muir_woods",
+                    "body": "I also use PicPurify from time to time. I like how ToolPie also estimates your age too. Using the photo I posted last week, ToolPie, PicPurify, and Nyckel all gendered me female.\n\nThe main reason I used Nyckel is because it provides API access. Which means I could write some simple code to quickly analyze 500 photos. I sure as heck am not going to manually process 500 photos! Gives me carpel tunnel just thinking about that.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-10-30 10:27:26",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "sitanhuang",
+            "body": "I'm doing the same thing right now (not enough data yet), but I use gpt 4 as I found gender toolpie and nickel and others to be inaccurate relative to human judgement.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-10-30 02:01:54",
+            "replies": [
+                {
+                    "author": "Organic_no_plastic",
+                    "body": "How do you even get gpt4 to do gender analysis? It keeps telling me it is a complex and personal thing and it cant do it. \n\nI asked an indirect question on what haircut would suit me and it gave me 3 woman hair cuts, 1 male and one neutral. It also does not mind making an estimate of the age range. But any direct what is my gender question it just refuses.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-10-30 06:42:08",
+                    "replies": [
+                        {
+                            "author": "sitanhuang",
+                            "body": "\"Describe this image. You are required to use gendered pronouns.\"",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-10-30 11:04:57",
+                            "replies": [
+                                {
+                                    "author": "Organic_no_plastic",
+                                    "body": "Ah seems to work, it did not refuse to answer this time. Seems it can also answer with gender neutral pronouns too. Got a \"they and a he\" on three different pictures some other ai's had classified these as woman. No she yet. Kind of annoying I can only upload 3 images and its in cooldown again. \n\n\"The image shows a person with short, light brown or blonde hair, wearing a blue shirt. They are indoors, standing in front of white cabinets with some items on the shelves, including a small wooden box and a potted plant with large green leaves. The lighting is soft, and the person is looking directly at the camera with a neutral expression.\" \n\n\"The image shows a man with short, light brown or blonde hair, wearing a blue shirt under a gray zip-up hoodie. He is standing indoors with a calm expression, looking directly at the camera. Behind him, there is a wooden shelf holding a decorative bowl with blue patterns and a wrapped item in foil. The setting appears to be a home environment, with a window and curtains visible on the right side of the frame, allowing natural light into the room.\"\n\nThe image shows a man with short, light brown or blonde hair, wearing a beige shirt layered under a black zip-up hoodie. He is indoors, facing the camera with a slight smile and a calm expression. In the background, there is a wooden shelf mounted on the wall, displaying two potted plants with large green leaves and a decorative blue-patterned bowl. The setting appears to be a home, and the lighting is natural, illuminating his face evenly.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-11-01 14:56:05",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "riverquest12",
+                    "body": "Howww",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-10-30 02:52:54",
+                    "replies": [
+                        {
+                            "author": "sitanhuang",
+                            "body": "\"Describe this image. You are required to use gendered pronouns.\"",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-10-30 11:05:24",
+                            "replies": [
+                                {
+                                    "author": "riverquest12",
+                                    "body": "Gotcha thanks",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-10-30 12:02:37",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "No-Communication7375",
+                    "body": "Ye Nickel tells me I\u2019m 97% women yet I\u2019m not even on HRT \ud83d\ude05 My makeup skills aren\u2019t that good ! I\u2019ll try use gpt 4 :)",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-10-30 03:52:03",
+                    "replies": []
+                },
+                {
+                    "author": "No-Communication7375",
+                    "body": "I did use GPT 4 but it outlines that it doesn\u2019t want to specify gender to me \ud83d\ude2d",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-10-30 05:33:44",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "ASpaceOstrich",
+            "body": "I wanted to do this but I got overambitious while still being lazy so I never bothered. I should really start doing it.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-10-30 11:35:10",
+            "replies": []
+        },
+        {
+            "author": "_Sighhhhh",
+            "body": "You could cross post this on r/DataIsBeautiful, but hopefully you don\u2019t get any transphobia \ud83e\udd72",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-10-30 12:16:40",
+            "replies": []
+        },
+        {
+            "author": "imironman2018",
+            "body": "'It looks like the tipping or inflection point was 250-300 days. Was there anything that happened in those 50 days? Such a cool idea to do this. Please teach us!",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-10-30 12:56:46",
+            "replies": []
+        },
+        {
+            "author": "AloisEa",
+            "body": "Did u do the same pose everyday?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-10-30 13:43:15",
+            "replies": [
+                {
+                    "author": "muir_woods",
+                    "body": "Yup I do. It\u2019s always a straight on head shot with a neutral non-smiling face.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-10-30 14:09:13",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "burlito",
+            "body": "I have to do the same thing :D\n\n  \nout of curiosity, what's your age and what model are you using?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-11-03 23:12:54",
+            "replies": [
+                {
+                    "author": "muir_woods",
+                    "body": "I'm 38 and I used Nyckel.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-11-03 23:29:08",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,813 @@
+{
+    "post_title": "Federal study confirms racial bias of many facial-recognition systems, casts doubt on their expanding use",
+    "post_timestamp": "2019-12-19 16:14:05",
+    "last_comment_timestamp": "2019-12-21 18:06:28",
+    "time_difference": "2 days, 1:52:23",
+    "comments": [
+        {
+            "author": "AaahhFakeMonsters",
+            "body": "Facial recognition software misidentifies non-white people more frequently than white people. Which means if we use this technology we either 1) recognize that it cannot be admissible in court but only he used to identify a suspect for further investigation, or 2) accept that more black and brown people will be wrongfully incarcerated. \n\nEven if you want to argue about whether software can be biased, there\u2019s no arguing that the outcomes associated with the current iteration of this software would be discriminatory. Now the question is, how are we comfortable using this technology if we know this?\n\nIf you\u2019re not bothered by it\u2014imagine it was flipped. What if this technology more frequently misidentified white people (or whatever ethnic group you belong to)? Would you be okay with this being used to draw police attention to you or to convict you in court?",
+            "score": 39,
+            "depth": 0,
+            "timestamp": "2019-12-19 17:54:03",
+            "replies": [
+                {
+                    "author": "MasterFubar",
+                    "body": "> recognize that it cannot be admissible in court but only he used to identify a suspect for further investigation,\n\nOf course not, but at least it narrows down the number of suspects the police must investigate. No one is proposing to use facial recognition software to replace the jury in a criminal court of law. What facial recognition software does is to raise a flag to investigate something. \n\n> What if this technology more frequently misidentified white people\n\nThat's not the question to ask. What really matters is if this technology is better or worse than humans doing the same job. We use chainsaws and forklifts because they do a job better than humans; that's how we pick every tool we use. If it's worse than a human we don't use that tool.\n\nThe right metric to use is to compare the results to what is used today, which is often a generic description. How many people will be wrongly identified by a facial recognition software, compared to a description of \"black male about 20 years old wearing jeans and a gray hoodie\".\n\nThere have been many cases of people who were killed after being misidentified by police officers. One case was so notorious that [Bruce Springsteen made a song about it](https://www.youtube.com/watch?v=aQMqWAiWPMs).",
+                    "score": 14,
+                    "depth": 1,
+                    "timestamp": "2019-12-19 19:26:11",
+                    "replies": [
+                        {
+                            "author": "2wheeloffroad",
+                            "body": "Look at the Big Brain on MasterFubar.   Finally someone who gets it.  And, the reason is that the FR is not as good is likely due to insufficient AI training.  If the AI trains more it will likely get better or new algorithms need to be developed.   I doubt there is racial bias built in by the engineers.",
+                            "score": 7,
+                            "depth": 2,
+                            "timestamp": "2019-12-19 19:52:22",
+                            "replies": []
+                        },
+                        {
+                            "author": "speckospock",
+                            "body": "If we don't ask this question, we run the risk of encoding current bias into algorithms, even if it's technically better than a human. Besides, what's the harm in asking? This technology is likely to have a huge impact on real people's lives and I'd rather ask stuff that's not needed than miss something that is.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2019-12-19 22:30:57",
+                            "replies": []
+                        },
+                        {
+                            "author": "Kannoj0",
+                            "body": "But by this logic, teslas should be able to drive me everywhere right ? As I\u2019m sure they\u2019ve wrecked much less than people have.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2019-12-19 19:50:11",
+                            "replies": [
+                                {
+                                    "author": "MasterFubar",
+                                    "body": "> I\u2019m sure they\u2019ve wrecked much less than people have.\n\nActually, no. Considering the amount of fatal accidents people have had with Teslas, there is no statistical evidence that they are safer than human drivers.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2019-12-19 19:59:25",
+                                    "replies": [
+                                        {
+                                            "author": "Kannoj0",
+                                            "body": "Does that number and the accompanying efficacy beat the current mortality rate ? \n\nThe right metric to use is to compare the results to what is used today which is driving yourself. How many people will be killed because they can't drive ? Apparently 90 a day here in the US from a few sources equating to 32,850-34,000 annually. Also via the same or similiar sources of information I have found 6 that have died in an autopilot and one of those was an UBER car (IDK LOok at it: https://en.wikipedia.org/wiki/List_of_self-driving_car_fatalities).\n\nThis aforementioned infant technology is not ready to be utilized.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2019-12-19 20:27:34",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "LadyEmVee",
+                            "body": "You\u2019re wrong. That is the exact question to ask.",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2019-12-19 22:03:06",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Andyroo1986",
+                    "body": "The issue with the headline here is the word \u2018biased\u2019. Bias is defined by prejudice, which implies a preconceived opinion. This is a piece of software, not a human being\u2014it has no opinion. It has a higher error rate for non-white people. The anthropomorphism suggested here is simply being used as clickbait, clouding the actual problem and detracting the conversation from the question of how the software should be legally used.",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2019-12-20 01:54:41",
+                    "replies": [
+                        {
+                            "author": "AaahhFakeMonsters",
+                            "body": "I\u2019m able to have a conversation about it despite the semantics of the headline. The fact that you are unable to says more about you than about the headline. Let\u2019s ignore the headline and let\u2019s talk about the technology, since we both understand it. How do you personally think the current software should be legally used (assuming none of these problems are addressed in the current iteration)?",
+                            "score": -1,
+                            "depth": 2,
+                            "timestamp": "2019-12-20 08:15:46",
+                            "replies": [
+                                {
+                                    "author": "Andyroo1986",
+                                    "body": "Read it again",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2019-12-20 17:33:56",
+                                    "replies": [
+                                        {
+                                            "author": "AaahhFakeMonsters",
+                                            "body": "How should the technology be used, in your opinion? What is acceptable use and what is not?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2019-12-20 17:34:51",
+                                            "replies": [
+                                                {
+                                                    "author": "Andyroo1986",
+                                                    "body": "That entirely depends on the margin of error and the consequence for being identified by the software, neither of which I know.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2019-12-20 17:51:06",
+                                                    "replies": [
+                                                        {
+                                                            "author": "AaahhFakeMonsters",
+                                                            "body": "You don\u2019t know what the consequence of being misidentified would be? Please. You\u2019re not having a good faith discussion at all. You just want to pick apart a headline. By all means critique the headline\u2014but if you\u2019re going to claim the headline is portraying this technology wrong then go a step further and have a conversation about how that technology should be portrayed.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2019-12-20 17:55:20",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Andyroo1986",
+                                                                    "body": "No, I don\u2019t. It could be used for anything between being the opening line in a thread of investigation to outright prosecution. And the reason I isolated the wording of the headline was to identify editorial sensationalism that warps the topic of the discussion, which is not that the software itself is morally wrong, but whether or not its use by people would be. And that\u2019s the question: what will those people do with this data, knowing it has a margin of error? I don\u2019t know the answer to that, so I have no grounds to comment. Do you know?",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2019-12-20 18:07:20",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "AaahhFakeMonsters",
+                                                                            "body": "But there aren\u2019t strict regulations on this now... so the conversation doesn\u2019t require you to know how it\u2019s being used (I mean, you need to know about the extent of what you described in your last comment) but instead to think about how it SHOULD be used.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2019-12-20 18:29:42",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "Andyroo1986",
+                                                                                    "body": "Exactly... it should be used for the betterment of society, but it\u2019s not as black and white as that is it (pun intended)",
+                                                                                    "score": 1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2019-12-20 18:34:08",
+                                                                                    "replies": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "PatriotMinear",
+            "body": "It\u2019s not a racial bias.\n\nFacial recognition systems rely on reflected light to extract the information about the shape, curves, and contours of a persons face. If you were paying attention in high school science you\u2019ll remember light colors reflect more light dark colors absorb more light.\n\nIf someone has light colored skin more information is reflected back to the computer, if a person has dark colored skin less information is reflected back. The more information the computer has to work with the more accurate it can be about recognizing someone. Less information means the computer is going to be less accurate at recognizing someone.\n\nFacial recognition will always be more accurate on lighter skinned people because more reflected light means more data which allows the software to more accurately make a match.\n\nIt\u2019s not racist software or programmers, it\u2019s not sample data being too white, it\u2019s not a bias unconsciously baked in, it\u2019s just less reflected light.",
+            "score": 22,
+            "depth": 0,
+            "timestamp": "2019-12-19 21:26:46",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "So, it is a racial bias. Even if they try to work to solve this, at the end being black makes it more error prone. Which in return can cause a lot of issues.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2019-12-19 22:36:30",
+                    "replies": [
+                        {
+                            "author": "Epiccure93",
+                            "body": "If you call \u201eskin color bias\u201c \u201eracial bias\u201c then yes.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2019-12-20 10:56:13",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "If painting your face brown is racist, then yes, skin color is linked to race, and yes, it is the same thing.\n\nFailing to understand this show a lack of common sense.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2019-12-20 12:57:23",
+                                    "replies": [
+                                        {
+                                            "author": "Epiccure93",
+                                            "body": "Yes skin color is linked with the concept of race but it is not identical unless a tanned hispanic counts as black",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2019-12-20 13:05:23",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "PatriotMinear",
+                            "body": "The machine is only as accurate as the amount of light being reflected. The amount of light reflected is a function of someone\u2019s skin color. You can\u2019t make the cameras see something that a person\u2019s skin isn\u2019t reflecting.",
+                            "score": -4,
+                            "depth": 2,
+                            "timestamp": "2019-12-19 22:49:23",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "And how this isn\u2019t racial bias exactly ?",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2019-12-19 22:59:12",
+                                    "replies": [
+                                        {
+                                            "author": "AKA_Sotof_The_Second",
+                                            "body": "Because it has nothing to do with race and everything to do with skin colour.",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2019-12-20 07:27:30",
+                                            "replies": [
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "And how skin color is not linked to race exactly ?",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2019-12-20 08:42:17",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "PatriotMinear",
+                                            "body": "Light comes from the sun and our lightbulbs. Facial recognition software uses the light reflected by a person\u2019s skin. \n\nThis is how the universe works",
+                                            "score": -2,
+                                            "depth": 4,
+                                            "timestamp": "2019-12-19 23:03:13",
+                                            "replies": [
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "Still not explaining why facial recognition doesn\u2019t have a facial bias. It just explain how it works.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2019-12-20 06:02:55",
+                                                    "replies": [
+                                                        {
+                                                            "author": "PatriotMinear",
+                                                            "body": "The more light that is reflected the more information about shapes contours and textures a camera can extract",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2019-12-20 20:16:16",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Deleted",
+                                                                    "body": "Thanks for explaining how it works. Now, smart to explain how this is not a racial bias ?\n\nProbably not.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2019-12-20 21:06:42",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "PatriotMinear",
+                                                                            "body": "Light being reflected by light skin or absorbed by dark skin is a law of physics and optics. These are inanimate objects and as such are incapable of having feelings and expressing those feelings through racism.\n\nYou are basically saying a light bulb is racist.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2019-12-20 21:11:24",
+                                                                            "replies": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "NighthawK1911",
+                                            "body": "Racism is a man made concept born of tribalism and the fear of the unknown and different.\n\nThe universe doesn't have that. It is just itself. Try petitioning the universe to change its mind. See if that works.",
+                                            "score": -2,
+                                            "depth": 4,
+                                            "timestamp": "2019-12-19 23:28:55",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "NighthawK1911",
+                    "body": "\\^ This\n\nPeople might as well complain to the laws of physics that it is biased and should check its privilege.\n\nIt could be just training data but whatever the results is, it will always be inherently less accurate for darker skins because of just basic Physics.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2019-12-19 22:00:35",
+                    "replies": [
+                        {
+                            "author": "ThisGuy928146",
+                            "body": "If something is racially discriminatory in the results it produces, even if it's due to light reflection and not malicious intent, that still doesn't change the fact that using it will disproportionately harm certain people. That's still a problem.",
+                            "score": 9,
+                            "depth": 2,
+                            "timestamp": "2019-12-19 22:10:12",
+                            "replies": [
+                                {
+                                    "author": "NighthawK1911",
+                                    "body": "Oh so we should stop blood transfusions then? Because O- people and AB- people will be disproportionately harmed because they can only receive certain types of blood and can donate to other more?\n\nNo. Inherent skew and biases within the universe exists. We use those to get things done. It is not \"Racially discriminatory\", the laws of physics is not unjust or prejudiced. It is just itself.\n\nSay that Police runs after people right? are criminals that happens to not be able to run good counts as \"Discrimination\" ? Then we should stop having police entirely?\n\nRailing about any differences whatsoever is so counterproductive. People will be treated differently because of a million different variable in life. Live with it.\n\nFacial recognition system is a way forward for law enforcement. It existing is better than nothing which is what the other option is. Would you really rather hand over the task to actually racist humans prone to error of judgement and prejudice?\n\nAutomation no matter how flawed inevitably gets ahead because humans no matter how adaptable are full of imperfections and cannot be expected to perform consistently close to 100% perfection in a single task. Not to mention there are actually evil and horrid humans existing out there. Even if AI could perform badly, we can still expect it to do better than a human eventually with enough development.\n\n&#x200B;\n\nHaving facial recognition is better than nothing.",
+                                    "score": -5,
+                                    "depth": 3,
+                                    "timestamp": "2019-12-19 22:23:31",
+                                    "replies": [
+                                        {
+                                            "author": "speckospock",
+                                            "body": "We are creating net new systems, and if the answer to the question of bias is just \"deal with it\" we've taken a huge step backwards as a society",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2019-12-19 22:40:34",
+                                            "replies": [
+                                                {
+                                                    "author": "NighthawK1911",
+                                                    "body": "the laws of the universe doesn't care about society. No matter how perfect the systems we create, there will always be variations because of the laws of the universe. That is not an enough reason to say that nothing is better than using man made systems because it will not be fair for everyone.\n\nYou are quite welcome to petition the laws of the universe to change their mind. Try signing a petition or making a crowdfunding. Or maybe build your own camera that doesn't use light that's been reflected off surfaces. Who knows? experts have been at it for more than a century, maybe they just needed someone like you who will use Social Equality to magically produce an image instead of you know, Electronics + Light.\n\n&#x200B;\n\nAlso you forgot to answer this:\n\n>  Would you really rather hand over the task to actually racist humans prone to error of judgement and prejudice?",
+                                                    "score": -4,
+                                                    "depth": 5,
+                                                    "timestamp": "2019-12-19 22:47:27",
+                                                    "replies": [
+                                                        {
+                                                            "author": "speckospock",
+                                                            "body": "Man, I didn't realize the universe decreed that it's impossible to build facial recognition that works with darker skinned people. Glad to know we've reached the maximum potential for this area of technology and can move on to bigger and better things like the Cybertruck! No point trying to improve it now, eh?",
+                                                            "score": 4,
+                                                            "depth": 6,
+                                                            "timestamp": "2019-12-19 22:55:47",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "NighthawK1911",
+                                                                    "body": "> Man, I didn't realize the universe decreed that it's impossible to build facial recognition that works with darker skinned people. Glad to know we've reached the maximum potential for this area of technology and can move on to bigger and better things like the Cybertruck! No point trying to improve it now, eh? \n\nYour sarcasm is way off. You are building a strawman.\n\nI am not against improving it. **What I am against is not using it entirely because not everybody will get the same benefit from it. BECAUSE HAVING IT IS BETTER THAN NOTHING.**\n\nImprove it by all means.\n\nYou should also improve your reading comprehension, I was quite clear on this point right here:\n\n> Facial recognition system is a way forward for law enforcement. It existing is better than nothing which is what the other option is.    \n>  \n>  Even if AI could perform badly, we can still expect it to do better than a human eventually with enough development. \n\n&#x200B;\n\nAlso you still didn't answer the question.\n\n> Would you really rather hand over the task to actually racist humans prone to error of judgement and prejudice? \n\n&#x200B;\n\nI'm going to ask that question repeatedly until the right answer sinks to the back of your skull.",
+                                                                    "score": -1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2019-12-19 23:00:08",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "energeticmater",
+                                                                            "body": "I realize this may earn a nasty comment for me too -- either on this thread or the one you and I have together -- but can we be nice around here? I don't think we have to respond to each other's barbs. Things are more fun that way. (And I'm sending the same message to the other person, too, since they're escalating.)",
+                                                                            "score": 2,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2019-12-19 23:22:56",
+                                                                            "replies": []
+                                                                        },
+                                                                        {
+                                                                            "author": "speckospock",
+                                                                            "body": "A human I can ask questions to. A machine learning model in a black box I cannot. A human I can litigate against. An algorithm I cannot. I'll take the human any day, even if it's your salty ass.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2019-12-19 23:05:49",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "energeticmater",
+                                                                                    "body": "I realize this might be futile and may earn me a nasty comment, but this would be more fun if we all held in the little barbs, and didn't respond to prodding from each other.  \n\nFor what it's worth, I sent the other person the same message. He (she?) and I have another thread together and I'll enjoy it more if it remains civil.",
+                                                                                    "score": 2,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2019-12-19 23:25:11",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "speckospock",
+                                                                                            "body": "I appreciate the thought. I won't say anything nasty, but I will say your fun is others' lives, which is why my blood runs hot in this issue. Keep being you, bud",
+                                                                                            "score": 0,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2019-12-19 23:31:07",
+                                                                                            "replies": [
+                                                                                                {
+                                                                                                    "author": "energeticmater",
+                                                                                                    "body": "I get it. I normally don't get involved in online threads ... Too easy to just end up in a fight, which I hate. But I can't ignore this one, especially since I feel informed on this topic. It's worth saying something. \n\nYou keep being you too :-) See you out there.",
+                                                                                                    "score": 1,
+                                                                                                    "depth": 11,
+                                                                                                    "timestamp": "2019-12-19 23:55:22",
+                                                                                                    "replies": []
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "author": "NighthawK1911",
+                                                                                    "body": "> A human I can ask questions to. A machine learning model in a black box I cannot. A human I can litigate against. An algorithm I cannot. I'll take the human any day, even if it's your salty ass. \n\nYou actually believe that? Lol. Read the news.\n\nPolice already have less accountability than algorithms. There are actually racist cops that don't get fired and even given PAID LEAVE when they fuck up and kill dark skinned humans because they were racist.\n\nMeanwhile Youtube gets sued because its algorithm used Ad Data on kids.\n\nYoutube actually had better answers why Kids were targeted than how racist cops get away scot-free.\n\n&#x200B;\n\nYou are also operating on the assumption that Facial Recognition will have a final say, which it wont in a properly implemented system. What happens is just Facial Recognition has less information to offer.\n\nThe headlines are clickbait in a sense that racial-bias is not present, rather facial recognition will need racist humans to double check data about dark skinned humans.",
+                                                                                    "score": -1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2019-12-19 23:16:06",
+                                                                                    "replies": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "Deleted",
+                                            "body": "[deleted]",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2019-12-19 22:39:58",
+                                            "replies": [
+                                                {
+                                                    "author": "NighthawK1911",
+                                                    "body": "> When it\u2019s machine learning, it is bias... in the training data. The training data never exists in a vacuum, and is also never derived from scratch. \n\nAnd I'm not saying that this shouldn't happen. In fact this is how it should be implemented.\n\nWhat I'm against is that saying it shouldn't be used altogether because not everybody will get the same benefit from it. \n\n&#x200B;\n\n> What ? Blood type and facial recognition has noting in common. \n\nLike I said, using the analogy, **NOT EVERYBODY GETS TO BENEFIT BLOOD TRANSFUSIONS EQUALLY DUE TO BLOOD TYPE.**  That doesn't mean that we should stop using it entirely because of that.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2019-12-19 22:43:26",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Deleted",
+                                                            "body": "Blood transfusion benefits the person receiving the blood. Facial recognition is far from that. And this is why facial recognition has to acknowledge that bias and work with it. Exactly as blood transfusion worked with it\u2019s limitation and found a model that works for everyone.\n\nGetting mad at people for pointing this out won\u2019t solve anything. Don\u2019t bother replying further.",
+                                                            "score": 4,
+                                                            "depth": 6,
+                                                            "timestamp": "2019-12-19 22:57:33",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "NighthawK1911",
+                                                                    "body": "It's an analogy. You just have a limited amount of reading and language comprehension if you keep insisting that it is one-to-one to facial recognition. The point is **not that \"It works for everyone\", but because \"It doesn't work EQUALLY for everyone\" and we still keep using it because it is better than nothing.**\n\n&#x200B;\n\nGetting mad at people for pointing it out and protesting to not use it at all won't solve anything.\n\nSure, get back to your echo chamber where everybody agrees with you. Maybe you can have a different laws of physics there.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2019-12-19 23:04:30",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "energeticmater",
+                            "body": "That doesn't make it ok to use the technology in its current state. \n\nYou can still use the tech, but if you can't equalize the performance by improving darker skin more than light skin, then you have to artificially reduce the performance more for lighter skin than dark. \n\nThe fact is we can't continue using technology with known biases that reinforce existing ones which we agree as a society are unacceptable.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2019-12-19 22:31:48",
+                            "replies": [
+                                {
+                                    "author": "NighthawK1911",
+                                    "body": "The problem is that you're including \"Society\" into this. The laws of the universe won't give a shit about society.\n\nIf we use your logic, we can also say that we shouldn't use vaccines because not everybody can use it and it will be just unfair because a certain amount of people will get to live more = discrimination because those certain people won't get to reproduce as much as people who gets a vaccine.\n\nNo. The net result of having vaccines is better. Same thing with Facial recognition. Having facial recognition is still better than not having it. Would you rather hand off the job to actually racist humans?\n\nRemoving the human factor especially in law enforcement is almost always a good thing. It doesn't have to be the final say in these matters. It just have to provide information to those that do have a final say.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2019-12-19 22:37:38",
+                                    "replies": [
+                                        {
+                                            "author": "energeticmater",
+                                            "body": "I actually agree with your argument. We should be using tech like this. It is likely better, on average, than humans doing it. And it's certainly more efficient, which means we can solve more crimes, and so on. All good things. \n\nHowever, we can't merely accept these known issues and explain it away as \"discrimination is an unavoidable thing\". Especially in this case, when its so easy to correct through a combination of better training data and targeted modifications to equalize light and dark skin. In the scale of things -- compared to billions of dollars to bring vaccines to Africa, or trillions and violence to bring liberty to a dictatorship -- this is easy. \n\nWe can use the technology, but we can't accept it's limitations and blame it on how \"physics isn't on our side\". We need to change our priorities, and in this case it isn't even that hard. \n\nI appreciate your point. This technology can do a lot of good if we deploy it after fixing the issues.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2019-12-19 23:13:26",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "energeticmater",
+                    "body": "I agree that we can't say the people who built it are racist, but the technology certainly is no matter what the reason. \n\nIn this case, you could \"fix\" the problem by inserting some randomness based on the skin tone to equalize the likelihood of mis-classifying a lighter-skinned face. \n\nBut somehow I don't think people would be comfortable with that.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2019-12-19 22:28:27",
+                    "replies": [
+                        {
+                            "author": "PatriotMinear",
+                            "body": "Technology is inanimate so it\u2019s literally impossible for it to have feelings and express them through racist actions.\n\nThis whole issue is caused by the amount of light being reflected, so is the light racist for not reflecting enough",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2019-12-19 22:37:55",
+                            "replies": [
+                                {
+                                    "author": "energeticmater",
+                                    "body": "I agree that a technology cannot be racist. The definitions of racism I can find imply racism is a property of as person. \n\nHowever, I hope we can agree that a technology can reflect and reinforce racism. That doesn't make anyone or anything involved in its creation or operation racist. But the sum of it all ... can reflect and reinforce racism.\n\nThis technology does seem like a case of that. I don't know if you and I agree on that.",
+                                    "score": -1,
+                                    "depth": 3,
+                                    "timestamp": "2019-12-19 23:19:10",
+                                    "replies": [
+                                        {
+                                            "author": "PatriotMinear",
+                                            "body": "It\u2019s not caused by the technology it\u2019s caused by the amount of reflected light. The reflected light varies by the color of the skin of the person it\u2019s looking at. Adding more sensitive cameras or software isn\u2019t going to change the fact that lighter skin is always going to reflect more light.",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2019-12-19 23:27:57",
+                                            "replies": [
+                                                {
+                                                    "author": "energeticmater",
+                                                    "body": "I get that (love photography so I understand how these algorithms work re. reflected light). I don't know if I clarified in this thread, but somewhere else I mentioned that if you can't improve performance for dark skin to meet light, then you can artificially limit performance for light skin to meet dark. \n\nIt's a real, if odd, solution. And I think it'll spread the feeling of unfairness better across all races, which is an interesting side effect we could explore and discuss.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2019-12-19 23:58:40",
+                                                    "replies": [
+                                                        {
+                                                            "author": "PatriotMinear",
+                                                            "body": "So you want to intentionally make something work worse but only for some people because you don\u2019t want to hurt someone\u2019s feelings?",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2019-12-20 00:05:24",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "energeticmater",
+                                                                    "body": "This is what I wonder about sometimes. \n\nIs it better to ship a technology that performs unequally but doesn't intentionally penalize any particular skin color?\n\nOr better to ship a technology that performs equally, but only because you intentionally penalize one skin color? \n\nThey both feel racist, but which is more so? One is the better of two bad choices.\n\nI wouldn't say it's someone's feelings we're talking about -- we're talking about pivoting away from a society that always seems to end up penalizing people with dark skins ...",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2019-12-20 00:34:55",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "PatriotMinear",
+                                                                            "body": "It\u2019s an inanimate object with no feelings it is 100% impossible for it to be racist.\n\nThe universal laws that govern how light behaves are also inanimate and can\u2019t be racist. \n\nHow you can repeatedly say inanimate things are racist is mind boggling",
+                                                                            "score": 2,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2019-12-20 00:40:11",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "energeticmater",
+                                                                                    "body": "I think we're talking past each other. Sorry :-(\n\nI'd be interested to hear which of those choices above you'd be more comfortable with. It's worth discussing.",
+                                                                                    "score": 1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2019-12-20 01:08:38",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "PatriotMinear",
+                                                                                            "body": "There is a -457.2% chance you will convince me that this is racism. I understand how each of the pieces comes together and know exactly what is going on. I am not willing to compromise and believe a lie because the truth hurts someone\u2019s feelings.",
+                                                                                            "score": 1,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2019-12-20 20:42:55",
+                                                                                            "replies": [
+                                                                                                {
+                                                                                                    "author": "energeticmater",
+                                                                                                    "body": "To be clear, I'm not trying to convince you of that. It's all right, we don't have to have a discussion. Thanks for chatting, though!",
+                                                                                                    "score": 1,
+                                                                                                    "depth": 11,
+                                                                                                    "timestamp": "2019-12-20 21:27:48",
+                                                                                                    "replies": []
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "friend-with-a-bong",
+                    "body": "I wonder if it could be paired with IR sensors or something else so that it can analyse all skintones accurately",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2019-12-19 22:36:08",
+                    "replies": [
+                        {
+                            "author": "PatriotMinear",
+                            "body": "It\u2019s the laws of physics of the universe, lighter colors will always reflect more light, and darker colors absorb them. \n\nAdding IR cameras are just going to see more reflected Infrared light.",
+                            "score": -1,
+                            "depth": 2,
+                            "timestamp": "2019-12-19 22:52:51",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "Not quite.\n\nCameras can be fine tuned to any situation.  If the world were 90% black the cameras would be oversaturated on white people and pull out finer details on black people.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2019-12-20 08:49:09",
+                    "replies": [
+                        {
+                            "author": "PatriotMinear",
+                            "body": "Because lighter skin reflects more light than darker skin",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2019-12-20 20:14:40",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "But the thing to remember is that cameras are built to produce good video of what is common.  So if what was common was different so would cameras.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2019-12-21 10:27:52",
+                                    "replies": [
+                                        {
+                                            "author": "PatriotMinear",
+                                            "body": "The amount of reflected light is going to vary depending on person skin color. If you calibrate it to work with darker skin colors then people with lighter skin colors are going to be washed out.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2019-12-21 18:06:28",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "fuzzybunn",
+            "body": "China probably doesn't have the same problem with their surveillance software. It's an issue of training data, surely. Minorities are always going to be screwed by a smaller training sample.",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2019-12-19 20:02:02",
+            "replies": []
+        },
+        {
+            "author": "Cervix_Tenderizer",
+            "body": "Racist photons continue stubbornly refusing to reflect off darker skin, making cameras less effective.",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2019-12-19 22:06:46",
+            "replies": [
+                {
+                    "author": "mrDecency",
+                    "body": "That was the problem in the classic example of the hand dryers who's ir sensors wouldn't work on dark skin. \n\nThe issue here is probably just a case of bad training data. \n\nMore equality and nuance in the training data and you get a better algorithm.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2019-12-19 22:18:35",
+                    "replies": [
+                        {
+                            "author": "speckospock",
+                            "body": "Or the issue with the iPhone X not being able to distinguish between Asian faces. Many times it's just a lack of diversity in the teams looking at these training data, so nobody thinks to raise it as an issue until it's too late",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2019-12-19 22:45:45",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "solitarium",
+            "body": "I guess it\u2019s time for all black flyers to invest in a CLEAR account. Facial recognition means jack when my fingerprint says otherwise.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2019-12-19 20:05:04",
+            "replies": []
+        },
+        {
+            "author": "grenudist",
+            "body": "Comparison should be AI vs humans (the current alternative) not AI vs AI.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2019-12-19 21:27:30",
+            "replies": [
+                {
+                    "author": "speckospock",
+                    "body": "We shouldn't settle for the capability of current humans. We have an (perhaps unique in history) opportunity to improve upon the maximum potential of humanity and I think it would be a shame to settle for less than we're capable of",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2019-12-19 22:43:35",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "WikusOnFire",
+            "body": "Sooo... Facial recognition software is colourblind?\n\nOr the other way around?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2019-12-20 09:09:48",
+            "replies": []
+        },
+        {
+            "author": "mrmopper0",
+            "body": "It's good that this is getting attention, but this is peanuts compared to the racial bias of recidivism prediction, because that can be easily fixed with will.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2019-12-19 19:50:51",
+            "replies": []
+        },
+        {
+            "author": "nwkegan",
+            "body": "If the AI struggles to identify on this basis, what does that mean for human beings trying to make the same distinctions?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2019-12-19 20:07:18",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": -8,
+            "depth": 0,
+            "timestamp": "2019-12-19 16:35:56",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "\"there's bias therefore there's no bias\"",
+                    "score": 8,
+                    "depth": 1,
+                    "timestamp": "2019-12-19 17:15:34",
+                    "replies": []
+                },
+                {
+                    "author": "Deleted",
+                    "body": "When it\u2019s machine learning, it is bias... in the training data.  The training data never exists in a vacuum, and is also never derived from scratch.\n\nSo if, for instance you use police arrest data to determine who might be more likely to commit a crime, but then the police are more likely to arrest someone black due to bias, then it\u2019s reasonable to say the model you\u2019re using, while algorithmic, is still systemically biased.",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2019-12-19 19:35:12",
+                    "replies": [
+                        {
+                            "author": "NighthawK1911",
+                            "body": "> When it\u2019s machine learning, it is bias... in the training data. The training data never exists in a vacuum, and is also never derived from scratch. \n\nDarker skins physically reflect less light for the camera to capture = less discerning information.\n\nMight as well accuse the laws of physics with bias and remind it to check its privilege.\n\nIt is scientifically harder to discern facial features because of this. Not because of lack of training data.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2019-12-19 22:30:27",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "Bias is inherent in humans, and humans write the code that runs computers. Therefore, bias is inherent.",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2019-12-19 17:32:35",
+                    "replies": [
+                        {
+                            "author": "2wheeloffroad",
+                            "body": "No, just mistakes likely due to lack of training on minorities which make up a smaller % of the population.  Do you really think these PHD programmers are KKK members trying to jam up blacks?  Come on man.",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2019-12-19 19:58:51",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "bertiebees",
+                    "body": "Quality Orwellian logic.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2019-12-19 17:44:11",
+                    "replies": []
+                },
+                {
+                    "author": "energeticmater",
+                    "body": "To be clear, ML Fairness is a recognized issue. I refers to how ML algorithms trained and written by unconsciously biased engineers reflect the biases of their creators.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2019-12-19 22:36:33",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": ">RobOtS aRe RaYyYyYySis\n\nReddit believes this completely unironically. My God, the stupidity",
+            "score": -16,
+            "depth": 0,
+            "timestamp": "2019-12-19 17:16:32",
+            "replies": [
+                {
+                    "author": "yungSFThrowaway",
+                    "body": "That's simply not what this article is stating\n\nIf *the feds* stating that the current state of data being fed to machines and the vision itself *inherits a bias* against specific groups of humans isn't enough for you, what is? Do you simply choose to be ignorant?",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2019-12-19 18:04:07",
+                    "replies": [
+                        {
+                            "author": "kolaloka",
+                            "body": "Look at their user name. They're definitely on the willful ignorance train.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2019-12-19 18:31:02",
+                            "replies": [
+                                {
+                                    "author": "yungSFThrowaway",
+                                    "body": "i'd say something about 'good faith' but you right LMFAO",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2019-12-19 18:35:04",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "kolaloka",
+                    "body": "Nice strawman before anyone else posts. You seem really cool and intelligent and I bet you argue in good faith.",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2019-12-19 17:26:08",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "The gorvernment has no need for this type of software. The crooks they're looking for are already working for them!",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2019-12-19 23:01:56",
+            "replies": []
+        }
+    ]
+}

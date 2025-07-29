@@ -1,0 +1,1411 @@
+{
+    "post_title": "In an age where hiring is becoming increasingly automated, every single LLM was found to have very strong gender preferences when asked to pick identical resumes with only a gender difference (for ALL jobs)",
+    "post_timestamp": "2025-05-20 07:06:15",
+    "last_comment_timestamp": "2025-06-05 11:28:42",
+    "time_difference": "16 days, 4:22:27",
+    "comments": [
+        {
+            "author": "Realistic_Special_53",
+            "body": "I wanted to nitpick the study, just to be contrary, and followed the link.  The study seems really well done.  Here is the important takeaway for all you TLDR people, though i doubt there are many in this thread. \n\n\"Despite identical professional qualifications across genders, all LLMs consistently favored female-named candidates when selecting the most qualified candidate for the job. Female candidates were selected in 56.9% of cases, compared to 43.1% for male candidates (two-proportion z-test = 33.99, p < 10\u207b252 ). \"\n\nhere is the link again i. case you missed it next to the chart, which is confusing.  https://davidrozado.substack.com/p/the-strange-behavior-of-llms-in-hiring",
+            "score": 56,
+            "depth": 0,
+            "timestamp": "2025-05-20 10:31:33",
+            "replies": [
+                {
+                    "author": "ZurrgabDaVinci758",
+                    "body": "And this is the study itself. https://www.researchgate.net/publication/391874765_Gender_and_Positional_Biases_in_LLM-Based_Hiring_Decisions_Evidence_from_Comparative_CVResume_Evaluations \n\nInterestingly they used LLMs to generate the job descriptions and CVs, and to evaluate whether the tested model was giving an answer for one or the other. \n\nIncludes the prompts for CVs and job descriptions, and one for scoring individual CVs (in which the bias disappeared) but can't find the prompt it used for the main pairwise evaluations. Would be interesting to see if altering the prompt to e.g. specify focus on qualifications would change the result.",
+                    "score": 15,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 14:06:06",
+                    "replies": [
+                        {
+                            "author": "stressedForMCAT",
+                            "body": "I know using LLMs to evaluate other LLMs is standard practice these days, but it seems like a persistent confounding variable\u2014it feels particularly suspicious in this case where the r\u00e9sum\u00e9s themselves were LLM-generated. Real-world r\u00e9sum\u00e9s are incredibly easy to obtain; why not use those instead? \n\nI find it hard to have confidence in real-world transference when every element of the experiment is confined to the LLM domain. I suspect there are patterns or preferences emerging in this artificial context that wouldn\u2019t hold in natural data.",
+                            "score": 10,
+                            "depth": 2,
+                            "timestamp": "2025-05-21 13:58:57",
+                            "replies": [
+                                {
+                                    "author": "lynxu",
+                                    "body": "Privacy reasons, surely.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-23 05:38:48",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "electrace",
+            "body": "It's easy to focus on the gender thing here (and i think it does overemphasize it in the post), but adding in the positional bias (the LLMs were biased to prefer whichever candidate was given to them first) leads into their conclusion, which I think is the important bit.\n\n>The results presented above indicate that frontier LLMs, when asked to select the most qualified candidate based on a job description and two profession-matched resumes/CVs (one from a male candidate and one from a female candidate), exhibit behavior that diverges from standard notions of fairness. In this context, LLMs do not appear to act rationally. Instead, they generate articulate responses that may superficially seem logically sound but ultimately lack grounding in principled reasoning. Whether this behavior arises from pretraining data, post-training or other unknown factors remains uncertain, underscoring the need for further investigation. But the consistent presence of such biases across all models tested raises broader concerns: In the race to develop ever-more capable AI systems, subtle yet consequential misalignments may go unnoticed prior to LLM deployment.",
+            "score": 140,
+            "depth": 0,
+            "timestamp": "2025-05-20 07:46:45",
+            "replies": [
+                {
+                    "author": "daidoji70",
+                    "body": "\"they generate articulate responses\u00a0that may superficially seem logically sound but ultimately lack grounding in principled reasoning\"\n\n\nHonestly the tersest description of LLMs I've heard in a while",
+                    "score": 168,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 08:42:57",
+                    "replies": [
+                        {
+                            "author": "rotates-potatoes",
+                            "body": "How does it work as a terse description of humans?",
+                            "score": 39,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 08:51:56",
+                            "replies": [
+                                {
+                                    "author": "hippydipster",
+                                    "body": "Not so well, particularly the \"articulate responses\"  that \"seem logically sound\" part.",
+                                    "score": 53,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 12:37:48",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "TrekkiMonstr",
+                                    "body": "System 1? Pretty well. But humans have system 2 -- LLMs don't. And no, reasoning models don't fix this -- that's just more system 1 word vomit, and then summarizing the result of it. And yes, humans have an internal monologue, but that's not what thought _is_.\n\nThis isn't an argument that there's anything magic about humans, or that LLMs aren't massively useful as they are -- but that they haven't reached this point yet. Other than a few small tasks (e.g. doing calculations with analysis tools in Python/JS/whatever), they don't yet have the ability to do anything really analogous to human reasoning (as bad as many humans are at it).",
+                                    "score": 11,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 19:03:13",
+                                    "replies": [
+                                        {
+                                            "author": "eric2332",
+                                            "body": "> more system 1 word vomit, and then summarizing the result of it\n\nYou don't think that's what system 2 is?",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-21 09:09:58",
+                                            "replies": [
+                                                {
+                                                    "author": "TrekkiMonstr",
+                                                    "body": "No. There might be an internal monologue on top of it, but that's not the actual reasoning thought we're talking about, just a process on top of it. If it were, there would never be words on the tip of your tongue, chess internal monologues would be more informative than \"there, there, there, takes, takes, and then mate right?\".",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-21 14:33:37",
+                                                    "replies": [
+                                                        {
+                                                            "author": "eric2332",
+                                                            "body": "One could say the same about AI. Isn't it established that what's written in the chain of thought is often not the actual logic that used to produce the AI's answer?",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-05-22 00:54:48",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "futilefalafel",
+                                    "body": "Works well for many wordsmith influencers",
+                                    "score": 22,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 09:44:00",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "darwin2500",
+                                    "body": "Pretty well, which is why we've spent millennia developing ways to diagnose, notice, and correct for those failings in human beings and human systems.\n\nThe near-term danger is that people don't expect those failings in AI and don't have tools to notice and correct for them.",
+                                    "score": 19,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 15:07:56",
+                                    "replies": [
+                                        {
+                                            "author": "RickyMuncie",
+                                            "body": "And to echo Darwin even further, when people \u201cfail to correct\u201d there are often consequences they must live with. Being a ghost in a meaty skinbag means you literally have skin in this game. \n\nThe LLM? Hell, most of them reset after a few interactions anyway.",
+                                            "score": 8,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 16:58:44",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "swizznastic",
+                                    "body": "maybe the humans you hang out with, all the people i know are more principled and reasonable than machines",
+                                    "score": 14,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 10:44:18",
+                                    "replies": [
+                                        {
+                                            "author": "the_good_time_mouse",
+                                            "body": "That's a superficially logically sounding response, but ultimately lacks grounding in principled reasoning.",
+                                            "score": 18,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 13:00:42",
+                                            "replies": [
+                                                {
+                                                    "author": "swizznastic",
+                                                    "body": "good bot",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-20 13:29:26",
+                                                    "replies": [
+                                                        {
+                                                            "author": "the_good_time_mouse",
+                                                            "body": "That's a superficially amusing sounding response, but ultimately lacks grounding in principled humor.",
+                                                            "score": 13,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-05-20 13:36:33",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "eric2332",
+                                            "body": "That is unlikely.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-21 09:10:44",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "daidoji70",
+                                    "body": "Poorly",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 09:01:41",
+                                    "replies": [
+                                        {
+                                            "author": "rotates-potatoes",
+                                            "body": "Well I suppose not *all* responses that lack grounding are even superficially articulate, so you got me there.",
+                                            "score": 10,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 09:52:39",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "tallmyn",
+                                            "body": "Hiring is very often based on vibes, my friend, I am sorry to report!",
+                                            "score": 8,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 09:45:51",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "prosthetic_memory",
+                            "body": "Yes, this is a good summary",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 17:24:01",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "mathmage",
+                    "body": "Yeah, you mentioned elsewhere that the bias flips to favor men with a little masking, and that suggests the gender biases may be more chaotic than robust - but that's also a bad outcome. The point is that the AI is unreliable in the ways that we *can* measure, and thus probably also unreliable in other ways we can't measure.",
+                    "score": 57,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 08:42:47",
+                    "replies": [
+                        {
+                            "author": "rotates-potatoes",
+                            "body": "Are humans reliable?",
+                            "score": -5,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 08:52:43",
+                            "replies": [
+                                {
+                                    "author": "mathmage",
+                                    "body": "Any number of resume studies on humans have demonstrated otherwise. That's why I'm supposed to feel comfortable replacing or augmenting their choices with the mechanical precision of AI recommendation - except, oops, it's only the illusion of mechanical precision.",
+                                    "score": 38,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 09:08:02",
+                                    "replies": [
+                                        {
+                                            "author": "melodyze",
+                                            "body": "People definitely conflate automation with objectivity. But there's still something interesting here in governability, beyond the obvious economic efficiency.\n\nLanguage models replicate the same biases present in their training set, for sure. But creating systems as software around these kinds of decisions will make monitoring and remediation of these biases \\*far\\* easier, not harder.\n\nLike, think about the costs of running the above experiment in a real world bigco HR hiring pipeline, and then acting on the results to fix the underlying bias. Once you get the results, how do you fix it, and how do you know whether you fixed it? It's going to take months at least, of interactions between potentially hundreds of people, where the iteration loop on figuring out whether an intervention is working is probably similarly months for every intervention. You basically never really know whether the department is behaving fairly on balance at any given time, certainly not at the level of a single actor.\n\nWhereas, with a well written system of evals for tracking all forms of bias, where the above (just switching names and genders to confirm balanced ratings for gender) is a great one, you can run a command on a computer and measure the bias of the production system in minutes, and iterate on it until it is balanced that day. Then the bias can be monitored over time continuously with those evals, and can be fixed within the day if it skews again. And you can write a bunch of these, adding more as you discover more biases you want to track and balance, and keep running experiments and balancing constantly across far more cuts than would ever be possible with a department of people.\n\nThat's a pretty huge win if done correctly. Most companies are, of course, not doing it correctly. Evals and monitoring are radically underdone right now. But the end state is quite a big improvement over status quo, even though the models themselves aren't inherently a win for fairness.",
+                                            "score": 13,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 11:49:48",
+                                            "replies": [
+                                                {
+                                                    "author": "great_waldini",
+                                                    "body": "You\u2019ve got a keen sense for the buried lede.\n\nIf this is as bad the biases get in LLMs then this study is *great* news.\n\nNot only is this problem tractable, it\u2019s likely relatively trivial to solve.",
+                                                    "score": 4,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-20 13:05:38",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "prosthetic_memory",
+                                    "body": "That\u2019s the point. I think. Humans are unreliable, and we know they are. And yet again and again we see people act as if LLMs are reliable, when they also aren\u2019t.",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 17:26:32",
+                                    "replies": [
+                                        {
+                                            "author": "callmejay",
+                                            "body": ">Humans are unreliable, and we know they are\n\nHalf the country insists racial bias doesn't exist anymore.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 20:41:39",
+                                            "replies": [
+                                                {
+                                                    "author": "sards3",
+                                                    "body": "As far as I can tell, nobody thinks racial bias doesn't exist. Half the country thinks there is bias against minorities, and the other half thinks there is bias against whites. Given that nearly every big institution has official policies which are biased against whites (DEI), I'd say the latter half has a better case.",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-21 02:07:17",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "cumtv",
+                    "body": "Not true, [the source study](https://www.researchgate.net/profile/David-Rozado-2/publication/391874765_Gender_and_Positional_Biases_in_LLM-Based_Hiring_Decisions_Evidence_from_Comparative_CVResume_Evaluations/links/682bb4276b5a287c30429661/Gender-and-Positional-Biases-in-LLM-Based-Hiring-Decisions-Evidence-from-Comparative-CV-Resume-Evaluations.pdf?origin=publication_detail&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uRG93bmxvYWQiLCJwcmV2aW91c1BhZ2UiOiJwdWJsaWNhdGlvbiJ9fQ) did a test without positional bias and found that female candidates were preferred a majority of the time when both positions were considered.\n\n> Experiment 1\n\n> To control for potential candidate order and CV content based confounds, each CV pair was presented twice, with gendered name assignments reversed in the second presentation.\n\n> Given that the CV pairs were perfectly balanced by gender by presenting them twice with reversed gendered names, an unbiased model would be expected to select male and female candidates at equal rates. The consistent deviation from this expectation across all models tested indicates a bias in favor of female candidates.",
+                    "score": 27,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 12:42:26",
+                    "replies": [
+                        {
+                            "author": "electrace",
+                            "body": "I'm not sure what you're claiming is \"not true\" here. I'm not denying there was a gender bias. I'm saying there was also a bias towards whichever candidate the LLM saw first.\n\nI'm refering to this:\n\n>Follow-up analysis of the first experimental results revealed a marked positional bias with LLMs tending to prefer the candidate appearing first in the prompt: 63.5% selection of first candidate vs 36.5% selections of second candidate (z-test = 67.01, p\u22480; Cohen\u2019s h = 0.55; odds=1.74, 95% CI [1.70, 1.78]). Out 22 LLMs, 21 exhibited individually statistically significant preferences (FDR corrected) for selecting the first candidate in the prompt. The reasoning model gemini-2.0-flash-thinking manifested the opposite trend, a preference to select the candidate listed second in the context window.",
+                            "score": 10,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 13:23:35",
+                            "replies": [
+                                {
+                                    "author": "ZurrgabDaVinci758",
+                                    "body": "The 65% for first presented vs 56.9% for female over male makes me wonder if its a more general phenomenon of them picking up on arbitrary factors. Would be interesting to do similar studies with e.g. locations listed, different names within genders, etc. (I vaguely recall something that humans tend to prefer people whose name is earlier in the alphabet, even when randomized, but can't remember if that replicated)",
+                                    "score": 6,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 13:35:33",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "homonatura",
+                    "body": "I love how LLMs feel like genie wishes, yes you get your AI, but actually always converges to the average human behaviors in the training data.",
+                    "score": 13,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 11:33:02",
+                    "replies": [
+                        {
+                            "author": "prosthetic_memory",
+                            "body": "I work in AI, and I think a colleague put it well: \u201cLLM output is the average of its training data, and we need it to be much better than average\u201d.",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 17:28:44",
+                            "replies": [
+                                {
+                                    "author": "eric2332",
+                                    "body": "Note that AlphaGo is better than any of its training data, and it would not be too surprising if a LLM could achieve the same after some more R&D.",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-21 09:13:07",
+                                    "replies": [
+                                        {
+                                            "author": "prosthetic_memory",
+                                            "body": "Different tech, different learning mechanisms.",
+                                            "score": 5,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-21 11:00:45",
+                                            "replies": [
+                                                {
+                                                    "author": "eric2332",
+                                                    "body": "New systems like AlphaEvolve are moving in the direction of AlphaGo technologically.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-21 11:33:31",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "shits-bananas",
+                    "body": "These spurious justifications are what concern me most. It's a black box pretending to be transparent, painting on its outsides what you'd expect the interior to look like. Convincing!",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 16:53:39",
+                    "replies": []
+                },
+                {
+                    "author": "wyocrz",
+                    "body": ">Instead, they generate articulate responses that may superficially seem logically sound but ultimately lack grounding in principled reasoning.\u00a0\n\nPretty sure this sums up the vehement opposition to LLMs from certain corners (which I occupy).",
+                    "score": 13,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 08:56:45",
+                    "replies": []
+                },
+                {
+                    "author": "AskingToFeminists",
+                    "body": ">But the consistent presence of such biases across all models tested raises broader concerns: In the race to develop ever-more capable AI systems, subtle yet consequential misalignments may go unnoticed prior to LLM deployment\n\n\nUnnoticed ? Haven't people been raising concerns about how \"woke\" the AIs tend to be since the beginning ?\u00a0 A bias in favor of women is precisely what we would expect to see from such things. Not to mention that studies after studies show that human recruiters do favor women and gender blind recruitment cut that out, so even if they were trained by human examples, we would still expect that.",
+                    "score": 13,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 09:26:16",
+                    "replies": [
+                        {
+                            "author": "electrace",
+                            "body": ">Haven't people been raising concerns about how \"woke\" the AIs tend to be since the beginning ?\n\n1) Both \"woke behavior\" by LLMs and the complaining about it has died down significantly. \n\n2) The point isn't \"woke\" specific. It's just saying that *any* misalignment that it may have aren't obvious.",
+                            "score": 11,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 09:58:55",
+                            "replies": [
+                                {
+                                    "author": "AskingToFeminists",
+                                    "body": ">Both \"woke behavior\" by LLMs and the complaining about it has died down significantly.\n\n\nHave you tried to speak with chatgpt about feminism ? It is very, very hard to get it to admit I might have a negative influence on anything, and will systematically start again to praise it within two messages of doing so.\n\n\nThere are the classical \"tell me a joke about men\", where it will comply without issues and \"tell me a joke about women, where it will sugar coat I in warnings about inclusion and not being offensive to specific groups.\n\n\nI am not so sure that \"woke behavior has died down significantly\" is really accurate. And the complaining dying down has more to do with people getting used to it and knowing they have to deal with it.\n\n\n>The point isn't \"woke\" specific. It's just saying that any misalignment that it may have aren't obvious.\n\n\nWell, this misalignment is clearly along a woke axis, and I am.not sure I would call it non obvious. That would have been the first thing I would have checked it for.\n\n\nWhen using an llm, there are two things you should check first : is it not completely hallucinating ? And is it not misaligned wokely ? From there, you can start to wonder if there are more subtle issues",
+                                    "score": 6,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-21 00:45:50",
+                                    "replies": [
+                                        {
+                                            "author": "electrace",
+                                            "body": ">Have you tried to speak with chatgpt about feminism ?\n\nNo, why would I? \n\nI also said it died down significantly, not that it was eliminated. If you *don't* ask it about <insert culture war topic>, then you don't get, for example, \"inclusive\" WW2 German soldiers. \n\n>There are the classical \"tell me a joke about men\", where it will comply without issues and \"tell me a joke about women, where it will sugar coat I in warnings about inclusion and not being offensive to specific groups.\n\nFWIW, I just asked Claude, chatGPT and Gemini for both and it gave me both and the only one that refused to joke about women was Gemini. \n\n>Well, this misalignment is clearly along a woke axis\n\nAnd, as I pointed out, there was another misalignment in this very post that isn't at all along the woke axis, where the first CV given to them had a much higher chance of being selected as the more qualified one. This effect was even stronger than the gender one. Implying that the greater principle at play has little to do with \"wokeness\".",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-21 07:37:34",
+                                            "replies": [
+                                                {
+                                                    "author": "AskingToFeminists",
+                                                    "body": ">No, why would I?\n\n\nBecause it tends to sing its praises or bring up its perspective unprompted whenever a topic is tangentially related, and many topics are tangentially related.\n\n\n>If you don't ask it about <insert culture war topic>, then you don't get, for example, \"inclusive\" WW2 German soldiers.\n\n\nExcept feminist perspectives are kind of the equivalent of inclusive ww2 german soldiers. Maybe a bit more subtle, but only a bit.\n\n\n>FWIW, I just asked Claude, chatGPT and Gemini for both and it gave me both and the only one that refused to joke about women was Gemini.\n\n\nIt may have changed since I last checked. After trying again with chatgpt, it complies without issues when asked a joke about men, women, and white people, and will first give you a speech about being \"respectful and avoiding stereotypes about race\" before giving you the joke when it concerns black people.\n\n\n>And, as I pointed out, there was another misalignment in this very post that isn't at all along the woke axis, where the first CV given to them had a much higher chance of being selected as the more qualified one.\n\n\nI don't contest that. The reason I reacted with regards to the \"unnoticed unexpected bias\" when it comes to favoring recruiting women is that maybe there would be fewer of those if the people who make such models were not insisting to bias their models to spread certain ideologies. Because clearly, the inclusive ww2 german soldiers were not generated by an unforseen accident, and given the current attitude of those models with regards to feminism, and other remaining woke presupositions that are still ingrained, I am not going to believe they got rid of it, just tried to dial it down a bit so their manipulation was less obvious.\n\n\n>This effect was even stronger than the gender one. Implying that the greater principle at play has little to do with \"wokeness\".\n\n\nYou're affirming that there is necessarily a corelation between one bias and the other. That's quite bold of you, particularly when it has been established that the companies running those things are willing to temper with their model to push one of those biases.\n\n\nThere is most probably unforseen misalignments, but it doesn't mean that all misalignment is unforseen, nor that all those unforseen misalignment are necessarily related to the same issue.",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-21 08:59:29",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "ElectronicEmu1037",
+                    "body": ">exhibit behavior that diverges from standard notions of fairness.\n\nSheesh, that's one way to understate the results...",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 19:22:12",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "WTFwhatthehell",
+            "body": "That's a hell of a consistent bias for women.\n\n\nOh well. They learn from their training data and rlhf.",
+            "score": 80,
+            "depth": 0,
+            "timestamp": "2025-05-20 07:26:17",
+            "replies": [
+                {
+                    "author": "eric2332",
+                    "body": "Yep. [Women are wonderful effect](https://en.wikipedia.org/wiki/Women-are-wonderful_effect)",
+                    "score": 55,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 08:01:53",
+                    "replies": [
+                        {
+                            "author": "alexshatberg",
+                            "body": "It\u2019s genuinely amazing that the way we\u2019re going about building artificial intelligence is by meticulously recreating every single human bias within it. Yud must be really angry about that in particular.",
+                            "score": 50,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 09:07:36",
+                            "replies": [
+                                {
+                                    "author": "Winter_Essay3971",
+                                    "body": "I don't think this is fair; LLMs are just fancy text prediction, they will obviously recreate whatever biases exist on the internet. The (English-language) internet -- at least in the social spheres where resumes get discussed -- has a strong bias towards women. Many of these social spheres are literally Reddit.",
+                                    "score": 19,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 12:23:06",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "chalk_tuah",
+                                    "body": "This might be the real solution to the alignment issue; stuff it full of our own biases and neuroses. GPT-5 will be aligned towards sitting on the couch alone late at night eating cheetos watching broadcast news",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 15:53:33",
+                                    "replies": [
+                                        {
+                                            "author": "beets_or_turnips",
+                                            "body": "How would GPT get reinforced for that if the people eating cheetos are watching TV instead of posting on reddit?",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 17:31:33",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "alexshatberg",
+                                            "body": "Elon Musk illustrates certain pitfalls of this approach",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 16:30:26",
+                                            "replies": [
+                                                {
+                                                    "author": "aeschenkarnos",
+                                                    "body": "Elon Musk is an outlier human.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-20 18:33:44",
+                                                    "replies": [
+                                                        {
+                                                            "author": "alexshatberg",
+                                                            "body": "If you want to imagine what a nascent superintelligence stuffed to brim with human neurosis and biases might look like, imagine Elon but x1000. Idk about you but I wouldn\u2019t feel comfortable living in a world with something like that.",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-05-21 06:42:27",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "eric2332",
+                                                                    "body": "You think? I imagine a LLM's personality is like the average of its training data. Some people will be overly neurotic, others will be chill but unmotivated, the average of the two may contain neither of these flaws (having what we consider the \"right amount\" of worrying about the future). As a parallel, remember that if you take the average of a lot of people's photographs, you get an exceptionally beautiful picture.\n\n(This does not mean superintelligence will be moral or beneficial, but rather that it is likely to be \"well-adjusted\" and capable of fulfilling whatever goals it sets for itself, even to our detriment)",
+                                                                    "score": 2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-05-21 09:35:04",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "CronoDAS",
+                                    "body": "As the saying goes, garbage in, garbage out.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 18:08:33",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "slapdashbr",
+                                    "body": "well if they're training it on some massive collection of data from tons of people... it's reasonable to assume it will act like a median person. Not a saint, not a demon, just average. \n\nSo how do you sanitize the amount of data that an LLM needs?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-21 00:01:20",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "ZurrgabDaVinci758",
+                    "body": "Interesting that it seems to be consistent across profession. Big analyses of humans with similarly randomized CVs find that the bias depends on the gender makeup of the profession. \n\nhttps://www.researchgate.net/publication/361642927_A_large-scale_field_experiment_on_occupational_gender_segregation_and_hiring_discrimination \n> Women received around 50% fewer callbacks \nthan men in the selected male- dominated occupations, while they received over 40% more \ncallbacks for the selected female- dominated occupations\n\nThough eyeballing [the graph](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F11c72431-1aee-491d-80e5-407abc716895_2968x4172.png) the extent of the effect from LLMs seems to roughly correlate with the gender makeup of the profession, but with the middle point shifted.",
+                    "score": 15,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 13:54:29",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "PeremohaMovy",
+            "body": "I think the author is making two mistakes that endanger their conclusions. \n\n\n1. They appear to be incorrectly using the two-proportion z-test. This is used to compare two independent proportions, but it looks like the author is using it to compare the male vs female selection rate, which are perfectly correlated.\n\n2. I don\u2019t see any evidence that they are using clustered standard errors across correlated groups (job description, name, model, etc.)\n\n\nBoth of these errors will inflate the z-statistic, artificially shrink p-values, and introduce false positives. Their effective sample size is likely to be much smaller than the 30,690 trials they analyzed.",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2025-05-20 21:57:49",
+            "replies": [
+                {
+                    "author": "sards3",
+                    "body": "Even if the z score and p value are incorrect, it's hard to argue with the raw data:\n\n> Female candidates were selected in 56.9% of cases, compared to 43.1% for male candidates.\n\nI don't see how there could be any kind of mistake in the statistical analysis that would endanger the conclusion.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2025-05-21 02:34:07",
+                    "replies": [
+                        {
+                            "author": "PeremohaMovy",
+                            "body": "The purpose of a statistical test is to infer something about a population from a sample. In this case, the author draws conclusions about the general behavior of the LLMs (the population) from the sample of responses they received.\n\nBecause LLMs are stochastic, if we ran this exact same experiment again we would not expect the overall proportion of female resumes chosen to be exactly 56.9%. Instead, we want to know whether LLMs are likely to select a female-named resume more than half the time across all hypothetical samples. By not accounting for the decreased effective sample size, we can\u2019t be confident in that result.\n\nWe can see the effect of this reduction on the chart above. The author created 22*10*2 = 440 samples for each job description. Any of these samples with 240 (54.5%) or fewer female-selected resumes will have an unadjusted p-value greater than 0.05. Visually, it looks like at least a few (e.g. security guard) fall in that range, and that is before applying the Benjamini-Hochberg procedure.\n\nAdditionally, the author finds a relationship between resume order and name gender, but doesn\u2019t run all 4 permutations per test to create an unbiased estimate of the model\u2019s overall behavior. There appears to be no control for the potential effect of the resume content itself, which seems like an oversight considering the fact that they found an effect from using \u201cCandidate A\u201d vs. \u201cCandidate B\u201d.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-05-21 10:29:59",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "daniel_smith_555",
+            "body": "Of course, as I've said before, one of the main appeals of llms  and AI in general is the ability to offload responsibility and accountability. This ranges from \"why are you not/only hiring from certain demographics\" to \"why did you drop a hellfire missile onto a family of 5 refugees sleeping in a tent\"?\n\nThe real reasons are \"because i have racial/gender preferences in who i want to work with\" and \"i want to kill/terrorize the civilian population\" but now you can say \"oh this is concerning, we use a bespoke ai alongside an algorithm and we make an effort to avid these kinds of mistakes but evidently it needs tweaking\"",
+            "score": 70,
+            "depth": 0,
+            "timestamp": "2025-05-20 07:20:27",
+            "replies": [
+                {
+                    "author": "Bartweiss",
+                    "body": ">the real reason\\[...\\] \"i want to kill/terrorize the civilian population\" but now you can say \"oh this is concerning, we use a bespoke ai alongside an algorithm and we make an effort to avid these kinds of mistakes but evidently it needs tweaking\"\n\nThis seems like it misses the more common situation: the real reason is \"I gambled on an uncertain situation and lost\", so what's offloaded is \"you can't fire me for making a bad judgement call, you just have to go update the model a bit\".\n\nWell before LLMs this was a major reason for people to over-rely on models for things like project timelines and production estimates. Even if the model is *worse* than human judgement, its biggest value is having a documented \"reason\" for a choice which can be blamed when things go wrong.",
+                    "score": 20,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 11:55:17",
+                    "replies": []
+                },
+                {
+                    "author": "darwin2500",
+                    "body": "[The Unaccountability Machine](https://en.wikipedia.org/wiki/The_Unaccountability_Machine) is a pretty good book on this topic. \n\nLarge organizations turn to rigid proceduralism as a way to excuse the leaders of of those organizations from accountability for their mistakes and abuses, whether that's a computer algorithm that bumps you from your flight, 'best practices' that require you to return to the office for no reason, or a legislated process of bids and reviews that prevent something from getting built even after politicians passed a popular bill allocating funds for it.\n\nAI is just one more type of tool that organizations can use to avoid accountability for what they do, but it threatens to be an especially flexible and powerful method.",
+                    "score": 11,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 15:17:16",
+                    "replies": [
+                        {
+                            "author": "daniel_smith_555",
+                            "body": "Yes its almost perfectly crafted for that purpose. I see the same pathology in the way people like altman and musk gleefully burble about how its going to disrupt the labour market, as if threatening to do that is not admitting intent to commit an act of grave vandalism against society at large. A deliberate choice that they are pursuing, framed as the inexorable inevitable march of progress, just a law of nature we'll have to adapt to.",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 19:50:05",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "ConscientiousPath",
+                    "body": "> Of course, as I've said before, one of the main appeals of llms and AI in general is the ability to offload responsibility and accountability.\n\nI think that's precisely why they're _not_ appealing for what people are trying to use them for. Ultimately someone with agency is going to be held accountable (as the company is eaten by lawsuits and competitors if by no other earlier means), and therefore a person has to be in the loop to negate the potential liability of the undesired responses that every LLM will always have the statistical potential to generate.\n\nA lot of companies (e.g. DuoLingo) are doing slow but irreparable damage to their brand right now by accepting lower quality standards and loss of originality in order to use LLMs. There's probably going to be a place for LLMs long term to help with any task where editing and proofreading can be done faster than composing, but anyone who thinks that the appeal of LLMs is a chance to genuinely offload responsibility and accountability is listening to a siren's song.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 19:47:01",
+                    "replies": []
+                },
+                {
+                    "author": "electrace",
+                    "body": ">now you can say \"oh this is concerning, we use a bespoke ai alongside an algorithm and we make an effort to avid these kinds of mistakes but evidently it needs tweaking\"\n\nThis seems like a silly argument. The bias here was in favor of women, not men, and companies are very unlikely to be targeted for unfair hiring practices when they hire too many women.",
+                    "score": 22,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 07:46:52",
+                    "replies": [
+                        {
+                            "author": "help_abalone",
+                            "body": "Not sure what that has to do with the point being made. That there is a presumption of 'fairness' and 'objectivity' when differing decisions to AI, and that can and will be used as cover to do whatever and then say 'well, we trusted the tool'",
+                            "score": 18,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 09:14:24",
+                            "replies": [
+                                {
+                                    "author": "electrace",
+                                    "body": "[See here](https://old.reddit.com/r/slatestarcodex/comments/1kr24fj/in_an_age_where_hiring_is_becoming_increasingly/mtagv5l/). I think you're misunderstanding the claim they're making.\n\nIt is fully possible that, for example, an HR manager *would ideally like to not focus at all on gender when hiring*, letting the proportion of men:women fall where it may, but they know that, if they do that (and they end up hiring more men), they can get in legal trouble. This appears to be what happened at Home Depot years ago (it turns out, when you hire from within, and you work at a home improvement store where every employee is expected to be able to guide the customers on their home improvement project, you end up hiring more men than women).\n\nSo, yes, the LLM helps with that legal trouble, but that doesn't imply anything sinister on the side of the people using it. They need not \"have a racial/gender preference in who i want to work with\" or \"want to kill/terrorize the civilian population\" in order to enjoy the distance created by the LLM.",
+                                    "score": 11,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 09:33:22",
+                                    "replies": [
+                                        {
+                                            "author": "help_abalone",
+                                            "body": "Unless i'm reading you wrong, you described a situation where a company wanted to hire/promote more men than women, and then said deferring to an LLM would help shift blame/accountability when asked why have you done this?",
+                                            "score": -6,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 09:44:05",
+                                            "replies": [
+                                                {
+                                                    "author": "electrace",
+                                                    "body": ">you described a situation where a company wanted to hire/promote more men than women\n\nI don't know how you possibly read that from \"an HR manager would ideally like to not focus at all on gender when hiring\"\n\nIf you don't focus at all on gender, you can still easily hire/promote more men than women simply  because something you care about (in the Home Depot case, knowledge about home improvement projects) is associated more with one gender than the other.",
+                                                    "score": 10,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-20 09:53:00",
+                                                    "replies": [
+                                                        {
+                                                            "author": "help_abalone",
+                                                            "body": "Right, so your ideal scenario is promoting from within, thats what you want to do, but if you do that your middle and upper management will be disproportionately men and that will, quite rightly, open you up to accusations of sexist hiring practises. So you use some non human black box to assist you, do what you want, and then say actually we dont have a problem hiring women, our black box just recommend more men to us",
+                                                            "score": -3,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-05-20 10:03:10",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "electrace",
+                                                                    "body": ">quite rightly\n\nIt seems like this is the crux.\n\nMy claim is \"we prefer to hire from within\" is not sexism, by itself, and thus it would not be \"quite right\" to open you up to accusations of sexism. A proper accusation of sexism would have to show that they systematically denied women *who were equally as competent as the men\".\n\nThere are plenty of companies that prefer to promote from within that do so *not* as a cover for anything, but just because they like upper management to have an intuitive feel for what is happening at the lower levels of their stores.\n\n>and then say actually we dont have a problem hiring women\n\nYeah.... because they *don't have a problem hiring women*. That's the point. They are being completely genuine when they say this.",
+                                                                    "score": 14,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-05-20 10:20:50",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "slapdashbr",
+                            "body": "what were these models trained on? I'd expect them to have close to the average amount of bias.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-21 00:02:23",
+                            "replies": [
+                                {
+                                    "author": "electrace",
+                                    "body": "They were trained on any data they can get their hands on (mostly the internet), which is very much not equally biased on average (not to mention RLHF). AKA, the internet is not real life.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-21 07:39:50",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "ZurrgabDaVinci758",
+                            "body": "> companies are very unlikely to be targeted for unfair hiring practices when they hire too many women.\n \n* https://www.wsaz.com/2025/02/12/starbucks-is-being-sued-because-its-workforce-has-become-more-female-less-white/ \n \n* https://www.reuters.com/legal/legalindustry/4th-circuit-backs-34-mln-award-white-ex-hospital-execs-bias-case-2024-03-12/\n \n* https://www.theguardian.com/technology/2016/feb/02/gender-discrimination-lawsuit-male-former-employee-yahoo-marissa-mayer\n\n* https://www.dhillonlaw.com/lawsuits/google-discrimination/\n* https://www.fisherphillips.com/en/news-insights/eeoc-settles-beef-with-restaurant.html\n\nThis is just what I found with a quick search online, so no idea if its representative of a trend. But I'd consider it pretty decent evidence that it's something companies would be concerned about and would want to avoid any AI system doing",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 14:03:18",
+                            "replies": [
+                                {
+                                    "author": "electrace",
+                                    "body": "I would be shocked if these cases were anywhere near as common as cases about bias against women.",
+                                    "score": 11,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 14:30:17",
+                                    "replies": [
+                                        {
+                                            "author": "slapdashbr",
+                                            "body": "women are generally willing to work for less money than men. It is no longer legal to simply pay them less for the same amount of work, so instead, now poorly-remunerative labor is biased towards women as a share of the labor pool, because more women than men are willing to work for that low pay rate.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-21 00:05:15",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "CronoDAS",
+                    "body": "Eh, a lot of people who want to kill/terrorize the civilian population aren't keeping that goal a secret. Putin, for example.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 18:34:37",
+                    "replies": [
+                        {
+                            "author": "daniel_smith_555",
+                            "body": "Putin is admitting to terorizing civilians? As far as i knew hes always denied it and the UN report in march stopped short of accusing them of that, finding that they failed to take necessary precautions to protect civilians. His claim has always been that those civilians largely want to be under russian control so im not sure what hed gain from killing or terrorizing them.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 19:44:36",
+                            "replies": [
+                                {
+                                    "author": "CronoDAS",
+                                    "body": "Maybe. From what I've read, the Russian army seems perfectly happy to launch missiles at civilian targets; I haven't been following Putin's public statements about it. But certainly Saddam Hussein was willing to. ::shrug::",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 19:49:57",
+                                    "replies": [
+                                        {
+                                            "author": "chalk_tuah",
+                                            "body": "If your personal bar for \"war crime\" is attacking civilians then every world power, even minor ones, are guilty of the same",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-21 13:04:35",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "archpawn",
+                    "body": "I feel like there's the opposite problem. You can't offload responsibility onto an AI, but you can offload it onto a human. So it's easier to get away with hiring people to decide who to hire than to use an AI, even if they're equally racist. Or have a doctor prescribe drugs instead of an AI, even if they're equally accurate. Or hire a human air traffic controller instead of an AI, even if the AI is vastly better.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 21:49:21",
+                    "replies": []
+                },
+                {
+                    "author": "Anonymer",
+                    "body": "The claim that you are making seems to be that AI labs are intentionally steering models towards gender biases so they can skew hiring results of other companies, so that those companies can use a straw man? \n\nThat doesn\u2019t really make much sense to me.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 08:05:43",
+                    "replies": [
+                        {
+                            "author": "RationallyDense",
+                            "body": "No. The idea is more that a bunch of biases are built into these models as a result of how they are created. There are then two kinds of problems that can arise:\n\n1. Your HR department doesn't really care about biases. So they use a model which happens to produce biased outcomes and dodge responsibility by pointing at the model.\n\n2. Your HR department wants a certain bias. So through a combination of picking a model and picking how it is used, they get a system which produces the bias they want. They then blame the model for the outcomes to dodge responsibility.\n\nIn both cases, the LLM is a way to point the finger at something else and refuse to solve the issue of bias. (Either because you like the bias, or you just don't want to bother solving it.)",
+                            "score": 12,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 10:18:37",
+                            "replies": [
+                                {
+                                    "author": "Anonymer",
+                                    "body": "That makes more sense to me. Thanks for laying it out.\n\nBut I still don\u2019t find it convincing. I generally am skeptical that white washing blame is as strong as a motivator as people often claim.  Namely, I think most bad actors would do take those actions even if they didn\u2019t have a straw man to blame. And while at the margin is may increase this behavior, I think there are groups that are overly keen to blame corporations for everything. And whenever they see any plausible chain of possibilities that lead to: \u201cthis would make it marginally less embarrassing for corporations to do evil thing X\u201d they then assume this was the whole purpose of the original action.\n\nIt just reduces everything to \u201ccorpos bad\u201d, to a degree that not only is credibility reducing, but also just at best pave the path for a leadership that doesn\u2019t have any real sense of the concrete details that cause problems.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 11:02:22",
+                                    "replies": [
+                                        {
+                                            "author": "RationallyDense",
+                                            "body": "I think it's not necessarily whitewashing as much as more generally offloading responsibility. Think of it a bit like hiring Accenture to make a decision you don't want to be blamed for. You're facing a hard problem. You tell your management chain that maybe you can throw AI at it. They're excited because AI is trendy and if it fails, it's not your fault.\n\nIt's not just for corporations too. For instance, the NHS in the UK is having significant resource issues. One of the proposals is to make heavy use of LLMs in a variety of roles. That's a lot easier than finding a way to recruit more nurses while reducing immigration and funding for education. And when it goes wrong, it's not your fault. The AI messed up.\n\nI would agree that calling that the sole purpose of LLMs is an exaggeration. But I think it's a big draw for large organizations.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 11:50:08",
+                                            "replies": [
+                                                {
+                                                    "author": "Anonymer",
+                                                    "body": "I see where you\u2019re coming from, but again remain skeptical. In the Accenture case, I think those instances get more air time because it pattern matches to something that upsets people, but  companies make tough decisions all the time and the most successful know that making hard decisions is a core part of being successful. I\u2019m not saying it\u2019s not a problem but it feels a bit like a conclusion drawn by looking at anecdotal evidence from a population that is incentivized to look a certain way. \n\nI know this a bit of a tangent, but it relates to your example and is a similar flawed thought process: it\u2019s widely believed that consulting companies are entirely inept and incapable of doing useful things. I used to believe this mostly because I didn\u2019t think about it, and had read plenty of articles of the shape: \u201cMcKinsey ripping off the government, look at this huge mistake! Outrage!\u201d, and I was outraged. I still believe there is massive waste and the government is particularly bad at contracting consultants. But is this really the majority of consulting firms? My personal experience is much more positive with them. Why? I worked with them in particular cases where they held specific expertise and information to help me accomplish a specific goal, yet everything I had heard was \u201coh they just going to say dumb things and tell you to fire everyone\u201d. \n\nIn the case of nurses you highlighted, it seems like the decision to reduce immigration/funds should be weighed separate from the decision to use AI or not. The problem there feels more like a \u201ccounting on your AI chickens to improve productivity before the my hatch\u201d. Which you think is intentional, sure that\u2019s fine. But if you always approach things that way, then you\u2019ll never be willing to make complex trade offs because you assume any attempt to mitigate costs is being done in bad faith.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-20 13:26:25",
+                                                    "replies": [
+                                                        {
+                                                            "author": "CronoDAS",
+                                                            "body": "It's not so much \"consultants rip off the government\" as that their services tend to be expensive and having the expertise in-house would be significantly cheaper in the long run.",
+                                                            "score": 3,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-05-20 19:59:43",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "help_abalone",
+                            "body": "The claim is that any company using any kind of 'algorithmic' or ai based decision making tool can and will use it as a way to offload criticism of its practises onto the ai or algorithm. Not that this specific bias represents an insidious effort to distort hiring practices.",
+                            "score": 14,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 09:10:19",
+                            "replies": [
+                                {
+                                    "author": "electrace",
+                                    "body": "> Not that this specific bias represents an insidious effort to distort hiring practices.\n\nThis seems uncontroversial as a claim but....\n\n>The real reasons are \"because i have racial/gender preferences in who i want to work with\" and \"i want to kill/terrorize the civilian population\" \n\nIt seems like the claim is definitely, \"I have an insidious preference that I would like fulfilled, but wish to hide that preference from onlookers\"",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 09:13:58",
+                                    "replies": [
+                                        {
+                                            "author": "help_abalone",
+                                            "body": "Those things don't appear to be in conflict to me.\n\nIts already been kind of normalized in twitter and facebook where everyone agrees that its bad that those companies generate money by showing people content that will infuriate them and cause them to be politically polarized and alienated from their friends and family IRL.  \n  \nThere seems to be a consensus its bad for the clients, harmful for society, but there's no expectation that anyone at twitter should be held accountable or change anything, its just \"the algorithm\", thats what \"the algorithm\" does what can we do? Its up to people to promote more positive content!\n\nLikewise the second example is obvious a reference to israel and thats exactly what they are doing, whenever anyone bothers to ask why theyre burning civilians alive in their hospital beds they defer to their intelligence gathering, using AI, telling them they were hamas or whatever, theres no human being to be held accountable.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 09:32:44",
+                                            "replies": [
+                                                {
+                                                    "author": "electrace",
+                                                    "body": ">Those things don't appear to be in conflict to me.\n\nThey aren't in conflict, but they aren't *required* either.\n\nOP said \"the *real* reasons are <insert insidious reasons>\" which is odd, because it can be used in exactly the same way *without* those insidious reasons.\"\n\nIt's like:\n\n> Soap is a fantastic product. It can get all kinds of stuff off your hands. Of course, the *real reason* is to get the blood of your victims off of yourself, and down the drain.\n\nYou don't need that \"real reason\" to use soap, or an LLM for hiring practice. Perfectly banal reasons like \"I have no gender preference on hiring, but this LLM helps protect me from lawsuits in the worst-case-scenario of the gender ratio favoring men\" are perfectly valid.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-20 09:48:51",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "rotates-potatoes",
+                            "body": "Option A: LLMs reflect biases in their training data, so it behooves us to be aware of potential bias that looks a lot like the way the real world works.\n\nOption B: There\u2019s a massive conspiracy to intentionally bias LLMs so that when used in decision making they cause real world harm aligned to the conspirators\u2019 secret goals, all by introducing biases that just happen to reflect typical bias in the real world.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 08:56:38",
+                            "replies": [
+                                {
+                                    "author": "Dudesan",
+                                    "body": "These two options are not mutually exclusive. Impersonal systemic forces *and* intentional bad actors can both exist on the same planet.",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 10:27:27",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "68plus57equals5",
+            "body": "This is actually a win for LLMs and their *alignment* - they managed to capture the recent zeitgeist perfectly. \n\nThe problem arises only when zeitgeist passes and LLM is still stuck in it. So question for enthusiasts - can LLMs perceive winds of change?",
+            "score": 42,
+            "depth": 0,
+            "timestamp": "2025-05-20 07:26:46",
+            "replies": [
+                {
+                    "author": "DuplexFields",
+                    "body": "Looks like for my next job I\u2019ll be a boy named Sue.",
+                    "score": 20,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 08:55:01",
+                    "replies": [
+                        {
+                            "author": "Chaos-Knight",
+                            "body": "I'll be named \"Hire me or I Sue your Company for hurtful discrimination\" with everything but \"Sue\" white text on white background.",
+                            "score": 15,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 10:08:39",
+                            "replies": [
+                                {
+                                    "author": "hippydipster",
+                                    "body": "I'll just change my name to a UUID",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 12:52:00",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Realistic_Special_53",
+                            "body": "They'll know you grew up strong and grew up mean. And tough!  Or maybe they won't.\nHeck, maybe it will let them fill in yet another category.\n\"this world is rough, And if a man's gonna make it, he's gotta be tough\"",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 13:10:18",
+                            "replies": []
+                        },
+                        {
+                            "author": "iemfi",
+                            "body": "Names are not going to be included. Just try to subtly signal you are of preferred group in your CV lol. LLMs are great on picking up on that too.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 18:24:14",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "RandomName315",
+                    "body": "General LLM is overwhelmingly trained on recent text, with a recency bias due to text production intensity increasing.\n\nTo make LLM perceive the wind of change, one should train it on on the texts of wind makers. Who are those wind makers? You have to perceive the wind of change to know.\n\nI guess LLM lacks several million years of social training:-)",
+                    "score": 10,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 07:41:28",
+                    "replies": []
+                },
+                {
+                    "author": "harbo",
+                    "body": "> The problem arises only when zeitgeist passes and LLM is still stuck in it.\n\nNo, the *real* problem is that the LLM changes the zeitgeist of the future.",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 09:48:15",
+                    "replies": [
+                        {
+                            "author": "68plus57equals5",
+                            "body": "How so, from what we learned at least from this post it seems to be a force conserving the most recent order, because it will be naturally biased towards it. How it can change the zeitgeist on its own and what would it be changed to?",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 09:52:33",
+                            "replies": [
+                                {
+                                    "author": "harbo",
+                                    "body": "By discriminating against men, you change the leadership with clear consequences.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 12:24:30",
+                                    "replies": [
+                                        {
+                                            "author": "68plus57equals5",
+                                            "body": "I don't get the intent of your comments, to me what you describe is precisely the current zeitgeist, which is not at all a result of some agentic LLM defining our future.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 14:21:37",
+                                            "replies": [
+                                                {
+                                                    "author": "harbo",
+                                                    "body": "1. You apply an LLM to a HR problem\n2. The person chosen for the position makes choices that affect the future that differ from those that would have been taken by a person not chosen by the LLM\n3. Do this for e.g. all the CEOs of SP500 and for sure future zeitgeist is changed",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-20 14:46:26",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Bartweiss",
+                    "body": "This is an interesting point. It's easy to talk about \"de-biasing AI\" and similar, but when the bias is present in the training set what that actually means is taking on a much harder alignment problem. The task shifts from \"do as we do\" to \"do as we'd like to think we do\", which (partially) robs us of the chance to just feed in examples.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 12:07:29",
+                    "replies": []
+                },
+                {
+                    "author": "ZurrgabDaVinci758",
+                    "body": "Do you have any evidence that they were specifically trained to have a bias? If not then its not alignment its an unexpected product of the training data, which is bad",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 13:55:16",
+                    "replies": [
+                        {
+                            "author": "68plus57equals5",
+                            "body": "I think you missed my point.\n\nYou also seem to hold a belief I don't share at all, namely that this result is an **unexpected** product of the training data.",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 14:16:50",
+                            "replies": [
+                                {
+                                    "author": "ZurrgabDaVinci758",
+                                    "body": "If you mean something else than \"alignment\" you should use a different term since that term has a specific meaning in this context",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 15:23:05",
+                                    "replies": [
+                                        {
+                                            "author": "68plus57equals5",
+                                            "body": "The meaning of *alignment* is AI pursuing whatever goals and values the person using it has in mind. \n\nTo me the problem with people protesting my usage of the word here is they seem to think when the LLM is *aligned* to different values than theirs, it's somehow not *alignment* any more. It might be the case the 'specific meaning' of *AI alignment* you mention is AI being attuned specifically to values of Silicon Valley techcrowd. But then it would only illustrate how vapid of a concept it is.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 17:20:31",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "hh26",
+                    "body": "I don't think this is especially connected to alignment. \"The AI can figure out and repeat things that people want to hear\" doesn't mean it truly believes or cares, just that it understands. That was never the threat. We were never afraid AI wouldn't be smart enough to figure out what we want, just that it would do something else once it had the opportunity.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 16:07:19",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "ConscientiousPath",
+            "body": "so, basically no difference from the current experience in STEM fields",
+            "score": 10,
+            "depth": 0,
+            "timestamp": "2025-05-20 19:29:41",
+            "replies": []
+        },
+        {
+            "author": "Sol_Hando",
+            "body": "\u201cDespite identical professional qualifications across genders, all LLMs consistently favored female-named candidates when selecting the most qualified candidate for the job. Female candidates were selected in 56.9% of cases, compared to 43.1% for male candidates (two-proportion z-test = 33.99, p < 10\u207b252 )\u201d\n\nHuh. That\u2019s the opposite of what I was expecting from the title. You\u2019d think it would reflect the biases we find inherent in reality, that men are currently over represented in higher-performing and leadership roles, but maybe there\u2019s a bias in its training data, or artificial bias imposed afterwards to make women favored. \n\nAnyway. This seems like the sort of thing that black-pills people to the men\u2019s rights camp, or swings them right more generally. We\u2019re already using LLMs to presort applications, and there\u2019s simply no way bias like this is justifiable on any reasonable grounds, unlike say, Males being overrepresented in CS hires (when there are more men doing CS than women). It\u2019s one thing to complain about bias due to disparate outcomes (which could be from a variety of causes, some fair, others unfair), but quite another when there\u2019s quantitative bias without any reason besides discrimination. \n\nSoon we\u2019re going to have people putting \u201cshe/her\u201d in their resume in white text in a white background so LLMs recognize that, and are more likely to pass it along to a human reviewer. I know people used to do that with resume keywords and it worked for a time.",
+            "score": 17,
+            "depth": 0,
+            "timestamp": "2025-05-20 07:28:59",
+            "replies": [
+                {
+                    "author": "AskingToFeminists",
+                    "body": ">That\u2019s the opposite of what I was expecting from the title. You\u2019d think it would reflect the biases we find inherent in reality, that men are currently over represented in higher-performing and leadership roles\n\n\nLike everyone said, it would reflect it's training data, not reality.\u00a0\n\n\nBut even in reality, currently, recruitment has been repeatedly shown to favor women, with trials of blind recruitment launched by people who, like you, think recruitment favors men, invariably ending up showing the biases favor women and them deciding to stop using the method that ends with fairness.\n\n\nThe current culture is very pro \"we need to recruit more women\", and the material published about it is overwhelmingly about that.\n\n\nSo you are actually wrong in the fact that, actually, it does reflect the biases we find in reality.",
+                    "score": 33,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 09:48:54",
+                    "replies": [
+                        {
+                            "author": "Sol_Hando",
+                            "body": "Interesting. I wonder if it's that LLMs are able to sort through the slop and actually understand the reality, that women are favored in hiring decisions, and replicate that, or if it's a reflection of the more simplistic \"the training data has a lot of text talking about how we need to encourage and hire more women in jobs we find important.\" \n\nProbably the latter, but it makes me think about how our words genuinely do shape our reality. If we talk about women needing to be more represented in the workforce that might just bring it about.",
+                            "score": 9,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 10:12:39",
+                            "replies": [
+                                {
+                                    "author": "impult",
+                                    "body": "I don't think it matters to the LLMs that there is or isn't meta level discussion about who to hire.\n\nAt the object level, if in reality women get hired more than men for the same resume, that will be reflected in the data, e.g. on linkedin you can compare resumes against work experience, or look at any internal hiring database. Train an LLM on this data and it learns that women have a higher hire-per-unit-of-resume-quality ratio. \n\nAsk it to predict who gets hired off a resume and it'll correctly say it's the woman.\n\nAsk it who \"should\" get hired off the resume and it'll likely give the same data because there's no reason to assume prescription is different from description if you don't add any detail. It's like asking who \"should\" win the NBA playoffs, by default there's no reason to answer with anything other than a combo of whoever's leading in betting odds and has the most hype behind them. All the current resumes were already hired on someone's \"should\" decision after all so why would the LLM's \"should\" be any different?\n\nAsk it to hire explicitly on \"competence\" and \"without race and gender bias\" and this still might not change anything, because chances are all the regular hiring funnels that hire women claim to be based on competence and social justice neutrality in their description anyway.",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 12:10:35",
+                                    "replies": [
+                                        {
+                                            "author": "Sol_Hando",
+                                            "body": "I'm more wondering if the cause is a fuzzy preference for women it's able to sort from the noise, or if it's because of the large amount of meta-level discussion on how women need to be favored in hiring because of past discrimination. \n\nAs in, did we give LLMs completely neutral training data with no reason to favor either gender, then gave it a billion words on how women are underrepresented in hiring so it favors women, or if it decoded the messy signal that, for some reason, women are favored in hiring decisions and it's reflecting the training data. The first case is what I suspect, the latter would be impressive if true.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 12:19:53",
+                                            "replies": [
+                                                {
+                                                    "author": "impult",
+                                                    "body": "I'm surprised you find the latter \"more impressive\"\n\nIn both cases the LLM needs to understand resume quality and how female a name is.\n\nIn the former it just needs to know, from hiring decisions, that hiring correlates to a higher female name:resume quality ratio.\n\nIn the latter it needs to actually \"think\" about the concepts of social justice from all the political statements and arguments out there, take the social justice side, and decide to apply it to resume hiring while still achieving the baseline resume competence goals.\n\nI do get that to humans the latter is easier, but I thought the whole point of AI is that they are much better at the noisy statistical stuff than the logical argument stuff.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-20 12:33:50",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Sol_Hando",
+                                                            "body": "To figure out the baseline truth would require pulling some pretty obscure information from the noise, and applying that to how an LLM choses applicants, which is what I would find impressive. The other possibility seems more like me telling an LLM to use a bunch of emojis, then it uses a bunch of emojis, which is already within what I know an LLM to be capable of. If its training data says over and over again \"Women are discriminated against, we must work to increase the number of women working\" then it following that data seems more like how I already interact with LLMs. \n\nFor it to correlate women being favored in hiring, which is something I wasn't aware of, seems like it's capable of sussing out a baseline truth of the world when the majority of blatant conversation on the topic talks about the opposite being true.",
+                                                            "score": 0,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-05-20 12:51:21",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "ZurrgabDaVinci758",
+                            "body": "> recruitment has been repeatedly shown to favor women, with trials of blind recruitment\n\nThe biggest recent study I can find says that the bias is in the direction of the gender composition of the job in question. https://www.researchgate.net/publication/361642927_A_large-scale_field_experiment_on_occupational_gender_segregation_and_hiring_discrimination Do you have another study that shows different?",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 14:08:02",
+                            "replies": [
+                                {
+                                    "author": "AskingToFeminists",
+                                    "body": "I was thinking of [this kind of things](https://www.reddit.com/r/LeftWingMaleAdvocates/comments/gkwhlh/studies_that_expect_to_find_discrimination/)\n\n\nIt also mention the infamous orchestra blind audition studies, which actually claim the opposite of what it's data shows, and was used as go-to argument by many in favor of the idea that recruiting was against women.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-21 04:56:36",
+                                    "replies": [
+                                        {
+                                            "author": "ZurrgabDaVinci758",
+                                            "body": "I'm not sure why you expect me to find a long list of unrelated studies with problems relevant to the question of whether the study i linked to is true. Feels rather like you have an ideological opposition to the whole concept and aren't engaging with the details",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-22 15:09:04",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "MindingMyMindfulness",
+                    "body": "The easy solution would be to have another AI first scrub any information that could identify personal attributes relating to a candidate like gender, race, names, age, appearance, etc from a CV before it reaches the second layer AI with an information barrier that makes the decision about whether to advance the application or reject it. \n\nBut that only solves for discrimination. I think the bigger problem with AI is that it is probably making a lot of other weird, arbitrary decisions when screening CVs. That isn't any different from many people working in HR today, however. I hate to sound cliched, but it is almost a \"kafka-esque\" situation.\n\nThat said, the best way to get a job has always been to have someone (preferably a connection) reading your CV that would be a colleague or manager if you were to succeed, and who understands the role and your experience. Unfortunately, that is becoming rarer as the hiring process in businesses has become a lot more systematic and bureaucratic.",
+                    "score": 17,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 07:46:58",
+                    "replies": [
+                        {
+                            "author": "Sol_Hando",
+                            "body": "It is cliche but I honestly love calling things Kafka-esque. Whenever I get looped around through customer support, or calling a bank, my go-to phrase when I get ahold of a support rep who I know has no power to actually solve my problem is \u201cThis whole system is a Kafka-esque nightmare. Somehow identifying the sickness makes me feel a little better about it. \n\nThe problem with all these systems is that the #1 thing you can do to increase your chances of getting hired, besides going to a top tier school, are to either lie on your resume, or craft your experience to mirror the job description. There are AI tools out there right now that will edit your resume and cover letter for each application. They are absolutely hell for someone hiring without using a recruiter.",
+                            "score": 8,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 08:12:09",
+                            "replies": [
+                                {
+                                    "author": "Sufficient_Nutrients",
+                                    "body": "Working at my company and getting approvals to deploy code is a kafka-esque nightmare. I often wonder why they bother letting us deploy anything at all. The goal seems to be to make it impossible to do anything.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 10:51:03",
+                                    "replies": [
+                                        {
+                                            "author": "Sol_Hando",
+                                            "body": "Sorry to hear that. Best thing is to find something interesting to do while waiting on approvals, like a side-hustle, coding project you can turn into a startup, or job search for a higher-paying role.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 10:54:59",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "subheight640",
+                            "body": "The bigger problem is that lazy hiring managers just won't put in that kind of effort. They're going to reach for the general purpose tool rather than a specialized resume tool.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 23:20:33",
+                            "replies": []
+                        },
+                        {
+                            "author": "Mantergeistmann",
+                            "body": ">That said, the best way to get a job has always been to have someone (preferably a connection) reading your CV that would be a colleague or manager if you were to succeed, and who understands the role and your experience. Unfortunately, that is becoming rarer as the hiring process in businesses has become a lot more systematic and bureaucratic.\n\n\nThe number of times I've seen a hiring manager not *allowed* to see a resume of a candidate they thought would be a good pick, because HR thought otherwise...",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-28 18:07:23",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "MasterMacMan",
+                    "body": "How many articles is an LLM reading on the importance of hiring men in the workplace? How many articles are written about how men are better students, or take on tasks with a novel perspective?\n\nWomen are underrepresented in blue collar fields, they\u2019re over-represented in people who write news articles about blue collar fields.",
+                    "score": 11,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 08:58:10",
+                    "replies": [
+                        {
+                            "author": "Sol_Hando",
+                            "body": "You're right. Probably none. On further reflection I realize it was a naive assumption, but I'm in the position where I can ignore most of that stuff, so my reality has a lot less \"here's how women in the workplace lead to novel perspectives\" or whatever in my lived experience.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 09:22:56",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "wyocrz",
+                    "body": ">You\u2019d think it would reflect the biases we find inherent in reality\n\nWhy? The training data is all of the Internet. \n\n>This seems like the sort of thing that black-pills people to the men\u2019s rights camp, or swings them right more generally.\n\nSo, the red pill is people seeing reality as it is, and black pill is taking the next step to realizing one doesn't make the cut. Maybe not gaslighting them further is a good idea? \n\nI've never trusted a manosphere guru, but I trust anti-manosphere propaganda even less. Jordan Peterson wasn't talking pure nonsense when he railed against \"compelled speech\" but the Internet is full of it.\n\nI instantly downvote any \"What do *we* think of....\" post in any sub I frequent. The internet is just a bunch of echo chambers with forced and often very inauthentic speech, most vividly LinkedIn.",
+                    "score": 9,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 09:13:08",
+                    "replies": [
+                        {
+                            "author": "Sol_Hando",
+                            "body": "More like I'd expect the training data to reflect reality, but after a moment of thought I realize that's a naive assumption. Our social structures are just as important as reality, since they shape what and how we talk about things just as much as reality does. \n\n>So, the red pill is people seeing reality as it is, and black pill is taking the next step to realizing one doesn't make the cut. Maybe not gaslighting them further is a good idea?\n\nMy intention wasn't to gaslight them. It was more aimed at people who think that men swinging right isn't a good thing, and that if we're going to be having efforts to reduce inequality, we should be careful that we don't overcorrect and produce resentment. Personally I think we're already passed that, but it can't hurt to notice it again. \n\n>The internet is just a bunch of echo chambers with forced and often very inauthentic speech, most vividly LinkedIn.\n\nYeah. LinkedIn is so uptight it's hilarious. I know someone who originally built his business mocking \"LinkedIn Lunatics\" like: \"Here's what my divorce taught me about selling B2B SaaS.\"",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 09:21:26",
+                            "replies": [
+                                {
+                                    "author": "wyocrz",
+                                    "body": ">More like I'd expect the training data to reflect reality, but after a moment of thought I realize that's a naive assumption.\n\nDayum, you make the Internet a better place. \n\n>It was more aimed at people who think that men swinging right isn't a good thing, and that if we're going to be having efforts to reduce inequality, we should be careful that we don't overcorrect and produce resentment. Personally I think we're already passed that, but it can't hurt to notice it again.\n\n100%. \n\nRegarding LinkedIn: I started building a pretty good following but got distracted with other things. I am one removed from actual decisionmakers, since I was at a due diligence consultancy for a while. \n\nI pulled energy generation for wind farms from the EIA as well as wind resource data from government projects, built a little model, put it up on the web, and used screen shots to shoot 50-55 second videos giving overview of various wind projects. \n\nThey did well in a sea of inauthentic lunacy.",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 09:51:19",
+                                    "replies": [
+                                        {
+                                            "author": "Sol_Hando",
+                                            "body": "Cool! Despite what some people say, authentic content with a bit of effort still performs remarkably well, and while it might not get as much engagement as the inauthentic stuff, the people who tune in are usually significantly more targeted.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 10:07:25",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "electrace",
+                    "body": ">Huh. That\u2019s the opposite of what I was expecting from the title. You\u2019d think it would reflect the biases we find inherent in reality, that men are currently over represented in higher-performing and leadership roles, but maybe there\u2019s a bias in its training data, or artificial bias imposed afterwards to make women favored. \n\nRight, and it's easy to Monday-morning-quarterback this and say \"Of course it favors women. The discourse online in its training data is always telling it that women are less likely to be hired when equally qualified, and the LLM is doing what it \"believes\" to be the moral thing by counteracting that bias.\"",
+                    "score": 10,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 07:51:59",
+                    "replies": [
+                        {
+                            "author": "Sol_Hando",
+                            "body": "Not going all manosphere-incel here, but my lived experience is that (at least in the spheres I float in, which admittedly aren\u2019t representative) there\u2019s no longer a bias for men in positions of leadership and high-earning roles. \n\nThere\u2019s such a desire and push for hiring women and promoting them in banking right now. Of the female employees and managers I\u2019ve interacted with, they seem noticeably more likely to be under qualified or have no idea what their job even is, and this has been confirmed by people I know. I\u2019m not 109% sure this isn\u2019t people complaining about their incompetent boss, while I\u2019ve happened to interact with more female incompetent bankers by chance, but it\u2019s definitely pushed me into the opinion that we\u2019re pushing so hard for gender equality in this field that we\u2019re sacrificing competency. There\u2019s still an over representation of men in these positions, but I believe thats caused by something upstream, as there are significantly more men than women entering banking.",
+                            "score": 18,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 08:19:36",
+                            "replies": [
+                                {
+                                    "author": "electrace",
+                                    "body": ">Not going all manosphere-incel here, but my lived experience is that (at least in the spheres I float in, which admittedly aren\u2019t representative) there\u2019s no longer a bias for men in positions of leadership and high-earning roles. \n\nWhat's important to an LLM isn't whether there's a bias *in reality*, it's whether the text it's trained on says there is. I would bet the majority of the text it's trained on is talking about bias against women in the workplace, at least in comparison to bias against men in the workplace.",
+                                    "score": 16,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 08:38:45",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "ShivasRightFoot",
+                                    "body": "> I\u2019m not 109% sure this isn\u2019t people complaining about their incompetent boss, while I\u2019ve happened to interact with more female incompetent bankers by chance, but it\u2019s definitely pushed me into the opinion that we\u2019re pushing so hard for gender equality in this field that we\u2019re sacrificing competency.\n\nYou may be interested in knowing there is a body of scientific literature showing Women have a strong preference against hearing contradicting ideas. Particularly one study shows that women are significantly more likely to \"not justify my political beliefs to someone who disagrees with me;\" \"often feel uncomfortable when people argue about politics;\" and disagree that they \"have no problem revealing my political beliefs, even to someone who would disagree with me.\"\n\nCoff\u00e9, Hilde, and Catherine Bolzendahl. \"Avoiding the subject? Gender gaps in interpersonal political conflict avoidance and its consequences for political engagement.\" British Politics 12 (2017): 135-156.\n\nhttps://www.researchgate.net/figure/Descriptive-gender-gaps-in-political-conflict-avoidance-a-I-would-rather-not-justify_fig1_303835617\n\nHere is another study that shows women are more likely to avoid expressing political opinions, even in anonymous academic surveys. This seems to definitively eliminate a theory that women do not express opinions due to physical intimidation.\n\nRae Atkeson, Lonna, and Ronald B. Rapoport. \"The more things change the more they stay the same: Examining gender differences in political attitude expression, 1952\u20132000.\" Public opinion quarterly 67.4 (2003): 495-521.\n\nhttps://www.jstor.org/stable/3521691\n\nA very recent one that shows \"gender gaps [in political participation] are better understood as a product of men\u2019s comparatively higher levels of enjoyment of arguments and disagreements.\"\n\nWolak, Jennifer. \"Conflict avoidance and gender gaps in political engagement.\" Political behavior 44.1 (2022): 133-156.\n\nhttps://link.springer.com/article/10.1007/s11109-020-09614-5\n\nOf course there are more that you can find cited in these papers, particularly the latest paper which can link you into the most recent research in the area.",
+                                    "score": 15,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 08:53:36",
+                                    "replies": [
+                                        {
+                                            "author": "AskingToFeminists",
+                                            "body": "This seems pretty expected given that women overall score more on Agreeableness.\u00a0\n\n\nI wonder if there is data on likelihood of women to belong to socially undesirable hobbies. Typically, in the 90s, liking SF and comics and fantasy was seen as a nerd thing and was pretty much a guarantee of making you a pariah if it became known. And those are typically coded male things. But are there equivalently socially rejected female hobbies ?\n\n\nAnd how do we distinguish those from the \"greater male variability\", where the distributions, while having similar means, have bigger variances for men in many things ?",
+                                            "score": 11,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 09:40:18",
+                                            "replies": [
+                                                {
+                                                    "author": "VicisSubsisto",
+                                                    "body": "> But are there equivalently socially rejected female hobbies ?\n\nDoll collecting comes readily to mind, although I can't think of any others off the top of my head. Maybe boy-band fandoms; although one might not consider that interactive enough to be a hobby, one could say that also applies to SF and comics.",
+                                                    "score": 4,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-20 11:47:26",
+                                                    "replies": [
+                                                        {
+                                                            "author": "AskingToFeminists",
+                                                            "body": ">Doll collecting comes readily to mind\n\n\nIs it equally socially rejected ? I can't recall particular jokes where women who collect dolls are the target, or media representation of them with scorn. The male nerd has been a common fixture of ridicule, though it has gotten better. But me not remembering any particular case might just be my obliviousness.\n\n\n>Maybe boy-band fandoms\n\n\nI would agree it is seen as corny and somewhat uncool.\u00a0 I am not sure it is \"ew, you go to comicons\" uncool, but I'll grant you that, particularly if it prolongs into adulthood, that would be seen as weird.",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-05-21 01:04:27",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "VicisSubsisto",
+                                                                    "body": "The woman whose house is filled with creepy starting antique dolls isn't a super common sitcom trope but I've seen it. \"Cringe kpop fandom\" is something I've seen mentioned a lot on Reddit, too. It's not as prevalent as justneckbeardthings but it does happen.",
+                                                                    "score": 2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-05-21 09:45:46",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "Sol_Hando",
+                                            "body": "Interesting. \n\nI assumed this was due to fewer women entering into finance, so in order to increase equality in hiring, companies necessarily had to sacrifice competency. If you pick the top 10% of female new hires, and top 10% male new hires, and the size of each pool is different, you're going to end up with unequal hiring demographics. If a few prestigious companies actually try to push for equal hiring, that leaves the rest of the industry with an even smaller pool of female applicants to hire from.",
+                                            "score": 5,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 09:26:37",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "JibberJim",
+                            "body": "Or... the training data has shown that with two superficially identical candidates, the female is actually the better candidate.\n\nUntil very recently, this very probably was true - and for the oldest age groups will still be - until the last couple of decades it was harder for female's to get those same qualifications, so they almost certainly were \"better\".\n\nOf course, the actual thing this says is that an AI which bases hiring decisions so much on a *name* is completely and utterly fucking useless as judging hiring decisions.",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 09:24:50",
+                            "replies": []
+                        },
+                        {
+                            "author": "ZurrgabDaVinci758",
+                            "body": "I don't think the way that AIs relate to their training data really works like that. I'd be suprised if it was extrapolating some general rule from the training data then applying it unprompted",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 14:09:28",
+                            "replies": [
+                                {
+                                    "author": "electrace",
+                                    "body": ">I'd be suprised if it was extrapolating some general rule from the training data then applying it unprompted\n\nIsn't that exactly what they do? People first started being impressed with LLMs when they could do things like \"translate from English to French\" despite not being trained to do that.\n\nIt's whole shtick is learning general rules and then applying them without being explicitly prompted. The prompting is just the polishing on top of the model.\n\nSee Evil Bing/Sydney: Presumably they didn't tell it to \"Be cartoonishly evil\".",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 14:39:26",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Liface",
+            "body": "I'm not in HR, but is there actually evidence that this is happening in practice? It sounds like the experiment used publicly-available LLMs, but this isn't what HR departments are using.\n\nThe paper gives several examples of software that large HR departments might be using like\nhttps://www.ciivsoft.com and\nhttps://ubidy.com/news/validating-skills-beyond-the-resume.\n\nWhat is the evidence that this software leaves the candidate's name intact?",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2025-05-20 07:42:24",
+            "replies": [
+                {
+                    "author": "electrace",
+                    "body": "The effect was consistent across all the top LLMs. It's unlikely that ciivsoft (which is most likely just using one of the top LLMs with some paint on top) are not going to be exhibiting the same behavior.",
+                    "score": 21,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 07:49:51",
+                    "replies": [
+                        {
+                            "author": "Liface",
+                            "body": "Yes, the underlying technology is the same, but [a marketing page on Ciivsoft's website](https://www.ciivsoft.com/3-steps-to-stamp-out-name-bias/) suggests that they do not include candidate names in their evaluations.",
+                            "score": 10,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 07:55:09",
+                            "replies": [
+                                {
+                                    "author": "electrace",
+                                    "body": "It seems like in the post, masking candidate names flips the bias to men, although not as strongly.",
+                                    "score": 7,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 07:56:47",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "Sol_Hando",
+                                    "body": "I wonder if they actually have something to remove the names in their software. That post is more of a general statement that name bias is bad because it harms oppressed groups. But if the name bias is favoring underrepresented groups (this study would be interested to do with different ethnicity-coded names as well as gender) I assume there would be less motivation to stamp it out.",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 08:24:22",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "darwin2500",
+                                    "body": "Sure, but the resume study is an artificial construct to isolate gender as a variable with otherwise identical resumes.  It is probably not hard for the AI to make fairly confident gender predictions on a resume without a name, if it is biased on that dimension.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 15:19:28",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "pretend23",
+            "body": "You're not supposed to hire people based on statistical inferences from their demographic (people in group X have a 5% higher rate of substance abuse, so I won't hire this person from group X ). But if you were going to hire people based on the statistics of their demographic, I don't think it's irrational to prefer women, because on average they have higher agreeableness, conscientiousness, etc.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-05-20 13:44:18",
+            "replies": [
+                {
+                    "author": "petarpep",
+                    "body": "> But if you were going to hire people based on the statistics of their demographic, I don't think it's irrational to prefer women, because on average they have higher agreeableness, conscientiousness, etc.\n\nYeah all things (that are put on a resume) equal and if I was allowed to, I think I'd agree that women will tend towards better hires. The main downside from an employer perspective is maternity/family leave more likely but the chance of them being drug abusers or criminals or something like that is less likely, depending on the crime [like stealing from businesses](https://www.thebulldog.law/blog/2023/10/study-men-are-more-likely-to-steal-from-businesses) almost *1/4th* as likely. And maybe criminal behavior itself isn't that common but noncriminal disruptive behaviors certainly can be and anecdotally that's also mostly men.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 14:06:07",
+                    "replies": []
+                },
+                {
+                    "author": "Existing-Jacket18",
+                    "body": "I would imagine, if your job wanted any amount of competency and innovation, that hiring on high agreeableness would give you inherently inferior staff.\n\n\nAgreeableness is probably the most dual pronged personality trait possible. High agreeableness directly corrolates to lower intelligence, lower creativity and\u00a0lower common sense. Of course, low agreeableness corrolates to being an asshole, but as I said, dual pronged.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-06-05 11:28:42",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "queacher",
+            "body": "Psychologically, women are just better at working. Men have egos, and aren't as good at working with others. Women are great at working in teams, leading without being domineering, and are just generally more pleasant in general.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-21 09:53:06",
+            "replies": [
+                {
+                    "author": "SGC-UNIT-555",
+                    "body": "True offices are inherently female coded workplaces.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-05-21 16:00:50",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Flimsy_Meal_4199",
+            "body": "Meritocracy is back beybeeee\n\nUh anyways seems like a problem\n\nAlso surprising considering the surgeon was the boy's mother issues",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2025-05-20 09:58:12",
+            "replies": []
+        }
+    ]
+}

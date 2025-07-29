@@ -1,0 +1,907 @@
+{
+    "post_title": "The Ethics of Policing Algorithms",
+    "post_timestamp": "2022-11-22 10:31:57",
+    "last_comment_timestamp": "2022-11-23 18:30:58",
+    "time_difference": "1 day, 7:59:01",
+    "comments": [
+        {
+            "author": "d4em",
+            "body": "These algorithms are very vulnerable to bias. If a neighbourhood is heavily patrolled, the chance is much higher any infractions are added to the learning set, increasing the \"crime-value\" of that area. Meanwhile, areas that are rarely patrolled at all, have a much lower chance of ending up in the database. This creates blind spots.\n\nA real life example of where policing by AI went horribly wrong is the [Dutch childcare benefit scandal](https://en.wikipedia.org/wiki/Dutch_childcare_benefits_scandal). The algorithm \"learned\" that types of people (single mothers, immigrants) were more likely to have something wrong with their taxes, checked them more often, and then identified them as fraudsters for minor infractions like receipts being handed in incorrectly, or being a few days late with payment. Because computers are \\*magic truth machines\\* that \\*don't make mistakes\\* these people were given no legal recourse, no chance to defend themselves. They did not even know what they were accused of.\n\nIf we are going to use machine learning as a tool to help legal administration, we need to take extreme caution, and everyone working with these machines must fully understand their limitations. The computer has no idea what it's actually doing, it's just a fancy calculator following instructions, and while it follows these instructions flawlessly, it's still extremely error prone, and does not have the capability for self-reflection a human does, even if \"learning\" is built into the algorithm. AI fundamentally does not understand what its doing, and that means it will never understand if its doing wrong. We cannot use AI to replace our own judgment.",
+            "score": 116,
+            "depth": 0,
+            "timestamp": "2022-11-22 12:05:40",
+            "replies": [
+                {
+                    "author": "vrkas",
+                    "body": "At least the whole cabinet resigned in the Netherlands. In Australia a [similar scheme](https://en.wikipedia.org/wiki/Robodebt_scheme) was instituted, then found to be illegal, but the people administering it continued to be in government. The former social services minister even became PM. \n\nBack to the point: I agree that great care needs to be used when trying these kinds of optimised, targeted computational methods.",
+                    "score": 30,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 13:12:26",
+                    "replies": [
+                        {
+                            "author": "pitjepitjepitje",
+                            "body": "The same guy who was PM during the scandal, offered himself up for reelection and won, so yes, the cabinet fell, but we\u2019re still stuck with some of the responsible politicians, including the PM. Not contradicting you, but an (IMO necessary) addendum.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-11-23 08:10:10",
+                            "replies": []
+                        },
+                        {
+                            "author": "zhoushmoe",
+                            "body": "All the care in the world won't stop the biases inherent in our paradigm. There are built-in mechanisms of discrimination and inequality that the system as we know it optimizes for and are virtually impossible to remove from our current modus vivendi.\n\nThese books talk about the problem at length:\n\nhttps://www.goodreads.com/book/show/28186015-weapons-of-math-destruction\n\nhttps://www.goodreads.com/book/show/34762552-algorithms-of-oppression\n\nhttps://www.goodreads.com/book/show/34964830-automating-inequality",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 15:25:09",
+                            "replies": [
+                                {
+                                    "author": "vrkas",
+                                    "body": "Yeah for sure. In the two cases mentioned in the comments the ML-based bullshit isn't the actual cause of the trouble. The root is from the rampant starve-the-beast defunding and privatisation of governmental functions, along with negative neoliberal attitudes to social services. If you have a properly functional social service setup, you won't need any of this shit in the first place.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 15:29:49",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "phanta_rei",
+                    "body": "It reminds of the algorithm that handed longer sentences to minorities. If I am not mistaken, it took factors like income and spit out a value that determines whether the defendant will recidivate or not. The result was that minorities were disproportionately affected by it\u2026",
+                    "score": 15,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 12:45:12",
+                    "replies": [
+                        {
+                            "author": "d4em",
+                            "body": "Oh yeah, this is a whole rabbit hole. There's also algorithms that are being trained by people to identify subjective values, such as \"niceness.\" These are notoriously biased as well, as biased, in fact, as the people who train them. But unlike those people, the opinion of the AI won't be changed by actually getting to know the person it's judging. They give 100% confident, biased, results.\n\nOr the chatbots that interpret written language and earlier conversations to simulate conversation. One of them was unleashed on the internet and was praising Hitler within 3 hours. Another, scientific model designed to skim research papers to give summaries to scientists, answered that vaccines both can and cannot cause autism.\n\nThese don't bother me though. They're so obviously broken that no one will think to genuinely rely on them. What bothers me is the idea of this type of tech becoming advanced enough to sound coherent and reliable, because the same issues disrupting the reliability of the AI tech we have today will still be present, it's just the limitation of the technology. Yet even today we have people hailing the computer as our moral savior that's supposed to end untruth and uncertainty. If the tech gets a facelift, I believe many people will falsely place their trust in a machine that just cannot do what is being asked of it, but tries it's damndest to make it look like it can.",
+                            "score": 12,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 13:03:03",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "As an example:\n\nMeta just a couple days ago took offline it's scientific paper generation machine because it would happily provide you a real-sounding scientific paper on the history of bears in space.\n\nhttps://futurism.com/the-byte/facebook-takes-down-galactica-ai",
+                                    "score": 12,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 13:19:40",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "Deleted",
+                                    "body": "Few things have described me better.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 15:16:40",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "ThreesKompany",
+                    "body": "It happened in NYC with fires.  It is explored in a fascinating book called \"The Fires\" by Joe Flood.  Basically RAND corporation had used computer models to \"more efficiently\" provide fire protection in the city and it led to a massive wave of fires and destruction of huge swaths of the city.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 15:30:07",
+                    "replies": []
+                },
+                {
+                    "author": "wkmowgli",
+                    "body": "For this example we can train an algorithm to estimate the probability of a crime in an area given the amount of patrolling in that area. So it could be normalized out if the algorithm is designed properly. \nThe amount of care needed in designing these algorithms will need to be high. I do know that there is active research and development in identifying these biases early (even before deployment) but it\u2019ll never be perfect. So it\u2019ll likely be a cycle of negatively hurting people, being called out, fixed, and then back to step 1.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 15:32:23",
+                    "replies": [
+                        {
+                            "author": "littlebitsofspider",
+                            "body": "I wonder what would happen if they took the Abraham Wald approach and designed a counterintuitive algorithm. Like, make a heatmap of violent crimes (assault, robbery, rape, etc.), and then sic the algo on non-violent crimes in the inverted heatmapped areas, like larceny, wire fraud, and so on. Higher-income areas have wealthier people, and statistically wealthier people are better equipped to commit high-dollar white collar crimes. You could also use the hottest areas on the violence heatmap to target social services support.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 21:29:02",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "> The computer has no idea what it's actually doing\n\nCounterpoint: Neither do we.\n\nExpert poker players are often unable to explain their reasoning for why it felt like a bluff. It could be that they are picking up on something and acting without being able to reason about it.\n\nLikewise, a doctor with a lot of experience might have some hunch that turns out to be true. The hunch was actually solid deduction that the doctor was unable to reason about.\n\nEven you, driving, probably sometimes get a hunch that a car might change lanes or get a hunch that an intersection should be approached slowly.\n\nI (and others) feel that explainable AI might be a dead-end. If we told the poker player that you can only assume a bluff if you can put into words what is wrong, that player might perform worse. It might be that forcing AI to be explainable is artificial limiting it's ability to help us.\n\nEven if you don't buy that, there are those studies that show that consciousness is explaining our actions after the fact like an observer. So we're not really using reason to make decisions, we just do things and then reason about why. \n\nWe let humans drive cars on hunches. Why should we hold AI to a higher standard? Is a poorly performing explainable AI better than an unexplainable one that does a good job?",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 13:14:45",
+                    "replies": [
+                        {
+                            "author": "d4em",
+                            "body": "I'm not talking about reasoned explanations when I say a computer does not understand what it's doing. What I mean is that a computer fundamentally has no concept of \"right and wrong.\" It's just a field of data and to the computer it's all the same if you switched the field for \"good\" with the field for \"bad,\" it would uncaringly keep making it's calculations. Computers do not feel, they do not have hunches. All it does it measure likeliness based on ever more convoluted mathematical models. Its a calculator.\n\nAny emotional attachment is purely coming from our side. A computer simply does not care. Not about itself, not about doing a good job, and not about you. And even if you told it to care, that would be no more than just another instruction to be carried out.",
+                            "score": 13,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 13:21:34",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "Are people so different? We spend years teaching our kids to know right from wrong. Maybe if we spent as much time on the computers then they could know it, too?",
+                                    "score": -9,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 13:37:02",
+                                    "replies": [
+                                        {
+                                            "author": "d4em",
+                                            "body": "Does a baby need to be taught to feel hungry?\n\nWhile I appreciate the comparison you're making, it poses a massive problem: who initially taught humans the difference between right and wrong?\n\nKids do good without being told to. They can know something is wrong without being taught it is. For a computer, this simply is not possible. We're not teaching kids what \"good\" and \"bad\" are, as concepts. We're teaching them to behave in accordance with the morals of society at large. And sure, you could probably teach a computer to simulate this behavior and make it look like it's doing the same thing, but at the very core, there would be something fundamental missing.\n\nWhat's good and bad isn't a purely intellectual question. It's deeply tied in to what we feel, and that's what a computer simply cannot do. Even if we learn it to emulate empathy, it will never truly have the capacity to place itself in someone's shoes. It won't be able to even place itself in it's own shoes. For as far as it's trying to stay alive, it's only because it's following the instruction to do so. A computer is not situated in the world in the same way live beings are.",
+                                            "score": 8,
+                                            "depth": 4,
+                                            "timestamp": "2022-11-22 13:45:06",
+                                            "replies": [
+                                                {
+                                                    "author": "Skarr87",
+                                                    "body": "In my experience children tend to be little psychopaths.  Right and wrong (morality) likely evolved along with humans as they developed societies.  Societies give a significant boost to the survival and propagation of members within the society.  So societies with moral systems that are conducive to larger and more efficient societies tend to propagate better as well.  These moral systems then get passed on as the society propagates and any society that has morals not conducive to societies tend to die off.\n\nWhy do you believe an AI would definitely be incapable of empathy?  Not all humans are even capable of empathy and empathy can even be lost by damage to the frontal lobe.  For some of those that have lost it never returns and for others they are able to relearn to express it.  If it was relearned does it mean they are just emulating it and not actually experiencing it?  How would that be different than an AI?\n\nWhen humans get intuition, a feeling, or a hunch it isn\u2019t out of nowhere, they typically have some kind of history or experience with the subject.  For example when a detective has a hunch about a suspect lying it could be from previous experience or even a bias from a correlation with behavior of previous lying subjects that other detectives haven\u2019t really noticed.  How fundamentally is this any different when an AI makes an odd correlation between data using statistics?  You could argue that what an AI is doing when correlating data like this it is creating a hunch and when a human has a hunch they are just making a conclusion using correlated data.\n\nNote I am not advocating using AI in policing, I believe that is a terrible idea that can and will be very easily abused.",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-11-22 14:40:35",
+                                                    "replies": [
+                                                        {
+                                                            "author": "d4em",
+                                                            "body": "Our moral systems probably got more refined as society grew, but by our very nature as live beings we need to have an understanding between right and wrong to inform our actions. A computer doesn't have this understanding, it just follows the instructions its given, always.\n\nI'm not making the argument that machines are incapable of empathy, although I am by extension, but the core of the argument is that machines are incapable of experience. Sure, you could train a computer to spit out a socially acceptable moral answer, but there would be nothing making that answer inherently moral to the computer.\n\nI agree that little children are often psychopaths, but they're not incapable of experience. They have likes, dislikes. A computer does not care about anything, it just does as it's told.\n\nThe fundamental difference between a human hunch and the odd correlation the AI makes is that the correlation does not mean anything to the computer, it's just moving data like it was built to do. It's a machine.",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-11-22 14:54:23",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Skarr87",
+                                                                    "body": "So if I am understanding you\u2019re argument, and correct me if I am wrong, the critical difference between a human and a computer is that a computer isn\u2019t capable of sentience and by extension sapience or even more generalized consciousness?\n\nIf that is the argument then my take is I\u2019m not sure we can say that yet.  We don\u2019t have a great understanding of consciousness yet to be able to say that it is impossible for none organic things to possess.  All we know for sure is that it seems that the consciousness can be suppressed or damaged from changing or stopped biological processes within the brain.  I am not aware of a reason a machine, in principle, could not simulate those processes to same effect (consciousness).\n\nAnyway, it seems to me that your main problem with using AI for policing is that it would be mechanically precise in its application without understanding the intricacies of why crime may be happening here?  For example maybe it will come to the conclusion that African American communities are crime centers without understanding that the reason they are crime centers is because they tend to be poverty stricken which is the real cause.  So it\u2019s input may end up being almost a self fulfilling prophecy?",
+                                                                    "score": 2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-11-22 16:13:05",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "d4em",
+                                                                            "body": "I'm not talking about sentience, sapience, or consciousness, or anything like that, I'm talking about experience. All computers are self-aware, their code includes references to self. I would say machine learning constitutes a basic level of intelligence. What they cannot do, is experience.\n\nIt's actually very interesting that you say we don't have a good enough understanding of consciousness yet. The thing about consciousness is that it's not a concrete term. It's not a defined logical principle. In considering what consciousness is, we cannot just do empirical research (it's very likely consciousness cannot be empirically proven), we have to make our own definition, we have to make a choice. A computer would be entirely incapable of doing so. The best it would be able to do is measure how the term is used and derive something based off that. And those calculations could get extremely complicated and produce results we wouldn't have come up with. But it wouldn't be able to form a genuine understanding of what \"consciousness\" entails.\n\nThis goes for art too, computers might be able to spit out images and measure which ones humans think is beautiful and use that data to create a \"beautiful\" image, but there would be nothing in that computer experiencing the image. It's just following instructions.\n\nThere's a thought problem called the Chinese Room. In it, you have a man, placed in a room, that does not speak a word of Chinese. When you want your English letter translated to Chinese, you slide it through a slit in the wall. The man then goes to work and looks up all possible information related to your letter in a bunch of dictionaries and grammar guides. He's extremely fast and accurate. Within a minute you get a perfect translation of your letter spit out the slit in the wall. The question is: does the man in the room know Chinese?\n\nFor a more accurate comparison: the man does not know English either, he looks that up in a dictionary as well. It's also not a man, it's a piece of machinery, that finds the instructions on how to look at your letter and how to hand it back to you in another dictionary. Every time you hand him a letter, the computer has to look in the dictionary to find out what a \"letter\" is and what you should do with it.\n\nAs for the problems with using AI or other computer-based solutions in government, yeah, pretty much. The real risk is that most police personnel isn't technically or mathematically inclined, and humans have shown a tendency to blindly trust what the computer or the model tells them. But also, if there was a flaw in one of the dictionaries, it would be flawlessly copied over into every letter. And we're using AI to solve difficult problems that we might not be able to doublecheck.",
+                                                                            "score": 2,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2022-11-22 17:15:07",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "Skarr87",
+                                                                                    "body": "I guess I\u2019m confused by what you mean by experience.  Do you mean something like sensations?  Something like the ability to experience the sensation of the color red or emotional sensations like love as opposed to just detecting light and recognizing it as red light and emulating the appropriate responses that would correspond to the expression of love?\n\nWith your example of the man translating words,  I\u2019m not 100% sure that is not an accurate analogy of how humans process information.  I know it\u2019s supposed to be an example to contrast human knowledge with machine knowledge, but it seems pretty damn close to how humans process stuff.  There are cases where people have had brain injuries where they essentially lose access to parts of their brain that process language.  They will straight up lose the ability to understand, speak, read, and write a language they were previously fluent in, the information just isn\u2019t there anymore.  It would be akin to the man losing access to his database.  So then the question becomes does a human even \u201cknow\u201d a language or do they just have what is essentially a relational database to reference?\n\nRegardless though, none of this matters in whether we should use AI for crime.  Both of our arguments essentially make the same case albeit from different directions, AI can easily give false interpretations of data and should not be solely used to determine policing policy.",
+                                                                                    "score": 1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2022-11-23 10:22:47",
+                                                                                    "replies": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "A baby doesn't need to learn to be hungry but neither does a computer need to learn to do math. A baby does need to learn ethics, though, and so does a computer.\n\nWhether or not a computer has something fundamentally missing that will make it never able to have a notion of \"feeling\" as humans do is unclear to me. You might be right. But maybe we just haven't gotten good enough at making computers. Just like we, in the past, made declarations about the inabilities of computer that were later proved false, maybe this is another one?\n\nIt's important that we are able to recognize when the computer becomes able to suffer for ethical reasons. If we assume that a computer cannot suffer, do we risk overlooking actual suffering?",
+                                                    "score": -5,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-11-22 14:12:39",
+                                                    "replies": [
+                                                        {
+                                                            "author": "d4em",
+                                                            "body": "The thing is, for a baby to be hungry, it needs to have some sort of concept as hunger being bad. We need the difference between good and bad to stay alive. A computer doesn't, because it doesn't need to stay alive, it just runs and shuts down according to the instructions its given.\n\nWe need to learn ethics, yes, but we don't need to learn morals. And ethics really is the study of moral frameworks.\n\nIt's not because the computer is not advanced enough. It's because the computer is a machine, a tool. It's not alive. It's very nature is fundamentally different from that of a live being. It's designed to fulfil a purpose, and that's all it will ever do, without a choice in the matter. It simply is not \"in touch\" with the world in the way a live being is.\n\nIt's natural to empathize with computers because they simulate mental function. I've known people to empathize with a rock they named and drew a face on, it doesn't take that much for us to become emotionally attached. If we can do it with a rock, we stand virtually no chance against a computer that \"talks\" to us and can simulate understanding or even respond to emotional cues. I would argue that it's far more important we don't lose sight of what computers really are.\n\nAnd if someone were to design a computer capable of suffering, or in other words, a machine that can experience - I don't think its possible and it would need to be so entirely different from the computers we know that we wouldn't call it a \"computer\" - that person is evil.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-11-22 14:32:14",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Deleted",
+                                                                    "body": ">And if someone were to design a computer capable of suffering, or in other words, a machine that can experience - I don't think its possible and it would need to be so entirely different from the computers we know that we wouldn't call it a \"computer\" - that person is evil.\n\nI made children that are capable of suffering? Am I evil? (I might be, I dunno!)\n\nIf we start with the assumption that no computer can be conscious then we will never notice the computer suffer, even if/when it does.\n\nBetter to develop a test for consciousness and apply it to computers regularly, to have a falsifiable result. So that we don't accidentally end up causing suffering!",
+                                                                    "score": 0,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-11-22 16:28:41",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "d4em",
+                                                                            "body": "I'm not saying its evil to create beings that are capable of suffering. I would say that giving a machine, that has no other choice than to follow the instructions given to it, the capability to suffer would be evil. \n\nAnd again, this machine would have to be specifically designed to be able to suffer. There is no emergent suffering that results from mathematical equations. Don't develop warm feelings for your laptop, I guarantee you they are not returned.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2022-11-22 17:18:48",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "Deleted",
+                                                                                    "body": "Consciousness emerged from life as life advanced. Why not from computers?\n\nYou could argue that we wouldn't aim to create a conscious computer. But neither did nature aim to create consciousness and here we are.\n\nSo I absolutely do think that there's a chance that it simply emerges. Just like it did before. Every day some unconscious gametes get together and, at some point, consciousness emerges, right? If carbon, why not silicon?",
+                                                                                    "score": 1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2022-11-22 21:48:51",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "d4em",
+                                                                                            "body": "Well, first, the comparison you're drawing between something created by nature and a machine designed by us as a tool is incorrect. We were not designed. Its not that \"nature\" did not aim to create consciousness, its that nature does not have any aim at all.\n\nSecond, our very being is fundamentally different from what a computer is. Experience is a core part of being alive.   Intellectual function is built on top of it. You're proposing the same could work backwards; that you could build experience on top of cold mechanical calculations. I say it can't.\n\nPart of the reason is the hardware computers are working on, they are entirely digital. They can't do \"maybes.\" \n\nAnother part of the reason is that computers do not \"get together\" and have their unconsciousness meet. They are calculators, mechanically providing the answer to a sum. They don't wander, they don't try, they do not do anything that was not a part of the explicit instruction embedded in their design.",
+                                                                                            "score": 1,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2022-11-23 04:58:02",
+                                                                                            "replies": [
+                                                                                                {
+                                                                                                    "author": "Deleted",
+                                                                                                    "body": "Is this not just carbon chauvinism?\n\nQuantum computers can do maybe.\n\nI am unconvinced that the points that you bring up are salient. Like, why do the things that you mention preclude consciousness? You might be right but I don't see why.",
+                                                                                                    "score": 1,
+                                                                                                    "depth": 11,
+                                                                                                    "timestamp": "2022-11-23 09:17:34",
+                                                                                                    "replies": []
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "I don't necessarily agree that we need to have what you call 'unexplainable AI' and what I would call 'AI using machine learning' to solve the kinds of problems that face police today. I think that you can have systems that are extremely unbiased and extremely transparent that are written in ways that are very explicit and can be understood by pretty much everyone.   \n\n\nBut I do agree with you that it's a very biased and incomplete argument to say that automated systems are working in ways that are opaque to the communities they serve and ignore the fact that it's not in any way better to have humans making those completely opaque decisions.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 14:51:45",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": ">I don't necessarily agree that we need to have what you call 'unexplainable AI'\n\nTo be more precise, I'm not saying that we must have unexplainable AI. I'm just saying that limiting our AI to only the explainable increases our ability to reason about it (good) but also decreases the ability of the AI to help us (bad). It's not clear if it's worth the trade-off. Maybe in some fields yes and other no.\n\nMost deep learning is already unexplainable and it's already not useful enough. To increase both the usefulness and the explainability will be hard. Personally, I think that maximizing both will be impossible. I also think that useful quantum computers will be impossible to build. I'm happy to be proven wrong!",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 16:23:10",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "Yes, and I am pushing back about the spectrum of utility vs transparency that you are suggesting. I think that the usefulness of having a transparent process, especially when it comes to policing, vastly outweighs the usefulness of any opaque process with more predictive power. I think you need to update your definition of usefulness to account for how useful it is to have processes that people can completely understand and therefor trust.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2022-11-22 17:40:53",
+                                            "replies": [
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "I agree with you except for the part where you seem very certain that understanding trumps all utility. I am thinking that might find some balance between utility and explainability. Presumably there would be some utilitarian calculus that would judge the importance of explainability versus  utility of AI function.\n\nLike for a chess playing AI, explainability might be totally unimportant but for policing it is. And for other stuff it's in the middle.\n\nBut say you have the choice between an AI that drives cars and you don't understand it versus an explainable one but the explainable one is shown to lead to 10 times the fatalities of the other one. Surely there is some level of increased fatalities where you'd be willing to accept the unexplainable?\n\nHere's a blog with similar ideas:\n\nhttps://kozyrkov.medium.com/explainable-ai-wont-deliver-here-s-why-6738f54216be",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-11-22 21:46:04",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Deleted",
+                                                            "body": "Yeah, I do think I understand the point you are trying to make, but I still don't agree. And that's because the transparency of the process is inextricable from your ability to see if it's working. In order for a legal system to be useful, it needs to be trusted, and you can't trust a system if you can't break open and examine every part of the system as needed. Let me give a concrete example to illustrate.   \n\n\nTake a situation described in the OP where the police are not distributed evenly along some racial lines in a community. Lets say that the police spend 25% more time in the community of racial group A than they do of racial group B. That group is going to assert that there is bias in the algorithm that leads to them being targeted, and if you cannot DEMONSTRATE that not to be the case than you'll have the kind of rejection of policing that we've been seeing throughout the country in the last few years. You won't be able to get people to join the police force, you won't get communities to support the police force, and when that happens it's not going to matter how efficiently you can distribute them.   \n\n\nJust like not crashing might be the metric with which you measure the success of an AI that drives cars; trust would be one of the metrics with which you would measure the success of some kind of AI legal system.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-11-22 23:37:58",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Deleted",
+                                                                    "body": ">And that's because the transparency of the process is inextricable from your ability to see if it's working.\n\nWould you let a surgeon operate on you even though you don't know how his brain works? I would because I can analyze results on a macro level. I don't know how to build a car but I can drive one. Dealing with things that we don't understand is a feature of our minds, not a drawback.\n\n>Take a situation described in the OP where the police are not distributed evenly along some racial lines in a community. Lets say that the police spend 25% more time in the community of racial group A than they do of racial group B. That group is going to assert that there is bias in the algorithm that leads to them being targeted, and if you cannot DEMONSTRATE that not to be the case than you'll have the kind of rejection of policing that we've been seeing throughout the country in the last few years. You won't be able to get people to join the police force, you won't get communities to support the police force, and when that happens it's not going to matter how efficiently you can distribute them.   \n\nGood point and I agree that policing needs more explainability than a chess algorithm. Do we need 100%? Maybe.\n\n>Just like not crashing might be the metric with which you measure the success of an AI that drives cars; trust would be one of the metrics with which you would measure the success of some kind of AI legal system.\n\nFair enough. So for policing we require a high level of explainability, let's say. We offer the people an unexplainable AI that saves an extra 10,000 people per year but we opt for the explainable one because despite the miracle, we don't trust it! Okay.\n\nIs it possible to make a practical useful policing AI with a high level of explainability? I don't know. It might not be. There might be many such fields where we never use AIs because we can't find them to be both useful enough and explainable enough at the same time. Governance, for instance.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-11-23 00:29:06",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "This misses the entire point of what explainable AI is. Asking humans to explain their intuition as a precondition for their intuition to be applicably valid is definitely limiting for humans. However, explainable AI isn't that we ask AI to explain itself. It's rather being able to exactly or with high probability pinpoint the exact dataset on which AI is basing it's prediction. This is definitely useless, and so limiting, when it comes to machine learning applications to, say, predicting what food you might like the best. \nIt's however immensely important in areas like medical imaging, because we want to ensure that the input, on which AI is basing its decision, isn't some human-errored spot on the x-ray. \n\nAs such, it is for these fields that explainable AI is studied, where limitations of AI are far less significant than us being sure that AI isn't making a mistake. As such suggesting explainable AI is a dead-end is inaccurate, if not a mischaracterisation.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 13:59:51",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "I didn't mean that the AI should be able to explain itself. I meant that we should be able to dig in to the AI and find an explanation for how it worked.\n\nI'm saying that that requiring either would limit AI and decrease it's usefulness.\n\nAlready we have models where it's too difficult to dig into them and figure out why a choice was made. As in, you can step through the math of a deep learning system to follow along with the math but you can't pinpoint the decision in there and more than you can root around in someone's brain to find the neuron responsible for a behavior.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 14:05:11",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "And you're missing the point of the field if you're making the trivial observation that working out an explanation decreases the usefulness. \n\nThat is _the point_. We want to decrease it's usefulness and increase its accuracy in fields where the accuracy is paramount. \nThis is akin to the relationship of physics and math. In physics, we routinely make unjustified steps to make our models work. Then in math, we try to find a reasonable framework in which the unjustified steps are justified. Saying \"math reduces the usefulness by requiring an explanation for seemingly okay steps\" is to miss the point of what mathematics is trying to do.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2022-11-22 14:21:16",
+                                            "replies": [
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": ">And you're missing the point of the field if you're making the trivial observation that working out an explanation decreases the usefulness. \n\nThat's not what I said! I'm saying that limiting AI to only the explainable may decrease usefulness.\n\nThis is trivially true. Imagine that you have many AI programs, some of which you can interrogate and some that you can't. You need to pick the one to use. If you throw out the explainable ones, you have fewer tools. It's not a more useful situation.\n\n>That is _the point_. We want to decrease it's usefulness and increase its accuracy in fields where the accuracy is paramount.\n\nBut accuracy isn't the same as explainability! A more accurate AI might be a less explainable one. Like a star poker player with good hunches vs a mediocre one with good reasoning.\n\nWe might decide that policing is too important to be unexplainable so we decide to limit ourselves to explainable AI and we put up with decreased utility of the AI in exchange. That's a totally reasonable choice. But don't tell me that it'll necessarily be more accurate.\n\n> Saying \"math reduces the usefulness by requiring an explanation for seemingly okay steps\" is to miss the point of what mathematics is trying to do.\n\nTo continue the analogy, there are things in math that are always observed to be true yet we cannot prove it. And we might never be able to prove them. Yet we proceed as if they are true. We utilize that for which we have no explanation because utilizing it makes our lives better than waiting around for the proof that might never come.\n\nAlready math utilizes the unexplainable. Why not AI?",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-11-22 16:41:54",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "[removed]",
+                            "score": -1,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 15:24:34",
+                            "replies": [
+                                {
+                                    "author": "BernardJOrtcutt",
+                                    "body": "Your comment was removed for violating the following rule:\n\n>**Argue your Position**\n\n>Opinions are not valuable here, arguments are! Comments that solely express musings, opinions, beliefs, or assertions without argument may be removed.\n\nRepeated or serious violations of the [subreddit rules](https://reddit.com/r/philosophy/wiki/rules) will result in a ban.\n\n-----\n\nThis is a shared account that is only used for notifications. Please do not reply, as your message will go unread.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 21:08:41",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "Machine Learning, Artificial Intelligence, and Algorithm are all terms that exist in the same space of computer science, but they absolutely do NOT all mean the same thing, and in your post here you used them all interchangeably.\n\nAn algorithm is a very generic term for some kind of heuristic that can be followed to produce some result. A recipe for cookies in an algorithm just like some algorithm on Facebook decides what posts to show you. Machine Learning takes place when the process a system implements is non-deterministic; it does things that the programmers didn't explicitly tell it to do; it actually learns how to do new things. An artificial intelligence is a system that's designed to do tasks in the same way a human would, often involving processing visual data or making human-like decisions.\n\nIf you wanted to make the case that we shouldn't use MACHINE LEARNING in policing, I would 100% agree with that statement, our police policies should be very deliberate and very transparent and machine learning wouldn't be either of those things. But using this as an argument that we shouldn't be embracing policing with explicitly defined algorithms that are far MORE transparent and deliberate than the humans they would replace is an absolutely indefensible argument. If there's one thing we've learned in the past few years, it's that police need far more regulation, and that's exactly what algorithms do whether they are implemented by a computer or by some system of rules and laws.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 13:32:06",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "[removed]",
+                            "score": -6,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 13:41:10",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "[removed]",
+                                    "score": -3,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 13:53:24",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "[removed]",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2022-11-22 14:11:28",
+                                            "replies": [
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "[removed]",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-11-22 14:19:19",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Deleted",
+                                                            "body": "[removed]",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-11-22 14:27:25",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Deleted",
+                                                                    "body": "[removed]",
+                                                                    "score": 0,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-11-22 14:36:59",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "Deleted",
+                                                                            "body": "[removed]",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2022-11-22 14:42:13",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "Deleted",
+                                                                                    "body": "[removed]",
+                                                                                    "score": 0,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2022-11-22 14:59:48",
+                                                                                    "replies": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "Deleted",
+                                            "body": "[removed]",
+                                            "score": -2,
+                                            "depth": 4,
+                                            "timestamp": "2022-11-22 14:01:38",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "BernardJOrtcutt",
+                                    "body": "Your comment was removed for violating the following rule:\n\n>**Be Respectful**\n\n>Comments which consist of personal attacks will be removed. Users with a history of such comments may be banned. Slurs, racism, and bigotry are absolutely not permitted.\n\nRepeated or serious violations of the [subreddit rules](https://reddit.com/r/philosophy/wiki/rules) will result in a ban.\n\n-----\n\nThis is a shared account that is only used for notifications. Please do not reply, as your message will go unread.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 21:09:22",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "eliyah23rd",
+                    "body": "Computers are no longer following instructions. That went out about 10 years ago.\n\nThey're just juggling numbers. Same as us really but without the ability to self-reflect (yet)",
+                    "score": -5,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 13:02:32",
+                    "replies": [
+                        {
+                            "author": "d4em",
+                            "body": "They're following instructions to juggle numbers. If you can hand me the human source code, I'll gladly read it, but as far as I'm aware there is no such document in existence.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 13:09:24",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "jovahkaveeta",
+                    "body": "What if we used victim surveys as training data instead wherein victims of crime can specify the place that the crime occurred.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 18:27:46",
+                    "replies": []
+                },
+                {
+                    "author": "manFigSpaceTheorist",
+                    "body": "thank you",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 21:51:37",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "loxical",
+            "body": "Once in a job I worked at we had an AI tool one manager purchased and trusted blindly and he \u201cset it up\u201d to do auto responses to customer inquiries, because it could \u201clearn\u201d. Because there was no other option for this AI to learn from besides it\u2019s own auto responses, it actually ended up dismissing practically every customer inquiry with a bot response and any future responses with the same, related, not response. He \u201csaved the company money\u201d on customer support staff and laid them all off. When we exposed the issue with the bot, by then it was too late- we\u2019d lost more than half of our clientele AND were facing some legal issues regarding regulations for certain types of requests (expensive ones, think GDPR) - of course by then he had already been promoted and talked himself up so high. I saw how badly he\u2019d destroyed the company so I left very quickly, it went under after that. There was no recovering from this misunderstanding and misused \u201cautomation and machine learning\u201d application that he had done. \nThe worst part is, had he gotten anyone reasonably intelligent in on his implementation early on we could have prevented all of this by adding in some controls and monitoring what was happening. \nNow I just tell the story to people looking into automation and harnessing AI as a warning- the system needs to have constant checks to ensure it doesn\u2019t eat itself.",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2022-11-22 15:07:48",
+            "replies": [
+                {
+                    "author": "FasterDoudle",
+                    "body": "How long ago was this? Are we talking current tech or like 2016?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 22:38:45",
+                    "replies": [
+                        {
+                            "author": "loxical",
+                            "body": "It was around 2018 so it was a little while ago.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 22:39:49",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "eliyah23rd",
+            "body": "Amazed that the article does not mention \"Minority Report\". Spoiler! >!The movie posits a future where the tech is so advanced, that the police know in advance when the crime will be committed. (Pity the movie turned to Psychics instead.)!<\n\nIf today the program can tell the neighborhood, tomorrow it will be the street. Will we hit quantum effects before we can tell which house and when?\n\nHowever, algorithm and computing power are not the only parameters. If we add extensive and invasive data collection to the process, the path from today to that moment is quite evident.\n\nThe question is (1) Do we want to continue increasing the data collection levels (you could argue that it will correlate to safety for some) (2) Do we want to keep this data collection in the hands of opaque institutions? (OTOH if you make it more public the chance of a leak, arguably, increases)\n\nOne last point. You'd be amazed how useful \"innocent\" incidental data is. Just the expressions on faces or even clothing style and gait may correlate to other data in unexpected ways.",
+            "score": 11,
+            "depth": 0,
+            "timestamp": "2022-11-22 10:57:30",
+            "replies": [
+                {
+                    "author": "d4em",
+                    "body": ">One last point. You'd be amazed how useful \"innocent\" incidental data is. Just the expressions on faces or even clothing style and gait may correlate to other data in unexpected ways.\n\nLooking angry on your way home because you got a cancer diagnosis and you're convinced life hates you? The police will now do you the honor of frisking you because you were identified as a possible suspect!\n\nAre you a person of color that recently immigrated? Were you aware immigrants and persons of color are disproportionally responsible for crimes in your area? The police algorithms sure are!\n\nThis is an ethical nightmare. People shouldn't be suspect based on innocent information. Even holding them suspect for a future crime because of one they committed in the past is iffy. There's a line between vigilance and paranoia that's being crossed here.\n\nAnd neither should we monitor everything out of the neurotic obsession someone might do something that's not allowed. Again, crossing the line between vigilance and paranoia. Like, crossing the line so far that the line is now a distant memory that we're not really sure ever existed. Complete safety is not an argument. Life isn't safe and it doesn't have to be. We all suffer, we all die. There is a need to strike a balance, so we can do other things besides suffering and dying. Neither safety nor danger should control our every second.",
+                    "score": 12,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 12:54:44",
+                    "replies": [
+                        {
+                            "author": "eliyah23rd",
+                            "body": "That might happen and it's a danger but that's not the mainline scenario.\n\nData being collected on facial expressions in the billions is more likely. Then you correlate that with other stuff. Bottom line, it's as if the cameras are installed in the privacy of your home, because mountains of data in public provides the missing data in private.\n\nThen you correlate the inferred private stuff with more stuff. That's how you build \"Minority Report\"",
+                            "score": -1,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 13:53:35",
+                            "replies": [
+                                {
+                                    "author": "d4em",
+                                    "body": ">Data being collected on facial expressions in the billions is more likely. Then you correlate that with other stuff. Bottom line, it's as if the cameras are installed in the privacy of your home, because mountains of data in public provides the missing data in private.\n\nI would say this constitutes \"monitoring everything out of the neurotic obsession someone might do something that's not allowed\", wouldn't you?",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 14:05:04",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "bildramer",
+                            "body": "On the one hand, sure, I want to be free to murder people if I really want, and free of creepy 24/7 observation, and people shouldn't assume things about me even if they're 100% accurate, and I would never trust anyone who wants to put cameras on me who claims it comes from a desire to reduce murders - let alone if it's lesser crimes.\n\nOn the other hand, if we really had a magical technology that allowed us to predict and stop murders with perfect accuracy and without the usual surveillance indignities and risks, it would be criminal not to use it. That hypothetical wouldn't be just another way for the powerful to assert themselves. And the problem with using it for other crimes is mostly that certain actions shouldn't be criminal, i.e. that the law is not lenient enough or not specific enough (perhaps for good reasons). In an ideal world with better institutions, we would resolve such a problem by changing the law.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-11-23 12:19:26",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "> (1) Do we want to continue increasing the data collection levels (you could argue that it will correlate to safety for some)\n\nYes, because we wish to extinguish privacy.\n\n> (2) Do we want to keep this data collection in the hands of opaque institutions?\n\nYes, because we crave post-orwellian authoritarianism so nightmarish it makes North Korea look like anarchy.\n\nI'm not being sarcastic, I'm making observations.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 11:56:20",
+                    "replies": [
+                        {
+                            "author": "eliyah23rd",
+                            "body": "We, the watched, need to seize the power to choose.\n\nI'm looking for really practical suggestions about how to get this going.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 12:42:06",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "RFF671",
+                    "body": "The spoiler tag is messed up on the formatting, it didn't hide the actual spoiler.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 10:58:27",
+                    "replies": [
+                        {
+                            "author": "eliyah23rd",
+                            "body": "Thank you. I have never tried to use the feature before and was not aware of what the protocol was.\n\nDo you think, BTW, that for older movie and such a general comment it is necessary to take this precaution?\n\nAnyway, fixed it. If this had been the first thing I learned today, I would say that it was wort getting up this morning. But, thankfully, my day has been full of such experiences. ;)",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 11:30:47",
+                            "replies": [
+                                {
+                                    "author": "RFF671",
+                                    "body": "It might not be necessary but you took the effort and I figured letting you know about it was in line with your original intention.\n\nMay the rest of your day look up from here!  And the funny thing is, I think 'wort' was supposed to read as 'worst'.  Ironically, I'm an avid brewer so a wort day is very good day indeed, lol.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 11:43:50",
+                                    "replies": [
+                                        {
+                                            "author": "eliyah23rd",
+                                            "body": ">wort\n\n:laughing:\n\n(I keep hoping that somebody is reading reddit with a proper markdown viewer. Emoticons don't work for me here.)",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2022-11-22 12:34:16",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "BatmanDuck123",
+                    "body": "have u watched [this](https://youtu.be/DaA6x8xyvIY)",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 12:16:45",
+                    "replies": [
+                        {
+                            "author": "eliyah23rd",
+                            "body": "Fantastic video. Thank you.\n\nThis is the biggest thing happening on an ethical and social level IMO.\n\nI am proficient with the tech. I can write Transformers, download HuggingFace models, and I know what these words mean. But I have no idea about the ramifications of this stuff on society. The people making policy, I am sure, know even less than me, and probably nothing about the the technology.\n\nWe need to give control of these changes to the broadest group possible.\n\nThe light of the sun has the power to purify.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 12:59:23",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "It might have the opposite effect. Being denied privacy could make people revolt violently. Why would they respect society and it's people when they are so disrespected they can't have even any privacy?",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 12:36:13",
+                    "replies": [
+                        {
+                            "author": "eliyah23rd",
+                            "body": "Maybe it will and maybe it won't. Who knows?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 13:00:36",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "That's good enough (not making hasty assumptions)",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 13:45:33",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "FaustusC",
+            "body": "This is an interesting read. At the same time, it does itself a disservice by looking at the issue through an equity or moral lens.\n\nLet's examine.\n\nNeighborhood A. \nNeighborhood B. \n\nA has minimal police patrols, minimal police calls, minimal interactions with law enforcement.\n\nB has regular patrols, regular calls and frequent interactions with law enforcement.\n\nIt doesn't matter that the area is impoverished, it doesn't matter than the area is primarily minorities. What matters is that's where the crime is so that's where the police go. Why would you allocate resources to an area they wouldn't be used? B gets more calls, so B gets more patrols, so B has more interactions. If A starts seeing an increase, the AI would naturally divert resources accordingly.\n\nThis isn't so much an issue of biased data, as much as it's an issue of people not liking what the data shows. And that's something that needs to be admitted. All the AI can do is look at the areas and suggest based on the inputs which area is more likely to have crime. \n\nThe site's sources for data also don't regard the actions of the arrested towards the officer at all. If you're not doing anything illegal, you get let go 99% of the time. If you act uncooperative or aggressively you invite attention. Which causes your likelihood of being arrested to skyrocket.\n\nShould we work to solve the root issues? Absolutely. But a LOT of that work needs to come from those areas themselves. You can pump all the funding in the world through them but if the people inside don't want to change, you won't change the statistics. There's some statistics in the article that are closed to banned on reddit. I won't copy them. I think a question we should be asking is: As B, if you know you're more likely to be punished than A for doing something, why would you do it? If I was predisposed to brain bleeds, I wouldn't join boxing. Some of this is personal choice. If I knew I was more likely to get arrested for smoking pot, I wouldn't touch the shit.",
+            "score": 11,
+            "depth": 0,
+            "timestamp": "2022-11-22 12:46:31",
+            "replies": [
+                {
+                    "author": "Pawn_of_the_Void",
+                    "body": "This assumes the prior data was done without bias firstly. If they are currently overfocusing on one area due to some bias the algorithm will have that baked in due to the data it is given to work with. Secondly, that seems like it would be prone to a feedback loop. More police focus could itself be a reason for more incidents. As was pointed out in the article, similar crimes in a strongly policed area would be more likely to be caught. This would increase numbers in that area and make it look like that area needs more attention, not because there is more crime but because there is more crime already noticed.",
+                    "score": 14,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 13:36:48",
+                    "replies": [
+                        {
+                            "author": "TheEarlOfCamden",
+                            "body": "But if you were training such a model you would obviously want to include in its training data how much time police were spending there already, so it ought to be able to distinguish between an area where there are more arrests because there is more crime from one where there are more arrests because there is more police.",
+                            "score": -3,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 14:10:10",
+                            "replies": [
+                                {
+                                    "author": "Pawn_of_the_Void",
+                                    "body": "Well, the thing here is you just started talking about it being able to tell why there are more arrests in one area than another. That seems like a hell of a lot more complicated than the prior task of just finding the area where they report the most incidents. Time spent alone isn't a sufficient indicator really, is it? Its a factor and something that can skew the data but you can't just directly decide its the cause from the time spent there data being added in",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 15:47:28",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "TheRoadsMustRoll",
+                    "body": ">Neighborhood A. Neighborhood B.  \n>  \n>A has minimal police patrols, minimal police calls, minimal interactions with law enforcement.  \n>  \n>B has regular patrols, regular calls and frequent interactions with law enforcement.\n\ncorrection: if you are using algorithms all you can say is \"Neighborhood A ***had*** minimal police patrols...\" because you are always looking into the past.\n\nin the past there were no algorithms. so you start the historical data set where? in the 1940's? 50's? 60's? those were racist days. so were the 80's, 90's and 2000's. \n\nif you don't start with an objective data set then your algorithms will be biased. and with backward-looking algorithms you won't know that a neighborhood profile has changed until its recorded stats are significantly different. in the meantime you'll be letting crimes go unaddressed.\n\nyour particularly unsophisticated approach to a very sophisticated technology (which you fail to understand) is at the heart of this issue.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 13:50:48",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "Not really, because you can write the algorithm to have as long (or short) a memory as you want it to have. You could even write an algorithm that gives zero weight to all historical crime data and starts by assigning officers randomly throughout the community, and then it continuously updates that distribution of officers based on the crime data starting only from that randomized initial condition. It's basically just wrong to argue that you have to start with an objective data set, you can start with absolute garbage data and the only effect might be that it takes your algorithm a few extra cycles to get past that and converge on a sensible state.\n\nI don't think the OP failed to understand the technology of algorithms at all, and I've been an embedded systems engineer and programmer for 15 years. I think the OP was absolutely right in pointing out that what we're afraid of is that the systems will end up with coverage maps that look too familiar to us, and we won't want to confront that reality. I don't know if that's the case, but I think it's accurate that it's what people fear is the case.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 14:08:32",
+                            "replies": [
+                                {
+                                    "author": "FaustusC",
+                                    "body": "100%, spot on.\n\nPeople are acting like this AI would only speculate off that past history and not constantly update the model. \n\nYou could literally feed in historical data that says there's *only* crime in neighborhood A despite the opposite being true and the AI would correct the issue within a few cycles as you said. The big thing here is these prediction models *learn* and they only learn off of input. If everything but the location & type of crime was scrubbed from the data, literally no demographic information at all, the results would come out the same.\n\nI think even philosophically we're at a point where we can't even discuss that the data might just be data without people crying foul and it disgusts me. Racism by low expectations is still racism. I grew up in a very, very shitty neighborhood B. I've also lived in Neighborhood As. I can't say A was completely without incident, but comparing the two even off of my anecdotal experiences is night and Day.\n\nI think the biggest incident in A was someone complaining about Horse droppings on the beach and some teens setting a dumpster on fire.\n\nB had someone get shot. Completely anecdotal but still relevant.",
+                                    "score": -1,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 14:20:41",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "As I've pointed our elsewhere in the thread, I think a lot of people aren't distinguishing between an explicit algorithm, and a machine learning algorithm. I think people in this thread are looking at algorithms as a black box, where you put data in, something incomprehensible happens, and then police go and arrest people. When you have machine learning, it's a non-deterministic process where even the programmer who built the system can't work it backward and say 'this person was arrested because of these inputs to the system.' But there are tons of algorithms that could be developed where the programmer can tell you EXACTLY which inputs lead to a particular result, and the transparency of these algorithms could vastly exceed the transparency of machine learning, and even exceed the transparency of our current human-driven system.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2022-11-22 14:30:47",
+                                            "replies": [
+                                                {
+                                                    "author": "FaustusC",
+                                                    "body": "Tbh, I don't think most of the people even vaguely understand the difference but are thrilled at the opportunity to morally grandstand against a supposed injustice.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-11-22 14:33:39",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "FaustusC",
+                            "body": "Assuming data itself is biased is the heart of this issue and why people shouldn't be allowed to handle it at all.\n\nClaiming \"that era was racist\" so all data must be discarded is a cop out and ignores the issues.\n\nData is nothing but points. Acting like Middle class, Median income A and Lower class, low income B will have similar or equal crime rates is insanity and racism. Pretending like A has the same amount of crime, they're just not patrolled is ignorant at best, racist at worst.",
+                            "score": -1,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 13:56:32",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "rami_lpm",
+                    "body": "> If you're not doing anything illegal, you get let go 99% of the time. If you act uncooperative or aggressively you invite attention.\n\nSure. No 'walking while brown' type of arrests in this magical neighborhood of yours.\n\n>As B, if you know you're more likely to be punished than A for doing something, why would you do it?\n\nthis is straight up victim shaming.",
+                    "score": -1,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 14:55:27",
+                    "replies": [
+                        {
+                            "author": "FaustusC",
+                            "body": "My dude, those are statically miniscule amounts of the arrests. If we counted all of them together over 10 years, they'd be a fraction of a percentage of legitimate stops and arrests.\n\nNo, it's common sense. \nI don't speed Because I don't want to get stopped. I drive a dumb car, in a dumb color with a vanity plate. I already have a target on myself. *Why* would I give them a legitimate reason to screw with me?\nIf an action is illegal, and you know you're more likely to be punished for commiting it, why would you knowingly take the risk? How is that victim blaming?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 15:22:54",
+                            "replies": [
+                                {
+                                    "author": "rami_lpm",
+                                    "body": "I understand it may be so now, but if they use historical data to train the ai, then any racial bias from previous decades, will show.\n\nWhat if you were targeted not by your actions but by the looks of your car?\n\nAll I'm saying is that the training data needs to be vetted by several academic parties, to eliminate as much bias as possible.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 18:30:58",
+                                    "replies": [
+                                        {
+                                            "author": "FaustusC",
+                                            "body": "Then I don't think you understand how it works. The Bias will train itself out within a few cycles. Because that's how it works. The AI will start using that \"flawed\" data and then, as it progresses, will slowly integrate it's new findings into the pool. It may take a few years, but, if policing was misweighted, the AI would allocate the resources where they were needed. If you train an AI to do basic addition, and to know numbers, once it knows enough numbers you can't tell it 1+1=6. If I ask the AI for the number between 7 and 9, it will list off 6+2, 5+3, 4+4 etc. I can tell it 2+3 is the answer, but it will search and say I'm incorrect Because based purely on the data, *I cannot be correct*. \nWe can compare that to the earlier arguments. The AI can see crime at points X, Y and Z in neighborhood B but crime in Q in neighborhood A. \n\nI am lol. \"Yes sir, no sir, here's my license sir, have a nice night.\" \n\nAnd I'm saying that letting \"academic parties\" get their hands on it is going to simply nudge bias the opposite way. Positive bias. That will get us nowhere until the AI fixes itself at which point people will screech that somehow the AI went racist again lol. Academics has a serious issue with bias but that's an entirely different argument.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2022-11-22 18:53:07",
+                                            "replies": [
+                                                {
+                                                    "author": "rvkevin",
+                                                    "body": ">The AI can see crime at points X, Y and Z in neighborhood B but crime in Q in neighborhood A.\n\nThe AI doesn't see that.  The algorithm is meant to predict crime, but you aren't feeding actual crime data into the system, you're feeding police interactions (and all the biases that individual officers have) into the system.  More data doesn't always fix the issue because the issue is in measuring the data.",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-11-23 03:28:06",
+                                                    "replies": [
+                                                        {
+                                                            "author": "FaustusC",
+                                                            "body": "But that's the thing: unless someone's getting hit with completely falsified evidence, the arrest itself doesn't become less valid. It's irrelevant to the data whether or not a crime is uncovered because of a biased interaction or an unbiased one. The prediction model itself will still function correctly. The issue isn't measuring the data, it's getting you to start acknowledging data accuracy. A crime doesn't cease to be a crime just because it wasn't noticed for the right reasons.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-11-23 07:25:34",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "rvkevin",
+                                                                    "body": ">But that's the thing: unless someone's getting hit with completely falsified evidence, the arrest itself doesn't become less valid.\n\nIt still doesn\u2019t represent actual crime; it represents crime that the police enforced (i.e. based on police interactions).  For example, if white and black people carry illegal drugs at the same rate, yet police stop and search black people more, arrests will show a disproportionate amount of drugs among black people and therefore devote more resources to black neighborhoods even when the data doesn\u2019t merit that response. \n\n> It's irrelevant to the data whether or not a crime is uncovered because of a biased interaction or an unbiased one.\n\nHow is a prediction model supposed to function when it doesn\u2019t have an accurate picture of where crime occurs?  If you tell the model that all of the crime happens in area A because you don\u2019t enforce area B that heavily, how is the model supposed to know that it\u2019s missing a crucial variable?  For example, speed trap towns that gets like 50% of their funding from enforcing speed limits in a mile stretch of highway.  How is the system supposed to know that speeding isn\u2019t disproportionately worse there despite the mountain of traffic tickets given out?\n\n>The issue isn't measuring the data, it's getting you to start acknowledging data accuracy.\n\nHow you measure the data is crucial because it\u2019s easy to introduce selection biases into the data.  What you are proposing is exactly how they are introduced since you don\u2019t even seem to be aware it\u2019s an issue.  It is more than just whether each arrest has merit. The whole issue is that you are selecting a sample of crime to feed into the model and that sample is not gathered in an unbiased way.  Instead of measuring crime, you want to measure arrests, which are not the same thing.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-11-23 18:30:58",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "No it's not, it's game theory. There may be totally valid reasons for doing that thing which might be critical to understand. It's only victim shaming if you start from the assumption that they are doing that thing because they are stupid, or lack self control, or some other undesirable characteristic.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 15:14:53",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "This was a very poorly structured argument. It basically makes the case that police algorithms are bad because they allow for some of the biases that already exist in our current system to perpetuate, ignoring the fact that the alternative is the system that created those biases in the first place. If police have historically overpoliced some communities, then we have every reason to believe they will continue to do so if we continue with the system of 'police departments make human decisions about how to allocate their resources.' If we switch to the algorithmic model, then continuing that practice is certainly one possible outcome, but it's also entirely possible that we build into that algorithm some coefficient of historical crime that we could let the community have a say in the value of.   \n\n\nLets say that the 'risk factor' of any given community is based on some collection of metrics like the number of crimes committed in the last 10 years, the number of crimes committed in the last 6 months, the number of 911 calls originating in that community in the last year, and the number of non-criminal emergency calls (fire, ambulance, etc) in that community in the last year:  \nRF = a1\\*Crime10y + a2\\*Crime6m + a3\\*911Crime + a4\\*911NonCrime  \nNow, imagine that through some democratic process the members of that community get to assign values for a1->a4, such that they can place a very low (even zero) value on a1 to completely assuage the concerns of the author in that regard. You simply CANNOT do this if subjective humans are the ones making the decisions.   \n\n\nI simply do not see a non-luddite argument here for why algorithms in policing are a bad thing, as opposed to a neutral thing that have as much propensity to improve policing as they do to make it worse.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2022-11-22 12:53:31",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "Another problem that AI has, which is not mentioned here, is creating proper incentives. I'll give the example of YouTube.\n\n---\n\nYouTube has the incentive for more ads to be viewed, which roughly coincidences with people staying on YouTube longer which means the YouTube needs to select the correct next video for you to watch so that you won't tune out.\n\nAn AI algorithm might work hard to be a better predictor of your preferences. But it might also work hard to change **you** to be easier to predict. We find that if you watch enough YouTube videos, eventually you will enter a loop of extremist views on politics. Extremists are easier to predict. YouTube will modify your mind to make you more predictable.\n\nhttps://www.technologyreview.com/2020/01/29/276000/a-study-of-youtube-comments-shows-how-its-turning-people-onto-the-alt-right/\n\n---\n\nBack to policing. Imagine that the algorithm discovers a way to increasing the crime rate in one part of town. It could do that while also deploying more police there. This would make the algorithm appear more effective in stopping crime though the algorithm was actually also the cause of the crime.\n\nIt seems like we wouldn't make an algorithm that could increase crime but we could imagine the AI plugged into other ones that could, like maybe an AI determining which neighborhoods get better roads and schools. And anyway, probably no one at YouTube imagined that their AI would intentionally radicalize people but here we are. So we probably **should** be worried that an AI controlling policing might try to increase crime.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-11-22 12:50:28",
+            "replies": [
+                {
+                    "author": "Appletarted1",
+                    "body": "I see your point that multiple AI combined could compliment each other's radicalization of the distribution of resources in a community. But considering the sole question of predictive policing, by what method could it generate crime? This whole system works much differently than the YouTube algorithm. The YouTube algorithm is designed to monitor you individually for all of your interactions on the site in order to better retain you. Predictive policing, as far as I can tell, does not have the mechanics of engaging with the public, only with the police and the statistics that are made available to the city.\n\nI just fail to see how it could increase crime without a way to access the interactions of citizens or criminals.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 17:03:21",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "It's hard for me to imagine the future of AI policing because we don't know how it may be used in the future.\n\nIf we don't rule out AIs working together, maybe the public works AI and the policing AI implicitly collude to not repair broken windows in some neighborhoods. https://en.m.wikipedia.org/wiki/Broken_windows_theory\n\nThat's not a great example. Hmm...\n\nYour assumption is that the police AI wouldn't be plugged in to some other AI where they could increase crime, right? Is that a reasonable assumption? Do we find that AI systems don't interact?\n\nIn the stock market, quants program AI to trade stock. And often those programs are interacting with each other. In fact, most of the stock market volume is trades between programs. So we do have examples of AIs connecting.\n\nYou could imagine a future where the policing AI convinces the police chief to let the AI connect to the internet. And then the AI uses twitter to incite a riot and then sends police to quell it, to earn points for being a good riot-stopping AI.\n\nEliazar Yudowsky did the \"escape the box\" thing twice. \n\nhttps://towardsdatascience.com/the-ai-box-experiment-18b139899936\n\nEven if you don't find these arguments fully convincing, hopefully between the YouTube example, the quants, and Yudowsky, there is at least some inkling that humanity might somewhere develop a policing AI that would intentionally try to increase crime in order to have more crime to police. It could happen?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-11-22 22:04:29",
+                            "replies": [
+                                {
+                                    "author": "Appletarted1",
+                                    "body": "Oh I certainly agree that it's possible. My question wasn't declaring it impossible, but rather questioning the methods. AI do work together in different areas. But the idea of an AI inciting a riot, just to quell it later would be very difficult to hide from the investigation of the source of the riot. I like the broken windows idea for its subtlety. All an AI would really need to do is stop sending police to an area long enough for vandalism to ramp up in an area. But the AI isn't the only one who can spot patterns. We would quickly desire to change it's habits to prevent the vandalism that would become very predictable after a few cycles. The efficiency of the AI would immediately be called into question, this endangering it's core mission.\n\nFrankly, I'm more worried about our trust in the AI being so blind that we change the law to punish pre-offenders. People who the AI has designated likely enough to commit a crime that it can be used as evidence in court to restrict their freedoms before the crime can actually happen. I believe that's more likely than the AI sabotaging it's enforcement of certain things to make itself look better. With pre-offence being a different category of criminal law, it could result in justification for restricted rights to travel, purchases, and possession of certain things without a crime happening. All for the sake of deterrence.\n\nIt's actually already happening in people's psychological reckoning of what looks like a guilty person without the AI help. If a gun store sells a gun to a person who looks sketchy, they can be held liable if that person  commits a crime. One of the justifications for the death penalty is that it deters others. We're already on the path of punishing some for the crimes of others that haven't happened yet. Actually, very crazy things have happened due to a psychology that said that deterrence was paramount to justice. Such as the escalation of the length of sentences for minor drug possession. Pretty much the entire \"tough on crime\"/\"war on crime\" laws and policies were built on deterrence being more valuable than innocence or guilt in the case of the individual that's been charged. Often, the details of ones guilt or sentencing are the results, not of their own crime by itself, but of how their crime must be judged in a sea of previous crimes of the same category. That's jurisprudence. I'm not saying any of these things are terrible on their own, especially not jurisprudence or the concerns of gun store owners. But we've already built up the components of the architecture for these AI to convince us that deterrence is the only real justice. All that's left there is to connect the pieces.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2022-11-22 22:46:00",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "ridgecoyote",
+            "body": "Algorithmic thinking isn\u2019t restricted to computers.  Bureaucracatic humans can fall into the same pitfalls as machines.   I\u2019m fond of saying, the thing we ought to fear is not computers that are becoming more human, but humanity becoming more machine-like",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-11-22 13:47:08",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[removed]",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2022-11-22 10:41:50",
+            "replies": [
+                {
+                    "author": "BernardJOrtcutt",
+                    "body": "Your comment was removed for violating the following rule:\n\n>**Read the Post Before You Reply**\n\n>Read/watch/listen the posted content, understand and identify the philosophical arguments given, and respond to these substantively. If you have unrelated thoughts or don't wish to read the content, please post your own thread or simply refrain from commenting. Comments which are clearly not in direct response to the posted content may be removed.\n\nRepeated or serious violations of the [subreddit rules](https://reddit.com/r/philosophy/wiki/rules) will result in a ban.\n\n-----\n\nThis is a shared account that is only used for notifications. Please do not reply, as your message will go unread.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-11-22 12:17:45",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "Also called racial profiling!",
+            "score": -2,
+            "depth": 0,
+            "timestamp": "2022-11-22 13:13:43",
+            "replies": []
+        },
+        {
+            "author": "shirk-work",
+            "body": "China has entered the chat.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-11-22 14:38:50",
+            "replies": []
+        },
+        {
+            "author": "bbbymcmlln",
+            "body": "The Ethics of Policing Algorithms does not Exist. \n\nThere, I fixed the title.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-11-23 03:05:44",
+            "replies": []
+        },
+        {
+            "author": "shang_yang_gang",
+            "body": "The article starts off on a poor foot by providing blatant misinformation in the fourth paragraph, stating that African Americans are more likely to be sentenced for drug crimes despite using drugs in roughly equal numbers to whites, but this is simply not true. This claim is based on surveys which show self-reported drug use as being roughly equal, however, we know that African-Americans are more likely to lie about not having used illicit drugs on surveys ([1](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3455900/pdf/11524_2006_Article_433.pdf), [2](https://sci-hub.hkvisa.net/10.1081/ja-120023394)). Furthermore the way in which they commit the crimes is different as [African Americans are far more likely to buy drugs outdoors, far more likely to buy from strangers, and more likely to buy away from home](https://pubmed.ncbi.nlm.nih.gov/16600529/).",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-11-23 11:56:10",
+            "replies": []
+        }
+    ]
+}

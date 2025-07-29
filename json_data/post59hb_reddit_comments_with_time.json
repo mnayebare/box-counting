@@ -1,0 +1,1039 @@
+{
+    "post_title": "How Apple Fell Behind in the AI Arms Race",
+    "post_timestamp": "2024-06-06 06:35:44",
+    "last_comment_timestamp": "2024-06-18 15:49:30",
+    "time_difference": "12 days, 9:13:46",
+    "comments": [
+        {
+            "author": "dressinbrass",
+            "body": "An arms race where so far the winner keeps having to apologize for recommending glue on pizza and making pictures of racially diverse Nazis.  I\u2019m sure Apple is worried.",
+            "score": 226,
+            "depth": 0,
+            "timestamp": "2024-06-06 08:57:21",
+            "replies": [
+                {
+                    "author": "coldrolledpotmetal",
+                    "body": "I don\u2019t think anyone seriously thinks that Google is leading the AI race, OpenAI is the clear winner right now",
+                    "score": 66,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 14:47:11",
+                    "replies": []
+                },
+                {
+                    "author": "slashtab",
+                    "body": "You don't lose if you're not in race.",
+                    "score": 24,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 14:55:59",
+                    "replies": []
+                },
+                {
+                    "author": "Soft-Vanilla1057",
+                    "body": "Google is called the winner? The article was locked for me but surprised to hear that. Can you copy a quote from the article? Never heard anyone call google the winner.",
+                    "score": 8,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 14:28:38",
+                    "replies": []
+                },
+                {
+                    "author": "Sylvurphlame",
+                    "body": "This is why I have doubts about the rumors of Apple contracting with this or that AI/LLM parent company.\n\nThese things say insane shit all the time. I don\u2019t think Apple wants Siri returning actual insanity rather than just completely misunderstanding a request.",
+                    "score": 8,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 19:50:27",
+                    "replies": [
+                        {
+                            "author": "tysonedwards",
+                            "body": "Apple has been building in fairly powerful Neural Engines to their chips for the past 7 years now, and has used them for \u2026 (checks notes) \u2026 Machine Learning (ML) tasks that were very high quality, but often dismissed by the media as useless features things no one would actally use - like Subject Selection + Stickers.\n\nThat\u2019s their problem! They were doing all these ML things and falling behind, while the rest of the industry was figuring out AI! Sure bet on the wrong horse, didn\u2019t they?!\n\n(Extremely obvious sarcasm, as ML / AI are the same thing.)",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 20:41:46",
+                            "replies": [
+                                {
+                                    "author": "Sylvurphlame",
+                                    "body": "What I mean is that I don\u2019t see Apple contracting with another company when they have indeed been working on in-house ML for nearly a decade.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 21:46:07",
+                                    "replies": [
+                                        {
+                                            "author": "0RGASMIK",
+                                            "body": "While I do believe that Apple does have some groundbreaking in-house AI /ML features planned. I do not think that they have a competitive LLM cooked up and ready for the public. OpenAI/Nvidia kind of changed the playing field for everyone in a way that made people rethink how they were trying accomplish AI. I think Apple will probably leverage them in the short term to hold them over until their own LLMs are ready. GPT is amazing at context. Siri sucks at context and understanding it\u2019s so bad that if they had something better they would have fixed it by now. \n\nI think there will 1 or 2 features the public will see as definitely GPT but behind the scenes a lot more that we don\u2019t. Apple isn\u2019t one to release something worse than the competition. They have a reputation of being late but best in implementation. If they don\u2019t have a LLM that can do what they need yet they will get the best and leverage it to fill in the gaps until it is.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2024-06-06 23:52:22",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "kelp_forests",
+                    "body": "Not to mention the true consumer value to AI (IMO) is not in what ChatGPT does, which is provide possibly inaccurate information summaries.\n\nIt\u2019s to do what Apple wants AI to do, which is know your private data (on device) and be able to perform actions (which it can with apples strict integration and api rules).\n\nI don\u2019t want \u201chow do I cook a pizza\u201d or \u201cmake a contract for my yard guy\u201d, I want \u201cwhat time is my kids baseball game next week?\u201d, \u201csend flowers to my wife\u201d, \u201cset up a meeting with the advance team next week at 5 if it works with everyone\u2019s schedule\u201d, or \u201cgood morning, here is what you missed in the news and your apps last night\u201d",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 17:10:03",
+                    "replies": [
+                        {
+                            "author": "babaroga73",
+                            "body": "Yeah, someone should invent smartphone calendar and reminders \ud83d\ude09",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 23:11:35",
+                            "replies": [
+                                {
+                                    "author": "kelp_forests",
+                                    "body": "Haha I have all those it\u2019s more looking up the information.\n\nCalendar looks like a damn rainbow because it has my wife\u2019s schedule(s), my schedule (s), my kids schedule (2) the nanny schedule, schools events etc",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 23:42:01",
+                                    "replies": [
+                                        {
+                                            "author": "babaroga73",
+                                            "body": "I hereby retract my comment. Mine has 2 events per week.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-06-06 23:48:24",
+                                            "replies": [
+                                                {
+                                                    "author": "vadapaav",
+                                                    "body": "When you start getting old and have to track commitments from 4 different people, contractors, gardener, nanny, PTA meetings, shopping reminders - it just gets easier to start using family calendars",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-06-07 00:45:26",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Uniqueguy264",
+                            "body": "Didn't google now do this in 2011? This functionality already has existed forever",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 18:44:27",
+                            "replies": [
+                                {
+                                    "author": "Sylvurphlame",
+                                    "body": "The rumors that I find most credible are that Apple is attempting to find a way to do this (wherever possible) on-device *as in no internet connection required.* That\u2019s the Holy Grail, but I\u2019d frankly be surprised if we see that this year. More likely they have figured out or are working on a way to the on-line work anonymized and encrypted.",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 19:53:14",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "kelp_forests",
+                                    "body": "maybe but not on device. I havent seen it demo'd\nedit: for example I have not seen Google be able to open a flower ordering app on my phone, make an order based on prior orders/color palette from data related to my wife, pull her work address, and set up a delivery at a time when she will be at work based on calendar data/other data.\n\nI am not saying Apple is going to, I am just saying thats the holy grail. The chatbots are nice for companies trying to replace receptionists/help desk but IMO consumers want an AI chatbot that can do things based on their own data, but protect privacy..once it can access/edit/analyze your data in one program you are even more of a product than you already are.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 19:33:11",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "pepotink",
+                    "body": "Care to elaborate?",
+                    "score": -3,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 13:32:15",
+                    "replies": [
+                        {
+                            "author": "eschewthefat",
+                            "body": "Yeah, there\u2019s massive astroturfing going on in this sub that\u2019s downplaying the usefulness of chatgpt. It\u2019s ridiculous.\u00a0\n\nFirst of all, Gemini is in no way considered \u201cthe winner.\u201d\n\nSecondly, this tech limited to controlling your iPhone as Siri should be doing is more than capable. Asking it to reliably give you broad information on the internet is not what it\u2019s intended for.\u00a0\n\nCan\u2019t wait to see what Apple reveals because if it\u2019s downplaying \u201cAI\u201d because Siri only gets marginally better due to Apple using in house training, you\u2019ll understand why the weeks leading up had so much misinformation\u00a0",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 13:42:07",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Derpshab",
+                    "body": "Beat me to it lol.",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 23:58:29",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Jamie00003",
+            "body": "AI has barely begun. I\u2019d rather Apple take their time than release something half baked, like googles variant telling you to eat rocks or whatever\u2026.",
+            "score": 132,
+            "depth": 0,
+            "timestamp": "2024-06-06 07:11:37",
+            "replies": [
+                {
+                    "author": "thephotoman",
+                    "body": "Google\u2019s variant was trained on Reddit, and it shows.",
+                    "score": 17,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 12:08:13",
+                    "replies": [
+                        {
+                            "author": "gregfromsolutions",
+                            "body": "It knows how to fix this weird problem I\u2019m having because there\u2019s a 3 year old thread on some sub I\u2019ve never heard of?\n\n^(Yeah yeah I can guess what you mean)",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 16:24:24",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Interactive_CD-ROM",
+                    "body": ">rather Apple take their time\n\nThe issue is that Apple hasn\u2019t even really started",
+                    "score": 46,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 08:49:03",
+                    "replies": [
+                        {
+                            "author": "mbrady",
+                            "body": "Apple is notoriously secretive. So it's hard to know conclusively what they've been doing behind the scenes and we just have to rely on leaks or rumors.",
+                            "score": 11,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 11:53:28",
+                            "replies": []
+                        },
+                        {
+                            "author": "kaji823",
+                            "body": "Apple has been building minor ML capabilities throughout their products for YEARS. You don\u2019t just jump straight into genAI with no foundation. They\u2019ve also been laying groundwork for this with Apple Silicon and how well optimized it is for ML and AI workloads. Apple is making good long term decisions here. \n\nThis is also totally consistent with all other major product decisions at Apple. They wait, observe, deliver their own products when they\u2019re ready, then iterate on them. Every majorly successful product for Apple has been late to the game",
+                            "score": 11,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 13:16:33",
+                            "replies": []
+                        },
+                        {
+                            "author": "Diablojota",
+                            "body": "They have started. There\u2019s a significant amount of AI/ML in many parts of their apps. It\u2019s just not in your face. And clearly Siri hasn\u2019t benefited, but that\u2019s okay because I don\u2019t need her to tell me to put glue on my pizza or something similarly obtuse.",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 13:37:08",
+                            "replies": []
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "[removed]",
+                            "score": 7,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 10:03:41",
+                            "replies": [
+                                {
+                                    "author": "lordmycal",
+                                    "body": "But they don't always provide more polished solutions.  Siri has been around for over 10 years now, and she's much worse than Alexa and Google.  The homepod is a great speaker, but it's not a great *smart* speaker.  \n\nSiri needs better language processing capabilities so she can better understand what people want to do if they don't say it exactly the way Siri wants.  She could also use a 3rd party store of some kind to extend functionality.",
+                                    "score": 15,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 12:00:13",
+                                    "replies": [
+                                        {
+                                            "author": "yungstevejobs",
+                                            "body": "Siri is not AI and it\u2019s a bad example to use considering it\u2019s not AI and is one of Apple\u2019s few products that was  actually ahead of the times.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-06-07 13:54:00",
+                                            "replies": [
+                                                {
+                                                    "author": "lordmycal",
+                                                    "body": "Exactly.  Siri is something that Apple should have been investing in.  If Siri was AI we wouldn\u2019t be having this conversation.",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-06-07 14:03:57",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "bluegreenie99",
+                                    "body": "As a long time iPhone user who also uses android, Apple providing more polished solutions today is just isn't true anymore.",
+                                    "score": 6,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 14:33:53",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "Sylvurphlame",
+                                    "body": "The OpenAI thing is official as in confirmed by either company? Because as of my Google search just now that\u2019s just \u201creportedly\u201d which isn\u2019t worth much.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 19:55:51",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Jamie00003",
+                            "body": "I mean, they have, and it\u2019s good so far. See AI in the photos app and camera for example",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 08:49:50",
+                            "replies": [
+                                {
+                                    "author": "ClumpOfCheese",
+                                    "body": "I started using Google photos because I have a paid Google email account for $15 a month and it comes with 2TB of cloud storage which is a way better deal than what iCloud costs and their AI stuff with photos is just so much better.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 16:48:28",
+                                    "replies": [
+                                        {
+                                            "author": "Jamie00003",
+                                            "body": "My iCloud for 2tb costs \u00a38.99 a month, what\u2019s better on the google side?\n\nAlso you get more than just that with iCloud plus, like custom email domains, private relay, HomeKit secure video. IMO way better value",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2024-06-06 17:36:13",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Howdareme9",
+                                    "body": "They\u2019re really far behind the competition",
+                                    "score": -6,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 09:46:07",
+                                    "replies": [
+                                        {
+                                            "author": "DeathByPetrichor",
+                                            "body": "As many other commenters said, it would be infinitely better for them to release something perfect (especially after Siri) than to release something half baked like all these other companies have. The world seems to love to hate anything Apple does, so releasing a half baked AI anything will just lead to thousands of \u201clol Apple sucks at everything\u201d posts",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2024-06-06 12:47:25",
+                                            "replies": [
+                                                {
+                                                    "author": "Howdareme9",
+                                                    "body": "Don\u2019t really see how ChatGpt is half baked. Regardless you need to release things for mass testing, theres no such things as releasing a perfect AI right off the bat",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-06-06 12:53:28",
+                                                    "replies": [
+                                                        {
+                                                            "author": "DeathByPetrichor",
+                                                            "body": "You do realize that wwdc is like 4 days away right?",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-06-06 12:54:27",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "Jamie00003",
+                                            "body": "And? Refer to my first comment lol, AI still has a long way to go",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2024-06-06 09:46:49",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Large_Armadillo",
+                            "body": "As if you know the solution. What are they missing?",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 09:28:41",
+                            "replies": []
+                        },
+                        {
+                            "author": "weaselmaster",
+                            "body": "According to whom?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 13:34:39",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "i_am_really_b0red",
+                    "body": "Yup Apple always waits they never want to be the first one but wants to be the best one",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 07:56:03",
+                    "replies": [
+                        {
+                            "author": "ClumpOfCheese",
+                            "body": "Man how long are they waiting to make Siri good?",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 16:49:25",
+                            "replies": [
+                                {
+                                    "author": "i_am_really_b0red",
+                                    "body": "Since it released",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-07 07:28:50",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "yungstevejobs",
+                                    "body": "Siri is not generative AI. It\u2019s  a voice assistant that basically runs on a set of pre defined commands and actions but then falls back to a bing search when it doesn\u2019t understand",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-07 13:57:41",
+                                    "replies": [
+                                        {
+                                            "author": "ClumpOfCheese",
+                                            "body": "I mean yeah, exactly.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-06-07 20:25:16",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Deertopus",
+                            "body": "Except when they are late and shit.",
+                            "score": -6,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 07:58:33",
+                            "replies": [
+                                {
+                                    "author": "i_am_really_b0red",
+                                    "body": "I said \u201cwants to\u201d not \u201cis the best one\u201d they surely mess up",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 08:01:12",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "Jamie00003",
+                                    "body": "What do you mean? The AI stuff already in iOS is pretty good from what I\u2019ve seen. And Siri does NOT use AI, at least not yet",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 08:00:53",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "M337ING",
+                                    "body": "Like Siri (not late but I digress), Apple TV devices, Vision Pro, Newton, Pippin, etc.",
+                                    "score": -2,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 08:50:01",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-06-08 01:27:30",
+                    "replies": [
+                        {
+                            "author": "Jamie00003",
+                            "body": "Siri doesn\u2019t use AI, not yet anyway",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-06-08 02:29:51",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "pjazzy",
+                    "body": "Yep, like they did with EVs.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 09:21:39",
+                    "replies": [
+                        {
+                            "author": "Jamie00003",
+                            "body": "Well it wasn\u2019t EV\u2019s, it\u2019s more the common sense logic that self driving cars aren\u2019t ever going to be viable, at least not yet. How many years have Tesla\u2019s had self driving hardware you can\u2019t even use? What a terrible waste imo",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 09:23:07",
+                            "replies": [
+                                {
+                                    "author": "pjazzy",
+                                    "body": "So Apple have released an EV then, just without the self driving as that\u2019s not yet relevant?",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 09:24:59",
+                                    "replies": [
+                                        {
+                                            "author": "Jamie00003",
+                                            "body": "They wanted to do both an EV and self driving, if they just released an EV sure, it could be cool but not exactly going to turn heads you know?",
+                                            "score": 6,
+                                            "depth": 4,
+                                            "timestamp": "2024-06-06 09:25:59",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "ChemicalDaniel",
+                    "body": "The thing is, you can\u2019t really \u201ctake your time\u201d with AI like you can with other products. It\u2019s not something tangible, like a new phone or a new watch. It takes time to train and fine tune a model, time that Apple\u2019s competitors have already spent and are now able to iterate on their models. If Apple had been working on AI for years in the background, there wouldn\u2019t be all these reports of Apple being behind. For all we know, they started last year, when these other companies have started years ago.",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 10:49:30",
+                    "replies": [
+                        {
+                            "author": "Jamie00003",
+                            "body": "Ultimately Apple doesn\u2019t care. They\u2019re still selling devices in the millions, yes they have to catch up but they can wait as long as they want. They aren\u2019t exactly struggling. \n\nThe rumours say all new AI stuff will be using third party like google and chat GPT, they are planning something of their own but it\u2019ll come in the future",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 10:53:47",
+                            "replies": [
+                                {
+                                    "author": "ChemicalDaniel",
+                                    "body": "I don\u2019t think that\u2019s a good way to look at things. Just because they\u2019re \u201cselling devices in the millions\u201d now doesn\u2019t mean at some point they can\u2019t dry up because they\u2019re unable to innovate and predict industry trends. In fact, Steve Jobs\u2019s ability to predict industry trends is the entire reason Apple is still here to begin with.\n\nDo you really think Apple wants to use ChatGPT or Gemini? No, they want to run their own models with their own weights. But they can\u2019t because, as mentioned in another article, they only realized how good AI could be after using Microsoft Copilot. AI is one of the few things where time, not money, is more important. Who knows if their own model by next year will even reach GPT-4o capabilities, let alone GPT-5.",
+                                    "score": 6,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 11:00:31",
+                                    "replies": [
+                                        {
+                                            "author": "Jamie00003",
+                                            "body": "Agreed, which is why they\u2019re working on it. But Apple can afford it for many, many years to come to be behind. Think about how much money they lost on the car.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2024-06-06 11:04:20",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 21:17:17",
+                    "replies": [
+                        {
+                            "author": "Jamie00003",
+                            "body": "And look at them now lol",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2024-06-07 01:20:45",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Snoop8ball",
+            "body": "Article text:\n\nFor those who saw them, the demonstrations inside Apple earlier this decade of a revamped Siri offered a showcase of the amazing capabilities a powerful AI voice assistant could have.\n\nThe famed assistant, one of the last projects Apple co-founder Steve Jobs worked on before his death, had been given a total overhaul. Capable of running on an iPhone and without an internet connection, the new Siri impressed people with its improved speed, conversational capabilities and the accuracy with which it understood user commands. Code-named Project Blackbird, the effort also imagined a Siri with capabilities built by third-party app developers, according to people familiar with the work.\n\nYet a competing project won out in an internal contest ahead of the 10-year anniversary of Siri\u2019s launch. Known as Siri X, the more-modest upgrade involved moving more existing Siri software onto iPhones from remote servers to improve the voice assistant\u2019s speed and privacy. The Siri X enhancement was unveiled in 2021.\n\nNext week, at Apple\u2019s annual Worldwide Developers Conference, the company is set to join an AI arms race that many think will define the future of technology. The iPhone maker is trying to catch up with Microsoft, Alphabet\u2019s Google and other rivals that have begun to integrate generative AI into their core products.\n\nApple\u2019s caution and characteristic secrecy, as well as the care it takes in upgrading devices\u2014where hardware and software are seamlessly integrated\u2014have hobbled its early efforts in the AI arena, the people said. It now finds itself in the unusual position of having to take risks.\n\nThe company is set to announce an array of generative-AI upgrades to its software products, including Siri, said people familiar with its plans. The AI features include assistance in message writing, photo editing and summarizing texts.\n\nWhile Apple isn\u2019t expected to catch up with leading AI innovators soon, the company is preparing to unveil AI features with impressive capabilities that also maximize privacy for users\u2014a concern that will be central to unlocking the full potential of AI assistants. Apple is also expected to unveil one or more potential partnerships with major AI developers after holding talks with OpenAI, Google and Cohere, the people said. \n\nApple has long prided itself on perfection in its product rollouts, a near impossibility with emerging AI models. While OpenAI systems have dazzled more than 180 million users with their generation of writing, images and video, they are prone to occasional errors, often called hallucinations. Apple has had limited tolerance for such issues.\n\n\u201cThere\u2019s no such thing as 100% accuracy with AI, that\u2019s the fundamental reality,\u201d said Pedro Domingos, a professor emeritus of computer science and engineering at the University of Washington. \u201cApple is not compatible with that. They won\u2019t release something until it\u2019s perfect.\u201d\n\nApple has weighed whether to allow users to choose a third-party AI provider that could supplant or help power Siri, one of the people said. It is unclear in what way Siri could be powered, augmented or replaced by third-party AI providers, or whether Apple will move forward with a version of that idea. \n\nBloomberg earlier reported on an OpenAI partnership, and The Information reported on efforts to overhaul Siri.\nGoogle, Microsoft and Samsung Electronics have begun rapidly integrating generative AI into their devices and services. While Apple finds itself behind in a generational shift taking place in the tech industry, many investors and AI experts have said the company will find a way to bring generative AI to the masses.\n\n\u201cApple can do pretty much anything they set their minds to,\u201d said Vineet Khosla, a former engineering manager on the Siri team who is currently chief technology officer at the Washington Post. \u201cThere is a consumer focus that exists at the company. The focus of their AI is to make it work in a very privacy-sensitive manner.\u201d \n\nOver the years, Apple has made improvements to Siri and incorporated smaller AI features throughout all of its products. In the recently released headset Vision Pro, AI is extensively used for tracking eyes and hand positions.\n\nWhen Siri launched in 2011, Apple was ahead of rivals in seeking to establish the first AI assistant. Jobs, who spearheaded the acquisition in 2010 that led to Siri, encouraged the team to keep the assistant\u2019s dry wit and sense of humor. The early launch demonstrated the company\u2019s willingness to take risks.\n\n\u201cSiri was the last thing Apple was first on,\u201d said Dag Kittlaus, co-founder of the Siri startup that Apple bought, who left Apple soon after the product\u2019s launch. \n\nAs Apple struggled to keep advancing Siri, the company hired one of Google\u2019s top engineering executives to run its AI strategy: John Giannandrea. In 2018, he was elevated to the role of senior vice president, reporting directly to Apple Chief Executive Tim Cook.\n\nIn early team meetings, Giannandrea made it clear that improving Siri was a main focus. He was also tasked with centralizing much of Apple\u2019s fragmented efforts regarding AI. He began building up his AI team by recruiting Google employees and through startup acquisitions, but his team had difficulty fitting in with the rest of Apple, according to people familiar with their work.\n\nThe new AI group operated much like parts of Google, where deadlines are more loosely defined. Teams inside Apple need to maintain rigorous deadlines to have products ready for major release events every fall. Efforts to collaborate between other parts of Apple that were building products and the AI team at times fell apart because they couldn\u2019t agree on deadlines, the people said.\n\nInstead of working with the AI team, other parts of Apple busy building software products maintained their own, separate AI capabilities. For example, the software group run by Senior Vice President Craig Federighi continued to invest in and build up the AI behind its image- and video-recognition capabilities, said former Apple employees.\n\nAnother big limiting factor for Giannandrea\u2019s AI team was the lack of access to computing resources, said former executives and engineers. Compared with rivals, Apple in recent years has secured fewer chips known as graphical-processing units that are essential for training AI models, said people familiar with Apple\u2019s internal infrastructure.\n\nMuch of the AI team had to rely on external cloud services\u2014Google\u2019s cloud was preferred by many of the former Google employees on Giannandrea\u2019s team\u2014to train their AI models, the people said.\n\nWhen ChatGPT launched in late 2022, everything changed. Federighi, the software chief, became a convert that Christmas break after he began playing around with the Microsoft-owned GitHub AI coding tool called Copilot, which is powered by OpenAI\u2019s technology, said people familiar with his experience.\n\nAfter that moment, across Federighi\u2019s software-engineering organization, employees were tasked with coming up with new ways of incorporating generative AI into products and given resources to pursue these projects, said former executives and engineers. At internal meetings, Federighi said that he had come to appreciate generative AI technology and that it would be incorporated into all aspects of Apple\u2019s software.\n\nApple stepped up efforts to build its own internal generative AI. In February, the company canceled its decadeslong effort to build its own electric car. Some of the employees had been redeployed into these generative AI projects.\nSome of the new features and updates Apple is expected to announce this year will be powered by Apple\u2019s internally built generative AI models, but Apple has been looking at potential external partnerships for more advanced AI. Giannandrea and Federighi have met with Sam Altman, OpenAI\u2019s chief executive officer, said people familiar with the discussions.\n\nWith a new urgency on AI technology, Kittlaus, the Siri co-founder, said this year could be an important one for Siri as the company plans to incorporate thoughtful AI features into the iPhone. \u201cSiri has been stuck in the mud for years,\u201d he said. \u201cBut I absolutely see a renaissance coming.\u201d",
+            "score": 15,
+            "depth": 0,
+            "timestamp": "2024-06-06 06:38:00",
+            "replies": [
+                {
+                    "author": "Pbone15",
+                    "body": "Sounds like Giannandrea should be shown the door.\n\nEven with the lack of resources given to his team, there\u2019s still no excuse for today\u2019s Siri. He\u2019s had 6 years to turn things around, and Siri has only gotten worse. \n\nI watched the Siri introduction from the iPhone 4S keynote the other day, and as Scott was demo-ing Siri I followed along, asking my Siri the same questions. 2011 Siri 1.0 was better in several respects. It\u2019s shameful, really.",
+                    "score": 9,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 11:00:11",
+                    "replies": [
+                        {
+                            "author": "eschewthefat",
+                            "body": "Apple should be looking for words you can\u2019t use in church because when I call Siri a miserable sack of shit, it\u2019s time to use the interaction I just had as a learning tool",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 13:47:00",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "\u201cApple is not compatible with that. They won\u2019t release something until it\u2019s perfect.\u201d\n\nSiri isn't perfect, it's painful, a true test of mental strength.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 11:49:55",
+                    "replies": [
+                        {
+                            "author": "eschewthefat",
+                            "body": "Look at any of the Apple apps in the App Store. Consistently the worst ratings\u00a0",
+                            "score": -1,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 13:47:40",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Expensive_Finger_973",
+            "body": "The only way to \u201cwin\u201d the current AI arms race is to not play. Let everyone else panic and deploy half baked crap. Then when the dust starts to settle release something that has learned from all of those mistakes.",
+            "score": 22,
+            "depth": 0,
+            "timestamp": "2024-06-06 09:52:08",
+            "replies": [
+                {
+                    "author": "eschewthefat",
+                    "body": "Worst take imaginable. Siri doesn\u2019t need general intelligence. It needs natural interaction. OpenAI and Google are more than capable of exponential gains here",
+                    "score": 8,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 13:48:42",
+                    "replies": [
+                        {
+                            "author": "yungstevejobs",
+                            "body": "Why do people continue to mention Siri? Siri is not generative AI and was never designed to be. Same with Google\u2019s version of Siri and even Amazons Alexa. These are poor comparisons when compared to Chat GPT or Gemini.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-06-07 14:02:42",
+                            "replies": [
+                                {
+                                    "author": "eschewthefat",
+                                    "body": "Because it\u2019s familiar to reference and using OpenAI api as a replacement is essentially what Apple is more than likely going to do. If not, it\u2019s what they should do\u00a0",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-07 14:14:04",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "this was my thing like behind what a Microsoft spyware that is already being compromised.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 10:11:18",
+                    "replies": []
+                },
+                {
+                    "author": "adv0589",
+                    "body": "lol this isn\u2019t hardware, you can\u2019t just drop in 2 years behind the curve and blow the others out of the way. You guys are 100% underestimating the growth going on at these companies",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 18:47:17",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "stnlkub",
+            "body": "\u201cFallen behind in \u2018AI\u2019 Marketing\u201d.  FTFY",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-06-06 17:58:48",
+            "replies": []
+        },
+        {
+            "author": "ItsDani1008",
+            "body": "I genuinely don\u2019t understand why everyone keeps saying Apple has fallen behind\u2026\n\n1. Apple has implemented tons of AI all over their products. Just not AI you interact with like we\u2019re seeing everywhere now.\n\n2. Apple doesn\u2019t release/announce major features outside of WWDC, and last WWDC AI wasn\u2019t such a big deal. They\u2019ll most likely \u201ccatch up\u201d this WWDC in less than a week.\n\n3. In a lot of ways Apple is actually ahead. Why do you think iPhone consistently has some of the best cameras on the market? Yeah obviously they use great hardware, but many companies do. AI/algorithms play a massive role here.",
+            "score": 17,
+            "depth": 0,
+            "timestamp": "2024-06-06 11:53:51",
+            "replies": [
+                {
+                    "author": "eschewthefat",
+                    "body": "We\u2019re all colloquially gunning for an \u201cAI\u201d that you can interact with naturally so you can control your phone seamlessly and reliably. Both OpenAI and Gemini are more than capable of working within the parameters that Apple lets it have. We don\u2019t have to have pseudo general intelligence that attempts to make sense of the entire internet \u00a0",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 13:44:50",
+                    "replies": []
+                },
+                {
+                    "author": "coppockm56",
+                    "body": "Apple has had a Neural Engine (i.e., Neural Processing Unit) in its chipsets for years now. Something that's basically brand new to Intel, AMD, Qualcomm. The idea that Apple didn't do that for a reason is bizarre to me.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 16:04:15",
+                    "replies": []
+                },
+                {
+                    "author": "kelp_forests",
+                    "body": "from what I can tell the only thing Apple is behind on is Siri understanding what I am saying. Their AI/ML in Photos is excellent, their spell correct, predictive text is excellent, shortcuts has tons of plugins built in...the issue is just when I talk to Siri it doesnt understand what I am saying or it \"cant do that\". If you Siri could a) understand what I am saying and b) have access to everything in shortcuts/be able to make shortcuts and interact with software, it would be far ahead of the game.\n\nThe first seems like an easy ask, the second more difficult but all the ability is there, it just needs to be connected.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-06-07 22:22:09",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "the_next_core",
+            "body": "Apple never even needed the insane chips or AI technology to put out a great virtual assistant, they just never wanted to do it when their phones sell great anyway. They're entering the market now that the competition is truly threatening them with AI features.",
+            "score": 19,
+            "depth": 0,
+            "timestamp": "2024-06-06 06:42:47",
+            "replies": [
+                {
+                    "author": "exhibitionthree",
+                    "body": "Apple has always been much more invested in the relationship between human and technology and understanding what a users needs are. There is still a lot of hype around the genuine use cases for the technology I think through the Apple lens they need to be really clear about how they deploy it in way that\u2019s rationalized clearly.\n\nGenerative AI is a really interesting technology and I can see it acting as a powerful transition layer. But the technology is not a solution in and of itself.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 12:43:03",
+                    "replies": []
+                },
+                {
+                    "author": "Deertopus",
+                    "body": "Truly a bad strategy",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 07:59:06",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Gloriathewitch",
+            "body": "apple isn't behind, though. they've had neural engines for years and let me tell you as a swift dev we've had coreML for at least a few years too.",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2024-06-06 11:26:40",
+            "replies": [
+                {
+                    "author": "King_BX",
+                    "body": "That\u2019s what I said on another post on this sub and got downvoted. Apple has been preparing iPhone for AI for years. I\u2019m sure Apple has been working on AI and not just putting neural engines in iPhones for nothing.\n\nI believe this WWDC will be the entrance of Apple into the AI game with their own unique style and implementation of AI.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 16:45:17",
+                    "replies": [
+                        {
+                            "author": "Gloriathewitch",
+                            "body": "Yup 100%.\n\nNow that Nvidia is in full swing apple will hopefully take them head on and give consumers some useful goodies. \n\nI'm excited to see it used in scientific models mostly, not like AI rice cookers (which unfortunately do exist..) and Copilot computers, it would be massive if we could develop new medicines and cure diseases with genome sequencing and similar.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 18:33:23",
+                            "replies": [
+                                {
+                                    "author": "King_BX",
+                                    "body": "Given how much Apple is invested in making the Apple watch a wearable with various medical and health benefits, they are likely working on integrating AI into the watch. As for iPhone, on top of advancing the already existing features that use the neural engine, they will probably use AI for accessibility as well.\n\nApple is definitely more interested in actual uses of AI that focus on consumer experience and not some AI chatbot.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 18:45:59",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "michoken",
+            "body": "The only \u201cwinning\u201d actor right now seems to be Nvidia selling all the ML/AI hardware accelerators.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-06-06 16:00:31",
+            "replies": []
+        },
+        {
+            "author": "kjoeleskapet",
+            "body": "People need to learn the difference between virtual assistants and artificial intelligence.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-06-06 18:04:48",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "Apple have has neural engine on their iphone since iphone X. It is AI, just not the AI that people imagine",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2024-06-06 12:52:01",
+            "replies": []
+        },
+        {
+            "author": "Specialist_Brain841",
+            "body": "siri is being renamed steve",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-06-07 01:02:10",
+            "replies": []
+        },
+        {
+            "author": "vinnymcapplesauce",
+            "body": "Oh, but Craig discovered AI in December during his break, so it's all good.   \n\\[pip-boy thumbs up\\]",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-06-07 03:20:07",
+            "replies": []
+        },
+        {
+            "author": "VaderCraft2004",
+            "body": "Not anymore",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-06-11 00:09:41",
+            "replies": []
+        },
+        {
+            "author": "mrhidiho",
+            "body": "Like everything else Apple has done in the past, they seem to know when a technology is ready and when it is not. As a developer that has been building AI and ML models for the last 15 years, I can tell you it is not ready. It\u2019s not even real when it comes to the consumer end products. Smoke and mirrors folks, that\u2019s all they are selling. Real AI and real neural net machine learning models are real, and are most certainly not available to the general consumer.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-06-06 12:39:46",
+            "replies": [
+                {
+                    "author": "coppockm56",
+                    "body": "I agree generally but disagree that \"real AI\" is real. But that's a highly philosophical debate.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 16:05:52",
+                    "replies": []
+                },
+                {
+                    "author": "kelp_forests",
+                    "body": "what are the real ones not available to general consumers like? Just wondering",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-06-07 22:23:24",
+                    "replies": []
+                },
+                {
+                    "author": "HideOnUrMomsBush",
+                    "body": "Yep, like how Vision Pro was rEaDy. I\u2019d give it 1 more year and even people here will be forced to concede it flopped.\u00a0",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-06-18 15:49:30",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "bkkgnar",
+            "body": "Everyone acting like \u201cAI integration\u201d is something consumers *actually* want and not just the next VC-backed tech grift has lost the plot entirely. Obviously there\u2019s more potential here than the mind-numbingly stupid attempts to shove \u201cthe blockchain\u201d into everything, but at this point, use cases are few and far between for this tech at its current stage. Maybe that will change, and maybe this shit will go the way of NFTs. \n\nThe fact is that tech world is so desperate to cultivate the pipe dream of infinite growth for their shareholders that they\u2019re willing to throw literal billions at anything that can be seen as \u201cinnovative\u201d in the hope that it catches on with the mainstream. I\u2019ll believe the hype when I actually see it, but until then, \u201cAI\u201d is the most who-gives-a-shit buzzword I\u2019ve seen since \u201cplay to earn\u201d.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-06-06 17:44:00",
+            "replies": []
+        },
+        {
+            "author": "lazazael",
+            "body": "they missed the \"data\" in science compared to g or m$",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-06-06 12:16:33",
+            "replies": []
+        },
+        {
+            "author": "Snidrogen",
+            "body": "Sounds like more of a feature than a bug imo",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-06-06 13:07:18",
+            "replies": []
+        },
+        {
+            "author": "jgreg728",
+            "body": "This is a race that\u2019s about shareholder satisfaction, not customer satisfaction.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-06-06 21:54:44",
+            "replies": []
+        },
+        {
+            "author": "Tookmyprawns",
+            "body": "Damn. Funny how many people downvoted this article.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-06-07 01:05:35",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "I think Steve's death also played a role. I absolutely believe he would have made Siri the top AI assistant.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-06-07 01:34:38",
+            "replies": []
+        },
+        {
+            "author": "jugalator",
+            "body": "Apparently they only got truly hooked once Craig played with Copilot as a _released product_ - a custom fine tuned model based on Microsoft's multiyear partnership with OpenAI that eventually generated GPT-4. That tells a thing or two just how far behind they are. They utterly and compleletely missed the train as they dicked around with their glasses.\n\nBut I also think that while I don't see AI as a straight up bubble, I think _a lot_ of users, even enthusiasts, haven't yet come to terms with that hallucinations and misinformation _will_ be a problem because we don't have a solution. The solution doesn't lie in the training data or the model size, but wholly new paradigms in training an AI that is probably not GPT based.\n\nI think it's like to 30% a bubble, because of course many applications exist, but I think we still have this perception that AI will eventually go AGI but we have nothing indicating this yet. To the contrary, open efforts like Llama 3 are catching up even with the elite models and so going proprietary and making a business model out of providing access to your LLM seems more like a failing one by the day, _and_ also hallucinations and misinformation is an unsolved problem, _also_ makin large scale services like augmented Google Search a tough sell.\n\nThe path towards profit via AI isn't really in \"hey we have an AI you can talk to, it knows everything\" in my opinion (because it doesn't and it fails too often - a mere 5% hallucination risk is every 20 questions!). It's rather by speeding up software development, prototyping and sketching in engineering applications, quickly providing marketing material, etc.\n\nSo, being cautious here to only launch wide once a technology is perfected would be typical Apple and I wouldn't be surprised if we have only \"mild\" AI in iOS 18 (like webpage summaries) even if they could do more if aggressive. But being aggressive brings about the aforementioned failure rate and unsolved problems that Google apparently dove headfirst into, and Apple doesn't want that. They may do it (get hallucinations etc) but then by accident because Apple isn't that kind of company. They put their brand above all.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-06-07 01:44:38",
+            "replies": []
+        },
+        {
+            "author": "dookiewater",
+            "body": "No Cuda on Apple.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-06-07 06:00:08",
+            "replies": []
+        },
+        {
+            "author": "RunningM8",
+            "body": "They better leapfrog the competition with announcements at WWDC or it\u2019s the turning point of their decline",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-06-07 06:12:43",
+            "replies": []
+        },
+        {
+            "author": "Bolt_995",
+            "body": "Apple fell behind in the cloud computing race as well, they cannot develop iCloud into something that\u2019s comparable to AWS, Microsoft Azure and Google Cloud. \n\nAnd they\u2019re surprisingly late on the generative AI boom as well, and I\u2019m saying they\u2019re late because of how rapidly things have developed since ChatGPT blew open the doors towards an AI boom from November 2022 onwards, so much so that they are actually integrating GPT into Siri for advanced AI tasks.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-06-06 09:14:48",
+            "replies": [
+                {
+                    "author": "umthondoomkhlulu",
+                    "body": "They not into cloud computing for enterprise though. They will not release server hw even though they probably could. They making devices for the public to consume",
+                    "score": 9,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 11:00:20",
+                    "replies": [
+                        {
+                            "author": "lordmycal",
+                            "body": "They're hitting market saturation there though.  Everyone that wants an iphone has one, and they don't feel compelled to buy a new one every other year like they used to.  The phone market has slowed down quite a bit.  Same goes for tablets.\n\nHaving Apple expand their cloud and AI options further would help them grow as a company.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 11:57:23",
+                            "replies": [
+                                {
+                                    "author": "umthondoomkhlulu",
+                                    "body": "Building a car could help too, but not always the best idea. A smart ring/ Vision Pro is more their style",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-06 18:28:48",
+                                    "replies": [
+                                        {
+                                            "author": "lordmycal",
+                                            "body": "The car was a good idea, until news leaked about Chinese EVs costing $5k.  Apple has no interest in competing with bargain bin vehicles, but with that kind of pressure even luxury vehicles would need to come down in price.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-06-06 18:34:52",
+                                            "replies": [
+                                                {
+                                                    "author": "umthondoomkhlulu",
+                                                    "body": "Agree. Competing with AWS, Azure, Google etc Is similar challenge.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-06-06 19:10:30",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "therinwhitten",
+            "body": "Considering how many times I have seen  AI NOT deliver anything worthwhile, it seems a moot point. \n\nI mean google has had their AI tell people to eat rocks man lol. And it's somehow dumber than Google Assistant was 5 years ago. \n\nHopefully Apple integrates AI in as a tool to help make things better, instead of smearing it all over everything and calling it a day.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2024-06-06 10:29:26",
+            "replies": []
+        },
+        {
+            "author": "SirBill01",
+            "body": "I can't see how this is true at all:\n\n\\* Apple has been shipping AI neural chips in phones for many years now.\n\n\\* Apple has for some time been using on-device API for things like photo album recognition, again for years.\n\n\\* Apple has been using AI for FaceID this whole time.\n\n  \nI see Apple as being in the lead, in that they have tons of experience with what works for on-device AI, a much more important field than server-based AI.   Siri might need some tuning but is not really THAT much off of other efforts.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-06-06 13:15:14",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "Because the term AI is being used very loosely here. What Apple missed is LLM and its multimodal capabilities. The so called AI neural chips and models Apple (and everyone else for that matter) have been using for years are mostly just for small and specific CNN-based models for image/audio processing. There might be some RNN or Transformers under the hood for language processing, but LLM is an entirely different scale. Before LLM, 100M parameters model was already considered overkill for many tasks, now 1B LLM is just some random small model. OpenAI was the only company actively trying to scale up Transformers with their GPT1-2-3 before the massively successful GPT4. They did all of that in front of everyone else (they published a lot on GPT) and yet everyone was still caught off guard, including Apple.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-06-07 03:35:13",
+                    "replies": [
+                        {
+                            "author": "SirBill01",
+                            "body": "\"Because the term AI is being used very loosely here. What Apple missed is LLM and its multimodal capabilities.\u00a0\"\n\n  \nThat is why Apple is in an even better position than most companies, because what they didn't do is rely heavily on the one form of AI that outright lies.\n\nI have tried to use LLMs off and on for various things, because they simply make up stuff at random it makes trying to use them for anything of substance almost pointless, since you have to double-check every single aspect of the output.\n\nSo where exactly SHOULD Apple have put LLMs?  Replacing Siri, so it could make up responses and claim it was 70 and sunny out when it was raining and 50?  \n\nAnd the thing is the \"neural\" chips Apple has are flexible enough they can run an LLM - where they make sense.  But the thing is, I have yet to see a case where they actually are very useful at all.  Even the proponents are trying hard to fix the hallucinatory nature of the LLM...  some by creating general purpose AIs to check facts.  But if you really develop an AGI why use an LLM at all?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-06-07 11:00:13",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "AI is worthless at best and dangerous at worst. The less Apple wades in, the better.",
+            "score": -5,
+            "depth": 0,
+            "timestamp": "2024-06-06 09:48:32",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "I have honestly seen enough to where I don't even want my mac to have AI features and I work in IT. The recall function Microsoft cooked up is already being compromised before its even out I had a laugh when they named the tool to do it Total Recall. I no joke said to myself fuck I'm glad I have a mac. The \"Arms Race\" is really not being driven by reality so much as its the current stock market craze. There is no way the bubble keeps going either since it can't actually replace people on the scale that people believe it will not for a long time.",
+                    "score": 9,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 10:06:09",
+                    "replies": [
+                        {
+                            "author": "redhatch",
+                            "body": "Also in IT and I agree. Whatever AI features are forthcoming, I sincerely hope there's a place to turn them off entirely.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-06-06 14:58:08",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "VLOOKUP-IS-EZ",
+            "body": "Google\u2019s AI said Pres. Andrew Jackson graduated college in 2005. Meanwhile, Siri gets the answer right.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2024-06-06 16:46:53",
+            "replies": []
+        },
+        {
+            "author": "shouldExist",
+            "body": "Not everyone has to jump on the AI bandwagon. Apple can be a hardware company that partners with an AI company",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2024-06-06 11:39:15",
+            "replies": []
+        },
+        {
+            "author": "hasanahmad",
+            "body": "Apple is a hardware company, not a software company. the only major hardware company doing well on AI is nVidia and not for its software but its hardware. and is this the same AI arms race where people were told to jump off the bridge and mimicing the movie her which is a critique of a dystopian AI future , THAT AI race?",
+            "score": -2,
+            "depth": 0,
+            "timestamp": "2024-06-06 13:14:10",
+            "replies": [
+                {
+                    "author": "firelitother",
+                    "body": "Nvidia\"s moat is not their GPUs. It's CUDA.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-06-06 19:01:09",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}

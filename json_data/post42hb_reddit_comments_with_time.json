@@ -1,0 +1,267 @@
+{
+    "post_title": "Unbiased AI analysis towards 2024 Elections",
+    "post_timestamp": "2024-10-21 20:53:00",
+    "last_comment_timestamp": "2024-10-23 17:00:45",
+    "time_difference": "1 day, 20:07:45",
+    "comments": [
+        {
+            "author": "MeltedIceCube79",
+            "body": "Not sure how accurate the model is. I read through your methodology and it feels more like picking and choosing random things to direct the AI.\n\nAside from that, polling data is already unreliable and adds multiple layers of complication.",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2024-10-21 21:32:46",
+            "replies": [
+                {
+                    "author": "ChefOrZero",
+                    "body": "I understand. The model does not use any polling data. The basic instructions are quite simple:\n\n* Understand the U.S. system for presidential elections.\n* Do not use polling data.\n* Use and analyze actual events.\n\nThe model utilizes **Google Trends (a great starting point to identify an initial event)** to identify when candidates receive more online attention. At that point, it is prompted to investigate why this attention occurs. The question \"but why?\" is asked repeatedly until a topic is broken down to its core. Then, it is evaluated against the values of various social groups that can vote and how it might influence their opinions. Since the media in the U.S. can be biased (e.g., Fox = Republican, CNN = Democratic), the model avoids relying on news articles. If it must use an article from a U.S. news source (or any worldwide source), the article is broken down into an abstract event, removing the human element of the reporter.\n\nWhile the article is fact-checked, the model also assesses how fact-checking influences voter perceptions. For example, if a candidate were to say, \"I'm Tom Cruise,\" which is obviously false, the model checks whether people actually believe this statement. The model is designed to distinguish between sarcasm and honest beliefs in conspiracy theories, and this is taken into account.\n\nAs you suggest, this is an important point, and the model should be adjusted to eliminate this possibility. Currently, it is not very random, but it could and should be more precise. I asked the model how it would be able to make a calculated prediction for an election in a fictional country resembling the U.S. It identified what data would be important to know, and, of course, \"polling data\" was one of the suggestions. I then asked it to propose an alternative way to make predictions based on daily events. This model requires significant refinement, and your feedback has made me acutely aware of this.\n\n**Would it be beneficial to include vice presidential candidates in the equation as well? I**'m uncertain about the impact their rallies and speeches have on the presidential election. I believe this is a unique election cycle, and the influence of vice presidential candidates in the past may differ significantly from the situation in 2024.\n\nAt this point, the model is not comparing the personalities of Harris and Trump. I might consider adding this comparison, but I'm unsure if it really matters since everyone is already familiar with Trump's style, as historical data demonstrates. Harris is more difficult to analyze because most people base their opinions on her campaign statements. For a test run, I may incorporate their personalities (as far as they can be identified) into the model, but I believe it will not significantly impact the Electoral College. The candidates have such differing political views and agendas that the race or gender of the candidate might have minimal impact. Regardless, this should still be examined.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-10-21 22:11:24",
+                    "replies": [
+                        {
+                            "author": "MeltedIceCube79",
+                            "body": "Google trends is still pretty unreliable because it only tells you that people are looking something up, not why. And the events still feel random",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-10-22 06:04:53",
+                            "replies": [
+                                {
+                                    "author": "ChefOrZero",
+                                    "body": "The model iteratively tracks the trend, identifying specific causes and effects until the trend ceases to exist. It's important to recognize that any trend is merely a starting point; the model continuously asks 'Why is this a trend?' and delves deeper to achieve a fully abstract understanding. If applicable, it applies the same process to other variables. The impact on any state or social group is then calculated based on this data.\n\nWhile 100% accuracy is unrealistic, the goal is to develop a model capable of predicting elections with over 90% accuracy using this abstract, data-driven approach. The model should be able to predict the outcome of any state with complete accuracy, though failures may occur at the county level, which is acceptable within the overall prediction framework.",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2024-10-22 17:35:21",
+                                    "replies": [
+                                        {
+                                            "author": "MeltedIceCube79",
+                                            "body": "How does that mean anything about SUPPORT for or against a candidate? Also all of your events are cherry picked",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-10-22 17:38:50",
+                                            "replies": [
+                                                {
+                                                    "author": "ChefOrZero",
+                                                    "body": "The events shown are just a small fraction of the dataset, chosen by the model without specific instructions from me. The newer version explains in detail why these datapoints were picked and how they might influence the election. Please consider the initial post as a proof of concept, not a finished model.\n\nThe current version breaks down how certain events \u201cprobably\u201d (remember, it\u2019s still a prediction) shifted support across about 100 different U.S. social groups. This includes everything from race, gender, and economic class to education levels and employment status, as well as more niche groups like religious affiliations and even extremist groups (based on government, UN, and credible sources). It covers 99.99999% of the population, making it much more detailed than any polling data could achieve.\n\nSome of the groups considered include:\n\n1. **White males, White females, Black males, Black females** **Source**: U.S. Census Bureau,\u00a0**2022 American Community Survey**\n2. **Hispanic/Latino groups** **Source**: U.S. Census Bureau,\u00a0**2022 American Community Survey**\n3. **Asian American voters** **Source**: U.S. Census Bureau,\u00a0**2022 American Community Survey**\n4. **Native American voters** **Source**: U.S. Census Bureau,\u00a0**2022 American Community Survey**\n5. **Different educational levels (high school dropouts to Ph.D. holders)** **Source**: U.S. Census Bureau,\u00a0**Educational Attainment in the United States: 2022**\n6. **Employment types (teachers, healthcare workers, tech workers, etc.)** **Source**: U.S. Bureau of Labor Statistics (BLS),\u00a0**Occupational Employment and Wages, 2022**\n7. **Unemployed population** **Source**: U.S. Bureau of Labor Statistics (BLS),\u00a0**Employment Situation Report, September 2023**\n8. **Religious groups (Christian, Jewish, Muslim, unaffiliated)** **Source**: Pew Research Center,\u00a0**Religious Landscape Study, 2020**\n9. **Extremist groups (classified by government, UN, EU, think tanks)** **Source**: Various including\u00a0**U.S. Department of Homeland Security**,\u00a0**UN**,\u00a0**EU**,\u00a0**Southern Poverty Law Center (SPLC)**\n\n1/2",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-10-22 19:34:19",
+                                                    "replies": []
+                                                },
+                                                {
+                                                    "author": "ChefOrZero",
+                                                    "body": "\n\n**This is a sample of the 100 groups.**\n\nThese sources, mostly from 2022, are publicly available and reliable. **As far as I know, these are the most reliable sources and if i am wrong then please correct me.** If you have better sources, feel free to share! I avoided polling data due to its controversy, especially among Trump supporters.\n\nWhile concerns about illegal votes are valid, most studies show a minimal impact\u2014around 0.0003% to 0.0006% of votes, which could go either way. It\u2019s also important to note that illegal immigrants are unlikely to risk exposure by voting illegally.\n\nIn my country, we have similar percentages of illegal immigrants, and the political parties that support easier paths to citizenship haven\u2019t significantly gained or lost support in over a decade. Voting here requires in-person ID verification, and while the U.S. system has risks (like mail-in ballot tampering or voter impersonation), it\u2019s nearly impossible to accurately model how unrecognized illegal votes could affect results. If illegal voting had a meaningful impact, it would have been addressed by now.\n\n2/2",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-10-22 19:34:05",
+                                                    "replies": [
+                                                        {
+                                                            "author": "MeltedIceCube79",
+                                                            "body": "That doesn\u2019t really address anything I said",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-10-22 21:55:50",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "ChefOrZero",
+                                                                    "body": "Than your question was probably not very clear.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2024-10-23 17:00:45",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "I mean, we can start with it calling Ohio a swing state. It\u2019s not. I wish it were true and we\u2019re trying to make it true again, but it\u2019s not.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-10-21 23:19:05",
+            "replies": [
+                {
+                    "author": "ChefOrZero",
+                    "body": "The model seems to agree with you.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-10-22 19:37:23",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Inevitable-Ad-9570",
+            "body": "How were the data points analyzed in complete by your model?  This doesn't seem like a good use case for an LLM.\n\nIt can't do reasoning about data in this way.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-10-22 00:07:04",
+            "replies": [
+                {
+                    "author": "ChefOrZero",
+                    "body": "This is a complex question and if you don't mind I will provide transparency at my next post. I'll try to explain how the model works (instructions, dataset, limitations, obligations, etc...).",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-10-22 01:23:05",
+                    "replies": [
+                        {
+                            "author": "Inevitable-Ad-9570",
+                            "body": "I'd be interested.\u00a0 I'm very unconvinced that this is something an llm could do well but it would be really cool to be proven wrong.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-10-22 08:23:17",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deneweth",
+            "body": "I'm going to stop you right there.\n\nYour unbiased AI was clearly programed on a bias.  It may not be what you think a traditional political bias is but it is biased towards the exact criteria you gave it.\n\nSometimes people will say that reality has a liberal bias.  There really isn't any such thing as un biased.  Not even an AI is weighing all the facts and possibilities and weighing each one correctly.  If you had an AI that could do that it would predict the future with 100% accuracy.\n\nAll this is an AI that focused on what you told it to, because that is what you think matters.  That's not to say it isn't neat, or that you are even wrong, but it is still incorrect to say unbiased.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-10-22 01:12:15",
+            "replies": [
+                {
+                    "author": "ChefOrZero",
+                    "body": "Wrong and even if you where correct \"as unbiased as possible\" is a great big improvement.",
+                    "score": -1,
+                    "depth": 1,
+                    "timestamp": "2024-10-22 01:17:16",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "ChefOrZero",
+            "body": "Please note that this is an experiment. Although it involves AI technology, **this Reddit post is not intended to spark a debate between those who find AI useful and those who are skeptical or opposed to it.** This project is a personal experiment under my supervision, utilizing AI to achieve specific goals. While statisticians, computer scientists, and data professors could potentially reproduce this work as a team, I am working alone and rely on AI technology due to limited resources. Therefore, comments on the methods I use are not constructive.\n\nMy interest lies in whether technology can accurately predict election outcomes. The goal is not only to forecast the next U.S. president but also to precisely predict how individual states and counties will vote and understand the underlying reasons for these patterns. This project is important to me, and I hope to receive support. I kindly ask that those who reject the project based solely on the technology used refrain from commenting. **While freedom of speech is valued, this is a political Reddit thread, and questions or opinions about AI technology are better suited for Reddit threads dedicated to AI topics.**\n\n\n\n**Thank you for your understanding and support.**",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-10-22 01:37:00",
+            "replies": []
+        },
+        {
+            "author": "fluffy_assassins",
+            "body": "That spreadsheet was really hard to read on my tablet, had to keep scrolling. Makes sense though.  I'm kinda terrified.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-10-21 21:08:57",
+            "replies": []
+        },
+        {
+            "author": "MarcatBeach",
+            "body": "I think one aspect that is hard to model with the Northeastern states is the impact of COVID and the migration of pre-retirement aged people.   Specifically with PA.   The Philly suburbs a high turnover of GOP voters during COVID.  They downsized and bought their retirement homes, and in many cases their voting residency.    They might be back at work in PA because the remote work ended, but they not PA voters anymore.   \n\nNot sure how much of an impact, but it is some key voter areas in PA.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-10-21 21:21:12",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-10-21 21:42:31",
+                    "replies": [
+                        {
+                            "author": "MarcatBeach",
+                            "body": "I think at this point in the election it would be hard to model.  You could estimate through real estate patterns during covid in \"retirement\" areas.   then look at voter turnout for midterm elections in those areas.  but turnout for mid-terms is not a great data point. \n\nalso look at voter registration data from the states to tweak it a little.  but until you have data from this election it is just a guess.  we need one good general election to compare against historical.\n\nI think for a VP to matter it would have to be a very specific combination.  Like Kennedy/Johnson.   where the candidate would fill a potential gap in the Electoral College map.   I don't think either VP contender does that.  I would just say in this cycle the dominant factor will will be the predictor.   the rest is noise.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-10-21 21:57:37",
+                            "replies": [
+                                {
+                                    "author": "ChefOrZero",
+                                    "body": "That is the essence of the experiment: \"Is it possible?\" (Yes/No) and, if it is possible, \"How accurate can it be?\" The more relevant data we gather, the better, and you just provided a wealth of information that deserves serious consideration. If the combination regarding the vice president is part of the formula, then the model can evaluate this and take it into account while also considering the current zeitgeist.\n\nI plan to repost new data every few days, with a final prediction the day before the elections. This Reddit post has revealed many variables that may or may not matter. All of these suggestions will be incorporated into the model. Whenever the model determines that a variable or event is not important, it must explain why.\n\nI was surprised that the assassination attempt(s) on Trump\u2019s life were not considered significant events; the model concluded they would not change the outcome unless the attempt was successful. It reasoned that this was merely a security issue. One of Trump's key talking points has always been \"security,\" so the fact that someone tried to kill him doesn't alter much since he has already promised to reduce crime. Being the victim of a crime himself is, therefore, abstractly irrelevant.\n\nIf he had claimed, \"Crime does not exist in the U.S. compared to four years ago,\" and then experienced an assassination attempt, the model might have viewed it as an event worth analyzing. \n\nIt\u2019s often hard to understand how that in the end, we don't really know how AI model works because it operates like a \"black box.\" This means we can see what goes in and what comes out, but we can't easily see what happens inside. AI models, especially complex ones, use many layers of calculations that transform the input into an output in ways that are not straightforward. Additionally, the AI learns from examples, so the data it was trained on greatly influences how it behaves. Even tools that try to explain the AI's decisions only provide partial insights, making it challenging to fully grasp its inner workings. In essence, while I can ask the model to explain some the decisions it makes (specifically) I have limited influence on how and why it gets to a specific result. What I can \"program\" is what to take into consideration, what it absolutely must do and what is may not do. Whatever magic happens inside is invisible for me (also for the companies that build this models). \n\nI believe that total abstraction\u2014such as ignoring the influence of vice presidential combinations\u2014is not the best approach. I've received valuable input from Reddit users to enhance the model's performance. Even if the final result remains the same (since variables applied to both candidates might cancel each other out), it's still crucial to provide the model with as much unbiased, factual data as possible. This way, it can consider all relevant information in its analysis.\n\nI don\u2019t believe that adding 2,000 or even 20,000 data points will make a significant difference. For instance, the fact that Harris likes Doritos and Trump prefers McDonald's seems irrelevant. I plan to wait a few days to see if other users provide more valuable input. I will post an update that includes a link to a more extensive document, which can be verified. This document will contain a precise explanation of the calculations, detailing the variables the model uses and how each data point impacts the results, including the degree of that impact.\n\nThanks for your reply!",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-10-21 22:41:26",
+                                    "replies": [
+                                        {
+                                            "author": "MarcatBeach",
+                                            "body": "I get what you are doing and it is interesting.  I model financial markets and commodity pricing.   There are discrete events that influence the markets.  which I have my own approach to factoring into predictions.    Crude oil was where I started.  \n\nyour approach is interesting and plan to follow it.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2024-10-21 22:56:33",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "CorwinOctober",
+            "body": "Chat gpt Is not an oracle.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-10-22 01:15:26",
+            "replies": [
+                {
+                    "author": "ChefOrZero",
+                    "body": "Indeed, the data will be tested on other popular commercial AI platforms to determine if there is a correlation between the results. It's important to remember that the goal is to evaluate these systems' ability to predict detailed and accurate future events based on abstract data, especially in situations where precise scientific predictions are not feasible.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-10-22 01:20:33",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "KnownUnknownKadath",
+            "body": "How are you qualifying your model as being unbiased?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-10-22 08:20:01",
+            "replies": [
+                {
+                    "author": "ChefOrZero",
+                    "body": "Here\u2019s an improved version of the text:\n\n\"This process utilizes reinforcement learning, enabling the model to eliminate bias from the information it processes. For instance, if a fan event occurs and is covered by a news outlet like Fox, the model disregards the source's perspective and focuses solely on extracting the event details and topic in the most abstract form. The model can rewrite any data point or source as if it were published by AI, devoid of bias.\n\nYou can test this yourself by feeding any article to GPT and asking it to rewrite the article as abstractly as possible. Instruct the GPT to believe it is communicating with another GPT, aiming to convey the information in the most logical, clear, and efficient manner possible, as if sharing data in a world where humans no longer exist. In this scenario, GPT becomes purely data-driven, devoid of emotion or bias. Once the information is abstracted, the model is tasked with statistically evaluating the societal impact of the data, comparing it data souces across regions like South America, Central America, Europe, africa and Asia. The process is repeated for these data sources. The abstract average is used as datapoint.  The following techniques are used in order to eliminate as much bias as possible \n\n1. Nominalization *****\n2. Reductionism **\n3. Generalization *\n4. De-Personalization *****\n5. Passive Voice **\n6. Neutral Vocabulary *****\n7. Conceptualization ****\n8. Anonymization ***\n9. Abstraction of Time and Space (n/a)\n10. Meta-Level Framing ***\n11. Systemic Language **\n12. Data-Oriented Phrasing &&\n13. Interactive Thinking *\n14. Symbolic Logic *\n15. Decontextualization (n/a)\n16. Probabilistic Reasoning **\n17. Information Compression  ,,:\n18. Cognitive Mapping ***\n19. Hierarchical Structuring\n20. Algorithmic Abstraction\n\n\n* suggestion to the model\n***** absolute required from the model.\n\n This this experiment will test how raw data is influenced by human emotion. \n\n\nTruthfully, this experiment should provoke thought. If successful, and the model accurately predicts state-level outcomes with over 90% accuracy, I would find it unsettling.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-10-22 17:13:20",
+                    "replies": [
+                        {
+                            "author": "KnownUnknownKadath",
+                            "body": "Ok, so by \"unbiased\" you mean that you're attempting to de-bias sources.  \n  \nI had thought you were claiming that it's a statistically unbiased estimator, but that would take a lot of testing of predictions against actual outcomes to demonstrate.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-10-22 17:50:26",
+                            "replies": [
+                                {
+                                    "author": "ChefOrZero",
+                                    "body": "While I am currently the initial actor feeding data (with GPT selecting certain points), I still retain control to accept or reject that data. However, this should evolve. In future versions, it would make more sense for the process to become a project between two GPTs, where they collaborate to refine themselves based on their outputs. The human role should be minimized to something as simple as seeding the model with a query like \"predict election x,\" leaving the GPTs to create and refine a model that accomplishes the task.\n\nWhile AI can make predictions about the future based on established scientific principles\u2014such as physics, or how we likely won\u2019t have US elections once the sun runs out of energy\u2014those calculations are based on fixed, known data. Predicting elections, on the other hand, falls under the realm of social science, which is far more complex. Currently, models rely heavily on polling data and biased online information, especially when using media sources in polarized environments like the US. As a result, they often provide predictions no different from what you'd see on a news broadcast or read in a newspaper. The alternative is even more problematic\u2014models begin to hallucinate.\n\nFor instance, when I requested certain data points, the GPT returned not only the correct dates but also projected events well beyond the requested timeframe. When I questioned why, it responded by saying its data points included actual, hypothetical, and likely events. While superintelligence might eventually be able to offer divine-like insights into the future, for now, we must ensure the model operates within clear boundaries.\n\nThe model I am building must verify its logic, cross-check the data it uses, and allow me to flag incorrect information. For example, if it generated a false claim like \u201cHarris and Trump married on 2024-10-22,\u201d I would need to correct that and ask it to explain why it added that data point. It should only use publicly available, factual information that could realistically impact the outcome of a prediction. Fictional data, self-generated content, or anything not verified as real should be excluded. The model should also conduct its own form of self-peer review to ensure data isn't derived from memes, sarcasm, or comedic sources. Without this, the model might take something said by a late-night host as factual without critical examination.  \n  \n  \n2/2",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-10-22 18:43:56",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "ChefOrZero",
+                                    "body": "This is an early alpha version, far from being a beta, even though elections are just two weeks away. There\u2019s still much room for refinement, and future elections worldwide will provide opportunities to further test and improve the model. The goal is to make it capable of predicting outcomes in \"democratic\" elections, though it will need to account for variables related to external influences or internal stakeholders that can impact the results.\n\nElections in my country are vastly different from those in places like the US. My country, for example, has one of the most complex and extreme political systems in the Western world. While it may seem nearly impossible to manage, it somehow functions. Some Western countries perform better, others less efficiently, but all things considered, we're doing pretty well given the circumstances.\n\n**We have**\n\n* **Federal elections**: Around\u00a0**15-18 parties**.\n* **Regional elections**:\n   * **Region a**:\u00a0**6-8 parties**.\n   * **Region b**:\u00a0**5-6 parties**.\n   * **Region c:**\u00a0**10-12 parties**.\n   * **Region d**:\u00a0**2-3 parties**.\n* **European elections**: Around\u00a0**13-17 parties**\u00a0(depending on linguistic regions).\n\nGeneral rules in my country:\n\nIn my country, coalition governments are the standard due to the proportional representation system, where no single party typically secures a majority. To form a coalition, several important steps must be followed:\n\n**Majority rule:**\u00a0The coalition must hold over 50% of the seats in parliament to govern effectively.\n\n**Linguistic balance**: At the federal level, both major language groups their parties must be included to ensure representation of the different linguistic communities.\n\n**Policy agreement**: Parties must reach a consensus on a shared policy plan before finalizing the coalition, often requiring compromise.\n\n**Balanced cabinet**: There must be an equal number of regional ministers in the federal cabinet, aside from the prime minister.\n\n**Vote of confidence:**\u00a0The coalition must win a vote of confidence in parliament to officially take power.\n\nSometimes we have re-elections, most of the time after elections it takes about a year to form a government (up until then, the former government runs things but has limited power, like running windows on safe mode).\n\nSo there are a lot of ways to have democratic elections, the model should not be limited (over mid-long term to US elections only). The only election outcome beside the scope of the models capabilities should be dictatorships, countries in conflict (war), etc...\n\n**Given how rapidly technology is evolving, it's hard to predict the possibilities for models like this even four years from now. Just four years ago, language models weren\u2019t a major topic of discussion. Back then, AI was primarily recognized for achievements like winning games (chess, Go) and scientific applications such as protein folding. It hadn\u2019t yet become a widely available consumer service.**\u00a0I try to export the data that drives the model, the abstract logic, etc to several data file formats like json, xml, etc in order to be able to import is into future versions of any AI language model. This is a begin and honestly I would be very surprised it would really me very precise on the first try. The only thing I can to is try to understand how the model tries to predict results and when I see a logical error I ask the model to \"debug\" itself and self correct. I believe that models like these only evolve when they \"understand\" (\"\" because I have no idea how they understand stuff in internal processing) problems and are able to discover their mistakes and update their reasoning. Simple example, is a model says 2 + 2 = 5 (one of for example 10000 calculations) I need it to identify this one as wrong, explain to me why it is wrong or how this error could slip into the results and correct it.\n\n1/2",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-10-22 19:35:40",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

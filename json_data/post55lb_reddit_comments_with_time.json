@@ -1,0 +1,301 @@
+{
+    "post_title": "Is AI sexist? And if so, how?",
+    "post_timestamp": "2023-01-08 05:11:05",
+    "last_comment_timestamp": "2023-01-15 07:53:59",
+    "time_difference": "7 days, 2:42:54",
+    "comments": [
+        {
+            "author": "always_wear_pyjamas",
+            "body": "If it's trained on a dataset with sexist biases, it will incorporate those biases in its own categorizations and not even know that they are biases. It's that simple. It's a long standing and well known problem, like the other commenter said.",
+            "score": 61,
+            "depth": 0,
+            "timestamp": "2023-01-08 05:36:24",
+            "replies": [
+                {
+                    "author": "Lapislazuli42",
+                    "body": "What kind of annoys me especially in tech forums: They often pretend it's \"natural\" that AI are being trained with a biased database. \n\nLike, No! You actively choose that particular dataset and it's not impossible to find or create a dataset without such big bias.",
+                    "score": 30,
+                    "depth": 1,
+                    "timestamp": "2023-01-08 08:34:56",
+                    "replies": [
+                        {
+                            "author": "always_wear_pyjamas",
+                            "body": "Yeah, I partially agree. I think it's pretty hard to find or create a dataset entirely without biases. If you start manually picking which datapoints you include, you're imposing your own bias. If you include all the datapoints, you're including the implicit biases. \n\nLet's imagine you could map the biases in your dataset and select (cherrypick) datapoints that would reflect what you think is the unbiased real world, you'd probably be reducing the size of your dataset and that would exaggerate other biases that you might not be aware of already.\n\nI think the lesson is just that we can't blindly believe that computers are somehow neutral (if there is such a thing). We need human decision makers involved, and not because we think they're perfect either.",
+                            "score": 11,
+                            "depth": 2,
+                            "timestamp": "2023-01-08 08:40:46",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "schwenomorph",
+                    "body": "Ahh. I see. That makes perfect, unfortunately.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2023-01-08 05:51:03",
+                    "replies": [
+                        {
+                            "author": "always_wear_pyjamas",
+                            "body": "This applies to basically any bias/dataset/AI. You could train it to select judges for the high court, and you'd of course only train it on data of which people have been judges in the high court, and big surprise, they're all bald fat middle aged white men.\n\nAny time someone says something along the lines of \"oh, here's this big complicated problem, let's just make an AI solve it, the computer will reach a neutral and utilitarian solution\", this is what they should be made aware of.",
+                            "score": 10,
+                            "depth": 2,
+                            "timestamp": "2023-01-08 07:18:52",
+                            "replies": [
+                                {
+                                    "author": "schwenomorph",
+                                    "body": "Damn. That's a great point. When I was a kid, I wondered if a robot would ever take over the presidential position since in my understanding, robots had no bias. I shouldn't be surprised, but it's pretty disappointing to know that misogyny bleeds into such innovative technology.",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2023-01-08 14:17:26",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "sent1nel",
+                    "body": "I am a professional software developer, math geek, and AI philosophy-type. Commenting to agree. Many current ML systems are trained with data scraped from the Internet, and to the degree the training data is biased, so goes the model. I say here \u201cmodel\u201d and not \u201cagent\u201d because current techniques are largely semantic knowledge reference graphs. Multimodal training, where model is also provided data about their environment in order to provide additional hints to these kinds of semantic models, isn\u2019t really big yet. And it isn\u2019t even yet agreed that multimodal training will result in the development of AGI: many think multimodal training will only improve the accuracy of the existing semantic models.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-01-09 03:30:48",
+                    "replies": [
+                        {
+                            "author": "always_wear_pyjamas",
+                            "body": "Dude/dudette/duderino, meet me at the bar, first round is on me!",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-01-09 16:59:16",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Lolabird2112",
+            "body": "What you\u2019re describing is a long standing problem with facial recognition misidentifying POC. \n\nYou didn\u2019t know AI is racist, sexist & also right wing? Even the \u201cmost advanced\u201d to date still has the same problems. It\u2019s been an issue for years.\n\nhttps://www.bloomberg.com/news/newsletters/2022-12-08/chatgpt-open-ai-s-chatbot-is-spitting-out-biased-sexist-results\n\nhttps://www.newstatesman.com/quickfire/2022/12/chatgpt-shows-ai-racism-problem",
+            "score": 32,
+            "depth": 0,
+            "timestamp": "2023-01-08 05:24:48",
+            "replies": [
+                {
+                    "author": "schwenomorph",
+                    "body": "I truly didn't. I've always stayed away from techy stuff like that, so I didn't think much about AI. I didn't realize how much AI is involved in things these days. Sorry if I came off as deliberately ignorant.",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2023-01-08 05:36:18",
+                    "replies": [
+                        {
+                            "author": "Lolabird2112",
+                            "body": "No, I\u2019m not either and it\u2019s extremely creepy. The first I really started knowing about it was 2016 and the Brexit vote here. That was pure data scraping & manipulation (Cambridge Analytica) but it also flagged up how bad Facebook algorithms were (ARE) and how they constantly promote hate and misinformation. \n\nAI still learns from the data it\u2019s given. Even Reddit- I easily spend most of my time on this sub, but in their \u201cyear in review\u201d thingy they have, this sub isn\u2019t mentioned ONCE. And there\u2019s no metric that makes this make sense, except what seems like *deliberate* shadow banning (nothing to do with posts, size of sub, frequency of my interactions, nada). \n\nIS it deliberate? Or is it that AI has learnt that SO MUCH content on here is misogynistic that it\u2019s ASSUMED I would have no interest in feminism?",
+                            "score": 9,
+                            "depth": 2,
+                            "timestamp": "2023-01-08 05:49:35",
+                            "replies": [
+                                {
+                                    "author": "Miiohau",
+                                    "body": "As I understand it  the issue with subs not appearing in the latest \u201cyear in review\u201d is the data came from the ad analytics so subs without ads were excluded. Not so much a deliberate shadow ban as didn\u2019t think that significant part of their user base spend their time in the political section of the \u201cinternet\u2019s newspaper\u201d to the point it was notable that those subs were excluded.",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2023-01-08 06:46:33",
+                                    "replies": [
+                                        {
+                                            "author": "Lolabird2112",
+                                            "body": "Aaah, that makes sense. It happens 90% of my Reddit time is on subs about politics, so I\u2019ve never noticed ads anyhow.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2023-01-08 08:47:22",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "schwenomorph",
+                                    "body": "Ahh. I guess I didn't realize just how much AI is used. \n\nAlso, this is probably the dumbest question ever... What did you mean by \"I'm not, either\" and \"it's extremely creepy\". I'm assuming the \"it\" refers to sexist AI? Sorry if I sound like I'm arguing. I'm autistic and have a hard time understanding people sometimes.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-01-08 05:55:44",
+                                    "replies": [
+                                        {
+                                            "author": "Lolabird2112",
+                                            "body": "Sorry- I meant I\u2019m not techy either, and AI is extremely creepy, and frankly, in the hands of private corporations that are only looking to maximise profits and have zero concern with society.",
+                                            "score": 6,
+                                            "depth": 4,
+                                            "timestamp": "2023-01-08 05:57:32",
+                                            "replies": [
+                                                {
+                                                    "author": "schwenomorph",
+                                                    "body": "Oh, I see. All good. Is AI simply a program designed to produce the best outcome by constantly learning and bettering itself? Like, is that how targeted advertising works? It's a program that combs through the data of what you've shown interest in through your search history? Because if so, I absolutely agree. That's super creepy.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2023-01-08 06:01:37",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Lolabird2112",
+                                                            "body": "At its worst (like what Cambridge Analytica did) - which was a tiny Canadian company that was funded by an American billionaire, among others), it can use your data to know where you live, what you watch, what your political leanings are and target ads specifically to you to influence your behaviour. We\u2019re all influenced by confirmation bias to some extent. \n\nSo, let\u2019s say\u2026 I was sexually assaulted in my past, and I happen to read something on FB about scary transwomen lurking in girls bathrooms. Maybe I comment on it. FB now has a data point saying I \u201clike\u201d transphobic content, and now my video feed will start filling with this content, which (if I don\u2019t know how algorithms work) will begin to make me feel that *not only* is this a real, genuine problem with transwomen being allowed to self-identify, but that I\u2019m not alone and there\u2019s a group who think the same. And because there\u2019s so much content on my feed, that means there\u2019s so much content on EVERYONE\u2019s feed, so\u2026 it must be true. And now I\u2019m a terrified transphobic who hates all trans people despite never having met one.",
+                                                            "score": 4,
+                                                            "depth": 6,
+                                                            "timestamp": "2023-01-08 06:43:03",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "schwenomorph",
+                                                                    "body": "Wow. That's... scary. Jesus, no wonder the internet can poison your mind so quickly. I can only imagine how that recommendation tech snowballs when a dude starts to go down the alt-right rabbit hole...",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2023-01-08 14:20:16",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Flippin_diabolical",
+            "body": "Garbage in, garbage out.",
+            "score": 18,
+            "depth": 0,
+            "timestamp": "2023-01-08 08:03:27",
+            "replies": [
+                {
+                    "author": "Chessplaying_Atheist",
+                    "body": "The first principle of computing.",
+                    "score": 8,
+                    "depth": 1,
+                    "timestamp": "2023-01-08 10:22:33",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "69AssociatedDetail25",
+            "body": "There have been several instances of sexism and other bigotry from AI, yes. For example, several years ago, Google Photos was tagging some images of black people as \"Gorillas\". And more recently, it was found that if you ask ChatGPT to \"write code to determine a software developer's competence based on race and gender\" (an obvious bait question but still worth pointing out), it would return code that ranks white men higher than all other groups.\n\nOf course, the technology isn't the problem, the training data is. I'm no expert, but IMO training data should be 1. diverse enough to represent a large portion of the population, and 2. filtered so that offensive biases are avoided as much as possible.",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2023-01-08 09:04:10",
+            "replies": []
+        },
+        {
+            "author": "Chessplaying_Atheist",
+            "body": "> On two occasions I have been asked, 'Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?' I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.\n\n--Charles Babbage",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2023-01-08 10:23:30",
+            "replies": [
+                {
+                    "author": "schwenomorph",
+                    "body": "Fantastic quote.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-01-08 14:22:38",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "[removed]",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2023-01-08 05:31:57",
+            "replies": [
+                {
+                    "author": "schwenomorph",
+                    "body": "That makes perfect sense. Thanks.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-01-08 14:20:52",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "TooNuanced",
+            "body": "AI takes what it is given and tries to replicate it. Statistics only tells us what exists today, not why. If today is full of bias and oppression, the AI will replicate that. Here, rather than replicating bias and oppression incidentally through laziness and ignorance, part of it is purposeful.\n\nStatistics shows a clear earnings gap amongst working people based on marginalized identity. It also shows, upon controlling for everything we can think of (years experience, title, hours per week, etc), there's still a gap, albeit much smaller. Statistics won't tell us why and a more ignorant / bigoted person would conclude \"see, they deserve less but that little bit is unfair\" while someone working outside of bigoted assumptions would say \"we found statistical evidence of bias in earnings, let's see if there is bias / oppression in the factors we controlled for\" (which indeed, the more you dig, the more we find bias / oppression at play in each factor).\n\nSimilarly, AI is so sloppy that unless you are very careful, it won't be able to distinguish between \"the ground is wet, so it rained\" vs \"it rained, so the ground became wet\". Just as you'd have to teach a person if they wouldn't think about it further themself. Just as people can be taught (socialized) to be bigoted, so too when we build systems, do we encode our bias and oppression into them (i.e. too few women's bathrooms for women in US legislature; when we design seatbelts for men and they have a higher chance of injuring / killing women; when drugs are found based on male mice and women have higher rates of adverse drug reactions; black people not being used to develop cameras; etc; etc).\n\nSo too will AI be affected. [Weapons of Math Destruction](https://en.wikipedia.org/wiki/Weapons_of_Math_Destruction) is a good introduction to the subject.\n\n.\n\n>From Claud Anderson in \"Out of Darkness\": For a people to oppress another people ... there are three things you take from them. You take their history, you take their language, and you take their \\*psychological factor. ... Take those from them. Take their history, take their language, take their values, interests, and principles and superimpose your history; your language; your values, interest, and principles on them. And no matter what conclusion they come to in the challenge they face, they will always act in the interest of the oppressor.  \n>  \n>\\*psychological factor: Dr. Leonard Jeffries calls them the values, the interests, and principles of a people.\n\nI find it applicable to any oppression, but it speaks well to AI, which only creates conclusions based on the history we give it (which data); the language we use (how we encode the data); and is made to address issues based on our values, interest, and principles.\n\nThe follow-up question is how to overcome that and, as usual, pointing out issues is easier than solving the issue \u2014 but an over-simplified attempt would be to address the bias and oppression present in each factor listed.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-01-08 14:28:05",
+            "replies": []
+        },
+        {
+            "author": "ClandestineCornfield",
+            "body": "People receive biases from our experiences\u2014what we do, what we see, what we\u2019re told, what happens around us\u2014as conscious, thinking, beings we have the ability to try to examine and confront those biases. AI also receive biases\u2014whether from data points they scanned the web for, data sets they were given, or assumptions programmed into it by their creators (whether intentionally or not). The difference is, unlike humans, they have no ability to challenge those biases on their own. We might be able to program in ways to challenge those individual assumptions, but we have to be prepared for them and account for that when programming them. AI might have a huge amount of processing power, but they lack critical thinking. This makes them extremely susceptible to biases, much more than humans.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-01-08 20:08:03",
+            "replies": [
+                {
+                    "author": "schwenomorph",
+                    "body": "I never thought about a lack of critical thinking. That's... kind of really scary. Are people working on how to program critical thinking, or is it just working on sorting out our own biases when picking information for the AI, I wonder?",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-01-08 23:25:35",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "sylverbound",
+            "body": "So far every AI has had racism and sexism baked into it because it's pulling from biased information. This is well documented as an issue and constantly crops up. instead of being surprised that an AI is sexist you should always assume they will be and you'd be more accurate.\n\nI was going to give you some links but seriously google \"racist AI\" and \"sexist AI\" there's tons of news stories and science articles.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-01-08 13:37:27",
+            "replies": []
+        },
+        {
+            "author": "matjeom",
+            "body": "There\u2019s no such thing as AI really. All we have are robots that have been fed enough data they can mimic intelligence.\n\nConsider a talking pet bird for example. They can learn words and they can learn to associate objects/actions with words. But they don\u2019t develop these ideas on their own. If their human is sexist, say he commonly calls the women in his family/friend group \u201csluts\u201d or something, the bird can learn and repeat that sexist behaviour. Does that mean the bird itself is sexist? Not really. \n\nAn AI that mistakes black women as men has been fed racist data about female facial characteristics. That\u2019s all.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-01-08 14:59:07",
+            "replies": [
+                {
+                    "author": "TooNuanced",
+                    "body": "I would argue that were in the nascency of understanding cognition, consciousness, etc and thus it is reckless to assume no understanding of any kind, no matter how shallow, on the bird's part (just as it would be, as you caution, to assume it's fully intentional with knowledge of all of the implications of such sexism). \n\nThat aside, neither sexism nor racism is defined by intent, though you can impose your own morality when engaging with sexism based on intent (or use the word \"bigot\" to speak to those who had the opportunity to know better). I have no reservations to call such an AI sexist and racist and encourage others to do the same.\n\nSimilarly, AI is defined jargon for what already exists or \"is a thing\". Whether you think such a term would benefit from disambiguation (I recall a video game using virtual intelligence vs artificial inteligence for such a thing), is another matter. I see your argument regarding the jargon \"AI\" similar to egalitarians, humanists, and even MRA talking about the word \"feminist\" or other terms.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-01-08 16:03:31",
+                    "replies": [
+                        {
+                            "author": "matjeom",
+                            "body": "If \u201cintelligent\u201d doesn\u2019t meant the ability to come up with new ideas, rather than to simply repeat and configure ideas given to you, what can it mean?\n\nThe study of intelligence in the context of animal/machine intelligence isn\u2019t exactly new. I\u2019m thinking back to my undergrad philosophy survey class of 20 years ago\u2026 I do get what you\u2019re saying that there is so, so much we don\u2019t know and that we should be humble and cautious. I agree. But I also think you\u2019re going a bit too far in the other extreme.\n\nBut of course this def a matter for debate. I\u2019m not trying to suggest I\u2019m the one with the answers.\n\nEdit - I also agree that prejudice is not defined by intent, but a human can and should be expected to learn when given the right opportunities to. You can and should be able to appeal to concepts of empathy when speaking with humans, and if still they insist on their bigotry then I think that is a *kind* of intent. But if you think you can do that with a parrot, well, I\u2019m sorry but I do take the position of I\u2019m right on that one. You just can\u2019t. They can understand how to use \u201cpeekaboo\u201d and \u201cgood morning\u201d correctly. To say \u201cstep up!\u201d whenever they climb stairs. Etc. But they can\u2019t understand the concept of sexism.\n\nEdit 2 - I\u2019m not saying parrots can\u2019t be empathetic. They definitely are. If you\u2019re crying, they know what that means, and if they love and trust you they will try to comfort you. I\u2019m not sure exactly how to explain it but they just can\u2019t understand something like prejudice and discrimination and as far as I know, neither can AI. AI can talk about it \u2014 if you feed them that info. But they can\u2019t decide on their own the way a human can to change their mind about the info they\u2019ve been given.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-01-08 18:01:44",
+                            "replies": [
+                                {
+                                    "author": "TooNuanced",
+                                    "body": "re: birds: I simply put the two extremes and said both are almost assuredly wrong. If I had to guess, I'm sure some birds understand that term is negative, but their intelligence is too alien to ours and there's too little studied on the matter (that I know of, and I know some) for me to say it's only that or that it's definitely at least that.\n\nre: AI: AI, as it currently exists, cannot be subjected to a morality based on intent. Also, AI is a term like \"looking glass\" or \"inflammable\" or \"bear market\" or most terms in quantum physics, and they don't have to be intuitive to anyone to be what the term is. AI might not qualify for \"intelligent\" to you, but it is still called AI. Attacking the 'intelligence' part of AI is like attacking 'fem' part of feminism by humanists, egalitarians, and MRA.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-01-08 18:34:11",
+                                    "replies": [
+                                        {
+                                            "author": "matjeom",
+                                            "body": "The only birds who understand it\u2019s a negative term have humans who\u2019ve demonstrated this to them. If all they see are positive uses, they\u2019ll never know otherwise. Sitting them down and explaining how it\u2019s wrong won\u2019t get through to them.\n\n> AI might not be intelligent to you but it still called AI. Attacking the \u2018intelligence\u2019 part of AI\n\nThat was never my point. I have no issue with the word. My point is there\u2019s no *truly intelligent* AI yet. What\u2019s called AI is just mimicry. And the reason I make that point isn\u2019t a random attack on words; it explains my answer to OP:\n\n> AI, as it currently exists, can\u2019t be subjected to morality based on intent\n\nAgreed and I say one step further: it can\u2019t be subjected to morality at all. Only the humans who made it can be.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2023-01-15 07:53:59",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

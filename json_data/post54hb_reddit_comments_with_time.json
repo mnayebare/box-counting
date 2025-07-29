@@ -1,0 +1,1890 @@
+{
+    "post_title": "One of the most cited AI models used to scan chest x-rays doesn\u2019t accurately detect potentially life-threatening diseases in women & Black people. Black women fell to the bottom, with the AI not detecting disease in half of them for conditions such as cardiomegaly, or enlargement of the heart.",
+    "post_timestamp": "2025-04-01 12:13:51",
+    "last_comment_timestamp": "2025-04-04 13:38:43",
+    "time_difference": "3 days, 1:24:52",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "body": "Welcome to r/science! This is a heavily moderated subreddit in order to keep the discussion on science. However, we recognize that many people want to discuss how they feel the research relates to their own personal lives, so to give people a space to do that, **personal anecdotes are allowed as responses to this comment**. Any anecdotal comments elsewhere in the discussion will be removed and our [normal comment rules]( https://www.reddit.com/r/science/wiki/rules#wiki_comment_rules) apply to all other comments.\n\n---\n\n**Do you have an academic degree?** We can verify your credentials in order to assign user flair indicating your area of expertise. [Click here to apply](https://www.reddit.com/r/science/wiki/flair/).\n\n---\n\nUser: u/MistWeaver80  \nPermalink: https://www.science.org/content/article/ai-models-miss-disease-black-female-patients\n\n---\n\n*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/science) if you have any questions or concerns.*",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-01 12:13:51",
+            "replies": []
+        },
+        {
+            "author": "Seraph199",
+            "body": "This is the massive problem with AI. It can seem perfectly accurate, then it turns out the scientists were only testing it on specific subjects for \"reliability\" and ope it turns out that defeats the entire purpose of AI and trains it to literally discriminate just like the people who made it.",
+            "score": 1117,
+            "depth": 0,
+            "timestamp": "2025-04-01 12:20:01",
+            "replies": [
+                {
+                    "author": "STLtachyon",
+                    "body": "Or the initial training data were skewed one way or another. A similar case was an AI determining if a patient had a disease partially by looking at the hospital that the xray was taken. It did so, because the initial data included cases of a local epidemic which meant the patients location was factored in the \"diagnosis\".",
+                    "score": 261,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 13:05:48",
+                    "replies": [
+                        {
+                            "author": "sold_snek",
+                            "body": "Oof, that's a huge one.",
+                            "score": 23,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 22:08:19",
+                            "replies": []
+                        },
+                        {
+                            "author": "psymunn",
+                            "body": "I heard a case of an AI model that could tell the difference between cancer and a non-cancerous mole by identifying if the photo used had a ruler or measuring device in it. That's one problem with AI models being non-human readable. It's like regex but many times worse",
+                            "score": 23,
+                            "depth": 2,
+                            "timestamp": "2025-04-02 12:08:53",
+                            "replies": []
+                        },
+                        {
+                            "author": "vg1220",
+                            "body": "I\u2019m a little surprised this paper got by the reviewers. They show that sex (female), race (black), and age (older) have lower rates of diagnosis. Women have more breast tissue on average than men, and racial minorities and the elderly correlate with obesity - all of which is known to detrimentally affect Xray image quality. Not one mention in the methods regarding controlling for BMI, chest circumference, or anything like that.",
+                            "score": 18,
+                            "depth": 2,
+                            "timestamp": "2025-04-02 00:31:29",
+                            "replies": []
+                        },
+                        {
+                            "author": "spookmann",
+                            "body": "Well, to be fair, the blood donation center in NZ did that for years.\n\nThey wouldn't accept my blood because I had visited the UK in the 10-year window of the BSE occurrences.\n\nAnd we did that way more recently for COVID, by asking where people had been.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2025-04-02 00:56:54",
+                            "replies": [
+                                {
+                                    "author": "tokynambu",
+                                    "body": "It\u2019s a not-unreasonable strategy.  It looks like, although it will take a generation or more to know, that the risks of CJD in humans triggered by BSE in meat were overstated.  Incidence of CJD in the UK has not risen substantially, and there were 0 (zero) vCJD (the variant caused by BSE) cases in 2020.   That said, in the 1990s and 2000s no-one knew, the incubation period is long and there had been a lot of BSE in the UK food chain.  Since transmission by blood transfusion has been recorded, and the blood products industry is still recovering from AIDS and hepatitis transmission in the 1980s, broad-spectrum elimination of UK blood from a nation\u2019s supply is and was a reasonable response.",
+                                    "score": 14,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-02 02:32:24",
+                                    "replies": [
+                                        {
+                                            "author": "spookmann",
+                                            "body": "Yeah.  Shame they couldn't test, though.\n\nThat was a lot of regular donors that it cost them!",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-02 04:35:15",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "HerbaciousTea",
+                    "body": "Neural networks are pattern finding engines, and pattern finding engines *only*. A pattern resulting from biased data is absolutely no different to it from a pattern resulting from actual real world correlations.",
+                    "score": 143,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 13:19:56",
+                    "replies": [
+                        {
+                            "author": "Anxious-Tadpole-2745",
+                            "body": "We often don't pay attention to all the patterns so we miss crucial ones.\u00a0\n\n\nWe tried to breed Chcolate Labs for intelligence without realizing that food motiviation accelerates task compliance. So we ended up trying to breed for intelligence snd simply made very hungry dogs.",
+                            "score": 91,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 13:45:37",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "[deleted]",
+                                    "score": 46,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 19:09:21",
+                                    "replies": [
+                                        {
+                                            "author": "evergleam498",
+                                            "body": "One time our yellow lab got into the 40lb bag of dog food in the garage when we weren't home. He ate so much he got sick, then ate so much he got sick again. He probably would've kept eating if we hadn't come home when we did.",
+                                            "score": 10,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-01 23:48:20",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "MarsupialMisanthrope",
+                            "body": "It\u2019s at least discriminating based on data, unlike doctors who do it based on personal prejudices. Data can be corrected for by adding more training data containing groups that were underweighted in the original dataset. Convincing a doctor to stop giving lousy care to patients in demographics they dislike is a lot harder, not least because they\u2019ll fight to the last to avoid admitting they\u2019re treating some patients based on how they look and not their symptoms.",
+                            "score": -8,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 20:01:16",
+                            "replies": [
+                                {
+                                    "author": "snubdeity",
+                                    "body": "> unlike doctors who do it based on personal prejudices\n\nThis just isn't true, most of the time. Doctors, as a whole, are probably about as left-leaning as this damned site. And even black doctors perform worse with black patients than they do with white ones.\n\nWhy? Because they were trained on the same skewed data these AIs were. \n\nAnd it's *really* hard to get better data.",
+                                    "score": 12,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 21:09:14",
+                                    "replies": [
+                                        {
+                                            "author": "ebbiibbe",
+                                            "body": "If you study health care informatics in college there are numerous studies about bias from health care professionals.",
+                                            "score": 12,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-02 00:47:39",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "son_of_abe",
+                                            "body": ">Doctors, as a whole, are probably about as left-leaning as this damned site\n\nSorry, this could not be more wrong. This was my impression as well before being introduced to networks of medical doctors. Roughly half I've met were conservative. \n\nIt makes more sense once you consider the financial barrier to entry that medical school poses. Many MDs come from wealth and have politics that align more with those interests than that of their profession (science).",
+                                            "score": 18,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-02 00:32:15",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "Bakoro",
+                                            "body": "Doctors aren't magically immune from prejudice, no one is.  \n   \nThere are racist doctors and serial killer doctors, same with nurses, same with everything else. Positions of power and prestige are especially attractive to bad people of whatever flavor. Also, some doctors are just bad at their job.  \nThat's just life.    \n    \nGetting better data is not hard at all, it's just socially and politically unattractive to say that we're going to start collecting everyone's anonymized medical data as a matter of course. It's what we *should* do, but people would freak out about it.",
+                                            "score": 19,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-02 00:04:32",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "yukonwanderer",
+                                            "body": "Women are still largely excluded from medical studies. Don't tell me it's hard to get good data. It's critical that we get good data.",
+                                            "score": 6,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-02 14:09:21",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "redditonlygetsworse",
+                    "body": "> trains it to literally discriminate just like the people who made it. \n\nYes: garbage in, garbage out. AI can only replicate our biases, not remove them.\n\nStill, though, once the problem is identified it's not a big mystery how to fix it. It might not be cheap or fast to re-train, but it's not like we don't know how.",
+                    "score": 298,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 12:27:04",
+                    "replies": [
+                        {
+                            "author": "spoons431",
+                            "body": "But honestly they'll just use it and say it's fine - they're like who cares about more than half the population.\n\n\nMedical basis is real and still now is 2025 there is little or nothing being done about - as an example and I tend to use this one a lot is there's *still* no real research into women and how ADHD affects them differently and oestrogen fluctuations, monthly for decades and across their lifetime, affects the systems and severity of this. This is despite 2 conclusions that are know - 1. ADHD is a chronic lack of dopamine in the brain. 2. Oestrogen levels affect dopamine levels.\n\nThere have been issues with this reported in the community for *decades* at this point, but it only something that is just beginning to be looked at.",
+                            "score": 99,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 13:31:50",
+                            "replies": [
+                                {
+                                    "author": "Fifteen_inches",
+                                    "body": "To also add, they only recently started publishing a visual encyclopedia of how rashes appear on dark skin tones, because even black doctors are taught on the white skin patient standard.",
+                                    "score": 69,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 15:15:01",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "ineffective_topos",
+                                    "body": "The idea that ADHD is a chronic lack of dopamine in the brain is a misconception or oversimplification as far as I know. It's somewhat more accurate that it includes failures in certain dopamine pathways.",
+                                    "score": 11,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 21:17:59",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "nagi603",
+                                    "body": "See also \"a kid is just a small adult, right?\"",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-02 01:32:48",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "Rhywden",
+                                    "body": "I'll one-up you on this: There has been only recently a study done on women's peri-menopausal issues with lack of iron due to increased menstrual bleeding.\n\nOne of the big issues exclusively for women and only this year someone finally got around to establishing key facts about it.",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-02 08:17:32",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Mausel_Pausel",
+                            "body": "How do you fix it? You can\u2019t train it with data you don\u2019t have, and the medical community has routinely minimized the participation of women and minorities in their studies.\u00a0",
+                            "score": 65,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 12:34:41",
+                            "replies": [
+                                {
+                                    "author": "redditonlygetsworse",
+                                    "body": "Yep, 100%. Like I said above: replicate our biases.\n\nSo you fix it by *getting* that data. Again, like I said, not necessarily cheap or fast; but we know exactly how to do it. We're not back at square one.",
+                                    "score": 80,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 12:36:55",
+                                    "replies": [
+                                        {
+                                            "author": "OldBuns",
+                                            "body": "This is technically the case, but it comes with an important caveat.\n\nThe tendency of human bias to bleed into AI is almost unavoidable.\n\nI'm not saying it's bad or shouldn't be used or anything, but we need to be wary of treating this as \"just a tool\" that can be used for good or bad depending on the person using it, because this isn't a case where you can just fix it by being cognizant enough.\n\nBias is innate in us. The methods and procedures we use to test and train these things exacerbates those biases because they are built into the process as assumptions.\n\nIn addition to this, sometimes, even if you are intentionally addressing the biases, the bias comes FROM the algorithm itself.\n\n\"Algorithmic oppression\" by safiya noble is a fantastic read on the issue, and uses a very succinct example.\n\nImagine an algorithm or AI that's trained to put the most popular barbershops at the top of the list.\n\nIn a community of 80% white individuals and 20% black, there will NEVER be a case where a barbershop that caters to that specific hair type will ever appear on that algorithm. This inherently means less access to a specific service by a specific group of people.\n\nBut also, how would you even TRY to go about solving this issue in the algorithm other than creating 2 different ones altogether?\n\nWhat new problems might that cause?\n\nThis is obviously oversimplified, but it's a real life example of how bias can appear in these systems without that bias existing in the people that create it.",
+                                            "score": 18,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-01 12:56:48",
+                                            "replies": [
+                                                {
+                                                    "author": "Dragoncat_3_4",
+                                                    "body": ">But also, how would you even TRY to go about solving this issue in the algorithm other than creating 2 different ones altogether?\n\nWell... yeah. \n\nOnce you've identified your currently existing formula/ratio/normal range/etc doesn't work with a specific sub group within your population, you split the data and revise your formula for both groups. \n\nIn this case they would probably need to re-label all of their training data to include race as well as obtain more images of both pathological and healthy people of the underrepresented racial group. \n\nOf course, the researchers procuring the data need to take extra care to avoid underreporting said pathology due to their pre-existing bias but these things should work themselves out with enough revisions.",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-01 14:04:33",
+                                                    "replies": [
+                                                        {
+                                                            "author": "OldBuns",
+                                                            "body": ">these things should work themselves out with enough revisions\n\nMaybe, but at what cost? How many, and how large, are the mistakes we are willing to unleash onto society in the hopes that \"eventually they'll be worked out\"?",
+                                                            "score": 8,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-04-01 14:58:33",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Dragoncat_3_4",
+                                                                    "body": "I'd imagine the mistake count would be a lot lower than when these things were initially formulated at least.\n\nThat's how it works in medical science in general though. People do studies, other people collate the results into guidelines and then somebody inevitability comes along and publishes \" X and Y are inadequate diagnostic criteria for A, B or C groups; we propose a revised X and Y criteria for these groups\". And eventually the guidelines get updated. \n\nAppropriate use of AI could speed up the process and potentially expose biases and faults in the data more quickly.",
+                                                                    "score": 9,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-04-01 15:45:45",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "OldBuns",
+                                                                            "body": ">That's how it works in medical science in general though.\n\n100%. This study is a good example of that. But remember that the use case, in this instance, is diagnostically assistive, not actionably prescriptive.\n\nThe big, existential risks and mistakes we should be worried about are the processes in which AI takes an active role in creating and building our world, material or digital.\n\nAs McLuhan would say, once we create and shape a tool that fundamentally changes the way we engage with the world, the tool then inevitably shapes us.\n\nSocial media AI algorithms are a perfect example of how the system itself breeds bias in its consumers, even though the bias wasn't built in, nor is the AI \"aware\" of this bias.\n\nAnd yet, even knowing all its faults and issues, we can't really \"put the genie back in the bottle\" so to speak.\n\nThis broadly fits into the question of \"the alignment problem\" where you simply cannot know for sure whether the AI is learning what you ACTUALLY want it to learn vs something that LOOKS like what you want it to learn.\n\nTwo minute papers and Robert Miles are great YouTube channels with lots of videos about this specific topic if you're interested.",
+                                                                            "score": 7,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2025-04-01 16:46:04",
+                                                                            "replies": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "author": "F0sh",
+                                                    "body": "> But also, how would you even TRY to go about solving this issue in the algorithm other than creating 2 different ones altogether?\n\nCreate an algorithm that first automatically segments the population and then uses the estimated segment in the recommendation part.\n\nIt's utterly routine already - you've seen it everywhere with messages like \"people like you read/bought/watched/listened to...\" and is the basis of recommender systems.\n\n>The methods and procedures we use to test and train these things exacerbates those biases because they are built into the process as assumptions.\n\nI think that is often not true - when the process makes any attempt to address bias you can do a very good job of mitigating them. You will generally end up with some other bias, but it won't be along the same lines that societal biases take.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-01 18:54:02",
+                                                    "replies": [
+                                                        {
+                                                            "author": "OldBuns",
+                                                            "body": "I know I didn't do it justice, but the essay I referenced covers it more in depth and addresses all of these things.\n\nI have also replied to other comments giving additional details.\n\nThe major factor is what's called \"the alignment problem\" and it has not been solved.\n\n>It's utterly routine already - you've seen it everywhere with messages like \"people like you read/bought/watched/listened to...\" and is the basis of recommender systems.\n\nWell exactly, but we know that this causes many other issues and we now have the unique problem of not quite knowing what in the algorithms is causing it to behave this way, and therefore we don't have a fix because they are opaque systems.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-04-01 19:55:09",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "F0sh",
+                                                                    "body": "You may end up with new problems, but what I'm getting at is that once you can measure a problem, you can take action to fix it algorithmically. If the problem is hard to measure, then you don't really know that the algorithm has made it any worse.\n\nIn the case of the most commonly raised issue with recommender systems - \"bubbles\" - you don't really know that this was any worse than without recommender systems. The system itself may recommend things in a very bubbly way, but people tend to behave the same way already because they're also trying to get recommendations that are likely to match their own preferences; and people tend not to *only* use recommender systems to get their recommendations even when they exist.\n\nI saw a study last year that said despite the undeniable filter bubbles on social media, a large majority of people are still aware of the news stories that would generally be outside their bubble, because most people *don't* just get their news from facebook.\n\n> we don't have a fix because they are opaque systems.\n\nIt's always worth remembering that humans are pretty opaque too.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-04-02 06:03:33",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "author": "Bakoro",
+                                                    "body": ">\"Algorithmic oppression\" by safiya noble is a fantastic read on the issue, and uses a very succinct example.\n     \n>Imagine an algorithm or AI that's trained to put the most popular barbershops at the top of the list.    \n     \n>In a community of 80% white individuals and 20% black, there will NEVER be a case where a barbershop that caters to that specific hair type will ever appear on that algorithm.    \n     \nPart of the problem is that people don't even understand the questions they are asking, the meaning is glossed over or framed with a particular perspective. Then the data is usually interpreted through the lens of a malformed or biased question.   \nA question of popularity is literally a question of bias.    \n   \nIn your example, a black barbershop *could* make the list. It could even top the list. It would do that by being in a community where there are only one or two black barbershops, but many white barbershops.   \nOne barbershop could be overwhelmed, catering to an underserved community.  \n   \nYou asked about \"popularity\" and stumbled into a much greater issue of economic and social inequity.   \n   \nThat's not just a convenient hypothetical that I pulled from the air, we can see parallels in so called \"food deserts\" where people don't have easy access to grocery stores, and often times poor public transportation.  \nI'd wager that if you did a \"popularity\" study, you'd find weirdly \"popular\" spots, which are literally just people going to whatever is available.   \n      \nYou're likely to get problematic results whenever you're trying to regress down to a single point, stripped of context.  \n\n>But also, how would you even TRY to go about solving this issue in the algorithm other than creating 2 different ones altogether?   \n     \nBy asking better questions, and then giving multiple answers based on different factors, and giving contextualized results.   \n    \nEverything has bias to it, from the questions we ask, to the data collection, to the data processing.     \nWhat we *can* do is offer insights which are open to investigation, rather than presenting things as absolute facts.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-02 00:50:32",
+                                                    "replies": []
+                                                },
+                                                {
+                                                    "author": "AiSard",
+                                                    "body": "Feels like in this case, the bias clearly exists in the people that created it. Because they assumed that both races would prefer the same barbershops. Possibly through white privilege. Ignorance is still a bias.\n\nAnd the answer also seems equally obvious. Improve your dataset. You don't want 2 separate AI, you want a single AI that knows the difference between white and black preferences (and hispanic, asian, male, female). Get it down to intersectionality levels of specific - pattern matching is explicitly the thing they're good at after all, so you do high quality tagging of data to feed in to the dataset.\n\nKeep reiterating for any unforeseen biases that crop up. Maybe yours in how you're structuring things. Maybe in the people doing the data tagging.\n\nWe've also seen cases where bias was introduced in to a dataset because xrays from a hospital that served underserved demographics were being recognized by the AI. And the AI was giving a whole lot of weight to the fact that you were coming from that hospital, rather than any details about if you were male/female, white/black, etc. Taking in systemic biases within the medical landscape in to the dataset.\n\nOnce you have an AI with a pristine dataset (or as close as you can get it), you can then decide on how the AI responds. If you want it to assume your race/gender, assume it as the midpoint between the races/genders, refuse to assume it at all and require you to input it, etc. By tweaking the default prompt, or the interface you have with the AI. Before it will spit out a barber rec.\n\nThe pathway is clear.\n\nIt just sounds like a lot of work, the more you dig in to it, for businesses that'd really prefer to cut corners and just profit off of the majority demographic.",
+                                                    "score": -6,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-01 14:26:16",
+                                                    "replies": [
+                                                        {
+                                                            "author": "OldBuns",
+                                                            "body": "Please read the essay I referenced if you want more information.\n\nI know this argument feels intuitive, and it's also pretty common, but it is highly dangerous.\n\nI won't be writing out what Noble outlines much more clearly and thoroughly than I ever could, but long story short is that *collecting data itself* is a biased process. In fact, it HAS to be a biased process in order to actually discern what information to collect in the first place.\n\n>Keep reiterating for any unforeseen biases that crop up.\n\n What kinds of existential mistakes are we willing to make in the hopes that they will be fixed though? Why would they be fixed in a system who's incentive is profit and not truth?",
+                                                            "score": 6,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-04-01 15:08:47",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "AiSard",
+                                                                    "body": "Of course data collection is a biased process. The structuring of the data is biased. And reality from which we collect the data is biased. The entire pipeline is rife with places for bias to enter.\n\nThe 'succinct' example you gave was immediately refuted, because the 'common intuitive argument' immediately creates a solution where you \"TRY to go about solving this issue\". In that it creates a methodology that, in general, moves the AI towards being less discriminatory and more applicable.\n\nThis is messy reality. We're already making the existential mistakes. AI is out of the bag. Bias is already a part of the world. The question should be, what kind of existential fixes are we willing to make to improve the state of the world. And sanitizing AI datasets to reduce harm seems like a pretty no-brainer? I don't understand why you would argue that it doesn't work on some fundamental level?\n\nThat the battle will be difficult, given the profit-incentives is clear. And there are partial ways to tackle that, whether its to rely on data-set pipelines that are structured explicitly to have incentives not to do with profit (a lot of the image AI datasets were initially put together by scientists pursuing truth for instance, though you could still argue the profit incentive of academia), or by top-down regulations specifically targeting sectors where AI could have detrimental effects by underserving at-risk demographics and raising the bar alongside non-AI regulations to ensure a continuously rising standard of care (though again, lobbying, special interests, and ignorance by politicians will get in the way).\n\nBut from a fundamental level. There is nothing stopping you from improving an AI that gives bad barber info due to a propensity of white people in the dataset. That there is a clear pathway for how you go about improving an AI, and that is through continuous curation of the dataset to ween out more and more measurable biases. That there is in fact, no existential danger to improving the AI. The existential danger was the emergence of the AI in the first place. And before that, the existential danger was the emergence of bias in humans in the first place. Improving AIs to have less bias *is not an existential risk*, it is the mitigation of said risk. In the same way that regulations around healthcare or OSHA are mitigations of the existential risks of our society. And that creating self-reinforcing loops to ensure this risk mitigation is effective, is the clear and ideal path forward.\n\nDo not confuse the fact that profit-seeking will pervert this mitigation effort, in to thinking that mitigation is impossible, or that somehow the efficiency of said mitigation can not be tested.\n\nIf there is an argument for why, fundamentally, an AI cannot be taught that black people prefer this barber, and white people prefer another (along with deeper more complex intersectional correlations) , when the strength of AI is specifically in pattern matching - you have so far failed to present one.\n\nAs I said. The pathway is clear.\n\nWhether we have the incentive as a society to actually travel down the path is up for grabs. But there is no question as to its feasibility. And especially none at the level of the barbershop example.",
+                                                                    "score": -2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-04-01 15:48:33",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "OldBuns",
+                                                                            "body": ">That there is in fact, no existential danger to improving the AI. The existential danger was the emergence of the AI in the first place.\n\nI'm sorry but this is just factually incorrect.\n\nThe alignment problem has not been solved. Not even close. The behaviour of a system is *fundamentally* unpredictable between training and application, and even more so with agentic AI.\n\nI gather you feel very strongly about this, and that's fine, but channel it into going a little deeper.\n\nYou didn't refute the example, you simply presented an incredibly simplistic solution, which Noble also \"refutes\" explicitly in her essay and shows why this is an uninformed view.\n\nThe example is not meant to be \"solved\", it's meant to demonstrate the principal that *even in these simple examples, the answer is not simple.*\n\nEither read the essay or don't, but don't type out another long ass response to me until you have, because you're literally just wasting your breath spouting the exact arguments she covers directly and thoroughly.",
+                                                                            "score": 2,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2025-04-01 15:58:20",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "yukonwanderer",
+                                                                                    "body": "Where's the essay? I've not been commenting, just reading. Can't seem to find it.",
+                                                                                    "score": 2,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2025-04-02 14:15:47",
+                                                                                    "replies": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "Victuz",
+                                            "body": "But even assuming that somehow you gather the data and \"tie off\" the bias. How do you ensure no different bias enters into the model? How do you ensure that the new data doesn't somehow \"poison\" the model making it less reliable?\n\nThe problem with black box solutions like these is that beyond extensive testing, and using other black boxes to test your own black box there isn't any good solution so far as I know.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-01 16:24:45",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "AuDHD-Polymath",
+                                    "body": "I mean it\u2019s actually rather straightforward to address. Model generalization is often not a priority when engineering AI, because doing it properly will make it seem like it gives marginally worse results (on the biased data you do have). \n\n* Get more data and be more careful about how you sample it\n* or weight the rarer samples (like black women) higher in training to balance out the importance\n* Or choose a loss function that penalizes this effect \n* Or remove data selectively until the training dataset is more balanced\n* various other training techniques like regularization and \u2018dropout\u2019\n\nI make medical computer vision models and things like robustness and reliability and generalization just aren\u2019t valued by the higher ups as much, because they cant easily show those things off.",
+                                    "score": 35,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 14:13:14",
+                                    "replies": [
+                                        {
+                                            "author": "F0sh",
+                                            "body": "And an important one: don't use models that are unreliable on certain populations within those populations.\n\nThis model is better than doctors on the population it was evaluated on. If you can use it on that population, it frees up doctors to spend more time diagnosing scans of the patients it doesn't work well on.\n\nYou're right, it shouldn't be hard to fix the model, and retraining once an architecture and data pipeline has been found is cheap in comparison to the initial research. But in the worst case, having a biased model is *still* better than having no model.",
+                                            "score": 12,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-01 18:49:38",
+                                            "replies": [
+                                                {
+                                                    "author": "vannak139",
+                                                    "body": "A lot of times, the population models do or don't work on isn't remotely clear. Many times, instrumentation settings or even bias in how data is labeling is done, or even crazier stuff like the sun being high up when images were taken, can drive bias as much or more as racial or population based bias.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-02 07:17:31",
+                                                    "replies": [
+                                                        {
+                                                            "author": "F0sh",
+                                                            "body": "A perfectly reasonable health policy is that any procedure (be it surgery, how to handle scans or, in this case, the use of AI) be evaluated on particular populations (men, women, specific minorities, etc) before widespread use. So that if the original studies didn't track subpopulation performance, it cannot be used without further study.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-04-02 09:53:56",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "00kyb",
+                                            "body": "It really is a shame the stark difference between the good things we can do with AI and what shareholders and executives want to do with AI",
+                                            "score": 6,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-01 18:11:53",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "WhipTheLlama",
+                                            "body": "AI will take into account a person's ethnicity and sex, and can be instructed that conditions can appear differently in each. So, AI will look at the patient sample with knowledge of ethnicity and sex, then use its training data with extra weighting on the data matching that person.",
+                                            "score": -3,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-01 16:33:35",
+                                            "replies": [
+                                                {
+                                                    "author": "AuDHD-Polymath",
+                                                    "body": "Extra weighting on the data that matches\u2026 what? Im *pretty* sure these models arent using their datasets during runtime. Thats generally not how AI works. It\u2019s not like it\u2019s actively checking against other data, so what matters is how it\u2019s originally trained on that data. \n\nSo I\u2019m not exactly sure what you\u2019re proposing. I don\u2019t think this would solve the issue. For example if the vision encoder just didnt properly encode clinically relevant features of the x-ray images for certain groups, because the presentation is different, preventing it from even being able to see the problem, just telling it to work around that shouldnt actually help\u2026",
+                                                    "score": 12,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-01 16:43:26",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "RobfromHB",
+                                    "body": "> How do you fix it? You can\u2019t train it with data you don\u2019t have\n\nNo, but you can balance training data or use something like SMOTE to correct for this. It's a fairly common problem and there are a lot of techniques to manage it.",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 14:02:59",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "VitaminPb",
+                                    "body": "The data most likely already exists but was not part of the training data.\n\nBut I think the most interesting observation you can make is that lung scans of women and black people apparently are different from those of white men. Is it how the scans are made or actual biological differences that are significant enough to affect the detection? Why would a black man\u2019s lung scan be significantly different from a white man? Women\u2019s breasts might be an issue, but a male?",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 14:17:27",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "SolarStarVanity",
+                                    "body": "If you think it's the medical community that minimizes it, and not women and minorities that choose not to volunteer for said research then you've done very little research volunteer gathering in your life.",
+                                    "score": -21,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 12:39:38",
+                                    "replies": [
+                                        {
+                                            "author": "redditonlygetsworse",
+                                            "body": "You know perfectly well that it is both. And people in those groups have very good historical reasons to be skeptical.",
+                                            "score": 28,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-01 12:41:50",
+                                            "replies": [
+                                                {
+                                                    "author": "SolarStarVanity",
+                                                    "body": "Regardless of their reasons, it's on them to change it. Historically, sure, there's been reluctance to include both groups, but said reluctance has been gone for years: researchers bend over backwards to increase representation in their data. At this point, the only people that can change said bias in data are those missing from it.",
+                                                    "score": -17,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-01 12:44:24",
+                                                    "replies": [
+                                                        {
+                                                            "author": "SkellySkeletor",
+                                                            "body": "I really cant stand the whole \u201cwell of course they\u2019re anti-science/medicine\u201d bit. Positive feedback loop of certain groups not participating in trials, scientists unable to invent data that\u2019s not coming in, and then using that very lack of data as further cause to not participate. What are they supposed to do?",
+                                                            "score": 17,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-04-01 12:47:55",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "dftba-ftw",
+                                                                    "body": "Woosh\n\n\nThey are not saying, scientist ignore minority data, results don't benifit minorities, therefore minorities don't participate.\n\n\nThey're saying that historically we've done [horrible things](https://en.wikipedia.org/wiki/Tuskegee_Syphilis_Study) to minorities, secretly, during medical studies.",
+                                                                    "score": 2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-04-01 14:01:23",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "SkellySkeletor",
+                                                                            "body": "You lack reading comprehension skills for someone saying \u201cwoosh\u201d. I\u2019m very aware that\u2019s what they meant, and was saying how it\u2019s a self feeding cycle, because minority groups don\u2019t participate out of historical fears, new studies lack data on minority specific biology/impacts, and then that lack of targeted data further fuels apprehension of taking care.",
+                                                                            "score": -2,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2025-04-01 14:43:08",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "dftba-ftw",
+                                                                                    "body": "That is not even close to what your comment implied...",
+                                                                                    "score": 0,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2025-04-01 14:44:52",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "SkellySkeletor",
+                                                                                            "body": "Go back to 9th grade then? Not my problem if you lack those basic language skills.",
+                                                                                            "score": 1,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2025-04-01 14:45:29",
+                                                                                            "replies": []
+                                                                                        },
+                                                                                        {
+                                                                                            "author": "SkellySkeletor",
+                                                                                            "body": "Ohhhhh, you\u2019re a big AI guy, makes sense you can\u2019t read anything without loaning out your thinking skills to a machine.",
+                                                                                            "score": -1,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2025-04-01 14:46:39",
+                                                                                            "replies": [
+                                                                                                {
+                                                                                                    "author": "dftba-ftw",
+                                                                                                    "body": "Lololol that's all you got? I push back once and you can't even make up a coherent argument, you only got one reply in you before you have to go straight to ad hominems?",
+                                                                                                    "score": -1,
+                                                                                                    "depth": 11,
+                                                                                                    "timestamp": "2025-04-01 14:49:28",
+                                                                                                    "replies": [
+                                                                                                        {
+                                                                                                            "author": "SkellySkeletor",
+                                                                                                            "body": "\u201cChat, give me a witty comeback to this thread.\u201d",
+                                                                                                            "score": 0,
+                                                                                                            "depth": 12,
+                                                                                                            "timestamp": "2025-04-01 14:52:25",
+                                                                                                            "replies": [
+                                                                                                                {
+                                                                                                                    "author": "dftba-ftw",
+                                                                                                                    "body": "Wow you have like, the thinnest skin of any redditor I've bumped into recently.",
+                                                                                                                    "score": 0,
+                                                                                                                    "depth": 13,
+                                                                                                                    "timestamp": "2025-04-01 14:55:45",
+                                                                                                                    "replies": [
+                                                                                                                        {
+                                                                                                                            "author": "SkellySkeletor",
+                                                                                                                            "body": "And you are the spitting image stereotype of \u201cthat guy\u201d that can\u2019t brush his teeth without Claude\u2019s step by step instructions!",
+                                                                                                                            "score": 0,
+                                                                                                                            "depth": 14,
+                                                                                                                            "timestamp": "2025-04-01 15:02:12",
+                                                                                                                            "replies": []
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "author": "SolarStarVanity",
+                                                                    "body": "I... think I know what you are saying? Could you clarify who each \"they\" refers to?",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-04-01 13:21:59",
+                                                                    "replies": []
+                                                                },
+                                                                {
+                                                                    "author": "ChefDeCuisinart",
+                                                                    "body": "This may sound crazy, but they could put women and minorities on their ethical review boards. But they tend to not do that.",
+                                                                    "score": 0,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-04-01 14:55:59",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "SkellySkeletor",
+                                                                            "body": "It\u2019s frustrating, because we\u2019ve come so far in science and equality of treatment, and yet we\u2019re still decades behind where we need to be. The next generation of scientists seems to finally be showing a better mix of backgrounds and contexts outside of, you know, rich white male, so maybe that ball will finally roll.",
+                                                                            "score": 2,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2025-04-01 15:00:32",
+                                                                            "replies": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "author": "ChefDeCuisinart",
+                                                            "body": "\"It's your own fault we can't help you, after we historically used and abused you!\"",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-04-01 14:57:37",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "prof_the_doom",
+                                            "body": "[I can't imagine why they don't choose to volunteer.](https://pmc.ncbi.nlm.nih.gov/articles/PMC4354806/)\n\nIt's a pretty long history of abuse and sidelining that you have to overcome, and there's a lot of people out there that aren't actually all that interested in overcoming it.",
+                                            "score": 15,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-01 12:57:45",
+                                            "replies": [
+                                                {
+                                                    "author": "randynumbergenerator",
+                                                    "body": "Also, even when women and minorities seek treatment, their symptoms are often minimized. At least in the US, there are still practicing medical professionals that think \"black people feel less pain,\" resulting in less access to pain relief for the same conditions.\n\n\nhttps://www.aamc.org/news/how-we-fail-black-patients-pain",
+                                                    "score": 17,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-01 13:04:55",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "magus678",
+                                            "body": "People are dumping on you, but as someone who has worked in the clinical trial space, you are correct. Women in particular simply are not interested in doing these trials, even when incentivized. \n\nPeople are quick to validate them in this but the most commonly cited reason has always been \"work life balance,\" nothing conspiratorial. Doing these trials is not fun, and women simply decline, like many other jobs, to participate.\n\nWhich is of course fine. But it is very strange for them decry the industry for their lack of inclusion. Doctors cannot design around data women refuse to give them.",
+                                            "score": 6,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-01 13:50:15",
+                                            "replies": [
+                                                {
+                                                    "author": "Potential_Being_7226",
+                                                    "body": "But this has not historically been true. Women have been historically omitted from clinical trials for several reasons. First, people thought that men could generalize to all people. Now we know that\u2019s not true. Second, researchers thought it was best to exclude women on the chance they might be pregnant, avoiding any catastrophes like that which happened with thalidomide. Researchers have also incorrectly thought that women\u2019s hormone fluctuations would lead to widely variable data, making it difficult to glean any meaningful information from the inclusion of women participants.\u00a0\n\nhttps://www.aamc.org/news/why-we-know-so-little-about-women-s-health\n\nhttps://www.ncbi.nlm.nih.gov/books/NBK236583/\n\nhttps://www.labiotech.eu/in-depth/women-clinical-trial/\n\nIn a clinical settings, women\u2019s health issues are *consistently* downplayed and a discounted. Women\u2019s pain is underestimated. Woman are assumed to be exaggerating. Health issues are often attributed to psychological issues by **practitioners who are not fully qualified to make psychological diagnoses.**\n\nWomen with families are also responsible for a greater proportion of domestic responsibilities than men. If women enroll in clinical trials, who picks up their \u201cthird shift?\u201d\u00a0\n\nhttps://www.icelandreview.com/news/tens-of-thousands-participate-in-womens-strike/\n\nYou say you have \u201cworked in the clinical trial space,\u201d but you seem not to understand all the historical and cultural factors that have limited women being included in clinical trials. You chalk it up to a lack of motivation, but you fail to recognize the situational factors that influence women\u2019s behavior in this context. That\u2019s called a ***fundamental attribution error.***\n\nhttps://en.m.wikipedia.org/wiki/Fundamental_attribution_error\n\nGiven your cursory understanding of the issues here, I genuinely hope you\u2019re not longer working in the \u201cclinical trial space.\u201d And if you are, then I hope you do some more reading and check your assumptions about the factors that *actually* limit and have limited women\u2019s inclusion in clinical trials.\u00a0",
+                                                    "score": 4,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-01 20:35:59",
+                                                    "replies": [
+                                                        {
+                                                            "author": "magus678",
+                                                            "body": ">You say you have \u201cworked in the clinical trial space,\u201d but you seem not to understand all the historical and cultural factors that have limited women being included in clinical trials.\n\nI am saying that the women, when asked why they are not interested, are not citing any of this. They are just saying they don't want to stay in a clinic for a week plus at a time for the compensation being offered. Perhaps you should talk to those women to better explain their motivations to them.",
+                                                            "score": 0,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-04-01 21:22:35",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "yukonwanderer",
+                                                                    "body": "What studies are you referring to?",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-04-02 14:19:25",
+                                                                    "replies": []
+                                                                },
+                                                                {
+                                                                    "author": "Potential_Being_7226",
+                                                                    "body": "*I\u2019m* saying there\u2019s more to it than not being \u201cinterested.\u201d There are a variety of reasons why people might not be \u201cinterested.\u201d\n\nAlso, the plural of anecdote is not data.\u00a0",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-04-02 07:02:30",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "magus678",
+                                                                            "body": ">*I\u2019m* saying there\u2019s more to it than not being \u201cinterested.\u201d\n\nNot according to the women the question is being posed to. \n\nI'm sure they are yearning for you explain their *actual* motivations to them though.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2025-04-02 13:14:09",
+                                                                            "replies": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "Mausel_Pausel",
+                                            "body": "Read this.\u00a0\n\nhttps://www.bmj.com/content/382/bmj.p2091",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-01 12:59:35",
+                                            "replies": [
+                                                {
+                                                    "author": "SolarStarVanity",
+                                                    "body": "Tell me why I should, and what I'll find there.",
+                                                    "score": 6,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-01 13:03:11",
+                                                    "replies": [
+                                                        {
+                                                            "author": "foamy_da_skwirrel",
+                                                            "body": "I'm sure you won't read this either but in case someone else scrolling through wants to, this was a really interesting read about why it's more complicated than just who is volunteering\n\n\nhttps://pmc.ncbi.nlm.nih.gov/articles/PMC3222419/#:~:text=Issues%20of%20trust%2C%20physician%20perceptions,participation%20in%20therapeutic%20clinical%20trials.",
+                                                            "score": 6,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-04-01 13:19:28",
+                                                            "replies": []
+                                                        },
+                                                        {
+                                                            "author": "Mausel_Pausel",
+                                                            "body": "Only read it if you want to find out why you are wrong. I don\u2019t expect you to.\u00a0",
+                                                            "score": -6,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-04-01 13:05:37",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "SolarStarVanity",
+                                                                    "body": "That didn't answer my question. I'm not going to blindly dedicate my time to reading a paper without knowing how it's relevant to the topic. You are right though, unless you actually extend enough respect to my time to explain what I'll find in the paper, I indeed won't spend the time to read it.",
+                                                                    "score": 7,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-04-01 13:23:22",
+                                                                    "replies": []
+                                                                },
+                                                                {
+                                                                    "author": "RobfromHB",
+                                                                    "body": "If you think someone is wrong at least give one sentence summary of what your source says. Don't be hand-wavy about it and then insult them. That's not helping anyone.",
+                                                                    "score": 4,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-04-01 13:58:10",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "Mausel_Pausel",
+                                                                            "body": "I didn\u2019t wave my hands, I provided a reference. It would literally take a single click to see that it is an article in the British Medical Journal, written by a respected scientist, that is directly germane to my comment. But if people would rather type a response instead of follow a link and read I don\u2019t care. It\u2019s easy enough to tell a learner from an ax grinder.\u00a0",
+                                                                            "score": 0,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2025-04-01 17:17:04",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "RobfromHB",
+                                                                                    "body": "> This [link](https://www.bmj.com/content/382/bmj.p2091) backs up the idea that even when attempting to get women and minorities there are still factors at play making that difficult. It may not be exclusively women or minorities choosing not to volunteer.\n\nThat's a less hand-wavy response that doesn't fill the world with more ax grinders. I read your article. Nothing about it says the author is a respected scientist and it certainly took more time to read the article than to write the summary above. I get the point you're making, but you aren't helping anyone responding that way and then doubling down by saying \"Only read it if you want to find out why you are wrong. I don\u2019t expect you to.\" That's a problematic way to respond to someone if you're trying to change their mind and I assume you are based on the comments.",
+                                                                                    "score": 2,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2025-04-01 17:58:29",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "Mausel_Pausel",
+                                                                                            "body": "Is it true that it\u2019s more difficult to get participation from minorities?\n\n\u201c\u00a0Overall, lack of willingness to participate is frequently given as the cause of poor representation of some populations in research. However, the evidence on this issue is clear: Asian, Black, Latinx Americans, and American Indian/Alaska Native individuals are no less likely than other groups, and in some cases are more likely, to participate in research if asked.\u201d\n\nhttps://www.ncbi.nlm.nih.gov/books/NBK584407/",
+                                                                                            "score": 1,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2025-04-01 18:54:17",
+                                                                                            "replies": []
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "vannak139",
+                            "body": "I think that you're a bit off on how you're reading this, tbh. Garbage in garbage out is a huge simplification, that's simply not true or at the very minimum, not that simple. Models such as \"Noise2Noise\" are pretty clear indications that you can train output of higher quality than input. In this model, they start with clean images, add noise, and then add even more noise. They have a model map More Noise to Less Noise, and get cleaner data than the level Less Noise was at. You throw noisy data in, and get clean data. Of course, good data is important but the GIGO rule isn't some hard fact we can't escape, its not conservation of energy or something. \n\n  \nOn the opposite side of things, even if you do identify some kind of bias issue, a subtype that isn't being classified correctly, this doesn't automatically lead you to a solution. The plan fact is, we have many strategies and sometimes, even often, they don't work at all. On the r/learnmachinelearning subreddit right now, there's a post asking if \"SMOTE ever works\". Smote is one such strategy for dealing with under-represented data, standing for Synthetic Minority Oversampling TEchnique. This isn't exactly the same problem being addressed, but its pretty clear we have many more ideas for how to address issues, than we have one-click solutions which actually work.   \n  \nIt is very common in ML to have \"an answer\" for some problem, and it just doesn't work. I don't think you actually need to be in the weeds of technical details to see this is the case.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-04-02 09:06:22",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Strict-Brick-5274",
+                    "body": "It's also a problem with data sets available.\n\nData that AI is trained on tends to be homogenised because data comes from rich places that tend to have homogeneous groups of people. \n\nThis is a nuanced issue.",
+                    "score": 37,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 12:42:56",
+                    "replies": [
+                        {
+                            "author": "WTFwhatthehell",
+                            "body": "If you go to figure 2 you'll see that the results from the radiologists and the AI largely overlap.\n\n\nThe radiologists had roughly the same shortfall in roughly the same groups.",
+                            "score": 20,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 13:45:19",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "justgetoffmylawn",
+                    "body": "Unfortunately, this is a problem with medicine in general.\n\nUp until not that long ago, research trials often used only men because women's pesky hormone system confused the study results. Therefore, the 'results' were only really valid for men, but were used for rx'ing to women as well.\n\nThis is a massive problem - with AI, our medical system (good luck being a women in her 50's suffering a heart attack), our justice system, etc.\n\nBias is not unique to AI, but hopefully we'll pay attention to it more than we do in humans.",
+                    "score": 18,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 13:52:44",
+                    "replies": []
+                },
+                {
+                    "author": "Optimoprimo",
+                    "body": "It's the massive problem with the current algorithms that we have started conflating with AI. The current models don't truly \"learn,\" they just identify patterns and replicate them. That foundational approach will forever cause them to be susceptible to replication error and will make them incapable of scaling to generally useful applications.",
+                    "score": 9,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 13:33:44",
+                    "replies": []
+                },
+                {
+                    "author": "never3nder_87",
+                    "body": "Hey look it's the X-Box Kinect phenomenon",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 13:11:57",
+                    "replies": []
+                },
+                {
+                    "author": "K340",
+                    "body": "Good thing the current U.S. administration hasn't effectively banned any research to address this kind of issue from receiving federal funds.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 16:33:08",
+                    "replies": []
+                },
+                {
+                    "author": "Icy_Fox_749",
+                    "body": "So it\u2019s not a problem with the AI itself but the person operating the AI. \n\nThe AI did exactly what it was prompted to do.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 12:27:04",
+                    "replies": [
+                        {
+                            "author": "InnuendoBot5001",
+                            "body": "Yeah, then corporations tell us that we can trust everything to AI, meanwhile black resumes get canned because the AI that reads them is built on racist data, because basically all the data america has is tainted by racial bias. These models spit out what we put in, and the world has too much hatred for us to expect anything else out of them.",
+                            "score": 31,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 12:35:59",
+                            "replies": []
+                        },
+                        {
+                            "author": "OldBuns",
+                            "body": "Yes. This is technically the case, but it comes with an important caveat.\n\nThe tendency of human bias to bleed into AI is almost unavoidable.\n\nI'm not saying it's bad or shouldn't be used or anything, but we need to be wary of treating this as \"just a tool\" that can be used for good or bad depending on the person using it, because this isn't a case where you can just fix it by being cognizant enough.\n\nBias is innate in us. The methods and procedures we use to test and train these things exacerbates those biases because they are built into the process as assumptions.\n\nIn addition to this, sometimes, even if you are intentionally addressing the biases, the bias comes FROM the algorithm itself.\n\n\"Algorithmic oppression\" by safiya noble is a fantastic read on the issue, and uses a very succinct example.\n\nImagine an algorithm or AI that's trained to put the most popular barbershops at the top of the list.\n\nIn a community of 80% white individuals and 20% black, there will NEVER be a case where a barbershop that caters to that specific hair type will ever appear on that algorithm. This inherently means less access to a specific service by a specific group of people.\n\nBut also, how would you even TRY to go about solving this issue in the algorithm other than creating 2 different ones altogether?\n\nWhat new problems might that cause?\n\nThis is obviously oversimplified, but it's a real life example of how bias can appear in these systems without that bias existing in the people that create it.",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 12:55:18",
+                            "replies": [
+                                {
+                                    "author": "vannak139",
+                                    "body": "Bias is not only innate in us, it's a critical in ML as well, critical for analysis itself. Just talking about getting rid of bias, or suggesting we just use two models, are kind of practical examples of this; you can't just \"take out\" the bias.\u00a0\n\n\nAnyways, the answer no one will like but is workable is that the model should look at your chest xray and tell you your race, or fat, or old, or in a high background radiation area. Think that would work better than a second, smaller model.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-02 07:27:51",
+                                    "replies": [
+                                        {
+                                            "author": "OldBuns",
+                                            "body": "Yes, I realize I absolutely butchered the example in hindsight.\n\nSee my other comments for clarification.\n\nYou're absolutely right, and this is something that not many people are able to accept it seems.\n\nThe alignment problem HAS NOT been solved, and in my opinion, that should be priority One.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-02 08:53:21",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "WTFwhatthehell",
+                                    "body": ">But also, how would you even TRY to go about solving this issue in the algorithm other than creating 2 different ones altogether?\n\n\nModern social media handles it by sorting people by what they like and matching them with similar people.\n\n\nDo you like [obscure thing] ? Well the system has found the 10 other people in the world that like it and shows you things they like.\n\n\n\u00a0Nothing needs universal popularity, you can be popular with one weird group and the algorithm will unite you with them.\n\n\nIt does however automatically put people in a media filter bubble with those most like them which can lead to some weird worldviews.\u00a0",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 13:51:47",
+                                    "replies": [
+                                        {
+                                            "author": "OldBuns",
+                                            "body": ">It does however automatically put people in a media filter bubble with those most like them which can lead to some weird worldviews.\u00a0\n\nExactly. We may try to shape our tools, but in turn they shape us.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-01 13:57:23",
+                                            "replies": [
+                                                {
+                                                    "author": "WTFwhatthehell",
+                                                    "body": "I vaguely remember an analysis looking at politicians who posted a lot on twitter and how likely they were to embrace fringe policies that flop at election time.\n\n\nPeople can be totally deluded about what'd actually popular with the public\u00a0 because only a tiny fraction of the public get shown their posts.",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-01 14:00:15",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "pocurious",
+                                    "body": ">Imagine an algorithm or AI that's trained to put the most popular barbershops at the top of the list.\n\nI'm sure that there are lots of problems with AI, but the fact that this is the go-to example doesn't inspire faith in its critics. Ironically, there are so many weird assumptions baked in here that it's hard to know where to start. \n\nSomehow, people manage to find Chinese restaurants and children's clothing stores, even in cities where Chinese people and children are a minority...",
+                                    "score": -2,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 14:12:33",
+                                    "replies": [
+                                        {
+                                            "author": "OldBuns",
+                                            "body": ">Ironically, there are so many weird assumptions baked in here that it's hard to know where to start. \n\nFine but I was very explicit about that. I obviously cannot provide an example that's nuanced on the level of real life without writing you a dissertation.\n\nIf you think my argument was weak, then it is clearly laid out and expanded upon in depth in the book/essay I referenced.\n\n>Somehow, people manage to find Chinese restaurants and children's clothing stores, even in cities where Chinese people and children are a minority...\n\nYes I'm aware... I didn't say this is something that is *used* in real life, it's a simple example that is meant to demonstrate the principle, and how adding complexity and more variables makes this *more* likely to happen, not less.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-01 15:01:49",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "This isn't a meaningful argument against AI. It's an argument against researchers using one model and making bold assumptions about it's usefulness.  \n  \nThey can likely create a second model for women or black individuals now that they know the issue.",
+                    "score": -1,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 12:30:28",
+                    "replies": [
+                        {
+                            "author": "prof_the_doom",
+                            "body": "It's an argument for more regulation, and to make sure that we never stop verifying.  \n\nImagine somebody didn't do this study, and we got to a point where for costs/insurance reasons, everyone just stopped using actual x-ray technicians and just did whatever the AI told them to?",
+                            "score": 31,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 12:33:51",
+                            "replies": [
+                                {
+                                    "author": "aedes",
+                                    "body": "This is why proper studies of diagnostic tests of any variety in medicine require multiple stages of study in multiple patient cohorts and settings.\u00a0\n\nThe whole process of clinical validation (not just developing the test) can easily take 5-10y - it takes time to enroll patients into a study, wait for the outcomes to happen, etc.\n\nIt\u2019s one reason why anyone who says AI will be widespread in clinical medicine within less than 5y has no idea what they\u2019re talking about.\u00a0",
+                                    "score": 11,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 13:04:15",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Anxious-Tadpole-2745",
+                            "body": "Its an argument against AI. We clearly are oversold on how it works and implementing it is difficult because we don't understand it. It means we shouldn't adopt it without knowing all the possible issues.\n\n\nThe fact that they keeping coming out with new models is a case against using them because there are so many untested unkowns.\u00a0\n\n\nIts like if we had iOS 1 then iOS 5 then next year its a Linux Ubuntu distro. The shift is too great to reliably implement",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 13:43:40",
+                            "replies": [
+                                {
+                                    "author": "SuppaDumDum",
+                                    "body": "If you had a magic box into which you could insert a picture of a person's face, that instantly tests whether a person has cancer, but only 20% of positives are true, and only 20% of carriers are positive. The box is magic, ie you \"dont know all the possible issues\". And the box is wrong more often than it's right. Is that a useful machine that we should definitely use as soon as possible? To me the answer is yes, it's arguably immoral not to use it. If a consenting person gets flagged, they should go get checked by a doctor.",
+                                    "score": -6,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 19:28:24",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "FoghornFarts",
+                    "body": "This is a massive problem with science. Far too many scientists see women and non-whites as \"unnecessary variables\". The \"default white man\" is pervasive across every area of study.",
+                    "score": -1,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 13:27:29",
+                    "replies": [
+                        {
+                            "author": "oviforconnsmythe",
+                            "body": "What a quintessentially 'reddit' take on things....The effectiveness of an predictive AI model is as good as the data set that its trained on.  The availability of data, especially medical data is tricky due to several factors. In this case, the Stanford team which built the chest Xray model (cheXzero) used a dataset of \\~400000 chest xray images to train the model, but it seems only 666 (0.16%) of those images actually contained both diagnostic (from a radiologist) and demographic (race, age, sex) data. \n\nIn the UWash [study ](https://www.science.org/doi/10.1126/sciadv.adq0305#sec-4)cited in this news article, their findings of AI bias are based on these 666 images which contained the necessary metadata. Its not an issue with the scientists from the Stanford [study ](https://www.nature.com/articles/s41551-022-00936-9#Sec4)\\- the more data available for training, the more robust the model will be. Given the limited metadata they had to work with, taking into account demographic biases is outside the scope of their project and they used the full dataset. Its also worth noting (*only because you mention this as an issue*) that only two of the six authors on the Stanford team are white and one of them is female (the rest appear of east/south Asian origin). The UWash team highlighted an important issue with the model that demonstrates major pitfalls in the Stanford model which need to be addressed - but I think the baseless claim that the Stanford team is racist/sexist is very unfair, and its even more unfair to generalize it across scientists. \n\nIts also worth pointing out that the UWash study itself has \"sampling bias\" (not with malicious intent of course though; they had the same limitations as the Stanford team). Their model is trained on only the 666 images with demographic data - no one knows the demographics of the other \\~400000 images used. Its difficult to tell whether their findings hold true across the entire data set simply because the necessary metadata doesn't exist. This is the core of the issue here:\n\nUsing chest Xray images as an example, medical privacy laws and patient consent can make it difficult to publish these kinds of data to public databases. And that's just the images, nevermind the demographic data. Add that to other variables that need to be controlled (eg quality of the Xray, reliability of patient health records, agreements between database administration and clinical teams etc), its tricky to get a large enough data set to robustly train a ML model while accounting for things like demographics. I'm of the opinion that consent for release of medical data should be a prerequisite and obligation for access to health care (assuming data security is robust and discrete patient identifiers are removed). Likewise, hospitals/clinics should be obliged to upload their data in free-publicly available datasets.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 16:47:05",
+                            "replies": [
+                                {
+                                    "author": "FoghornFarts",
+                                    "body": "This isn't a \"Reddit\" take. Go read Invisible Women. Maybe you're part of the problem.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 19:48:57",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Days_End",
+                            "body": "I mean that's just the fault of our regulations. It's so expensive to run studies that cofounding variables are never worth the risk to any company.\n\nIt also doesn't help that people really like to burry their head in the sand and pretend \"races\" aren't different enough to have very different interactions with the same drug.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-04-02 00:41:35",
+                            "replies": []
+                        },
+                        {
+                            "author": "plot_hatchery",
+                            "body": "Most of my peers in my life have been very left leaning. The politics in your echo chamber is causing you more suffering than you realize. Please try to get out of it and attain a more balanced view. You'll be happier and have a more clear picture of the world.",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 17:20:15",
+                            "replies": [
+                                {
+                                    "author": "FoghornFarts",
+                                    "body": "Go read Invisible Women and then tell me that again with a straight face.",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 19:47:36",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "not_today_thank",
+                    "body": "> trains it to literally discriminate just like the people who made it.\n\nAfter reading the article that might be exactly what they need to do, build discrimination (as in the ability or power to see or make fine distinctions) into the model so to speak.  Reading the chest x-ray of an 80 year old white man compared to a 30 year black woman with the same model is probably not going to yield the best results.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 16:58:01",
+                    "replies": []
+                },
+                {
+                    "author": "Red_Carrot",
+                    "body": "The upside to discovering its error is to either only use it on the sunset it is good for while giving it additional training for others areas or if that will not work, start from scratch.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 17:52:35",
+                    "replies": []
+                },
+                {
+                    "author": "Ryslin",
+                    "body": "That's not really a problem with AI, though. It's a problem with our methods of training AI. \n\nWe've had a very similar issue with automatic hand dryers. Some of the earlier hand dryers worked based on light reflectivity. Guess what - white people have more reflective skin. It refused to dry the hands of people with a critical threshold of melanin in their skin. If they tested with non-white people, they would have realized that their thresholds needed adjustment. We're dealing with something similar here. With all the attention put on racism and equity, we still keep forgetting to implement diversity in our product design.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 20:57:55",
+                    "replies": []
+                },
+                {
+                    "author": "Bakoro",
+                    "body": "It's a problem across a lot of technology and science.    \n    \nEssentially every image recognition/analysis tool or toy I've ever encountered has had significant issues with darker skinned people.     \n      \nA disproportionate amount of what we know about humans is mostly from studying European descendants, and men.    \nEven when it comes or animals, many studies have been limited to males, to reduce complexity and variance.  \n   \nWe really need high quality, diverse public data sets. This is something the government should be funding. AI isn't going away, we need to find ways to make it work for everyone.   \nMedical diagnostics, of all things, should not be exclusively in private hands.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 23:55:46",
+                    "replies": [
+                        {
+                            "author": "vannak139",
+                            "body": "As someone who does do AI research in medical stuff,this is actually a pretty good idea. They're one of the few who could actually do it without getting hippa'd",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-04-02 07:32:57",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "WhiteRaven42",
+                    "body": "I know of the issue in general but I'm pretty surprised race affects their reading of x-rays of all things.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-02 18:55:42",
+                    "replies": []
+                },
+                {
+                    "author": "TheKabbageMan",
+                    "body": "This isn\u2019t really an \u201cAI\u201d problem. What you are describing is *human error*",
+                    "score": -1,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 13:40:57",
+                    "replies": []
+                },
+                {
+                    "author": "hellschatt",
+                    "body": "I didn't read the study, but usually, this problem occurs due to lack of data from certain groups of people.\n\nI assume there is simply less data available from black women, and this is usually due to the history of people of African origin, as well as their current living conditions.\n\nWe simply have less data available since these people don't visit (for many reasons like poverty) the doctor as often, or since the majority of these people live in countries where we don't have easy ways of collecting data from them.",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 16:52:18",
+                    "replies": []
+                },
+                {
+                    "author": "jen1980",
+                    "body": "Because they correctly trained it on the most common cases first. Of course there's always going to be outliers.",
+                    "score": -6,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 14:37:42",
+                    "replies": [
+                        {
+                            "author": "dak-sm",
+                            "body": "Women and blacks are outliers?",
+                            "score": 7,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 15:40:44",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Risk_E_Biscuits",
+            "body": "It's clear that a lot of people don't understand how AI works. AI is only as good as its training, and most AI currently takes a LOT of human input for training. If an AI is fed poor data, then it will simply replicate that poor data. We've known our medical data has been biased against minority groups for many years (both inadvertently and intentionally).\n\nThere are also different types of AI. There are AI that analyze speech patterns specifically, or images specifically, or even parallel data sets specifically. Ask a speech pattern AI to give you a picture and you'll get a strange result. Ask an image recognizing AI to write you a poem, it will come out all sorts of weird. \n\nThe big problem is most people think AI is all just like ChatGPT. Those types of AI are like a \"Swiss army knife\", great for a variety of uses, but poor for specific uses. You wouldn't ask a surgeon to do an operation with a \"Swiss army knife\". So the AI model used really does matter, and it will take some time to get the proper models implemented in each industry.\n\nSince studies like these are done with AI trained on medical data, it is obvious that it will have bias since most medical data has bias. The key here is to improve the medical industry to provide more accurate data for minority groups.",
+            "score": 108,
+            "depth": 0,
+            "timestamp": "2025-04-01 14:14:07",
+            "replies": [
+                {
+                    "author": "314159265358979326",
+                    "body": "Yeah, the old \"garbage in, garbage out\" is still perfectly relevant. The algorithm isn't the problem here - it can't choose to discriminate - it's the human-generated training data, which is a much more fundamental, much harder to solve issue.",
+                    "score": 36,
+                    "depth": 1,
+                    "timestamp": "2025-04-02 04:37:52",
+                    "replies": []
+                },
+                {
+                    "author": "pittaxx",
+                    "body": "You got the general idea, but miss the mark on different types of AI.\n\nLanguage model AI cannot generate images at all, and image generation AI cannot generate poems. It's not the question of quality - it's just invalid request, if AI is not trained for this kind of task. \n\nGPT for example is incapable of comprehending or generating images - it calls another AI (DALE) for those tasks, and relays your inductions in it's own words. \n\nYou are essentially asking a blind person to create/edit image, for it to simply relay the instructions to a deaf painter. And results are exactly what you would expect.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2025-04-04 13:32:36",
+                    "replies": [
+                        {
+                            "author": "Risk_E_Biscuits",
+                            "body": "You are correct, I didn't go that deep because it seemed too complicated to describe here. However you did so very well. Thanks!",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-04-04 13:38:43",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "colacolette",
+                    "body": "Exactly. When people talk about \"racist AI\" they don't mean it is literally racist, they mean the data it is being fed is racially biased.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-02 22:18:22",
+                    "replies": []
+                },
+                {
+                    "author": "vannak139",
+                    "body": "This isn't a technical limit of ai/ml, and in many ways it's wrong. Certain models such as noise2noise specifically push against this idea of garbage in garbage out. In that paper they show you can very easily clean noisy data, without clean examples.\u00a0\n\n\nIt's not magic, and there are limits. But this hard line youre imagining has lots of caveats and research making it more wrong every day.",
+                    "score": -2,
+                    "depth": 1,
+                    "timestamp": "2025-04-02 07:40:15",
+                    "replies": [
+                        {
+                            "author": "IsNotAnOstrich",
+                            "body": "This isn't about noisy data though, it's about bad data or a lack of data.",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2025-04-02 23:58:08",
+                            "replies": [
+                                {
+                                    "author": "vannak139",
+                                    "body": "Yes, it's called an example.",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-03 08:19:47",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Spaghett8",
+            "body": "Yeah, unfortunately, tech development faces a lot of biases. At the bottom is most often black women. \n\nThe same happened with facial recognition. While white men had an error recognition rate of 1%, black women had an error rate of around 35%. From a 1/100 mistake to a 35/100. \n\nLack of inclusivity is a well known and common algorithmic bias. It\u2019s quite sad that even large companies and heavily funded studies constantly repeat it.",
+            "score": 457,
+            "depth": 0,
+            "timestamp": "2025-04-01 13:00:17",
+            "replies": [
+                {
+                    "author": "CTRexPope",
+                    "body": "It\u2019s not just an AI problem, it\u2019s a general science problem. For example, they\u2019ve shown that the ability to [taste bitterness varies by race](https://pmc.ncbi.nlm.nih.gov/articles/PMC1397914/), and can effect how effective bitter tastes in like children\u2019s medicine are.",
+                    "score": 35,
+                    "depth": 1,
+                    "timestamp": "2025-04-02 04:35:30",
+                    "replies": []
+                },
+                {
+                    "author": "The_ApolloAffair",
+                    "body": "While that\u2019s probably true to some extent, there are other unintentional factors. Cameras simply aren\u2019t as good at picking up details on a darker face, leading to worse facial recognition results. Plus, fewer variations in hair/eye color doesn\u2019t help.",
+                    "score": 63,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 18:35:10",
+                    "replies": [
+                        {
+                            "author": "Ostey82",
+                            "body": "Ok so this I can totally understand when we are talking about a normal camera with varying lights etc etc but an x-ray?\n\nWhy does it happen with the x-ray, does the disease actually look different in a black person v a white person? I would have thought that lung cancer is lung cancer and if you got it looks the same.",
+                            "score": 30,
+                            "depth": 2,
+                            "timestamp": "2025-04-02 06:24:46",
+                            "replies": [
+                                {
+                                    "author": "montegue144",
+                                    "body": "Wait... How can you even tell if someone's black or white on an X-ray... How does the machine know?",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-03 00:40:38",
+                                    "replies": [
+                                        {
+                                            "author": "Ostey82",
+                                            "body": "That's what I mean the x-ray won't know the colour of the skin so unless cancer looks different in different races and sexes, which I don't think it would, how does the AI get it wrong",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-03 02:44:18",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "X-Aceris-X",
+                            "body": "This is some really wonderful research on the subject, showing that the current 10-point Monk Scale for skin tones is not good enough for ensuring camera systems capture diverse skin tones. \n\nImproving Image Equity: Representing diverse skin tones in photographic test charts for digital camera characterization \n\nhttps://www.imatest.com/2025/03/improving-image-equity-representing-diverse-skin-tones-in-photographic-test-charts-for-digital-camera-characterization/?trk=feed-detail_main-feed-card_reshare_feed-article-content",
+                            "score": 38,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 23:12:52",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Anxious-Tadpole-2745",
+                    "body": "Black women are often catregorized as male by white humans in the real world at the same rate. That makes sense.",
+                    "score": 71,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 13:48:06",
+                    "replies": [
+                        {
+                            "author": "RobinsEggViolet",
+                            "body": "Somebody once called me racist for pointing this out. As if acknowledging bias means you're in favor of it? So weird.",
+                            "score": 60,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 16:00:10",
+                            "replies": [
+                                {
+                                    "author": "cutegolpnik",
+                                    "body": "Maybe you said it in a tone deaf way?",
+                                    "score": -4,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-02 01:26:18",
+                                    "replies": [
+                                        {
+                                            "author": "RobinsEggViolet",
+                                            "body": "Nah, the person I was talking to was transphobic, so I'm not giving them the benefit of the doubt there.",
+                                            "score": 10,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-02 07:07:14",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "kopecm13",
+                    "body": "The problem is that it's absolutely trade off you can make it way more accurate for black women but it will make the accuracy for white people a bit worse maybe only by 10%. But is it worth it for markets like Germany with less than 5% black people?",
+                    "score": -61,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 14:48:08",
+                    "replies": [
+                        {
+                            "author": "KanishkT123",
+                            "body": "This is absolutely not true. You can absolutely have models with better accuracy across demographics.\u00a0\n\n\nThis is simply an issue of datasets being biased and the actual teams themselves being fairly heavily skewed in one direction.\n\n\nAlso yes, it's worth the tradeoff because these products are rarely ever built for one geography. They're normally a single model that gets repackaged and incorporated into products. The same model used in Germany is probably going to be used in Ghana and Malaysia and India.\u00a0",
+                            "score": 68,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 16:02:26",
+                            "replies": []
+                        },
+                        {
+                            "author": "gmes78",
+                            "body": "Train two models and switch between them as needed.",
+                            "score": 15,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 14:53:35",
+                            "replies": [
+                                {
+                                    "author": "Commemorative-Banana",
+                                    "body": "This is not even necessary. A major benefit of Machine Learning is that it can easily identify \u201cclusters\u201d of statistically similar data points. You only need to train one model (with a sufficiently comprehensive and large training dataset), and then that single model would automatically handle demographic differences.\n\nThe reason all of these medical ML projects do poorly for minorities is a lack of good data. The data is biased, the model doesn\u2019t know any better.\n\nIn my experience, most academic papers of new ML projects use a simplified, low-quality dataset because that\u2019s what is cheapest/fastest/easiest to access, and the ML scientists are just publishing a proof of concept. All of these papers SHOULD have a disclaimer towards the end stating something like \u201cFor this model to be employed in real-world medical services, it must be trained on data comprehensive of the entire population. Therefore, further data collection is necessary.\u201d\n\nSometimes, like if you\u2019re studying something niche, that data might be legitimately hard to come by because the population is so small. But for larger minority groups like \u201cblack women\u201d, there are additional barriers such as the systemic racism that leads to black people rightfully having a historical distrust of healthcare and being less likely to respond to surveys, or people more likely to struggle financially again being less likely to have time to respond to volunteer surveys, or people who see doctors with fewer resources being less likely to get \u201cunnecessary\u201d imaging. \n\nIt takes effort to collect good data and people are most willing to put in that effort on the issues that impact them closely, which is why DEI hiring and grant funding are important in medicine and science. Science is all about incremental improvements, and the first paper is never the last paper.",
+                                    "score": 19,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 18:14:50",
+                                    "replies": [
+                                        {
+                                            "author": "yukonwanderer",
+                                            "body": "Women have largely been ignored, and continue to be ignored, in medical research on the whole. It's not even just minority groups, it's half the population.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-02 14:04:43",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Levofloxacine",
+            "body": "I remember telling this dude that many modern technologies have a bias agaisnt people of colour. I didn\u2019t even say it was due to sinister reasons and done on purpose. He replied calling me a \u00ab\u00a0woke\u00a0\u00bb.\n\nInteresting article. Thank you.\n\nIt\u2019s somewhat dire because, as a black woman and a MD as well, I would have never been able to tell the patients race by his chest xray alone. Quite crazy what AI is capable of now. \n\nIt\u2019s great that this research took the time to think about biases. Lets hope they keep pushing to dismantle them.",
+            "score": 357,
+            "depth": 0,
+            "timestamp": "2025-04-01 13:25:55",
+            "replies": [
+                {
+                    "author": "Pyrimidine10er",
+                    "body": "N=1 here, and also an MD- but a physician scientist working in the AI space. I\u2019m actually not surprised there was a performance degradation for  women (which can have some plausible factors that need consideration like physical size differences + a shadow from breast tissue, etc) but am surprised about the drop in accuracy for black people. \n\nFor all of the models I\u2019ve developed I\u2019ve also required demographic and other factor breakdowns (age, race, ethnicity, geographic location, sex/gender, different weights, BMI, presence of DM, HTN, other comorbidities, month and year of when a given test occurred, etc) and also build combos: obese white women, obese white man, obese black women, etc. I also think about the devices- the machines may be different brands. Did all of our black folks only get their X-rays from a Siemens machine that\u2019s 40 yrs old and thus more likely to be used at the safety net hospital? I\u2019ve gotten pushback about it being too much from some academic contributors, but this finding provides more motivation to make sure we don\u2019t inadvertently discriminate. There sometimes are sample size limitations after applying 5 layers of filters, but I\u2019d rather do our best to understand the impact of these models across a broad as possible swath of people. I say all this to give you hope that at least some of us take this problem serious and are actively thinking about how to stop health disparities.\n\nThis is also why the work in AI explainability is starting to gain more traction. What is the model using for its prediction can shine a light into why there\u2019s bias. But with the current neural networks, and LLMs the ability to peak into the black box is limited. As the explainability research progresses we may see some really interesting physiology differences that are not perceptible to standard human senses (the AI work in ECGs over the last few yrs has been crazy). Or we find that the AI is focusing on things that it really should not- like the L or R side sticker indicator magnet thing on a CXR.",
+                    "score": 67,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 21:59:27",
+                    "replies": [
+                        {
+                            "author": "ASpaceOstrich",
+                            "body": "The fact you got pushback is wild. These are supposed to be scientists and they aren't trying to eliminate variables from the tests? Are they insane?",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2025-04-02 14:05:40",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "hoofie242",
+                    "body": "Yeah a lot of white people have a fantasy view of how they think the world works and hate when people pop their ignorance bubble and react hostile .",
+                    "score": 111,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 14:21:55",
+                    "replies": [
+                        {
+                            "author": "JazzyG17",
+                            "body": "I still remember white people getting pissed off and calling bandaids woke when they came out with the other colors. The original is literally their skin color so they never had to worry about it being literally highlighted on their bodies",
+                            "score": 90,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 14:24:45",
+                            "replies": []
+                        },
+                        {
+                            "author": "proboscisjoe",
+                            "body": "I have literwlly been told the words \u201cI don\u2019t believe you\u201d when I describe an experience I had to someone and they could not conceive in their naive, privileged mind how it was possible for what happened to me to happen to anyone.\n\nI pointed out that the war in Ukraine was happening. How is that possible? They still didn\u2019t accept it.\n\nSince then I have started telling white people \u201cI\u2019m not going to explain that to you. It\u2019s not worth the effort.\u201d",
+                            "score": 12,
+                            "depth": 2,
+                            "timestamp": "2025-04-02 05:58:06",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "anomnib",
+                    "body": "The underlying study shows the plots for how well it predicts demographics. It is crazy good. This is also a danger for potentially outing trans people. \n\nI wonder how much of this can be fixed by training models that place the same value of performance accuracy across demographic groups.\n\nThat\u2019s what I was experimenting with when I worked in tech.",
+                    "score": 10,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 18:22:21",
+                    "replies": [
+                        {
+                            "author": "caltheon",
+                            "body": "medically you kind of need to know if someone is trans though.  And socially, hiding that is deceptive.",
+                            "score": -15,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 22:16:32",
+                            "replies": [
+                                {
+                                    "author": "IsamuLi",
+                                    "body": "\"And socially, hiding that is deceptive.\"\n\n\nWhy?",
+                                    "score": 6,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 23:08:53",
+                                    "replies": [
+                                        {
+                                            "author": "Epiccure93",
+                                            "body": "Only in dating. Otherwise it doesn\u2019t matter",
+                                            "score": 5,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-01 23:21:29",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "BalladofBadBeard",
+                                    "body": "We all hide all kinds of stuff. It's called privacy. *Nobody* owes you all the details about their bodies, that's such a creepy take.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-02 08:10:17",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Agasthenes",
+                    "body": "Probably because of your wording. Modern technology doesn't discriminate. That's something only humans do.\n\nIt was just trained on incomplete data. Which is a valid approach when you try to get something to work at all.\n\nThe only problem happens when it is then sold as a finished or complete product and no further work is done to complete it.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2025-04-02 09:47:22",
+                    "replies": []
+                },
+                {
+                    "author": "caltheon",
+                    "body": "It's funny how there is a movement to disregard race in medicine because \"racism is a social construct not a medical one\" where things like this show that is false.  Hell, there is a paper dedicated to specifically x-rays between whites and blacks that is pushing that theory https://www.nejm.org/doi/full/10.1056/NEJMms2206281",
+                    "score": -7,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 22:20:27",
+                    "replies": [
+                        {
+                            "author": "IndividualEye1803",
+                            "body": "Racism is a social construct and ai is *trained on this*.  Please get this right - racism was made as a social cosntruct for division. There is nothing medically different between humans, but there are differences in denisovans and neanderthals.\n\nhttps://www.reddit.com/r/science/s/pZx6CJ7fqw\n\nThis thread is good about the biases and how AI is trained on bias.  \n\nRacism is a social construct.",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2025-04-02 04:54:48",
+                            "replies": [
+                                {
+                                    "author": "Sly1969",
+                                    "body": ">There is nothing medically different between humans\n\nSickle cell anaemia. Now get back in your box.",
+                                    "score": -2,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-02 05:03:55",
+                                    "replies": [
+                                        {
+                                            "author": "IndividualEye1803",
+                                            "body": "Yes\u2026[white humans can also get that](https://www.healthline.com/health/can-a-white-person-have-sickle-cell-anemia#who-gets-sca).  \n\n\u201cit\u2019s more common in people whose ancestors come from parts of the world where malaria is or was frequent. That\u2019s because SCT may help protect against malaria.\u201d\n\nYou know what.  Waste of time.  Not going to argue science with someone who obviously doesnt read it / still thinks race isnt a social construct even though science and the person who made up race says its made up.",
+                                            "score": -3,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-02 05:08:15",
+                                            "replies": [
+                                                {
+                                                    "author": "RoseDemiG",
+                                                    "body": "We are all \u201chuman\u201d if that is what you mean by \u201cthe same\u201d, but the factors of society that enforce oppression and racism do cause Black & brown people to have totally different, more intensified medical needs. I guess they are saying you are \u201cwrong\u201d bc yes POC do have more disease & health issues. \n\nI think there needs to be more research. Because many black & Native American people I know stand firm that we are chemically different from white people to the DNA. Melanin is the main difference. So\u2026. I dunno.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-02 11:11:08",
+                                                    "replies": [
+                                                        {
+                                                            "author": "IndividualEye1803",
+                                                            "body": "Nobody is reading the link to the thread i provided and ignoring how i said *AI is trained on bias and that should be eliminated.*\n\nReading the links and the first words would eliminate so many responses.  Or at least respond with that information presented. What u typed is exactly right and if they hadnt responded with sickle cell anemia, which again white people do get, then they wouldnt come off unscientific.\n\nNot arguing science.  Yes its apparent i mean we are all human- no quotes necessary. Race is a social construct.   \n\nCancer affects white and black people the same, since we are all human, and would affect the same people who all live near a toxic dump site.  Now, Due to our social constructs, determines whether its more white or black people who live there. Just like 9/11 cancer survivors fund doesnt discriminate, and going to the carnage made you have a higher chance of cancer, not what skin color you had. \n\nAI needs to eliminate our social bias so it can better focus on health.  Thats it.  Idk why thats being debated.\n\nJust read the thread.  Theres nothing to argue or prove.",
+                                                            "score": 3,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-04-02 11:46:53",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "author": "vannak139",
+                                                    "body": "Bro you're just wrong, no need to make a hallmark speech about it",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-02 07:36:42",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Alpha_Zerg",
+                                    "body": "This post that we're currently in shows how AI can pick up on physical differences between races, but carry on with your social agenda that's actively harmful to people of colour who need accurate diagnoses I guess.",
+                                    "score": -2,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-02 05:24:36",
+                                    "replies": [
+                                        {
+                                            "author": "IndividualEye1803",
+                                            "body": "Click the link and read that thread for the explanation on how AI is trained. \n\nIm not arguing science against people who actively deny it / think its \u201cwoke\u201d and they want to stay sleep / think its a social agenda.  Its literally just science and its already known why the guy came up with race.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-02 05:26:25",
+                                            "replies": [
+                                                {
+                                                    "author": "Alpha_Zerg",
+                                                    "body": "The point\n\n\nYour head\n\nThe AI is literally getting caught up on *physical* differences between race, the other guy rightly pointed out that trying to eliminate race from medical considerations is a stupid idea built upon trying to combat racism but at the cost of worsening medical progress for people of colour.",
+                                                    "score": -2,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-02 05:33:14",
+                                                    "replies": [
+                                                        {
+                                                            "author": "caltheon",
+                                                            "body": "I was afraid of the knee jerk reactions of reddit, but figured it was worth pointing it out anyways.  At least you understand what I was trying to say.",
+                                                            "score": 0,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-04-02 18:30:11",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "TheRealBobbyJones",
+            "body": "I think the bigger thing to take away is that difference between black people and white people is big enough to throw off a model designed to generalize(to an extent). An enlarged heart should be an enlarged heart. Presumably the model was not fed racial or gender information during training. As such they probably compared to the general average rather than the average per grouping. They should redo the original training but feed in demographic data with the scan.\u00a0\n\n\nEdit: or a fine-tuning with the demographic data.\u00a0\n\n\nEdit2: perhaps instead of demographic data they could use genetic information. But the variance in heart size or other such data is probably influenced by both lifestyle and genetics. Idk what would be the best data to add in to correct for this sort of thing. Just racial data would likely miss certain things. For example if a white guy who identifies as white was 1/64th native would that 1/64 be enough to throw off AI diagnostics? If so how could we correct for that? Most people probably wouldn't even know their ancestry to such a degree. Or alternatively if someone was malnourished growing up but is otherwise healthy today. Would AI diagnostics throw a false positive?\u00a0",
+            "score": 107,
+            "depth": 0,
+            "timestamp": "2025-04-01 16:36:31",
+            "replies": [
+                {
+                    "author": "Chicken_Water",
+                    "body": "Curious if this implies black women typically have smaller hearts, whereas an enlarged heart for them is typical size for white men. This shouldn't be a very difficult issue to resolve, we just need more training data for medical models.",
+                    "score": 28,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 21:37:46",
+                    "replies": []
+                },
+                {
+                    "author": "JimiDarkMoon",
+                    "body": "This has been known for a long time in pharmaceutical therapy treatments, all of our available data was based on Caucasian men. Imagine medication not working right on a woman, or elderly Asian male because of who was only allowed in the trial phase. \n\nThe women in your lives are the most susceptible to medical errors based on the gender bias alone, not being heard. \n\nThis absolutely does not surprise me.",
+                    "score": 72,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 20:30:52",
+                    "replies": [
+                        {
+                            "author": "Roy4Pris",
+                            "body": "Roger that. Also, the number of white men who have ever received chest x-rays will be orders of magnitude greater than black women, so the data set was skewed from the get-go. Pretty disappointing if that wasn\u2019t factored in.",
+                            "score": 14,
+                            "depth": 2,
+                            "timestamp": "2025-04-02 00:33:28",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Days_End",
+                    "body": "Races are both shockingly similar and surprisingly different at the same time.",
+                    "score": 12,
+                    "depth": 1,
+                    "timestamp": "2025-04-02 00:45:12",
+                    "replies": []
+                },
+                {
+                    "author": "Dirty_Dragons",
+                    "body": "Yeah I had no idea that the internal organs would be different across ethnicities. That's wild.",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 20:41:34",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "DarwinsTrousers",
+            "body": "So what is the difference in the chest x-rays of women and black people?\n\nI would have thought ribs are ribs.",
+            "score": 27,
+            "depth": 0,
+            "timestamp": "2025-04-01 14:29:44",
+            "replies": [
+                {
+                    "author": "ninjagorilla",
+                    "body": "Ya im confused about this. I definitely cannot diagnose someone\u2019s race off a cxr and wouldn\u2019t have thought skin color was a confounding factor on this sort of imaging",
+                    "score": 8,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 18:29:34",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "ADHD_Avenger",
+            "body": "I wonder if the doctors they compared to were really a good set to compare to as well - it's not like AI is the only thing that misses issues on bias - cross-racial bias is a big problem with doctors, as is cross-gender, and other issues.  They compared the AI to doctors who managed to catch these issues from what I can see - with a set where doctors both caught and missed issues, would it be different?  The real immediate value of AI is if it as used as a filter for potential items to flag for review, either prior or post human review.",
+            "score": 16,
+            "depth": 0,
+            "timestamp": "2025-04-01 12:24:48",
+            "replies": [
+                {
+                    "author": "ninjagorilla",
+                    "body": "It said the model could predict a patients race with 80% accuracy while a radiologist could only hit 50%\u2026. But they weren\u2019t sure how and what the confounding factor was that caused the miss rate to go ip",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 18:37:57",
+                    "replies": [
+                        {
+                            "author": "Dirty_Dragons",
+                            "body": "A 50% rate is just guessing. How can the AI tell?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 20:43:41",
+                            "replies": [
+                                {
+                                    "author": "ninjagorilla",
+                                    "body": "Depending on the choices \u2026 it didn\u2019t specifically say if it was white/black or if there were more races to pick from .",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 23:30:08",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2025-04-01 13:36:05",
+            "replies": [
+                {
+                    "author": "FaultElectrical4075",
+                    "body": "AI doesn\u2019t process images the same way humans do. What is obvious to humans might not be obvious to AI and vice versa.",
+                    "score": 11,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 14:05:21",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "eldred2",
+            "body": "Feed these misses back in as training data, so they will learn it.  This is how you improve the models.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-04-01 17:37:11",
+            "replies": []
+        },
+        {
+            "author": "soparklion",
+            "body": "Are there different parameters for identifying cardiomegaly in black women?\u00a0 Or is it using the pretest probability for white women to underdiagnose black women?\u00a0",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-04-01 18:04:22",
+            "replies": []
+        },
+        {
+            "author": "febrileairplane",
+            "body": "Why is model training conducting with datasets that lead to these shortfalls?\n\nCould you improve the training and validation sets to be more representative of the while population?\n\nIf these variables (race/gender) would reduce the power of the model, could you break the training and validation sets out into separate race/gender sets?\n\nSo an AI/MLM trained on specifically white men, then one trained specifically on black men and so on...",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2025-04-01 13:46:44",
+            "replies": [
+                {
+                    "author": "FaultElectrical4075",
+                    "body": "The datasets have these shortfalls because the humans that created them are biased. There is no such thing as an unbiased dataset.",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 14:06:35",
+                    "replies": []
+                },
+                {
+                    "author": "caltheon",
+                    "body": "What's normal for one race is not normal for another, so the training data needs to be made aware of these differences.  There is also a movement in medicine to disregard race as a social construct, with people trying to treat everyone the same (noble goals) but is having the opposite effect since the premise is wrong.  You can see that false bias in this article.  https://www.nejm.org/doi/full/10.1056/NEJMms2206281   Basically, in trying not to be racist, they are being racist",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 22:24:15",
+                    "replies": [
+                        {
+                            "author": "yukonwanderer",
+                            "body": "I think you are getting confused between racism, and race.",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2025-04-02 14:23:48",
+                            "replies": [
+                                {
+                                    "author": "caltheon",
+                                    "body": "read the paper, then read this post, if you can't figure it out, well, too bad.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-02 18:27:48",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "NedTaggart",
+            "body": "how did the AI know they were black just from an x-ray of the chest?",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2025-04-01 19:02:11",
+            "replies": []
+        },
+        {
+            "author": "ALLoftheFancyPants",
+            "body": "I wish that was not still disappointed in medical researchers for stuff like this. Bias in medicine research and then practice has caused large discrepancies in people\u2019s healthcare and expected mortality. It shouldn\u2019t still be happening.",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2025-04-01 12:47:02",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 13:19:49",
+                    "replies": [
+                        {
+                            "author": "DeltaVZerda",
+                            "body": "They already admitted that when they excluded them from the initial training.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 14:33:29",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "hidden_secret",
+            "body": "People have told me all my life that skin color was just skin color. But there are actually big differences in the organs?!",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-04-01 23:14:57",
+            "replies": []
+        },
+        {
+            "author": "Bakoro",
+            "body": "This isn't only a problem with AI, nearly this exact same situation is repeated across science and technology. Even when it comes to studying rats, a lot of studies will only study male rats to reduce variables.    \n      \nI wholeheartedly stand by AI tools as a class of technology, but these things need massive amounts of data. This kind of thing simply should not be just left to a private company, and the anonymized data need to be freely available to researchers.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-04-01 23:48:08",
+            "replies": []
+        },
+        {
+            "author": "simplyunknown8",
+            "body": "I haven't read the document. \n\nBut how does the AI know the race from an x-ray",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-04-02 04:49:58",
+            "replies": []
+        },
+        {
+            "author": "Droidatopia",
+            "body": "Is anyone else confused why including demographic information in the prompts reduced the effect of bias?\n\nThis seems counterintuitive.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-04-01 14:25:14",
+            "replies": [
+                {
+                    "author": "omega884",
+                    "body": "If you would expect demographics to be diagnostically relevant, then you'd expect them to reduce the effect of the \"bias\". That is, if you're looking for \"enlarged hearts\" and your training has a bimodal distribution correlated with sex, then if you don't tell your model the sex of the patient, it just has to guess whether a hear that falls into the higher node is abnormally large for the patient or completely average. If your bimodal distribution also happens to be weighted to the upper mode, your model will be right more often than not by guessing that the heart is normal sized. But in the specific case of the sex correlated to the lower mode, it will wrong more often than not.\n\nGive it the diagnostically relevant sex data though, and now it has a better chance to decide \"if sex A and high mode size, then it's average because sex A has sizes clustered around this mode, but if sex B, then it's enlarged because sex B cluster's around the lower node.\"",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2025-04-02 00:11:59",
+                    "replies": []
+                },
+                {
+                    "author": "Ok-Background-502",
+                    "body": "It helps with the bias that everybody is white.",
+                    "score": -5,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 15:45:58",
+                    "replies": [
+                        {
+                            "author": "Droidatopia",
+                            "body": "That doesn't make any sense when compared to the context of that part of the paper though.\n\nIt found the model was much better at determining patient's race and age than the human doctors were.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 15:58:34",
+                            "replies": [
+                                {
+                                    "author": "Ok-Background-502",
+                                    "body": "It's probably not using that information without being prompted because it's AI. I think human doctors ALWAYS factor in race, but it's not obvious to me that AI would use that information by default.\n\nMore likely that specialized AI lives in a race-less world with only white people by construction.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-01 16:09:23",
+                                    "replies": [
+                                        {
+                                            "author": "Droidatopia",
+                                            "body": "That's the counterintuitive part.\n\nThe paper says the model is better than humans at figuring out the race and age of the patient from the image alone.\n\nBut then the model's pro white/pro man bias is lessened by including the demographics in the prompt.\n\nSo the model has the ability to discern race/sex from the image, but won't use that information to produce a better diagnosis that it is capable of creating unless specifically told to?",
+                                            "score": 6,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-01 16:13:11",
+                                            "replies": [
+                                                {
+                                                    "author": "Ok-Background-502",
+                                                    "body": "That's how, in my experience, AI works at this point. AI knows how to answer a lot of questions directly, but needs to be promoted to answer lateral questions like \"think about what race you are looking at\", or it will not because that was never the question.\n\nIt's like when you are trained to use your gut feeling to decide something. And then you are trained to use your gut feeling to decide another thing.\n\nYour answer to question 2 might inform the answer to question 1. But if you were asked to use your gut feeling to decide the answer to question 1 again, your gut decision might not have used your answer to question 2.\n\nYou have to train the model with supervision to use a specific piece of information if you want it to reliably use it in future problems.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-01 16:20:01",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Commemorative-Banana",
+                                                            "body": "You and the person you\u2019re responding to are thinking about AI from an LLM-prompting perspective, which is wrong. Medical imaging ML models are not using LLMs, and they don\u2019t need to be \u201ctold\u201d to \u201cthink\u201d about race, or \u201cconvinced\u201d to not \u201cwithhold\u201d conclusions. Quotations for anthropomorphization.\n\nML models already consider every detail of the data they are given, and shortfalls like this simply mean they were not given good enough data.",
+                                                            "score": 5,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-04-01 18:31:44",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "caltheon",
+                                                                    "body": "It's not exactly the same, but they aren't wrong.  If this tool has the ability to enter prompts, then it is in fact using natural language processing to affect the outcome, so your statement is not correct.",
+                                                                    "score": 2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-04-01 22:22:12",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "Commemorative-Banana",
+                                                                            "body": "It\u2019s not using prompting in the way that you would attempt to \u201ctalk\u201d to GPT. But it is using NLP powered by a descendant of GPT-2 so I was wrong for assuming it was pure visual ML like what I have worked with.\n\nThe reality, however, doesn\u2019t really change my primary belief that eliminating systemic bias in ML all comes down to the quality of the data source.\n\nThey state they use NLP to convert the traditional supervised learning problem into a (in my opinion more dangerous) self-supervised learning problem. The reason is because *it takes a lot of time, effort, and funding* to manually label training data, and they want to skip that step. \n\nThey argue their LLM labeler could have less bias than human labelers (even though the LLM is trained on human language), and provide some numerical measures to verify the accuracy of their labels. They\u2019re working in the right direction to having trustable automatic labeling. So they have some good intentions, but ultimately they\u2019ve just introduced a second source for biased data. Now we have to be concerned about the bias of the images and the bias of their LLM labeler.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2025-04-01 23:18:43",
+                                                                            "replies": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "author": "Kelpsie",
+                                                    "body": "That would require second-order decision-making, which the AI isn't capable of. It doesn't take into account _anything_ it concludes in order to refine those conclusions.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-01 21:24:39",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "trufus_for_youfus",
+            "body": "This is very interesting.  I had no idea that women and/ or various ethnicities had marked differences in cardiovascular systems to begin with.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-04-01 18:34:08",
+            "replies": []
+        },
+        {
+            "author": "Petrichordates",
+            "body": "Good thing we banned research on diverse populations then!",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2025-04-01 13:55:22",
+            "replies": []
+        },
+        {
+            "author": "YorkiMom6823",
+            "body": "When computers and programing were still pretty new I was introduced to a phrase \"Garbage in, garbage out\" since then I've wondered why people don't recall this phrase more often. Programmers including researchers and AI trainers are still operating under the GIGO rule. No program, including AI is one whit better than the comprehension and biases of the creators.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-01 18:58:00",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "The ingrained biases of AI are a feature, not a bug. This technology will be used to further oppress minority groups. It\u2019s designed to make us miserable, not happier.\u00a0",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-02 07:22:20",
+            "replies": []
+        },
+        {
+            "author": "blazbluecore",
+            "body": "Ahh yes the racist machines. First it was the racist people, now it\u2019s the boogeymen racist machines. Next it\u2019s gonna be racist air. If only we could solve racism, the world would be a perfect place for everyone to live in peace and prosperity! Darn it all!",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-02 18:43:12",
+            "replies": []
+        },
+        {
+            "author": "armchairdetective",
+            "body": "We know. We know!\n\nWe have been shouting about this issue with all types of AI models for at least a decade! We're just ignored.\n\nSelf-driving cars will kill black pedestrians. \n\nAlgorithms to select job applicants disadvantage people with career breaks for care or pregnancy, as well as people with non-white-sounding names.\n\nTwo years of articles about how AI is going to diagnose better than any doctor and then, obviously, no. It'll make sure black women die.\n\nI am tired.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-01 19:50:14",
+            "replies": []
+        },
+        {
+            "author": "Life-Celebration-747",
+            "body": "Did they tell the AI the sex and race of the patients?\u00a0",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2025-04-02 10:50:09",
+            "replies": []
+        },
+        {
+            "author": "highoncatnipbrownies",
+            "body": "How can it tell from an xray what someone\u2019s race is?",
+            "score": -16,
+            "depth": 0,
+            "timestamp": "2025-04-01 12:34:04",
+            "replies": [
+                {
+                    "author": "redditonlygetsworse",
+                    "body": "Gosh I know, right? I wish there was a link here somewhere that would supply me with some more information.",
+                    "score": 20,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 12:40:28",
+                    "replies": []
+                },
+                {
+                    "author": "Philboyd_Studge",
+                    "body": "did you read the article?",
+                    "score": 15,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 12:37:56",
+                    "replies": []
+                },
+                {
+                    "author": "thekazooyoublew",
+                    "body": "I too am not certain the exact anatomical differences that are to blame here, and given that only half of the doctors they tasked with distinguishing between them could do so, apparently we're not alone.",
+                    "score": -3,
+                    "depth": 1,
+                    "timestamp": "2025-04-01 13:14:34",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "bobdob123usa",
+            "body": "Conservatives: [Perfect](https://imgur.com/gallery/perfect-s8MbPVC)",
+            "score": -6,
+            "depth": 0,
+            "timestamp": "2025-04-01 16:29:15",
+            "replies": []
+        }
+    ]
+}

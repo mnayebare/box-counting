@@ -1,0 +1,483 @@
+{
+    "post_title": "Google\u2019s hidden AI diversity prompts lead to outcry over historically inaccurate images",
+    "post_timestamp": "2024-02-22 15:45:30",
+    "last_comment_timestamp": "2024-02-24 12:55:04",
+    "time_difference": "1 day, 21:09:34",
+    "comments": [
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": 64,
+            "depth": 0,
+            "timestamp": "2024-02-22 20:26:14",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "You're reading too far into this. They're trying very hard to be inclusive by giving the neural nets diverse inputs. When you ask for a successful business woman image, they want it to generate images of white women, black women, Asian women, etc. This requires a lot of tricky training regimes to avoid biases in the data, because the image set may have more images of white women.\n\nThe unintended consequence is you might get diverse Nazis or something like that. Neural nets are fickle things. You cannot just tell it rules like \"don't create black Nazis\". That's not a way you can interact with the neural net.\n\nIn summary, these issues are likely because they are spending a lot of real effort making them diverse, not because they don't care.",
+                    "score": 30,
+                    "depth": 1,
+                    "timestamp": "2024-02-22 23:53:19",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "[deleted]",
+                            "score": -9,
+                            "depth": 2,
+                            "timestamp": "2024-02-23 01:31:27",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "I work at Google and I can guarantee their inclusivity is genuine. It is up front and center every day. The trainings, the memos, the full on wall paintings with inclusive quotes, etc. The employees are really proactive in being aware of it too, and implementing it. There are lots of genuine and fair criticisms of Google, but the effort they put into inclusivity needs to be recognized because it's ridiculous how hard they try. I can honestly say I have never seen a private company or government agency try this hard.",
+                                    "score": -3,
+                                    "depth": 3,
+                                    "timestamp": "2024-02-23 01:45:00",
+                                    "replies": [
+                                        {
+                                            "author": "314159bits",
+                                            "body": "Inclusive unless you\u2019re a white man.\n\nhttps://twitter.com/shaunmmaguire/status/1760872265892458792",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2024-02-23 03:25:31",
+                                            "replies": [
+                                                {
+                                                    "author": "logopolis01",
+                                                    "body": "\"When you\u2019re accustomed to privilege, equality feels like oppression.\"\n\n- Brian Sims",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-02-23 08:26:54",
+                                                    "replies": [
+                                                        {
+                                                            "author": "IAmKrron",
+                                                            "body": "Does equality mean someone should be denied promotion due to their skin colour / gender combination?",
+                                                            "score": 0,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-02-23 09:55:09",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Few_Direction9007",
+                                                                    "body": "He\u2019s a far right lunatic, and has no evidence for his claims. He\u2019s just making shit up to dog whistle people like you.",
+                                                                    "score": 2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2024-02-23 12:23:52",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "IAmKrron",
+                                                                            "body": "Dang liars on the internet!",
+                                                                            "score": 0,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2024-02-23 13:58:51",
+                                                                            "replies": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "author": "Few_Direction9007",
+                                                    "body": "He can fuck off. That dude is a far right lunatic, he has no evidence for his claims, and posts shit defending Tucker Carlson. Glad that guy isn\u2019t working getting a promotion. I can\u2019t believe I\u2019m seeing such unironic \u201cwhite males are being discriminated against.\u201d You all need to go and be quiet somewhere.",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-02-23 12:19:48",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Deleted",
+                                                            "body": "[deleted]",
+                                                            "score": 0,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-02-23 14:00:53",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Few_Direction9007",
+                                                                    "body": "Anyone who listens to Tucker Carlson is a far right lunatic. It\u2019s a pretty definable line I\u2019d say. And it\u2019s not a dog whistle you clearly don\u2019t know what that means. A dog whistle is subtext, I\u2019m saying in plain text, he\u2019s a far right lunatic.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2024-02-23 14:03:00",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "Most successful businesswomen where I live ARE white.   The data isn't bias, Google is bias, and hates white people, [who they also pass up for jobs.](https://www.seattletimes.com/business/lawsuit-claims-google-job-quotas-favored-women-blacks-latinos-over-white-and-asian-men/)\n\nEvery AI company is doing similar things to what they did with salting.  The reason Google got so much attention is because employees at other companies can go \"hey this AI is racist we should rework this\" whereas Google's employees know they work for racists and thus just stay silent and wait for the public backlash to start to fix this sort of thing.  They're a company that values diversity?  Then maybe they should hire like 1 conservative on their AI ethics team and have this diverse person tell them when they're being abhorrent racists, since they seem unable to be able to figure that out now.\n\nIf they empowered even one non-racist to speak up with their diverse viewpoint this would have never happened.",
+                            "score": -1,
+                            "depth": 2,
+                            "timestamp": "2024-02-24 12:55:04",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "paucus62",
+            "body": "Hidden? It literally and explicitly shows it",
+            "score": 16,
+            "depth": 0,
+            "timestamp": "2024-02-22 19:02:44",
+            "replies": [
+                {
+                    "author": "MaybeNext-Monday",
+                    "body": "The controversy is that, rather than actually fixing racial biases in the outputs, google just added a middleman stage that randomly inserted names of ethnicities into the prompts to mask the problem.",
+                    "score": 8,
+                    "depth": 1,
+                    "timestamp": "2024-02-23 01:23:31",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Champagne_of_piss",
+            "body": "Bing image creator has been salting prompts since day one. I don't recall anyone making a big deal out of it. Maybe they did.",
+            "score": 14,
+            "depth": 0,
+            "timestamp": "2024-02-22 18:11:48",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "They did to some degree, but it was more of an annoyance within the AI enthusiast community. Today it's moral outrage or suggestive assumptions of a company's lack of social and economic responsibility. We've crossed the threshold into mainstream. AI is likely to be accused of driving a mentally ill teen to suicide in months to come at this rate.",
+                    "score": 9,
+                    "depth": 1,
+                    "timestamp": "2024-02-22 23:58:42",
+                    "replies": [
+                        {
+                            "author": "Champagne_of_piss",
+                            "body": "i dunno man - there was a high degree of stealth injection of terms like \"ethnically ambiguous\" or \"pacific islander\" or \"black\" into bing image creator, to the extent that sometimes signs in the background would read some sort of ethnic descriptor that wasn't in the prompt.",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2024-02-23 00:30:52",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "I might have misunderstood your meaning of salting prompts actually. What I was referring to mostly was just the general attitude towards prompt rejections and the bazillion exemples people would post with that damn dog picture. It was annoying but I never saw outrage over it.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2024-02-23 00:44:11",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "FungusFly",
+            "body": "Hollywood should love this.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-02-23 16:51:48",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "one of the reasons large language models are fucking up race is because we've muted the conversations of race and made it largely taboo outside of certain limited situations. If it's not on an anonymous forum, stand up comedy set, hot take news site, or socially forward public broadcast, it's nonexistent. Discussions of race are subtly and cleverly masked out of the conversation in almost every relevant area of human communication that a large language model would learn from, and these distortions are just random attempts at filling in the blanks.",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2024-02-23 00:04:33",
+            "replies": []
+        },
+        {
+            "author": "K1nsey6",
+            "body": "They are also biased against Palestinians. I asked Gemini to create an image of a person holding a US flag, then an Israeli flag, and lastly a Palestinian flag. [This was the  result](https://i.imgur.com/z7XGQJP.jpg).",
+            "score": 18,
+            "depth": 0,
+            "timestamp": "2024-02-22 15:54:11",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "Funny cuz it\u2019s usually the opposite.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-02-22 23:35:53",
+                    "replies": []
+                },
+                {
+                    "author": "Rnr2000",
+                    "body": "Not really a bias, a lot of the pictures that could be used to generate a image of someone holding the Palestinian flag would have to be generated using data that includes terrorism stories and imagery.\n\nIt is easier to just block the image from being generated than let the AI draw it.",
+                    "score": -28,
+                    "depth": 1,
+                    "timestamp": "2024-02-22 16:06:10",
+                    "replies": [
+                        {
+                            "author": "MaybeNext-Monday",
+                            "body": "Ok, then don\u2019t have the auto-reply lie about the reasoning.",
+                            "score": 7,
+                            "depth": 2,
+                            "timestamp": "2024-02-23 01:24:34",
+                            "replies": []
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "[removed]",
+                            "score": -16,
+                            "depth": 2,
+                            "timestamp": "2024-02-22 16:33:20",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "You are free to leave.",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2024-02-22 23:36:22",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "alfredandthebirds",
+                            "body": "Why are you getting downvoted?  This makes logical, business, and legal sense.",
+                            "score": -9,
+                            "depth": 2,
+                            "timestamp": "2024-02-23 00:24:38",
+                            "replies": [
+                                {
+                                    "author": "Bobbicals",
+                                    "body": "It doesn\u2019t. You\u2019re saying \"The bias is justifiable because the training data is biased\" but this is a ridiculously shallow opinion because you\u2019re completely ignoring the fact that it\u2019s Google\u2019s responsibility to train their AI on appropriate data to avoid these biases.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-02-23 19:12:16",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "Do we want AI creations to be realistic or not, people? Make up your minds.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-02-23 07:14:54",
+            "replies": []
+        },
+        {
+            "author": "Jerome_Eugene_Morrow",
+            "body": "I\u2019ve gotta be honest. When it comes to possible bugs from AI this is really not that huge of an issue for me. There are other options out there, and if people don\u2019t like random minorities showing up in their prompts just using one of the competitors should be fine.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-02-23 13:46:54",
+            "replies": []
+        },
+        {
+            "author": "OniKanta",
+            "body": "Idk maybe don\u2019t rely on a mindless program to produce art, let alone historically accurate art. Pay an actual artist/historian.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2024-02-23 10:16:31",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": -13,
+            "depth": 0,
+            "timestamp": "2024-02-22 19:45:39",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2024-02-23 03:22:31",
+                    "replies": [
+                        {
+                            "author": "fletch44",
+                            "body": "If you need something specific, how about paying an artist.\n\nIf you're intent on being a freeloading leech, then suck it up little fella.",
+                            "score": -5,
+                            "depth": 2,
+                            "timestamp": "2024-02-23 09:08:52",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "[deleted]",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2024-02-23 10:12:52",
+                                    "replies": [
+                                        {
+                                            "author": "fletch44",
+                                            "body": "> Why would I pay an artist when there\u2019s the technology to get it for free as its been shown already\n\nBecause you can tell an artist to draw your perfect Aryan and they will do as you say if you pay them. You're having a big ol' snowflake whinge because you can't get what you want at the moment aren't you?",
+                                            "score": -2,
+                                            "depth": 4,
+                                            "timestamp": "2024-02-23 11:13:10",
+                                            "replies": [
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "[deleted]",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-02-23 11:45:12",
+                                                    "replies": [
+                                                        {
+                                                            "author": "fletch44",
+                                                            "body": "People who use the term \"woke\" unironically are the biggest losers in the world.\n\nIf there are other tools to use, why are you whining here? Because you're a snowflake who got upset about something that doesn't even impact you.\n\nSeeya snowflake.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-02-23 20:41:36",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Deleted",
+                                                                    "body": "[deleted]",
+                                                                    "score": 2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2024-02-24 05:11:09",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "fletch44",
+                                                                            "body": "It's not reality, it's a machine-generated hallucination.\n\nYou're very soft and lame.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2024-02-24 06:16:51",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "Deleted",
+                                                                                    "body": "[deleted]",
+                                                                                    "score": 2,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2024-02-24 06:32:33",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "fletch44",
+                                                                                            "body": "Why do you care? It doesn't affect you.\n\nDo you care this much about racism against black people?\n\nDoes this upset you because you're a racist?",
+                                                                                            "score": 1,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2024-02-24 06:45:21",
+                                                                                            "replies": [
+                                                                                                {
+                                                                                                    "author": "Deleted",
+                                                                                                    "body": "[deleted]",
+                                                                                                    "score": 1,
+                                                                                                    "depth": 11,
+                                                                                                    "timestamp": "2024-02-24 07:00:31",
+                                                                                                    "replies": [
+                                                                                                        {
+                                                                                                            "author": "fletch44",
+                                                                                                            "body": "And there it is.\n\nMate, white people aren't ignored, they run the whole world. They have better outcomes for health, wealth, education, you name it. You stand a better chance of getting a job if you have a typical white male name.\n\nOh poooor me I am a middle class white male life is so hard. I get picked first for everthing. If something is shown that doesn't look like me I get VERY UPSET\n\nRacist.\n\nWhat a turkey you are.",
+                                                                                                            "score": 1,
+                                                                                                            "depth": 12,
+                                                                                                            "timestamp": "2024-02-24 09:07:28",
+                                                                                                            "replies": []
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Few_Direction9007",
+            "body": "Wow this thread is filled with (not so) low key racists.",
+            "score": -2,
+            "depth": 0,
+            "timestamp": "2024-02-23 12:24:45",
+            "replies": [
+                {
+                    "author": "314159bits",
+                    "body": "Can you link to an example of a not so low key racist comment?",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2024-02-23 13:05:04",
+                    "replies": [
+                        {
+                            "author": "Few_Direction9007",
+                            "body": "You can read.",
+                            "score": -3,
+                            "depth": 2,
+                            "timestamp": "2024-02-23 13:26:51",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "MatterIll4919",
+                    "body": "yeah for real, I was reading trough and thinking what the fuck is this cesspool of comments lol people straight up making up random narratives completely unrelated to the fairly harmless practice of randomizing the race of characters with seeded descriptors,\n\ngood AI already does that with a bunch of other things in the background, it throws in random keywords so you don't just get the same image 4 or 8 times per generation run like you used to in the first few iterations of dall-e and midjourney, the only real argument you could make here is when you write \"historical\" it should probably remove any race and setting keywords from the pool and just let the AI go as close as possible to it's training data",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-02-23 18:04:01",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "NoonInvestigator",
+            "body": "Well, that Japanese woman as a Nazi soldier is actually kinda correct\r  \n\r  \nGermany was Europe's Nazi during WW1 and WW2.\r  \n\r  \nJapan was Asia's Nazi during the same period plus decades longer... and did so much worse things to hundreds of millions of Asians for over half a century.",
+            "score": -13,
+            "depth": 0,
+            "timestamp": "2024-02-22 19:29:05",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "But they make great cars.",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2024-02-22 21:49:16",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "Final solution for imperfect cars. bad cars only over their dead bodies /s\n\nHigh quality is the result of not tolerating low quality, e.g. by refusing to buy or produce crap.",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2024-02-22 23:30:51",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Tbone_Trapezius",
+            "body": "Go woke, go still rich?",
+            "score": -6,
+            "depth": 0,
+            "timestamp": "2024-02-22 21:40:56",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "We need to stop paying attention to the tiny minorities of people who will cause an \"outcry\" no matter what.\n\nOnly white people portrayed in European historical fiction: outcry.\n\nBlack people portrayed in historical European fiction: outcry.\n\nWhite people portrayed in non-European historical fiction: outcry.\n\nNon-white people portrayed as \"bad guys\" in European historical fiction: outcry.\n\nThere is literally no winning, we just have to realize a portion of the population are rageaholic morons, and we're allowed to ignore them.\n\nMeanwhile, the silent majority of reasonable people don't care about any of these situations. We just enjoy good or informative content on its own merits, and go about our lives.",
+            "score": -7,
+            "depth": 0,
+            "timestamp": "2024-02-22 23:21:34",
+            "replies": [
+                {
+                    "author": "314159bits",
+                    "body": "You\u2019re not wrong. It\u2019s ironic that you\u2019re being downvoted.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2024-02-23 13:24:44",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}

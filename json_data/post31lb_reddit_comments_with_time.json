@@ -1,0 +1,228 @@
+{
+    "post_title": "[R] academic survey about diversity in AI development/research teams",
+    "post_timestamp": "2024-05-06 08:31:40",
+    "last_comment_timestamp": "2024-05-07 02:14:23",
+    "time_difference": "17:42:43",
+    "comments": [
+        {
+            "author": "AkielSC",
+            "body": "In my opinion, asking Devs in the way that you are is likely the way towards biased results, simply because you're asking the question to the wrong crowd. \n\nIn industry, Responsible AI is often being driven by the research departments who help create the internal \"Responsible AI\" policies that then are enforced for development. \n\nSource: an AI researcher working in ethical AI and developing these policies\n\nETA: after reading the questions in your survey, I am reaffirmed in my earlier statement. You target people actively developing AI, but your questions cover the responsibilities of very different teams, including governance and management. Taking into account that much of the high level decision making that affects the topic in your survey is never actively discussed at implementation-team level, and that you are trying to correlate it with the diversity of the part of the team that is NOT making the decision, the outcome of this survey is unlikely to lead to any valuable insight. And I say this as someone working on the topic.\n\nBest of luck though.",
+            "score": 20,
+            "depth": 0,
+            "timestamp": "2024-05-06 10:58:30",
+            "replies": [
+                {
+                    "author": "Green-Quantity1032",
+                    "body": "It\u2019s social science, bias is the goal",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-07 02:14:23",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "terminal_object",
+            "body": "Still with this diversity fixation? Are you aware that the McKinsey \u201cstudies\u201d claiming \u201cdiverse\u201d organisations outperform the others was hogwash?",
+            "score": 17,
+            "depth": 0,
+            "timestamp": "2024-05-06 08:39:24",
+            "replies": [
+                {
+                    "author": "K3tchM",
+                    "body": "Do you have any links discussing this point further? \n\nBesides, OP seems to be focusing on trustworthiness and not performance. Investigating the impact of diversity within that frame is still relevant IMO.",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-05-06 10:17:08",
+                    "replies": [
+                        {
+                            "author": "terminal_object",
+                            "body": "[https://econjwatch.org/articles/mckinsey-s-diversity-matters-delivers-wins-results-revisited](https://econjwatch.org/articles/mckinsey-s-diversity-matters-delivers-wins-results-revisited)\n\nTaking at face value that the EU definitions of what constitutes trustworthy AI are implementable and sensible, I don't see what difference it makes if a woman or a man or a man of color implements them. Either they fulfil some criteria or they do not.",
+                            "score": 11,
+                            "depth": 2,
+                            "timestamp": "2024-05-06 10:33:46",
+                            "replies": [
+                                {
+                                    "author": "Dysvalence",
+                                    "body": "People keep saying it but individual or team performance was never the point, the real value in diversity is hedging against PR disasters and legislative fallout. Those EU defs include bias and no singular person is ever going to keep up to date with everything to look out for, let alone what that might look like with unexpected failures on specific models. Training or consultants can help but you always get people not taking it seriously until they're outnumbered.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-06 13:49:35",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "thatstheharshtruth",
+                    "body": "That is correct. Also the literature on diversity training is clear. These things are counterproductive.",
+                    "score": -1,
+                    "depth": 1,
+                    "timestamp": "2024-05-06 13:09:51",
+                    "replies": []
+                },
+                {
+                    "author": "Puzzleheaded_Meat522",
+                    "body": "This is a weird take. You're responding to something they didn't say. I work in a field that utilizes machine learning for research applications. Having diverse scholars tackle questions has helped a lot from experimental design to data analysis all the way down to what kinds of models might be best suited for a particular problem. What are you on about?",
+                    "score": -5,
+                    "depth": 1,
+                    "timestamp": "2024-05-06 12:21:00",
+                    "replies": [
+                        {
+                            "author": "terminal_object",
+                            "body": "I am going to reply like your anecdote is meaningful. How did you ascertain that what \u201chelped\u201d you was due to the skin color of the employees or their gender?",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-05-06 12:30:37",
+                            "replies": [
+                                {
+                                    "author": "Puzzleheaded_Meat522",
+                                    "body": "One, you can keep the snark. Two, their experiences around how they were perceived in society via their \"skin color\" informed the kinds of questions they asked and their research methods.\u00a0This is important when looking at questions around certain populations, especially in healthcare and the social sciences.",
+                                    "score": -6,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-06 12:47:07",
+                                    "replies": [
+                                        {
+                                            "author": "terminal_object",
+                                            "body": "These are the usual talking points that are repeated ad nauseam. Give me a specific example of a research method that one can only come up with if one is black or a woman.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-05-06 13:38:20",
+                                            "replies": [
+                                                {
+                                                    "author": "Puzzleheaded_Meat522",
+                                                    "body": "You're creating new criteria here and moving goalposts. At no point did I say \"only\" (but you did). I said \"informed.\" Not to mention, the question of a research method that \"only a black person or a woman\" could come up with is silly and unnecessary. Do you know why? Because we hadn't previously thought of those methods and questions before, i.e., introducing new perspectives introduced novel questions. This isn't that hard.",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-05-06 13:59:29",
+                                                    "replies": [
+                                                        {
+                                                            "author": "terminal_object",
+                                                            "body": "What methods do they come up with that no other person could come up with? It is actually very important that some contribution be inherently irreplaceable otherwise diversity would just be a neutral attribute (which is what data actually seems to show).",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-05-06 14:46:27",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Head-Combination-658",
+                                                                    "body": "Do you think representation matters? \n\nThis is separate from the discussion you had with OP. If a workforce/team encourages recruiting constituents from diverse backgrounds, do you think this is likely to facilitate access for people from otherwise excluded backgrounds? \n\nDo you think it matters if people who have historically been denied access are one day given the same ease of access as those who are included?",
+                                                                    "score": -2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2024-05-06 16:27:40",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "terminal_object",
+                                                                            "body": "It is speculative whether or not it matters. Should it matter that there is an equal proportion of protected categories in all employment areas? It\u2019s unclear to me, it seems like a neutral thing. In any case, a significant shift in representation takes time once active discrimination stops. Accelerating this shift can only be done at the expense of more discrimination of a different kind. A male excluded today because of some hiring policy does not really care that 30 years ago it was a woman who was excluded to the advantage of another man.",
+                                                                            "score": 6,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2024-05-06 16:32:28",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "Head-Combination-658",
+                                                                                    "body": "I think you make very good points tbh. Especially regarding someone being excluded in a contemporary setting not being concerned with the context of his/her exclusion. \n\nI\u2019m just asking if YOU THINK it matters. What is your personal opinion?\n\nMy personal opinion is that a woman who has seen female scientists is more likely to stay with her dream than a woman who has seen no visual evidence that it is even possible.\n\nAs always there is a balance to be struck. In the USA where discriminatory attitudes have previously been codified into law, it seems entirely reasonable that anti-discriminatory policies would have to be codified to reverse these effects. \n\nIt\u2019s incumbent on the legacy beneficiaries of discriminatory policies to educate themselves and be humble.",
+                                                                                    "score": -1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2024-05-06 16:49:41",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "terminal_object",
+                                                                                            "body": "Is it truly important to humanity whether scientists in a specific field are 50 50 men and women? Is being a scientist on average such a privileged position that not doing all we can to ensure half of them are women represents an unacceptable harm to that half of humanity? Some scientists seem to think so, but it is arrogance - or a coping mechanism for having endured so much to become one. Let\u2019s assume it\u2019s the case anyway. I think it matters, but to a limited extent. In particular: does it matter so much that in order to *rush* the transition to a more evenly split demographic we should intentionally discriminate against innocent people today? I think not.",
+                                                                                            "score": 3,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2024-05-06 18:14:21",
+                                                                                            "replies": [
+                                                                                                {
+                                                                                                    "author": "Head-Combination-658",
+                                                                                                    "body": "I don't know about doing all we can to ensure half-representation. That is an irrelevant straw-man argument. \n\nHow about this? \n\nHow about if a woman enters a Phd program in Computer Science, we don't create glass walls and exclude her because *we don't think she belongs?*\n\nHow about we don't racially slur black-students because *we don't think they belong?*\n\nHow about *we don't co-opt, dismiss, steal or minimize the contribution of minorities?*\n\n  \nThe active discrimnation against minorities is what has required policies to enforce their inclusion. This is not something we can ignore. Stop for a second to think why these policies are even necessary in the first place.",
+                                                                                                    "score": -2,
+                                                                                                    "depth": 11,
+                                                                                                    "timestamp": "2024-05-06 18:49:09",
+                                                                                                    "replies": [
+                                                                                                        {
+                                                                                                            "author": "terminal_object",
+                                                                                                            "body": "It is quite the opposite. A PhD candidate being admitted because of quotas in some sense raises the suspicion he/she does not belong. That said, the situations you present are caricatural. I have gone through a PhD and known many people who did and have *never* witnessed any of the circumstances you described. If you were e.g. heard using a racial slur about a colleague, you would seriously risk getting kicked out (and rightfully so).",
+                                                                                                            "score": 1,
+                                                                                                            "depth": 12,
+                                                                                                            "timestamp": "2024-05-06 20:06:07",
+                                                                                                            "replies": [
+                                                                                                                {
+                                                                                                                    "author": "Head-Combination-658",
+                                                                                                                    "body": "You are wrong. They are quite common. I know as I have been on the receiving end of them, as have MANY people I know. \n\n**Your assumption about admission being based on quotas belies some unsavory bias that I hope is unconscious.**\n\nStep down from this topic and accept you are not knowledgeable in this area. This is not your lived experience. This is a topic where you need to LISTEN.",
+                                                                                                                    "score": 1,
+                                                                                                                    "depth": 13,
+                                                                                                                    "timestamp": "2024-05-06 20:15:38",
+                                                                                                                    "replies": [
+                                                                                                                        {
+                                                                                                                            "author": "terminal_object",
+                                                                                                                            "body": "I don\u2019t know where you are doing a PhD. Where I studied this stuff does not happen. I don\u2019t make any assumptions about admissions or faculty positions. There are known and advertised instances of candidates belonging to minorities being preferred. I didn\u2019t mean to imply it happens all the time and everywhere. Spare me the rhetoric of the *lived experience*: I live among the supposed perpetrators all day long and they never do or say anything even remotely close to that stuff. If they are racist and sexist they hide it really well.",
+                                                                                                                            "score": 1,
+                                                                                                                            "depth": 14,
+                                                                                                                            "timestamp": "2024-05-06 20:20:53",
+                                                                                                                            "replies": [
+                                                                                                                                {
+                                                                                                                                    "author": "Head-Combination-658",
+                                                                                                                                    "body": "It is ironic that you tell me to ***spare you the rhetoric of the\u00a0lived experience,*** then proceed to tell me your lived experience.\n\nYou don't know any bigots so I guess they don't exist. You're right.\n\n\\[Edit\\]: For those who didn't catch it. The commenter above just confessed that only their perspective and experience matters or is valid.",
+                                                                                                                                    "score": 2,
+                                                                                                                                    "depth": 15,
+                                                                                                                                    "timestamp": "2024-05-06 20:29:04",
+                                                                                                                                    "replies": [
+                                                                                                                                        {
+                                                                                                                                            "author": "terminal_object",
+                                                                                                                                            "body": "I do. Just not among PhD students, and those who might be there hide, they don\u2019t strut around calling other students n*****, lol.",
+                                                                                                                                            "score": 1,
+                                                                                                                                            "depth": 16,
+                                                                                                                                            "timestamp": "2024-05-06 20:32:58",
+                                                                                                                                            "replies": [
+                                                                                                                                                {
+                                                                                                                                                    "author": "Head-Combination-658",
+                                                                                                                                                    "body": "Oh yes bigots hide their nature in academia! Where there is often rampant abuse due to a lopsided power dynamic!\n\nlol",
+                                                                                                                                                    "score": 1,
+                                                                                                                                                    "depth": 17,
+                                                                                                                                                    "timestamp": "2024-05-06 20:41:55",
+                                                                                                                                                    "replies": []
+                                                                                                                                                }
+                                                                                                                                            ]
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "PanTheRiceMan",
+            "body": "While LLMs and generative AI are trending a lot right now, there are a lot of other fields, where explainability is nice to have but actually not that important.\n\nI worked a lot with audio de-noising. The old school theory is more than 40 years old and still applicable, safety is no concern since you can easily achieve safety by various simple options and diversity should not be an issue. I trained networks with male and female readers and never ever noticed an issue besides the obvious issues if the noise is similar in spectrum to the voice.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-05-06 09:06:06",
+            "replies": []
+        }
+    ]
+}

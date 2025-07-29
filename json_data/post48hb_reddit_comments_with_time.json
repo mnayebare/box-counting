@@ -1,0 +1,856 @@
+{
+    "post_title": "AI Can Predict People's Race From X-Ray Images",
+    "post_timestamp": "2022-06-16 09:14:05",
+    "last_comment_timestamp": "2022-06-18 08:10:08",
+    "time_difference": "1 day, 22:56:03",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "body": "Welcome to r/science! This is a heavily moderated subreddit in order to keep the discussion on science. However, we recognize that many people want to discuss how they feel the research relates to their own personal lives, so to give people a space to do that, **personal anecdotes are now allowed as responses to this comment**. Any anecdotal comments elsewhere in the discussion will continue to be removed and our [normal comment rules]( https://www.reddit.com/r/science/wiki/rules#wiki_comment_rules) still apply to other comments.\n\n*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/science) if you have any questions or concerns.*",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-06-16 09:14:06",
+            "replies": []
+        },
+        {
+            "author": "carlos_6m",
+            "body": ">The results from our study emphasise that the ability of AI deep learning models to predict self-reported race is itself not the issue of importance. However, our finding that AI can accurately predict self-reported race, even from corrupted, cropped, and noised medical images, often when clinical experts cannot, creates an enormous risk for all model deployments in medical imaging.\n\nIm unsure what they imply by risk...\n\n&#x200B;\n\nEdit: \n\nThey imply by risk that if AI is trained with biased data and not audited for that bias, then AI would also be perpetuating biases it was trained with, in this case, racial bias. \n\n>We strongly recommend that all developers, regulators, and users who are involved in medical image analysis consider the use of deep learning models with extreme caution as such information could be misused to perpetuate or even worsen the well documented racial disparities that exist in medical practice. Our findings indicate that future AI medical imaging work should emphasise explicit model performance audits on the basis of racial identity, sex, and age, and that medical imaging datasets should include the self-reported race of patients when possible to allow for further investigation and research into the human-hidden but model-decipherable information related to racial identity that these images appear to contain.",
+            "score": 48,
+            "depth": 0,
+            "timestamp": "2022-06-16 09:28:55",
+            "replies": [
+                {
+                    "author": "InTheEndEntropyWins",
+                    "body": "It means that the AI can find the race and use that as a proxy. If you train a ML algorithm for something like how much painkillers to give someone, then you have the issue of the fact doctors underperscribe back people. So the ML can have embedded racist outcomes based on factors like race. Now you might think that's not a problem if you don't input race into the model, but if the ML algorithm can find out your race though an xray, then that risk still exists.\n\nA real life example of the risk was around using a ML algorithm to set bail. But this model just gave higher levels of bail to black people, since it was trained on racist data.",
+                    "score": 29,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 10:20:25",
+                    "replies": [
+                        {
+                            "author": "toroidal_star",
+                            "body": "It is also a good thing that the AI can predict people's race from x-ray images, because now a patient's bone structure phenotype can be compared to the average for their race or ethnicity, rather than the average for all races, which would greatly increase the accuracy of the criteria used to determine whether certain bone structure phenotypes are disease markers or not.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 13:21:08",
+                            "replies": []
+                        },
+                        {
+                            "author": "carlos_6m",
+                            "body": "Youre correct, i read part of the article behind the paywall and that's what the researchers say",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 10:31:32",
+                            "replies": []
+                        },
+                        {
+                            "author": "1up_for_life",
+                            "body": "Yeah it's a tough problem because on one hand you don't want the AI to be biased based on race but on the other hand race can have an effect on health risks and should be considered when making some diagnoses.",
+                            "score": 9,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 11:37:47",
+                            "replies": [
+                                {
+                                    "author": "InTheEndEntropyWins",
+                                    "body": "Yep it's a hard problem. They used to actually think that black people were different and didn't feel pain like white people did. This myth hasn't completely died out. While it's a myth that causes harm, there could very well be other situations where you do want to treat black people differently due to biological differences. \n\nI think the key thing here is to have a really good understanding of how the model works and what factors it might be taking into account. This article is about the fact the model has capabilities they didn't expect and hence could act way differently than they want.",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-16 11:45:42",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "[removed]",
+                            "score": -13,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 10:46:56",
+                            "replies": [
+                                {
+                                    "author": "madonnamanpower",
+                                    "body": "Yes yes, we know. Only sentient beings can be racist. \n\nBut data can have racial inequities that result in unfair or unequal results based on race.",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-16 11:50:26",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "It can only do that if it\u2019s programmed to do that. Humans are the same.",
+                                            "score": -6,
+                                            "depth": 4,
+                                            "timestamp": "2022-06-16 15:12:02",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "InTheEndEntropyWins",
+                                    "body": "You know what I mean. Data that differentiates treatment based solely on race with no medical reason for the difference.",
+                                    "score": 7,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-16 10:58:51",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "[removed]",
+                                            "score": -10,
+                                            "depth": 4,
+                                            "timestamp": "2022-06-16 11:01:29",
+                                            "replies": [
+                                                {
+                                                    "author": "InTheEndEntropyWins",
+                                                    "body": "I'm not sure how that fits in. If there is no \"known medical reason\" for giving black people a different treatment, then why would a doctor prescribing that in the first place?\n\nIt doesn't matter if it's known or not, we should only be prescribing and giving treatments based on \"known medical reasons\".",
+                                                    "score": 4,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-06-16 11:11:44",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Deleted",
+                                                            "body": "There are absolutely reasons for treating the races differently based on genetic makeup, sickle cell anemia is only present in African populations, not Caucasians, their genetic make up differs because of different evolutionary reactions to environment, viruses, die offs, the vascular and lymphatic systems, an AI doctor would not be biased in the sense that it would \u201cUnder Value\u201d a person based on race, this isn\u2019t a difficult concept, you can\u2019t perform boy surgery on a girl and visa Versa the genetic make up while extremely different and subtle from this metaphor still accounts for different tolerances of certain treatments and choosing the best option reguardless of race is the goal, It is NOT trying to undo social progress by reintroducing bias in diagnosis and treatment that more progressive people have been trying to get away from. But I imagine that they think the less enlightened of the world will use this example to further stigma against minorities. And they are right about that, the stupid will look for any reason to persecute and exploit others even if the data is well intended.",
+                                                            "score": -1,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-06-16 15:19:09",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "ExternalPast7495",
+                                                                    "body": "I get where you\u2019re coming from, I\u2019d just like to add you\u2019re referring to genetic differences based on phenotypes but those phenotypes aren\u2019t universal to all genetic conditions. There\u2019s still an awful lot of conditions that need blood tests or genetic sequencing to determine. So yes, in theory it\u2019s possible to measure risks associated with particular disease if there is a guaranteed correlation between the phenotype and the disease. But if that correlation isn\u2019t there then it exposes the patient to greater chance of being misdiagnosed or mistreated. \n\nI say that working off the assumption that the AI determines treatment based off scans to determine race/sex and therefore treatment schedule. The weakness is that while it tries to make diagnosis easier, it is the same as using an undertrained doctor as it\u2019s not capable of knowing everything required to be truly accurate. It also poses the risk of complacency, like with entrenched social biases, that can slip through the system especially if it\u2019s an at capacity gp clinic.",
+                                                                    "score": 2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-06-17 03:55:10",
+                                                                    "replies": []
+                                                                },
+                                                                {
+                                                                    "author": "InTheEndEntropyWins",
+                                                                    "body": "I\u2019m not sure you get it. There are obviously differences between race and male and females. But I\u2019m if you just stick in the data to a ML algorithm then you will have it prescribing lower levels of painkillers to black people and women. It\u2019s an outdated old myth that black people and women don\u2019t experience pain like white men, but a ML algorithm is dumb and will do that if it\u2019s in the training data. So ML algorithm will 100% undervalue black people and women, without some careful intervention to fix it. \n\nIt seems like you are talking about an AI from a sci-fi film or maybe one that will exist next century. But the way current ML algorithms work is very different, they just do what the training data suggests. That\u2019s why most AI trained online quickly turns into a racist and sexist trolls.",
+                                                                    "score": 0,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-06-16 18:00:18",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "author": "Deleted",
+                                                            "body": "first time working with Drs eh?",
+                                                            "score": -4,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-06-16 11:28:07",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": ">Findings regarding the possibility of confounding of racial identity in deep learning models suggest a possible mechanism for racial disparities resulting from AI models: that AI models can directly recognise the race of a patient from medical images. However, this hypothesis is largely unexplored\nand, in contrast to other demographic factors (eg, age and sex), there is a widely held, but tacit, belief among radiologists that the identification of a patient's race from medical images is almost impossible, and that most medical imaging tasks are essentially race agnostic (ie, the task is not affected by the patient's race). Given the possibility for discriminatory harm in a key component of the medical system that is assumed to be race agnostic, understanding how race has a role in medical imaging models is of high importance\nas many AI systems that use medical images as the primary inputs are being cleared by the US Food and Drug Administration and other regulatory agencies.",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 10:14:14",
+                    "replies": []
+                },
+                {
+                    "author": "JogtheFerengi",
+                    "body": "Potentially a privacy risk? You try to anonymize an xray by cropping it and the the Ai tells you a bunch of stuff about that patient.",
+                    "score": 13,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 09:38:16",
+                    "replies": [
+                        {
+                            "author": "fwubglubbel",
+                            "body": "But who's looking at anonymized x-rays? And who cares what they know about a person; the system won't predict their name.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 10:08:04",
+                            "replies": []
+                        },
+                        {
+                            "author": "carlos_6m",
+                            "body": "That doesn't look to me like the reason... The AI can tell you the patients race, a doctor (i guess specialised in the subject, I can't) could tell you too, but less acuratelly , but it's only one detail about the subject and it's not considered identifying information in the ethics and privacy sense of the term, it would not be considered a risky thing",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 10:12:02",
+                            "replies": [
+                                {
+                                    "author": "jupitaur9",
+                                    "body": "If you can tell a person is \u201cBlack\u201d and you think \u201cBlack\u201d people don\u2019t care for their health, your advice to them might be different, for no actual good reason. \n\nYou might tell them just make sure to take their pills instead of pushing them to make lifestyle changes that are more effective, but take more effort.",
+                                    "score": 7,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-16 10:18:49",
+                                    "replies": [
+                                        {
+                                            "author": "carlos_6m",
+                                            "body": "You wouldnt get xrays anonimised if you're part of the care team, if you're in any position to do something like that, you're not learning the patient is of a certain ethnic group from using AI on an xray",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2022-06-16 10:25:47",
+                                            "replies": [
+                                                {
+                                                    "author": "jupitaur9",
+                                                    "body": "You really think all x-rays are analyzed by people at the facility, and not by someone overseas being paid pennies in comparison?",
+                                                    "score": -1,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-06-16 11:14:29",
+                                                    "replies": [
+                                                        {
+                                                            "author": "carlos_6m",
+                                                            "body": "In my country they are",
+                                                            "score": 3,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-06-16 11:27:12",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "jupitaur9",
+                                                                    "body": "Interesting. It\u2019s common practice in the US.",
+                                                                    "score": -1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-06-16 11:54:21",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "author": "asdrandomasd",
+                                                            "body": "X-rays are analyzed by radiologists? What country do you live in?",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-06-16 17:31:40",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "jupitaur9",
+                                                                    "body": "In the US, it is common practice to outsource. I didn\u2019t say anything about radiologists. \n\nhttps://www.zmescience.com/research/some-90-of-radiology-services-in-the-u-s-hospitals-are-outsourced-05354/",
+                                                                    "score": 0,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-06-16 19:39:22",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "asdrandomasd",
+                                                                            "body": "Did you read the article? Also what source is this?  Let\u2019s assume the credibility of this source and go by the text\u2026. The article tried to imply that the X-rays are read overseas but it really just says that the films are not read by radiologists at the hospital. Instead, they contract out to physician groups.\n  \nSo your supposition that cheap labor overseas are reading the X-rays aren\u2019t quite right. American radiologists likely reading it while at home",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2022-06-16 21:26:25",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "jupitaur9",
+                                                                                    "body": "The point I was making is that the physician treating you isn\u2019t the one reading the images. So it does add a new risk of bias. \n\nYou would think that there is then no risk of racial bias in diagnosis. The person reading the image can\u2019t see the patient. \n\nHowever, if AI can detect the \u201crace\u201d of the patient from the image, a person might be able to, also.",
+                                                                                    "score": 1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2022-06-16 22:21:14",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "asdrandomasd",
+                                                                                            "body": "Interesting claim and assertion of that claim...a couple of issues:\n\n1. Radiologists definitely can't consistently tell a patient's race based on plain films.  It's not really relevant.  They're more likely to infer race from the patient's name on the study or description that the ordering physician put in when ordering the study.\n2. The ordering provider (at least in emergency departments) also look over the plain films, so most times, the treating physician DOES review the images.",
+                                                                                            "score": 1,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2022-06-16 22:57:52",
+                                                                                            "replies": [
+                                                                                                {
+                                                                                                    "author": "jupitaur9",
+                                                                                                    "body": "The fact that AI can discern a difference suggests humans might be able to. \n\nBut I was just answering the question of how this could contribute to different care based on race  that question assumed that the treating doctor was the one reading the images, and so they wouldn\u2019t have any new information from the images, since they can already see the patient right in front of them.",
+                                                                                                    "score": 1,
+                                                                                                    "depth": 11,
+                                                                                                    "timestamp": "2022-06-16 23:15:54",
+                                                                                                    "replies": [
+                                                                                                        {
+                                                                                                            "author": "asdrandomasd",
+                                                                                                            "body": "I'm not saying it's impossible, but it is highly improbable.  An AI is able to take into account exponentially more variables that humans would never even consider.  Because it's not clinically relevant.  \n\nThey probably somehow factor ratios between patient's bones or some other inconsequential detail that radiologists definitely would not bother thinking about.  There is no reason for a radiologist to do so.  \n\nAlso, what would a radiologist read differently even if they somehow MAGICALLY had this information?",
+                                                                                                            "score": 1,
+                                                                                                            "depth": 12,
+                                                                                                            "timestamp": "2022-06-16 23:52:28",
+                                                                                                            "replies": []
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "Deleted",
+                                            "body": "[removed]",
+                                            "score": 6,
+                                            "depth": 4,
+                                            "timestamp": "2022-06-16 10:22:24",
+                                            "replies": [
+                                                {
+                                                    "author": "jupitaur9",
+                                                    "body": "It\u2019s the diagnostician, who may not be in the same country as the doctor, or ever see the patient.\n\nhttps://www.zmescience.com/research/some-90-of-radiology-services-in-the-u-s-hospitals-are-outsourced-05354/",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-06-16 11:15:28",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "CatalyticDragon",
+                            "body": "Don\u2019t forget simple bias creeping in as well.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 10:31:51",
+                            "replies": [
+                                {
+                                    "author": "wild_man_wizard",
+                                    "body": "This is the actual reason.  Data contamination.  A doctor's racial biases are assumed to be \"white noise\" by creators of medical image diagnostic algorithms, but this study shows that the same types of algorithms commonly used for medical imaging diagnoses can also easily identify race, so any race-based underdiagnosis (which is a known and profound problem for minorities) will likely be perpetuated by the AI.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-16 10:49:45",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "Imagine a study that uses these X rays to determine whether a certain course of treatment for a given disease is worth the expense involved. An AI model gets a large training set of X rays together with the outcomes from those patients after the treatment. \n\nThen it's shown a new X ray and is asked to predict the outcome for that patient. If it predicts a positive outcome, the treatment is recommended. If not the treatment is not recommended. \n\nOne problem is that the training data the model is trained on was probably taken from a variety of different hospitals and research facilities with different levels of funding, standards of care, etc. Because of structural racial inequalities, the patients at hospitals with lower standards of care and worse outcomes might be more likely to be from certain racial groups. An AI model capable of discriminating between racial groups will \"automatically\" learn to use this information in predicting outcomes. So two otherwise identical patients might receive different recommended courses of treatment if they're from separate racial groups.\n\nImagine something like this being used to determine whether you were eligible for potentially lifesaving care.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 11:22:23",
+                            "replies": []
+                        },
+                        {
+                            "author": "mancer187",
+                            "body": "This is the answer.",
+                            "score": -1,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 09:49:32",
+                            "replies": [
+                                {
+                                    "author": "carlos_6m",
+                                    "body": "Turns out its totally not the answer",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-16 10:52:53",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "carlos_6m",
+                                    "body": "Is it? Like, did you see it somewhere or know it for a fact or is it just it sounds to you like the answer?",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-16 09:55:20",
+                                    "replies": [
+                                        {
+                                            "author": "mancer187",
+                                            "body": "I know it.  I was a sysadmin for a hospital for a long time, I just know.",
+                                            "score": -4,
+                                            "depth": 4,
+                                            "timestamp": "2022-06-16 09:57:12",
+                                            "replies": [
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "I picture you putting your hand on the server and listening to its whispers.",
+                                                    "score": 4,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-06-16 10:20:36",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "TheSavouryRain",
+                                            "body": "They used logic to make a reasonable judgement.",
+                                            "score": -1,
+                                            "depth": 4,
+                                            "timestamp": "2022-06-16 09:57:48",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "wild_man_wizard",
+                    "body": "It's fairly commonly known that racial minorities and women are under-diagnosed by doctors.  If the training data is contaminated with that bias and the algorithm can detect sex/race, the algorithm will *also* under-diagnose those populations.  \n\nIf monkey can see, monkey will do.",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 10:09:19",
+                    "replies": []
+                },
+                {
+                    "author": "No_Income6576",
+                    "body": "Unintentional confounding in your data, particularly when you can't audit how the model performs over different races directly.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 10:07:45",
+                    "replies": []
+                },
+                {
+                    "author": "Lykanya",
+                    "body": "But that information is important/relevant? Races (and sexes) react differently to various medication for example, knowing someones race is impactful in treatment options. \n\nI wonder how much of this is fear of perceptions of racism and how much is to do with actual racial biases.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 10:47:19",
+                    "replies": [
+                        {
+                            "author": "tdgros",
+                            "body": "I believe the point is that it's not always relevant. It could stem from racism or other non-medically related bias.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 11:32:08",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Dont____Panic",
+                    "body": "Exactly. Finding someone\u2019s age or race by feeling an X-ray into an AI isn\u2019t \u201crisky\u201d.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 10:19:28",
+                    "replies": []
+                },
+                {
+                    "author": "dot-c",
+                    "body": "I'm not sure either...\nOne risk is an AI, that, because of the racial distinction egrained into the model, performs worse than a counterpart without those distinctions. But that doesn't make any sense. Wouldn't you want an AI that matches its domain more closely? An AI that learns those differences in biology, could only use them to do better, not worse. Thats the only meaning that relates the \"risk\" to the \"model deployments\"...\n\nOr its about privacy? Ex.: A radiation therapy tech, who creates intentionally dangerous treatment plans, to harm people of certain races? But it says, \"risk for all model deployments\", not \"risk for patients, at the mercy of racist doctors, who have an AI to pick out people they dont like\" or something like that.\n\nCouldn't think of any other meanings, but i'm also neither an expert on machine learning nor english....",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 10:37:00",
+                    "replies": [
+                        {
+                            "author": "carlos_6m",
+                            "body": "i read a bit more and the explanation is more simple, it has to do with bias in diagnostics made by humans, if you have a condition that isn't properly diagnosed in a certain race, like severe cases being considered mild in a certain ethnic group because of bias, then the database you use to train the AI has those biases too, and AI could associate those biases with race and continue them, that's the risk, and the researchers say that AI used for diagnostic should be checked for this, to avoid the AI making the same mistakes that humans make because it was trained on a data base that has those mistakes too",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 10:44:08",
+                            "replies": [
+                                {
+                                    "author": "dot-c",
+                                    "body": "Ohhh, now i get it, thanks!",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-16 10:50:22",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": 25,
+            "depth": 0,
+            "timestamp": "2022-06-16 10:00:29",
+            "replies": [
+                {
+                    "author": "BlueGumShoe",
+                    "body": "Articles have been published for decades now in fields like forensic anthropology and epidemiology that show evidence for the concept of race having at least *some* biological basis. The key , as you alluded to, is nuance. There is social construction around race its just not everything.\n\nFor some reason this is considered a naughty thing to say on reddit.",
+                    "score": 17,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 10:22:52",
+                    "replies": [
+                        {
+                            "author": "Test19s",
+                            "body": "At least historically most genetic variation that doesn\u2019t have to do with physical appearance only loosely follows racial lines. There are huge differences under the hood between Somalis and Ghanaians even though they look similar to the untrained eye, and similarly between Burmese and Mongolians. So \u201crace\u201d helps a lot less than actual origin unless you\u2019re in a society where most White, Black, and Asian people come from the same regions.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 16:39:04",
+                            "replies": [
+                                {
+                                    "author": "BlueGumShoe",
+                                    "body": "Yeah that makes sense. An example that most (American)people have seen is the race vs. hispanic origin questions on the US census.\n\nTheyre often conflated, I suppose. Really depends on what you are trying to examine and what your sample group looks like. We should probably try to move towards using origin when possible. But I think thats the issue, how many people, unless they're 1st or 2nd gen. immigrants etc., know what their origin is? Race is just an easier umbrella category for researchers to use.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-16 17:56:17",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "Noticing differences =/= racism. If you think there are NO differences between races you are in denial of the truth. And like you said, a lot of modern cultures do that, specially 'woke' culture.",
+                            "score": 7,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 11:30:29",
+                            "replies": []
+                        },
+                        {
+                            "author": "bluexbirdiv",
+                            "body": "It\u2019s not \u201cnaughty\u201d, it\u2019s just wrong. Race is an entirely constructed categorization system. Obviously differences exist between human beings, and there are real biological and social reasons for those differences. But the lines we have constructed to categorize those differences into \u201craces\u201d is effectively arbitrary, because it could be done infinite different ways and no one method would be objectively the \u201cbest\u201d. An AI being able to decode this particular categorization system from xrays doesnt mean it couldnt have done the same if we\u2019d used a different system.",
+                            "score": -2,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 12:14:52",
+                            "replies": [
+                                {
+                                    "author": "BlueGumShoe",
+                                    "body": ">But the lines we have constructed to categorize those differences into \u201craces\u201d is effectively arbitrary, because it could be done infinite different ways and no one method would be objectively the \u201cbest\u201d.\n\nYeah so? Is understanding biology some kind of winner-take-all system? \n\n>An AI being able to decode this particular categorization system from xrays doesnt mean it couldnt have done the same if we\u2019d used a different system.\n\nAgain this statement proves nothing. Lets say the AI could tell from xrays whether someone is right or left handed or any other minor thing. Doesn't mean those categorizations don't exist. I'm not sure what youre even trying to say here.\n\nTbh this kind of answer is why I usually don't comment on stuff like this. Because I usually get some word-salad answer assuming I'm a klu-klux conservative.\n\nIn the article they talk about doing their best to rule out confounders like (in their words), \"obvious anatomic and phenotypic confounder variables\". Even adding noise to the imagery or reducing resolution did not reduce the AI model's overall ability to detect racial differences.\n\nI used the word nuance in my comment for a reason. I'm not saying race is 100% a valid medical definition across all categories or that we should be basing policy off of it. I'm fine with saying that race is 95% socially constructed, and obviously there is way more variation within \"racial groups\" than between them. But acting like it doesn't exist when genetic, anthropological, epidemiological etc. studies show that there is maybe something worth studying is not helping people. I wonder if it may be harming them when we find differences in disease burdens and just want to pin everything on socioeconomic factors.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-16 14:10:54",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "[deleted]",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 20:08:01",
+                            "replies": [
+                                {
+                                    "author": "2Big_Patriot",
+                                    "body": "Elves, dwarves, and hobbits definitely are different. Half-orc probably fails to be a recognized race despite the strength benefits. \n\nDoes Neanderthal count as a race?",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-16 21:02:01",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "BlueGumShoe",
+                                    "body": "Ok then lets use ancestry / origin then, as I said in my answer to u/Test19s . \n\nThough I have a feeling that if, hypothetically, the word race was retired from the english language 20 years from now, at least some of the people who now like to say \"race doesn't exist\" would then say \"ancestry doesn't exist\".\n\nI'm fine with using the more rigorous, scientific definition. Just seems like theres a lot of people who would rather get caught up in emotional semantics than look at actual science.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-18 08:10:08",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "khamelean",
+            "body": "Is \u201cpredict\u201d really the right word? Wouldn\u2019t \u201cdetermine\u201d or \u201cguess\u201d be more appropriate???",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2022-06-16 11:06:38",
+            "replies": [
+                {
+                    "author": "paradoxwatch",
+                    "body": "Determine, at least to my ears, sounds more concrete, as if it knows it's correct, while guess makes it sound like it's not taking data into account. Prediction, being defined as something that a person thinks will happen or is accurate, but that they are unsure of the accuracy, sounds best to me.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 14:46:58",
+                    "replies": []
+                },
+                {
+                    "author": "Laytonio",
+                    "body": "It's predict because its based on a self report. The AI is predicting what someone would say their race was, not determining what there race actually is.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 17:49:23",
+                    "replies": []
+                },
+                {
+                    "author": "daynomate",
+                    "body": "Predict is the correct word here. The outcome is probabilistic based on the model.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-06-17 02:19:48",
+                    "replies": []
+                },
+                {
+                    "author": "demintheAF",
+                    "body": "nope, \"predict\" is the word used in the industry. It's a model, and it presents a likelihood of each category it has.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-06-17 08:47:47",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "bigkoi",
+            "body": "Not surprising at all.\n\nAnyone trained in anatomy can predict race based on a skeleton.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2022-06-16 11:36:39",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "Perhaps you should tell the authors of this peer reviewed paper in the world's pre-eminent medical journal, because they seem to think that\n\n>there is no known correlation for race on medical imaging that would be obvious to human experts when interpreting the images.\n\n&#x200B;\n\n>In this modelling study, which used both private and public datasets, we found that deep learning models can accurately predict the self-reported race of patients from medical images alone. This finding is striking as this task is generally not understood to be possible for human experts.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 23:23:01",
+                    "replies": [
+                        {
+                            "author": "bigkoi",
+                            "body": "It's fairly straightforward to detect race based on a skeleton of someone that is of European, African or Asian decent.  Now skeletons of mixed race people are more difficult. Perhaps the article is referring to mixed race.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-06-17 10:53:52",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Test19s",
+                    "body": "Does this work outside of the extreme cases of coastal West Africans, Northern Europeans, and Far East Asians? The USA happens to have been settled by very \u201cwhite\u201d White colonists and very \u201cblack\u201d Black slaves. Somewhere like France that has heavy Mediterranean and North African legacies likely won\u2019t be able to use racial classifications from the USA.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 16:44:06",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Alice_D",
+            "body": "What I find interesting is despite having a trained AI which is able to predict race with high accuracy, researchers can\u2019t tell which image characteristics the AI picks up on. Even after applying different filters and removing all colour data from the x-rays, the predictability rate remained pretty high. Maybe there is a way to reverse-engineer the AI?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2022-06-16 10:08:21",
+            "replies": [
+                {
+                    "author": "grat_is_not_nice",
+                    "body": "This is an issue with all deep-learning neural networks. There isn't a mechanism to explain the decision.",
+                    "score": 13,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 10:22:28",
+                    "replies": [
+                        {
+                            "author": "thestereo300",
+                            "body": "That\u2019s a mix of terrifying and fascinating.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 11:37:15",
+                            "replies": []
+                        },
+                        {
+                            "author": "dataphile",
+                            "body": "Was going to say this. It\u2019s known as the explainability problem. There are \u2018hidden layers\u2019 in the network that essentially work as \u2018latent variables.\u2019",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 12:23:20",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "epileftric",
+                    "body": ">Maybe there is a way to reverse-engineer the AI\n\nNo, there usually isn't a way. That's the most worrying thing about AI and machine learning, once you get it working in a way, you can't really know how it's doing it. Because the trained models are huge huge huge matrices and  tensors with a bunch of coefficients. \n\nThese models try to emulate how the actual brain and neurons work. We don't know how those work either. So it's almost impossible to reverse engineer an AI model to a way of extracting useful information out of the model itself.\n\nThat's why it is such a controversial subject. People argue that if you can't really know what's going on under the hood, you shouldn't trust it at all.",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 10:27:08",
+                    "replies": [
+                        {
+                            "author": "Bannon9k",
+                            "body": "Man, maybe I should move into machine learning development.  It sounds like I'd be exceptional at it... Since I don't know how some of my code changes work.  I call that hand grenade programming, it's my fall back when I get stuck.  Just start chunking things at the problem until something hits and it works.\n\nNow the scary part, there's probably many developers working on Machine learning and AI doing the same thing.  True artificial intelligence is gonna be an accident that some developer finds out is alive after coming back from a long lunch.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 11:01:40",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "Please never do \"hand grenade programming\". Ever.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-16 23:20:38",
+                                    "replies": [
+                                        {
+                                            "author": "Bannon9k",
+                                            "body": "Obviously that's not what goes into production.  I use it locally to figure out a problem.  Once I understand what's going on I write appropriate code.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2022-06-17 08:19:33",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "These valid criticisms apply almost entirely to deep neural networks, a subset of machine learning, which is a subset of AI. There are many other methods out there within machine learning and AI that don't suffer from this \"black box\" behavior.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 11:41:06",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "InTheEndEntropyWins",
+                    "body": ">Maybe there is a way to reverse-engineer the AI?\n\nIt depends on how they built the model. Some models work in a way, where we can ask why it came to that conclusion. Other models are more complicated and it's not possible to easily understand why it has come to the conclusion it has.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 10:22:54",
+                    "replies": []
+                },
+                {
+                    "author": "Justwant2watchitburn",
+                    "body": "I feel like this is the important and more interesting part. Good to know these issues exist too so we can limit it as much as possible.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 11:27:33",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2022-06-16 10:36:03",
+            "replies": [
+                {
+                    "author": "oddbolts",
+                    "body": "No, the authors mention that and they made sure it wasn't a factor. They were very thorough with secondary stuff like that which is why the results are so interesting.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 11:00:35",
+                    "replies": [
+                        {
+                            "author": "oldwhiner",
+                            "body": "Then it seems it must be bone density stuff, from socioeconomic factors?",
+                            "score": -3,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 11:03:06",
+                            "replies": [
+                                {
+                                    "author": "beartheminus",
+                                    "body": "For that to make sense, black people would need to have less dense bones than white people, and its the other way around.\n\nhttps://pubmed.ncbi.nlm.nih.gov/9024231/#:\\~:text=Adjusted%20bone%20density%20at%20various,variables%20measured%20in%20early%20adulthood.",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-16 11:11:46",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "want-to-say-this",
+            "body": "Can\u2019t this also be a good thing. Like as an example red heads need more anesthetic for surgery. So if AI is checking them it is a good thing it can tell not Asian or Black or whatever and give them the right dosage. So can\u2019t this be used for good?\n\nEdit spelling",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2022-06-16 10:56:32",
+            "replies": [
+                {
+                    "author": "dataphile",
+                    "body": "You\u2019re right to ask the question. In fact, the medical field explored using self-reported race to potentially help with diagnosis. The issue is that self-reported race (at least in the U.S) is a poor proxy for the place that your ancestors lived before modern technology created mass mobility. \n\nFor instance, studies explored the greater prevalence of sickle cell in black Americans, which is documented. However, the greatest amount of genetic diversity comes from people descended from the continent of Africa. There is a higher likelihood of two African-descended individuals being quite different genetically than all the rest of the world. Humans spent most of our history in Africa, and spread to everywhere else much more recently.\n\nLong story short, studies found diagnosis with self-reported black race was less effective than not using it.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 12:20:28",
+                    "replies": [
+                        {
+                            "author": "want-to-say-this",
+                            "body": "Makes sense. Just seems like anything that differentiates race is bad unless it\u2019s inherently good like a compliment or a super fact. \n\nIf AI can tell me being white black brown or whatever will prevent something bad I\u2019m all for it.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 12:30:07",
+                            "replies": []
+                        },
+                        {
+                            "author": "Test19s",
+                            "body": "The great majority of Black Americans are of West African and British/Irish descent with smaller amounts of continental European, Bantu, Native American and Malagasy. They may superficially look similar to Ethiopians or Somalis (who are of East African, Arabian, and possibly Levantine or Mediterranean descent) but they\u2019re wildly different genetically.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-06-16 16:42:11",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Test19s",
+            "body": "Are these American datasets? The fact that most Black people in the USA come from the immediate coast of West Africa and most White people come from Northern Europe means that the USA has a color line that does not exist in Europe, Latin America, Asia, or most parts of Africa.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2022-06-16 16:46:19",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "People can do that too. Not saying it isnt an achievement in recognition software. But the science about bone differentiation between races is pretty established and a regular program could do the same probably",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2022-06-16 21:06:30",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "I wonder how many different times this topic is going to be posted as new research in the subreddit",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2022-06-17 09:05:56",
+            "replies": []
+        },
+        {
+            "author": "EmotionallyUnsound_",
+            "body": "Are you sure \"race\" is the right word?",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2022-06-16 11:00:30",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": -6,
+            "depth": 0,
+            "timestamp": "2022-06-16 10:29:36",
+            "replies": [
+                {
+                    "author": "NoScienceJoke",
+                    "body": "Did you even read the article?",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2022-06-16 10:33:29",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "So? a we can already do it without AI it's common as heck in anthropology and forensic science. The doctors don't because it's time consuming. \n\nThis is automation.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-06-16 11:05:54",
+            "replies": []
+        },
+        {
+            "author": "Graphic_Materialz",
+            "body": "They trained AI to determine a made-up construct of human societies that fluctuates widely depending on time, controlling political party, location and many other factors? Isn\u2019t this supposed to be the same community that tells us race isn\u2019t real? No sarcasm here\u2014I think it\u2019s odd that a group of scientists would do this. What is there to be gained? This feels like modern frenology.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-06-16 11:42:44",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "I can predict people's face from x-ray images. I can predict it from their postcodes. The question is - how good is the prediction?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-06-16 15:04:34",
+            "replies": []
+        },
+        {
+            "author": "South_Data2898",
+            "body": "Good, now the AI can explain to people why Hispanic is not a race.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-06-17 14:54:53",
+            "replies": []
+        }
+    ]
+}

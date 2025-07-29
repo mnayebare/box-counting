@@ -1,0 +1,355 @@
+{
+    "post_title": "AI Agents Crash Course: What You Need to Know in 2025",
+    "post_timestamp": "2025-04-20 11:04:48",
+    "last_comment_timestamp": "2025-05-30 06:09:02",
+    "time_difference": "39 days, 19:04:14",
+    "comments": [
+        {
+            "author": "Otherwise_Repeat_294",
+            "body": "Always remember to sell shovels to gold miners",
+            "score": 70,
+            "depth": 0,
+            "timestamp": "2025-04-20 11:17:33",
+            "replies": [
+                {
+                    "author": "No-Challenge-4248",
+                    "body": "I had to laugh. This stuff is truly silly. Agents have been around since th 60's and this is another iteration that has more inherent risk than the rules based agents.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-20 16:27:06",
+                    "replies": [
+                        {
+                            "author": "Beanb0y",
+                            "body": "What are the risks?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-04-21 02:53:02",
+                            "replies": [
+                                {
+                                    "author": "No-Challenge-4248",
+                                    "body": "1. LLMs don't do math - everything is stored as text and in chunks (tokens) which may cut numbers. It is not a calculator but simply a wors predictor\n2. Lack of context - no matter what the latest AIs Brosnan say it does not understand context\n3. As it guesses at the right word it will make things up just to fill in gaps\n4. In an MCP configuration with LLMs you increase the likelihood of generating false output (this assumes you are using it for productivity rather than making things like art or a story)\n5. If you use your own data for this then you increase the risk of exposing your data to bad actors aince these agents have little means of actual controls to prevent attacks\n\n\nThere is more but for a general end user who looks to build personal workflows (aka... agents) these are the critical points.",
+                                    "score": 7,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-21 05:23:27",
+                                    "replies": [
+                                        {
+                                            "author": "Critical-Elephant630",
+                                            "body": "This isn't entirely accurate. While LLMs are fundamentally text prediction models, they can perform mathematical calculations, especially modern models like Claude. They're trained on mathematical content and can solve many numerical problems. However, they do have limitations with very complex calculations or extremely precise arithmetic.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-21 22:59:36",
+                                            "replies": [
+                                                {
+                                                    "author": "No-Challenge-4248",
+                                                    "body": "Sorry... that is not \"math\" in the sense that us humans use. Many of those types of equations are repeatable and hence have a significant chance of looking accurate. When precision of any type is needed (wheher it is reseqrch or financial) and requires accuracy all the time then it is a prescriptive mathematical model that does it. LLMs in a multimodal configuartion gives the impression that they do do it but it offloads the calculation to an actual marhematical model (converts text to number,  calculates then returns the result as a text output to the calling LLM). My teams do it this way as we keep finding LLMs truly are bad at numbers and not reliable even for simple quoting tools.",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-22 07:00:53",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "Otherwise_Repeat_294",
+                                            "body": "Stop destroying people dreams with reality \ud83d\ude00",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-21 08:39:50",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Comfortable-Ad-6740",
+                                    "body": "AI agents can work in unpredictable ways, whereas rules-based you can be pretty certain on the outcome. \n\nCursors support chatbot making up a non-existent policy that led to people unsubscribing would be an example. Obviously not an earth shattering moment, but put a similar flaw into an agent managing defences etc",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-21 05:18:25",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Arindam_200",
+            "body": "Great post,\n\nI've created a Playlist to build Agents with different Agents Frameworks: [https://www.youtube.com/playlist?list=PLMZM1DAlf0LqixhAG9BDk4O\\_FjqnaogK8](https://www.youtube.com/playlist?list=PLMZM1DAlf0LqixhAG9BDk4O_FjqnaogK8)\n\nwould love your feedback!",
+            "score": 19,
+            "depth": 0,
+            "timestamp": "2025-04-20 12:22:41",
+            "replies": [
+                {
+                    "author": "NoleMercy05",
+                    "body": "Hey these are good. I previewed but will watch them in full today. Thanks",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-04-21 05:29:24",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Asclepius555",
+            "body": "I'm not very motivated to learn all this process when there will come a day in our not too distant future that agents will be streamlined and fully functional for the basic needs I have.",
+            "score": 11,
+            "depth": 0,
+            "timestamp": "2025-04-20 11:36:21",
+            "replies": [
+                {
+                    "author": "demiurg_ai",
+                    "body": "100%. Stuff like n8n will be gone in a few years. Even today, we have the means to just code multi-agent systems however we want, using an AI coding assistant. Vibe-coding enabled millions to build their own AI Agents, by inspiring us to build a platform that features \"vibe-building\" multi-agent teams, for devs and non-devs alike",
+                    "score": 10,
+                    "depth": 1,
+                    "timestamp": "2025-04-20 12:44:33",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "robert-at-pretension",
+            "body": "For mcp go to [http://reddit.com/r/mcp](http://reddit.com/r/mcp)\n\nFor A2A go to: [https://www.reddit.com/r/AgentToAgent/](https://www.reddit.com/r/AgentToAgent/) \n\nThose two protocols are going to take over, mark my words",
+            "score": 17,
+            "depth": 0,
+            "timestamp": "2025-04-20 17:48:07",
+            "replies": []
+        },
+        {
+            "author": "maturelearner4846",
+            "body": "Very few YouTube tutorials on hosting agents or RAGs.\n\n Which is cheapest? Which is easiest to deploy? Which has hidden charges?\n\nThere's literally a space for such content, amongst 100s of tutorials on how to rag/agent with API.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-04-20 14:02:07",
+            "replies": [
+                {
+                    "author": "Latter-Friendship296",
+                    "body": "Well said",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-04-21 07:31:44",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Serial_Innovator",
+            "body": "Do you advise langchain with crewai? What\u2019s the main difference between them?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-04-20 14:57:46",
+            "replies": [
+                {
+                    "author": "Additional-Storm9137",
+                    "body": "Both LangChain and CrewAI help you build LLM\u2011powered applications, but their focuses differ:\n\n\t\u2022\tLangChain is a general\u2011purpose framework of Chains, Tools, Agents, and Memory. You design the workflow yourself (it can be linear, branched, or even a graph), and Agents call Tools (which could be anything\u2014APIs, custom code, or even a wrapped CrewAI workflow).\n\t\u2022\tCrewAI is a higher\u2011level multi\u2011agent collaboration framework: you define Agents and Tasks once, and the Crew runtime orchestrates them for you.\n\nYou can indeed expose a CrewAI \u201ckickoff\u201d call as a Tool in LangChain\u2014so your LangChain Agent simply treats the entire CrewAI workflow as one node/action.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-21 22:05:32",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "malsatian",
+            "body": "I\u2019m trying to make an agent to help me in my research for creating software demos. I work for an enterprise company that has lots of products that work together for specific solutions. \n\nThe problem I\u2019m trying to solve is whenever we need a demo for a particular topic, I\u2019ve gotta look in disparate places to get the info I need. Some are in Loom videos, YT, or help docs. Got any idea on how I should get started? I\u2019ve made a few agents on Skool using make.com and ChatGPT. But now I\u2019m working for a company that uses Atlassian agent maker.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-04-20 19:26:44",
+            "replies": []
+        },
+        {
+            "author": "kimiroger",
+            "body": "Where does Flutterflow come in? I am trying to build an one-click image capture, editing and upload app and asked Chatgpt to guide me since I don\u2019t know coding or python and it suggested me to use Flutterflow, Supabase, Make. What do you think?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-20 11:30:34",
+            "replies": [
+                {
+                    "author": "yaboy_abdoul",
+                    "body": "Late answer but these things are different. FlutterFlow will help you create an app which solves 1 problem (ideally). The app could use an agent built using everything explained in the post or not. The agent would probably be a feature of your app that you integrate with some API calls.\u00a0",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-27 11:52:29",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "honesthumblehuman",
+            "body": "Great compilation",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-20 13:42:20",
+            "replies": []
+        },
+        {
+            "author": "CauliflowerOk5266",
+            "body": "great thanks!",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-20 16:06:30",
+            "replies": []
+        },
+        {
+            "author": "ajax_shotz",
+            "body": "Thanks for this, going to put this into practice",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-20 17:15:59",
+            "replies": []
+        },
+        {
+            "author": "BeginningAbies8974",
+            "body": "Are there any Chat UIs to experiment, am AI chat where you can add your own AI model, add tools for the model and then prompt the model to use the tools in agentic way to see how it all works?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-20 17:45:17",
+            "replies": []
+        },
+        {
+            "author": "OxymoronicallyAbsurd",
+            "body": "Do Microsoft 365 Enterprise offer this type of support for custom agent that can work on stuff like database, excel, etc?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-20 17:50:39",
+            "replies": []
+        },
+        {
+            "author": "ElephantExpensive231",
+            "body": "Hi everyone. I have been going through some resources to understand AI agents and prompting. I feel like doing something practically is the best way to learn rather than just consuming resources. I\u2019m into analytics field working in risk and compliance. I want to create agents as well but I\u2019m running short of ideas . If someone could please guide me ?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-20 23:49:36",
+            "replies": []
+        },
+        {
+            "author": "jentravelstheworld",
+            "body": "Great post",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-21 01:27:11",
+            "replies": []
+        },
+        {
+            "author": "itsanindyanath",
+            "body": "Thanks for this post.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-21 04:31:40",
+            "replies": []
+        },
+        {
+            "author": "baldricBadder",
+            "body": "Thx!!! \ud83d\udc4d",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-21 08:35:11",
+            "replies": []
+        },
+        {
+            "author": "Prior-Inflation8755",
+            "body": "I have built AI wrappers and can say also:\n\n\u2022 focus focus focus\n\n\u2022 niche niche niche\n\n\u2022 sell AI wrappers who doesn't know what is API  \n  \namazing post and amazing value.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-21 10:21:15",
+            "replies": []
+        },
+        {
+            "author": "SuperBadBean",
+            "body": "Interesting",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-21 11:08:57",
+            "replies": []
+        },
+        {
+            "author": "cRafLl",
+            "body": "What are AI agents? Examples?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-21 14:11:10",
+            "replies": []
+        },
+        {
+            "author": "BattleCommercial1160",
+            "body": "What do you use for your agent flows? N8n? What\u2019s your website / how do you find clients?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-21 17:27:14",
+            "replies": []
+        },
+        {
+            "author": "Fluffy_Sheepherder76",
+            "body": "n8n and CrewAI in the same sentence? You just solved half my stack planning, lol.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-22 15:14:17",
+            "replies": []
+        },
+        {
+            "author": "Poppi143",
+            "body": "Hi there, I\u2019m 62, not very good with computers but I do know the future is changing very quickly, I don\u2019t want to be left behind so I am trying to do as much research as I can. While doing this I\u2019ve thought about my children and how it will effect them and their futures. My two  daughter both work as nurses in the accident and emergency rooms at my local hospital and I am very proud of them, unfortunately neither of them have much computer knowledge apart from normal basics.\nThey both work over 60 hours a week and literally have no time to study or look into Ai. They were previously wanting to open an online store and sell products to make extra income for their families but just never had the time.\nWe live in the UK and because the economy is so bad at the moment and looking to get even worse I want to help them in any way I can. \nThey are looking to have a shop built that would 1.totally run it\u2019s self 24/7\n2.that could find high selling products on line\n3.advertise on the shop\n4.promote to Amazon, eBay, other platforms for the cheapest way but highest return\n5.postage cost calculators\n6.incorporate payments, \n7.security\n8. Anything else that\u2019s needed to build a successful self running profitable store that could bring in an extra income.\n\nIf it\u2019s not the thing for you any suggestions of people who could do it for me and costs it would be to make and monthly running costs for it?\n\nGreatly appreciate any help\nThank you",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-24 13:59:24",
+            "replies": [
+                {
+                    "author": "Interesting-Invstr45",
+                    "body": "Hope this helps - Look into tutorials on ChatGPT/Claude AI and then use them to help build the above \ud83e\udd37\u200d\u2642\ufe0f",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-25 01:56:20",
+                    "replies": []
+                },
+                {
+                    "author": "yaboy_abdoul",
+                    "body": "You have multiple options:\n- become familiar with AI tools like Cursor which will help you build whatever you want. Security will need to be triple checked though.\u00a0\n- use Shopify. It allows you to create a secure storefront very quickly and easily and there\u2019s tons of free resources on how to customize your website as you wish.\u00a0\n- get a dev to build your product. If they\u2019re pro, they\u2019ll offer the most customization since they will build it from the ground up. Might take longer though.\u00a0\n\nGood luck!",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-27 12:00:43",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "PermissionItchy7425",
+            "body": "Thanks. Where does langgraph fit? ( not langchain) . I see a lot of traction",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-28 23:54:15",
+            "replies": []
+        },
+        {
+            "author": "ARTIAL_AI",
+            "body": "Also a good link: [https://huggingface.co/learn/agents-course/en/unit0/introduction](https://huggingface.co/learn/agents-course/en/unit0/introduction)",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-02 16:51:27",
+            "replies": []
+        },
+        {
+            "author": "Intelligent_Act7517",
+            "body": "hi-im on a quest to learn AI Agent development. Thanks for the info. Im as novice as they come and would like to work with you to develop my idea. how ca we proceed?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-26 15:22:22",
+            "replies": []
+        },
+        {
+            "author": "RazzleLikesCandy",
+            "body": "Got any specific course recommendations from hugging face?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-30 06:09:02",
+            "replies": []
+        },
+        {
+            "author": "Kkamau",
+            "body": "Thanks for this. Now i have somewhere to start!!",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2025-04-20 14:18:32",
+            "replies": []
+        }
+    ]
+}

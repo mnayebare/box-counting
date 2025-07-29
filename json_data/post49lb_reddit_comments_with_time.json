@@ -1,0 +1,288 @@
+{
+    "post_title": "The War of AI : 2025",
+    "post_timestamp": "2025-01-29 08:37:39",
+    "last_comment_timestamp": "2025-02-02 15:44:34",
+    "time_difference": "4 days, 7:06:55",
+    "comments": [
+        {
+            "author": "zano19724",
+            "body": "Spot the impostor. (Spoiler: it's perplexity)",
+            "score": 28,
+            "depth": 0,
+            "timestamp": "2025-01-29 08:44:20",
+            "replies": [
+                {
+                    "author": "Blender-Fan",
+                    "body": "Why is that?",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2025-01-29 11:49:17",
+                    "replies": [
+                        {
+                            "author": "zano19724",
+                            "body": "It has no proprietary model",
+                            "score": 14,
+                            "depth": 2,
+                            "timestamp": "2025-01-29 12:17:32",
+                            "replies": [
+                                {
+                                    "author": "Blender-Fan",
+                                    "body": "Yeah i guess you're right then",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-29 15:07:25",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "HumbleRevolter",
+                                    "body": "Proprietary model thing changed the moment Deepseek R1 dropped. Everyone has access to high reasoning model for almost free or fraction of the cost of OpenAI. It\u2019s no longer moat.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-02-02 15:44:34",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "Blender-Fan",
+                                    "body": "Hey isn't the 'Sonar' model in their api proprietary?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-29 15:17:41",
+                                    "replies": [
+                                        {
+                                            "author": "zano19724",
+                                            "body": "No, it's just llama fine-tuned. \nThey have not invented new architectures nor training a model from scratch",
+                                            "score": 4,
+                                            "depth": 4,
+                                            "timestamp": "2025-01-29 16:22:23",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "angerofmars",
+                    "body": "I think you meant imposter.\nIt is Perplexity because it's actually just a wrapper",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-01-29 12:19:38",
+                    "replies": [
+                        {
+                            "author": "zano19724",
+                            "body": "Yeah, thanks",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2025-01-29 14:00:14",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "aquel1983",
+            "body": "The truth is that i love how many of them are. Simply amazing what true global competition can produce.",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2025-01-29 09:26:53",
+            "replies": [
+                {
+                    "author": "CoralinesButtonEye",
+                    "body": "pretty much my thoughts exactly",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2025-01-29 13:02:54",
+                    "replies": []
+                },
+                {
+                    "author": "gibbonminnow",
+                    "body": "it doesnt stay this fragmented for long. Over time the market consolidates players to three or four, regardless of industry",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-01-31 04:38:14",
+                    "replies": [
+                        {
+                            "author": "aquel1983",
+                            "body": "True.. but this diversity means that the players are not established yet.. ao anything is possible",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-01-31 14:50:16",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Euphoric-Pilot5810",
+            "body": "\n\nPerplexity is not in the battle. Its a cook serving the soldiers in war, lol",
+            "score": 11,
+            "depth": 0,
+            "timestamp": "2025-01-29 12:35:43",
+            "replies": []
+        },
+        {
+            "author": "Sharp_House_9662",
+            "body": "Gemini probably lost the race, their answers are very short and not able to explain in detailed way.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2025-01-29 09:32:17",
+            "replies": [
+                {
+                    "author": "Wuxia_prince",
+                    "body": "You are right, it's trash. Can't point out errors in code properly. Tried out many Ai's today for my Compiler design lab and the results were shocking",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2025-01-29 10:48:18",
+                    "replies": [
+                        {
+                            "author": "Sharp_House_9662",
+                            "body": "Share your results with everyone here in post, so that others can also see it.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-01-29 10:51:25",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "zano19724",
+                    "body": "Have you tried gemini exp1206?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-01-29 10:36:36",
+                    "replies": [
+                        {
+                            "author": "Sharp_House_9662",
+                            "body": "Nope, I tried flash 2.0",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-01-29 10:54:57",
+                            "replies": [
+                                {
+                                    "author": "zano19724",
+                                    "body": "Try it, you'll be surprised how good it is. To me it's not very far from sonnet and most importantly it's free on ai studio",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-29 11:11:10",
+                                    "replies": [
+                                        {
+                                            "author": "Sharp_House_9662",
+                                            "body": "Ok, i will try it.",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2025-01-29 11:23:37",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Prior-Actuator-8110",
+                    "body": "Same to grok and Perplexity.\n\nChatGPT, DeepSeek and Claude top 3.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-01-29 13:35:38",
+                    "replies": []
+                },
+                {
+                    "author": "Plums_Raider",
+                    "body": "2.0 is alright. Not my daily driver, but sometimes its pretty handy to me.",
+                    "score": -1,
+                    "depth": 1,
+                    "timestamp": "2025-01-29 09:38:24",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "angerofmars",
+            "body": "One of these is not like the others",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-01-29 12:17:32",
+            "replies": []
+        },
+        {
+            "author": "geringonco",
+            "body": "Qwen has an app?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-01-30 04:05:00",
+            "replies": [
+                {
+                    "author": "CaptainScrublord_",
+                    "body": "Probably just a shortcut made from the browser.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-01-30 06:43:41",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "bibibabibu",
+            "body": "Honestly, perplexity and Gemini suck for any sort of general purpose usage. Chatgpt and Claude are leagues ahead.",
+            "score": -3,
+            "depth": 0,
+            "timestamp": "2025-01-29 09:45:58",
+            "replies": [
+                {
+                    "author": "Sharp_House_9662",
+                    "body": "I think perplexity is gr8, if u use in desktop mode",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2025-01-29 09:58:48",
+                    "replies": [
+                        {
+                            "author": "asadali95",
+                            "body": "I just got the pro version. What things are you using it for?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-01-30 17:05:40",
+                            "replies": [
+                                {
+                                    "author": "Sharp_House_9662",
+                                    "body": "All my Google search goes to perplexity & in-depth research of any topic.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-30 18:56:41",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Coloratura1987",
+                    "body": "I\u2019m not sure it's fair to compare Perplexity with Gemini.\n\nI\u2019ve used both for general, commerce-driven searches, and while Gemini 2.0 Flash gives an OK answer, Perplexity can be customized. Choose Sonar XL for simple queries, or just turn off Pro if you need a short-and-sweet answer.\n\nBut, you can\u2019t do that with any of the other stand-alone models, except for GPT. Plus, in my personal experience, Perplexity with Claude hallucinates less than ChatGPT, even with web search on.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-01-31 12:50:08",
+                    "replies": []
+                },
+                {
+                    "author": "Catwz",
+                    "body": "Chatgpt, Claude and DeepSeek",
+                    "score": -2,
+                    "depth": 1,
+                    "timestamp": "2025-01-29 10:08:01",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "koc_Z3",
+            "body": "Also check out my DeepSeek meme page \ud83d\udc40",
+            "score": -3,
+            "depth": 0,
+            "timestamp": "2025-01-29 08:37:44",
+            "replies": []
+        }
+    ]
+}

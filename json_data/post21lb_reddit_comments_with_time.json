@@ -1,0 +1,83 @@
+{
+    "post_title": "ELI5: How/why does facial recognition have trouble with non-white personnel?",
+    "post_timestamp": "2019-07-02 23:44:37",
+    "last_comment_timestamp": "2019-07-03 16:50:19",
+    "time_difference": "17:05:42",
+    "comments": [
+        {
+            "author": "lethal_rads",
+            "body": "Machine learning algorithms need lots of labeled data.  Essentially a computer is shown a picture of a person and the computer makes a guess whether it's a person or not.  Then the computer is told the correct answer and the computer takes notes on what it got right and wrong and then adjusts itself.  Sometimes this data is biased, such as being shown way more white people than black people.  Because the computer primarily sees white people, it begins to associate white humanoid with person and black with not person in a more extreme case and not sure in a less extreme case.  There was a really bad example of this a while ago where an AI started labeling black people as gorillas.  Because the people it had primarily seen where white and the things that were dark skinned and humanoid where predominately gorillas not black people.\n\n&#x200B;\n\nWith kinect specifically it may be a different problem that has a similar cause.  Kinect uses an infrared camera and different skin tones (especially darker skin vs lighter skin) looks different in infrared so the more basic software wasn't capable of recognizing what it was seeing as a human (this actually has happened with hands free sinks before).  In teams that are predominately white, it may not have come up during testing (engineering teams are often their own first tests) and they may not have thought about it.",
+            "score": 13,
+            "depth": 0,
+            "timestamp": "2019-07-03 01:19:51",
+            "replies": [
+                {
+                    "author": "TelestrianSarariman",
+                    "body": "Thank you!",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2019-07-03 01:25:01",
+                    "replies": []
+                },
+                {
+                    "author": "ithika",
+                    "body": "This has always seemed a weak explanation to me. You don't train a machine learning algorithm on a training set of the half dozen guys who developed it.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2019-07-03 05:14:31",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "That is exactly how it works. Older machine vision was all about manual feature engineering and didn't need a lot of data.\n\nBlack people are quite rare in most places of the world. If you pick a company ID database, chances are it will be 99% white/asian",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2019-07-03 05:43:58",
+                            "replies": []
+                        },
+                        {
+                            "author": "lethal_rads",
+                            "body": "No you don't use that small of a data set.  There's two things going on and I guess I didn't separate them out enough.  Large data sets can be biased and not reflect a complete population.  And even then, it might not be enough to actually train the algorithm to actually recognize a minority of the data.  These algorithms are still way less complex than we are and can have trouble with rarer data.  An algorithm might just decide to take the accuracy hit rather than actually recognize a small portion of the data (if you want the algorithm to be 96% accurate and you have a subset that's 3% of the data, you can hit your target and get all of the subset wrong).\n\nThen there's the diversity of the dev teams. If you don't have much diversity on the dev teams, sometimes stuff can slip by on early testing.  As an example, I was in a computer vision class earlier in the year.  out of the three people on my team, two were white and one was asian.  On one of our assignments, myself and the other white person set a value and it worked.  But when our other teammate went to use it it didn't because his skin was darker.  If we didn't have the third person it would have slipped by.  I'm not excusing this, and it totally shouldn't happen with something on the scale of microsoft but it can happen with proofs of concept or tests.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2019-07-03 16:50:19",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "rhomboidus",
+            "body": "1. Because it got trained on white faces.\n2. Because it uses a poor quality camera that can't accurately resolve the details of dark faces.",
+            "score": 17,
+            "depth": 0,
+            "timestamp": "2019-07-02 23:49:25",
+            "replies": [
+                {
+                    "author": "004forever",
+                    "body": "Found this quote from a New York Times article:\n\n\u201cOne widely used facial-recognition data set was estimated to be more than 75 percent male and more than 80 percent white, according to another research study.\u201d",
+                    "score": 8,
+                    "depth": 1,
+                    "timestamp": "2019-07-03 00:03:59",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Ihmes",
+            "body": "This is about pattern recognition in automation, not specifically face recognition but I guess the same applies.\n\nWhen teaching pattern recognition you need contrast. The picture you're teaching is usually in black and white and the algorithm finds the borders between black and white areas. Each pixel is assigned a grey value, typically between 0 (totally black) and 255 (totally white)\n\nIdeally, your black parts should be as close to 0 as possible and white parts to 255. The image is then binarized, meaning that you set a grey value threshold 128 for example. Then algorithm will compare each pixel value to that threshold, if it's higher it's assigned white, lower it's black. If you need to set the threshold to say 40, there is a risk that a feature you want to measure gets assigned the wrong color area.\n\nIf the contrast is high (like dark features on a pale face) algorithm has easier time distinguishing them than if the contrast is low (dark features on dark skin) because the difference in grey values is greater, enabling more precise and consistent measurements.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2019-07-03 07:23:23",
+            "replies": []
+        },
+        {
+            "author": "OriginalPiR8",
+            "body": "People so far have stated training on white people.. In the case of the Kinect this is not true however. Microsoft even came out and exclaimed everything and if you have any dark skinned friends and a Kinect you can check their claims on a computer.\n\nThe shit reason is the camera is rubbish. Unless your dark skinned person is white up like the Empire State Building the camera is simple not good enough to see and therefore recognise features on his/her face.\n\nAdd to this all training data was on helpfully bright backgrounds not dark ones and you get to see that a dark person on a dark background is basically just eyes according to the camera.\n\nEyes do not make a face. Eyes and mouth largely speaking are the definition points for a face using most detection algorithms.\n\nInfrared cameras get passed this but the infrared camera on the Kinect doesn't do face detection it does depth mapping feeding the kinematics engine.\n\nFace detection is done via simple algorithms (no AI) and works as long as eyes and mouth are visible in the image. Facial recognition is done many many ways but all rely upon good days of which there is none for dark people on dark backgrounds. So it suffers.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2019-07-03 05:12:02",
+            "replies": []
+        }
+    ]
+}

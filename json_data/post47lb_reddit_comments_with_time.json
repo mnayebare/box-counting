@@ -1,0 +1,135 @@
+{
+    "post_title": "What Engineers Should Know About AI Jobs in 2025",
+    "post_timestamp": "2025-04-15 11:46:00",
+    "last_comment_timestamp": "2025-04-16 02:59:28",
+    "time_difference": "15:13:28",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "body": "## Welcome to the r/ArtificialIntelligence gateway\n### News Posting Guidelines\n\n---\n\nPlease use the following guidelines in current and future posts:\n\n* Post must be greater than 100 characters - the more detail, the better.\n* Use a direct link to the news article, blog, etc\n* Provide details regarding your connection with the blog / news source\n* Include a description about what the news/article is about. It will drive more people to your blog\n* Note that AI generated news content is all over the place. If you want to stand out, you need to engage the audience\n\n###### Thanks - please let mods know if you have any questions / comments / etc\n\n*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/ArtificialInteligence) if you have any questions or concerns.*",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-15 11:46:00",
+            "replies": []
+        },
+        {
+            "author": "latestagecapitalist",
+            "body": "I wouldn't read anything into reports like this or any predictions -- also that report is far too general\n\nPython is worth knowing as most data tools need that now\n\nOutside of that I recommend people learn some application of AI ... creating a chatbot, how to fine tune, how to RAG, how to run a model locally, how to work with APIs available (especially voice), how to eval, how to cost based on tokens etc.\n\nAI is not the end of the world for software engineering ... it's just the start of something else in some areas ... all the doom talk is a complete over-reaction",
+            "score": 16,
+            "depth": 0,
+            "timestamp": "2025-04-15 12:54:21",
+            "replies": [
+                {
+                    "author": "Business-Hand6004",
+                    "body": "it is never an absolute. shareholders dont need AI to replace engineers. what they need the AI to do is to improve everybody's productivity beyond the increase in overall demand.\n\nif every engineer equipped with AI is now 80% more productive, while the same company only get 20% more demand, this means the same company dont need to employ the same amount of engineers. instead of employing 20 engineers, it can function with just, lets say, 12 engineers. so it can fire 8 engineers, and put pressure to the remaining 12 so they wont have leverage to get pay increase (if they dont want it, the company can ask the remaining 8 engineers to overtake the job).\n\nand looking at software engineering job openings and median pay in the past 5 years, this is exactly whats happening. there are less and less openings for junior role, and pay for senior role dont really increase either.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2025-04-15 15:02:47",
+                    "replies": []
+                },
+                {
+                    "author": "throwmeintoariver842",
+                    "body": "I\u2019m creating a soft layer as we speak. What a time to be alive.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-04-16 02:59:28",
+                    "replies": []
+                },
+                {
+                    "author": "5picy5ugar",
+                    "body": "Refusing to aknowledge the risks of AI is a before sign of an impending doom. The problem here that you dont understand is mass unemployment. This is scary since what are hordes of unemployed men going to do? Wars, social unrest, anarchy, rising criminality and so on.",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2025-04-15 14:02:06",
+                    "replies": [
+                        {
+                            "author": "latestagecapitalist",
+                            "body": "I used to be the big advocate of that point -- but I get less and less convinced now\n\nIt's just going to be like the invention of steam engines and the industrial revolution -- there will be change for sure but it's a start not an end",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-04-15 14:15:55",
+                            "replies": [
+                                {
+                                    "author": "5picy5ugar",
+                                    "body": "Actually is not the same with AI. Its not like engines replacing horses. Its like \u2018genie in a bottle\u2019 invention that does not create jobs. Its self sufficient for everything. It will not displace a person from a job and then give him another opportunity somewhere else (like it happened with any invention during the history). Thats why ASI its called the Last Human Invention.",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-15 14:29:27",
+                                    "replies": [
+                                        {
+                                            "author": "latestagecapitalist",
+                                            "body": "Use to make the very same points\n\nIf that ASI scenario plays out (and get less convinced it will by the day) then it likely just means people get back into more artisan roles and do things that make life better (having babies, crafting rugs, pottery, growing rare vegetables etc.) instead of sweating 50h a week in a call center for the man",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-04-15 14:36:15",
+                                            "replies": [
+                                                {
+                                                    "author": "5picy5ugar",
+                                                    "body": "Yes this is the utopian scenario. Good. But the transition to that is problematic and uncertain on how we will get there. It can also lead to some techno-dystopian scenario which is more likely",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-04-15 15:02:55",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "DudeVizzle",
+            "body": "Take, as an example, an organization that builds software products and they're looking to keep up with the AI space.   Does that company hire AI/Data Scientists or are Software Engineers that know how to use AI tooling enough?   I'm starting to see that, unless the company is looking to deploy the next greatest LLM or nextgen AI algorithms, they don't need to hire Python & Data Science experts but rather good Software Architects/Engineers that will lean in on leveraging the latest/greatest AI tooling (LLMs, GenerativeAI methods, RAG...etc.) to augment their building of the software products that their company is producing.  Thoughts?",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-04-15 19:28:30",
+            "replies": []
+        },
+        {
+            "author": "-happycow-",
+            "body": "most of these AI predictions seems centered around gathering capital. The most absurd one I can think of is Anthropics CEO who is known for making the most outlandish and absurd statements.\n\nNot surprised Eric Schmidt joins the choir.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-04-15 21:17:49",
+            "replies": []
+        },
+        {
+            "author": "charuagi",
+            "body": "Prompt engineering is no longer related to engineering.\nIt's related to domain knowledge \nAlso, it's not there much in 202t. It was a lot in 2023",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-15 11:51:16",
+            "replies": [
+                {
+                    "author": "IEEESpectrum",
+                    "body": "Not sure where you're getting prompt engineering from the article, it's mostly about software and programming jobs based on AI.",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2025-04-15 11:54:21",
+                    "replies": [
+                        {
+                            "author": "charuagi",
+                            "body": "Exactly. One year back prompt engineering was something\nAnd today you are telling me 'oh that's not what any engineering is'",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-04-15 20:57:31",
+                            "replies": []
+                        },
+                        {
+                            "author": "My_black_kitty_cat",
+                            "body": "Did you ever figure out if 5G was safe for human health?\n\n[https://spectrum.ieee.org/will-5g-be-bad-for-our-health](https://spectrum.ieee.org/will-5g-be-bad-for-our-health)\n\nDoesn\u2019t that seem like it should be a high priority with the push for 6G+?\n\nWhat\u2019s the scoop on terahertz, like asking Josep Jornet to write an article about his research, specifically the IoBNT?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-04-15 23:52:35",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

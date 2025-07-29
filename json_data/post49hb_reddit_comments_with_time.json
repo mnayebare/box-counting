@@ -1,0 +1,336 @@
+{
+    "post_title": "Racist, Sexist Robots: Prejudice in AI",
+    "post_timestamp": "2022-02-07 11:06:01",
+    "last_comment_timestamp": "2022-02-23 15:54:22",
+    "time_difference": "16 days, 4:48:21",
+    "comments": [
+        {
+            "author": "Deleted",
+            "body": "You have to understand that the prejudice is with you... \n\nThe AI is just looking for patterns and repeating them.\n\nThe algorithm has no concept of good and bad... \n\nThis is just what it has been fed the most.\n\nIt says something about people...\n\nAll it says about AI is it's still not thinking for itself.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2022-02-08 19:06:16",
+            "replies": [
+                {
+                    "author": "AConcernedCoder",
+                    "body": "I'm going to go against the flow here and disagree, to an extent.  If we say that the decisions made by a.i. cannot be racist because the a.i. is not intelligent, then we can either offload behaviors originally motivated by racism onto these robots or just not give a crap when they learn to do things that would be racist, like targeting individuals for police surveillance on the basis of skin color, and when any concern is raised, it can amount to no more than an admission that something must have gone terribly wrong, but nothing racist ever occurred, because it can't occur.\n\nI think society will eventually be forced to consider how these terms apply to the processes and criteria used to make decisions in perceived \"racist\" discriminatory actions, be they from humans or a.i., in order to protect ourselves from the misuse of a.i. or its malfunctions.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2022-02-17 20:37:08",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "I mean, it wouldn't be targeting based on skin color, it would be targeting based on crime rate... \n\nPeople will say it's racist, that is a function of their bias though.\n\nThey cannot fathom that sometimes it's just actually justified.\n\nIt is why I bring up IBM, they are actively working on unbiased data and having the AI report exactly how it came to the conclusions it did... this is at the core of its debater technology and being marketed as a way to remove corporate biases by effectively correcting peoples thought processes on a topic.\n\nThe reality is the vast majority have poor reasoning skills, we are subject to various evolutionary biases that don't actually apply to our modern reality. If we are going to actually grow as a species and come together for our mutual prosperity we have to overcome these deficiencies.\n\nThe good thing about AI is it can learn from everything available to it and not die... it just keeps learning forever. The notion that this is more dangerous than a human trying to get as much shit as they can in their short 80 years is absurd.\n\nI am far more worried about humans continuing to be in control because we're fucking evil as a whole.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-02-17 20:48:12",
+                            "replies": [
+                                {
+                                    "author": "AConcernedCoder",
+                                    "body": "I'm not sure that something like a continuously learning model would be best for this, but just assuming it's what was implemented, let's say we pretrain the model to some acceptable standard and place it in an area with a high crime rate: a low income neighborhood that is predominantly populated by a minority.  Pixel color values are among the features of the data set because, why not?\n\nBecause it's a continuously learning model, training is continuous.  Its training data is unbalanced because the population it picks up on the cameras reflects only the local reality and majority population of minority descent.\n\nNow, let's say it does its job with quantifiable effectiveness, and, for whatever reason, someone decides that this effective model can and should be frozen and propagated to other areas of a city because of its effectiveness, except, those other areas happen to be shopping centers in a high-income area of the city where the population has nowhere near the same concentration of people of the same minority.\n\nWe should not be surprised if the cameras fail to identify criminality among peoples of a different color of skin than those it was initially trained on, or if it shows a bias toward those who are of that minority.\n\nAnd further, do recognizable features such a skin color really have anything to do with criminality, or was economic disadvantage a factor?  The machine doesn't know or care, and neither does racism.\n\nP.S. this has happened in the real world, where the training sample was unfortunately too biased, unintentionally, and that bias can and does end up creating problems people see as discriminatory.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-02-17 21:58:30",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "That isn't how AI works... it is specifically AI because it isn't being told what to do... it is attempting to understand what it is being exposed to...\n\nWe provide it with parameters based on what we want it to understand, for instance the rules of chess... we show it the desired result for instance checkmate... and the algorithms let it actually figure out the best ways to get there from any position extremely quickly.\n\nIt would be very bad if we were the ones controlling the outcomes, that is how this technique differs from traditional programs though... they aren't just executing code.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2022-02-17 22:31:58",
+                                            "replies": [
+                                                {
+                                                    "author": "AConcernedCoder",
+                                                    "body": "I'm an ML Engineer, and one that has built his own NN training library.  That was one of the case studies I studied in training.  There was a team that trained its model using the people they had immediately available.  Coincidentally, software engineering is notoriously male-dominated, and the model exhibited \"sexist\" discriminatory decision making as a result, albeit accidentally so.\n\nBias is a huge factor in data science, and the machines can learn to be wrong.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-02-17 22:40:37",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Deleted",
+                                                            "body": "This is exactly what the AI community is working on today...\n\nThat we notice the problems means we're already trying to fix them...\n\nOtherwise it's called a feature.",
+                                                            "score": 0,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-02-17 22:54:35",
+                                                            "replies": []
+                                                        },
+                                                        {
+                                                            "author": "Deleted",
+                                                            "body": "The Microsoft bot is quite famous...\n\nIf it had access for instance to all Skype conversations the outcome wouldn't have been so terrible.\n\nIt is because the engineers were naive, it was only learning from what people were saying to it.\n\nNever trust people, especially when they don't think anyone will see.\n\nThis is exactly why I hope AI runs society in the future.\n\nPeople suck.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-02-17 22:44:43",
+                                                            "replies": []
+                                                        },
+                                                        {
+                                                            "author": "Deleted",
+                                                            "body": "Again, all problems with AI are due to data sets not being large enough...\n\nIf you want it to be better at other stuff, feed it more examples of it...\n\nThe AI wasn't sexist, the data was incomplete.\n\nWe have to understand outcomes instead of just applying human projections.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-02-17 22:50:41",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "AConcernedCoder",
+                                                                    "body": "It was unbalanced -- it didn't reflect reality, and was inherently biased.  Scale it to a larger dataset but with the same proportions, and the model can still be trained to a low degree of error, but still learn the bias.\n\nAs I was saying earlier, you're right it's just a machine, it isn't alive, but if it is exhibiting discriminatory decision making, why should anyone consider discrimination to not be discrimination?  If that behavior can be described as \"racist\" why should anyone not consider it to be \"racist?\"  Or, better yet, if it can't be racist because it's a machine, then why wouldn't a racist person of social influence make machines carry out his racist agendas and claim it can't be racism, because machines?\n\nThis definition of racism that excludes everything concerning AI is inadequate.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-02-18 00:33:08",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "Deleted",
+                                                                            "body": "I have seen ML more intelligent than you, how are you in the field?",
+                                                                            "score": 0,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2022-02-18 00:45:26",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "AConcernedCoder",
+                                                                                    "body": "Because I did the work, I'm certified and I have lawyers on speed dial",
+                                                                                    "score": 1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2022-02-18 00:50:22",
+                                                                                    "replies": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "Deleted",
+                                            "body": "As for your ps... again, we are actively pursuing unbiased outcomes exactly because we already understand the capacity for human error... it is again also the motivation for the debater project too...\n\nSo here you're just telling me you haven't read or understood shit I've said.",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2022-02-17 22:36:33",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "Deleted",
+                                            "body": "You are correct on one matter though: small data sets yeild unuseful results\n\nDo you think there is a shortage?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2022-02-17 22:39:06",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "TheThoughtfulTyrant",
+            "body": "I think the article ends up inadvertantly revealing one of the biggest problems with taking \"racism\" and \"sexism\" seriously, which is that they are not in fact terms for carrying out serious discourse but for avoiding it. The worst thing you can say about a statement is that is false, and the worst thing you can say about an argument is that it is invalid. Accusations of racism and sexism are what people substitute for those cricitisms when they know the statements they are critizing are true, or the arguments they are attacking are sound.\n\nSo, the article states that AI was sexist because it associated terms like \"woman\" and \"female\" with arts and humanities and \"man\" and \"male\" with the harder sciences. But then the article points out that only 18% of computer science graduates are women. That is, the AI was correct - men are in fact more associated with hard sciences than women are. Acknowledging that association is of course politically incorrect, unless doing so is immediately followed by a condemnation of sexism in society, but that the AI made the association shows only that the AI was working properly.",
+            "score": 15,
+            "depth": 0,
+            "timestamp": "2022-02-07 12:14:25",
+            "replies": [
+                {
+                    "author": "Shield_Lyger",
+                    "body": "> Accusations of racism and sexism are what people substitute for those cricitisms when they know the statements they are critizing are true, or the arguments they are attacking are sound.\n\nSigh. So.. the statement \"To say that 'Hispanics are less intelligent than Whites, but more suited to physical labor,' is racist,\" is to acknowledge the proposition as true and sound?\n\nThis is the problem with such sweeping generalizations... they are so quickly disproved that they make the speaker seem thoughtless at best, and actively disingenuous at worst.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-02-07 14:18:38",
+                    "replies": [
+                        {
+                            "author": "TheThoughtfulTyrant",
+                            "body": "> Sigh. So.. the statement \"To say that 'Hispanics are less intelligent than Whites, but more suited to physical labor,' is racist,\" is to acknowledge the proposition as true and sound?\n\nEr, yes? I mean,assuming someone had actually said that \"Hispanics are less intelligent than Whites, but more suited to physical labor\", then if you disagreed with that, you would say \"that is clearly false, and here are examples of super successful, intelligent Hispanics\". To call it racist instead would in fact imply agreement, i e. that you couldn't attack it's veracity instead.",
+                            "score": 7,
+                            "depth": 2,
+                            "timestamp": "2022-02-07 15:33:55",
+                            "replies": [
+                                {
+                                    "author": "Shield_Lyger",
+                                    "body": "I think that you're conflating: \"I don't have a better argument at my fingertips to deploy at need\" with \"I don't believe that a better argument exists.\"\n\nI normally don't bother with these sorts of discussion with people in the real world, because they tend to also say that \"claiming racism\" means you know I'm right. More generally, they come to an argument prepared with certain talking points, and claim that an inability to disprove, to their satisfaction, those talking points in the moment is an acknowledgement of their agreement.\n\nBut I can't prove that E=MC squared, off the top of my head. If someone claimed that E=MC cubed, and I said that's bad physics, I'm not implying agreement, even if I understand that, in the moment, I couldn't do the math to disprove them.",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2022-02-07 16:00:34",
+                                    "replies": [
+                                        {
+                                            "author": "TheThoughtfulTyrant",
+                                            "body": "But in saying something is \"bad physics\" you are saying that it is factually wrong, even if you can't prove it in the moment. But accusations of racism don't work that way. If someone says \"I'd prefer to work only with white people\", you'd probably say that was racist, but you wouldn't mean that it was wrong, in any factual sense. It wouldn't be an accusation that they were mistaken or lying about their preferences. Likewise, you would probably view any number of perfectly factual statements about who is statistically more likely to commit murder as racist (though probably not sexist, though of course one sex is much more inclined to murder than the other). Same with IQ test results (though I imagine only those concerning some races rather than others would provoke real outrage). So accusations of racism and sexism are almost never shorthand for saying something is factually wrong. Rather, they are always ways of shifting the discussion away from questions of fact.",
+                                            "score": 4,
+                                            "depth": 4,
+                                            "timestamp": "2022-02-07 17:39:35",
+                                            "replies": [
+                                                {
+                                                    "author": "Shield_Lyger",
+                                                    "body": "> So accusations of racism and sexism are almost never shorthand for saying something is factually wrong.\n\nBut that presupposes that the statement in question can be factually wrong in context. If someone says \"I'd prefer to work only with white people\", saying \"that's racist\" is not an admission that the statements is true or sound, because preferences tend not to be based on objective reality or standards of sound reasoning.\n\n> Likewise, you would probably view any number of perfectly factual statements about who is statistically more likely to commit murder as racist [...]\"\n\nActually I don't. What I find racist is \"[Blanks] (since it could be a few different groups) are statistically more likely to commit murder, *because by virtue of being Blanks, they are more violent, lawless people.*\" And technically, I can attack the second part of the statement as being factually untrue. But, generally speaking, the person isn't attempting to express a fact; they're expressing their animosity to others based on group membership, and yeah, I'd be okay with someone calling that out as racist, even if they hadn't literally done some sort of public opinion survey to find out people's attitudes towards the law and the use of violence.\n\nSo in the end, I guess it depends on what you call racist, and why. Most people term \"any number of perfectly factual statements about who is statistically more likely to commit murder as racist\" because they either perceive essentialism there or it's being used (and this is where I've normally encountered it) as a reason to deny the benefit of doubt or fair treatment *even to those who have not been convicted of any crime.* To link your examples, \"I'd prefer to work only with white people because non-White people are statistically more likely to commit murder so it's not safe to work with them,\" would strike me as racist, not because it references the statistics, but because it uses those statistics to cast a broad net over an entire group of people in the name of \"justifying\" a racialized preference.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-02-07 19:23:44",
+                                                    "replies": [
+                                                        {
+                                                            "author": "TheThoughtfulTyrant",
+                                                            "body": ">But that presupposes that the statement in question can be factually wrong in context. If someone says \"I'd prefer to work only with white people\", saying \"that's racist\" is not an admission that the statements is true or sound, because preferences tend not to be based on objective reality or standards of sound reasoning.\n\nNo, it is precisely an admission that the statement is true. You are incapable of arguing that the person doesn't prefer to work only with white people, so you are forced to condemn it as racist.\n\n>Actually I don't. What I find racist is \"[Blanks] (since it could be a few different groups) are statistically more likely to commit murder, *because by virtue of being Blanks, they are more violent, lawless people.*\" \n\nI mean, that is poor reasoning because it is tautological, as the second half merely restates the first half. That is, if it is true that, say, men are more likely to commiy murder than women, then it is true that men are, by virtue of being men, more violent and lawless than women. \n\n>And technically, I can attack the second part of the statement as being factually untrue. But, generally speaking, the person isn't attempting to express a fact; they're expressing their animosity to others based on group membership, \n\nAh, so, this seems like a frank admission that the accusation of racism or sexism is an emotional reaction to an attitude, or perceived attitude, rather than anything that contributes to rational discourse. Which was basically my original point.\n\n>To link your examples, \"I'd prefer to work only with white people because non-White people are statistically more likely to commit murder so it's not safe to work with them,\" would strike me as racist, not because it references the statistics, but because it uses those statistics to cast a broad net over an entire group of people in the name of \"justifying\" a racialized preference.\n\nBut this surely is merely a matter of levels of risk aversion. If you knew that 100% of the members of a group X would end up trying to kill you, you would presumably avoid all members of that group. At 90%, you would probably still keep your distance, even though that would be \"unfair\" to the ten percent who would never dream of harming you. \n\nAnd even fairly low percentages might be unacceptable if you have repeat offenders. Imagine, for example, that, say, oh, 4% of men were rapists, and 96% of men were great guys who would never dream of interefering with a woman. But, the 4% who a rapists are serial offenders who average 6 victims over the course of their lives. In a world where there are an equal number of men and women, that would lead to 1 in 4 women being assaulted over the course of their life times (assuming no overlap in victims for simplicity's sake). In such a world, women might cross the street when passing a strange man on the street at night. \"Unfair\", of course, to the 96% of men who would never harm them, but it also seems a rational choice given the level of risk involved.",
+                                                            "score": 5,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-02-08 00:28:15",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Shield_Lyger",
+                                                                    "body": "> You are incapable of arguing that the person doesn't prefer to work only with white people, so you are forced to condemn it as racist.\n\nWhy would I want to argue that the person doesn't prefer to work only with White people? What is the point of debating their preference with them?\n\nJack: \"I prefer to only work with people of Turkish extraction.\"\n\nJill: \"That's somewhat bigoted, do you think?\"\n\nJack: \"Aha! *You admit* that I prefer to only work with people of Turkish extraction!\"\n\nJill: ...\n\nI mean, okay, what point has Jack scored? To claim that Jill forced to condemn Jack as bigoted only because she is incapable of arguing that Jack doesn't actually prefer to only work with people of Turkish extraction is to presume that Jack's statement of preference doesn't fit *any* definition of prejudice.\n\nAnd I think that's where your argument falls apart, this underlying idea that terms like \"racism\" are simply pejoratives *that don't have definitions that can be applied independently of any pejorative usage.*\n\n> That is, if it is true that, say, men are more likely to commiy murder than women, then it is true that men are, by virtue of being men, more violent and lawless than women. \n\nNo. It is not. You are conflating *correlation* (men are more likely to commit murder than women) with *causality* (men are, by virtue of being men, more violent and lawless than women). Therefore the latter part of the statement is *not* a restatement of the first. The reason why men are more likely to commit murder may be due to another factor that is independent of being a man. This would allow me to subdivide men into groups based on other factors, and show differences in the propensity to murder based on that. For instance, employment status. If being a man were the causal factor, one should always see roughly the same rate of conviction for murder in men who were employed prior to the crime versus unemployed. Or wealthy versus poor. Or married versus unmarried. Or mentally sound versus mentally ill. Or living in the United States versus the United Kingdom. But we know that *all* of those factors (and others besides) play a role on whether any given man will wind up murdering someone. Were simply *being a man* the causal factor, you would see roughly similar rates of murder across all of the categories above.\n\n> In such a world, women might cross the street when passing a strange man on the street at night.\n\nBut that's not the point that's been made. You're also saying that women would be justified in systematically rejecting men from employment in workplaces they controlled, thus potentially depriving them of the ability to earn a living, simply on the basis of that assessment, without needing to do *any* other work to make a personalized determination of risk. And that the charge of \"well, that's sexist\" is nothing more than an admission that these women don't want to work with men, or that some number of men are rapists.\n\nI see what you're getting at. You're essentially arguing that people may have valid, rational reasons for attitudes and behaviors that others consider discriminatory, and simply calling people out as discriminatory doesn't address any of that reasoning. And that it doesn't matter anyway, because any sincerely-held assessment of risk is a valid reason for biased behavior towards entire groups of other people.\n\nIf your point is that people have no obligation to act in ways that don't disadvantage whole swaths of the population due to surface-level understandings of selected demographic patterns, then argue that. I'm sure you'll find takers.\n\nIf your point is that the term \"racist\" is employed more often than it should, because there are better ways of having the debate, I think that you're overarguing it, but that's fine, too.",
+                                                                    "score": 2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-02-08 10:11:10",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "TheThoughtfulTyrant",
+                                                                            "body": ">What is the point of debating their preference with them?\n\nGood question, but that is what this is:\n\n>Jill: \"That's somewhat bigoted, do you think?\"\n\nI mean, given that you admit that preferences are generally irrational and not really under our control, what even is the point of Jill's statement?\n\n>And I think that's where your argument falls apart, this underlying idea that terms like \"racism\" are simply pejoratives *that don't have definitions that can be applied independently of any pejorative usage.*\n\nMore that they are mostly used as pejoratives that substitute for actual arguments, and in those few cases where they don't, fail utterly to accomplish anything useful.\n\n\n>No. It is not. You are conflating *correlation* (men are more likely to commit murder than women) with *causality* (men are, by virtue of being men, more violent and lawless than women). Therefore the latter part of the statement is *not* a restatement of the first. The reason why men are more likely to commit murder may be due to another factor that is independent of being a man. This would allow me to subdivide men into groups based on other factors, and show differences in the propensity to murder based on that.\n\n\nThat's irrelevant. There are of course other factors than sex that play a role in a person's committing murder, but if men commit murder more than women do, then the variable cannot be independent of men. Maybe men are more likely to be mentally ill, or unemployed, etc., which in turn makes them more likely to murder, but it remains a problem with men.\n\n\n>But that's not the point that's been made. You're also saying that women would be justified in systematically rejecting men from employment in workplaces they controlled\n\nNo, I am saying any individual women would be justified in protecting herself by avoiding hiring men. Of course, if enough individual women made that choice independently of one another, it would generate what you would call a systemic effect.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2022-02-08 11:53:25",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "Spider-Man-fan",
+                                                                                    "body": ">I mean, given that you admit that preferences are generally irrational and not really under our control, what even is the point of Jill's statement?\n\nI think Jill\u2019s point is to spark conversation. She expects Jack to respond with \u201cHow so?\u201d Then she can explain the reasons.\n\n>That's irrelevant. There are of course other factors than sex that play a role in a person's committing murder, but if men commit murder more than women do, then the variable cannot be independent of men. Maybe men are more likely to be mentally ill, or unemployed, etc., which in turn makes them more likely to murder, but it remains a problem with men.\n\nLet\u2019s say it\u2019s only mentally ill men that commit murder. Then you shouldn\u2019t say that it remains a problem with men. You should be more specific and say that it remains a problem with mentally ill men. Then you also have to ask why men are more likely to be mentally ill, and why mentally ill men more likely to commit murder than mentally ill women. I think that in order to fix an issue, you need to get down to the root cause(s). What things can be changed that lead to overall fairness? Some might take \u201cremains a problem with men\u201d as blaming men, even if that\u2019s not your intent.",
+                                                                                    "score": 1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2022-02-23 15:54:22",
+                                                                                    "replies": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "author": "Ultralight_Cream",
+                                                                    "body": "All this effort just to justify racism and sexism.",
+                                                                    "score": -2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-02-08 04:30:32",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "justasapling",
+                    "body": "The problem that you're failing to see if the difference between acknowledging and norm-alizing.\n\nIt's fine to acknowledge and study trends, but reality is rife with feedback loops and we need to make sure that we discuss current trends in ways that do not reinforce those trends.\n\nIf we take 'the individual' and 'civil liberties' seriously, then we *have* to act such that we reduce constraints on what individuals might do.\n\nIn the wrong context this kind of algorithm just perpetuates prejudices indefinitely. We need to unify around the idea that prejudices need to be fought until each individual can be met like a blank slate.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-02-07 15:54:13",
+                    "replies": []
+                },
+                {
+                    "author": "OneLastLost",
+                    "body": "It's a question of statistical generalization and prediction. The statement that all US presidents have been men is true; the line of code that says \"president =/= woman\" is sexist.",
+                    "score": -1,
+                    "depth": 1,
+                    "timestamp": "2022-02-07 12:26:37",
+                    "replies": [
+                        {
+                            "author": "TheThoughtfulTyrant",
+                            "body": "Except there is no such line of code, and that isn't what the author of the article is complaining about.",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2022-02-07 12:53:31",
+                            "replies": [
+                                {
+                                    "author": "OneLastLost",
+                                    "body": "What do you think the fact that \"only 18% of computer science graduates are women\" proves? That women aren't interested in computer science? That men are predisposed to succeed in the \"harder sciences\" (it's \"hard science\" btw)? The political correctness concerns are about stigma and a self-fulfilling prophecy. The statistic has nothing to say about the future.",
+                                    "score": -1,
+                                    "depth": 3,
+                                    "timestamp": "2022-02-07 14:14:54",
+                                    "replies": [
+                                        {
+                                            "author": "NaturaNaturans3",
+                                            "body": "No, really, but what does it prove?\nIt doesn't prove either of your claims: it cannot prove that females aren't less predisposed for \"hard sciences\" (as much as I find such a statement aberrant), or that they indeed are as \"biologically\" (since I see that's all this kind of arguments boil down to ultimately) as good at it as men are.\nWhat one should acknowledge is that all human beings have the same dignity, rights, et cetera; and that such indemostrable statemets should not affect our civil, political or social rights in any way or form.\nBut then, saying that \"Woman=/=American President\" is a misoginistic statement truly strikes me.\nIt's just an empirical truth.\nIt doesn't take any dignity away from any woman in the world: it doesn't prove anything, but the statement itself, which is simply true. \nAnd then, even if males were to be, on average, stupider than females, or vice versa: does this really entitle us to consider any of those parts less human than the other, or grant them less dignity?\nThere is no misoginy in the enunciation of a fact, however, there could be in the possible a-posteriori interpretation given by a misoginistic beholder.",
+                                            "score": 7,
+                                            "depth": 4,
+                                            "timestamp": "2022-02-07 17:59:13",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "testsubject_127",
+                    "body": "Slightly late to the party, but here is my two bits worth. The question that should be asked is why are only 18% of computer science graduates women. Do men have more inate ability? No. It is form assumptions about gender so ingrained that they have effects in places you would not expect. Apparently, including the programs of AI made with machine learning.",
+                    "score": -2,
+                    "depth": 1,
+                    "timestamp": "2022-02-07 14:06:58",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "[removed]",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2022-02-07 15:40:25",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "[removed]",
+                    "score": -1,
+                    "depth": 1,
+                    "timestamp": "2022-02-07 16:03:21",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "[removed]",
+            "score": -3,
+            "depth": 0,
+            "timestamp": "2022-02-07 12:42:08",
+            "replies": [
+                {
+                    "author": "BernardJOrtcutt",
+                    "body": "Your comment was removed for violating the following rule:\n\n>**Read the Post Before You Reply**\n\n>Read the posted content, understand and identify the philosophical arguments given, and respond to these substantively. If you have unrelated thoughts or don't wish to read the content, please post your own thread or simply refrain from commenting. Comments which are clearly not in direct response to the posted content may be removed.\n\nRepeated or serious violations of the [subreddit rules](https://reddit.com/r/philosophy/wiki/rules) will result in a ban.\n\n-----\n\nThis is a shared account that is only used for notifications. Please do not reply, as your message will go unread.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-02-07 22:04:07",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "[removed]",
+            "score": -2,
+            "depth": 0,
+            "timestamp": "2022-02-07 11:53:39",
+            "replies": [
+                {
+                    "author": "BernardJOrtcutt",
+                    "body": "Your comment was removed for violating the following rule:\n\n>**Read the Post Before You Reply**\n\n>Read the posted content, understand and identify the philosophical arguments given, and respond to these substantively. If you have unrelated thoughts or don't wish to read the content, please post your own thread or simply refrain from commenting. Comments which are clearly not in direct response to the posted content may be removed.\n\nRepeated or serious violations of the [subreddit rules](https://reddit.com/r/philosophy/wiki/rules) will result in a ban.\n\n-----\n\nThis is a shared account that is only used for notifications. Please do not reply, as your message will go unread.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-02-08 09:43:29",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "georgioz",
+            "body": "I recall one example when credit scoring algorithm was returning racist outcomes so the authors deliberately excluded information about race of the applicants from training data. Only the algorithm basically created a new feature based on data like ZIP code, income, loan delinquency and other information that eerily corresponded to category of race that was denied in the first place.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-02-10 08:10:50",
+            "replies": []
+        }
+    ]
+}

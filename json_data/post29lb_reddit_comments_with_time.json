@@ -1,0 +1,613 @@
+{
+    "post_title": "Is AI actually replacing anyone's job?",
+    "post_timestamp": "2025-03-29 14:01:08",
+    "last_comment_timestamp": "2025-03-29 16:32:17",
+    "time_difference": "2:31:09",
+    "comments": [
+        {
+            "author": "netralitov",
+            "body": "OP stating the obvious and all the racists showing up to chime in",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 16:32:17",
+            "replies": []
+        },
+        {
+            "author": "TwoValiant",
+            "body": "I feel like it replaced tasks of jobs...but not the full job.",
+            "score": 79,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:08:43",
+            "replies": [
+                {
+                    "author": "Terrible_Act_9814",
+                    "body": "Agree with this, it helps simplify tasks such that you can prob have a team of 3 ppl vs team of 4 ppl to do the task",
+                    "score": 20,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 15:01:52",
+                    "replies": []
+                },
+                {
+                    "author": "Swiftzor",
+                    "body": "Those leftover tasks end up getting shifted and jobs get replaced anyways though. Like if you have say 5 accountants and you bring in a tool that can reduce their workload by 25% you can remove one entire job and keep everyone\u2019s workload the same. This is where the \u201cAI will replace jobs\u201d thing comes from.",
+                    "score": 23,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 14:26:40",
+                    "replies": []
+                },
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 14:25:30",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Prudent-Mission9674",
+            "body": "They move jobs to India.",
+            "score": 100,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:14:19",
+            "replies": [
+                {
+                    "author": "Visual-Practice6699",
+                    "body": "I used to work in a field where all the transactional requests were done by Indians, and I started warning them in 2021 that we could probably automate out a lot of the work they were doing before the end of the decade. \n\nI looked yesterday and their prices have contracted by 30% on the most transactional work over the last 3 years. It\u2019s just a matter of time to it collapsing altogether to an automated commodity where it\u2019s just part of a (cheap) subscription.",
+                    "score": 20,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 16:30:29",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "WorrryWort",
+            "body": "I went to grad school to be a statistician. The vernacular has evolved from \u201cpredictive modeling\u201d, to \u201cmachine learning\u201d to the now most recognized Version: AI.\n\nI have noted that big money knows what\u2019s up. I have seen Wall Street react negatively and crush stocks of companies announcing major AI spend b/c anyone worth their salt knows a huge chunk of it is hype.\n\nThis reminds me of the hype like 20 years ago where Fortune 500 companies thought they could outsource their true analytic capabilities to consulting companies. (By analytic I mean true machine learning capabilities. It seems the word analytic gets tossed around much too easy these days to represent Mickey Mouse level analysis). The consulting companies would basically sell hype and implement some cookie cutter suite of machine learning models. These consultants had zero understanding of the nuances of these businesses and would miss out on a ton of predictive ability because without this knowledge you are going to build your variables wrong. \n\nThis is going to happen with AI as well. A lot of the AI that is receiving hype is essentially a Google V2.0, where Natural Language Processing is embedded on the highest scoring google results so it gives you a semblance that a human is talking back the google results to you. It will still render errors the same exact way googling and depending on the top 1-5 results would. \n\nTo truly implement AI the way many people are perceiving, you\u2019d have to have mini-AIs for every single domain of human understanding and have experts feed it every single rule imaginable related to the domain and communication in general. You have to think of it like teaching a gifted child, whose gift is insane processing power. But you have to teach it every little thing. And then hope no one feeds it misleading rules and/or data as truth.\n\nThere was a term in grad school that is analogous to the rubbish I see in AI and it will probably be prevalent for as long as I live. It was called \u201cKitchen Sink Modeling\u201d. It essentially entailed just blindly dumping all variables into a model and let the model guide you for subsequent iterations of the model(s). These were basically lazy people who didn\u2019t want to do a thorough univariate/multivariate analysis before moving on to building models and comparing performance. \n\nYou would think, that at least some of the Fortune 500 companies have at least 1-2 smart people. So my cynicism suggests, what they are doing now is cost containing labor cost. Mass fire a bunch of people b/c everyone else is doing it too. Then when the next wave of demand occurs you begin hiring back at lower salaries bc labor has no leverage or option.",
+            "score": 20,
+            "depth": 0,
+            "timestamp": "2025-03-29 15:27:03",
+            "replies": []
+        },
+        {
+            "author": "yoyomonkey2",
+            "body": "Nope more moving jobs overseas",
+            "score": 99,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:08:32",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "Eh, my workplace is moving tech jobs (firmware) back from China to London.",
+                    "score": 14,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 16:12:21",
+                    "replies": []
+                },
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 10,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 15:02:07",
+                    "replies": [
+                        {
+                            "author": "Bagafeet",
+                            "body": "A keyboard didn't replace me, neither spell check, nor ai. I quit Google cause they were clearly more interested in moving jobs to cheaper places than actually building something solid. When you run out of ideas to squeeze customers you start squeezing the workforce.\n\nEdit: ai image green is fucking soulless and people who rely on it wouldn't have paid an artist anyway. Modern day MS Office clip art. Useful but ain't nobody giving two fucks after the initial novelty passes.",
+                            "score": 14,
+                            "depth": 2,
+                            "timestamp": "2025-03-29 15:15:51",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "[deleted]",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-29 15:35:46",
+                                    "replies": [
+                                        {
+                                            "author": "Bagafeet",
+                                            "body": "We're looking at the same thing and coming to different conclusions. It's \ud83e\udd22\n\nSee the cool thing about at is originality and that's beyond current tech. Cool they can imitate studio ghibli style, \ud83e\udd71",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2025-03-29 15:39:48",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "lefty1117",
+            "body": "offshoring is a much bigger problem and has been for a couple decades",
+            "score": 12,
+            "depth": 0,
+            "timestamp": "2025-03-29 15:30:57",
+            "replies": []
+        },
+        {
+            "author": "Rammus2201",
+            "body": "Chances are - the vast majority of people who talk about AI have no idea what they are talking about. Take that as you will.",
+            "score": 30,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:05:11",
+            "replies": []
+        },
+        {
+            "author": "AssociationCrazy5551",
+            "body": "Ai is a tool, those who don't use it will be left behind over time similar to every other major breakthrough tool in use today.\n\nRight now jobs are being shipped overseas to India and Phillipines. That is the real threat to white collar America.",
+            "score": 31,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:08:10",
+            "replies": [
+                {
+                    "author": "Due-Dentist9986",
+                    "body": "Ai is being used to make off shoring those jobs easier",
+                    "score": 18,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 14:13:54",
+                    "replies": []
+                },
+                {
+                    "author": "Swiftzor",
+                    "body": "People who say this are coping. AI isn\u2019t even a viable tool. I work in software and people who generate their code take longer to get their code merged because they can\u2019t talk to it so when people say\u201dwhy did we do this\u201d they just spin their wheels and do nothing. Then their unit tests are all just Assert(true) bullshit and we end up getting bugs in every environment because it\u2019s low quality.",
+                    "score": -3,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 14:23:53",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "[deleted]",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2025-03-29 15:43:29",
+                            "replies": [
+                                {
+                                    "author": "Swiftzor",
+                                    "body": "Yes, I have. I\u2019ve also seen those results get pushed to production with simple sql injection vulnerabilities.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-29 16:29:33",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "Olangotang",
+                                    "body": "Who cares. All they did was make the LLM generate the image instead of a Diffuser model. It's mind-blowing until Open Source models catch up.\n\nThe amount of context required to replace people in a company requires an insane amount of energy. LLMs are a tool, stop dooming because the investors funding this shit are jerking themselves off over it.",
+                                    "score": -1,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-29 16:31:14",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "threeriversbikeguy",
+            "body": "I know this place has an uber-tech tilt but its crazy hearing how dismissive some of this shit posted here is\n\nAI have made chatbots in call centers good enough to dozer thousands of call center jobs in my state alone\u2014these are the more complex \u201ci dispute this specific thing on my bill\u201d calls that don\u2019t get sent overseas. Now its literally just an AI on IVR doing it. These are thousands of lower skilled workers handling nuanced decisions (os this a valid fraud claim, is the late fee/charge legit?) now straining our welfare support systems with no real job opportunities.\n\nThey always trial run this stuff on the \u201clittle people\u201d that get ridiculed by the workforce en masse as having few skills. Then like India outsourcing eventually those doing the ridiculing get jettisoned ass-first onto the curb. \n\nThe same will happen with AI.\n\nReal talk: over 50% of job duties for most people are boring and repetitive tasks. Once AI can do those? Boom, fire 50% of the staff.",
+            "score": 14,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:40:04",
+            "replies": [
+                {
+                    "author": "kupomu27",
+                    "body": "IVR system is not perfect yet. Plus, the human's fool. The ivr asked for the member id. They lost the card lol. Ask for the date of birth they put the social security lol.\n\nIf AI can communicate with customers effectively, they can use it.  Asking customers basic questions is challenging for them. What is your address? US. Can you tell us the full address? Only tell the street number. Then they cancel the service because they cannot answer simple question.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 15:46:04",
+                    "replies": [
+                        {
+                            "author": "threeriversbikeguy",
+                            "body": "That is definitely closer to the publicly available AI tools than to my company\u2019s. We trained ours out of those pitfalls 18 months ago. If a company just licenses the basic consumer-facing Gemini or ChatGPT i agree it will suck. But the major employers are doing more.",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2025-03-29 16:27:59",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "Some people, yeah. I've heard a lot of graphic designers moved to contractor then told they could stay on as prompt engineers at a lower salary. But it's not that many of them, yet. \n\nIt's handling a lot of T1 customer service right now, and while it isn't replacing people outright a lot of support staff are being outsourced from behind the AI, and eventually if it gets good enough they'll reduce staff as well.\n\nIt's not really able to fully replace people yet, but their goal is to get it there",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:41:44",
+            "replies": []
+        },
+        {
+            "author": "doobiedoobie123456",
+            "body": "The level of investment and hype means it is going to be forced on us regardless of whether it works or not.\u00a0 Right now it's in a weird spot where it is really, really good at certain specific tasks but still fails at things you would take for granted from a human.\u00a0\n\n\nMy guess is that this is like self-driving cars where everyone thinks it's going to happen really rapidly based on initial progress, but the lingering problems turn out to be really hard to solve.\u00a0 The thing is, something doesn't have to make sense for businesses to adopt it.\u00a0 I work with offshore teams and most of them are barely worth having as employees.\u00a0 But it doesn't matter, the business is dead set on it.\n\n\nThere are lots of \"interesting\" things that could happen.\u00a0 I believe AI alignment (ensuring AI can't be used to do evil stuff and will not decide to turn against humans) is nowhere near being solved, and may be impossible to solve.\u00a0 If they actually develop AI that measures up to the current hype, it could be very dangerous.\u00a0 Right now AI safety is not really being taken seriously but that's just because it is not powerful enough to operate on its own.\u00a0 You'll be able to tell we have real AI when they start coming up with serious restrictions on its use (or some kind of terrible incident happens and they are forced to).",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2025-03-29 15:27:36",
+            "replies": []
+        },
+        {
+            "author": "Cool-Tree-3663",
+            "body": "Many base jobs in things like HR have gone. Some, as others have said, have been moved to cheaper locations overseas. However numbers of roles have reduced as it is expected that AI will answer the basic questions. My experience is that AI is useless!",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:23:16",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 13,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 14:29:16",
+                    "replies": []
+                },
+                {
+                    "author": "kupomu27",
+                    "body": "Nope, did you see you recently? HR is combining with IT and payroll now. The house is on fire lol. HR without the personality with the basic tech skill with no common sense. Miscalculated the employee taxes. I think the employees are using AI to meet unrealistic expectation of the employer.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 14:25:43",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "[deleted]",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2025-03-29 14:33:45",
+                            "replies": [
+                                {
+                                    "author": "kupomu27",
+                                    "body": "That is what my experience is and what I see from I hate my job subreddit.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-29 14:45:08",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "BUYMECAR",
+            "body": "It absolutely is replacing jobs. The extent to which it replaces all of the job duties depends on the industry/job. But that makes it infinitely easier for companies to offshore positions. \n\nDon't forget that using AI gives companies plausible deniability. When something breaks or subpar work product is brought to attention, the market is far more forgiving at the prospect of revenue impacts because it is understood that AI provides labor cost savings. The speculative impacts of human incompetence are far more threatening to investors.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-03-29 16:14:06",
+            "replies": []
+        },
+        {
+            "author": "longPAAS",
+            "body": "Technology has been forcing us to do more with less, and AI is no different. Are we hiring fewer people as a result? I guess maybe. But it\u2019s not this robot dystopia people keep painting, it\u2019s squeeze every ounce of productivity from your 9-5.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-03-29 16:25:00",
+            "replies": []
+        },
+        {
+            "author": "WesternEntertainer20",
+            "body": "I'm a software engineer. AI is not going to be able to replace me anytime soon, but it can help a lot with certain tasks. This lets me do significantly more work in the same amount of time. If I need to work on code written in a language I'm not familiar with or that I have no context on, AI tools usually will be able to quickly analyze existing code and give me guidance, whereas in the past I might have needed to ask a colleague to take time out of their day to help me solve a problem. \n\nLet's say there are a hundred engineers working at company and they are on average 20% more efficient using AI, they are now doing the work of 120 people. They can now take on a higher work load as if the company had hired 20 new engineers, so this will affect hiring. In the worst case scenario, an efficiency boost like this could lead to layoffs.",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:49:17",
+            "replies": []
+        },
+        {
+            "author": "Pure_Explorer3821",
+            "body": "It is taking over very menial and repetitive tasks, including basic coding. The same way offshoring is taking over those tasks and jobs.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:27:47",
+            "replies": [
+                {
+                    "author": "kupomu27",
+                    "body": "HR is now a coder in one role. I know the job requires HTML and CSS.  Both onshore and offshore employees are using them, by the way. Now I understand why Workday, or whatever website they use, has a template form on the company website.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 14:29:35",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Jean19812",
+            "body": "I don't think it will.  We've been hearing that it will for decades..",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:39:21",
+            "replies": []
+        },
+        {
+            "author": "Marx_on_a_Shark",
+            "body": "AI isn't replacing many jobs. What it is doing however is allowing 1 person to get more done in a day which will mean less people are required to do a job. So it's not like an AI is going to do the work, but it will mean less jobs.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:49:10",
+            "replies": [
+                {
+                    "author": "saopaulodreaming",
+                    "body": "Which means less people needed, so yes, AI is taking away jobs.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 15:40:02",
+                    "replies": [
+                        {
+                            "author": "Marx_on_a_Shark",
+                            "body": "Yes.  That is what I said",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-03-29 16:01:47",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "This-Bug8771",
+            "body": "For most, not directly, but it has (and will) continue be an excuse for companies to cut employees because companies need to justify their investments in AI. In effect, many of us are a means to subsidize the latest craze.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:58:38",
+            "replies": []
+        },
+        {
+            "author": "outlier74",
+            "body": "Mine was replaced by AI. The computer took work that took 3 days to do and reduced it to 5 hours.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-29 16:26:18",
+            "replies": []
+        },
+        {
+            "author": "OSUBucky",
+            "body": "An Indian, yes.",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:34:33",
+            "replies": []
+        },
+        {
+            "author": "soscollege",
+            "body": "The person using ai is replacing your job",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:35:32",
+            "replies": []
+        },
+        {
+            "author": "dheerajnagpal",
+            "body": "They are not going to replace people, but more like 2 people would be needed where 10 were initially. Same as when computers came in and replaced typewriters or email replaced letters.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:26:39",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "Umm\u2026 that is replacing people",
+                    "score": 16,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 14:57:15",
+                    "replies": [
+                        {
+                            "author": "xolsoulxol",
+                            "body": "\ud83d\ude02 perfect reply",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-03-29 15:35:19",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "paijam",
+            "body": "A lot of people want remote work.  This is the result --> offshore the job and AI tools to replace jobs here in the US. Ie. SW Engineering jobs peaked about a year ago in 2023, and there has been a deep decline since.  Unfortunately, that's reality.  Now, to remedy, i would suggest finding a specialization.  For those that want it remote, good luck.- You will be replaced.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:48:04",
+            "replies": []
+        },
+        {
+            "author": "chinchikus",
+            "body": "It\u2019s about ROI. Corporations must answer to investors about enormous AI spending.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:18:58",
+            "replies": []
+        },
+        {
+            "author": "Latter_Inspector_711",
+            "body": "yes, its happening in tech. at least at an app that helps woth grocery delivery",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:44:45",
+            "replies": []
+        },
+        {
+            "author": "AfroAmTnT",
+            "body": "Yes. It is.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:46:19",
+            "replies": []
+        },
+        {
+            "author": "Skinnieguy",
+            "body": "I saw this post a few months ago. Whether it was AI or automation was the real culprit, I think at the moment, most companies won\u2019t replace jobs but they are testing of replace task and the eventually jobs. Maybe if ppl quit/retire/fired/ or companies wanting to grow, they will leverage AI first before looking to hire.\n\nIf you\u2019re doing a repetitive desk job, I would be researching the heck out of AI right now to get ahead of it. \n\nhttps://www.reddit.com/r/ChatGPT/comments/1guhsm4/well_this_is_it_boys_i_was_just_informed_from_my/",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:52:25",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "AI will not take your job, but someone who is well versed in using AI to make their job more efficient will take your job. It is similar to paper pushers who refused to adapt to computers in the 80s/90s or release managers who refused to admit that their job would be replaced by someone using CI/CD",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:54:56",
+            "replies": []
+        },
+        {
+            "author": "Ecstatic_Tiger_2534",
+            "body": "I don\u2019t think it\u2019s a full replacement for any type of role, but I can see it reducing headcount.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:56:44",
+            "replies": []
+        },
+        {
+            "author": "TabuTM",
+            "body": "This is what we said about off-shoring in the newspaper biz. Hope for the best - Plan for worst.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:58:50",
+            "replies": []
+        },
+        {
+            "author": "Media-Altruistic",
+            "body": "Not sure about replacing but, AI cuts my work time by 75%.  I can create documentation and project plans much quicker",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 15:01:06",
+            "replies": []
+        },
+        {
+            "author": "Bagafeet",
+            "body": "I asked Google's ai for cafes that opened at 7am and it gave me a list of ones that it claimed opended at 7 then listed their hours. None open before 8.\n\nIt just tells you what it thinks you want to hear sometimes, it's hilarious and sad.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 15:13:18",
+            "replies": []
+        },
+        {
+            "author": "Sunghyun99",
+            "body": "If you do stuff an AI could reasonably do and you do a bad job at it you are screwed",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 15:29:57",
+            "replies": []
+        },
+        {
+            "author": "TravestyinCT",
+            "body": "Yes by reducing total man hours.\nIf you need 3 people now and an AI can pick up the workload of 1 - then you get rid of one person.\n\nThink robotic assemble lines. Now have AI making decisions.   \n\nThere is a reason why military is heavily investing in AI.\n\nTanks, ships , fighters all controlled by AI.\nAll 3 of these are here now and being tested.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 15:32:45",
+            "replies": []
+        },
+        {
+            "author": "xolsoulxol",
+            "body": "AGI is around the corner and THAT is what will displace actual roles.  Right now we are at the stage of displacing tasks... But the entire premise of AGI is that it can displace 100% of what a persons role.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 15:34:43",
+            "replies": []
+        },
+        {
+            "author": "ZenoOfTheseus",
+            "body": "Maybe one day AI will replace me at my job. It ain't today or tomorrow though. Or anytime soon.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 15:43:45",
+            "replies": []
+        },
+        {
+            "author": "Head-Aside7893",
+            "body": "I\u2019ve been extensively using chat gpt (free) along with several friends and it has cut down our workload. Not by a large amount maybe just 10%. The thing is, other ppl at my job don\u2019t use it. But if everyone did and everyone suddenly had 10% more capacity, I wouldn\u2019t be surprised if corporate decides we can cut a person and move everyone back to full capacity. What used to take me 60 min to write now takes 10 minute with proofreading.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 15:59:22",
+            "replies": []
+        },
+        {
+            "author": "TheoNavarro24",
+            "body": "It really is, we\u2019re seeing teams invest into AI tools to get more work out of each team member and reduce how many people need to be on the team",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 16:10:11",
+            "replies": []
+        },
+        {
+            "author": "jjopm",
+            "body": "It replaced mine.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 16:10:34",
+            "replies": []
+        },
+        {
+            "author": "muntaxitome",
+            "body": "People get fired, downsized, replaced with software, replaced without substitution, replaced by juniors, replaced by third parties all the time. This was true before AI as well. With pretty much everyone using AI these days, the replacement often has some AI part. I think it's more sensible to look at broader long term (like ten years) employment trends per type of work and industry than to make a one-dimensional analysis.\n\nEnd of the line is that most industries don't see substantially lower employment than pre-corona. I don\u2019t think much of the layoffs we see now have to do much with AI even if some individual jobs may be 'replaced by AI'.\n\nI think there may be some very specific industries like translation that were doing pretty poorly even 10 years ago and are attrocious now with a little AI push.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 16:21:26",
+            "replies": []
+        },
+        {
+            "author": "Reverse-Recruiterman",
+            "body": "Jobs? No.  ONLINE PROFILES? YES.\n\n3 times in the last year I came across fake CEO or Senior Executives with AI Personas,  which tells me the future of work is hiding behind avatars",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 16:21:54",
+            "replies": []
+        },
+        {
+            "author": "Single-Weather1379",
+            "body": "Can't wait in 10 years when AI will be, in fact, good enough to replace 99% of jobs, all the tech people will lose their minds",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:09:51",
+            "replies": [
+                {
+                    "author": "kamon405",
+                    "body": "Yea we sabotaging that shit.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 14:42:28",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "kamon405",
+            "body": "They try to do thar find 9ut it doesn't work, then outsource the jobs then like lie and say it's AI.\n\n\nI'm a federal contractor so no AI hasn't replaced me nor can my job legally be outsourced but then again im a dat engineer. If that gets taken by AI I just move to a different aspect of my data science career.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:39:20",
+            "replies": [
+                {
+                    "author": "kupomu27",
+                    "body": "Elon Musk can replace you by breaking the laws.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 16:18:14",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "apollo7157",
+            "body": "Cope",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:04:52",
+            "replies": []
+        },
+        {
+            "author": "Flaky-Wallaby5382",
+            "body": "The \u201cIT guy\u201d or help desk is dead. Anyone can use copilot to solve most minor tech issue like help desk",
+            "score": -2,
+            "depth": 0,
+            "timestamp": "2025-03-29 14:46:56",
+            "replies": []
+        }
+    ]
+}

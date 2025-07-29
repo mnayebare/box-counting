@@ -1,0 +1,112 @@
+{
+    "post_title": "Racial bias in facial recognition technology the focus of bill introduced by Rep. Lawrence",
+    "post_timestamp": "2019-10-15 07:48:04",
+    "last_comment_timestamp": "2019-10-15 15:46:56",
+    "time_difference": "7:58:52",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "body": "\nAs a reminder, this subreddit [is for civil discussion.](/r/politics/wiki/index#wiki_be_civil)\n\nIn general, be courteous to others. Debate/discuss/argue the merits of ideas, don't attack people. Personal insults, shill or troll accusations, hate speech, **any** advocating or wishing death/physical harm, and other rule violations can result in a permanent ban. \n\nIf you see comments in violation of our rules, please report them.\n\n***\n\n\n*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/politics) if you have any questions or concerns.*",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2019-10-15 07:48:04",
+            "replies": []
+        },
+        {
+            "author": "Grunchlk",
+            "body": "Wasn't this was already covered in an episode of Better Off Ted 10 years ago?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2019-10-15 08:47:46",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "And an episode of community, doesnt mean they fixed it yet.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2019-10-15 08:58:34",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "ed2022",
+            "body": "Oh lord, we now have racist computers, help us, Jesus.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2019-10-15 07:56:19",
+            "replies": [
+                {
+                    "author": "AI_Overlordz",
+                    "body": "Computers can only do what humans tell them to do--and the people writing programs are overwhelmingly not black. It's hardly surprising. All those \"useless liberal arts, gender/racial studies\" people called this as a problem before facial recognition was even a working technology.",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2019-10-15 08:14:15",
+                    "replies": [
+                        {
+                            "author": "AssCalloway",
+                            "body": "How would one program their bias into a neural network?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2019-10-15 08:22:01",
+                            "replies": [
+                                {
+                                    "author": "SenorBurns",
+                                    "body": "It's not that the programmers are  consciously biased, but that the data used are already biased. \n\nAn old non AI example would be the development of color film. Film doesn't just naturally make white people look normal and black people dark and featureless. Its manufacture is tweaked that way, and until very recently, the color keys developers used featured only white people. This system was designed with the data people had, namely that they expected primarily white people to use cameras, which is reasonable considering race distribution in the U. S., but it winds up being racist. \n\nThe book **Weapons of Math Destruction** explains how algorithms become infused with biases.\n\nHere's a bit from [an article](https://towardsdatascience.com/algorithms-are-racist-now-what-53fc130bb203) on the topic. \n\n\n> We see this in predictive policing algorithms that utilize biased historical data of prior arrests (which are skewed to poorer communities due to higher level of nuisance crimes), to determine where future crimes will take place and in determine where officers should be sent to patrol more frequently. This leads to more policing in poorer areas and a self fulfilling reinforcing loop.\n\n> The more policing in a community, the more arrests for nuisance crimes. The more arrests for nuisance crimes, the more dots populated on a crime map. The more dots populated on a crime map, the more reason for policing. And the dangerous feedback loop goes on.\n\n> It\u2019s easy to believe that more data is better data. But biased data going in, means biased data coming out. In other words, \u201cgarbage in garbage out.\u201d\nAt the end of the day we are the ones inputting this data into algorithms. We create them, we keep them secretive and the understanding of how they work away from the people most affected by them. In a recent PBS interview, Joi Ito, Director of MIT Media Lab, attested to the limitations of this technology given the fact that flawed humans are choosing data inputs.\n\u201cAI isn\u2019t magically going to make us wise,\u201d said Ito. \u201cHaving these conversations about race before locking in these algorithms is really more important than all these mathematical things.\u201d",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2019-10-15 08:32:39",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "So is it about poor areas or race? If there is a race correlation to poor areas, that doesn\u2019t mean the algorithm is racially biased. It\u2019s funny how the actual increase in crime is ignored because they are \u201cnuisance\u201d crimes. \n\nSo the argument is...we should police more in wealthy areas so that more crimes are recorded to give the algorithms better data, making them not racist?",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2019-10-15 08:46:24",
+                                            "replies": [
+                                                {
+                                                    "author": "AI_Overlordz",
+                                                    "body": "> If there is a race correlation to poor areas, that doesn\u2019t mean the algorithm is racially biased.\n\nIf that correlation exists because of racism, yes it is.",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2019-10-15 15:34:07",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Deleted",
+                                                            "body": "It is poor people biased because crime happens at higher rates in these areas. Perhaps a racial correlation exists but that is because certain races typically mass in certain areas. A computer doesn\u2019t give a shit what someone\u2019s race is.",
+                                                            "score": 0,
+                                                            "depth": 6,
+                                                            "timestamp": "2019-10-15 15:37:43",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "AI_Overlordz",
+                                                                    "body": "Poverty is a direct result of race. Your argument is moot on those grounds alone.\n\nNo one is imputing emotions onto the computer. They are saying that bias on the part of programmers is creating flawed datasets that are leading to racist (i.e., harmful to people based on race) program outcomes.",
+                                                                    "score": 3,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2019-10-15 15:46:56",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "radiantwave",
+                                    "body": "Let me simplify this... It is not the programmers but the history that causes this...\n\nLet's say want to train my app to look for criminals. So I tell the system to look at a standard sample of the faces of people in the prison population. \n\nThen I point the camera system at the general population of non/maybe criminals. The system will have a bias of seeing minorities as criminals because of the over representation in the sample set as compared to the general population. \n\nThis is why there is always an inherent issue with designing algorithms vis neural networks from sample data, unless you are constantly revising the algorithms to match actual outcomes.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2019-10-15 10:04:59",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

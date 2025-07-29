@@ -1,0 +1,127 @@
+{
+    "post_title": "The coming AI \"Economic Crisis\" and the Transition problem",
+    "post_timestamp": "2024-11-23 06:16:41",
+    "last_comment_timestamp": "2025-03-30 05:07:39",
+    "time_difference": "126 days, 22:50:58",
+    "comments": [
+        {
+            "author": "Economy-Fee5830",
+            "body": "The author's perspective overlooks a key aspect of technological progress: the creation of **new industries and services enabled by automation**, which historically offsets job losses and drives overall economic growth. By framing AI adoption as a zero-sum process that simply replaces labor, the narrative ignores how automation expands the economy, lowers costs, and enables broader access to goods and services, creating opportunities for all. A society made richer by increased productivity benefits not just property owners but everyone through higher living standards, new jobs in emerging fields, and greater affordability of essential and luxury goods. This failure to account for the transformative potential of AI results in an unnecessarily pessimistic view of its societal impact.\n\nThe author\u2019s focus on inequality seems unnecessarily pessimistic, framing it as the central outcome of AI-driven automation without sufficiently exploring how increased productivity and wealth creation can benefit society as a whole. By overly emphasizing wealth concentration and the erosion of traditional labor, they neglect the historical trend where technological advancements have expanded access to goods, services, and opportunities, reducing absolute poverty even in the presence of inequality. This preoccupation with inequality also overlooks the fact that a richer, more productive society typically provides broader societal benefits, such as better healthcare, education, and infrastructure, which improve lives across all socioeconomic levels. These advancements are driven by economic growth and innovation, ensuring that society progresses collectively rather than being trapped in a zero-sum struggle over resources.",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2024-11-23 06:28:26",
+            "replies": []
+        },
+        {
+            "author": "MrE8281",
+            "body": "Whenever I read a post about economics or technology that starts to sound like low grade William Gibson knockoff I take a drink; it's not a drinking game mind you, more of a coping technique.\n\nThankfully, this one isn't quite *that* bad. It does, however, ignore the body of evidence that expanding the capability of MLs and LLMs require exponential increases in data sets and computing resources.  If that holds true, diminishing returns are going to hit **HARD** and **FAST**.\n\nWhen the modern tech industry was young it distinguished itself by rejecting the formal stodgieness of corprate culture at the time.  When the industry was growing in leaps and bounds and discovering it's roll in the larger economy, this was all well and good.  These days, however, the industry has greatly matured and mostly found it's place, but leaders still have a tendency to sell every minor advancement and new gadget as The Biggest Thing EVAR\u2122 (looking at you Musk). Honestly, I think today's tech industry could benifit from a bit of corprate stodgyness.  If this and other thigs follow the pattern of embarising flops that crypto and NFTs did, I suspect that's exactly what happen over time.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-11-23 13:43:45",
+            "replies": []
+        },
+        {
+            "author": "sg_plumber",
+            "body": "I've seen much worse Science-Fiction, to be sure.\n\nMeanwhile, in the real world, many tech corps who were very eager to adopt all kinds of AI tools (mainly because their clients were) are fast backpedaling on finding out that LLMs and MLs are only as good as their training datasets, and only for the most basic of tasks, like pattern recognition and exploitation, make costly mistakes, and will not significantly advance in the near future. Not a single one of them can replace a junior programmer or analyst, and are barely ready to augment the productivity of their human partners. Also, the number of people assigned to curate datasets for AI use is skyrocketing.",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2024-11-23 06:53:10",
+            "replies": [
+                {
+                    "author": "AlphaPyxis",
+                    "body": "I'm with you. 100% my personal experience matches. I'm a coder (data science/UX/data engineering) - the current AI makes certain lower level things easier (but its work needs to be checked a TON because it just makes up huge swodges of stuff.  ex:  it will make up entire functions.  It doesn't tell you what the function does, it just calls it to solve some portion of the question.  When you tell it that function doesn't exist and to write it, it has no idea what you're talking about.  You have to give it explicit requests for that particular function and you've got a 30% chance it'll give you functional code).  I think it'll get better to some degree, but not to replace anyone (even juniors).  \n  \nSo far it shows bare creativity and almost no capacity to truly solve complicated issues. \"Complicated\" meaning anything that has multiple chained step that require continuity or anything that requires being inventive.  The only questions it can answer are those that are straight forward enough to already HAVE an answer.  Anything else? Not yet.\n\nOn top of that, its only as good as its training set.  So if you've got a new modality, you're entirely on your own.  Even if AI assisted in designing the newShinyThing, it probably can't help you use newShinyThing for anything other than the prompt it was designed for and sometimes it'll just be like 'wat? I've never heard of newShinyThing.  Do you mean R Shiny?\"  \n  \nI think there are definitely advantages to AI in certain regards, but I'm not even remotely worried for the next 5 years.  And unless they can solve the energy and water usage issue the cost of use is going to become fairly insurmountable.\n\nSO:  Optimism for the next little while -> I think there are some portions of some jobs that will become TRULY entry level for \"prompt engineers\".  Folks who are trained to ask the AI questions to get certain results and then QC those results will have a whole job doing that.  It likely won't be current 'Tech Salary', more like entry level office job.  That'll lead some of those people to get frustrated as hell and upskill until they can code and help with the more comlicated stuff.  Certain other jobs that exist now will need fewer people, but because AI will allow faster throughput of the lower level stuff.  There will be more time for the thinky-stare-into-the-middle-distance-with-a-mildly-haunted-expression.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-11-23 12:41:31",
+                    "replies": [
+                        {
+                            "author": "Splatoonfan_46",
+                            "body": "Do you think much has changed with the newer ai models ?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-01-27 21:29:37",
+                            "replies": [
+                                {
+                                    "author": "AlphaPyxis",
+                                    "body": "They've gotten way more convincingly wrong.  The gibberish code tends to have the correct white space.  Also I trained mine to be sarcastic somehow.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-27 23:58:24",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "That is so funny",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-02-25 21:25:55",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "Fine_Classroom",
+                                            "body": "My first thought is \"You are doing wrong\".  I don't even code any more.  I merely orchestrate the coding process.  What are you working on that your ai is more and more wrong?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-03-29 20:30:06",
+                                            "replies": [
+                                                {
+                                                    "author": "AlphaPyxis",
+                                                    "body": "Data munging, analysis, modeling and interactive UI.\n\nIts not getting more and more wrong; its getting more -convincingly wrong-.\n\nMeaning that the code it produces looks more and more accurate in terms of formatting. But the gibberish nonsensical functions it creates, the functions that it calls that don't exist etc are still incorrect as much as they ever were.\n\nThis type of AI is only as good as its training; Its not AGI.  A lot of what I'm working on isn't available on stack or via a few readily available mechanisms chained together.\n\nFor the basic stuff, its pretty good.  So from someone who still actually codes, I'm pretty sure I'm using it correctly - its just not very good at complex things.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-03-29 22:20:41",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "MeshuggahEnjoyer",
+                    "body": "You're right this AI thing is just a fad and going nowhere. In 2-3 years it'll be completely gone and forgotten. It's literally useless.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-11-24 00:11:54",
+                    "replies": [
+                        {
+                            "author": "sg_plumber",
+                            "body": "It likely won't be forgotten as it has *some* uses. But the reality check for all the hype will be painful.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-11-24 04:22:08",
+                            "replies": []
+                        },
+                        {
+                            "author": "Fine_Classroom",
+                            "body": "Nice sarcasm.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-03-29 20:30:44",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Fine_Classroom",
+                    "body": "Are you a developer?  Have you been using AI for development work?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-03-29 20:28:22",
+                    "replies": [
+                        {
+                            "author": "sg_plumber",
+                            "body": "Yup.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-03-30 05:07:39",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

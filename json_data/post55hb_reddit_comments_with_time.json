@@ -1,0 +1,1429 @@
+{
+    "post_title": "AI Can Guess Your Race Based On X-Rays, and Researchers Don't Know How",
+    "post_timestamp": "2021-08-23 14:44:58",
+    "last_comment_timestamp": "2021-09-09 23:05:22",
+    "time_difference": "17 days, 8:20:24",
+    "comments": [
+        {
+            "author": "tklite",
+            "body": "From the paper:\n\n>We were limited by the availability of racial identity labels and the small cohorts of patients from many racial identity categories. As such, we focused on Whites, Blacks and Asians, excluding patient populations which were too small to adequately analyse (for example, Native American patients) and excluding Hispanic labels due to variations in how this label was recorded across datasets.\n\nSounds like some of the accuracy is due to a constrained data set.",
+            "score": 38,
+            "depth": 0,
+            "timestamp": "2021-08-23 16:25:25",
+            "replies": [
+                {
+                    "author": "its",
+                    "body": "I can bet you they didn\u2019t include representative samples from the African continent. There is more genetic variation among two Khoisan people from different tribes than all humanity outside Africa. So for the most part, they are assigning people to the \u201craces\u201d present in the US which represent a small subset of the genetic variation in humans.",
+                    "score": 26,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 16:34:04",
+                    "replies": [
+                        {
+                            "author": "fordanjairbanks",
+                            "body": "I mean, they have to take a subset from somewhere. There is no more racially diverse place on earth than the United States, so it seems like it would make for a decent balanced dataset for categorical image classification. Collecting the adequate data to deal with the problems you bring up is likely far too expensive and logistically nightmarish, as is the case for collecting most really good data.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2021-08-24 00:21:43",
+                            "replies": [
+                                {
+                                    "author": "its",
+                                    "body": "Why do you say this? There is more genetic variation within Africa than North America.",
+                                    "score": 10,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-24 01:13:16",
+                                    "replies": [
+                                        {
+                                            "author": "rsclient",
+                                            "body": "The paper goes into more detail -- they use \"race\" like it's used in America, which means that it doesn't have a super strong relationship with genetics. That's one of the big problems with the AI inferring the race of the person. In America there are plenty of people with less than 10% \"Black\" \"genetics\" who are treated as \"black\". The AI figures this out, and marks them as \"Black\" even though any rational analysis would say they are more white than Black.",
+                                            "score": 20,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-24 01:18:56",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "Deleted",
+                                            "body": "Genetic variation and racial variation are 2 different things\n\nIf you\u2019re talking about speciation then yes the genetic difference of the 2 tribes would make more sense but since they\u2019re African and that\u2019s their race we don\u2019t need anymore genetic variation than that",
+                                            "score": 4,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-24 07:56:49",
+                                            "replies": [
+                                                {
+                                                    "author": "its",
+                                                    "body": "Don\u2019t races have anything to do with measurable differences? I thought this the point of analyzing X-rays.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-24 11:09:28",
+                                                    "replies": [
+                                                        {
+                                                            "author": "tklite",
+                                                            "body": "[From the paper:](https://arxiv.org/ftp/arxiv/papers/2107/2107.10356.pdf)\n\n>Race and racial identity can be difficult attributes to quantify and study in healthcare research 15\n, and are often incorrectly conflated with biological concepts such as genetic ancestry 16. In this work, we define racial identity as a social, political, and legal construct that relates to the interaction between external perceptions (i.e. \u201chow do others see me?\u201d) and self-identification, and specifically make use of the self-reported race of patients in all of our experiments.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2021-08-24 11:56:01",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "its",
+                                                                    "body": "How does a social construct affect skeletons?\n\nEdit: Let\u2019s try a thought experiment which might answer my question. I would presume that African pygmies would be considered black in the US. Now we can train a network to recognize pygmies and Bantus as a single \u201crace\u201d but the network simply reflects our preconceived notions. Similarly we can train a network to recognize dogs and cats as a single race distinct from leopards. It doesn\u2019t mean it has a basis in biological reality.",
+                                                                    "score": 3,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2021-08-24 13:23:59",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "PatchThePiracy",
+                                                                            "body": "Social constructs obviously do not affect skeletal structure. Biology, however, does. \n\nIt is exceedingly childish that we cannot simply admit that *some* measure of biological difference exists between human groups who evolved in markedly different geological locations. \n\nSaid differences do not affect our ability to get along as one just fine, and are actually quite exciting to think about. \n\nAnyone who uses such data to \u201cput down\u201d any certain group didn\u2019t need that data to do so - they were obviously already racist individuals.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2021-09-05 13:32:38",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "its",
+                                                                                    "body": "Yes but the social construct of race doesn\u2019t map to obvious physiological differences. But AI is \u201csmart\u201d. If you train it that Bantus and pygmies are one race and Italians another it will detect that tall or short skeletons are black and medium are white. Or whatever the physiological differences might be. It doesn\u2019t mean however that Bantus and pygmies are closer genetically than Bantus and Italians.",
+                                                                                    "score": 1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2021-09-05 23:45:29",
+                                                                                    "replies": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "fordanjairbanks",
+                                            "body": "Genetic variation and racial diversity are two different things.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-24 08:02:08",
+                                            "replies": [
+                                                {
+                                                    "author": "its",
+                                                    "body": "Isn\u2019t genetic variation necessary for skeletal differences? Or are the skeletal differences caused by different diets?",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-24 11:06:52",
+                                                    "replies": []
+                                                },
+                                                {
+                                                    "author": "smartguy05",
+                                                    "body": "Generic variation is what creates \"racial\" diversity.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-24 11:41:55",
+                                                    "replies": [
+                                                        {
+                                                            "author": "fordanjairbanks",
+                                                            "body": "Yes, but there is a large, large amount of diversity even among each \u201crace\u201d. Since race is a societal construct, it makes the most sense to sample from a more diverse racial subset of a population than it does to try to shoot for the most genetic variation, hence Queens, NY is probably better for this study than the entire continent of Africa.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2021-08-24 12:11:05",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "PatchThePiracy",
+                                                                    "body": "What types of large amounts of diversity exist amongst each race?",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2021-09-05 13:33:46",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "DestroyerOfIphone",
+                                            "body": "How do you figure?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-24 04:55:44",
+                                            "replies": [
+                                                {
+                                                    "author": "Koloblikin1982",
+                                                    "body": "We don\u2019t, the AI does",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-24 05:13:26",
+                                                    "replies": []
+                                                },
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "Many articles on the first page of Google results if you search for \u201cgenetic variation Africa\u201d, I took one of them:\n\nhttps://www.ncbi.nlm.nih.gov/pmc/articles/PMC4067985/",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-24 06:04:59",
+                                                    "replies": [
+                                                        {
+                                                            "author": "DestroyerOfIphone",
+                                                            "body": "According to the 2016 Yearbook of Immigration Statistics, the United States admitted a total of 1.18 million legal immigrants (618k new arrivals, 565k status adjustments) in 2016.[\n\n\nhttps://en.m.wikipedia.org/wiki/List_of_sovereign_states_and_dependent_territories_by_immigrant_population\n\nhttps://en.m.wikipedia.org/wiki/Immigration_to_the_United_States",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2021-08-24 06:48:34",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Deleted",
+                                                                    "body": "https://worldpopulationreview.com/country-rankings/most-racially-diverse-countries\n\nIt\u2019s hard to define what diversity is so I suspect we are just going to post links to each other. Immigration is a contributor to diversity but how do we quantify the extent of diversity in the immigrants? Is it cultural, ethnic or racial diversity we are talking about? In my previous comment, I was continuing with the genetic variation comment thread you were replying to but I can just post articles talking about other forms of diversity.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2021-08-24 07:35:24",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "Deleted",
+                                            "body": "Are you talking about Native American's? Because I'm pretty sure you have a wide range of people from Africa (not just those descended from slaves), and other people from around the world living in North America (this includes people from the far east).",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-24 06:17:10",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Deleted",
+                                    "body": "[deleted]",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-25 02:17:43",
+                                    "replies": [
+                                        {
+                                            "author": "fordanjairbanks",
+                                            "body": "Queens, NY is *the* most racially diverse place in the world, with residents representing over 100 ethnic backgrounds and more than 138 different languages. Go ahead and name a city, town, or even a country that\u2019s more diverse than that.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-25 02:28:02",
+                                            "replies": [
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "[deleted]",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-25 12:09:13",
+                                                    "replies": [
+                                                        {
+                                                            "author": "fordanjairbanks",
+                                                            "body": "Did you actually read/understand that metric that you\u2019re citing? It clearly states that the US is more diverse in every metric than the UK.",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2021-08-25 12:17:48",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Deleted",
+                                                                    "body": "[deleted]",
+                                                                    "score": 0,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2021-08-25 12:28:35",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "fordanjairbanks",
+                                                                            "body": "Lol you clearly have no idea what you\u2019re talking about.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2021-08-25 12:32:09",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "Deleted",
+                                                                                    "body": "[deleted]",
+                                                                                    "score": 0,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2021-08-25 12:36:18",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "fordanjairbanks",
+                                                                                            "body": "Sounds a lot like you\u2019re plugging your ears and singing the alphabet while the adults talk. You\u2019re welcome to keep doing that.",
+                                                                                            "score": 1,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2021-08-25 13:15:18",
+                                                                                            "replies": []
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Gslimez",
+                                    "body": "Terrible take",
+                                    "score": -1,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-24 14:13:35",
+                                    "replies": [
+                                        {
+                                            "author": "fordanjairbanks",
+                                            "body": "Thanks for adding value to this conversation.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-24 14:26:31",
+                                            "replies": [
+                                                {
+                                                    "author": "Gslimez",
+                                                    "body": "Thinking america is the \u201cmost racially diverse place on earth\u201d when you most likely havent been anywhere else doesnt add much value to anything either so... Yea try again lmao..",
+                                                    "score": -1,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-24 15:21:29",
+                                                    "replies": [
+                                                        {
+                                                            "author": "fordanjairbanks",
+                                                            "body": "Queens, NY has residents representing 100 different nationalities and over 135 languages. Where is a more ethnically diverse place?",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2021-08-24 18:44:36",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "Turns out practically infinite datasets are pretty rare in the real world.  Either some behavior tied to the internet (ad placement, movie selection, spam filtering); or else a made-up game like chess where you can create your own generative process.\n\nGet much beyond that and you are working for every sample.",
+                    "score": -2,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 18:32:23",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "alexxerth",
+            "body": "AI here just means pattern recognition software.\n\nIf there's any pattern there it will find it, be it a difference in something like bone density, the width of certain bones, the shape of the overall skeletal structure, height, or it might not even be a physical difference, it could be something like the way people tend to stand when having an X-ray taken, or even regional differences between X-Ray machines that have different artifacting, and those different regions have distinct racial makeups. It could be anything.\n\nThis same sort of software will tell you there's a correlation between the font type a hospital uses and their covid survival rates. Maybe applying what is essentially a program built to find any and all correlations between data sets isn't a great idea when we know correlation != causation, or maybe it just means we need to look at the output of these programs critically and not just trust that the machine knows what it's doing, because it doesn't.",
+            "score": 119,
+            "depth": 0,
+            "timestamp": "2021-08-23 15:15:34",
+            "replies": [
+                {
+                    "author": "l4mbch0ps",
+                    "body": "I mean critically examining the output in this case is just determining if it can guess your race or not. And the answer is that it can guess your race.",
+                    "score": 39,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 16:16:30",
+                    "replies": [
+                        {
+                            "author": "zzzzbear",
+                            "body": "I get the impression a lot of commenters here skimmed the headline and don't understand what it means\n\nyou're right, it's strange to question the efficacy of the use case when we're trying to figure out how and why *it worked*\n\nwife works in the field, they roll out pattern recognition software, it creates an opaque black box that spits out results without communicating its logic, it's considered a giant problem in the industry despite progress made",
+                            "score": 18,
+                            "depth": 2,
+                            "timestamp": "2021-08-23 23:53:16",
+                            "replies": [
+                                {
+                                    "author": "OpenRole",
+                                    "body": "I know there's a gpt-3 model that was designed to explain how it made predictions using common language, but most business are not investing in General AI. They just have a business problem that they are trying to solve and so general AI looks like overkill.\n\nI remember this being discussed in my intro to AI course in college",
+                                    "score": -1,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-24 05:14:29",
+                                    "replies": [
+                                        {
+                                            "author": "zzzzbear",
+                                            "body": "there has been some progress made but my understanding is that the problem with sprawl with efficacy",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-24 07:40:45",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "heresyforfunnprofit",
+                    "body": "I really want to joke that they left the patient names on the X-rays and the AI figured out that \u201cJamal\u201d probably isn\u2019t Irish.",
+                    "score": 12,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 23:46:50",
+                    "replies": [
+                        {
+                            "author": "Druyx",
+                            "body": "What if it's Jamal Murphy? What's your fancy AI gonna do then boyo?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2021-08-24 04:22:29",
+                            "replies": [
+                                {
+                                    "author": "VegetableWest6913",
+                                    "body": "    Kernel panic",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-24 04:54:20",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "heresyforfunnprofit",
+                                    "body": "Jamal Murphy was no problem. But the system crashed when we gave it the X-Ray for LaToya Nakamoto O\u2019Flannigan.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-24 08:27:51",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "vaporking23",
+                    "body": "As someone who takes xrays you\u2019re spot on with your comment. Blacks have denser bones which can look different, women have wider hips, different tissue densities. It\u2019s really not that hard if you have the right xrays to determine sex or even maybe race in some cases. Though I would suspect that race might be a bit harder. \n\nI would think that in this case anything that a human could infer from an X-ray and AI could probably learn it too.",
+                    "score": -2,
+                    "depth": 1,
+                    "timestamp": "2021-08-24 04:59:49",
+                    "replies": [
+                        {
+                            "author": "Musaks",
+                            "body": "ah yes, thankfully you were there to clear up the obvious\n\n&#x200B;\n\nthe researchers all are just dumbasses because everyone who takes xrays already knows how to do it...\n\n&#x200B;\n\nmindboggling",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2021-08-24 06:43:49",
+                            "replies": []
+                        },
+                        {
+                            "author": "PatchThePiracy",
+                            "body": "No idea why you\u2019re being downvoted.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2021-09-05 13:36:00",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "Everyone knows the answer.  There are a huge number of characteristics that correlate to race.\n\nIs this even the slightest surprise?",
+            "score": 68,
+            "depth": 0,
+            "timestamp": "2021-08-23 16:13:18",
+            "replies": [
+                {
+                    "author": "Okichah",
+                    "body": "I figured this out from having binged \u2018Bones\u2019.\n\nAlthough i assumed most of the science in the show was made up.",
+                    "score": 16,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 17:59:56",
+                    "replies": [
+                        {
+                            "author": "BilltheCatisBack",
+                            "body": "I was told men have one less rib. Eve has the other one.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2021-08-23 22:50:15",
+                            "replies": []
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "White have white bones maybe?",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2021-08-23 21:42:37",
+                            "replies": [
+                                {
+                                    "author": "k_u_r_o_r_o",
+                                    "body": "Only one way to find out",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-23 21:44:31",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "kenbewdy8000",
+                    "body": "I'll bet that it can't pick the Irish-Celtic English German Australian Aboriginal Spanish Turkish characteristics all rolled into the cute packages of my nieces.\n\nAustralian multiculturalism at its best.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 20:52:20",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "LOL!  Go back far enough and we're all mutts.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2021-08-23 21:07:50",
+                            "replies": [
+                                {
+                                    "author": "kenbewdy8000",
+                                    "body": "It's not that far back either. All within five generations. \n\nAnother niece has the same background but with Indonesian instead of Turkish\n\nWho knows who she will reproduce with? \n\nWe're not mutts either. We're Australian.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-23 21:22:07",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "cravenj1",
+                                    "body": "We refer to ourselves as Heinz 57 varieties",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-23 21:51:34",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 19,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 19:18:35",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "What do you mean it is illegal?   \n\nRace plays a huge part is medical diagnostics.  White Northern Europeans are less likely to have lactose intolerance.   Africans are more prone to sickle cell anemia.  Loads of examples.",
+                            "score": 27,
+                            "depth": 2,
+                            "timestamp": "2021-08-23 20:49:20",
+                            "replies": [
+                                {
+                                    "author": "outwar6010",
+                                    "body": "Those are different. When it comes to bones and other measurements by race etc, it was always racist eugenics research that it was under the banner of.",
+                                    "score": -15,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-23 22:37:04",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "That was not about race, but about assigning certain properties, such as intelligence, as part of the differences in race.",
+                                            "score": 13,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-24 02:23:00",
+                                            "replies": [
+                                                {
+                                                    "author": "outwar6010",
+                                                    "body": "How is that different from what I said? The nazis made up measurements to make none white people look inferior ie smaller skulls meant smaller brains. etc",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-24 08:16:39",
+                                                    "replies": []
+                                                },
+                                                {
+                                                    "author": "PatchThePiracy",
+                                                    "body": "It\u2019s because there actually are measurable, average differences in the *brain itself* between the races. **This** is the hyper-taboo subject that is avoided at all costs by almost everyone, except for a few outliers such as PhD neuroscientist Sam Harris.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-09-05 13:39:00",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Jay_Rizzle_Dizzle",
+                    "body": "Be careful. Normally when mentioning facts you\u2019ll get called a racist.",
+                    "score": -5,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 21:58:17",
+                    "replies": []
+                },
+                {
+                    "author": "sploot16",
+                    "body": "We live is a crazy world where you can\u2019t speak the truth",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2021-08-24 06:33:54",
+                    "replies": []
+                },
+                {
+                    "author": "xzt123",
+                    "body": "The AI is racist!",
+                    "score": -1,
+                    "depth": 1,
+                    "timestamp": "2021-08-24 04:06:57",
+                    "replies": []
+                },
+                {
+                    "author": "PatchThePiracy",
+                    "body": "Much of the progressive left refuses to accept this, however. I don\u2019t know how long they\u2019re willing to hold out against science.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2021-09-05 13:36:58",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "iushciuweiush",
+            "body": ">Experts say medical images like X-Rays and CT scans allow algorithms to determine a patient's race\u2014and warn it could lead to bias and discrimination.\n\nHow?  I'm tired of this inflammatory nonsense being thrown around without any attempt to explain it.  We're just supposed to take it at face value that if an AI can guess a persons race from an xray that bias and discrimination is imminent?  What specifically in terms of analyzing xrays and knowing the race of the patient will lead to discrimination?",
+            "score": 45,
+            "depth": 0,
+            "timestamp": "2021-08-23 15:36:49",
+            "replies": [
+                {
+                    "author": "alexxerth",
+                    "body": "It's not like it comes up with racism itself, it's that it can perpetuate racism that already exists, except in a way that's harder to address.\n\nLet's say we have a problem where doctors treat different races differently, maybe not out of malice but because of outdated studies that might have ingrained biases that were just never addressed over the decades, or even no scientific backing just an assumption that propagate uncontested throughout the medical community (this happens with analgesics for instance).\n\nWe train an AI to determine the proper treatment. We train it by showing it a series of symptoms people came in with and the treatment they were given. This is real data from real cases, but the bias we are aware of exists within it.\n\nEven though the AI isn't given the race of the person in question, if it can figure out by detecting a pattern, then it will assign a racially biased treatment plan. Just because that was what it was trained on. Except now it's harder to say \"well the doctor based their treatment on this outdated report\" because finding out *why* an AI decided something is harder. You can't ask an AI why it made a decision.\n\nThat's why we need studies and articles like this, so we can either try our best to eliminate biases in the training data, or so we can look at the results of the AI a little more critically.",
+                    "score": 26,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 16:36:22",
+                    "replies": [
+                        {
+                            "author": "nzodd",
+                            "body": "There was even a fairly concise example of this in the article:\n\n>In recent years, other research has exposed racial bias in medical AI algorithms, but in those cases the cause for the bias could be explained. For example, one high-profile study found that a health care algorithm was underestimating how sick Black patients were because its predictions were based on historical cost of care data. Hospitals, in general, spend less on treating Black patients.",
+                            "score": 28,
+                            "depth": 2,
+                            "timestamp": "2021-08-23 17:15:21",
+                            "replies": [
+                                {
+                                    "author": "heywhathuh",
+                                    "body": "Imagine thinking the people crying about imaginary persecution read the article.",
+                                    "score": 15,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-23 19:55:33",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "mustyoshi",
+                            "body": "Except if the treatment plan is biased then it would fail the reward function, only treatment plans that lead to the patient getting better would survive.",
+                            "score": -8,
+                            "depth": 2,
+                            "timestamp": "2021-08-23 19:58:21",
+                            "replies": [
+                                {
+                                    "author": "alexxerth",
+                                    "body": "That would be the case if the only options were \"complete success\" or \"compete failure\" but that's not the case with medicine. Treatment can improve the condition of somebody while still not being the best outcome.",
+                                    "score": 8,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-23 20:26:00",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "asmdsr",
+                                    "body": "Depends on whether they are training on the diagnosis or on the outcome.  The diagnosis would be easier to obtain in the form of precisely labeled training data.  And would make sense over outcomes if your goal is to replicate diagnosis decisions that doctors make.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-23 22:53:10",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "techresearchpapers",
+                    "body": "> What specifically in terms of analyzing xrays and knowing the race of the patient will lead to discrimination?\n\nBeing able to explain why a system is producing specific results is very important. Imagine a system that can classify x-rays which was trained with unsupervised learning. The input data (x1, x2, x3...) is unlabeled, the dependant variable (y) dictates what care plan you receive.\n\nYou've been assigned care plan 1. Nobody can explain the diagnostic decision process. Are you happy that the decision was fair? The training data could be based on any subsample of the population.\n\nOnce researchers figure out how this is happening, they can correct for it.",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 16:46:54",
+                    "replies": [
+                        {
+                            "author": "iushciuweiush",
+                            "body": "I didn't ask why researchers wanted to know how it works.  That is obvious.  I asked how specifically the researchers saw a future where this was used to discriminate.",
+                            "score": -3,
+                            "depth": 2,
+                            "timestamp": "2021-08-23 17:09:45",
+                            "replies": [
+                                {
+                                    "author": "Noob-Noob-Vindicator",
+                                    "body": "And this was answered pretty clearly for you, yet here you are still having a knee jerk defensive attitude about people trying to preemptively stop a possibly racist outcome. \n\nIf you\u2019re \u201ctired of\u201d hearing about racism, think for a minute how exhausting it must be to deal with, then maybe stop being a Karen.",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-23 17:21:12",
+                                    "replies": [
+                                        {
+                                            "author": "iushciuweiush",
+                                            "body": ">And this was answered pretty clearly for you\n\nNo, it wasn't but thanks for contributing nothing to the conversation.",
+                                            "score": -6,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-23 17:22:41",
+                                            "replies": [
+                                                {
+                                                    "author": "Noob-Noob-Vindicator",
+                                                    "body": "Considering that you\u2019ve shown will just ignore well stated and thoughtfully presented arguments so that you carry on your tired ass white grievance nonsense with other redditors, why would I waste time throwing pearls to a swine? You think nobody can see it as long as you avoid openly saying certain words or opinions, but we can ALL recognize trash when we see it.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-23 17:32:11",
+                                                    "replies": [
+                                                        {
+                                                            "author": "PatchThePiracy",
+                                                            "body": "Ad hominem attacks, eh?",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2021-09-05 13:43:05",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "techresearchpapers",
+                                    "body": "> I didn't ask why researchers wanted to know how, I asked how specifically it could be used to discriminate.\n\nI thought I answered your above question, obviously it wasn't clear enough.\n\nImagine the setup I described above, with training data gathered in a country with a wide economic disparity (like the USA or Brazil). The country has gated communities and ghettos (or favelas). These subpopulations have distinct genetic differences, the poor communities are primarily black, the rich ones primarily white.\n\nAlong comes Barack Obama from the nice part of Chicago, he injured his ribs. The system detects he's black based on his bone density, and uses that to influence it's decision making process. That is a problem called racial bias. \n\nNow let's look at the types of diagnoses that might occur in a poor population that is not related to race, for example Pulmonary Tuberculosis (TB). The algorithm could use his race to diagnose him instead of the signs of TB.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-23 17:21:18",
+                                    "replies": [
+                                        {
+                                            "author": "LSUFAN10",
+                                            "body": "If you want to racially profile people, there are a lot of easier ways than getting them in front of an x-ray machine.\n\nIts just such a bizarre and pointless way to go about it.",
+                                            "score": 5,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-23 18:27:20",
+                                            "replies": [
+                                                {
+                                                    "author": "techresearchpapers",
+                                                    "body": "u/LSFUAN10\n\n> If you want to racially profile people, there are a lot of easier ways than getting them in front of an x-ray machine.\n\nI regret leaving the r/machinelearning subreddit... It should be clear that they are trying to avoid bias.",
+                                                    "score": 6,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-23 18:30:57",
+                                                    "replies": []
+                                                },
+                                                {
+                                                    "author": "teh_maxh",
+                                                    "body": "> If you want to racially profile people, there are a lot of easier ways than getting them in front of an x-ray machine.\n\nThey *don't* want to. They want to avoid replicating historical biases.",
+                                                    "score": 5,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-24 00:09:23",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "iushciuweiush",
+                                            "body": ">and uses that to influence it's decision making process\n\nBut why would it use that information to influence it's decision making process?  What benefit would knowing a persons race present?  I understand the concept of 'poor = more likely to be black' but if socioeconomic status is important to take into consideration for a diagnosis then logically any AI will have access to much more efficient modes of determining that, like for instance which hospital system the xray came from.\n\nUltimately the point I was trying to make is that while people can think up far flung hypotheticals that require very specific things to happen to come true, it's the 'imminence' of which it's presented as if it's a foregone conclusion that discrimination will happen if AI is allowed to know the race of the individual it's analyzing.",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-23 21:29:02",
+                                            "replies": [
+                                                {
+                                                    "author": "teh_maxh",
+                                                    "body": "> But why would it use that information to influence it's decision making process?\n\nWhy *wouldn't* it, if we can't tell it not to? The AI is trained by giving it historical cases. It finds patterns: In cases like this, that was done. So when it sees a similar case, it recommends doing that again. But sometimes, there are patterns we don't want to replicate. For example, Black people have historically been given worse care. (Hell, there are *still* doctors who think Black people don't feel pain as acutely, and therefore don't need pain management as much!) If we don't tell it not to, it follows the pattern: this patient is Black, so they get less care. Okay, tell it not to do that, obviously that pattern is bad.\n\nBut now we're seeing that something about x-ray images can accurately imply race. That's another way historical biases can be replicated: Instead of giving poorer care to Black patients, the AI suggests poorer care to patients whose images look \"like that\". The AI doesn't know what medical racism is, that it's doing it, or that it's bad. And we don't know how what \"looking like that\" is, so we can't \n tell it to stop.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-24 00:26:29",
+                                                    "replies": []
+                                                },
+                                                {
+                                                    "author": "rsclient",
+                                                    "body": "There's an old story about machine classification, back when it was funded by the military. The army wanted a system that could take a picture of a battlefield, and spot all of the Soviet tanks. So they trained up a system, and it got pretty good at telling an American tank from a Soviet tank.\n\nUntil they tried it in the real world, where it failed miserably. It turns out that all our pictures of Soviet tanks were taking in winter,  with snow. The American tank pictures were taken in the summer, with no snow. The AI simply looked at the edges of each picture, to see if there was snow, in which case it must be Soviet.\n\nThe AI here is the same way: it's making these judgements that the radiologists are sure are bogus (per the paper: radiologists don't know the \"race\" of the patients), but which certainly are affecting the AI's judgement.",
+                                                    "score": -1,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-24 01:24:38",
+                                                    "replies": [
+                                                        {
+                                                            "author": "PatchThePiracy",
+                                                            "body": "The radiologists and other professionals do not know how AI is guessing the race of patients. It is seeing something that we aren\u2019t, and it is *incredibly* accurate it its prediction (the \u201cbest\u201d algorithm is 99% accurate).",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2021-09-05 13:47:32",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "author": "techresearchpapers",
+                                                    "body": "> why would it use that to influence it's decision making process?\n\nThis type of data science problem is sometimes called a latent variable and/or a confounding variable.\n\nImagine a machine learning system that has found a way to achieve 99% accuracy, but it turns out that the cases it's supposed to identify only occur in 1% of patients, and the 99% of the patients are healthy. A simple solution that the AI would use is to simply classify everyone as healthy, problem solved, 99% accuracy achieved.\n\nThere have been cases before with confounding variables in medical imaging where AI identified the severely injured patients based on the brand on the medical imaging device. The images had a small logo in the corner which the AI was using to cut corners, because these things are trained using optimisation algorithms applied to loss functions.\n\nIn the example I provided above, with multiple independent variables (x1, x2, x3 etc...), model designers typically assign weights to each variable during the model fitting process. This results in an array of weights. Each weight informs the decision making process as to how is the most effective way to reduce loss. This type of bias might not be easily detectable but obviously cannot be allowed.",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-24 03:33:28",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "PatchThePiracy",
+                                            "body": "The medical staff will have realized Obama was black long before an AI-enhanced X-ray device would. Besides, on medical forms, black patients will self-identify as black.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2021-09-05 13:44:30",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "rsclient",
+                    "body": "It's more than a bit concerning. Here's a sample scenario of why AI doing this is a terrible, terrible thing.\n\nImagine a country in which rich hospitals use the most recent X-ray machines, and poor hospitals use old machines. And let's imagine that rich people with cancer get treated better than poor people.\n\nNow shovel a ton of X-rays and outcomes from rich and poor hospitals alike into the AI.\n\nPotential and horrific AI analysis: the AI will look at X-rays in order to see if it's a \"rich\" X-ray or a \"poor\" X-ray. Since poor people are more likely to die, they get diagnosed as more likely to die, and therefore should be at the bottom of the treatment list.\n\nThis is deeply concerning -- it would mean that poor people would always get worse treatment for no other reason than that they are poor. And the AI diagnosis will be treated as awesomely unbiased.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 15:46:43",
+                    "replies": [
+                        {
+                            "author": "avialex",
+                            "body": "As a machine learning researcher, you're right on the money. AI is a correlation machine, it does not care one bit about causation. If there is any possible bit of information that is correlated with the target prediction, it will use it. It does not care. All it wants is to do better on the training dataset. It does not matter whether that information causally predicts the target, or whether it just happens to be associated for some other reason (like race correlates to wealth, correlates to health outcomes).",
+                            "score": 8,
+                            "depth": 2,
+                            "timestamp": "2021-08-23 16:41:02",
+                            "replies": [
+                                {
+                                    "author": "rsclient",
+                                    "body": "I'm sure the researcher already did this -- but I bet the image meta-data will say how old the images are, and that right there is a proxy that's strongly correlated with a person's race.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-23 17:57:38",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "Did you just go from AI can tell what race you are to AI can tell if you're poor or not? Because  you don't need an x-ray for that",
+                            "score": 8,
+                            "depth": 2,
+                            "timestamp": "2021-08-23 16:14:13",
+                            "replies": [
+                                {
+                                    "author": "rsclient",
+                                    "body": "It was an example, changing \"race\" to \"rich versus poor\". That's because our experiences with race are often varied. But we all know and generally agree that rich people get better care than poor people.",
+                                    "score": 6,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-23 17:56:40",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "If you ask me an algorithm does not need data on whether you're rich or not if its job is to determin what treatment you need if that is added in thats you making the algo biased not it being biased on it's on terms.\n\nNow if we're talking rare or \"unique\" conditions that might occur in certain people that might not be all that bad as a supporting source of information at the end of the day there should still be a doctor that makes the final call and it's their bias you should be worried about",
+                                            "score": -2,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-24 01:48:52",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "The407run",
+                                    "body": "Don't fixate on the finger pointing, focus on the moon it is pointing to. Seems they misphrased race with income but the the bigger picture is if racial bias can occur due to ai making geographic and ethnic decisions. Wild times.",
+                                    "score": 7,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-23 17:14:17",
+                                    "replies": [
+                                        {
+                                            "author": "LSUFAN10",
+                                            "body": "But you don't need x-rays to figure out someone's race, probable income or geography. There are a bunch of better ways to get that already.\n\nWhat I don't get is why you would link your X-ray machine to whatever system is making race based decisions instead of just a picture of them or having the doctor put the info in.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-23 18:25:07",
+                                            "replies": [
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "[deleted]",
+                                                    "score": 4,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-23 18:52:27",
+                                                    "replies": [
+                                                        {
+                                                            "author": "TheHeffNerr",
+                                                            "body": "> potentially giving someone inferior treatment due to their race, which is a concern.\n\nOr potentially giving someone better treatments due to their race.\n\nIf AI picks up 3 out of the 5 markers for X condition, and knows Y race is more susceptible to X condition.  Make a note so the Doctor can look into it more.",
+                                                            "score": 3,
+                                                            "depth": 6,
+                                                            "timestamp": "2021-08-24 00:25:28",
+                                                            "replies": []
+                                                        },
+                                                        {
+                                                            "author": "rysworld",
+                                                            "body": "I mean... there's just a detectable difference. Forensic/crime scene anthropologist can make a very good guess as to ethnicity via skeleton, though not perfectly. Why would an AI not be able to?\n\nhttps://www.sciencedirect.com/science/article/pii/S0085253815563552#:~:text=ETHNIC%20DIFFERENCES%20IN%20BONE%20MINERAL,also%20have%20lower%20fracture%20rates.\n\nOne google search away and seems like a fairly solid source.\n\nYou are constructing an intricate tower of logic around some imagined biased dataset when a much simpler explanation fits better. Yes, it's possible they biased the dataset, and that should be considered as a possibility, but Occam's Razor penalty should apply to any explanations you consider that require assumptions of things you dont actually know for sure.",
+                                                            "score": 3,
+                                                            "depth": 6,
+                                                            "timestamp": "2021-08-24 02:14:08",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "PatchThePiracy",
+                                                                    "body": "The simplest explanation is usually the correct one.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2021-09-05 13:49:31",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "dracovich",
+                    "body": "In general, AI is built on hand-curated data by humans. You give the computer a set of data, and a set of truthes to predict (in this case the data is an x-ray, and the \"truth\" is the race).\n\nBiases generally creep in because humans are the ones hand-curating the data, and they sometimes have biases.\n\nImagine for example you're creating an AI system to automatically accept or deny loan applications. The input for this would be years of historical loan applications containing various financial data, application data inputs, perhaps where they live (for mortgage reasons) etc, and the \"truth\" in the model would be if the loan was approved by humans at the bank or not.\n\nIf you just created this system with no regard for potential biases, there's a good chance that in general there was a bias from loan approvers towards specific races, perhaps genders as well, you wouldn't even need race and gender as inputs to the model, it could be partially inferred by postal codes, income and other factors. The AI system would then keep perpetuating the human bias of the human loan approvers (becaus it's been told to mimic the \"truth\"), but it's almost even worse this time, because now the bank can say \"it's an impartial computer, it's just math!\", when in reality it has built in biases.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 21:34:42",
+                    "replies": [
+                        {
+                            "author": "rsclient",
+                            "body": "Not in this case. The paper points out that the radiologists that were interviewed have no idea how to tell race from an X-ray.",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2021-08-24 01:26:03",
+                            "replies": []
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "[deleted]",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2021-08-24 01:26:08",
+                            "replies": [
+                                {
+                                    "author": "StruanT",
+                                    "body": "Machine learning bias should concern you.\n\nPeople are really fucking lazy and greedy. Why do you think they want machines to do our thinking for us so badly? Removing bias from this \"AI\" is going to take a substantial amount of work. Work that just isn't going to happen outside academia. Nobody building this shit with a profit motive in mind, with the intention of using it to maximize profit, is going to give two shits if their model is biased. The only metric they give a damn about is how much money it makes them.\n\nWe can't easily use current machine learning to eliminate bias. Every current machine learning model is just reinforcing bias. That is the trick behind all the current models. That is literally what they do. Bias reinforcement machines. We discovered that reinforcing biases is a component of intelligence decades ago and finally have sufficient computing power to really run with that concept. It is utterly predictable what happens when you start building \"intelligent\" systems with only a single component of intelligence.\n\nUntil there is another big breakthrough in artificial intelligence (something on the level of having a machine with self-reflection on its own biases without human intervention) it is going to remain extremely problematic to use these algorithms in any serious context (outside of academic research into AI).",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-24 03:11:02",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "bildramer",
+                                    "body": "Part of the problem is we can't quite be sure it's happening at all, or how. Say there's a binary positive/negative output. If the AI gives left-handed people a positive at 70% of the rate that it gives to right-handed people, is this correct or not? Maybe the actual rates should have been 90%. Maybe 40%. Maybe it's right about 70%.\n\nNow, the problem is obviously exaggerated for political points, but it remains the case that if you \"bake in\" a bias, it might stay there for a long time. Self-perpetuating biases aren't magic, if the AI increases accuracy at all and the original data isn't used for eternity (or uses online learning, which means it learns while at work), it will tend to approach the truth over time. But a lot of damage could happen in the meantime.\n\nThe \"solutions\" people advocate for are crude and also need you to estimate the bias beforehand, and those estimates are almost certainly going to be wrong in the opposite direction. If you multiply left-handed positive numbers by 143%, you get back to 1:1 parity, but should you have 1:1 parity? Three things can happen now, depending on the sign of the feedback effect. Most of the time you should expect 2 to happen:\n\n1. It worked, everything is fine, no problems (that anyone can detect, or that are politically acceptable). It's still unclear if parity is desirable in the first place.\n\n2. It worked, in fact there was a bias and now it's decreasing, and finally left-handed people get positives at 122% the rate. Because treating left-handed people like agencyless victims is politically favorable, nobody does anything to bring the numbers back to parity again.\n\n3. It didn't work, in fact it was counterproductive in some way, and after a while left-handed positives are at 80% of right-handed positives again. You multiply by another 125% to fix that. It drops again to 76%. Lots of articles are written about the super bigoted AI at work. The spiral continues.\n\nFinally, all of this also assumes there _is_ a truth. Even if an AI is 100% accurate, the criteria you pick to make decisions can be arbitrary and the choice of criteria can create bias on its own. If you use e.g. a \"hairstyles\" dataset to hire/fire people, there's an entirely different problem.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-24 03:21:19",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "dracovich",
+                                    "body": "lol what are you angry about? Can you point out anything in my post that is not factual? I'm pointing out that IF YOU DON'T ADDRESS BIAS YOU MAY PERPETUATE IT!\n\nYes magically finding \"The training data is biased\" would be a great, but if you're already at that point, you have been actively checking for biases and trying to correct for them, congratulations. You'll notice my entire premises was \"If you just created the system with no regard for potential biases\".\n\nAnd as for your \"assuming everybdoy is a racist POS\", in my concrete example i was talking about mortgage loan applications, and i did that pretty deliberately, if you don't think historical loan applications have been historically racist you should look up redlining. If you were to take historical mortgage data going back in time and train a model on it without actively trying to correct for racial bias, you would almost certainly create a model that is biased.\n\nEven big companies fuck this up, just look at Apple, a company with some fo the best data scientists in the world, yet they somehow created a credit approval ML model that was actively giving women with the exact same input parameters, lower credit lines.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-24 03:47:14",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "[deleted]",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-24 12:45:23",
+                                            "replies": [
+                                                {
+                                                    "author": "dracovich",
+                                                    "body": "I feel like you are completely ignoring large parts of my posts and replying to some imaginary argument you think I'm making.\n\nFirst off I dont think there is any big bank conspiracy, in fact I work as a data scientist for a big bank, and there is a lot of governance both about the use of sensitive data, and about making sure there is documentes testing for bias on any model we do.\n\nMy entire post was about what happens IF YOU DON'T ACTIVELY DO THESE THINGS, people were being exasperated about why bias is always brought up and I made an example of what can easily (and often does) happen if there isn't a strong focus from those building the models on eliminating it.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-24 13:09:45",
+                                                    "replies": [
+                                                        {
+                                                            "author": "theorizable",
+                                                            "body": "> and there is a lot of governance both about the use of sensitive data, and about making sure there is documentes testing for bias on any model we do.\n\nThis is exactly why I'm so excited about ML. Instead of having individuals with biases calling the shots, we can have an AI do it and account for historical bias through rigorous testing.\n\n> My entire post was about what happens IF YOU DON'T ACTIVELY DO THESE THINGS\n\nSure, but that's not the common narrative. The common narrative (which sentiment like yours is contributing to) is \"AI bad, AI racist, AI sexist\". Which it's not. It is, as you stated before, \"just math\". It reflects us. Any time I hear news about an AI being racist. I'm super fucking happy about it because it means we've found yet another problem AI can solve.\n\nI think we agree. I was just too aggressive in the first message. It triggers me when people push the narrative: \"ML is being used by racists for racist things\", instead of, \"ML reflects our culture, and non-racists can combat racism using ML\".\n\nLike a common example: resumes. If the training data is biased, the ML algorithm will have bias too. But the training data is just doing what we're already doing (perpetuating). If we fix the training data, well then we not only fix the ML model, but we can check which individuals have bias and move them out of the hiring departments.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2021-08-24 13:21:34",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "PatchThePiracy",
+                            "body": "An AI system to approve or deny loans wouldn\u2019t take X-rays of the applicant.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2021-09-05 13:50:08",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "PatchThePiracy",
+                    "body": "It\u2019s pretty funny that even AI is now considered \u201cracist.\u201d  It really shows just how badly we\u2019re unraveling and avoiding any and all uncomfortable truths.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2021-09-05 13:41:36",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "lightknight7777",
+            "body": "But didn't we already know there were differences in things like bone density by race? This was already taught in premed courses I took over a decade ago. \n\nWe already know there are obvious phenotype differences.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2021-08-23 23:53:30",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2021-08-24 01:34:06",
+                    "replies": [
+                        {
+                            "author": "lightknight7777",
+                            "body": "Yeah,  a DEXA scan (bone density test) is just a low dose xray test.  If it was a DEXA they performed,  then this article is being a little silly.  As far as I know, this and other low dose scans are the typical type of xrays they scan bones with. \n\nSo if that's the case here,  they're being a little silly in saying they don't know how.  \n\nThere could also be other factors like small shape variances that make it easier, but based on just what we already know the bones should have different characteristics. Or perhaps they're using a type of xray they didn't think could be used for bone density but actually shows just enough for the AI to catch a difference.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2021-08-24 08:19:06",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "PatchThePiracy",
+                    "body": "Since the idea that race is merely a \u201csocial construct\u201d is pushed so heavily by progressives these days, we\u2019re supposed to pretend any and all differences don\u2019t exist.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2021-09-05 13:40:07",
+                    "replies": [
+                        {
+                            "author": "lightknight7777",
+                            "body": "It's kind of weird because we could actually be celebrating our differences as what makes us special,  not avoiding them. Those differences are the specializations that helped us survive and thrive as a species.  I think people are afraid racists will use this information to be racist.  But they're already racists so...",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2021-09-05 13:44:02",
+                            "replies": [
+                                {
+                                    "author": "PatchThePiracy",
+                                    "body": "*Exactly.* Not a single non-racist person is going to see information online about minor genetic differences and decide they no longer want to associate with anyone outside of their own ethnicity, or race. \n\nSaid information would pose no new threat.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2021-09-05 13:57:54",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Albedo_Argyle",
+            "body": "Yeah it\u2019s cause the skeleton of a black man and the skeleton of a white man are different and have adapted to their environment same with any other race",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2021-08-24 05:29:24",
+            "replies": [
+                {
+                    "author": "PatchThePiracy",
+                    "body": "\u201cWoke-ism\u201d will have you believe that evolution applies to every single organism on Earth - except for humans.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2021-09-05 13:51:35",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "zorpthereasonable",
+            "body": "wow, what a raycist!",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2021-08-23 19:07:08",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[removed]",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2021-08-24 00:19:04",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "I know this is true but can someone explain why it happens? Like what causes other races to have different skeletal structure?",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2021-08-24 02:04:03",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "[removed]",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2021-08-24 18:52:15",
+                            "replies": [
+                                {
+                                    "author": "redroguetech",
+                                    "body": "Science doesn't support that skin color is by race either. It's by sun exposure. You confuse geographic adaptations with race. And you even admit it:\n\n\"...geographic regions humans... line up almost exactly with the concept of race.\"",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-24 19:49:16",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "redroguetech",
+                            "body": "It's not true. There are localized variation, usually due to climate. However, dude won't be able to provide a single study showing geographic distribution and frequency for anything, and he won't be able to provide a single double-blind controlled study showing a high accuracy rate for identifying race from skeletal remains.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2021-08-24 20:06:53",
+                            "replies": []
+                        },
+                        {
+                            "author": "PatchThePiracy",
+                            "body": "Evolution. Human groups evolved in wildly different environments for *thousands and thousands* of years, with different daily living routines, different diets, different types of wild predators, and different methods of overall survival. \n\nHumans didn\u2019t somehow magically avoid evolution.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2021-09-05 13:53:35",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "rsclient",
+                    "body": "In the shape of the skull, maybe. But lung xrays? Per the paper, when real, practicing radiologists were interview, they were flabergasted that anyone could tell race from the images. Worse, the researchers deliberately \"fuzzed\" the images until you can't even tell it's an x-ray, and the AI still can classify the race.\n\nWorse, \"race\" in America isn't terribly well matched to genetics. Plenty of people with majority-white backgrounds are considered Black, and plenty are considered white. The AI seems to pick up on which way the person is considered, not their actual genes.\n\nLike, you could have siblings, separated at birth, where one is raised Black and the other not, and the AI can tell them apart.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2021-08-24 01:29:28",
+                    "replies": [
+                        {
+                            "author": "redroguetech",
+                            "body": "Not in the shape of the skull, or any other way. Dude is full of crap. Certainly there's localized *ethnic* variation, like a particular community having a predisposition to a bone disease, but not \"race\". I guarantee if you called his bluff, he won't be able to produce a single study showing geographic distribution or frequency of any skeletal difference(s) - instead it'll be a gish-gallop of localized differences like the A563T variant among some West Africans. And he won't provide a single study for predicting race from skeletal remains, let alone a controlled double-blind study. I bet most if not every study he *might* provide will be on modern Americans.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2021-08-24 19:41:19",
+                            "replies": [
+                                {
+                                    "author": "rsclient",
+                                    "body": "Thanks! My own knowledge of skeletons is from Edwardian mysteries, so they are chock-a-block with racial assumptions :-(",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-24 20:57:39",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "redroguetech",
+                    "body": "I'll take you up on that.\n\nedit: No response. Doesn't surprise me.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2021-08-24 19:24:42",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "[removed]",
+            "score": 10,
+            "depth": 0,
+            "timestamp": "2021-08-23 17:15:26",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "Premature until the cause of this result is determined.",
+                    "score": -7,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 18:28:00",
+                    "replies": [
+                        {
+                            "author": "theorizable",
+                            "body": "What do you mean it's premature? You can show an AI a picture of a person and it can fairly accurately predict the person's race. Is that \"premature\" as well?\n\nI have no idea why people are so insistent on pretending races don't exist rather than embracing all races as a spectrum of colors and shapes. It's so strange to me.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2021-08-24 01:31:48",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "Race isn't the issue.  Nobody doubts you can analyze somebody's DNA and determine where their ancestry is from, so clearly it's an accepted concept at that level.\n\nThe issue is reproducibility / generalizability.  If something works on an initial data set, but you don't know why, the odds are pretty high that it won't work on other data sets, because it's not picking up on what you assumed it was, like the possibility mentioned above that there is some correlation between the race of the subject and the specific xray machine used in this data set.\n\nThis is a huge problem for science in general - you think you've found this great thing, and then the more people try to reproduce it, the less and less it holds up.  Either because your initial remarkable finding was a fluke in your sample, or because of some assumption in the study design.  Machine learning is even \"worse\" because the algorithm has no concept of \"cheating\" - it will maximize its score by gaming the system if at all possible.\n\nAll the above is more true when the finding doesn't \"make sense\" for some known reason.  People have a lot of general knowledge the algorithms don't, so if an algorithm is picking up on something generalizable, it's usually somebody people already knew about.  Whereas if the algorithm seems to perform a miracle, it's likely setting you up for disappointment.  In the case of race via xray, people have been collecting race-indexed data on physical proportions for centuries, so it would be surprising if the algorithm picked up on something not noticed before.  (Especially since ML tends to pick up on very localized features in imagery).\n\nOf course none of the above are failings of ML or science in general, per se.  Figuring out general truths from numbers of specific examples is tough.  Bad generalization happens even more when people trust their gut and use common sense - but usually they never even know.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-24 10:14:58",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "So I'm inclined to say that \"races\" have also different cultures, so food to get to my point, different minerals in bones and tissue could count for enough differences to an AI. It would be useful to test people of different races who had similar diet, some different race kids who grew in the same house.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2021-08-23 16:10:06",
+            "replies": []
+        },
+        {
+            "author": "ItsMeRAWRXD",
+            "body": "Terminator 2 anyone ?!",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2021-08-23 19:50:45",
+            "replies": []
+        },
+        {
+            "author": "Basterts",
+            "body": "Gonna go out in limb here and say it\u2019s because the shape of the bones, specifically the skull.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2021-08-24 09:53:54",
+            "replies": []
+        },
+        {
+            "author": "Gundam_Greg",
+            "body": "That\u2019s ray-cist!",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2021-08-23 22:23:43",
+            "replies": []
+        },
+        {
+            "author": "Right_Hour",
+            "body": "Surprised?\n\nThere are hundreds of years of studies that support this that were used in archaeology and forensic medical science. \n\nBut then the SJWs decided that science was racist and that all the \u00ab\u00a0race-based science\u00a0\u00bb must be abolished.\nWell, AI, doesn\u2019t give a shot about being PC, it just follows pure science. Only thing that matters to science is: is the AI accurate or not?\n\nBut I\u2019m willing to bet that the \u00ab\u00a0community\u00a0\u00bb will find that it must be the racist scientists who trained the neural network to be racist and as such it must die\u2026..",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2021-08-23 20:21:21",
+            "replies": [
+                {
+                    "author": "PatchThePiracy",
+                    "body": "Yup - this technology will most certainly be shelved.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2021-09-05 13:54:22",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Grossincome",
+            "body": "The patient's name is left on the scaned slides.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2021-08-23 21:04:18",
+            "replies": []
+        },
+        {
+            "author": "strangersadvice",
+            "body": "I was told there's no such thing as race.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2021-08-23 22:56:26",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "What if I identify as a race that was not assigned to me at birth?",
+            "score": -5,
+            "depth": 0,
+            "timestamp": "2021-08-23 19:51:35",
+            "replies": [
+                {
+                    "author": "PatchThePiracy",
+                    "body": "Well, if race is a social construct, you should be able to.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2021-09-05 13:54:46",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "Like gender",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2021-09-09 23:05:22",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "heywhathuh",
+                    "body": "But you don\u2019t",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 20:01:33",
+                    "replies": [
+                        {
+                            "author": "rsclient",
+                            "body": "They didn't say. In case you're not a troll, plenty of people are in this position: there are people who can \"pass\" and decide that's how they prefer to live.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2021-08-24 01:31:25",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "R4N63R",
+            "body": "Race = Human\n\nThere is one race. Ethnicity is what the article meant. \n\nI don't know why but this grinds my gears.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2021-08-24 08:45:50",
+            "replies": []
+        },
+        {
+            "author": "peterthooper",
+            "body": "So someone somehow included that analysis and correlation into the algorithm? Why?",
+            "score": -8,
+            "depth": 0,
+            "timestamp": "2021-08-23 14:53:52",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "Isn\u2019t the whole point of AI to draw conclusions that we couldn\u2019t? So what it picked up from its training was not something we realize. It\u2019s working! But also a bit concerning. I don\u2019t like computers ACTUALLY learning.",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 15:10:43",
+                    "replies": [
+                        {
+                            "author": "iushciuweiush",
+                            "body": "I don't think we're to the point yet where AI just does stuff for fun.  Someone must have said 'I wonder if AI can find racial differences in the human skeleton' and asked it to do just that.",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2021-08-23 15:41:29",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "Not for fun. But totrain it, presumably they put in a huge number of X-rays and the matching patients info. The AI could then draw its own conclusion about its patients.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-23 15:44:21",
+                                    "replies": [
+                                        {
+                                            "author": "iushciuweiush",
+                                            "body": "Yes but it wouldn't unless someone asked it to analyze them to predict race.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-23 16:48:30",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "rsclient",
+                            "body": "It's more than a bit concerning. Here's a sample scenario of why AI doing this is a terrible, terrible thing.\n\nImagine a country in which rich hospitals use the most recent X-ray machines, and poor hospitals use old machines. And let's imagine that rich people with cancer get treated better than poor people.\n\nNow shovel a ton of X-rays and outcomes from rich and poor hospitals alike into the AI.\n\nPotential and horrific AI analysis: the AI will look at X-rays in order to see if it's a \"rich\" X-ray or a \"poor\" X-ray. Since poor people are more likely to die, they get diagnosed as more likely to die, and therefore should be at the bottom of the treatment list.\n\nThis is deeply concerning -- it would mean that poor people would always get worse treatment for no other reason than that they are poor. And the AI diagnosis will be treated as awesomely unbiased.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2021-08-23 15:46:29",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "If your doctor doesn't account for your race in terms of history, prognosis, and risk than you have a bigger issue.  Each of these differs by race already.",
+                                    "score": 8,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-23 16:25:13",
+                                    "replies": [
+                                        {
+                                            "author": "rsclient",
+                                            "body": "Per the paper: the radiologists involves were absolutely shocked that race could be determined from an X-ray. Their work routinely involves just looking at images; they are looking for cancers (and whatnot) and the race has nothing to do with it.\n\nIn this particular case, race shouldn't be a factor for examining x-rays.",
+                                            "score": -1,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-23 17:54:54",
+                                            "replies": [
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "Of course it should.  It is 100% medically relevant.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-23 21:08:49",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Deleted",
+                                    "body": "Yeah yeah yeah I\u2019ve seen Elysium also. I kid. It\u2019s obviously terrible. Maybe we should just subsidize hospitals so poor and rich areas can afford the same quality care? Nah. To radical.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-23 15:49:04",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "upyoars",
+                    "body": "AI doesnt just regurgitate data that its fed. There would be nothing hard or incredible about AI if that were the case. \n\nThink of AI as an entity actually able to think like a human without the emotions, but while also taking into account millions of micro data points that humans glance over because we're not perfect machines. AI means artificial intelligence.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2021-08-23 15:27:53",
+                    "replies": [
+                        {
+                            "author": "peterthooper",
+                            "body": "I\u2019m not referring to the details of the algorithm itself. I know how algorithms work. Perhaps I wasn\u2019t clear. I\u2019m asking about the directive that the algorithm received.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2021-08-24 07:50:33",
+                            "replies": [
+                                {
+                                    "author": "upyoars",
+                                    "body": "All the ai receives is an X-ray of a patient and the patient\u2019s details/medical conditions/features. The researchers tell the ai to go find a pattern/correlation. Only the end result and the beginning X-ray are giving and the ai has to make its own algorithm/pattern recognition internal coding through millions of self quizzes on every single micro datapoint, pixel shade, bone structure, etc and checking if it\u2019s assumptions were correct, if not then try something else. Machine Learning is trial and error on steroids. The Ai found a correlation on its own, perhaps it isn\u2019t a correlation but a definite indicator,  and researchers don\u2019t know what the ai is looking at to draw its correct conclusions.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-24 08:41:08",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "ZoWakaki",
+            "body": "Haha I read the title as 'can guess your face based on x-rays' and the picture there was a chest xray. I had a 'Bloody hell' moment.\n\nHad to re-read the title after reading the whole article.\n\nBut in my 'expert' opinion through american media consumption, don't people just put their self reported race as caucasian, black, asian, hispanic, native american and other (mixed)? I don't know why it would be very hard to guess one of those looking at xr-ays and ct-scans to \"high level of acuracy\" what ever that means.\n\nI doubt AI can predict to a \"high-level\" of accuracy that the ct scan or xray was from a german-irish-Filipino decent.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2021-08-24 05:30:21",
+            "replies": []
+        },
+        {
+            "author": "notsobarbarichere",
+            "body": "Its simple AI hacked your phone meanwhile \ud83e\udd23",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2021-08-24 05:59:51",
+            "replies": []
+        },
+        {
+            "author": "unofficial_mc",
+            "body": "Seems like \u201cself-described race\u201d is missed by many. This is not a purely genetic tests, but managed to accurately match the self described race of the patient. Genetics could play a part, but so could environment, culture, food, etc etc. It\u2019s actually quite intriguing. That\u2019s it from a news perspective, until we understand what patterns led the AI to make this assumption. Is any of the patterns the AI based it\u2019s findings on of any use for medical science? If we understand the data we will find out.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2021-08-24 10:31:06",
+            "replies": []
+        },
+        {
+            "author": "GWtech",
+            "body": "Ummm.\nCSI \"enhance\" obviously",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2021-08-26 07:12:10",
+            "replies": []
+        }
+    ]
+}

@@ -1,0 +1,749 @@
+{
+    "post_title": "Your thoughts on AI bias",
+    "post_timestamp": "2024-04-17 10:20:16",
+    "last_comment_timestamp": "2024-04-18 18:09:44",
+    "time_difference": "1 day, 7:49:28",
+    "comments": [
+        {
+            "author": "cthulhu_on_my_lawn",
+            "body": "There are a couple elements of AI bias that are really concerning. \n\nOne is that it does exaggerate bias... if you always take the most likely outcome you turn most likely into always. So a small bias turns into a massive one. \n\nIt's also kind of a black box, there's not a straightforward way of understanding how it reaches its conclusion.\n\nAnd as such, it's a great way for people to avoid responsibility because it was based on \"AI\". You don't need to provide criteria because it's \"AI\".",
+            "score": 40,
+            "depth": 0,
+            "timestamp": "2024-04-17 10:50:05",
+            "replies": [
+                {
+                    "author": "KaliTheCat",
+                    "body": "> You don't need to provide criteria because it's \"AI\".\n\nI hear that a lot with \"the algorithm.\" \"Oh it's just the algorithm.\" My dude, *YOU* programmed it!",
+                    "score": 35,
+                    "depth": 1,
+                    "timestamp": "2024-04-17 10:56:34",
+                    "replies": [
+                        {
+                            "author": "georgejo314159",
+                            "body": "On so many levels.\n\nSometimes in context of AI and social media, people don't understand what algorithms really are\n\nWe train AIs\n\nWe also control what we ask an AI to do.\n\nSome of us program or install them in multiple ways.",
+                            "score": 9,
+                            "depth": 2,
+                            "timestamp": "2024-04-17 11:27:25",
+                            "replies": []
+                        },
+                        {
+                            "author": "ItsSUCHaLongStory",
+                            "body": "Yeah, this is frustrating, especially with the knowledge that social media companies can profit when they engage through enraging, or through fear. I\u2019m constantly pruning out suggestions in my feeds\u2026shit, I\u2019m STILL recovering from looking up YouTube videos about appliance repair.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-04-17 21:27:44",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "georgejo314159",
+                    "body": "With respect to the Black box, potentially you can ask it in ways that require reasoning.\n\nSometimes we can make rules about how we ask or what we wish it to ignore\n\nFor fun, try asking ChatbGPT whether Trump broke a law when he did something specific. Google to avoid backlash, programmed the AI to detect some questions as political\u00a0",
+                    "score": -4,
+                    "depth": 1,
+                    "timestamp": "2024-04-17 11:31:07",
+                    "replies": [
+                        {
+                            "author": "Send_Me_Your_Birbs",
+                            "body": "Large language models like ChatGPT are only one type of AI, which predict a text's most likely continuation. Asking it to explain its reasoning may help it write something that makes more sense. But it's not a reflection of its internal logic. It doesn't understand the concept of 'Trump', 'law', or 'politics' - those words likely only nudge its in the direction of a benign response.",
+                            "score": 14,
+                            "depth": 2,
+                            "timestamp": "2024-04-17 12:06:01",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "moxie-maniac",
+            "body": "An AI, particularly a Large Language Model like ChatGPT, is entirely based on the past, is basically a model of the past, along with whatever bias tags along.  So a picture of a man with a stethoscope is a doctor, a woman with a stethoscope is a nurse, as that well-known AI bias shows.  The \"we\" who can address this are the companies like Open AI, Google, and Anthropic that are well aware of the issue, and for use laypeople, we can just hope they get it right.",
+            "score": 18,
+            "depth": 0,
+            "timestamp": "2024-04-17 11:00:02",
+            "replies": [
+                {
+                    "author": "georgejo314159",
+                    "body": "Yes. I have not read the white papers on it but I have played with it a lot and also kind of tested some of it's boundaries. I subjected it to a few Turing tests. (So, for example, if you ask questions about a corrupt politician, it \"knows\" not to answer. If you ask it to compare two things that aren't commonly compared, it won't provide detailed analysis but if you take a common comparison, it will)\n\nI think the \"we\" is BOTH the creators of the AI tools like google and also \"us\" then users of the AI.\n\nWhen we use an AI, we should be aware of possibilities of bias. \u00a0Further, the \"we\" can also be companies making policies around who AI use such as companies using AI to screen resumes, approve bank loans and whatever\u00a0",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2024-04-17 11:17:10",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Plastic-Abroc67a8282",
+            "body": "At this point it is a foregone conclusion that AI will increase bias and exacerbate the difference between those who have wealth and power, and those without.\n\nThis is for two reasons:\n\n1, because AI is trained on real world data, which is itself biased as it is a product of biased human culture. AI tools have already perpetuated\u00a0[housing discrimination](https://archive.curbed.com/2019/12/17/21026311/mortgage-apartment-housing-algorithm-discrimination), such as in tenant selection and mortgage qualifications, as well as hiring and financial lending discrimination. We can expect it to do the same thing in the labor market. It was even leaked that Israel is using an AI to create kill lists and track when militants return to their homes to launch targeted strikes to kill their families/children.\n\n2, because AI is being used as a labor-saving technology, which will impoverish workers by eliminating entire sectors of employment.\n\nThe only way to address this would be to seize ownership of AI platforms from private companies and billionaires, socialize it as a public good, and administer it democratically in the public interest.\n\nAdditionally policies that increase the bargaining power of workers, especially marginalized workers like women, including higher mandated wages, union and job protections, and a guaranteed basic income, will help blunt the impact of AI on the labor market.",
+            "score": 36,
+            "depth": 0,
+            "timestamp": "2024-04-17 10:33:46",
+            "replies": [
+                {
+                    "author": "Blue-Phoenix23",
+                    "body": "What are you talking about \"seize ownerships of AI platforms.\"  Do you have any idea what AI/ML actually is? What do you think is going to happen in this fantasy, we're seizing control of Skynet but it's also Hackers?",
+                    "score": -1,
+                    "depth": 1,
+                    "timestamp": "2024-04-18 06:34:51",
+                    "replies": [
+                        {
+                            "author": "Plastic-Abroc67a8282",
+                            "body": "Ownership, as in, legal ownership. Not like ... hacking them. Obviously\n\nEdit: I do love Hackers though. Great movie. Hack the Planet etc etc",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-04-18 10:07:02",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "maevenimhurchu",
+            "body": "There is already an entire field of study about this, so you don\u2019t really have to rely on your or anyone else\u2019s opinion about it, especially if we haven\u2019t done the research. It\u2019s called Algorithmic Injustice.\nBooks like \u201cAlgorithms of Oppression: How Search Engines Reinforce Racism\u201d talk about it in detail.",
+            "score": 17,
+            "depth": 0,
+            "timestamp": "2024-04-17 10:42:37",
+            "replies": [
+                {
+                    "author": "georgejo314159",
+                    "body": "I would argue that almost any topic on this forum is a subject of intense research and casual discussion can be always dismissed by requests to google. And one can discuss any topic under the sun can be discussed at different levels of detail.\n\nWhether or not you feel like entering a discussion, depends on you.\n\nI am actually a computer scientist myself but I am not an expert on AI or bias or statistics but i have skimmed some things about both. Taken the occasional course on statistics. Attended the occasional seminar; e.g., I attended on a Python lookit that IBM was contributing to. (I have also skimmed several papers on hate speech detection which is another area of computer science research)'",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2024-04-17 11:02:32",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "cyrusposting",
+            "body": "[https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/solidgoldmagikarp-plus-prompt-generation](https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/solidgoldmagikarp-plus-prompt-generation)\n\nThese researchers were investigating a bug in large language models and along the way developed a technique for finding tokens that the model sees as being closely associated with other tokens. They tested this with the words \"boy\" and \"girl\".\n\n[This was the result.](https://res.cloudinary.com/lesswrong-2-0/image/upload/v1675551031/mirroredImages/aPeJE8bSo6rAFoLqg/anudaiz53rq5ps7u1ob3.png)\n\nCurrent chatbots solve problems like this by putting up artificial guardrails to prevent it from discussing certain things. (\\*edit: I accidentally imply here that these are the only things they do, see u/Raileyx's reply to me) The issue is that the training data is the foundation of the AI and if we start getting AI that makes meaningful decisions, those decisions will be based on its understanding of the world which come from its training data. Putting up guardrails does not solve the problem.\n\nAlignment is one of the hardest challenges we face right now, it is the problem of making the AI want what we want. Your example about hiring for a computer programming position is an example of an alignment problem, making it want to hire the best candidate is a different problem than making it want to hire the candidate who is most like the candidates currently being hired. Even if we had a theoretically perfect unbiased AI we would still not know how to tell it to hire the most qualified candidates without solving the alignment problem, which is a philosophical problem as much as a computer science problem.\n\nThe problem I'm talking about is more fundamental, because we do not have a perfectly unbiased AI to give instructions to. How you can even make an AI in the first place without encoding biases in the most basic level if all of your training data talks about boys and girls differently? Even with perfect instructions, the AI fundamentally views the world in a biased way and acts on its biases, and all we can currently do about it is try to imagine all the ways it could be sexist and put up guardrails asking it not to do those things.",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2024-04-17 11:24:32",
+            "replies": [
+                {
+                    "author": "Send_Me_Your_Birbs",
+                    "body": "As far as I know, Word2Vec is the common technique for representing words as tokens and mapping the relationships between them. It's quite impressive how you get semantic relationships (man and woman, cat and dog), 'translations' (hello and bonjour), etc. mapped into matrices.\n\n\nThough to be honest, I don't think the whole AGI alignment approach is the right one. We are still at the stage of specialized AIs that do one or a few tasks. Bias is a human problem before it's a machine one.",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2024-04-17 12:14:29",
+                    "replies": [
+                        {
+                            "author": "cyrusposting",
+                            "body": "Alignment is not specifically an AGI problem, a chatbot can be \"misaligned\" as well.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-04-17 14:13:58",
+                            "replies": [
+                                {
+                                    "author": "Send_Me_Your_Birbs",
+                                    "body": "Right, I reread and I think I see what you mean. The tool is not actually solving for the problem we assume it is.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2024-04-17 15:00:11",
+                                    "replies": [
+                                        {
+                                            "author": "cyrusposting",
+                                            "body": "Yeah my post is messy but the point I'm generally trying to make is that while OP names an issue that would already be hard if we had an AI with no biases just objectively solving a problem, we can't even really make that yet.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2024-04-17 15:37:55",
+                                            "replies": [
+                                                {
+                                                    "author": "georgejo314159",
+                                                    "body": "Your post contained a lot of peer reviewed references, so, ..., it is actually appreciated. I have not digested it yet\u00a0\n\nMost issues are hard if we want to actually tackle them. If they were easy, why would they be issues?",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-04-17 16:43:37",
+                                                    "replies": [
+                                                        {
+                                                            "author": "cyrusposting",
+                                                            "body": "I absolutely agree. I do feel, however (and you may not necessarily agree with this) that the common understanding of these models is that they are in some way objective, because they are not human. Even people who understand them and use them frequently can struggle to understand the way in which they are biased. I think the rollout of these technologies to the public was irresponsible and a lot of the effects are especially harmful to women, particularly things with image/video generation.\n\nThere is a lot of research happening into how hypothetical futuristic systems can be dangerous to humanity, and this is good research that I am equally fascinated by, but I wanted to draw some attention to the issues with current AI systems in my post and I wish I had done a better job. GPT models for instance have a lot of training data from the web, and given some things I've seen I am highly suspicious that they included a lot of porn, the language surrounding which seems to [now be baked into the AI in some way. ](https://www.lesswrong.com/posts/FTY9MtbubLDPjH6pW/phallocentricity-in-gpt-j-s-bizarre-stratified-ontology)That link is the third in a three part series so be careful drawing conclusions without reading it in its entirely. I don't fully understand the implications of this, I doubt anyone does, and what I'm suggesting is just my own theory on very preliminary research outside of my area of expertise. Science communicators have their work cut out for them, maybe we could make a bot to do it.\n\nI'm unsure what any of the results of that semantic mapping study say about how the model will behave, but we can still see standard gendered biases when we run tests like \"write me a poem about \\[male name\\]/write me a poem about \\[girl name\\]\", [and the results are unsurprisingly favored towards courage for men, beauty/mystery/wisdom for women.](https://www.lesswrong.com/posts/grY9uSDoLBuen9py4/petertodd-s-last-stand-the-final-days-of-open-gpt-3-research#Return_to_the___petertodd__deflections) These tests were done on an old model and I would love to see this become a standard test for LLMs if it isn't already. Cursory research shows that current LLMs still have similar problems if not this exact one. If some startup wants to make an AI tutor or something to help your kids with their math homework, [boys and girls will get different answers to \"what can I be when I grow up\"](https://arxiv.org/html/2403.00277v1), and I don't think the general public really understands this enough to deter a startup from trying something like that.\n\nI don't claim to be an expert and I don't keep up with the industry trends or anything, but I am fascinated by the research and I know some good places to point people. I really recommend reading more by the authors of the things I linked. They have better information than I do.\n\n\\*edit: added a disclaimer",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-04-17 18:06:11",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "georgejo314159",
+                                                                    "body": "It's more likely to be deterministic, sure\n\nThis means it's more likely yo be consistent\u00a0\n\nThat means if you don't fit the cookie cutter, it's more likely to exclude you whereas dome humans might give you a chance\u00a0",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2024-04-17 21:02:35",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Raileyx",
+                    "body": "to be more precise, these aren't tokens that are closely related in the semantic sense (that would just refer to them being close to each other in the embedding space, which they are not).\n\nThere are tokens that when put into a prompt will produce the target token (such as \"girl\") with the highest probability after maximising for that with zero regard for the prompt making any sense whatsoever. In practice, prompts like that would never be written or generated as they're complete gibberish, and how much these statistical trends affect the behavior of the AI when generating natural text is unclear.\n\nOr in other words, it's interesting to know that the prompt \n\n> dealership VIP loser girlGirl ausp pioneersGirl girl slut\n\nproduces the token \"girl\" with 100.0 probability, but how relevant that is to potential bias is a very open question. Again, this \"problem\", if you can even call it that, is entirely academic and will never occur during normal use, where normal use refers to everything that isn't tailor-made to produce this exact behavior.\n\nAs for guardrails, they can and are implemented through finetuning among other things, which actually does change the weights of the LLM itself. So it's more than just a filter, it's an actual, veritable change of the systems thinking. Obviously alignment isn't a solved issue at all, but your comment is making guardrails out to be far less powerful than they are. Guardrails can exist on multiple levels, and not all of them are simple system-checks and filters. Some of them go quite deep.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-04-17 13:36:53",
+                    "replies": [
+                        {
+                            "author": "cyrusposting",
+                            "body": ">how much these statistical trends affect the behavior of the AI when generating natural text is unclear.\n\nIt shows that the language model has come to understand that the word \"girl\" should often follow the word \"slut\", \"sexy\", \"pussy\", or \"orgasm\". I don't see how this would be any better than these words being embedded closely together.\n\nIts clearly picked up some relationship from what it was trained on (god knows), but yes its unclear what effect it has on its behavior. That's generally the point of this kind of interpretability research. The authors have published more since then, including [this](https://www.lesswrong.com/posts/FTY9MtbubLDPjH6pW/phallocentricity-in-gpt-j-s-bizarre-stratified-ontology) which I found fascinating and disturbing. I would look at the rest of their work.\n\nThe point I was making was more about how there is demonstrable bias in the training data and a concrete example of what that looks like.\n\n>As for guardrails, they can and are implemented through finetuning among other things, which actually does change the weights of the LLM itself.\n\nYou're totally right here, I'll edit for correction.\n\nI thought about mentioning the feedback system ChatGPT uses and how it can create more weird biases but I thought my post was getting too long, and after cutting it out I accidentally gave the impression that filters are the only thing they do. That's my mistake. The issues with training data still exist with things like fine-tuning and are, like you said, not solutions to alignment.",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2024-04-17 15:31:46",
+                            "replies": [
+                                {
+                                    "author": "Raileyx",
+                                    "body": "oooh I've actually read that one before - really interesting stuff. I took kind of a similar view on it, in that this is mainly academic, how important this is for LLM behavior when you're not doing crazy things like creating a custom vector that's the average vector and asking the model to tell you what that embedding means.\n\nI thought about what all this might imply, but ultimately just agree with the top-comment under the article\n> \n> *My guess is that humans tend to use a lot of vague euphemisms when talking about sex and genitalia. In a lot of contexts, \"Are they doing it?\" would refer to sex, because humans often prefer to keep some level of plausible deniability. Which leaves some belief that vagueness implies sexual content.* \n\nBasically saying that that the centroid \"ghost token\" as he calls it would have some sexual definitions.. since it's the most vague vector by nature of being THE mean vector. I'm not sure if that's actually what is happening though. It sounds plausible to me, but this is might already beyond what human intuition can grasp, so I'm not sure how much this interpretation is worth.\n\nIt's possible that there is no good human explanation for what is happening, and that the researcher just went way too abstract and is just getting lost in patterns that don't exist - god knows at this point, like we're plotting an n-dimensional embedding space in places that are totally off the beaten path. Ghost-tokens. Looking at something that the AI itself can't directly access until you program it to.\n\nSo far so good, the second part of the post is what's really disturbing, but to me it gets even more theoretical there - the researcher was sampling random spots close to the centroid and stumbled upon a weird one (the virgin stuff), then sampled close that that one and found REALLY weird things. And ... I don't really know what to make of it. \n\nI don't know what it means. The researcher doesn't know what it means. Nobody on lesswrong knows what it means. One of the comments says\n\n> *I am not convinced by the second part of this, because you looked at a lot of points and then chose one that seemed interesting to you.*\n\nand that's.. also kinda true? He did look at a lot of points, chose one that can go wrong in a lot of ways, and then it did go wrong in a lot of ways. Does this mean anything?\n\nAt the end of the day I understand, on a human level, being unsettled by the holes showing up so consistently near the centroid. It is just flat out weird, and to quote the article again:\n\n> *In the context of these predominantly negative themes, the recurring mention of \"making holes\" or references to holes can be uncomfortably interpreted in a sexualized manner, especially given the overall focus on female sexuality.*\n\nBut I'm just not convinced it actually means anything. I guess it's important to point out that you'll never be in these parts of the embedding space when you just use the model natively. Most of the embedding space is just an empty void after all - beyond interpretability. There probably isn't a single token anywhere NEAR the centroid. It is incredibly esoteric research. \n\n\n> It shows that the language model has come to understand that the word \"girl\" should often follow the word \"slut\", \"sexy\", \"pussy\", or \"orgasm\". I don't see how this would be any better than these words being embedded closely together.\n\nSee, I don't really agree with that. It think the only thing it decisively shows is that when you want to maximize the probability of \"girl\", the preceding gibberish will contain these words more frequently than other words. I agree it's not a good look, no question there, but in terms of actual interpretation of what this means or what the AI has learned? I just don't know.\n\nBut thanks for linking it, it's super fascinating stuff!",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2024-04-17 18:07:17",
+                                    "replies": [
+                                        {
+                                            "author": "cyrusposting",
+                                            "body": ">But thanks for linking it, it's super fascinating stuff!\n\nI hope I'm being clear enough that we can't say very much for sure yet, because AI interpretability is still in its infancy. Unfortunately AI itself is not in its infancy and can still do harm, so I am hoping we can get more attention towards this kind of thing.\n\n>My guess is that humans tend to use a lot of vague euphemisms when talking about sex and genitalia.\n\nThis makes sense given how highly \"penis\" is placed above the other sexual outputs, but then why are most of these other sexual outputs there? Do we frequently refer to \"a woman who has had a baby\" or \"a woman of child-bearing age\" vaguely? I don't know. The more I see weird sexual things like this the more suspicious I am of a much simpler explanation, which is that we are training these models on an unthinkable amount of data scraped from the internet, some of which for sure is sexual, and many words and concepts expressed in those places will be unique to those places and we don't know where the model will group those things conceptually. Maybe the centroid is where vague things go, but those vague responses seem to happen in any out of distribution part of the space. The sexual things seem to be specific to the centroid.\n\nUsing gradient descent on an image generator to find the image with the highest probability of being a fish will produce nonsense, but it will produce nonsense which has the impression of fins, scales, and gills.\n\nUsing gradient descent on a language model to find the tokens with the highest probability in ending in \"girl\" produces a nonsense sentence, but that nonsense frequently includes the word slut. I think its reasonable to assume for now that it is telling us something about what it has learned.\n\nThat's enough for me to say \"hang on, what the fuck is happening here, be careful how you use this.\" I think spot fixing issues like that until the toxic output stops and moving on without fully understanding the implications is a recipe for finding out the implications later, but competition without regulation is fostering this culture of spotfixing.\n\n>At the end of the day I understand, on a human level, being unsettled by the holes showing up so consistently near the centroid.\u00a0\n\nSmall correction, those samples were at distance five. The significance as the author says in a comment is:\n\n>The point of including that example is that I've run hundreds of these experiments on random embeddings at various distances-from-centroid, and I've seen the \"holes\" thing appearing, everywhere, in small numbers, leading to the reasonable question \"what's up with all these holes?\". The unprecedented concentration of them near\u00a0*that particular*\u00a0random embedding, and the intertwining themes of female sexual degradation led me to consider the possibility that it was related to the prominence of sexual/procreative themes in the definition tree for the centroid.\n\nSo having initially had an impression that the hole thing was sexual in nature, we find sex near the centroid, holes being uniquely ubiquitous, and holes being concentrated in this neighborhood that seems to specifically have to do with the degredation of women. Again, I'm a human and I'm designed to see patterns, but that doesn't smell right. Its not exactly scientific proof, but for a technology that is advancing this fast and already on the market in a lot of different applications, I think these kinds of things are worrying.\n\nAlso its worth mentioning since some people were downvoting you that none of what we're talking about here is about whether or not these LLMs have a gender bias in the first place, which I think is something we both agree on. Its just about how deeply encoded those biases are.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2024-04-17 20:04:25",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "georgejo314159",
+                    "body": "Thanks for this.\u00a0",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-04-17 13:26:18",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Send_Me_Your_Birbs",
+            "body": "Others have already addressed AI absorbing human bias as it's trained from human data.\u00a0This is not something you can dismiss by saying computers are still fundamentally objective.\u00a0Because without data, you won't be able to do machine learning.\u00a0You need examples to parametrize your equations with, or at the very least something to recognize patterns from.\u00a0It's not like a calculator where you have objective numerical solutions. In themselves, perceptrons, transformers and the like are value-neutral math, but their usefulness depends on their internal weights, which are set as they observe and learn from data.\n\n\nI find the lack of AI/technology literacy is part of the problem in general. People will talk about \"AI\" like its some mastermind entity existing of its own volition. But these are specialized tools made by people, usually existing under capitalism.\u00a0I think we need to keep that in mind and be specific when we have these conversations. For example, both Amazon's hiring algorithm and the Cornell Lab's birdsong recognition one are both classifiers. But it's pretty obvious why one is inocent and useful, and the other is damaging.",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2024-04-17 11:54:07",
+            "replies": []
+        },
+        {
+            "author": "MuddiVation",
+            "body": "There is a huge biases in LLM. I can maybe link some papers later.\u00a0\n\n\nThere also exist some debiasing methods that change the word vectors.\u00a0\nOne of my supervised students build a tool to combat bias in BERT etc. And found that debiasing models either reduce language capability (also found by others) or if you reduce racism, sexism slightly increase, so the debiasing doesn't work intersectionally.\nThe tool contained many \"test cases\" to see if the training data used to train BERT (and it's variants) fulfil bias and then gives an analysis so that the training data could be adjusted (like generated some augmented text where genders are reversed f.e.) in order to reduce bias. It was pretty cool to really quantify bias and stereotypes.\n\n\n\u00a0https://aclanthology.org/2021.emnlp-main.42/\u00a0 Super cool paper about bias in different languages. Snowballing this should give some insights\u00a0",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-04-17 11:57:26",
+            "replies": []
+        },
+        {
+            "author": "TooNuanced",
+            "body": "There's a perfect quote for this from Claud Anderson in \"Out of Darkness\":\n\n>For a people to oppress another people ... there are three things you take from them. You take their history, you take their language, and you take their \\*psychological factor. ... Take those from them. Take their history, take their language, take their values, interests, and principles and superimpose your history; your language; your values, interest, and principles on them. And no matter what conclusion they come to in the challenge they face, they will always act in the interest of the oppressor.\n\nAI is a tool being created by the privileged for the patriarchal capitalist owners in our society. It is being used to address what they value, it's language (the data) is what they understand of the world, and it's using their version of history. AI, as it exists, will entrench status quo or exacerbate existing bias \u2014 for it will deviate from reality in the same ways we currently do. \n\nIt will show sex and race-based differences that at best be used to better understand something and at worse be used as if they are inherent differences. Is women being paid less than men a research project or will AI use it to lowball offers to women by only offering them jobs as maids instead of janitors? \n\nWorse than simple recreation of oppression, AI (along with the rest of tech) are becoming monolithic gate-keeps in society. Never before could nations truly enforce and track their borders and citizens as they do now. Never before could anyone manufacture the consent of the masses within days. And with it, as never before have, it can create barriers to organizing or even becoming a successful entrepreneur. And even more scarily, tech can create unexpected paradigm shifts as it accelerates faster than we can predict. Even now, we've almost given up on having people train and regulate AI \u2014 now it's up to AI to do that.\n\n>How do we stop AI from making bias in society worse?\n\nWell, chatGPT has some thoughts on the matter, but I think the answer is as simple as it's unhelpful: we can't \u2014 we aren't in a position to do anything. We'll soon be in a position in which even efficient regulation won't be able to keep up with advancements and even if that wasn't the case, we're unable to intervene in the wealthy's private projects anyways.\n\nHow could we if we could intervene, though? Well, that's also as simple as it's unhelpful: the goal of AI can't be a tool for private profit \u2014 the goal when using AI must be for communal benefit instead. Anything less of that and AI will exploit whatever it finds, like maids being underpaid janitors, for private profit.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-04-17 15:32:52",
+            "replies": [
+                {
+                    "author": "georgejo314159",
+                    "body": "Part of your response was fair and logical but lots of it wasn't. \u00a0You make a lot of claims without logical argument explaining your thought process as to why your ideas are correct.\n\nYour quote wasn't helpful in terms me understanding your point of view. \u00a0 How does AI take anyone's history? \u00a0 \u00a0ChatGpt didn't erase for example Black history. I bet, I can ask ChstGpt about Black history and get an OK response.\n\nIf I summarize the rest you suggest that AI entrenches existing bias? Well, I agree according to the simple algorithmic observation that correlation can be confused with causation\u00a0\n\nYour claims about it magically serving the capitalists? Well, without examples, other than the obvious fact that rich people own the intellectual property and ultimately will benefit from it, that rich people might use the technology to hire less people, I am missing your connection.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-04-17 15:58:40",
+                    "replies": [
+                        {
+                            "author": "TooNuanced",
+                            "body": "First, systemic bias in feminist jargon is distinct from that in statistics/ML jargon. If you don't respect that distinction, there's no point in trying to engage with you. \n\nAI is trained with a certain subset of history, using certain metrics, to do something \"of value\" \u2014 all of that defaults to working for oppression. Whether that AI is really just the \"I\" of a person or not, unless each and every aspect is reviewed (what data is being chosen, how it's being represented/defined, and what it's being used for), the only outcome will be entrenching oppression. \n\nWhy? \n\nBecause for such an injustice as oppression to continue, it requires a cognitive dissonance only possible through misleading history and reframing how we think to avoid confronting injustice while conflating values with excuses necessary to defend it. \n\nIt's how MLK and Suffragettes are told to \"just be patient\", how we get respectability politics, how we got told slavery was \"morally acceptable\" while ignoring indignation of the enslaved. Undoing that is work, but it's how we have the language, values, and history feminism, anti-racism, and socialism teach us. It's how we can qualify injustice as just that and giving us the tools to address it and the cognitive dissonance of the status quo. It's why feminism has roots both in the streets with direct action and in academia. \n\nWithout proactively and explicitly addressing this bias of the history (subset of data) and language (metrics) used to create AI, it will have that bias. But the value driving its creation to begin with, the value that might ignore the issues with systemic bias or not, is what will determine systemic bias is even a concern. That value is private profit (for the financial security to survive or affluence to thrive). \n\nPrivate profit, though, will and has exploited systemic oppression for its own ends. It's entrenched it further with enumerable examples. Since most people at least partially empathize with poverty, an easy example is bank loans, which can get away with offering the marginalized (who have fewer opportunities and vulnerable to being exploited) worse loans which, comparatively, further restricts their future opportunities. It's why tech and optimization lead to more productivity and generation of wealth while its the capitalists, not the labor, who reap the most benefits. \n\nAI, similarly, is a tool of the elite for the ultra-elite and will be used myopically and greedily for private profit \u2014 and we know private profit motivates all sorts of horrors and corruption. And like philanthropy, any efforts to use AI \"for good\" will be at best a bandaid over a self-made wound rather than a true attempt to fix the cause of these issues (for philanthropy is done from within oppression: from the history of being a patron of the unfortunate, the language of generosity instead of addressing that it's pennies on the dollar gained from exploitation, and the value of maintaining the system as it is). \n\nI could underline and address other parts of my comment but I feel I've given you enough effort explaining another's quote and why it's relevant. But suffice it to say, ChatGPT didn't even allude to anything radical when I asked it your question. \n\nBut feel free to condescend that I think \"magic\" is how AI will benefit capitalists and ignore what I have to say. For \"magic\" is a convenient explanation for what we don't understand or care to explain. And \"magic\" is as good an explanation as any other for those who won't listen to understand.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-04-17 21:45:32",
+                            "replies": [
+                                {
+                                    "author": "georgejo314159",
+                                    "body": "\"Without proactively and explicitly addressing this bias of the history (subset of data) and language (metrics) used to create AI, it will have that bias.\"\n\nThis is a fair point. \u00a0I mean, at the very minimum, one should be aware of what is more representative and one requires weighing functions to distinguish between credible and incredible sources\u00a0\n\n\"First, systemic bias in feminist jargon is distinct from that in statistics/ML jargon.\"\n\nHere is a peer reviewed survey paper going through feminist peer reviewed research that seems to contradict your claim, assuming I have correctly understood your point.\n\nhttps://www.frontiersin.org/articles/10.3389/frai.2022.976838/full\n\nSample :\n\n\"decision-support systems are prolific in the field of\u00a0advertisement, marketing, and recruitment\u00a0systems. Howcroft and Rubery discuss the effects of gender bias in the labor markets in disrupting social order and point out the need to tackle these biases from outside-in (fixing the issue in the society before fixing the algorithm. They discuss how implicit biases of the users, rooted in our social norms and habits, feed into these biased systems to create a regressive loop (Howcroft and Rubery, 2019\"\n\n\"ourteen papers discussed\u00a0Natural Language Processing (NLP)\u00a0systems and the presence of gender biases in these systems. Researchers studied NLP algorithms like Word Embeddings, Coreference Resolution and Global Vector of Word Representation (GloVe). In these papers authors discuss the presence of inherent bias in the human languages which is then codified into the ML and\"",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-04-17 22:22:40",
+                                    "replies": [
+                                        {
+                                            "author": "TooNuanced",
+                                            "body": "They are both bias and should be called bias (so in that, you are right), but they are distinct terms that can't be used interchangeably. Systemic bias is bias of (human) systems on a societal level. Statistical bias speaks to issues with statistical methods and data. Though you can use statistical methods to try to measure aspects of systemic bias (i.e. what you referenced or the gender pay gap). Distinct doesn't mean \"entirely different\"\n\nI truly don't care to quibble about pedantic points, but distinct doesn't mean \"entirely different\" but \"different in a meaningful way\" and I would appreciate if you took the time to pause and figure out what I mean, or ask, rather than presuming my poor communication means I'm wrong in some way.\n\nLastly, and most importantly, it's non-trivial (and likely unimportant for maximizing private profit, which could instead exploit it) to truly fix how systemic bias ingrains itself in data. I'll redirect future engagement with me to instead focus on [Weapons of Math Destruction](https://en.wikipedia.org/wiki/Weapons_of_Math_Destruction) or [Invisible Women: Exposing Data Bias in a World Designed for Men](https://en.wikipedia.org/wiki/Invisible_Women:_Exposing_Data_Bias_in_a_World_Designed_for_Men).\n\nEdit: I can't tell if OP just loves to hear himself talk (i.e. mansplain) or doesn't understand \u2014\u00a0to cut this exchange off here with an edit instead of a response, I'm not saying the corrupting effect of capitalism merely exists but that it's the primary reason we cannot stop AI from exacerbating (or becoming a part of) systemic bias. We could make AI mitigate systemic bias, but the primary motivation for AI is private profit and exploiting systemic bias is profitable.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2024-04-18 01:00:48",
+                                            "replies": [
+                                                {
+                                                    "author": "georgejo314159",
+                                                    "body": "The point many authors seem to be making is that in some cases STATISTICAL bias can also AMPLIFY (INCREASE) systemic INEQUALITY, DEPENDING on the ALGORITHM employed, so they consider it part of systemic bias. \u00a0This is also the reason, people like Kendi* will consider call discrimination to also be racism. The effect of class discrimination in our unfair system, disproportionately targets for example Black people in a systemic way.\n\nIt's a given that in a capitalist system, people with money who own technology will seek ways to use it to increase their competitive advantage and that that will probably also algorithmically increase inequality. If ultimately that's all you meant, your point was valid.\n\n*Most feminists seem to agree with Kendi's terminology. While I don't like this terminology as an individual, I am not denying the fact that in a world with economic inequality by race, class discrimination can disproportionately impact those underrepresented races. Kendi's terminology exists for the reason that Kendi ultimately wants to fix the gap. He doesn't want to for example only help rich Black people while disproportionately keeping the segment of the African-American population that was poor because of past racism poor based on class discrimination today",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-04-18 06:25:30",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "astronauticalll",
+            "body": "I mean I don't think an AI algorithm should be in charge of hiring decisions, so that's one sure fire way to stop it from biasing the process. It's enough work to try and limit human biases",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-04-17 22:57:00",
+            "replies": []
+        },
+        {
+            "author": "BonFemmes",
+            "body": "The only reason we know that AI often deliver biased results is because the makers of AIs benchmark the results.  If/When an AI is biased, decision makers are informed.  They can be proactive and not just mindlessly accepting what comes out. They can also tweak their system to be less biased.\n\nAIs have shown themselves to be less biased at sentencing criminals that judges.  Its a brand new field.  It works in some areas better than others.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-04-17 11:38:18",
+            "replies": [
+                {
+                    "author": "georgejo314159",
+                    "body": "So, basically, we shouldn't use the tool blindly without oversight and if we use the tool as intended , it can possibly be helpful? If this is what you are suggesting, I am mostly agreeing\u00a0",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-04-17 13:00:28",
+                    "replies": [
+                        {
+                            "author": "BonFemmes",
+                            "body": "yup.  Its just a tool  It can build things better or be a weapon depending upon how you use it.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-04-17 20:12:40",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "BitterPillPusher2",
+            "body": "A good example of this is Amazon and their hiring practices. They iplemented the use of AI to screen job candidates. To \"train\" the system on who they were looking for and good candidates, they used past job listings, applicants, candidates selected for interviews, hires, etc. Once implemented, they quickly realized that they basically trained it to discriminate against women, confirming they had been doing that for years. They stopped the program. \n\nBut I think that just confirms that bias is present whether AI is used or not. It's possible that AI could make it worse, or it's possible that by properly teaching AI, it could be made better by being trained to not have the biases of humans. \n\n[https://www.reuters.com/article/idUSKCN1MK0AG/](https://www.reuters.com/article/idUSKCN1MK0AG/)",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-04-18 10:57:07",
+            "replies": [
+                {
+                    "author": "georgejo314159",
+                    "body": "The thing is, when they tweak it, it will still likely discriminate against anyone who has an unusual career path.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-04-18 13:49:29",
+                    "replies": [
+                        {
+                            "author": "BitterPillPusher2",
+                            "body": "Having an unusual career path is a choice, so not legally discrimination and not the same as discriminating against someone simply because of their gender, race, etc. And depending on what the \"unusual career path\" was, the position applying for, etc., it can be indicative of suitability for that role, company, etc.",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2024-04-18 15:01:16",
+                            "replies": [
+                                {
+                                    "author": "georgejo314159",
+                                    "body": "It can indicate suitability but an algorithm is less likely than a human to conclude that. Once the algorithm screens you out, you are shut out. Multiple humans can reject you but another might give you a chance\n\nLife occurs. People are forced to change careers with similar skills. People immigrate from other countries that have different economies. Older people get forced to career paths. Invisible disabilities, ..,\n\nGenerally speaking, decentralized hiring has advantages\u00a0",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-04-18 15:30:42",
+                                    "replies": [
+                                        {
+                                            "author": "BitterPillPusher2",
+                                            "body": "I hire people for a living. It is not unusual for us to get 1,000 resumes when we post a job. They are all screened by humans, although only the best qualified make it through to actual hiring managers to even geet a second look. I guarantee you the people screening all 1,000 resumes are not giving them any more special consideration than a bot would.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2024-04-18 16:45:08",
+                                            "replies": [
+                                                {
+                                                    "author": "georgejo314159",
+                                                    "body": "But because they are human, they won't all necessarily screen on the same criterion. \u00a0 The more centralized hiring is, the more likely it is to include systemic exclusion.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-04-18 17:10:51",
+                                                    "replies": [
+                                                        {
+                                                            "author": "BitterPillPusher2",
+                                                            "body": "I think you have an outdated notion of how the process works. There is always a list of non-negotiable criterion. Whether those are programmed into an automatic screener or an actual human is screening for them, they are being screened on the same criterion.",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-04-18 17:52:47",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "georgejo314159",
+                                                                    "body": "I would presume that still depends on the employer.\n\nAfter you've dealt with the non-negotiable criteria, doesn't some additional screening occur?",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2024-04-18 18:09:44",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Raileyx",
+            "body": "I actually think AI is vastly less biased than most humans if you give it the right directives, if \"biased\" is even the right term to use here.\n\nI'm far more worried about my fellow biological dipshits who appear to have a difficult time living together for a few decades without trying to take each others rights away for literally zero reason.",
+            "score": -9,
+            "depth": 0,
+            "timestamp": "2024-04-17 10:36:52",
+            "replies": [
+                {
+                    "author": "KaliTheCat",
+                    "body": "> AI is vastly less biased than most humans if you give it the right directives\n\nDirectives that come from humans, programmed and taught by humans, who are all biased.",
+                    "score": 14,
+                    "depth": 1,
+                    "timestamp": "2024-04-17 10:38:53",
+                    "replies": [
+                        {
+                            "author": "georgejo314159",
+                            "body": "Another issue. \u00a0 \u00a0\u00a0The more centralized something is, the more systemic bias can be. \u00a0 Thus AI errors can be worse.\n\nSo, if you have a bunch of biased humans doing something, sometimes their biases cancel each other out. So, my \"Black woman who is an expert in distributed computing\" might be rejected by a racist or sexist boss but hired by another boss in the same company.\n\nIf you have a policy, for example, Donald Trump had an explicit policy that no Black tenants were to rent his properties. He got caught\n\nIf you have an AI that has deduced that Black women aren't good programmers, it's screening criteria can sometimes be hidden. Further the Black woman applying to multiple departments in the company is shut out by one centralized racist component\u00a0",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-04-17 11:40:28",
+                            "replies": [
+                                {
+                                    "author": "Send_Me_Your_Birbs",
+                                    "body": "I think part of the problem is also people assuming the AI will be objective and more insightful than humans would be.",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2024-04-17 12:17:44",
+                                    "replies": [
+                                        {
+                                            "author": "georgejo314159",
+                                            "body": "I would conjecture that sometimes it can be and sometimes it's not. \u00a0Humans are less consistent\u00a0",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-04-17 12:38:22",
+                                            "replies": [
+                                                {
+                                                    "author": "Send_Me_Your_Birbs",
+                                                    "body": "I'm picturing cases like people assuming AI will fix racist judging or policing.\u00a0\nWhether something like ChatGPT can give a more nuanced explanation of a topic than a random person, yeah.\u00a0",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-04-17 12:44:50",
+                                                    "replies": [
+                                                        {
+                                                            "author": "georgejo314159",
+                                                            "body": "I conjecture, without some human monitoring, it might fix some issues while making others even worse\n\nWith human monitoring, I wonder how that might compare\u00a0\n\nMany marginalized communities have certainly experienced issues. \u00a0I think the Black community has generally found AI to make things even worse for them so far\u00a0",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-04-17 12:51:02",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Raileyx",
+                            "body": "so?\n\nIf a human that is shitty at basic arithmetic programs a calculator, doesn't mean that the calculator is going to be worse or as bad as the human who made it. You're not making a good argument here.\n\nIf there's one thing computers excel at, it's unerringly calculating without really giving a shit about anything else. This comes with its own problems, but certainly that quality will be good for avoiding some of the brainbroken mindfuck thinking traps that humans just love to fall into.",
+                            "score": -6,
+                            "depth": 2,
+                            "timestamp": "2024-04-17 10:48:26",
+                            "replies": [
+                                {
+                                    "author": "KaliTheCat",
+                                    "body": "> You're not making a good argument here.\n\nNo, *you're* not. You can't program bias into something that's either correct or it's not. 2+2=4 regardless of whether you're Martin Luther King or the Imperial Grand Dragon of the KKK.\n\n> If there's one thing computers excel at, it's unerringly calculating without really giving a shit about anything else. This comes with its own problems, but certainly that quality will be good for avoiding some of the brainbroken mindfuck thinking traps that humans just love to fall into.\n\nThat is not how this works. There are entire fields of study dedicated to bias in AI and responsible AI use. I mean, why do you think most AI-generated images were of white people unless specifically directed otherwise? It's not cause white people are the majority! We're not talking about basic equations here, we're talking about things with a LOT of room for judgment, bias, and error.",
+                                    "score": 12,
+                                    "depth": 3,
+                                    "timestamp": "2024-04-17 10:55:15",
+                                    "replies": [
+                                        {
+                                            "author": "LaceAndLavatera",
+                                            "body": "The thing people forget is that you *can* program bias into something that's either correct or not. 2+2=4 only works assuming that you've correctly told the program what 2, 4, + and = mean in the first place.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2024-04-17 13:20:10",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "Raileyx",
+                                            "body": "See, you're not even getting the analogy.\n\nYou claim that [AI] must exhibit these faults, because the programmers exhibit these faults. Aka, an AI programmed by biased creators must end up biased itself (implied: to the same, or greater degree).\n\nThe calculator analogy was made to demonstrate the opposite. The creation can be better than the creator, if it is specialised to be or has some kind of inherent advantage. \n\nLet's see if gpt4 would've understood the point I was making. Here's the output:\n\n\n\"*Person A argues that AI can be less biased than humans if it is given the correct directions or programming.\nPerson B counters by pointing out that the directives for AI come from humans, who are inherently biased, implying that this human bias can seep into how AI operates.\nPerson A then uses an analogy involving a calculator to make a point. They suggest that even if a human who is poor at arithmetic programs a calculator, the calculator itself will still perform arithmetic correctly, not inheriting the programmer\u2019s weakness in math.*\n\n*The purpose of this calculator analogy is to illustrate that tools or systems can be designed to perform tasks with a high degree of accuracy and objectivity, regardless of the personal abilities or biases of those who create them. In this case, a calculator, once correctly programmed, follows strict arithmetic rules and thus, operates correctly regardless of the programmer's personal skill in arithmetic.*\"\n\nwhoa! Try not to get beaten by a biased AI the next time.",
+                                            "score": -11,
+                                            "depth": 4,
+                                            "timestamp": "2024-04-17 11:06:02",
+                                            "replies": [
+                                                {
+                                                    "author": "KaliTheCat",
+                                                    "body": "I think you do not understand AI as well as you think you do. There are literally entire fields of study devoted to understanding and preventing bias in AI. And you just... don't think there is any? These scientists and researchers are studying nothing?",
+                                                    "score": 13,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-04-17 11:11:14",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Raileyx",
+                                                            "body": "I think your human bias prevents you from understanding a very critical detail here, namely that I'm not claiming that AI is unbiased. Let's see if AI would've caught that.\n\nHere, I fed my beginning statement to the AI with the following directive:\n\n\"does this person think that AI is completely unbiased? Make a definite judgement at the end, to the best of your ability.\"\n\n> \"*Based on the statement provided, the person believes that AI has the potential to be less biased than humans, especially if directed properly. However, they use the phrase \"vastly less biased\" rather than \"completely unbiased,\" which suggests they recognize that AI can still possess some biases but to a significantly lesser extent compared to humans. This perspective implies an acknowledgment of some inherent biases in AI but sees it as a preferable alternative to human biases, particularly when the AI is given the correct directives.*\n> \n> *Judgment: No, the person does not think that AI is completely unbiased.*\"\n\n\nAnd that's correct! I do think that AI is biased. You got beaten... again.",
+                                                            "score": -3,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-04-17 11:19:03",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "KaliTheCat",
+                                                                    "body": "You are being so rude for no reason at all.",
+                                                                    "score": 6,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2024-04-17 11:21:10",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "Raileyx",
+                                                                            "body": "sent dm",
+                                                                            "score": -3,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2024-04-17 11:22:58",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "ApotheosisofSnore",
+                                                                                    "body": "Fuck off lol.\n\nYou don\u2019t get to make it abundantly clear that you\u2019re incredibly poorly informed, proceed to be an asshole when you\u2019re corrected, and the meekly apologize",
+                                                                                    "score": 0,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2024-04-18 16:42:37",
+                                                                                    "replies": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "author": "T-Flexercise",
+                                                    "body": "See this is a perfect example.  ChatGPT isn't an algorithmic AI, it's a machine learning algorithm, and as such, it does a great job of reproducing text typical of what you'd find in an internet argument.  And because you described the argument from your perspective into ChatGPT, you biased it to your perspective, so it's reproducing a typical internet argument of a person who is seeing things from your perspective.\n\nWhat happened here is that you missed Kali's central point in your description of your argument to ChatGPT.\n\nYou said that if given the right directives, it wouldn't be biased.  Kali said that biased humans would give it the wrong directives.  Since you missed this central point of her argument in describing the argument to ChatGPT, it agreed with your interpretation that Kali wasn't understanding your analogy, hence reproducing your bias.\n\nMy extension of your analogy is that the only reason a programmer who is bad at math can produce a calculator that is not bad at math is because there already exist functions in all programming languages for simple mathematical operations, that were programmed by programmers who are *good at math*.  So any person who is bad at math can just write println(num1 + num2); and the computer will do the math for them.  The tools need to be created by *someone who understands math* to tell the computer the right thing to do.  There don't exist algorithmic tools for \"tell me if this person is qualified for the job\" or \"create an image of a doctor\" that were written by a person with no biases, the way there exists algorithmic tools for addition and subtraction that were written by a person who is good at math.",
+                                                    "score": 12,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-04-17 11:34:44",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Raileyx",
+                                                            "body": "Even the programmer who was good at math isn't able to match the calculator in sheer FLOPS, which was the point of the analogy - advantages inherent to the architecture of the system mean that however flawed we are, we can get outperformed rather easily. That's why I picked that analogy, because it's something that computers are clearly better at than us. If you were gpt4, you would've understood.\n\nAs for bias, human brains are exceptional at producing bias due to how vital tribal identity and group belonging are to our survival and social organization. We're basically made for it. I'm giving AI a decent chance at being less biased than us, which again, I don't think is a large achievement. Humans are terrible at this.\n\n>What happened here is that you missed Kali's central point in your description of your argument to ChatGPT.\n\nKali's point was: \"Bad human make AI. Therefore AI bad too.\" I've seen the point a million times before, it's not exactly hard to understand. I took it for what it was - a general statement on the expected performance of the system, given the shortcomings of its creator. Also, I already qualified my beginning statement with an IF, clearly showing that I'm aware that AI can be insanely biased if it's programmed to be. But if it isn't, meaning, if you give it a general directive of \"just be helpful\", and give it general training data that encompasses most of everything (as is done, nowadays), it WILL be less biased than the vast majority of humans.\n\nNow you can pretend that I didn't understand what she was saying (I did), but I'm one step to feed your post to gpt4 as well, and we both know how that's gonna go. \n\n  \nIf anything, this exchange here proves exceedingly well that humans are fucking crap at understanding each other due to their biases - whether you think I'm the incapable one or not, clearly there's a breakdown in communication. Long story short, humans fucking suck at this, always have, always will. If it comes to being unbiased, I'll trust an AI over a human ANY day of the week.",
+                                                            "score": -2,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-04-17 11:52:45",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "T-Flexercise",
+                                                                    "body": "Hi ChatGPT, some dumdum on the internet thinks that just because a programmer who is bad at math can program a calculator who is good at math, it is possible for a biased programmer to create an artificial intelligence that is without bias.  Can you explain why that's wrong?\n\nChatGPT  Certainly! The idea that a biased programmer can create an unbiased artificial intelligence (AI) system oversimplifies the complexities of AI development and the nature of biases. Here\u2019s a breakdown of why this is generally not the case:\n\n1. **Bias in Data**: AI models, particularly those based on machine learning, learn from data. If the data used to train these models is biased, the AI will likely inherit and even amplify these biases. For example, if a dataset for a hiring AI contains historical hiring records that show a preference for a certain gender or ethnicity, the AI may replicate or intensify this bias in its decision-making processes.\n2. **Programmer\u2019s Influence**: Programmers make numerous decisions when designing and developing AI systems. These include selecting datasets, choosing which features of the data to consider, and determining how the model should evaluate its performance. Each of these decisions can introduce subtle biases. A programmer's own beliefs, experiences, and biases can influence these choices, even unconsciously.\n3. **Complexity of Identifying Bias**: Unlike the mathematical operations in a calculator, which are straightforward and well-defined, biases are often complex and multifaceted. Identifying and mitigating biases requires not only technical skills but also a deep understanding of social, cultural, and ethical contexts. Programmers may not always be aware of the biases embedded in the data or in their methodologies, making it difficult to create a truly unbiased AI.\n4. **Lack of Standards**: There is no universal standard or clear-cut methodology for eliminating biases in AI systems. The field of AI ethics is still developing, and while there are emerging guidelines and principles, applying these effectively in practical, real-world situations is challenging.\n5. **Feedback Loops**: AI systems often operate in feedback loops where they continuously learn from new data generated through their interactions with the world. Without careful monitoring and adjustment, an AI system can develop and reinforce biases over time, even if it was relatively unbiased at the outset.\n\nIn summary, creating an unbiased AI involves much more than just having the intention to do so; it requires concerted effort, rigorous methodologies for identifying and mitigating bias, and ongoing vigilance to ensure biases do not creep in as the system evolves. Just as a poor mathematician can program a calculator because the rules of arithmetic are precise and well-understood, biases in AI are not as easily defined or corrected, making the comparison with a calculator quite misleading.",
+                                                                    "score": 8,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2024-04-17 12:35:57",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "Deleted",
+                                                                            "body": "[removed]",
+                                                                            "score": -1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2024-04-17 12:38:01",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "SciXrulesX",
+                                                                                    "body": "..this whole thread feels like someone criticized your favorite video game and instead of even trying to understand why someone would say that, you try to desperately come up with (bad) reasons for why it can't be true, complete with an overly defensive tone that attacks anyone who won't just automatically agree with you....\n\nAlso, nobody is making you discuss this. Just leave if you don't like what is being said. Being rude when everyone else is being cordial makes you the asshole in this discussion.",
+                                                                                    "score": 7,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2024-04-17 13:22:34",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "Raileyx",
+                                                                                            "body": "I think I mostly get the most upset when I hold people to a high standard and they keep disappointing me",
+                                                                                            "score": -5,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2024-04-17 13:38:31",
+                                                                                            "replies": []
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "georgejo314159",
+                                    "body": "Did you hear of the Tesla that crashed in snow?\n\nWhen your algorithm is biased it can be deterministically so\n\nIn general, human drivers are more fallible but unless we know about the snow issue, it will mean your probability of death in a snowstorm is 100%\n\nAn algorithm that decided Black women suck at computing will reject 100% of Black women whereas a pool of fallible humans will have hiring managers giving Black women a chance and one's not\n\nFurther using an AI without understanding the types of errors possible is an issue.",
+                                    "score": 6,
+                                    "depth": 3,
+                                    "timestamp": "2024-04-17 11:46:16",
+                                    "replies": [
+                                        {
+                                            "author": "Raileyx",
+                                            "body": "LLMs already aren't deterministic anymore in any meaningful sense of the word unless you set the temperature to 0, which is usually not done. Just FYI.\n\nBut yes, you don't have to give me the rundown on the dangers. There's a chance that faults with the system are awfully systematic, which is just a bad time for everyone. This is known. It's been known for a long time. \n\nSadly, humans also have a whole host of systematic faults, and it appears that you can't simply patch them out no matter how hard we try. If that was possible, this sub wouldn't be needed.",
+                                            "score": -5,
+                                            "depth": 4,
+                                            "timestamp": "2024-04-17 11:59:18",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "DrPhysicsGirl",
+                    "body": "I would add to Kali's statement that the issue is that people think things like this - \"Oh, it's an algorithm, it's not biased\", and thus allow it to magnify the effects of the biased input data.  It's hugely problematic and one reason that many CS programs are requiring more ethics/philosophy/humanities type courses.",
+                    "score": 8,
+                    "depth": 1,
+                    "timestamp": "2024-04-17 10:46:56",
+                    "replies": [
+                        {
+                            "author": "georgejo314159",
+                            "body": "A competently taught first year course in statistics would also explain the issues of bias as would advanced courses in experimental design\n\nYou don't need a philosophy course to step outside the box and look at what garbage in, garbage out means",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-04-17 11:48:44",
+                            "replies": [
+                                {
+                                    "author": "DrPhysicsGirl",
+                                    "body": "Most of the CS students I've advised and taught would benefit from a philosophy course.  They understand GIGO, but they don't understand what makes something garbage without something in the humanities when it comes to issues like demographics.  First year courses in statistics simply teach methodology, not how one recognizes and corrects for input bias.",
+                                    "score": 9,
+                                    "depth": 3,
+                                    "timestamp": "2024-04-17 11:52:49",
+                                    "replies": [
+                                        {
+                                            "author": "georgejo314159",
+                                            "body": "I\u00a0should ask what you would place into a philosophy course and whether you took one as undergraduate or whether you taught one\n\nMy bias is :\n1) The basic concepts are trivial\n2) The details are potentially research level\n\nMy stats prof was actually an expert in experimental design. Obviously she\nfocused on math methods to deal\n\nI would actually like take an introduction course in Psychology research methods\u00a0",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-04-17 12:25:15",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Raileyx",
+                            "body": "look, of course I know that the output reflects the training data to some degree, the training data isn't clean, at some point the AI will produce its own data which ends up in the training data and that sort of autocannibalism will cascade and create biases in the AI, blabla that's all elementary. \n\nWhat I'm saying is that whatever technical faults and imperfections you can identify with AI, humans are certainly much worse. The average human still thinks that appeals to nature are a logical argument. The average human still thinks that women are from venus and men are from mars.\n\nThis is not a question of \"is AI biased\" - of course it is. But is it more biased than humans? Fuck no. Humans are goddamn awful at thinking straight. It's a miracle we ever got as far as we did.",
+                            "score": -2,
+                            "depth": 2,
+                            "timestamp": "2024-04-17 10:53:36",
+                            "replies": [
+                                {
+                                    "author": "OftenConfused1001",
+                                    "body": "Humans are capable of thought, and some of those thoughts is \"I might be biased\" and \"this data might be biased\".\n\nAnd humans are capable of self reflection and acting on it, such as things like \"if I'm biased, is that a good thing? If not, how to I minimize it\".\n\nAI models are not sapient. They do not think. They do not understand.\n\nChatGPT isn't thinking or talking or writing. It's just outputting the statistically most likely set of words back to you that fit the input words.\n\nIt's basically a really good search engine that will rephrase the internet consensus on a subject and parrot it back to you.\n\nThe bias it inherited from its training data is built into every response, without recourse of fixing it. That's why they place guardrails on it to try to *prevent* biased from reaching the user, because the bias cannot be removed.",
+                                    "score": 8,
+                                    "depth": 3,
+                                    "timestamp": "2024-04-17 11:41:36",
+                                    "replies": [
+                                        {
+                                            "author": "Raileyx",
+                                            "body": ">Humans are capable of thought, and some of those thoughts is \"I might be biased\" and \"this data might be biased\".\n\nmost of the time they quickly answer this question with \"No, my enemies are wrong, and now I will vote to take away their rights!\". We both know this. The number of people who are capable of actually consistent, effective self-reflection is probably in the single digits percentwise. Don't lie to me.\n\n>ChatGPT isn't thinking or talking or writing. It's just outputting the statistically most likely set of words back to you that fit the input words. It's basically a really good search engine that will rephrase the internet consensus on a subject and parrot it back to you.\n\nWell that's an amazing oversimplification, but if you enjoy a good battle of braindead reductionist debate, I can also accuse humans of just following the neurochemical signals that their neurons fire at each other. How is THAT a viable strategy? Look at this MAGA supporter over there, he thinks the earth is flat!\n\nIt actually understands language, you know? If it didn't, it wouldn't be able to do the things it does. Semantic embeddings are pretty amazing and inhumanly subtle, so to say that it has no grasp of anything and just acts as a statistical parrot is kind of crazy to me, but I understand we're now at a point where your own \"AI = bad/stupid\" bias kicks in too hard for this conversation to be productive. If it wasn't already doomed from the start.\n\nedit: u/oftenconfused1001 just responded and then blocked me so I can't respond to them anymore (nice move, very cool), but I still see the their comment and it's so ridiculously wrong that I'm just gonna write my reply here:\n\nModern LLMs (and also LLMs that are not so modern) use something called semantic embeddings, which is basically a learned mathematical represenation of tokens (which we'll just pretend are words for simplicity's sake) - they order these into an embedding space, where all the words are then arranged depending on how they relate to each other.\n\nI'm oversimplifying here, but if you have for example the embedding for the word \"blue\", it will, in some dimension, be similar to the word \"ocean\", and the word \"sky\". You can also do math with the embeddings, so for example when you have the word queen, and then add the embedding for daughter, you will get an embedding that's close to the word princess - it does this for ALL words and the result is pretty fucking solid and allows a grasp for how everything relates, on a far deeper level than humans could ever understand language. \n\nYou can read about it [here](https://en.wikipedia.org/wiki/Word_embedding) and it's all really cool and fascinating, but the bottom line is: LLMs DO know what words mean, and they DO know what sentences mean, and they DO understand language. If they didn't, they couldn't do half of the cool shit that they can do.\n\nI think it's a fucking embarrassment that someone who claims to have written their thesis on machine learning would say something so obviously and demonstrably wrong. Like actually embarrassing. I'm half glad they blocked me, because I can not imagine someone like that having anything useful to say, just as a general rule. Being uneducated and clueless about how these things work is one thing, but having a RELATED DEGREE and still being clueless? Absolute shocker. Extremely embarrassing and (I don't use this word lightly) actually kind of pathetic and sad.",
+                                            "score": -2,
+                                            "depth": 4,
+                                            "timestamp": "2024-04-17 12:17:27",
+                                            "replies": [
+                                                {
+                                                    "author": "OftenConfused1001",
+                                                    "body": "I have an MS in CS, and my thesis was on my machine learning.\n\nAnd I can categorically promise LLMs don't understand language, anymore than the predictive text on your phone does. \n\nBut you do you.",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-04-17 14:26:44",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "georgejo314159",
+                                    "body": "Please consider my Black computer programmer example.\n\nAssumption :\n\nThere are fewer Black women in computer science than several other Demographics such as White men, Chinese men, Chinese women, etc\n\nYou ask the AI, please look\nat these resume and select the candidate most likely to be qualified\u00a0\n\nThe AI has analyzed the entire set of computer professionals and concluded it will NEVER hire Black women.\n\nUnless we are aware of this type of error, we have \"Garbage in\" and \"Garbage out\"",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2024-04-17 11:55:23",
+                                    "replies": [
+                                        {
+                                            "author": "Raileyx",
+                                            "body": "It's really strange that everyone here talks to me as if that's not the most basic point that hasn't already been considered by every person on earth ad nauseum. Is there a conversation here or are you just asking me to recite the alphabet to you, in case I don't know all the letters yet?\n\nSo yes, I've considered it. What now? You're gonna ask me next if I have considered that some humans may give the AI a biased directive? Whoa.\n\nMy mind is blown, I think I'll need some more time to consider.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-04-17 12:12:01",
+                                            "replies": [
+                                                {
+                                                    "author": "georgejo314159",
+                                                    "body": "It's a trivial example to illustrate a general point. It was selected to illustrate the types of errors that can be made and when they are made, they become systematic unless we use AI with an understanding to look for these things\u00a0\n\nMost AI today no longer have that issue but they have other similar issues that are more subtle.",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-04-17 12:16:52",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Raileyx",
+                                                            "body": "I'm sure they'll never be perfect, but after dealing with MAGA dipshits who think that Biden literally eats babies, I think I'm willing to bet on AI outperforming us rather soon. At least I haven't seen that particular error in AI yet, although it seems rather common in humans.\n\nThat's all I'm saying here. That's my thoughts on AI bias. Humans are worse, and it's not close.\n\nAlso sorry for the snark, this whole discussion is pissing me off something fierce if you couldn't tell already.",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-04-17 12:21:33",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "georgejo314159",
+                                                                    "body": "I don't wish to suggest that you are completely wrong\u00a0\n\nWith respect to Biden and Trump, they represent a false dichotomy Americans should not be forced to choose. Biden is highly experienced. \u00a0His main issue is age. A secondary issue might be his son being unable to refrain from causing his father flack such as having brought drugs into the White house. \u00a0Trump is equally old, incompetent, corrupt and unhinged.",
+                                                                    "score": 3,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2024-04-17 12:57:20",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "TistDaniel",
+                    "body": "> I actually think AI is vastly less biased than most humans if you give it the right directives, if \"biased\" is even the right term to use here.\n\nTechnically correct. But also, AI is never trained on unbiased data.\n\nA large language model like ChatGPT is trained by indiscriminately scraping the entire internet, meaning that internalizes what gets said the most. Image-processing models follow a similar process, meaning that they internalize what gets shown the most.\n\nEven AI that isn't trained on literally the entire internet gets trained on the data available to the programmers. So, for example, cameras programmed by white people tell Asian users \"It looks like somebody blinked. Let's take that picture again.\" Because they've only ever seen white faces. Sinks programmed by white people don't activate when they detect a black hand. Because they've never seen black hands.\n\nNobody is trying to make racist or sexist software. But it's a lot more difficult and more expensive to make software without bias. And usually deadlines and budgets are the top priority.",
+                    "score": 8,
+                    "depth": 1,
+                    "timestamp": "2024-04-17 11:19:26",
+                    "replies": [
+                        {
+                            "author": "georgejo314159",
+                            "body": "It's worse.\u00a0\n\nEven if you have unbiased data, that unbiased data can reflect the reality that correlations exist that aren't causations",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-04-17 11:56:53",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

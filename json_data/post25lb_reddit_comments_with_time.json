@@ -1,0 +1,167 @@
+{
+    "post_title": "Historical context of AI and gender inequality",
+    "post_timestamp": "2023-11-17 00:15:10",
+    "last_comment_timestamp": "2024-07-28 02:28:25",
+    "time_difference": "254 days, 2:13:15",
+    "comments": [
+        {
+            "author": "Vaisbeau",
+            "body": "This is pretty close to my PhD topic! Excellent choice for a paper! \n\n\nAll AI stems from algorithmic models, and there's a long history of bias in these systems. \n\nCheck out work by Helen Nissenbaum, Taina Bucher, Safiya Nobel, Abeba Birhane, Cathy O'Neil, Virginia Eubanks, Jenna Burrell, Marion Fourcade, Joy Buolamwini, Timnit Gebru, Emily Bender, Alex Hanna, and Danielle Citron.\n\n\nA good place to start is this review article about algorithms and Sociology: https://www.annualreviews.org/doi/abs/10.1146/annurev-soc-090820-020800\n\nAlso Bernard Koch wrote a history of AIs development and how it's driven. I can't find it but if you email him he might give it to you. He presented it at ASA this past summer.",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2023-11-18 10:18:41",
+            "replies": []
+        },
+        {
+            "author": "blakfish90",
+            "body": "Reading Noble's 'algorithms of oppression' might help? It deals with racism and sexism in search engines, which is AI insofar as involves machine learning (perhaps you have a more specific area of AI in mind?). There's also 'weapons of math destruction' for a general study of algorithms/big data and inequality.",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2023-11-17 06:39:01",
+            "replies": []
+        },
+        {
+            "author": "alejandrotheok252",
+            "body": "I\u2019m doing something somewhat related. I found this theory called Computers As Social Actors (CASA) and it\u2019s yielded some interesting results. Hope that helps.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-11-17 15:20:51",
+            "replies": []
+        },
+        {
+            "author": "AssAndYiddies",
+            "body": "Maybe this might help? Learned this is a soc sexuality class: AI chatbots in dating websites cater or change to fit the people speaking with them. For some people this is their first experience in dating and they believe it is a real person. When they date in the real world they\u2019re confused and possibly angry on why their partner doesn\u2019t change to fit them like the online AI partner did. This can lead to sexual violence in some cases.\n\nThere\u2019s gotta be a paper on it or something if it was taught in my class I think?",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-11-17 06:46:55",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "Yea this is really helpful actually as I\u2019m including a section with deepfake revenge pornography is a free reign to invade women\u2019s privacy and sense of identity",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2023-11-17 13:10:33",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "HopefulPineappl",
+            "body": "I believe people should take the stance \u201cNothing About Us Without Us\u201d\u2026 where professionals and people in a specific race or religion or community educates AI software",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-07-28 02:28:25",
+            "replies": []
+        },
+        {
+            "author": "GiraffeWeevil",
+            "body": "What a strange project. Were you given this project title or did you choose it?",
+            "score": -4,
+            "depth": 0,
+            "timestamp": "2023-11-17 03:23:00",
+            "replies": [
+                {
+                    "author": "koolaid-girl-40",
+                    "body": "It's not strange lol, the earliest studies of AI implementation have already found that certain biases are built-in unless specifically accounted for.\n\nFor example, while selecting top candidates during a hiring process, Amazon\u2019s automated resume screening system\u00a0discriminated\u00a0against women. The data used to train the\u00a0recruitment model\u00a0was informed by resume samples from a 10-year period, where women were underrepresented. The resume screening model thus used \u201clinguistic signals\u201d associated with successful male candidates.\n\nBasically because AI draws from the past to find patterns relevant to its programming, it's also drawing all the biases from the past. So if an AI program notices that women are not represented in the past hires, it doesn't understand the context as to why. It just assumes that women must not be good at the job and gives applications with male-sounding names more points automatically. This type of bias extends to things like race, language, etc.",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2023-11-17 14:52:45",
+                    "replies": [
+                        {
+                            "author": "chaosmosis",
+                            "body": "The algorithmic bias literature is ironic because there is this idea that AI models are biased because they're built on unsophisticated evaluation of empirical data, but virtually none of the literature evaluates data bias in a sophisticated way, instead treating it like a social contagion or miasma. Humans draw conclusions from empirical data too, and the miasma model of bias is probably more accurate for human beings' reasoning than for machines'.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-11-17 16:12:15",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "Why is it strange ? Yes I picked it myself",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-11-17 13:06:28",
+                    "replies": [
+                        {
+                            "author": "GiraffeWeevil",
+                            "body": "It is strange because it is so specific, but at the same time you seem to know nothing and no idea how to proceed. \n\nUsually you either base the project on something you already know something about, or you start with a less specific title and hone in as you learn more.",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2023-11-18 03:47:05",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "[removed]",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-11-18 02:40:38",
+                    "replies": [
+                        {
+                            "author": "Anomander",
+                            "body": "Don't show up here just to troll and take potshots at the locals, please.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-11-18 15:00:27",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "koolaid-girl-40",
+            "body": "Here's an article that walks through some examples and provides some research, in case it's helpful!\n\nhttps://theglobalobservatory.org/2023/03/gender-bias-ethical-artificial-intelligence/#:~:text=This%20is%20evident%20in%20many,screening%20system%20discriminated%20against%20women.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-11-17 14:53:16",
+            "replies": []
+        },
+        {
+            "author": "chaosmosis",
+            "body": "You can talk about the history of areas AI is deployed in instead. For example, the erosion of community social ties helped pave the way for algorithms to influence socialization through social media, media content consumed, and online dating.  \n\n\nIt isn't very accurate to claim that women, rather than men, made the first advances in AI. You might be thinking about human computers? Computers are not synonymous with AI.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-11-17 15:15:00",
+            "replies": []
+        },
+        {
+            "author": "_circuitry",
+            "body": "While it doesn't satisfy all of the specifics of your request, there has been an effort towards a general sociological understanding of Artificial Intelligence, incidentally written by a woman, it's a book called [Artificial Communication: How Algorithms Produce Social Intelligence](https://direct.mit.edu/books/book/5338/Artificial-CommunicationHow-Algorithms-Produce). From what I hear, the author is of a sort of luhmannian persuasion which might come across as kind of arcane but you will be alright.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-11-17 15:58:26",
+            "replies": [
+                {
+                    "author": "chaosmosis",
+                    "body": "How does this perspective differ from a repackaged cyborgism?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-11-17 16:19:45",
+                    "replies": [
+                        {
+                            "author": "_circuitry",
+                            "body": "You mean as in Haraway? I have not read her but I do know that Luhmann's framework pressuposes systems that work under an 'operative closure'. This means that information, which Luhmann calls 'communication', does not flow freely between systems but is aprehended by each system and interpreted only with the elements that belong to the system in question. In the case of the subject, which he names the 'psychic system' it is closed to the 'social system', which permits Luhmann to focus mostly on the social system and avoid getting too involved in discussions of 'anthropological principles'. Therefore there can be no talk of the subject 'melting' into the machine or becoming engulfed in artificial intelligence or whatever. Hence why Esposito refers to it as 'artificial communication', it is something that exists mostly 'out there', in the social system.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2023-11-17 20:05:57",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "rattyboy7890",
+            "body": "The book My Fair Ladies: Female Robots, Androids, and Other Artificial Eves by Julie Wosk will likely be relevant to this topic.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-11-18 02:05:19",
+            "replies": []
+        }
+    ]
+}

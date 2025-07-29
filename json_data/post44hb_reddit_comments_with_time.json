@@ -1,0 +1,295 @@
+{
+    "post_title": "Question about AI  surveillance and 4th amendment ",
+    "post_timestamp": "2024-10-01 13:05:35",
+    "last_comment_timestamp": "2024-10-02 14:16:16",
+    "time_difference": "1 day, 1:10:41",
+    "comments": [
+        {
+            "author": "Deleted",
+            "body": "Using AI wouldn\u2019t change the scope of the 4th Amendment. So It depends on how the technology is being used. Using AI to say tap someone\u2019s phone without a warrant would still be a 4th amendment violation for example.",
+            "score": 11,
+            "depth": 0,
+            "timestamp": "2024-10-01 13:23:24",
+            "replies": [
+                {
+                    "author": "Clean-Wishbone-3413",
+                    "body": "Well, I\u2019m also wondering, is it harder to prove that that action was taken? I\u2019m still learning cyber right now, but from my understanding of algorithms, you could theoretically build it to delete its own tracks, thus removing any real \u201cproof\u201d",
+                    "score": -5,
+                    "depth": 1,
+                    "timestamp": "2024-10-01 13:25:42",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "They cannot use it in court if it\u2019s a secret algorithm that deletes itself, so that would kinda defeat the point.",
+                            "score": 9,
+                            "depth": 2,
+                            "timestamp": "2024-10-01 13:28:27",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "[deleted]",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2024-10-02 02:10:45",
+                                    "replies": [
+                                        {
+                                            "author": "Clean-Wishbone-3413",
+                                            "body": "This is what I was hoping to read! Thanks!",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-10-02 14:16:16",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "derspiny",
+            "body": "Are you talking about government-operated public surveillance, or are you talking about privately-operated public surveillance?\n\nI ask because the 4th prohibits _the government_ (and by extension those operating on the government's behalf) from performing unreasonable searches and seizures. Surveillance of public places generally falls below that line, so for example red light cameras do not violate the 4th amendment, but in principle government surveillance is subject to 4th amendment analysis. This is, for example, at the heart of the dispute around police-operated cellular stations.\n\nPrivate surveillance is regulated by rules like trespassing, licensing requirements for radio transmitters, and so on.",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2024-10-01 13:20:18",
+            "replies": [
+                {
+                    "author": "Clean-Wishbone-3413",
+                    "body": "Okay, so what I\u2019m wondering is there was a program a few years back Apple tried to institute, basically it was an ai that would analyze your personal photos, if it saw something breaking policy (drugs, explicit content, violence, etc) the ai would alert Apple who would then alert proper authorities. \n\nI\u2019m assuming the problem there is the last chain of events, but my confusion is what can be allowed and what can\u2019t? And if something is happening that is legal that \u201cshouldn\u2019t\u201d happen, where would that line be, and what would be the actions needed to ensure that that doesn\u2019t happen",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-10-01 13:24:01",
+                    "replies": [
+                        {
+                            "author": "say592",
+                            "body": "That wasnt the program. The program was to look at the hash of photos to determine if they matched known CSAM. I think the program even went into effect. There was never any AI involved, they werent looking at the content of the photo, and they werent looking for anything other than material that is VERY explicitly illegal.",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2024-10-01 16:29:16",
+                            "replies": [
+                                {
+                                    "author": "Clean-Wishbone-3413",
+                                    "body": "Huh, can you send some info on this? A lot of this came up from a school/work conversation, so I\u2019m assuming there was misinformation used, I\u2019m assuming is also why I\u2019m so confused.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-10-01 16:31:54",
+                                    "replies": [
+                                        {
+                                            "author": "say592",
+                                            "body": "A lot of people made a big stink about it without ever really understanding what it was. \n\n  \n[This is what I was describing (PDF warning).](https://www.apple.com/child-safety/pdf/Expanded_Protections_for_Children_Frequently_Asked_Questions.pdf)\n\n[There is also this, which is closer to what you were describing.](https://www.apple.com/child-safety/) Ill admit, I was unaware of this. However, its only applicable when activated on a child's device, it all happens locally, and it only scans for nudity.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2024-10-01 16:42:45",
+                                            "replies": [
+                                                {
+                                                    "author": "Clean-Wishbone-3413",
+                                                    "body": "Thanks Mr mayor!",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-10-01 16:48:45",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "derspiny",
+                            "body": "Apple gets your agreement to process and share the data you provide. Don't want to give them data? Don't agree, and they won't collect it. Several features on Apple devices depend on that data gathering, so you have to trade off against that degraded user experience, but that's not a legal issue - it's a market fit one.\n\nApple's [policy](https://www.apple.com/legal/privacy/law-enforcement-guidelines-us.pdf) is to wait for law enforcement to contact them, and not to forward user data to law enforcement voluntarily. They have at various points explored the possibility of detecting unlawful images on user devices, but the customer backlash has been sharp each time: people value their privacy.\n\nIn jurisdictions with consumer privacy rules (including California, where Apple is headquartered), any disclosure by Apple also needs to comply with those rules. Most of the US has few to no data privacy rules dealing with this.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-10-01 13:26:55",
+                            "replies": [
+                                {
+                                    "author": "Clean-Wishbone-3413",
+                                    "body": "That\u2019s how I felt about it, but it\u2019s also been proven (to include apple) many major tech companies have been saying they follow the rules and then get indicted or have some major whistleblowing case pop up, so I guess I\u2019m trying to understand is how is that not considered criminal behavior for some (or at least not enough for the federal agencies to investigate) and is almost treasonous in other terms",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2024-10-01 13:30:43",
+                                    "replies": [
+                                        {
+                                            "author": "derspiny",
+                                            "body": "> get indicted or have some major whistleblowing case pop up\n\nCan you give an example?\n\n> treasonous\n\n\"Treason against the United States, shall consist only in levying War against them, or in adhering to their Enemies, giving them Aid and Comfort.\"\n\nNo part of any data broker's collection and distribution of your personal data constitutes treason.",
+                                            "score": 6,
+                                            "depth": 4,
+                                            "timestamp": "2024-10-01 13:31:26",
+                                            "replies": [
+                                                {
+                                                    "author": "Clean-Wishbone-3413",
+                                                    "body": "Example cambridge analyitica, Amazon\u2019s alexia voice (mostly pertaining to storage of children\u2019s private data), apple data collection through proprietary apps",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-10-01 13:55:11",
+                                                    "replies": [
+                                                        {
+                                                            "author": "derspiny",
+                                                            "body": "None of those instances involve the Fourth Amendment, because the government was not carrying out any unreasonable searches or seizures. What privacy rights were violated were not constitutional in nature.\n\nI will also note that both the Cambridge Analytica affair and Alexa's unauthorized recording drew significant government intervention. The investigation into CA's violation of campaign laws forced the company into bankruptcy and Facebook ended up settling a class action lawsuit from its users, and Amazon paid a substantial fine to the FTC. Just because these actions are not unconstitutional does not mean that they were legal - demonstrably, the governments involved (and the public) felt that they were not.\n\n\"Apple data collection through proprietary apps\" is too vague to comment on.",
+                                                            "score": 3,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-10-01 14:59:31",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Clean-Wishbone-3413",
+                                                                    "body": "I don\u2019t remember the exact name of the case, but I think it was 2018 or a little earlier where they were caught tracking data through apps Apple developed, such as GPS tracking and compiling private conversations and information and using it/selling it, there was a lot more to it but I guess I\u2019m not wording exactly what I\u2019m trying to ask correctly.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2024-10-01 15:02:42",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "author": "Clean-Wishbone-3413",
+                                                    "body": "I\u2019m saying it\u2019s perceived as treasonous, which was how and older colleague felt about the topic, it\u2019s just a surface level hypothetical question involving technology and corporate action",
+                                                    "score": -2,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-10-01 13:42:49",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "FinancialScratch2427",
+                                            "body": "What the hell are you talking about?",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2024-10-01 13:40:33",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Djorgal",
+            "body": "An AI system is just interpreting data that it is fed. If the surveillance footage was obtained legally, then why would it become illegal to run an analysis on said footage?\n\nIf the footage is obtained illegally, then AI is not the issue in the first place, it's the illegal surveillance that is.",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2024-10-01 14:05:42",
+            "replies": [
+                {
+                    "author": "Clean-Wishbone-3413",
+                    "body": "Well that\u2019s what I\u2019m trying to figure out where that separates, because a lot of companies technically obtain it \u201clegally\u201d since there isn\u2019t much legality dictating what is and isn\u2019t allowed in that space, which is why I brought up the amendment as personally I feel a private entity wouldn\u2019t go to these lengths across the board unless there is some type of government reasoning behind it.",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-10-01 14:24:20",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "SinisterYear",
+            "body": "So there is a line between publicly available information and privately available information. If your information is public and any person with adequate know-how can access it *legally*, the 4th amendment is harder to invoke as an unreasonable search. If the data is stored privately, eg in your cellphone, and the government is tapping into that data to track you, then that is a good 4th amendment argument.\n\nIt's worth noting that this data is generally stored *privately* on a third party server, and the government accessing it *without* a warrant is illegal and would help your case.\n\nHow the government sorts through the data obtained *legally* is irrelevant. If they have wanton access to your GPS data because it's public for some reason, it doesn't matter if they use AI to analyze it or if they use Bob from accounting to analyze it, at least from the perspective of the 4th amendment.\n\nYes, we need better privacy laws, if only to address what types of data *should* have the expectation of privacy and which data has *zero* expectation of privacy.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-10-01 13:44:01",
+            "replies": [
+                {
+                    "author": "EVOSexyBeast",
+                    "body": "They don\u2019t need a warrant they just need the host of the server\u2019s permission. But yeah if they don\u2019t have that, then they need a warrant. Not because of your 4A rights but because of the host of the server\u2019s.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-10-01 15:57:55",
+                    "replies": [
+                        {
+                            "author": "Clean-Wishbone-3413",
+                            "body": "Dang I didn\u2019t even think of it that way, this answers a lot of other questions unrelated to",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-10-01 16:51:54",
+                            "replies": [
+                                {
+                                    "author": "EVOSexyBeast",
+                                    "body": "Yeah it\u2019s the way the law is. \n\nI disagree with that constitutional interpretation personally, I think it should enjoy 4A protection under me, therefore requiring my permission or a warrant. Because while the bits representing my data are on their severs, the only ordinary access point is through me.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-10-01 19:04:45",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Clean-Wishbone-3413",
+                    "body": "Thank you, this is what I was wondering, so if we need better privacy laws, how do we go about getting the legislation for that? Is it really just that song about a bill from when we were kids?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-10-01 13:48:14",
+                    "replies": [
+                        {
+                            "author": "SinisterYear",
+                            "body": "Yes. Vote in every election, show up to political groups, get involved, make it the topic people want to talk about.\n\nThe reason why things like this get swept under the rug is because we as a country are very complacent in politics and the majority of the US doesn't even vote, much less show up to talk about pressing issues.\n\nEducating yourself on the topic also drastically helps. A voice asking for change is powerful asset to whatever cause you push towards. An educated voice asking for specific changes is immeasurably *more* powerful. \\[Not saying you are uneducated, this is just a general statement\\].",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-10-01 14:03:42",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "atamicbomb",
+            "body": "The 4th amendment restricts how information can be acquired, not how it can be used except as a limit on acquisition. Once they lawfully have the information, they can analyze it however they want.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-10-01 13:59:08",
+            "replies": []
+        },
+        {
+            "author": "MuttJunior",
+            "body": "The 4th Amendment (and all other amendments) deal with the GOVERNMENT, not private entities. A private entity can use that data it collects to (for example) target ads toward you that it thinks you may find interesting. But for the government to use such data, it would need to obtain a warrant first, providing a valid reason that a judge accepts to sign off on the warrant.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-10-01 14:20:25",
+            "replies": [
+                {
+                    "author": "Clean-Wishbone-3413",
+                    "body": "I guess another hypothetical with a simple answer is what if an agency believes they will get that warrant and go through with it (it being compiling private data or acquiring something private), whether they get it or not does that open it to a mistrial or some type of suppression? \n\nI\u2019ve heard there have been times agencies act before the warrant is permitted due to the high likelihood of that warrant being granted on physical property, would it be handled in the same manner for data, as in the information obtained would be suppressed?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-10-01 14:31:11",
+                    "replies": [
+                        {
+                            "author": "MuttJunior",
+                            "body": "It does not result in a mistrial. It could get that evidence thrown out, though. If there is enough evidence to continue the case, though, it will continue.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-10-01 14:54:31",
+                            "replies": [
+                                {
+                                    "author": "Clean-Wishbone-3413",
+                                    "body": "So what constitutes enough evidence to push forward? I guess diddy would be a good reference since he has so much evidence, if they didn\u2019t obtain some crucial evidence legally, would they be able to do something in order to keep the evidence relevant? Is there like a criteria that needs to be met or is it a case by case thing that the DAs and councils discuss?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-10-01 14:57:36",
+                                    "replies": [
+                                        {
+                                            "author": "MuttJunior",
+                                            "body": "Any number of things could be. The victims coming forward about the assault would be a big one that's not tied to the evidence you provide.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-10-01 20:27:23",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

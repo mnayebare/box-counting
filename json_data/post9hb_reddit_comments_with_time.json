@@ -1,0 +1,767 @@
+{
+    "post_title": "Why is nobody here talking about creating datasets?",
+    "post_timestamp": "2024-05-14 00:59:56",
+    "last_comment_timestamp": "2024-05-24 04:32:45",
+    "time_difference": "10 days, 3:32:49",
+    "comments": [
+        {
+            "author": "chibop1",
+            "body": "Here's a dataset with 15+ trillion tokens for you. The download size is 45TB. Hope you have a fast internet and many many hard drives. :)\nhttps://huggingface.co/datasets/HuggingFaceFW/fineweb",
+            "score": 136,
+            "depth": 0,
+            "timestamp": "2024-05-14 01:04:15",
+            "replies": [
+                {
+                    "author": "n1c39uy",
+                    "body": "This can be refined even further I think but yes this is a very good starting point",
+                    "score": 24,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 01:52:50",
+                    "replies": [
+                        {
+                            "author": "MoffKalast",
+                            "body": "Select web finesse: Rough, Coarse, 1:1, Fine, and Very Fine",
+                            "score": 22,
+                            "depth": 2,
+                            "timestamp": "2024-05-14 05:18:10",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Cherlokoms",
+                    "body": "Can it be used to make a RAG to give context to smaller models, like Phi-3?",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 08:43:21",
+                    "replies": [
+                        {
+                            "author": "Hipponomics",
+                            "body": "yes, you would probably have more luck using a search engine based RAG though. That's a lot of data.",
+                            "score": 7,
+                            "depth": 2,
+                            "timestamp": "2024-05-14 08:56:23",
+                            "replies": [
+                                {
+                                    "author": "Cherlokoms",
+                                    "body": "Do you have any example of Search Engine based RAG?",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-14 09:08:02",
+                                    "replies": [
+                                        {
+                                            "author": "Hipponomics",
+                                            "body": "I think something could be cobbled together relatively easily using langchain. https://python.langchain.com/v0.1/docs/integrations/tools/google_search/\n\nI think perplexity.ai is doing something like this but haven't looked into any products doing this. I'm more in the DIY camp.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2024-05-14 10:24:29",
+                                            "replies": [
+                                                {
+                                                    "author": "Cherlokoms",
+                                                    "body": "I'll look into that, thanks",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-05-14 12:33:13",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "luncheroo",
+                                    "body": "Is that essentially what Perplexity.ai is?",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-14 09:02:11",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "crazyenterpz",
+                    "body": "Dammit .. somebody start a business by downloading this and mailing hard drives loaded with this data to whoever wants this. you will make a killing on shipping and handling markup. There are literally dozens of us who would pay for this service. Dozens !",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 09:54:22",
+                    "replies": []
+                },
+                {
+                    "author": "Deleted",
+                    "body": "I downloaded all of scihub. it's actually much larger than that ;)",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 11:11:26",
+                    "replies": [
+                        {
+                            "author": "Glum-Bus-6526",
+                            "body": "Probably because it's in PDF, not plaintext?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-14 11:59:03",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "yes. I'm converting to mathpix markdown, but there are 88 million of them so ....",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-14 12:03:26",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "jman88888",
+                            "body": "I don't know anything about creating datasets but I was thinking of doing this and evaluating the quality of the studies before adding it to a dataset.\u00a0 If you could fine-tune a model with Peter Attia's studying studies series you might be able to weed out the junk science, but I also don't know anything about fine-tuning.\u00a0 I guess I need to go learn some things! XD\nhttps://peterattiamd.com/ns001/",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-15 00:50:57",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "How can you train without a server? I don't see possible... maybe in cloud???",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 11:10:51",
+                    "replies": []
+                },
+                {
+                    "author": "Odd_Perception_283",
+                    "body": "So that is pretty much most of the internet in that file?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 12:55:58",
+                    "replies": [
+                        {
+                            "author": "kurtcop101",
+                            "body": "Not even remotely close, unfortunately.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2024-05-14 13:01:13",
+                            "replies": [
+                                {
+                                    "author": "Odd_Perception_283",
+                                    "body": "It\u2019s crazy to really think about how much data is out there.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-14 13:01:56",
+                                    "replies": [
+                                        {
+                                            "author": "kurtcop101",
+                                            "body": "Some napkin math, someone noted the top 400k repositories on GitHub have 14 terabytes of code. Assuming the plain text storage, that's approximately 3.5T tokens in that alone. Not including the rest of github, images, other files, etc. \n\nSo all in all, 15T tokens is a drop in the bucket really.",
+                                            "score": 4,
+                                            "depth": 4,
+                                            "timestamp": "2024-05-14 14:03:54",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "mikael110",
+                                            "body": "The Internet Archive (Which is the closest thing to an actual Internet backup we have) stores over 99PB of data at this point. And that's far from being a complete backup, so yeah, the internet is very, very big.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2024-05-14 15:29:16",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Deleted",
+                                    "body": "I mean the whole wikipedia in plain text is under 100GB right? There is a lot of data, but most of it is junk, the important part is filtration.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-14 14:42:58",
+                                    "replies": [
+                                        {
+                                            "author": "kurtcop101",
+                                            "body": "Yep! Data quality is much more important than the amount (on a relative scale, of course - quantity still matters).\n\nThat said, the scale is so enormous that curating even is really hard and has to be done with AI. Pretty crazy.",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2024-05-14 14:52:06",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "card_chase",
+                            "body": "For general 'fun' stuff, yeah why not, have the entire internet in one place however for a good model training where say PHI which is an iterative processing model, this wont work.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-14 22:17:50",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "card_chase",
+                    "body": "The fineweb dataset is of the below format:\n\n| Field          | Type    | Value |\n|----------------|---------|-------|\n| text           | string  |       |\n| id             | string  |       |\n| dump           | string  |       |\n| url            | string  |       |\n| date           | string  |       |\n| file_path      | string  |       |\n| language       | string  |       |\n| language_score | float64 |       |\n| token_count    | int64   |       |\n\n\n\nThis is a huge roadblock for me to consume and edit it.\n\nSay probably I want a geology specific daaset that i can train a lightweight model on and I have domain knowledge however I dont have any dev experience, I wont even bother using it in the first place let alone correcting/updating it. There has to be a simpler, low-level and a better way to create and curate the dataset. For now, this is not for me.",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 22:12:52",
+                    "replies": [
+                        {
+                            "author": "JacketHistorical2321",
+                            "body": "yea, the \"better way\" is to develop the skills yourself that you are asking others to provide for you for free",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-05-15 13:11:45",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "dvanstrien",
+            "body": "I massively agree that more attention should be spent on this topic! \n\nI think the reason why more people don't talk about creating datasets is that it's hard and time-consuming and often the most important thing for improving a model, so people are sometimes keen to keep that knowledge to themselves.   \n\n\nIMO, if people want to work on data topics, I would suggest (in no particular order)\n\n- Don't start by working on creating web-scale pertaining data. I think people often get very excited about clocking up terabytes, but creating these datasets requires a lot more infrastructure and are often likely to only be used heavily if they were created well. The exception to this would be if there is a very specific domain or a language you want to focus on \n\n- We (Hugging Face and Argilla) have ongoing efforts related to creating datasets using the community which might offer a nice starting point for contributing to data: [https://github.com/huggingface/data-is-better-together](https://github.com/huggingface/data-is-better-together)\n\n-  Synethic data makes it possible to do much more as a single developer. [https://distilabel.argilla.io/latest/](https://distilabel.argilla.io/latest/) is a nice framework for creating datasets which can make getting started much easier.",
+            "score": 39,
+            "depth": 0,
+            "timestamp": "2024-05-14 06:30:43",
+            "replies": [
+                {
+                    "author": "Eisenstein",
+                    "body": "Hear hear.\n\nA small finely curated dataset centered on the types of generations you want, as long as it is diverse enough to cover the edges will give you an order of magnitude better results than a a huge dataset with even a small percentage of bad data or over-represented data.\n\nThe difference between a great model and a mediocre model is the data curation. Forgo the fun parts, get a nice ergonomic setup and pull out that keyboard tray cause you are gonna be spending the next days/months clicking and typing until you start dreaming in prompt templates and ground truths. \n\nDon't want to do that? Fine, but your model will suck at what you want it to do, unless you get super lucky, or you are a genius, or you have a team of ML phds in your guest rooms.",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 15:48:26",
+                    "replies": [
+                        {
+                            "author": "fimbulvntr",
+                            "body": "Hear hear.\n\nYou're absolutely right too, from my experience. No dataset beats you typing out 4k samples yourself. Tedious work but the results speak for themselves when you recognize the model repeating one of your lines back to you with a small modification.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-05-15 08:27:28",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "card_chase",
+                    "body": "I think this is a great step forward from you guys. Also the datasset is relatively small which is good for now as the corrections can happen relaitively easliy than a few terabytes.\n\nAlso I saw that the modules are planned to be domain specific which is good cause the process can be modular which I suppose is very important.\n\nMy questions are:\n\n* How are you going to manage lisences where you need to have published books and such for training datasets?\n* Are there any attempts to simplify data creation and updation? Not everyone having domain knowledge is going to run code to input and update information.\n* What are the steps planned to update and correct existing data because thumb rule, as datasets grow, the quality degrades. So maintaining quality is extremely important if you want the resulting trained model to be good.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 22:02:40",
+                    "replies": [
+                        {
+                            "author": "dvanstrien",
+                            "body": "> Are there any attempts to simplify data creation and updation? Not everyone having domain knowledge is going to run code to input and update information.\n\nThere are some efforts in this direction i.e., [https://huggingface.co/spaces/argilla/domain-specific-datasets-welcome](https://huggingface.co/spaces/argilla/domain-specific-datasets-welcome), but there is more work to be done in this area. I think because approaches to synthetic data generation are moving quite quickly, it's tricky to focus on a single approach that will continue to work well which makes developing UIs and tooling for this trickier. \n\n  \n> What are the steps planned to update and correct existing data because thumb rule, as datasets grow, the quality degrades. So maintaining quality is extremely important if you want the resulting trained model to be good.\n\nIMO keeping a human in the loop is important for this + making more nuanced LLM judges + developing other automatic (but non LLM-based) rules for filtering and scoring datasets.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-15 11:08:52",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Robot_Graffiti",
+            "body": "> LLaMA 1 foundational models were trained on a data set with 1.4 trillion tokens, drawn from publicly available data sources, including:  \n>  \n> Webpages scraped by CommonCrawl  \n> Open source repositories of source code from GitHub  \n> Wikipedia in 20 different languages  \n> Public domain books from Project Gutenberg  \n> The LaTeX source code for scientific papers uploaded to ArXiv  \n> Questions and answers from Stack Exchange websites\n\nhttps://en.m.wikipedia.org/wiki/LLaMA#:~:text=LLaMA%201%20foundational%20models%20were,Wikipedia%20in%2020%20different%20languages\n\nA trillion tokens is a lot. English Wikipedia is only a few billion words. I don't know about you, but my attention span is too short to start a project that won't be useful until it's hundreds of times bigger than Wikipedia. Maybe that's why not many people are doing it.",
+            "score": 27,
+            "depth": 0,
+            "timestamp": "2024-05-14 01:55:22",
+            "replies": [
+                {
+                    "author": "PumpteeDumptee",
+                    "body": "I know the OP is about the creation of a massive dataset. But ... maybe ... It doesn't necessilarily have to be something at the scale used to train an LLM from scratch, but could be a dataset for domain fine turning or something task specific etc. I've actually found it to be quite fun trying to generate datasets / synthetic datasets leveraging local LLMs to help with fine turning models like Llama to better suit my personal use cases.",
+                    "score": 11,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 07:11:50",
+                    "replies": [
+                        {
+                            "author": "Librarian-Rare",
+                            "body": "Or if people recorded everyday conversations with a mic on constantly on or something. Clean that data up a bit after. That would be very natural organic data that humans experience, but is very limited on the web. Speech to text would do all the heavy lifting too. \n\nIf each person speaks/hears 1000 words a day, then 1000 people doing this would produce 1M words of organic language per day.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-05-14 08:59:32",
+                            "replies": [
+                                {
+                                    "author": "koflerdavid",
+                                    "body": "The audios would be way more useful for training",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-14 13:59:45",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "card_chase",
+                                    "body": "Yes! It could! I am ready to kickstart the process if I have a place to dump the audio with transcriptions.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-14 22:18:46",
+                                    "replies": [
+                                        {
+                                            "author": "nihnuhname",
+                                            "body": "Maybe use movies or interviews from YouTube?",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2024-05-15 04:00:19",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "Librarian-Rare",
+                                            "body": "Although I bet Google / Amazon could probably use the info from their smart home speakers.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-05-15 10:19:56",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Robot_Graffiti",
+                            "body": "Yeah. A single-purpose language model for a simple task can be trained with an amount of synthetic data that you could reasonably make without a huge budget. TinyStories demonstrated that.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-14 08:52:30",
+                            "replies": []
+                        },
+                        {
+                            "author": "card_chase",
+                            "body": "No, not massive but a good, verifiable, editable and peer-revieved dataset. big always does not mean good.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-14 22:04:00",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "vesudeva",
+            "body": "Hey! What a perfect coincidence. I have created something that is just what you are looking for!\n\nI finally finished streamlining my workflow into a stack that anyone can use, called the Vodalus Expert LLM Forge. After a lot of work and thought, I've decided to open-source it! The toolset is designed to help anyone generate high-quality datasets easily, and now it's available to use, for free.\n\nHere is the link:\u00a0https://github.com/severian42/Vodalus-Expert-LLM-Forge\n\nWhy should you use this stack? Well, I\u2019m super passionate about improving the quality of data out there and want to empower as many people as possible to create amazing things. Also, I have extensive experience in both Open-Source and Enterprise LLM datasets and training; so I bring a unique perspective on the whole cycle and capabilities (You can see I\u2019m a real person doing stuff here:\u00a0(https://www.linkedin.com/in/beckettdillon/) That's why I\u2019ve also put together a detailed tutorial/course to get the most out of this stack, which is available for purchase at my ko-fi. If the stack helps you out, consider supporting the project with a donation on my ko-fi page (https://ko-fi.com/severian42)!\u00a0\n\n* Beckett",
+            "score": 31,
+            "depth": 0,
+            "timestamp": "2024-05-14 02:54:39",
+            "replies": [
+                {
+                    "author": "card_chase",
+                    "body": "I see that you are using Wikipedia as one of your data generation and RAG pipelines. I can suggest use that as the foundation of your model and then build around modules. I am talking of low-level common man able to read, transcribe, add and then verify. Just as the Wikipedia model works. Great work though!",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 22:22:12",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "grim-432",
+            "body": "How to come up with the next big thing in datasets, a step by step guide:\n\n1. Find a human task that at least 10,000 people do every day.\n2. Does a dataset exist to add value to these people, or to automate the task they do?\n3. Build a dataset that provides value in augmentation, what data would help these people be more productive, or do higher quality work.\n4. Build a tool that leverages this new AI model.\n5. Profit.\n\nOk, let's put this into practice.\n\n1. Residential home inspector\n2. No.\n3. Create an annotated image dataset of all aspects of residential homes, electrical, plumbing, mechanical, hvac, structural, inclusive of both ideal state and defects.\n4. Create a phone app that allows an in individual to walk through a house as it creates a home inspection report on the state/status of the property.\n5. First sell this to home inspection companies and independent contractors.  Then, sell this directly to the consumers of these services, mortgage companies or residential real estate brokerages, eliminate the need for humans.  This is the two step approach required to monetize automation.  First step is to make the use acceptable to people, the second step is to remove the people.\n\nThis doesn't exist on the web, you aren't going to find this in scientific papers, wikipedia, blogs, or otherwise.",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2024-05-14 09:16:47",
+            "replies": [
+                {
+                    "author": "deoxykev",
+                    "body": "I\u2019ll bet there\u2019s a very long tail of use cases like this ripe for the picking. Can\u2019t compete with big tech in AI in terms of compute, but you can with data in niche business areas.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 21:27:22",
+                    "replies": []
+                },
+                {
+                    "author": "card_chase",
+                    "body": "True. Nor will an HVAC guy go and create a dataset. It has to be opted-in for gathering data. I guess the annotations can happen in the backend by researchers and public alike. This is how you create and grow a high-quality dataset.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 22:24:40",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "VertexMachine",
+            "body": "There are topics about it here and there. But the hard truth is that this is the 'boring' part of LLM (and ML in general). It's also hard and tedious work. And so far my experience is that it matters much more than anything else in the whole 'stack'. I.e., you get the data right and you can use sup-par algorithms and will still get great results. But get the 'data' part wrong and no matter how smart algorithms you have or how nice UX you put on this, it will still be overall failure. \n\nAs a side note, recently Altman and co are hyping 'compute' as the thing that sets them apart. But IMO even if compute is important, the hardware is getting better and better (compare 10 years ago super computers to today's powerful gaming PCs) with each generation. IMO it's the data that the most important element in the whole ML puzzle. That's why Altman seems to be so afraid of Google.",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2024-05-14 04:32:13",
+            "replies": [
+                {
+                    "author": "fullouterjoin",
+                    "body": "The only useful way to get information from Sam Altman to listen to what he\u2019s not saying.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 13:37:34",
+                    "replies": []
+                },
+                {
+                    "author": "card_chase",
+                    "body": "Dont look at it as \"Data\". I'd rather look at it as information and knowledge. Then the whole think is turned upside down. I think people would rather curate information and knowledge much freely than \"data\". Also the curation is very unattainable as it stands.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 22:29:11",
+                    "replies": []
+                },
+                {
+                    "author": "koflerdavid",
+                    "body": "But with enough compute you can also start to use small models to clean and to generate data",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 14:01:08",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "dvanstrien",
+            "body": "Inspired by this discussion, I finally hit publish on this \"Awesome Synthetic (text) datasets\" repo (https://github.com/davanstrien/awesome-synthetic-datasets) I've been working on. It's still a WIP, but the goal is to curate some nice resources focused on making it easier to get started with creating symmetric datasets.",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2024-05-14 10:47:45",
+            "replies": []
+        },
+        {
+            "author": "ttkciar",
+            "body": "When I'm not working on other projects, I fiddle with code for synthesizing datasets and automatically improving datasets (per Evol-Instruct).\n\nI'm not in any particular rush, because it's going to be a while (years) before I have the hardware to pretrain my own models of any useful size.  I'm giving myself a long time to learn the field.",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2024-05-14 02:18:40",
+            "replies": []
+        },
+        {
+            "author": "toothpastespiders",
+            "body": "There are on occasion. But I think the larger problem is that it's usually a pretty individualized process. I keep meaning to clean up my code, write up some documentation, and upload everything I wrote for my own workflow.But honestly I think it'd take someone longer to learn how to use the tools I made than it would to write their own tools from scratch. And I'm in the process of dying anyway so I'm just counting on having a friend upload the actual datasets themselves when something finally gives out on me as a bit of a wave goodbye to the world so haven't been stressing 'too' much about where all of it's going to go. \n\nThat said, I do think that datasets really are the most important thing going forward.Likewise that people don't realize how bad a huge chunk of what's publicly available at the moment is. \n\nI've seen some tentative steps in a more community-based movement like what you're describing. There was a recent proof of concept project where people could rate the quality of question/answer pairs that was actually kind of fun.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2024-05-14 02:04:25",
+            "replies": []
+        },
+        {
+            "author": "moarmagic",
+            "body": "I remember reading here, a good  bit ago, that quality of data matters a lot more then quality. Now that was probably 6+ months ago and I'm not sure that if that's been disproven with all the releases and advancement of the last two months, but I think that's a good portion of it- It's relatively easy to get a ton of tokens together- to scrape, generate synthetic data from other LLMs,  (Though i remember early on a paper suggesting training on synthetic data had diminishing returns, I'm pretty sure we've now proved that's either wrong, or that with different models and other techniques, we are still seeing better returns then were originally implied) , etc.\n\nThe real problems here i think are two fold: determining what data is meaningful - 10 year old tech reviews? , SEO'd product spam sites? Something Awful forum posts? Livejournal posts? - and improving the data itself- correcting typos, removing troll comments, formatting it consistently.\n\nEdit; In one of the ADD style projects where I don't think i have the expertise to actually finish on my own - I've been pondering a pipeline for trying to self-finetune a model based on interactions. Where you compile like all the interactions for a week, cycle them through with a prompt to rate them to determine how useful they were (Typos, poor wording), Discard the worst rated examples. Take the remaining and run through another cycle with prompts asking it to rephrase or reinterpret the interactions (The user asked about X, but based on following interactions, did the answer meet their needs? What would alternatives answers have been?) , to generate a larger synthetic pool of data. Then train on the new combined data. \n\nIt's a system designed to take advantage of periods of low use, when i could look at switching out different models to get different answers to the same query, and try to create a finetuned agent that learned from it's interactions.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-05-14 08:50:54",
+            "replies": [
+                {
+                    "author": "Life-Screen-9923",
+                    "body": "100% !!! \u2014 Determining What Data Is Meaningful",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 09:54:59",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Original_Finding2212",
+            "body": "In Israel there is an open source project to refine STT dataset manually (after some automation as baseline).  \nA lot of us just put our share and together it amounts to a lot.  \n\nNo reason this couldn\u2019t work here as well - just need funding maybe",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2024-05-14 02:06:12",
+            "replies": [
+                {
+                    "author": "blackkettle",
+                    "body": "Which OSS project is this?  Can you share the link?",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 06:23:54",
+                    "replies": [
+                        {
+                            "author": "Original_Finding2212",
+                            "body": "They had just released an update:\n\nhttps://huggingface.co/ivrit-ai/whisper-v2-d3-e3/blob/main/README.md?code=true#L122",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-05-14 06:33:07",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Icy-Corgi4757",
+            "body": "I think consideration of data sets is something that really 'hits' once you've stepped into actually creating and training your own models. Speaking from personal experience, when I was just playing with existing models on oobab, the consideration of the dataset was in the shadow of just playing with the model. \n\nOnce I started to study how the models really worked from a more foundational perspective, I realized how incredibly important the data sets are to all of this. Sure, I am not creating llms, rather just playing with simple lstm models to which I can feed synthetic datasets generated by python scripts. I know this is far simpler than what would be required to train an llm or some other complex model, but my point is that a lot of people have only experimented with the \"product\" as opposed to the process which likely leads to the seemingly secondary consideration of data sets.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-05-14 04:32:43",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "There is no clear guidance on how a dataset should look or be formatted. What is it for? finetuning? training? what variability should there be on the content?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-05-14 04:35:55",
+            "replies": [
+                {
+                    "author": "Blizado",
+                    "body": "But even there is no clear guidance you can still give one more generic then. Still better as nothing.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 13:02:34",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "doing these things without knowing how and why surely can't be the way.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-05-14 13:03:34",
+                            "replies": []
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "doing these things without knowing how and why surely can't be the way.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-14 13:08:07",
+                            "replies": [
+                                {
+                                    "author": "Blizado",
+                                    "body": "Yes, but that is a general problem on LLMs. The most didn't fully understand how they exactly work and can so not clearly what works best and what not. For example, if you ask how to best merge models together for a good merge model you also get mostly the answer \"try around and look what works best for this models you want to merge\".\n\nAt the end we are still in the beginning of AI and there is still a lot we need to learn about them.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-16 03:18:05",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "Data is the hottest and most important thing in the whole process. Don't let anyone tell you that it's boring or difficult - in the end, it's this area that needs your most attention and determines your results.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-05-14 06:28:52",
+            "replies": []
+        },
+        {
+            "author": "mvthxw",
+            "body": "really cool project creating massive dataset for conversational AI training here: [https://conversations.xyz/p/cgp\\_overview](https://conversations.xyz/p/cgp_overview)",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-05-14 16:41:39",
+            "replies": []
+        },
+        {
+            "author": "celsowm",
+            "body": "We need more ORPO/DPO datasets",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-05-14 06:51:17",
+            "replies": [
+                {
+                    "author": "FullOf_Bad_Ideas",
+                    "body": "Yeah, they are also relatively easy to make. I wish we had richer selection of preference datasets. Currently it's mostly \"good generic instruct response vs worse generic instruct response\" or \"refusal vs compliance\" safety datasets. There's so much more that is possible with them.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 13:28:18",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "sheepbrother",
+            "body": "There actually happen to have a very interesting [article](https://www.nyu.edu/about/news-publications/news/2024/february/ai-learns-through-the-eyes-and-ears-of-a-child.html) about data collection through a child\u2019s experience, and it is surprisingly effective. I guess the key is how can we collect high quality data",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-05-14 02:19:39",
+            "replies": []
+        },
+        {
+            "author": "ng9924",
+            "body": "honestly in my experience labeling even a small data set properly takes hours and you generally have to do it manually\n\nit\u2019s not impossible but it takes a lot of work",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-14 06:48:33",
+            "replies": [
+                {
+                    "author": "Blizado",
+                    "body": "A lot of work that could be split in much lesser if more people would work together on it.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 13:03:17",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "a_beautiful_rhind",
+            "body": "We need some effective datasets for fine tuning. A lot are full of junk and refusals. People grab them and train without doing the pruning required. That's even worse than none at all because it ends up with broken models getting posted that people will download. Wasted bandwidth and compute.\n\nThere's not a lot of easy tools for d/s manipulation either. You're expected to use pandas or something like that. No dataset maker webui.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-14 07:04:44",
+            "replies": []
+        },
+        {
+            "author": "Feztopia",
+            "body": "This was made by the community:\u00a0\nhttps://huggingface.co/datasets/OpenAssistant/oasst2",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-14 08:01:06",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "from scratch would have to be pretty domain specific, but I agree that there are enough people here with decent enough hardware that localllama should be much more into finetuning, continued pretraining, and  dataset creation. I'm hoping to kickstart some community participation, but I have to finish some tooling first.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-14 11:21:12",
+            "replies": []
+        },
+        {
+            "author": "kereta_api",
+            "body": "I work with low-medium resource languages, and developing datasets is definitely key here. In my experience using stronger models for synthetic data is very crucial.\n\nPeople in this thread talk about billions and trillions of data, but surprisingly, if you have a model with strong baseline multilingual capabilities, you only need a couple million tokens to teach your model proper fluency. I've had pretty good success teaching Llama 3 8B Indonesian with 6.7M words. With GPT 3.5, I can tune it to consistently respond in Javanese with just 274K tokens. I see a lot of Indonesian developers made the mistake of choosing a crappy base model and tune it on billions of tokens when it's not necessary with an adequate model.\n\nDeveloping pretraining dataset is definitely a huge pain, though. However Microsoft's TinyStories show that you can get linguistic fluency with just about 2M data points. This is definitely manageable in size and cost, and depending on your use case/hobby/interest you might want to take a look at it. Personally I've been thinking of creating a dataset like it for other languages.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-14 12:27:47",
+            "replies": [
+                {
+                    "author": "MadViper",
+                    "body": "Hey! This is super cool. What kind of training did you do? I've been thinking about trying to do something similar and the papers I've read are doing big rounds of continued pretraining to add more language expertise with further instruction fine tuning. But it sounds like you may have gotten good results with less data?\n\nAnything you can share about your process would be super helpful!",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-18 14:56:04",
+                    "replies": [
+                        {
+                            "author": "kereta_api",
+                            "body": "Thanks for the interest! I was quite influenced by this [paper](https://arxiv.org/abs/2401.01055) showing that you don't need extensive pretraining to get good training metrics. A lot of papers are focused on downstream task, which is outside of my interest and may influence their conclusions. My personal evaluation is only whether the models can produce fluent text.\n\nThe choice of base model is definitely a critical factor here, and better models doesn't necessarily mean better multilingualism. For example, GPT-3.5 is woefully outdated, but in my experience it is still one of the best models out there in terms of multilingual text generation. Mixtral 8x7B, which is better than GPT-3.5, made a lot of mistakes in generating Indonesian text.\n\nThe fun thing in my experiments is that some models have a latent knowledge of certain low-resource language through pretraining on large corpora, even if they just can't use it no matter how hard you prompt. For example, GPT-3.5 can use the informal register of Javanese (Ngoko), but it absolutely cannot use the polite register (Krama)--even though it can understand requests written in that register. From there, I had a hunch that GPT-3.5 actually has a deep but hidden understanding of the Krama register. Then I tried fine-tuning it with my dataset, and it worked very well! All you need is a little nudge to 'awaken' the model's knowledge into speech.\n\nIn any case, teaching language from zero is definitely a huge pain, and I wouldn't recommend it. You should basically get an intuitive feel of whether the model was sufficiently pretrained on your large corpora of writen in your target language. Perhaps you can experiment to get an idea. For example, can it understand your prompts in that language? If you prompt it with your target language and it complied, even if in English, then it might mean that you can teach it to respond in your language with small datasets. Also, if it can output the language, even if it struggle considerably, you should be able to teach it with small training sets.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-19 22:30:47",
+                            "replies": [
+                                {
+                                    "author": "MadViper",
+                                    "body": "Sorry, I've been away. This is incredibly helpful. Thank you for your help!",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-23 20:24:13",
+                                    "replies": [
+                                        {
+                                            "author": "kereta_api",
+                                            "body": "Sure thing! Glad I could help.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-05-24 04:32:45",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Blizado",
+            "body": "Because the most people in Open Source space are always only users.\n\nAnd yeah, when it comes to training data you didn't found much good guides with all information you could need. You need to search a lot to maybe fine answers to your questions but often you didn't find any useful answer.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-14 12:42:08",
+            "replies": [
+                {
+                    "author": "card_chase",
+                    "body": "Maybe is tiime to start in that direction?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 22:29:51",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "FreegheistOfficial",
+            "body": "agree. or more importantly, multimodal datasets now..",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-14 14:07:38",
+            "replies": []
+        },
+        {
+            "author": "Eisenstein",
+            "body": "Because it is a shitload of hard work and people want to do the cool part of training and not the tedious part.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-14 15:40:34",
+            "replies": []
+        },
+        {
+            "author": "Bite_It_You_Scum",
+            "body": "Because it's mechanical turk level work and it's unlikely to benefit the people who would be doing it until the cost of actually training a model from scratch is attainable for hobbyists.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-14 18:21:25",
+            "replies": []
+        },
+        {
+            "author": "card_chase",
+            "body": "People talk about how Gemini and Open AI models are extintionist or biased and we cannot change that cause we dont have datasets that can be (obtained in the first place) edited or corrected. And if they can be, the ones doing it cannot represent the whole of topic. This needs to be low-level common -man/woman/whatever accesible, understandable, verifiable and editable. I see this as a major gap that needs to be fulfilled.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-14 22:27:24",
+            "replies": []
+        },
+        {
+            "author": "nggakmakasih",
+            "body": "Because thats the real sauce.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-15 09:22:37",
+            "replies": []
+        },
+        {
+            "author": "crantob",
+            "body": "There's a bit of hubris in talking about creating quality datasets when we can't even agree on what a woman is.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-15 17:47:00",
+            "replies": []
+        },
+        {
+            "author": "chibop1",
+            "body": "Apparently companies are running out of quality data. According to a [NYTimes article:](https://www.nytimes.com/2024/04/06/technology/tech-giants-harvest-data-artificial-intelligence.html?unlocked_article_code=1.sU0.pWRz.fjZpN7CPtTLH&smid=url-share)\n\n\"Their situation is urgent. Tech companies could run through the high-quality data on the internet as soon as 2026, according to Epoch, a research institute. The companies are using the data faster than it is being produced.\"\n\n\"To obtain that data, tech companies including OpenAI, Google and Meta have cut corners, ignored corporate policies and debated bending the law\"\n\n\"They also conferred on gathering copyrighted data from across the internet, even if that meant facing lawsuits. Negotiating licenses with publishers, artists, musicians and the news industry would take too long, they said.\"\n\n\"OpenAI, Google and other companies are exploring using their A.I. to create more data. The result would be what is known as \u201csynthetic\u201d data.\"\n\nThey already fed all the books, academic journals, newspaper, Wikipedia, transcriptions of podcast, Youtube videos, etc.\n\nUnless collecting private data or data after the model was created, what's the point of collecting and feeding publicly available data that the model already ingested? Wouldn't that overfit the model for the small specific dataset?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-16 01:01:08",
+            "replies": []
+        },
+        {
+            "author": "n1c39uy",
+            "body": "I've been thinking about this, scraping data and then sorting and formatting it using an LLM. That being said it would be quite an undertaking and I myself do not have enough processing power to use that data to train a model with.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2024-05-14 01:48:49",
+            "replies": [
+                {
+                    "author": "card_chase",
+                    "body": "I am thinking not one party can maintain and update this size or level of training dataset. But everyone definitely can.\n\nBut, it definitely can be modular with a MOE model where an expert/experts can update a module say a Language module for correct grammar and within it a sunset of a language say Italian and then other languages likewise and the same for image and then video, sound, coding, logic, etc.\n\nWhat's being done is a bit-part model where it would be good at medical data but not as much as for anything else.\n\nThis would need to have a setup exactly or similarly like Wikipedia.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-14 02:03:11",
+                    "replies": [
+                        {
+                            "author": "card_chase",
+                            "body": "Also the dataset should essentially be an extremely low level one that present human can read, edit and update. The HF model is a json which I personally don't want to deal with.\n\nOf course one can have a conversion step that should be fairly simple to convert for training.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-14 02:05:25",
+                            "replies": [
+                                {
+                                    "author": "n1c39uy",
+                                    "body": "Yea I could see something that uses LLMs to \"data mine\" and structure a large dataset using spare compute working. The real problem would be making sure that 1 actor cannot poison the dataset. Also using LLMs to structure, filter and clean the data sounds simple but in reality is probably very hard to execute. I am interested in looking into it tho.\n\nAlso jsons are very useful, maybe its better to make some kind of parser instead of editing the json files directly",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-14 02:33:19",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

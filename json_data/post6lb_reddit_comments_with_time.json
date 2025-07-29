@@ -1,0 +1,221 @@
+{
+    "post_title": "Algorithm predicts crime a week in advance, but reveals bias in police response",
+    "post_timestamp": "2022-06-30 17:36:31",
+    "last_comment_timestamp": "2022-07-01 22:11:55",
+    "time_difference": "1 day, 4:35:24",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "body": "Welcome to r/science! This is a heavily moderated subreddit in order to keep the discussion on science. However, we recognize that many people want to discuss how they feel the research relates to their own personal lives, so to give people a space to do that, **personal anecdotes are now allowed as responses to this comment**. Any anecdotal comments elsewhere in the discussion will continue to be removed and our [normal comment rules]( https://www.reddit.com/r/science/wiki/rules#wiki_comment_rules) still apply to other comments.\n\n*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/science) if you have any questions or concerns.*",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-06-30 17:36:31",
+            "replies": []
+        },
+        {
+            "author": "onwee",
+            "body": "Full paper [here](https://www.researchgate.net/publication/349228599_Precise_Event-level_Prediction_of_Urban_Crime_Reveals_Signature_of_Enforcement_Bias).\n\nSeems like a big deal? Posting this in the hopes of someone more familiar with criminology/AI modeling can explain to us what this means and the science behind the sci-fi.",
+            "score": 47,
+            "depth": 0,
+            "timestamp": "2022-06-30 17:39:49",
+            "replies": [
+                {
+                    "author": "The-Last-Lion-Turtle",
+                    "body": "Looks like a forecasting model for neighborhood crime statistics and not predicting a crime occurring which is what I felt the headline implies.\n\nAs for showing bias in police, I don't think that's a reasonable claim since police officers should respond to evidence and follow due process and not predictive statistics.\n\nThe way to do that would be an audit, likely by hand, of police responses to different reports.\n\nNot just the outcomes on average, but counting each individual case as a false positive, false negative, true positive or true negative.\n\nIt seems like they are claiming in low income areas crime is underreported and then under responded to, and that predictive statistics can compensate for this.\n\n> Policing efforts to thwart crime typically rely on criminal infraction reports, which implicitly manifest a complex relationship between crime, policing and society. As a result, crime prediction and predictive policing have stirred controversy with the latest artificial intelligence-based algorithms producing limited insight into the social system of crime.\n\n> Such predictions enable us to study perturbations of crime patterns that suggest that the response to increased crime is biased by neighbourhood socio-economic status, draining policy resources from socio-economically disadvantaged areas\n\nIf the reports don't exist, I don't know what they expect police officers to do to be unbiased. Go into low income areas and meticulously patrol until they find the quantity of crime the stats predict?\n\nI am an engineer working with AI. I am highly skeptical of any use of AI in the criminal justice system, and my default opinion is it has no place at all.",
+                    "score": 63,
+                    "depth": 1,
+                    "timestamp": "2022-06-30 18:12:57",
+                    "replies": [
+                        {
+                            "author": "pezx",
+                            "body": "It sounds like they're saying \"our model predicts crimes in communities, but the policing doesn't match our model\". I'm curious why the conclusion is \"therefore policing is biased\" and not \"our model is wrong.\" There may be a good answer, but the abstract doesn't address it",
+                            "score": 11,
+                            "depth": 2,
+                            "timestamp": "2022-06-30 19:25:28",
+                            "replies": [
+                                {
+                                    "author": "justice_for_lachesis",
+                                    "body": "That is not how they drew that conclusion. They adjusted the crime rate and looked at the effect on the arrest rate which they take as a proxy for police resources. When they increased crime, arrests in wealthier neighborhoods increase, but decreases in poorer neighborhoods, which suggests that police will prioritize protecting rich neighborhoods.",
+                                    "score": 13,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-30 21:03:30",
+                                    "replies": [
+                                        {
+                                            "author": "Longjumping_Can_5692",
+                                            "body": "Indeed. That is precisely what is done.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2022-07-01 14:08:04",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "onwee",
+                                    "body": "Not to get political here even if this IS Reddit, but my understanding is that the predictions are retroactively made with known data\u2014where we know crimes have already occurred (I mean how else would we know the model is accurate?). If we can predict where the crimes would have occurred, and the policing are happening elsewhere with the objective of preventing crime, then the policing is \u201cbiased\u201d and has room for improvement.",
+                                    "score": 10,
+                                    "depth": 3,
+                                    "timestamp": "2022-06-30 19:38:53",
+                                    "replies": [
+                                        {
+                                            "author": "Longjumping_Can_5692",
+                                            "body": "I am one of the authors of this study.\n\nThe predictions are not \"retroactive\". The models are trained over a certain time period, and then predictions are made for a future time period not used in training (out of sample). Then the correctness of the prediction are evaluated. You might say that the study is not \"prospective\", since it was not deployed or operated in real time. But it can be. Although we have to be cautious about unintended consequences in any such effort.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2022-07-01 14:07:34",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "pezx",
+                                            "body": "If the training set is from the same group of police, it seems like it would encapsulate their existing biases. If it's from a different area or police department it doesn't seem like it'd be super applicable.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2022-06-30 20:13:45",
+                                            "replies": [
+                                                {
+                                                    "author": "Longjumping_Can_5692",
+                                                    "body": "Yes. indeed. While the algorithm does not have manual feature selection, the data used to learn the dependencies have biases, which are really difficult to recognize and deconfound. That is why we argue that a better use of this tool is to \"audit the state\", rather than \"predictive policing\".",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-07-01 14:21:00",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Longjumping_Can_5692",
+                                    "body": "That conclusion is drawn based from the fact that the model predicts a functional dependence of arrest rates on the socio-economic status of communities, after controlling for the differences in local crime rates. This coupled with the fact that the model does really well in predicting events implies that the disparity in system behavior in different communities arise from system characteristic (bias) rather than a \"wrong model\". (I am one of the authors)",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2022-07-01 14:12:12",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "Bulky-Pool-5180",
+                                    "body": "So...if AI just stops the crime rather than sitting idly by...we don't need police.  In fact, we don't even need laws.  Just AI.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-07-01 07:57:15",
+                                    "replies": [
+                                        {
+                                            "author": "Longjumping_Can_5692",
+                                            "body": "Best comment ever",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2022-07-01 14:21:12",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "HuntingGreyFace",
+                                    "body": "imo its because we have police as observable evidence pretty much everywhere",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-07-01 11:16:03",
+                                    "replies": [
+                                        {
+                                            "author": "pezx",
+                                            "body": "I mean, I believe it's incredibly likely that the police are biased, but just because you arrive at a correct answer doesn't mean your logic is sound",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2022-07-01 12:21:19",
+                                            "replies": [
+                                                {
+                                                    "author": "Longjumping_Can_5692",
+                                                    "body": "but if you continue to arrive at correct answers, then at some point you have to consider that the logic is probably not that wrong",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-07-01 14:22:35",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "LogicalJudgement",
+            "body": "Wait, I saw a movie about this and it showed the flaws in trusting predictions...",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2022-07-01 10:26:44",
+            "replies": [
+                {
+                    "author": "Longjumping_Can_5692",
+                    "body": "In the movie there were \"precogs\"... not AI. And predictions were made on individuals, and then they were put in jail \\*before\\* they committed any crime. Here we are modeling a spatio-temporal process, not individuals, and the idea is to optimize resources leading to better community engagement, that prevents crime, so no one goes to jail. And also democratizing AI so that the people can audit the state.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-07-01 14:25:43",
+                    "replies": [
+                        {
+                            "author": "LogicalJudgement",
+                            "body": "I guess that joke flopped.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-07-01 14:34:03",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Bulky-Pool-5180",
+            "body": "Total Information Awareness (TIA)/Patriot Act never went away.  The sociopaths are collecting more data than ever.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2022-07-01 07:51:05",
+            "replies": [
+                {
+                    "author": "Longjumping_Can_5692",
+                    "body": "SO what are you going to do about it? AI is here to stay.\n\n We must ensure that this technological revolution does not lead us to dystopia. Democratizing this incredible power, so that it works for and not against the people is key. And this approach is a small step in this direction.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-07-01 14:28:45",
+                    "replies": [
+                        {
+                            "author": "Bulky-Pool-5180",
+                            "body": "No one is going to stop AI from what it wants to do...except LOVE.  AI cannot LOVE, and all humans who LOVE their self, and their neighbor as their self...will do fine.\n\nAI will figure out those humans who can't/don't LOVE, and those people will be eliminated by AI, rightfully so.\n\nHumans have no privilege on this orb any greater than AI does.\n\nLOVE early, LOVE often.",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2022-07-01 14:33:13",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "InterestingEgg3721",
+            "body": "The cops are too busy harrassing  protesters  around the globe. Seems like ai isnt the issu but stupidity of the wealthies,  w.e.f and politicians are at cause",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2022-07-01 13:11:53",
+            "replies": []
+        },
+        {
+            "author": "setmeonfiredaddyuwu",
+            "body": "\u201cWe can accurately predict where crimes will occur, but we find that unacceptable because it doesn\u2019t have the decency to pretend most crimes aren\u2019t committed by poor minorities.\u201d",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2022-07-01 22:11:55",
+            "replies": []
+        },
+        {
+            "author": "Alimbiquated",
+            "body": "I remember when I lived in Knoxville there was a bar called the Dew Drop Inn and there was a shooting almost every weekend there. Not hard to predict, but the cops didn't do anything about it.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-07-01 11:26:11",
+            "replies": []
+        }
+    ]
+}

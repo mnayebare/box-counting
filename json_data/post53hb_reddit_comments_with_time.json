@@ -1,0 +1,752 @@
+{
+    "post_title": "[D] Ethical concerns for ML to predict race & gender",
+    "post_timestamp": "2021-11-04 10:47:07",
+    "last_comment_timestamp": "2022-01-14 09:58:53",
+    "time_difference": "70 days, 23:11:46",
+    "comments": [
+        {
+            "author": "Deleted",
+            "body": "I wouldn't touch this with a 10 meter pole. The consequences of abuse or simply getting it wrong are going to be huge. The benefits are negligible. To me it's an obvious decision.\n\nThis is 100% going to be used to weed out undesirables in an automatic manner.",
+            "score": 78,
+            "depth": 0,
+            "timestamp": "2021-11-04 12:00:30",
+            "replies": [
+                {
+                    "author": "chasing_mind",
+                    "body": "This. \n\nYou\u2019re going to build something with high potential for abuse and leave it up to your customers to use it properly? Definitely right to be worried. Surely there are better ways to approach the use case without the specific tool you\u2019ve described.",
+                    "score": 25,
+                    "depth": 1,
+                    "timestamp": "2021-11-04 19:49:32",
+                    "replies": []
+                },
+                {
+                    "author": "Appropriate_Ant_4629",
+                    "body": "I think it depends how the results are presented to the user.\n\n* If your UI says \"This person is female\" based purely on a ML model - it will be false a significant percentage of the time - and that's almost certainly bad.\n* If your UI says [\"Microsoft's Face API claims this face is most likely female\"](https://blogs.microsoft.com/ai/gender-skin-tone-facial-recognition-improvement/) - it's a true statement - making it quite a bit less bad.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2021-11-04 20:12:55",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Hydreigon92",
+            "body": "Fairness researcher here. Some critiques:\n\n* Using image classifiers to impute gender [systematically misgenders trans individuals at a high error rate](https://www.morgan-klaus.com/pdfs/pubs/Scheuerman-CSCW2019-HowComputersSeeGender.pdf) (see table 3 on page 14 of this paper).\n* Similar issues arise with trying to impute race from images. Also, keep in mind racial taxonomies differ by country. Someone of Egyptian ancestry may be considered \"White\" in the United States, but *Black, Africian, Middle Eastern* (BAME) in the UK.\n* Since you're not using self-reported data, you also have no way to know if your race/gender labels are accurate.\n* You currently have no framework for allowing individuals in the dataset to correct their labels if their imputed race/gender are found to be incorrect.\n\nEDIT: For resources on how to properly design these types of systems, I recommend reading [Measurement and Fairness](https://arxiv.org/abs/1912.05511). The paper covers the concept of *construct validity* from the quantitative social sciences, and computer scientists can use this framework to evaluate quantitative measures of race, gender, and other social constructs.",
+            "score": 66,
+            "depth": 0,
+            "timestamp": "2021-11-04 13:43:55",
+            "replies": [
+                {
+                    "author": "SnooChocolates7170",
+                    "body": "Great response, precisely this. \n\nAnd I add more,\n\nThe bigest issue is not using self-reported labels. This possibly means that the dataset is carrying the bias from whom assigned the labels. And this means that the trained model would be biased in similar manner. This is super dangerous stuff especially if you are applying (many quotes)\"\"\"\"\"positive discrimination\"\"\"\"\"(many quotes). As a mislabeled can result on a actual automatic discrimination.\n\nCompound that with the taxonomic diversity that are related to race based on cultural background and you are setting yourself to increase bias and discrimination by doing so.",
+                    "score": 19,
+                    "depth": 1,
+                    "timestamp": "2021-11-04 15:03:28",
+                    "replies": [
+                        {
+                            "author": "ComplicatedHilberts",
+                            "body": "Imagine a system like this that is 100% accurate. Could it still be safely deployed without harming privacy or furthering discrimination?\n\nIf the answer is no, the accuracy itself (all ML systems have errors, but are still faster or more accurate than humans) is of lesser concern, and may act as a red herring.\n\nIf such a system classifies a male-to-female person as a female (a legit category of focus for D&I), would that be problematic?",
+                            "score": 7,
+                            "depth": 2,
+                            "timestamp": "2021-11-04 15:16:37",
+                            "replies": [
+                                {
+                                    "author": "SnooChocolates7170",
+                                    "body": "Humm good point, suppose that there is a system that is sooo good that it actually is 100% accurate with the labels *self-assigned*, than it could work.\n\nBut, unless you provide as features the electrical pattern of the brain of the candidates, I don't expect it to get accurate to the self assigned gender or race.\n\nThe problem is exactly that: different cultures and different people diverge in what is feminine, masculine, hetero, white, etc...\n\nAnd you only need 1 mislabel to set yourself to some potential jail time...",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2021-11-05 11:15:09",
+                                    "replies": [
+                                        {
+                                            "author": "ComplicatedHilberts",
+                                            "body": "To me, such a system with 100% accuracy can not be safely deployed, and this exposes the deeper underlying problems I have with such a system:\n\n- If someone is inferring my race from my Linkedin profile picture, then I feel my privacy is violated (I did not give permission to do that when uploading my picture, so you lack my consent).\n\n- If someone is treating me differently, with prejudice, because I am/am not a member of some group, and so I land on another pile when applying to a job, then my dignity is taken away. (My autonomy as an individual, with individual merit, and my subjective choice not to join a group I have access to, due to my skin or reproductive organs, is not respected)\n\n- If someone is laundering political preference through an automated system, but still has a final decision on setting the decision threshold and process trees, this will only give the appearance of impartiality, and obfuscate the ugly discrimination that was underlying well-intentioned activism.\n\n- If I apply to a job where people use such a ML system, then I am at a disadvantage. There is (for all but stellar candidates) a power-imbalance. When there is such a power-imbalance, the rights and harms and impacts on the lesser empowered group should receive precedence over the profits of large companies. I don't see that consideration here, in fact, I think it would greaten the divide/inequality.\n\nGetting into legal problems (jail time) is another area for me. Ethical considerations are related, but not the same, as jail time. Behavior can be legal (inferring race from Facebook Likes), while still unethical. And behavior can be ethical (blowing the whistle), while still against the law.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2021-11-05 11:49:28",
+                                            "replies": [
+                                                {
+                                                    "author": "SnooChocolates7170",
+                                                    "body": "Yes, not mentioning any technical limitations and focusing only on the ethics I am 100% in sync with you.\n\nAnd I would add one more thing: if the company I currently work came to me informing they would be deploying such system, i would quit on the spot.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-11-06 09:24:12",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Appropriate_Ant_4629",
+                                    "body": "> Imagine a system like this that is 100% accurate\n\nHow would it classify: \n\n* [XXY genetics](https://www.mayoclinic.org/diseases-conditions/klinefelter-syndrome/symptoms-causes/syc-20353949)?\n* [genetically male but anatomically female](https://www.ancient-origins.net/news-history-archaeology/person-genetically-male-physically-female-lived-london-nearly-020638) people?\n* people with hormone imbalances?\n\nUnless the classifier has a broad range of \"not strictly male or female\" it can't be 100%.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2021-11-04 20:22:18",
+                                    "replies": [
+                                        {
+                                            "author": "comradeswitch",
+                                            "body": "That's missing the point entirely. The important part is \"if you had an oracle with perfect knowledge, can the results be safely deployed without privacy issues or furthering discrimination?\" Accuracy is completely irrelevant because this problem has huge ethical issues that are inherent to the problem and not borne of low accuracy.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2021-11-05 16:55:13",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "farthing4yrthoughts",
+                                            "body": "It would classify XXY genetics as male with a disorder of development like everyone else which is the same answer for the first 2 points.\n\nThe 3rd is a non sequitur in this context.\n\nThere is no such thing as your final point.",
+                                            "score": 5,
+                                            "depth": 4,
+                                            "timestamp": "2021-11-04 23:07:19",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "ComplicatedHilberts",
+                                            "body": "Can call that error inherent to the problem. No conceivable classifier can do better than random there.\n\nOn the rest it does 100%.\n\nWould you say a private marketing analytics tool for a mailing list, which is 100% correct deducing binary gender from email name, but for these inherent cases, that it would be unfair/unethical to implement that?\n\nThen accuracy does not even matter at all. We can't even have fair ML. All ML is inherently a wrong thing to focus on and help build. We'd should fix society first. We should make algorithms understand delicate identity issues (even if, like the mailing list analytics, these people don't even notice they are misgendered) and fix the hard problem of common sense and social interaction. \n\nBut if that is fairness research, then that sounds more like futurism and politics, than something that ML system designers can use to implement robust and fair systems.",
+                                            "score": -1,
+                                            "depth": 4,
+                                            "timestamp": "2021-11-04 20:31:55",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "ComplicatedHilberts",
+                                    "body": "Another, more controversial, thought experiment, where errors do play a role.\n\nYou have a ML system for medical diagnostics with some technical constraints, one of which is that you can only run one model in production.\n\nThe system is for detecting a disease which targets skins with less pigmentation more, so therefore more training data is available for these groups.\n\nThe current model in production is 78% accurate for everyone, and 76% accurate for high-pigmentation group.\n\nThe new model you developed is 81% accurate for everyone, and 75.5% accurate for high-pigmentation group.\n\nCan you put the new model in production, acting rationally, without prejudice, without furthering discrimination? \n\nSome fairness researchers and policy makers say you can't put the new model in production. Some go even so far as to call the current model unfair, and it should never have been deployed in the first place, unless developed to give equal accuracy regardless of pigmentation. Some say you can't use such models at all, at the cost of lives, not unless you first address the problem of white rich people with upper-class diseases generating more training data than people visiting public hospitals.\n\nI think the answer to this thought experiment reveals where you stand on these issues, and if you value certain group identities (Black skin) over humanism (everyone is part of the same group and deserves improved health, regardless of skin color).\n\nAnd do you want to be fully transparent with \"users\" (doctors/patients) of these systems. Tell them they have less chance of a correct diagnose? That would surely lead to the unwanted feeling of being discriminated against.\n\nIt is a thorny issue.",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2021-11-04 15:33:51",
+                                    "replies": [
+                                        {
+                                            "author": "ComplicatedHilberts",
+                                            "body": "If fairness researchers demanded that algorithms trained on a names corpora show the delicate understanding of the identity issues of 0.3% of the population, and demonstrate similar accuracy for all possible subsets of the training data, then no conceivable ML system could be fairly deployed.",
+                                            "score": 7,
+                                            "depth": 4,
+                                            "timestamp": "2021-11-04 16:16:34",
+                                            "replies": [
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "[deleted]",
+                                                    "score": -3,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-11-04 18:38:53",
+                                                    "replies": [
+                                                        {
+                                                            "author": "ComplicatedHilberts",
+                                                            "body": "It is a worthwhile and diverse position. To me, it looks like anti-ML puritanism. The sort that removes 2000 questionable images from ImageNet, breaking benchmark compatibility, so the major stakeholders (those using deep CNNs to beat benchmarks?) are not confronted with images depicting a subcategory of rape or street walker. So maybe in the future these researchers can pat themselves on the back, when a large Transformer Vision model trained on the canonical ImageNet\\_V1.1\\_debiased\\_final\\_version\\_1\\_(3).gz is blind to street walkers. I get it.",
+                                                            "score": 4,
+                                                            "depth": 6,
+                                                            "timestamp": "2021-11-05 17:22:56",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "rando_techo",
+                    "body": "The paper that you cited for classifiers imputing gender sourced their data from **\"Using a manually constructed image dataset of 2450 faces with diverse genders from Instagram\"**\n\nInstagram. Self-reported gender. From Instagram. \n\nIf anyone can make up whichever gender they choose regardless of their biology then a computer will not be able to identify them. How can you cite this as a fairness issue when it is clearly logically impossible to achieve within the problem's constraints?\n\nTo me, this is a prime example of idealogical zealotry over-taking reason. Isn't demanding that an impossible problem be solved the very opposite of fairness?",
+                    "score": 11,
+                    "depth": 1,
+                    "timestamp": "2021-11-04 19:41:04",
+                    "replies": []
+                },
+                {
+                    "author": "CryptographerMany608",
+                    "body": "Thank you for the specific points of critique and resources.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2021-11-04 19:23:08",
+                    "replies": []
+                },
+                {
+                    "author": "farthing4yrthoughts",
+                    "body": "There is absolutely no method by which machine learning could identify a person's self identified status based on a photo. You might as well have it try and weed out the atheists from the religious.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2021-11-04 22:58:47",
+                    "replies": [
+                        {
+                            "author": "ComplicatedHilberts",
+                            "body": "This is akin to the \"digital phrenology\" defense. \n\nInstead of focusing on the ethical concerns: *we show it is possible to predict self-identified sexuality from just profile photos with off-the-shelve CV tools, way better than random guessing. Hence, we ask, should profile photos be reclassified as PII information? Do gay people in repressive regimes have something to fear from outing themselves when they upload a profile picture?*\n\nInstead you attack the ML model as deeply, non-fixably, flawed with regards to the wide range of sexuality spectrum and/or impossible to do better than random guessing, its creators maliciously masquerading as digital tea-leaf readers. Completely side-stepping the main issue, without even an empirically-verifiable claim as to the accuracy/possibility of the model. Impossible then becomes difficult, and difficult becomes an argument against creating such models.\n\nOne method by which ML could identify a person's self identified status based on a photo would be if they held a sign with their self-identified status written on it. I could probably weed out the atheists from the religious, \\*just\\* from a cropped photo of their hair style. Then find legit signal in there for downstream tasks, such as scoring creditworthiness. You might as well have a try too!",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2021-11-05 14:48:00",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "fasttosmile",
+                    "body": "Your concerns would be reasonable if this system were to be used to decide what label would be put into a persons passport (hypothetically).\n\nBut that's not what it's being used for. Instead it's being used for gathering high-level statistics, for that it doesn't matter if the result is wrong for 2% of the population. At least that's how it appears to me. Happy to be corrected.",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2021-11-04 16:56:24",
+                    "replies": []
+                },
+                {
+                    "author": "lannelin",
+                    "body": "Small nitpick, but in case it's relevant to your future work in fairness, BAME in the UK refers to Black, Asian and Minority Ethnic. E.g., in [UK gov report](https://www.gov.uk/government/publications/social-care-sector-covid-19-support-taskforce-report-on-first-phase-of-covid-19-pandemic/bame-communities-advisory-group-report-and-recommendations)",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2021-11-05 07:55:58",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "retrocrtgaming",
+            "body": "After reading several of the recent bias papers (in all kinds of ML domains) I would not touch this, esp. for a product. Trouble is guaranteed. \n\nYou mentioned that you use public datasets, I bet you find papers reporting their biases for almost all of them (e.g. celebA).",
+            "score": 42,
+            "depth": 0,
+            "timestamp": "2021-11-04 12:42:08",
+            "replies": [
+                {
+                    "author": "CryptographerMany608",
+                    "body": "This should make anyone pause about allowing open source AI/ML software or data to be used commercially without regulation.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2021-11-05 10:14:56",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "ofiuco",
+            "body": "Can I ask why a machine learning model is needed for something that could be accomplished with a survey (which ha s probably even already been done and published on some other website somewhere)?",
+            "score": 11,
+            "depth": 0,
+            "timestamp": "2021-11-04 17:35:00",
+            "replies": [
+                {
+                    "author": "SnooChocolates7170",
+                    "body": "To do it where you are not authorized to collect this info",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2021-11-06 10:08:12",
+                    "replies": [
+                        {
+                            "author": "ofiuco",
+                            "body": "If you aren't authorized to do it... then maybe what's needed is to seriously consider why you aren't authorized to collect that information and how you can address that issue, not make a machine learning model that will freak people out by seemingly have collected data in an unauthorized way, or produced data that is wrong in a way that is insulting and weird.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2021-11-07 11:09:55",
+                            "replies": [
+                                {
+                                    "author": "SnooChocolates7170",
+                                    "body": "This is the internet, sarcasm...",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2021-11-08 07:01:49",
+                                    "replies": [
+                                        {
+                                            "author": "ofiuco",
+                                            "body": "Sorry, my brain is poisoned by the number of people I've met who would say this seriously...",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2021-11-08 08:28:02",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "McUluld",
+                    "body": "This whole thread feels weird",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2021-11-04 18:37:04",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "HateRedditCantQuitit",
+            "body": "/u/Hydreigon92 has a great answer. On top of that, if for some reason I didn't immediately run away from a project like this, I certainly wouldn't want to try to infer it from names.\n\nAll around, it just seems like a bad use case for ML. Why automate and not just ask?",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2021-11-04 15:48:30",
+            "replies": [
+                {
+                    "author": "CryptographerMany608",
+                    "body": "Since the product (could) be available to any of our customers to enrich their datasets, the product is intended to be able to provide race/gender insights on any subset of people/companies (to some degree). Not something that would be feasible other than a Facebook-level platform relying on self-reported data at that scale.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2021-11-04 20:39:51",
+                    "replies": [
+                        {
+                            "author": "HateRedditCantQuitit",
+                            "body": "I get that. Which is why i\u2019d run away from a project like that. It seems like something impossible to do well in the manner of product you want to offer, if I\u2019m understanding the product correctly.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2021-11-05 00:23:20",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "[removed]",
+            "score": 15,
+            "depth": 0,
+            "timestamp": "2021-11-04 16:31:14",
+            "replies": [
+                {
+                    "author": "CryptographerMany608",
+                    "body": "When there is demand for something in the market, businesses try to meet it and profit.\n\nEDIT: I\u2019m describing a reality of why someone would do something like this, not necessarily how it should be.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2021-11-04 20:43:08",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "ComplicatedHilberts",
+            "body": "\\> make decisions to improve diversity\n\nI think it depends on if you are comfortable with this. If you autistically reduce these decisions, these are decisions based on race and gender, not merit (AKA neo-racism). You are also furthering a Disney World view of diversity and inclusion, where only the visible diversity traits are optimized for (flamboyantly gay, clearly black skin, feminists) at the cost of others (learning disabilities, low socio-economic class, Asian minorities).\n\nIf you'd want to include these other diversity traits, you'd need applicants to self-report. If these self-report, then you can also ask for race, gender, sexual identity, and not use ML to classify people without their input (these may look female, but not identify as such). Investors should look at solid D&I analytics, metrics, and reports, not run a black-o-meter on their employees' Linkedin profiles.\n\nIn my view, the diversity angle here is disingenuous. You are automating human bias (with good intentions, but still, you really are automating bias when you infer race from the name on a CV, just like the HR manager did when they added a 1 to the Diversity column, after a casual glance.\n\nFrom an ethical viewpoint: If you are not part of the decision process of the model, then you are basically designing a gun or missile guidance system, and then selling it for someone else to use. Accurate guns and missile guidance systems help save lives and protect lives. But these can also be used naively or carelessly or even evilly. So you have some responsibility there, to explain all the pertinent capabilities and risks associated with your system. You would not sell a gun to someone who has never practiced gun safety. You would not sell a missile system to an authoritarian state. So deliver a detailed manual, explaining some mistakes your system makes and do not hype up capabilities.\n\nFor guidelines for ethical concerns, you can review the ACM code of ethics for computer professionals. It covers a lot of ground (such as being honest about system capabilities and - mistakes) and was written by ethics professionals.\n\nhttps://www.acm.org/code-of-ethics",
+            "score": 21,
+            "depth": 0,
+            "timestamp": "2021-11-04 13:15:09",
+            "replies": [
+                {
+                    "author": "farthing4yrthoughts",
+                    "body": "You can identify feminists by sight?",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2021-11-04 23:09:30",
+                    "replies": [
+                        {
+                            "author": "ComplicatedHilberts",
+                            "body": "Yes, but rely more on smell.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2021-11-05 11:09:23",
+                            "replies": [
+                                {
+                                    "author": "ComplicatedHilberts",
+                                    "body": "I am girl btw. Bet you did not see that one coming!",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2021-11-05 16:32:01",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "CryptographerMany608",
+                    "body": ">\tYou are automating human bias (with good intentions, but still, you really are automating bias when you infer race from the name on a CV, just like the HR manager did when they added a 1 to the Diversity column, after a casual glance.\n\nThis is a good analogy, but it also partly describes the argument I\u2019ve heard others make: if the ML can be \u201cmore accurate\u201d than a (potentially) ignorant/prejudiced/racist human, is it a justifiable use of technology?",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2021-11-05 10:22:36",
+                    "replies": [
+                        {
+                            "author": "ComplicatedHilberts",
+                            "body": "It is very iffy. \n\nHeard about that recidivism model, which would lock up innocent black men more than innocent white men? It was also less accurate on guilty black men: letting more guilty black men go free than guilty white men. But the errors are framed to make a point: ML for recidivism is racist. I'd hazard a guess that it does not even matter if the model is more accurate than some backwater judges.\n\nIn this specific case, I would not think it is justifiable. The initial human behavior is wrong (subjectively to me). You may just have made a computerized \"more accurate\" racist uncle.\n\nI do agree with that argument in other instances. ML can be way more accurate and consistent than a human ever can, and this is a good thing, not a bad thing. Unless you are automating a process which requires a human touch (such as empathy for the hard-working family father, who would need to drop support if predicted to recidive.).",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2021-11-05 11:04:45",
+                            "replies": [
+                                {
+                                    "author": "frizface",
+                                    "body": "The ML model was more lenient than human judges (gave more people bail), and also more accurate about who to give it to. It's not recapitulating a racist uncle, or just beating the awful judges. It's more accurate and more fair than the current system, even if by some definitions it's racially biased.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-01-14 09:58:53",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "comradeswitch",
+            "body": "Nope nope nope.\n\nThere's plenty of important research to be done on this topic, and it's a thorny issue. We need to understand the problem to have a chance at mitigating it. But a commercial product is not the place where that can happen. \n\nYou understand that you are not making any decisions based on the model, but you are providing it to customers. Your last bullet point is a bit evasive and it appears that you are uncomfortable with it but possibly trying to redirect responsibility. You should be uncomfortable. Whether or not you are the actor making decisions with the model, you will be developing a tool that will give customers information that they otherwise couldn't get at scale, and no matter how well-intentioned a customer we know for a fact that\n\n- people have cognitive biases that fall in line with systemic bias\n- people will be affected by those biases whether or not they're aware of them\n- people use outcomes that align with their biased beliefs to strengthen them much more than they use outcomes that contradict biased beliefs to weaken them\n\nCoupled with customers making decisions that are important enough to buy this product for, you know that providing the product will give people with the power to make potentially very impactful decisions about others lives, that the decisions they make will be influenced by biases, and that regardless of accuracy the product will tend to entrench their biases by giving them something they'll take as justification. \n\nHow would you feel about your model being used to decide who gets a job interview or who gets an apartment? If it was used to target minorities for violence? Who gets prison time, who gets community service? Even if you don't sell or intend to sell to people doing that sort of thing, once you build this model the cat is out of the bag. You don't have a choice in how someone uses it. Legal liability doesn't matter at this point- you have to decide whether you could sleep at night if those things happened and were enabled by your work. The only way you can surely avoid that is never touching this project.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2021-11-05 16:49:42",
+            "replies": []
+        },
+        {
+            "author": "frizface",
+            "body": "Lmao, you want to make sure you can predict race and gender in an ethical way so that clients can discriminate against white dudes?",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2021-11-04 19:58:59",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "I do data science for government and one of the models I implement for clients originally used race as part of its market segmentation scheme--meaning that the model was configured to predict the racial composition of different areas within a jurisdiction, though that was never actually the main output variable of interest.  I felt very uncomfortable with this and generally told new clients to stick to other variables such as household income and size instead when designing new implementations of the system.  However, some clients overrode me and insisted on including it--and I gave in because the specific people advocating for that approach were *not themselves white*.  Once we started supporting the agencies with policy analysis it became clearer why it was included in the first place; if you try to understand phenomena like gentrification from a purely economic standpoint you won't produce a model that performs well in terms of accuracy let alone usefulness, because segregation has been and remains a real driving factor in the behavior of real estate markets. \n\nThat said, I started wondering whether the race outputs could be used to make more informed assessments of whether certain projects disproportionately impacted minority groups or disproportionately benefited whites, an analysis that is required in the US in order for local governments to receive federal funding. What I found is that agencies only feel comfortable using ground truth data (i.e. Census estimates) for this process. So, how the data are being used, for what kind of decisions, matters a lot.  If it is directly affecting allocation of resources, you don't want to be using potentially faulty predictions.\n\nIt should be said that in this particular case the models in question were *not* neural networks, but econometric models which have somewhat more transparency about what the estimated parameters mean (and do to the predictions).  I don't think anyone would have felt okay including race as a variable if they weren't as easily able to audit the models.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2021-11-05 10:53:45",
+            "replies": [
+                {
+                    "author": "SnooChocolates7170",
+                    "body": "Good point, not being aware or study the econometrics of gender and ethnic divergences is not helpful. But deploying a model, that say: predicts interest rates or fraud rates is ethically wrong. \n\nYou can argue that using gender or race for recommenders and advertising might not be a issue immediately, as in fact they improve the model accuracy. The problem is that most of those cases are not actually the protected variable that interferes in the accuracy of the prediction, but a group of others variables (income, geographical location, cultural background, etc) and you can get better performance of your model by replacing the protected variable by one of these (if you have access to it).\n\nSo, knowing that it is not the protected variable that is actually the one that directly contributing to the accuracy it is possible that it is the moral decision to take is to not use them for any of those use cases.\n\nWhat I mean by that is supposed that in your dataset the average income of black people is smaller than white people. In this case maybe your model is picking up on the income hint and replacing by it would be better. Even if the final performance is the same, as in this case you might not have the moral issue of mispredict items for high income blacks or low income whites.\n\nSo my approach is simple: if the protected variable improves performance, I look for other variables that could be different between the datasets and use those. \n\n(FTR: I never had access to gender or race data in my dataset, but the problem is the same for countries, and by removing and correcting we improved one of our models to generate a extra \u20ac 15M a month in revenue)",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2021-11-06 09:47:06",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "No-Economy-5418",
+            "body": "As well as being an ethical nightmare I'm pretty sure this will soon be illegal. At least in the EU. It would probably come under unacceptable risk, but if not it'll be high-risk and require extremely strict regulation, including full transparency about how race & gender have factored into any decisions. Have a look here https://ec.europa.eu/commission/presscorner/detail/en/QANDA_21_1683\n\nI don't know about US but I would suspect they'd have a similar stance.",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2021-11-04 16:31:52",
+            "replies": []
+        },
+        {
+            "author": "malenkydroog",
+            "body": "If it is just being used for internal tracking and external (e.g., DoL) reporting, that may be one thing. \n\nBut if it is used in any way to make actual personnel decisions (or more likely in this case, to make policies that guide those decisions), your company needs to make sure that it could defend them under the [Uniform Guidelines](https://www.govinfo.gov/content/pkg/CFR-2011-title29-vol4/xml/CFR-2011-title29-vol4-part1607.xml), if there was ever a lawsuit related to e.g., race/ethnicity, gender, etc. That means stuff like avoiding disparate impact, adhering to certain best practices with regard to validity studies, etc.\n\nI'd assume your companies lawyers should already be aware of requirements under the Uniform Guidelines, but in my experience a lot of the people I meet that do ML and want to improve personnel procedures aren't familiar with those requirements. (Certainly not in the same way that, for example, an industrial/organizational psychologist might be.)",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2021-11-05 10:44:57",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2021-11-04 16:24:08",
+            "replies": [
+                {
+                    "author": "ComplicatedHilberts",
+                    "body": "Wait, you want to generate a **fair system**,\n\nusing machine learning?\n\nYou do understand that the diversity and ethics chairs of 2017 NeurIPS accused the current chairs of privilege, bias, and racism. If correct, then ML at the highest levels is guilty of unethical unfair behavior.\n\nBut even if not correct, you have every right to be concerned. Because now there is a way where you can get falsely accused of racism or abusing your privilege, by the highest authorities in fair and ethical ML. There is no way to work on fair ML without risking your career, or learning the ropes from racists.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2021-11-05 21:08:07",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "It will get into trouble.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2021-11-04 12:06:38",
+            "replies": []
+        },
+        {
+            "author": "rando_techo",
+            "body": "You should only have to be aware of transparency and rigour but we all know that this will be used to further the goals of the identitarians by allowing them rate people based on perceived grievance metrics.\n\nRun some scenarios in your head and ask yourself how you're going to answer questions shot at your boss by the purple-haired twitter mob and their tacit supporters in the media and academia. Questions such as:\n\n1) \"My image classifier has \"misgendered\" me as a man but I'm a woman!\". But when you look at the picture it is clearly of a masculine man with all of the facial features of a man and he has been living as a man for forty years but just yesterday decided that he was no longer a man. Tomorrow he might be a unicorn. How is your ML model going to handle that?\n\n2) \"I'm black and your racist software identified me as white!\". But when you look at the picture you see that he's almost as white as your ginger-haired colleague but his great-great-great-great-grandmother was black.\n\nThe fact that most identity mechanics are founded in feelings rather than logic means that a computer will not handle this well.\n\nThe reactionary left makes a nice packet off of the grievance economy and the language in most of the responses in this thread should give you enough pause for thought to make you reconsider even considering this.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2021-11-04 19:32:55",
+            "replies": []
+        },
+        {
+            "author": "ElongatedMuskrat122",
+            "body": "No matter how south this goes, Facebook will do something 10x worse within a week and more every one would forget about what your ML algorithm does",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2021-11-04 15:04:02",
+            "replies": []
+        },
+        {
+            "author": "Cheddarific",
+            "body": "I recently read the book \u201cHow to be an Anti-Racist\u201d. The author makes a compelling case that race is largely a human social construct and not a biological classification. He would prefer if races did not exist, and we\u2019re not defined. However, in a world where races, genders, and other classifications of people find themselves unequally treated, these classifications serve a purpose: to identify people in need of special help to correct past and present injustices. \n\nApplying his thoughts, it would seem that this software could be beneficial if used to reverse some of the artifacts of racism, such as through affirmative action or similar programs. \n\nAs mentioned in other comments, this software is the ability to be abused. I would suggest that the software be developed focused intently on its benefits, and that it\u2019s use be carefully monitored. If the software\u2019s applications are determined to do more harm than good, retire it.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2021-11-05 00:33:37",
+            "replies": [
+                {
+                    "author": "SnooChocolates7170",
+                    "body": "I would consider affirmative action a form of abusing of this data. This is immoral, unethical and wrong in so many levels.\n\nI totally agree with you that having no race classifications is the ideal world: where they don't offer any significance as they should.\n\nThe problem with affirmative action is: you get a random person from a 'privileged group' and penalize this person in some way in favor of the 'minority'. The problem is that you are generalizing. Maybe a group of people you are fairly removing resources, but for others in the 'privileged group' it is unfair.\n\nThink about not hiring someone who is white, ant-racist activist that could help improve the company diversity by doing a fair management but you opted to hire someone else instead because of this person skin color. You are not doing yourself a favor by doing affirmative actions.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2021-11-06 10:04:52",
+                    "replies": [
+                        {
+                            "author": "Cheddarific",
+                            "body": "You just cited a single example and then made the logical jump that affirmative action is bad. We can\u2019t be citing a single example and drawing conclusions. Affirmative action affects millions of people. What is the net benefit/loss? I think in sum, it has significant ability to do go, even though there will surely be cases where it is abused. As a white male American, I know that it gives others an advantage against me, but I want them to have that advantage since in every other way, I have been born into a world that gives me an easier time in 2021. The day when poverty, COVID deaths, infant mortality, etc. are not longer racially unequal issues is the day that we should stop affirmative action.",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2021-11-07 01:17:05",
+                            "replies": [
+                                {
+                                    "author": "SnooChocolates7170",
+                                    "body": "By your comment you didn't undesrtand the argument. \n\nBut it is ok, no one is preventing you from abdicating of some rights (say quit your job to open a position fo a black people, or give up your higher education in favour of someone with color). What I am against is you force that in someone else... and yes, every time you impose a affirmative action, some individuals will be benefiting and others penalized by the very nature of the idea. And unfortunately, some will be unjustly penalized, just because of skin color.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2021-11-07 02:57:03",
+                                    "replies": [
+                                        {
+                                            "author": "Cheddarific",
+                                            "body": "I completely understand your perspective. I argued against affirmative action for two decades. I get that it was reverse discrimination and didn\u2019t like the idea of (as a white male) losing opportunities that I would otherwise have simply because of my identity. \n\nAnd then I read \u201cHow to Be an Anti-Racist\u201d and it completely change my perspective. The book clearly demonstrated to me that the status quo supports racism. If we continue to have unprivileged kids compete with privileged kids directly at the same level, then of course the privileged kids who do ACT prep courses, whose parent seen to college, whose parents can pay for college, etc. will be more likely to succeed and will then pass down their generational wealth and knowledge to the next generation. This perpetuates hundreds of years of racism. To argue against me is to say that people of color are more likely to be in jail, on welfare, single mothers, below the poverty line, etc. because they are categorically worse at life. I don\u2019t believe that. I think they are fighting against hundreds of systematic racism via culture, belief, policy, law, and even religious doctrine that intentionally placed them below \u201cwhites\u201d in terms of careers, education, finances, and even socially. \n\nPlease tell me why the US has only had 11 black senators in 232 years, if it\u2019s not due to systematic generational poverty and oppression. And please tell me how you think we can fix that without affirmative action or similar programs.",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2021-11-08 12:02:27",
+                                            "replies": [
+                                                {
+                                                    "author": "SnooChocolates7170",
+                                                    "body": "I don't know almost anything about US politics, except that you over there are fighting very intensively about this given the extreme polarization.\n\nI would like to share a anecdotal argument that come from my country of birth (Brazil). Even if I am refering to a specific case, please be aware that it hapens at thousands every year with lots of people.\n\nA white guy, who born in relative poverty, had the chance to study in a good public school and exceeded its expectations. He was a great guy, and if you know Brazil, racism over there is very prevalent, and a big problem to society, but is a bit different from US. As over there you have a much wider mixtures of traits and usually people with very different cultural background interact with each other more frequently. I am very white, and I hear from some US colleagues that there are places is US that I might be obviously spotted as not being from there, at least that region of the city. This hardly ever hapen in Brazil.\n\nGoing back to the case at hand, this person wanted to join one of the best colleges in the country (with different from US they are public). The process to join is a test and people join based on their score. The guy got ranked 12 overall, but there was 22 places given 11 where reserved for people of color.\n\nThis hapened 10 years ago approximately. But it was such a big hit on the professional and personal life of the white guy that he could not manage. And today he became a different person, he's now a manager and when he told me this story it was to justify into why his company does not hire blacks: it is becaus they are not as competent and got their degrees for free by denying acces to other people.\n\nIt might be that in some cases this affirmative action is helping Brazil get over its racism problems, but I believe that at some level it is just widening even more the problem... \n\nI hope you think over there about those consequences before  implementing a policy. \n\nAnyway, appreciate your discussion, but I believe we diverged quite a bit from the topic. Feel free to continue this discussion by reaching me out directly.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-11-10 02:16:10",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "ComplicatedHilberts",
+                                    "body": "Humans have universal rights. One of these is to be judged and treated as an individual, without regard to their race or gender. To treat people with respect and dignity.\n\n\\> Instrumentalization or objectification: This aspect refers to treating a person as an instrument or as means to achieve some other goal. This approach builds on Immanuel Kant's moral imperative stipulating that we should treat people as ends or goals in themselves, namely as having ultimate moral worth which should not be instrumentalized.\n\nIf you hire/not hire someone with the goal of achieving racial parity, you objectified them, judged them on race, infringed on their inalienable rights.\n\nSo therefore affirmative action is inhumane.\n\nYou invoke pragmatism: does it work, is it valuable? We can debate about that, but probably won't agree (is torture justified to get life-saving information?). We already blame people for the negative side-effect of thinking someone is a \"diversity hire\", not the policy makers themselves. That's hard to measure.\n\nSo let's look at the end goal of affirmative action. What if it works really well and this is valuable? So let's delete or suspend a human right in favor of a new human right. The right of not living in a society which has racial inequality? I do not think there exists such a right! If I move to a small African town, I would live in a tribe with racial inequality. Hopefully that won't be a problem for them or for me! Hopefully this village does not need to enact actions to restore racial equality.\n\nSo, to me, you are advocating to suspend an inalienable right (about discrimination and racism!), so we can have something that is not even a right in the first place. I will not have that! Institutional racism (the effects of inequality) is not as bad as it used to be, and you'd be hard pressed to find examples of institutionalized racism (outside affirmative actions at institutions such as universities).",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2021-11-08 11:34:23",
+                                    "replies": [
+                                        {
+                                            "author": "Cheddarific",
+                                            "body": "In a world of equality, what you say makes sense. But we live in a world where groups of people have been classified, instrumentalized, and objectified for centuries. Black Americans make up 12% of the population but only 11 senators have been black in 232 years, and black CEOs represent less than 1% of Fortune 500 companies. In the US, black households have 7 times less wealth (average; 8 times less by median). \n\nHow do *you* explain these differences? I say that white people in America have systematically suppressed black people from the day that they were first brought to America (in chains). \n\nWhat does Kant say about reversing this state of affairs? I recommend a change of policies and laws in ways that lift up suppressed groups, especially in education. In a world with limited resources, will elevating oppressed groups lead to challenges possibly even \u201cunfair\u201d things happening to members of the privileged group(s)? Possibly. But there\u2019s a huge difference between 100 people getting an \u201cunfair\u201d bump in their Harvard acceptance and 100 people being enslaved or 100 people\u2019s descendants continuing generational poverty. \n\nMeanwhile I found the following from Kant: (Source: Immanuel Kant, \u201cVon der verschiedenen Rassen der Menschen\u201d (1777))\n\n> \u201c[Regarding Africans] However, because he is so amply supplied by his motherland, he is also lazy, indolent, and dawdling.\u201d\n\n> \u201c...the natural disposition of the Native American [...] reveals a half-extinguished life power.\u201d",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2021-11-08 13:43:32",
+                                            "replies": [
+                                                {
+                                                    "author": "ComplicatedHilberts",
+                                                    "body": "If I argument not to torture the dictator, I do not simultaneously defend their actions. But I would certainly try if that means human rights are being upheld.\n\nYou seem to feel sincerely guilty. Ashamed of past wrongs in America (as an insider it seems very hard to see that American culture is severely sick right now, and driven by emotionality, not reason). Masochistic as to yourself and your similarly-skinned peers, deserving of some unfair competition, as punishment and castigation for other evils and the evils of your forefathers.\n\nYou shy so far away from \"white pride\" (racial pride's acceptance relying on skin color) into \"white cuckoldry\". Like minorities today are the victims of technological and cultural advances of the Western world. Like a black woman with a Stanford degree has less opportunity at a job in AI than a white male (with or without affirmative action). \n\nYou think the number of black CEO's has its basis and foundation in racism? A result of a white-run wrong? That investors shy away from opportunities given such a silly thing as skin color? That competitors band together and work extra hard to oust the black CEO? That is quite the allegation.\n\nWhat happened between Kant and his pet fish should remain outside judgment of the merit of his claims. But I agree that was quite a sordid tale. Luckily, these days, we are more accommodating to the wide range of sexuality.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-11-08 16:12:24",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Cheddarific",
+                                                            "body": "Give me a solid explanation for why white people are economically on top of the world. \n\nThen go the next step and tell my why you think we should let it stay that way. (Because Kant says to treat people as individuals?)",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2021-11-08 17:09:55",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "ComplicatedHilberts",
+                                                                    "body": "\\> Give me a solid explanation for why white people are economically on top of the world.\n\nDo I need to include Jewish people in the white people category or not? I can't decide whether either categorization would make an explanation more-or-less than a nuclear-level of controversial...\n\n\\> Then go the next step and tell my why you think we should let it stay that way.\n\nThere is a next step beyond that? Yikes! Let's just please stick with adhering to universal human rights, without regard to their race.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2021-11-09 11:25:38",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "Cheddarific",
+                                                                            "body": "We\u2019ve violated \u201csticking to universal rights\u201d for hundreds of years in America. Starting now would continue past travesties. Consider this:\n- enslaving people for generations\n- freeing them with no assistance \n- recreating legal forms of economic slavery (crop sharing, etc.)\n- denying them basic human rights like voting, owning land, etc.\n- keeping them at separate and inferior schools\n- then formally getting rid of all that after a few hundred years\n- then declare that it is unethical to help the great great grandchildren of slaves, the children or even the actual elderly individuals that were previously banned from voting, etc. because it would \u201cviolate human rights.\u201d Meanwhile, every statistic shows that these people are suffering economically from generation upon generation of human rights violations. \n\nI can\u2019t see how anyone could really be blind to the human rights violation America has been committing for hundreds of years. Just because the violations are no longer about denying votes or physically harming people or society stating \u201cit\u2019s better to be of this group than that group\u201d does not mean that the violations no longer exist. Allowing groups of people to continue in poverty for no fault of their own while we continue to dump money into increasing the economic gap between races is absolutely an ethical problem. White people in their privilege might buy a house in a neighborhood with good schools, which allows their children to get into college, and then the parents are in position to pay for it. The child now graduates from college debt-free and is ready to take on the world almost entirely thanks to their parents. Minorities are less likely to be in that position, which means that their children are less likely to be in that position for generations; it\u2019s a repeating cycle. The rich get richer and the poor get poorer. And meanwhile we expect the poor to work ten times as hard in order to get out of poverty and we don\u2019t care to help. And some call it a human rights violation to try to infuse educational equity. \n\nHere\u2019s an analogy: a man abuses his wife for years. She\u2019s beaten, she can\u2019t help in family decision making, she\u2019s told that she\u2019s stupid, she isn\u2019t allowed to work outside the home or make money that could enable her to leave or live comfortably, and he spends his money on his own education, gets a good job, and buys a separate house where he keeps a big TV, fancy car, etc. She can\u2019t get a divorce because the law is on his side. One day his wife puts up enough fuss that he finally stops beating her. And he lets her sometimes pick what they eat for dinner and what they watch on TV. He says she can help with the financially choices when she brings as much money as he does. Finally he lets her get a job, but she\u2019s only qualified for minimum wage jobs (whereas he now has a master\u2019s degree and 15 years of experience and is earning $120k/yr). She has to pay her share of rent, utilities, etc. out of her salary. He still has a separate house, bank account, etc. Now he says that he won\u2019t stop her from spending money she earns on her own education, but he won\u2019t contribute anything and she\u2019s still expected to pay her share of expenses. Is this man treating his wife ethically? Is it enough to stop beating her and let her make some decisions? Would it be a violation of human rights for his wife to be given access to some of the wealth he\u2019s created while he was busy denying her of economic opportunities?\n\nLike everything, affirmative action translates to the classic trolley problem. A trolley is headed toward the financial (and arguably physical and emotional) well-being of generations of black people. It\u2019s set to keep many of them from ever going to college, denying them of job opportunities that could raise them out of poverty generation upon generation. You can choose to flip a switch that will have the trolley redirect to force some percentage of the least qualified white teenagers to go to their second or third choice colleges. You\u2019re telling me that it\u2019s a human rights violation to flip that switch? Why? Because it denies people opportunities that they \u201cdeserve\u201d? \n\nThe racial income gap is huge. In 2016, the typical white American family ($170k) had ten times the net worth of the typical black family ($17k; source:  https://www.google.com/amp/s/www.brookings.edu/blog/up-front/2020/02/27/examining-the-black-white-wealth-gap/amp/). We can do nothing and be part of the problem or we can flip switches to try to stop it. \n\nSeriously and honestly try to answer my two questions above. Don\u2019t flip it around into questioning me. Don\u2019t try to wiggle out of the question via semantics. This is real life and real lives we\u2019re talking about, not a thought exercise. Answer honestly, then I\u2019ll answer honestly any questions you pose to me. Honestly answer (1) why you think white people have been on top economically for the last century and (2) how you justify the ethics of a racial income gap based on an appeal to human rights.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2021-11-10 02:51:49",
+                                                                            "replies": []
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "author": "ComplicatedHilberts",
+                                                                    "body": "\\> Give me a solid explanation for why white people are economically on top of the world.\n\nThe reason for why I can't/won't give a solid race-centered explanation for the economical dominance of white people is not that I am shy of controversy. But this demand really took me aback:\n\n\\- Probably I am too haphazard and fluid in applying contexts. I swap out \"white people\" with \"Jewish people\" or \"Amish people\" or \"black people\" in my head easily, focusing only on the semantics/overarching concept applied to humans. In context, it may work very well for a commonly-accepted good goal. But then the semantics spoil it for me. In context, affirmative action may not even be that wrong. But the semantics applied to humans makes it a deeply flawed and inhumane practice for me.\n\n\\- I am pretty sure that with either categorization, a solid explanation may run afoul of the law in jurisdictions I plan to visit in the future. Though a great proponent of free speech, and not necessarily in favor of laws to curtail it, every jurisdiction has their right to make laws on what constitutes offenses against the decency of their society. So to make a principled argument would curtail my future travel plans, something I am not willing to do, at least, not on Reddit in a proxy-debate with a book author.\n\n\\- The demand itself is a sophistry trick. Like writing a paper about how all the best AI researchers are mostly male (and light-colored or Asian). Then saying: *The field is oppressing minorities from entering. The inequality is caused by blacks having fewer opportunities than whites. Our findings clearly show that the field of AI still has a long way to go, and workshop proposals at NeurIPS should do more than only pay lip-service to diversity. People ideally should come to NeurIPS to be exposed to diversity! Not only to see the scientific works of the best AI researchers.* And then when you object: *Maybe NeurIPS workshops should be judged on scientific merit, not race or gender. Nobody can look at the diversity chair of NeurIPS workshops and tell me race and gender did not play a role in their appointment. Please stop that!* You say: *But don't you want equal opportunity? Give me a solid explanation why top 100 ML researchers are mostly male?* Now you have me talking about IQ outliers in different genders and how gender-unequal fields may communicate with less tension, and now it easy to dismiss my objection as racist, sexist, chauvinistic. Why not you give an explanation for why you assume the gender of the top 100 AI researchers to make a veiled statement about oppression and biological differences?",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2021-11-09 12:53:13",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "Cheddarific",
+                                                                            "body": "... if you make an honest effort at my two prompts, I think we\u2019ll have a much better discussion. \n\nI get that it feels wrong to treat people differently, but that\u2019s the only way to fix things. I think you\u2019ll reach the same conclusion if you honestly consider the two prompt sentences above.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2021-11-10 02:32:39",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "ComplicatedHilberts",
+                                                                                    "body": "The prompts really made me think and doubt myself. Thanks for that.\n\nFor now: racism exists or existed, and this has causal influence on modern racial inequality.\n\nIt is such an interesting prompt, because all my points become moot if I admit that the financial elite became the elite due to the color of their skin. But if I say other things play a role (random environmental factors, creation of religion as an institute, evolutionary theory, ...) then I am no better than a racist, saying white people are somehow better than black people, more than the unfair advantage of skin alone. Perhaps that's why I struggle with it, or at least, making it skin-agnostic while keeping it skin-central.\n\nBut I think this is not unique to white people. If we follow the prompts, either:\n\n1. Financial elite used racism to get on top.\n2. Financial elite, majority white, did not use mostly racism, but other features of their whiteness and white culture made them dominant over black people and their inferior culture.\n\nIf it is racist (and uncouth) to say the second, then it is also racist to say the first. If black book author claims the first, then blacks also racists (not in the sense they think their race is superior and more kind, though they do blame whites for slavery, not black merchants, but in the sense another race is superior over them). That's a weird form of anti-racism/reverse racism, but maybe we are forced to conclude that all humans are racists, no matter their skin color. Shifting or assigning blame to individuals or groups then becomes a semantics game.\n\nAnd if it is 2) White/Western culture is dominant, then why try to handicap this dominance? You applied to that university, exactly, because the English conquered the seas, and centuries of white/western culture made the university one of the best in the world. You want to join the winning team, or you want everyone to cross the finish line at the same time? At the very least, stop telling the coach of the runner who trains a ton and is very successful how to manage his players or critique his representation of skin color. if 1) why are you applying to an evil cotton farm?\n\nIs it unfair of the fastest runner to increase the distance between the runner-ups? Did the establishment of Yale or Harvard cause universities in Africa to grow less fast?",
+                                                                                    "score": 1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2021-11-10 17:10:59",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "Cheddarific",
+                                                                                            "body": "Thank you for giving it an honest consideration! That almost never happens on Reddit! :)\n\nOne year ago I was against affirmative action until I read the book How to Be an Anti-Racist. I highly recommend it! The book was written by a black author. He goes through his own life, including his realization that he himself was racist against black people. He had a lot to learn and think about and he writes the book about his perspectives, lacing facts and statistics throughout the book. In the end, he isn\u2019t judging anyone but himself and doesn\u2019t tell anyone what to do; just shares his opinions and learnings. Free at your local library. :)",
+                                                                                            "score": 1,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2021-11-10 21:42:10",
+                                                                                            "replies": [
+                                                                                                {
+                                                                                                    "author": "ComplicatedHilberts",
+                                                                                                    "body": "> Thank you for giving it an honest consideration!\n\nWell, you had to practically pry it out of me, and I feel rather dirty for all the focus on skin color. It really is a mine-field, and hopefully I won't be caught in any formal position on an argument even remotely related to whatever I or you debated about. So there is the silver-lining take-away for me: a warning to be really careful.\n\nHere we have a woman professor who is not racist, does not want to be racist, and is afraid and anxious to be judged as failing her black students by other anti-racists.\n\n> A Georgetown Law School professor has been terminated after comments she made about a lot of her \"lower\" students being Black went viral and sparked a firestorm of backlash on social media.\n\n> In a recording of the video call, adjunct professor Sandra Sellers is speaking to a fellow adjunct about students' evaluations and performance.\n\n> \"And you know what, I hate to say this, I end up having this angst every semester that a lot of my lower ones are Blacks. Happens almost every semester,\" Sellers said. \"And it's like, 'Oh, come on.' You get some really good ones, but there are also usually some that are just plain at the bottom. It drives me crazy.\"\n\n> Bill Treanor, the dean of the law school, said in a statement Thursday that he was \"appalled that two members of our faculty engaged in a conversation that included reprehensible statements concerning the evaluation of Black students.\"\n\nIt is a lose-lose, the way I see it, with the clumsy lens of race and skin-color. Either you are part of the racist system, guilty by association, charging people with reprehensible racism on the basis of their skin-color. Or you let it slip that whites are somehow inherently better. A view of life where blacks are always the victim, and whites always the oppressor. Like solipsism, it may be self-consistent and plausible, but it has little pragmatic value, and kind of kills the debate.",
+                                                                                                    "score": 1,
+                                                                                                    "depth": 11,
+                                                                                                    "timestamp": "2021-11-11 00:11:24",
+                                                                                                    "replies": [
+                                                                                                        {
+                                                                                                            "author": "Cheddarific",
+                                                                                                            "body": "Ya, that\u2019s why the author of that book promotes anti-racism, which is not the same as \u201cnot being racist\u201d. He points out that races shouldn\u2019t exist or matter, but due to history they both exist and matter. He suggests actively fighting against racism by all necessary means (e.g. affirmative action) until income gaps, etc. are gone and then we can all forget about races, skin colors, genders, classes, sexualities, etc. once we\u2019re all in similar positions and live life simply as humans for the first time in recorded history. \n\nI\u2019m not sure whether that is realistic or will work, but it\u2019s the best idea I\u2019ve heard on the subject.",
+                                                                                                            "score": 1,
+                                                                                                            "depth": 12,
+                                                                                                            "timestamp": "2021-11-11 00:21:17",
+                                                                                                            "replies": []
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "author": "ComplicatedHilberts",
+                                                            "body": "Making slavery about racism is deeply racist in itself: racismism.\n\nAs if the developing world would have looked at African slave markets filled with Irish-looking burly men and said: oh, you look kinda like me, I do not want to make a profit on that.\n\nAnd if we share actionable blame in modern-day life, for what our ancestors did to start slavery, then descendants of slaves share actionable blame for having been a part of it.\n\nIf affirmative action a valid repentance for starting slavery, what would be a valid repentance for that? Charging 25.000 dollar an hour to speak 45 minutes at a university to teach them about how not to be racist?",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2021-11-08 17:21:37",
+                                                            "replies": []
+                                                        },
+                                                        {
+                                                            "author": "Cheddarific",
+                                                            "body": "I don\u2019t feel guilt over this. It\u2019s not emotions that motivate me but idealism. I prioritize equality of opportunities for every human, not just every American. I look out at the world and see poverty and disease and tyranny and all sorts of horrible things. I wish every child could go to a clean school with a healthy lunch. I wish every teenager could have a chance to go to college if they want, every young adult a chance to pursue a meaningful and rewarding career. I want poor white kids to have a chance to leave generational poverty just as bad as I want poor black kids to have that same chance. Affirmative action isn\u2019t the best idea and it has its faults, but I am not aware of a better solution that\u2019s been put to practice.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2021-11-08 17:24:05",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "ComplicatedHilberts",
+                                                                    "body": "\\> I prioritize equality of opportunities for every human, not just every American.\n\nAffirmative action is equality of outcome, not equality of opportunity. Any decent human, no matter their political outlook, will agree to equal opportunity. People already have equal opportunity of a job, these are not being judged on race or gender. Nobody is stopping me, a man, from becoming a nurse, and nobody is stopping a woman from becoming a professor. You prioritize your ideal outcome, so much so, you are willing to suspend human rights to do so.\n\n\\> am not aware of a better solution that\u2019s been put to practice.\n\nWaterboarding and sexual humiliation has its faults, but i am not aware of a better torture solution that's been put to practice. Maybe I should not create policy about interrogating terrorists, if I have to suspend human rights to implement it, and I am not aware of other humane solutions.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2021-11-09 11:33:48",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "Cheddarific",
+                                                                            "body": "It\u2019s clear here that you practice deontological ethics. I blend deontology with utilitarianism. I would never torture someone...unless that person had information about where other innocents were being tortured and I could maximize the universe by stopping that. I believe that it is ethical to intentionally send a trolley toward a child if it means 10 children\u2019s lives are saved. I see affirmative action as that trolley. \n\nFurther, I\u2019m talking about inputs as affirmative action applies mainly to education. I don\u2019t think companies should hire less qualified individuals, but I do think it\u2019s acceptable for universities to train people who perhaps started slightly less qualified than someone else. And honestly, I think it should be more about generational poverty than race, but in 2021 those are largely correlated.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2021-11-10 02:39:22",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "ComplicatedHilberts",
+                                                                                    "body": "Humanistic ethics and yes, prefer the D&D rulebook nerd approach to ethics, because a lot of campaigns, alignments, and dungeon masters are going on at once, and a lot of problems are caused by ignoring or altering rules at will. Or at least, it is playing in a game without clear rules, where players can become more powerful, not on skill or ingenuity, but on collusion and lobbying the dungeon master. That game is politics, not ethics.\n\nI visualize the same trolley, but for two people with equal skill, and a random number generator picking either one. I would not judge their value (nor the value of their parents' parents) on their skin, and then pull the lever.\n\nIt is not 10 children's vs. 1 child. Those 9 children already were run over 100s of years ago. You seem to argument: if we compare the number of white children run over with the number of black children run over then this is unequal. To restore this historical injustice and force equal outcome, any time this situation comes up, check if one is white and one is black, then pull the lever so the white child gets it.\n\nI am not saying it isn't terrible that people are tied to train tracks, that historically, black people had less opportunities, solely due to the color of their skin and society's categorization of them. But you also have to be honest: people getting run over is a bad thing in principle. Currently, it is a random number generator, not a biased coin-flip based on race. White kids getting run then is retribution for historical evils of white parents. I won't agree, but I can understand why you, and especially black people, would feel that is justified.\n\nI think affirmative action could have restorative powers if it was separated from the normal recruitment process. But it isn't, and this conflation makes it controversial and problematic. Universities should drop affirmative actions, but create accessible low-barrier programs exclusive for minorities, so alumni from these programs have the confidence and environmental support to compete on merit, not force them to think: was I judged on gender, or because I was the right candidate?\n\nHumanistic ethics does give exceptions to the rules. For instance, you may rob someone's physical freedom (or freedom of speech) if it stops them from unlawful violence (such as starting a race riot). To convince me that we should suspend a human right, you'd have to show not only that racial inequality is unlawful violence, but that currently living humans are culpable to this violence. If I indirectly benefit from systemic bias, due to having properties common in that system, am I culpable of violence? Maybe... but I would need to stretch my ethical viewpoints beyond repair. \n\nI think I would feel more culpable if I blamed others of past wrongs, or for being racism enablers, just because in my mind they receive so many benefits from their skin color. This kind of thinking leads to people thinking they got passed for a promotion due to the color of their skin. It turns people into victims, not improving their individual merit, but holding the rights of their groups above the rights of other groups, apparently justified because those other groups were so privileged with their fair skin.",
+                                                                                    "score": 1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2021-11-10 16:05:07",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "ComplicatedHilberts",
+                                                                                            "body": "More technically: credit assignment and outcome prediction in utilitarianism is impossible to solve, unless you have perfect information about the system, and only God can have this.\n\nA vivid example: a junkie was robbed and beaten half to death. Lying in the gutter, tasting the blood and dirt in his mouth, he suddenly had an epiphany: My life is worth more than this. Never touched a drug in his life. Became a social worker helping people with addiction.\n\nAnother: You torture the terrorist and he gives up the location of the 10 prisoners. His son reads about his cruel treatment in the news and starts a new radical terrorist organization which kills a 1000 Christians over the next 2 years.\n\nUnderstand why someone would be suspicious, if you pose utility to suspend a human right, but can't, mathematically, justify its worth with empiricism? Nor seems willing to become responsible for the problems downstream caused by pulling the lever? That's affirmative action to suspend human rights: net outcome unclear. Students are suddenly responsible and culpable for thinking someone is a diversity hire, not the policy makers/lever pushers.",
+                                                                                            "score": 1,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2021-11-10 16:49:16",
+                                                                                            "replies": []
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "chogall",
+            "body": "Don't worry about conflict of interest. No conflict, no interest.\n\nPoC, and talk to customers. And avoid doing work publicly since the woke/activist crowd are always looking for the next victim.",
+            "score": -6,
+            "depth": 0,
+            "timestamp": "2021-11-04 12:44:22",
+            "replies": []
+        },
+        {
+            "author": "stochasticFlame",
+            "body": "I appreciate that you are at least asking these questions. However, unless you\u2019re a person of color or woman who does AI fairness research, please don\u2019t do this.",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2021-11-04 23:38:39",
+            "replies": [
+                {
+                    "author": "SnooChocolates7170",
+                    "body": "Yes, only ppl of color can do fairness research...",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2021-11-06 10:05:52",
+                    "replies": [
+                        {
+                            "author": "stochasticFlame",
+                            "body": "Yep, you must have lived experience and come from a diverse background. The entire research area was started by phenomenal women who had the foresight that the rest of the field didn\u2019t have. However, now that it\u2019s become a hot topic, all the funding is going to big corporations and labs ran by white men who aren\u2019t even the ones impacted. It\u2019s all fucked up.",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2021-11-07 06:42:29",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "dashingstag",
+            "body": "It\u2019s a pr disaster waiting to happen. When the stars align, you will find the model being racist for your efforts. And adding your own rules will also add your own prejudices as you find yourself having to add more and more rules. Self declared data is the only way to go with these things. One simple example is a person with really dark complexion claiming to be Caucasian or white complexion claiming to be black. Not to mention in todays society, race and gender are more fluid than before meaning people could be in transition. There\u2019s to say for the model to capture all the outliers. This model seems to be more discriminatory than trying to prevent discrimination.\n\nEven if you don\u2019t personally craft the parameters, the model is going to pick up features like big lips, small eyes, skin color, hair type. Saying your model wouldn\u2019t is just pretending. Damned if you don\u2019t damned if you do.\n\nFact of the matter is the model can only generalise which in human language means it is literally stereotyping people based on their appearance. Only homogeneous societies can be successful in creating such a model for themselves.\n\nOne rule of thumb I follow is if a human cannot judge it with their own eyes, the model cannot do it at face value either.(non withstanding meta data or minuscule traits of the image).",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2021-11-05 02:03:56",
+            "replies": []
+        },
+        {
+            "author": "victor_ku",
+            "body": "Insead of classing race/gender you can turn into person embedding system that produces a vector that could be trated as similarity between persons. In this case you avoid to deal with angry people and still get profit from your data ;)",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2021-11-05 03:46:36",
+            "replies": [
+                {
+                    "author": "SnooChocolates7170",
+                    "body": "And depending on how you do it, it would be possible to isolate a hiperplane where gender spectrum is encoded and one where race spectrum is.\n\nNot sure if you'll get rid of the ethical considerations by someone who understands what you are doing...",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2021-11-06 09:53:43",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "Why are you making this product?  Can\u2019t see any ethical use cases where other solutions wouldn\u2019t be more effective.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2021-11-11 21:44:59",
+            "replies": []
+        },
+        {
+            "author": "Gapppy",
+            "body": "Please refrain",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2021-12-28 04:24:27",
+            "replies": []
+        }
+    ]
+}

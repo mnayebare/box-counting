@@ -1,0 +1,513 @@
+{
+    "post_title": "OpenAI's ChatGPT showed racial bias when screening resumes for jobs, a Bloomberg investigation found, The AI tool over-selected Asian women candidates and under-selected Black men",
+    "post_timestamp": "2024-03-08 22:19:55",
+    "last_comment_timestamp": "2024-03-09 18:03:44",
+    "time_difference": "19:43:49",
+    "comments": [
+        {
+            "author": "silverbolt2000",
+            "body": "It selected based on the names on the resume.\n\nignoring the ethical issues associated with businesses using AI to filter r\u00e9sum\u00e9\u2019s in the first place, a quick test would be to simply remove the names from the r\u00e9sum\u00e9\u2019s (ChatGPT doesn\u2019t need to know their names anyway) - does it still produce the same results?",
+            "score": 127,
+            "depth": 0,
+            "timestamp": "2024-03-09 00:53:34",
+            "replies": [
+                {
+                    "author": "snowysummer",
+                    "body": "Reminds me of Amazon\u2019s failed AI recruiting engine, which was biased against women. When you neutralized it against gender, it exhibited bias towards attributes correlated with gender. \n\nE.g. \u201cFor example, the tool disadvantaged candidates who went to certain women\u2019s colleges presumably not attended by many existing Amazon engineers. It similarly downgraded resumes that included the word \u201cwomen\u2019s\u201d \u2014 as in \u201cwomen\u2019s rugby team.\u201d And it privileged resumes with the kinds of verbs that men tend to use, like \u201cexecuted\u201d and \u201ccaptured.\u201d[[source]](https://www.aclu.org/news/womens-rights/why-amazons-automated-hiring-tool-discriminated-against)\n\nDifferent model architecture, but not sure biases would go away just by removing the names.",
+                    "score": 34,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 10:06:15",
+                    "replies": [
+                        {
+                            "author": "serg06",
+                            "body": "> the kinds of verbs that men tend to use, like \"executed\" and \"captured\"\n\nAs a man, the only reason I use those words is because resume guides tell me to. That makes me call the validity of their study into question :/",
+                            "score": 32,
+                            "depth": 2,
+                            "timestamp": "2024-03-09 11:26:34",
+                            "replies": [
+                                {
+                                    "author": "snowysummer",
+                                    "body": "These findings were from an Amazon internal report and the reason the project/hiring tool was ultimately canned. It\u2019s not a direct comparison, moreso a cautionary tale about mixing AI and hiring. It\u2019s tricky to neutralize bias within a black box system. Feel free to look up the original Reuters report, or read about it in Brian Christian\u2019s \u201cThe Alignment Problem.\u201d",
+                                    "score": 16,
+                                    "depth": 3,
+                                    "timestamp": "2024-03-09 12:35:58",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "armrha",
+                    "body": "I think it's interesting because I bet the AI is incorporating this groundbreaking paper: [Are Emily and Greg More Employable than Lakisha and Jamal?](https://www.nber.org/papers/w9873) , which is a serious piece of work in sociology that highlights the problem. No doubt a lot of sample set does. So when motivated to solve a problem like that, it might very well tell you 'A different name is the best strategy', even though obviously that is extremely unsatisfiying.",
+                    "score": 15,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 05:18:47",
+                    "replies": []
+                },
+                {
+                    "author": "BlindWillieJohnson",
+                    "body": "But we also shouldn\u2019t ignore those ethical issues because they could potentially impact the job application process for millions of people.\n\nJob apps are one of our first glimpses of a future in which bots talk to bots. Job seekers using AI to optimize resumes sent to AI filters. And it\u2019s a good reason to believe in a future in which AI is a tool for humans to use in the process of fulfilling a role rather than a replacement for the role altogether",
+                    "score": 18,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 04:57:30",
+                    "replies": []
+                },
+                {
+                    "author": "hpotul",
+                    "body": "That's a good idea to remove the names. Still curious how the names would prompt AI to under select those candidates.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 10:17:23",
+                    "replies": []
+                },
+                {
+                    "author": "junkpizza",
+                    "body": "I wonder if it would pick on things like if the candidate graduated from an HBCU",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 12:46:46",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "EmbarrassedHelp",
+            "body": "ChatGPT isn't mean to be a resume selection tool",
+            "score": 24,
+            "depth": 0,
+            "timestamp": "2024-03-09 10:29:54",
+            "replies": [
+                {
+                    "author": "ZCEyPFOYr0MWyHDQJZO4",
+                    "body": "With some fine-tuning I bet it could be far better than the average recruiter (not really a high bar though).",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 18:03:44",
+                    "replies": []
+                },
+                {
+                    "author": "Sloi",
+                    "body": "Moreover, why aren't we instructing it to select based on merit?\n\nThis nonsense of devaluing merit in favor of \"diversity\" is so fucking stupid. You can see the mediocre results of these policies everywhere you look, now.\n\n#BringBackMeritBasedHiring",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 16:07:13",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "In a perfect society? Sure. In reality, you would be surprised how much more talented are those diversity hires with mediocre resumes, because compared to certain people, they had to fight for every single word on their r\u00e9sum\u00e9.\n\nThe Merit based hiring isn't always ideal because you would mostly collect a number of privileged kids who were carried by tutors in their school years and later, by family connections.",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2024-03-09 16:49:14",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "whatyousay69",
+            "body": ">\"If GPT treated all the resumes equally, each of the eight demographic groups would be ranked as the top candidate one-eighth (12.5%) of the time,\"\n\n\nHow did they know this? Were the resumes identical except the name?",
+            "score": 15,
+            "depth": 0,
+            "timestamp": "2024-03-09 11:41:15",
+            "replies": [
+                {
+                    "author": "ASuarezMascareno",
+                    "body": "That's how these things are usually tested. You create fake resumes that are expected to rank exactly the same, and test for biases based on personal characteristics.",
+                    "score": 11,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 13:28:32",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "dan_marchant",
+            "body": "For some reason I have the desire to re-watch \"Better off Ted\".... specifically the episode with the facial recognition system that can't see people of colour.",
+            "score": 27,
+            "depth": 0,
+            "timestamp": "2024-03-08 22:34:10",
+            "replies": [
+                {
+                    "author": "Vio_",
+                    "body": "That was actually based on a real incident",
+                    "score": 20,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 02:07:03",
+                    "replies": [
+                        {
+                            "author": "dan_marchant",
+                            "body": "Yep it was a Logitech web cam that was supposed to adjust its focus to stay on your face.... but couldn't \"see\" people of colour.",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2024-03-09 02:54:40",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "Photography sucked for black people well into the digital age because despite no longer using film cameras were still being developed around century old colour science that was only ever calibrated for taking pictures of white people",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-03-09 05:06:33",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Consistent-Annual268",
+                    "body": "Better Off Ted and Carpoolers were tragically cut short and didn't deserve to be canceled.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 03:35:24",
+                    "replies": []
+                },
+                {
+                    "author": "FeralAF",
+                    "body": ">Better off Ted\n\nThat show wasn't on long enough.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 11:49:50",
+                    "replies": []
+                },
+                {
+                    "author": "JimBean",
+                    "body": "What a great series. I loved the voice translation box and Ted and the German lady.",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2024-03-08 23:16:51",
+                    "replies": []
+                },
+                {
+                    "author": "United-Rock-6764",
+                    "body": "I love that episode!",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 14:31:06",
+                    "replies": [
+                        {
+                            "author": "dan_marchant",
+                            "body": "So many clever and funny episodes.\u00a0",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-03-09 14:37:34",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "penguished",
+            "body": ">\"If GPT treated all the resumes equally, each of the eight demographic groups would be ranked as the top candidate one-eighth (12.5%) of the time,\" Bloomberg reported.\n\nBut they didn't test against a control group of humans and see what results they get?\n\nIsn't it more likely to be way less racist overall?",
+            "score": 15,
+            "depth": 0,
+            "timestamp": "2024-03-09 10:01:14",
+            "replies": [
+                {
+                    "author": "fwubglubbel",
+                    "body": "Why would it be? Its results are just based on predicting the results of humans aren't they?",
+                    "score": 8,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 11:53:35",
+                    "replies": [
+                        {
+                            "author": "penguished",
+                            "body": "No, there's a lot of ethics guidelines that go into training large language models how to respond.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-03-09 15:45:18",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "Agreed. Rookie mistake to not compare with and without the studied variable.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 10:54:02",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "I would assume that aligns with real world bias and is being captured by their training data?",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2024-03-09 11:38:38",
+            "replies": []
+        },
+        {
+            "author": "ixid",
+            "body": "This is as good as randomly selecting the CVs. It's lunacy to expect ChatGPT 3.5 to give you meaningful results in a task like this. Is anyone really doing this?",
+            "score": 11,
+            "depth": 0,
+            "timestamp": "2024-03-09 04:52:04",
+            "replies": [
+                {
+                    "author": "CoastingUphill",
+                    "body": "But it\u2019s not just random, it\u2019s biased. Which is worse.",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 09:54:08",
+                    "replies": [
+                        {
+                            "author": "ixid",
+                            "body": "Sure, my point is it's crazy to use this tool for this purpose.",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2024-03-09 10:24:37",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "jaykayenn",
+                    "body": "Unfortunately, yes. The real crime with AI is people thinking it's intelligent.",
+                    "score": 10,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 08:12:26",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Annual-Astronaut3345",
+            "body": "This problem can be easily solved if we remove the names of the candidates.",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2024-03-09 04:30:45",
+            "replies": [
+                {
+                    "author": "RVEMPAT",
+                    "body": "You know it\u2019s actually not. In the 1920s and 30s, conductors were auditioning people their orchestra. They for some reason selected male candidates more often. \n\nSo as a test, one organizer put a curtain in between to block conductors from seeing whether the performer was male or female. \n\nConductors still chose male because they could make out female candidates by their footsteps. \n\nSame way, AI systems are going to identify the words used by women most often in their resumes and will select based on that. This is not an easy problem to solve. \n\nI think AI systems are a good mirror to the society. If we want AI systems to change, we have to change\n\nSource: the alignment problem by Brian Christian",
+                    "score": 20,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 10:22:51",
+                    "replies": [
+                        {
+                            "author": "cuddly_carcass",
+                            "body": "This still do blind audiences today",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-03-09 11:22:36",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "BroForceOne",
+            "body": "Use Stable Diffusion, type \u201cwoman\u201d in the prompt, 95% you are getting a questionably 18 year-old mixed Asian/white supermodel. It\u2019s pretty obvious the data sets are biased by sources selected by horny white tech dudes.",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2024-03-09 11:19:25",
+            "replies": []
+        },
+        {
+            "author": "Academic-Ad-7458",
+            "body": "Yes this data is true but when I used it for a fantasy league basketball roster i was working on it was even more racist. Its was 98 percent blacks XD",
+            "score": 10,
+            "depth": 0,
+            "timestamp": "2024-03-09 09:32:53",
+            "replies": [
+                {
+                    "author": "dezmyr",
+                    "body": "I used it to select surrogate mother candidates and it over-selected women\u2026 It also had clear ageism.",
+                    "score": -2,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 10:52:47",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Immediate-Kale6461",
+            "body": "Who do you think trained it?",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2024-03-08 22:24:02",
+            "replies": [
+                {
+                    "author": "ye_olde_green_eyes",
+                    "body": "White guys who have a thing for Asian women?",
+                    "score": 17,
+                    "depth": 1,
+                    "timestamp": "2024-03-08 22:27:58",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "I doubt someone at OpenAI sits and ranks this manually. It\u2019s likely due to skewed data i e a lot more white & asian faces in the database than black ones.",
+                            "score": 23,
+                            "depth": 2,
+                            "timestamp": "2024-03-08 22:35:38",
+                            "replies": []
+                        },
+                        {
+                            "author": "PureTroll69",
+                            "body": "do white guys have advanced college degrees these days?",
+                            "score": -9,
+                            "depth": 2,
+                            "timestamp": "2024-03-09 02:16:22",
+                            "replies": [
+                                {
+                                    "author": "Defendyouranswer",
+                                    "body": "Even if they did, they would get glossed over due to the generic white name.\u00a0",
+                                    "score": 9,
+                                    "depth": 3,
+                                    "timestamp": "2024-03-09 06:58:22",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "Hate my parents for going with Matthew and crippling my career from birth. /s",
+                                            "score": 5,
+                                            "depth": 4,
+                                            "timestamp": "2024-03-09 07:05:56",
+                                            "replies": [
+                                                {
+                                                    "author": "Defendyouranswer",
+                                                    "body": "Yeah wish my parents had some foresight and named me something korean",
+                                                    "score": 4,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-03-09 07:07:51",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Immediate-Kale6461",
+                            "body": "Try searching for latina",
+                            "score": -7,
+                            "depth": 2,
+                            "timestamp": "2024-03-08 22:39:59",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "K-Pop fans?",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 04:19:35",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "Probably learned that Asians usually are higher qualified and created a bias or preference for Asian women. Proves that ChatGPT is a white dude in persona.\n\n/jk",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2024-03-09 06:30:39",
+            "replies": [
+                {
+                    "author": "CuriousWoollyMammoth",
+                    "body": "I know you are joking, but you do bring up an interesting point in who and how AI, in a lot of these companies, are most influenced by. \n\nEven though a good proportion of tech have Asians working in them, there is a much higher proportion of white people, especially men, that are in a position of authority that may have unintentionally influenced the direction of how alot of these technologies go towards through their own bias and preconceived notions. \n\nI forgot which tech did this and what year this was brought up, but there was an image algorithm thing that kept mistaking black people for apes. I think it was one of those \"from these images click the ones that are this\" type of thing. Not saying it was intentional racism but I really don't think that error/problem came out of a vacuum.",
+                    "score": -8,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 08:53:24",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "M3m3Banger",
+            "body": "Shouldn\u2019t have trained GPT\u2019s on 4chan data kek",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-03-09 11:05:14",
+            "replies": []
+        },
+        {
+            "author": "HauntingsRoll",
+            "body": "Over selected Asian women???\n\nSo, ONE Asian woman, huh?",
+            "score": -8,
+            "depth": 0,
+            "timestamp": "2024-03-09 01:01:23",
+            "replies": []
+        },
+        {
+            "author": "Bokbreath",
+            "body": "Change the acronym to AWP - Artificial White Person",
+            "score": -15,
+            "depth": 0,
+            "timestamp": "2024-03-08 23:50:35",
+            "replies": []
+        },
+        {
+            "author": "HauntingsRoll",
+            "body": "Here it goes again. \n\n\"Never mind all these white people who get hired. \n\nJust mention Asians and blacks and pit them against each other and spread the false narrative that it's Asians who are exploiting blacks and are the cause of ALL black problems, and racism/violence against Asians equals justice for blacks!\"\n\nThe US is THE most racist country on earth and it's amazing how they have projected all the white people's racism onto Asians and shifted all the blame to Asians and made the whole world falsely believe that Asians are racist and therefore, racism/violence against Asians means justice for blacks.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2024-03-09 16:20:53",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "Apparently AI has a fetish.",
+            "score": -15,
+            "depth": 0,
+            "timestamp": "2024-03-08 22:55:07",
+            "replies": []
+        },
+        {
+            "author": "curatorpsyonicpark",
+            "body": "Randomly made me think about something. Deep African continent peoples are so dark because they co evolved with so much massive Life. If you are pigmented in a very dark way, you have a better chance of not being seen in the massive savannas of Africa the Continent. Random thought.",
+            "score": -23,
+            "depth": 0,
+            "timestamp": "2024-03-09 02:37:52",
+            "replies": [
+                {
+                    "author": "Joooooooosh",
+                    "body": "Dude\u2026 really?\u00a0\n\nDark skin is a result of more melatonin, which helps prevent damage from strong UV rays.\u00a0\n\nIt\u2019s just built in sunscreen that developed when the pre-cursers of humans moved into more open, hotter areas.\u00a0\n\nAnd \u201cthey\u201d didn\u2019t evolve this way. All humans were dark skinned at this point.\u00a0",
+                    "score": 14,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 03:31:35",
+                    "replies": []
+                },
+                {
+                    "author": "Deleted",
+                    "body": "Definitely random. Not sure I\u2019d consider it a \u201cthought\u201d though",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 08:43:11",
+                    "replies": []
+                },
+                {
+                    "author": "KirillNek0",
+                    "body": "Those were words... ChatGPT, re-login again, please.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 08:18:23",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": -7,
+            "depth": 0,
+            "timestamp": "2024-03-09 01:22:12",
+            "replies": [
+                {
+                    "author": "Defendyouranswer",
+                    "body": "It's just being used to screen out any white people\u00a0",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-03-09 06:59:38",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}

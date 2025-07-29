@@ -1,0 +1,186 @@
+{
+    "post_title": "AI recognition of patient race in medical imaging: a modelling study",
+    "post_timestamp": "2022-05-19 07:22:10",
+    "last_comment_timestamp": "2022-05-20 19:18:53",
+    "time_difference": "1 day, 11:56:43",
+    "comments": [
+        {
+            "author": "FuturologyBot",
+            "body": "The following submission statement was provided by /u/Gari_305:\n\n---\n\nFrom the Article: \n\n>In our study, we show that standard AI deep learning models can be trained to predict race from medical images with high performance across multiple imaging modalities, which was sustained under external validation conditions (x-ray imaging \\[area under the receiver operating characteristics curve (AUC) range 0\u00b791\u20130\u00b799\\], CT chest imaging \\[0\u00b787\u20130\u00b796\\], and mammography \\[0\u00b781\\]). We also showed that this detection is not due to proxies or imaging-related surrogate covariates for race (eg, performance of possible confounders: body-mass index \\[AUC 0\u00b755\\], disease distribution \\[0\u00b761\\], and breast density \\[0\u00b761\\]). Finally, we provide evidence to show that the ability of AI deep learning models persisted over all anatomical regions and frequency spectrums of the images, suggesting the efforts to control this behaviour when it is undesirable will be challenging and demand further study.\n\nThe research adds to a growing amount of evidence that AI systems can often reflect the biases and prejudices of human beings, in this case reading the amount of pigment in the skin, this leads to an important question. Will there be oversight to ensure that this AI system won't be subject to abuse?\n\n---\n\n Please reply to OP's comment here: https://old.reddit.com/r/Futurology/comments/ut16ih/ai_recognition_of_patient_race_in_medical_imaging/i96u0il/",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-19 07:57:26",
+            "replies": []
+        },
+        {
+            "author": "Avaruusmurkku",
+            "body": "AI recognizes physical difference between people of different ethnicities, people get angry at AI and call it racist.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2022-05-20 19:18:53",
+            "replies": []
+        },
+        {
+            "author": "Gari_305",
+            "body": "From the Article: \n\n>In our study, we show that standard AI deep learning models can be trained to predict race from medical images with high performance across multiple imaging modalities, which was sustained under external validation conditions (x-ray imaging \\[area under the receiver operating characteristics curve (AUC) range 0\u00b791\u20130\u00b799\\], CT chest imaging \\[0\u00b787\u20130\u00b796\\], and mammography \\[0\u00b781\\]). We also showed that this detection is not due to proxies or imaging-related surrogate covariates for race (eg, performance of possible confounders: body-mass index \\[AUC 0\u00b755\\], disease distribution \\[0\u00b761\\], and breast density \\[0\u00b761\\]). Finally, we provide evidence to show that the ability of AI deep learning models persisted over all anatomical regions and frequency spectrums of the images, suggesting the efforts to control this behaviour when it is undesirable will be challenging and demand further study.\n\nThe research adds to a growing amount of evidence that AI systems can often reflect the biases and prejudices of human beings, in this case reading the amount of pigment in the skin, this leads to an important question. Will there be oversight to ensure that this AI system won't be subject to abuse?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-19 07:26:35",
+            "replies": [
+                {
+                    "author": "rhoark",
+                    "body": "How is it reflecting human biases and prejudices when it identifies race from an image that humans could not use to identify race? This is proving that race is a biological, not-socially-constructed variable.",
+                    "score": 15,
+                    "depth": 1,
+                    "timestamp": "2022-05-19 08:31:13",
+                    "replies": [
+                        {
+                            "author": "Invdr_skoodge",
+                            "body": "There\u2019s a research doctor up my way that\u2019s been around forever, he runs the \u201cbody farm\u201d, it\u2019s a forensic lab to study decomposition. He\u2019s long talked about the subtle skeletal differences between races that can be used for identification purposes.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2022-05-19 12:26:01",
+                            "replies": []
+                        },
+                        {
+                            "author": "arckeid",
+                            "body": "It\u00b4s better to accept we have different races but we are the same species.",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2022-05-19 08:41:58",
+                            "replies": [
+                                {
+                                    "author": "Test19s",
+                                    "body": "*genetic clusters that loosely resemble popular racial classifications in some regions depending on how you class mixed individuals\n\nTens of millions of Indians and other South Asians, Middle Easterners and North Africans, Russian ethnic minorities, Pacific Islanders, mixed people, and Latin Americans defy easy classification.",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-19 14:14:04",
+                                    "replies": [
+                                        {
+                                            "author": "LastInALongChain",
+                                            "body": "Yeah but you could say the same about dogs. There are clearly observable differences between breeds. I don't understand the deep revulsion people have with recognizing differences.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-19 15:26:38",
+                                            "replies": [
+                                                {
+                                                    "author": "Test19s",
+                                                    "body": "A) There is a long history, in some cases legally enforced, of trying to pigeonhole people into inaccurate racial categories (the one drop rule in the USA)\n\nB) The prospect that there could be broad differences in average personality, IQ, healthy lifespan, or ability to build functional democracies between continental ancestry groups is terrifying even if it\u2019s unlikely. The last time a major segment of academia thought that, we got forcible eugenics, slavery, colonialism, mass disenfranchisement, fascist dictators, and arguably even multiple genocides.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-19 15:33:13",
+                                                    "replies": [
+                                                        {
+                                                            "author": "LastInALongChain",
+                                                            "body": "I don't really like the idea that we should deny reality because it feels bad.",
+                                                            "score": 3,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-05-20 16:59:22",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "The direction everything is going, it will be abused.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2022-05-19 08:26:33",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "8to24",
+            "body": "Race is a social construct. There is as much genetic diversity within what is socially perceived to be a race as there is between them. Humans have been sharing genes between populations consistently since leaving Africa. \n\nSo an AI which detects race is probably an artifact of the biases coded into it by its designer (humans).",
+            "score": -8,
+            "depth": 0,
+            "timestamp": "2022-05-19 08:42:56",
+            "replies": [
+                {
+                    "author": "Ok-Brilliant-1737",
+                    "body": "Like some other social constructs, such as gender, race is a social construct that is 99.999999999999999999999999999% rooted in objective, real, undeniable biological reality.  That reality is statistical, meaning pointing to tedious outliers does precisely zero to invalidate the conclusions from the mean.\n\nSo an AI that detects race, where race is primarily if not exclusively DEFINED by melanin content and/or skin hue in precisely zero ways is picking up on the \u201cbias\u201d of its designers.  It\u2019s picking up on the definition.  Meaning:  it is doing what it is designed to do and what it is designed to do is in no way malign.",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2022-05-19 11:42:05",
+                    "replies": [
+                        {
+                            "author": "8to24",
+                            "body": "\"In 2003, Phase 1 of the Human Genome Project (HGP) demonstrated that humans populating the earth today are on average 99.9% identical at the DNA level, there is no genetic basis for race, and there is more genetic variation within a race than between them [2]. In addition, genetic isolation, sharp boundaries and distinct evolutionary lineages of \u2018races\u2019 do not exist. Thus, the idea of \u2018race\u2019 as a genetic category was presumably put to rest. The continued acceptance of \u2018race\u2019 as an appropriate biological category would have to be predicated on data indicating there are genes distinct to one \u2018race\u2019 that are transcribed in one \u2018race\u2019, but not another and human genetic variation is not continuous. This is distinct from small differences in allele frequencies due to mutations in a given family\u2019s genetic lineage as will be discussed later in this manuscript.\"\nhttps://academic.oup.com/emph/article/9/1/232/6299389",
+                            "score": -2,
+                            "depth": 2,
+                            "timestamp": "2022-05-19 11:48:49",
+                            "replies": [
+                                {
+                                    "author": "Ok-Brilliant-1737",
+                                    "body": "I note the subtle rhetorical shift there.  Or perhaps the presuppositional weightlifting.  \n\nThat is the shift in the first half FROM \u201cgenetic\u201d TO the second half \u201cbiological\u201d.  Or perhaps the weightlifting is something like \u201cmorphology is entirely genetic\u201d.  \n\nOr perhaps these less scientifically defensible idea that a .1% genetic difference is in the noise and of no significance.\n\nThe point is:  your quote doesn\u2019t do what you want it to.  Nor is it in any way relevant to this discussion.\n\nApparently the researchers 1) provided a dataset where skin tone was perceptible by the algorithm 2) a definition set where race was defined by skin tone 3) then ran the test.\n\nWhat is there to see here?",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-19 11:57:42",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "LastInALongChain",
+                                    "body": ">In 2003, Phase 1 of the Human Genome Project (HGP) demonstrated that humans populating the earth today are on average 99.9% identical at the DNA level, there is no genetic basis for race, and there is more genetic variation within a race than between them\n\nYou could say the same thing for gender though, and call that a social construct. Gender is an even closer match for DNA in all regards except for the sex chromosome, but the differences are huge. But you can't just tell people to ignore their lying eyes and ears and pretend there are no differences.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-19 15:28:56",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Mokebe890",
+                    "body": "How it can be if different races have different traits? Or gene illnesses? Or respond differently to medications? As typical biological organisms we adapt to place we live in, give it some many generations and humans will vary. There is absolutly nothing wrong in this.\n\nAlso I have absolutly no idea how you code something like this in AI that understand the images of Xrays. It is probably measuring the density of bones and their arrangement which, again, vary depens on evolution and what race you are.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-05-19 09:14:03",
+                    "replies": [
+                        {
+                            "author": "bkydx",
+                            "body": "Probably bone density.   \n\n\nActually Reads article Skin Pigment.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-05-19 09:39:28",
+                            "replies": []
+                        },
+                        {
+                            "author": "8to24",
+                            "body": "https://www.nationalgeographic.com/science/article/genetics-history-race-neanderthal-rutherford",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2022-05-19 09:17:59",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "bashomatsuo",
+            "body": "While it\u2019s possible that an external variable has snuck into the training, which is causing this effect - that\u2019s happened before* - this result is generally not unexpected. \n\nIf there is a \u201cdifference\u201d that can be mathematically defined from the data, then the machine learning will find it, and often when humans cannot. \n\nSource: I\u2019m a Data Scientist.\n\n\n* for example, I recall one where they had included the comment field. The AI picked up on the subtle differences between comments when an engineer thought the scan showed cancer or not. When they took the field out the AI was unable to make the determination better than the humans.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-20 02:06:56",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "And thats when after suddenly developing sentience the decentralized global AI that created itself from the network of computers across the entire world was found to be racist.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-20 03:26:18",
+            "replies": []
+        }
+    ]
+}

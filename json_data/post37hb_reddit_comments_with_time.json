@@ -1,0 +1,804 @@
+{
+    "post_title": "Google urges US to update immigration rules to attract more AI talent",
+    "post_timestamp": "2024-05-01 11:47:47",
+    "last_comment_timestamp": "2024-10-10 15:27:17",
+    "time_difference": "162 days, 3:39:30",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "body": "## Welcome to the r/ArtificialIntelligence gateway\n### News Posting Guidelines\n\n---\n\nPlease use the following guidelines in current and future posts:\n\n* Post must be greater than 100 characters - the more detail, the better.\n* Use a direct link to the news article, blog, etc\n* Provide details regarding your connection with the blog / news source\n* Include a description about what the news/article is about. It will drive more people to your blog\n* Note that AI generated news content is all over the place. If you want to stand out, you need to engage the audience\n\n###### Thanks - please let mods know if you have any questions / comments / etc\n\n*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/ArtificialInteligence) if you have any questions or concerns.*",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-01 11:47:47",
+            "replies": []
+        },
+        {
+            "author": "SanDiegoDude",
+            "body": "Plenty of folks in the IT industry that have been jobless in the US for 6 months+ because of the hidden IT recession.  How about you hire those folks instead of more cheap IT workers out of other countries?  Or is it that you just don't want to pay them? And don't tell me nonsense that they need specialized workers for AI - I did 20 years in cybersecurity before moving over to AI systems development. There's plenty of talent here Google if you're willing to actually pay them.",
+            "score": 120,
+            "depth": 0,
+            "timestamp": "2024-05-01 12:35:32",
+            "replies": [
+                {
+                    "author": "melodyze",
+                    "body": "Google has uniform policies on pay bands and pays their H1B full time employees the same as everyone else, [averaging $386k/year](https://www.levels.fyi/companies/google/salaries/software-engineer?country=254) on a W2 for a senior software engineer. They don't save money hiring H1Bs, other than very abstract arguments about the broader labor market that assume that technology investment, what any economist would tell you is the very antithesis of a zero sum game, is zero sum.\n\nThe real reason they want H1Bs is that these fields are a direct competition over talent that is not a binary, but a continuum of capability with no hard upper bound. You will get really radically different outcomes in very new very highly technical applied research if you're able to staff the research org at the 95th percentile vs the 99.5th percentile vs the 99.95th percentile.\n\nThat's because the rate of progress the company can push in research is capped entirely by the rate at which the researchers can learn. There is no playbook to remember and apply. It's exploration of new problem spaces. And they are in a direct competition with other companies to be in front so they can capture market first. Whoever has the best people wins.\n\nThis is a big structural problem for the tech hiring in the US because intelligence is roughly evenly distributed around the world. Americans are not just way smarter than everyone else. And the number of people you have at the 99.95th percentile in a country is, well, 0.00005 times the population. So, given that the US is 350m/8b, we will only have about 5% of the people at any threshold in that competition born in the US.\n\nBut the US has historically killed it at technology precisely because it has had a very unique and enormous advantage at attracting the smartest people from the rest of the world to move here, first to come to the best universities in the world, and then to receive the highest pay for high skilled work in the world.\n\nAccordingly, if you walk around Google (or any top tech company) today, it is a very large number of immigrants, not just on h1b, but greencards, second gen citizens, especially from the largest countries in the world (India and China) which will naturally have a large number of outlier people just due to their size.\n\nChinese top talent increasingly stays in China as they are catching up and the language barrier is harder, Indian top talent increasingly goes to Europe because the greencards quota for them means they will die before they can get a green card, and thus they can't really build a life here.\n\nIf you think we're going to compete with chinese tech in 20 years with just native born Americans then you have not thought seriously about this problem at all.\n\n[The literal majority of US tech companies worth more than a billion dollars were founded or co-founded by first gen immigrants.](https://www.forbes.com/sites/stuartanderson/2022/07/26/most-us-billion-dollar-startups-have-an-immigrant-founder/?sh=5e41bcac6f3a). That same cohort has driven almost all of US economic growth since covid, so this isnt even just an issue within the industry.\n\n[40% of US nobel prize wins were first gen immigrants.](https://www.forbes.com/sites/stuartanderson/2023/10/05/immigrant-nobel-prize-winners-continue-to-impress/?sh=7424cb867394)\n\nThe entire bedrock of American tech success to date has been antithetical to the idea you are proposing, and diverging so radically from the strategy that has worked so well will, of course, cause a difference in outcomes.\n\nIt's just so annoying because american exceptionalists so often want to kill the thing at which america has been truly exceptional, attracting the smartest people in the world to join us. Americans ourselves are just normal people. The quality of our immigrants is what is so unique and the entire reason why we, as a country, are so good at science and technology.\n\nFor clarity, most lines in my family have been in the US long enough that we don't know where they're originally from. I'm not an immigrant at all. I just work (and thus hire) in this field.",
+                    "score": 8,
+                    "depth": 1,
+                    "timestamp": "2024-05-02 00:34:46",
+                    "replies": [
+                        {
+                            "author": "MonkeyThrowing",
+                            "body": "I work in a company that has a lot of H1B visa holders. They are not the best and brightest. They simply will work for less and are unable to change companies easily.\u00a0",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-02 06:37:13",
+                            "replies": [
+                                {
+                                    "author": "melodyze",
+                                    "body": "Different companies, and especially industries, even teams, have very different labor strategies and will thus use the same tool for very different things.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-02 09:22:29",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "BlockNo1681",
+                                    "body": "Don\u2019t forget they also have dynamic schedules, I work with them and they work 24/7. These companies are itching for us to do that, under pay us and over work us. We will have indentured servitude soon",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-20 00:10:08",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "ProgrammerPlus",
+                    "body": "What's your bar for \"cheap\"? Most on my team are foreign born engineers on H1 and they all make minimum 250K. I'm sure some make more than 400K.\u00a0",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 15:17:21",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "Relative to other jobs, that's a lot.\u00a0\n\n\nRelative to the profits generated, it's tiny.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-05-01 18:46:39",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "SomewhereNo8378",
+                    "body": "A lot of people who come here to learn ML/AI end up leaving and taking their skillset back to their home country because they can\u2019t get on a path to naturalization.\n\nThese are bonafide AI experts who want to stay here, likely have lived here for many years already while studying, and it does not make any sense to push their expertise into the hands of competing nations because of archaic immigration rules",
+                    "score": 29,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 13:16:06",
+                    "replies": [
+                        {
+                            "author": "ImaginaryScientist32",
+                            "body": "While I don\u2019t disagree, one thing they can do is stop issuing H1B visas to junior level software engineers that are on par with any American junior engineer and reserve them for ppl with specialized skills.",
+                            "score": 28,
+                            "depth": 2,
+                            "timestamp": "2024-05-01 17:22:40",
+                            "replies": []
+                        },
+                        {
+                            "author": "GoldenHorizonAI",
+                            "body": "That's a point I've never heard before. If that's true it's potentially throwing away good educated workers. \n\nI know plenty of Africans who come here, get educated in medical/engineering, but choose to stay. I think it depends on what the home country is offering them as well.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-02 22:40:46",
+                            "replies": []
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "So stop hiring people from other places? Duh? The big money WANTS them to go home. The last tech bubble for fast Internet is these far off places. They want them there to buildout for the unlimited cheap labor, they need liaisons there. They don\u2019t need people in US, workers are plentiful here and could learn on the job in 3 months be up to speed. Globalism is all about fortune500 having same \u201cfrom the couch\u201d access to worksites anywhere in the world. Same work, same quality, same contact experience, 1/100th the cost\u00a0",
+                            "score": -11,
+                            "depth": 2,
+                            "timestamp": "2024-05-01 13:20:31",
+                            "replies": [
+                                {
+                                    "author": "SomewhereNo8378",
+                                    "body": "You can learn to use AI tools in 3 months.\n\nYou cannot learn graduate level theory and practice in artificial intelligence in 3 months or even 3 years.",
+                                    "score": 16,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-01 13:27:44",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "I disagree of course. The first 4 years are mostly BS and kissing ass. 3 hours a week of teaching anything relevant to the job. Summers off.\u00a0\u00a0\n\nGraduate school is even more hand holding. You are paying for the post grad degree, ofc anyone who does so will get one. It\u2019s not about skill or talent, it\u2019s about pay, money, and maintaining classism. It\u2019s closer to working on the job, if work was very part time.\u00a0\n\n\u00a0Working on the job is 8-10 hours per day.. 3 weeks of college crammed into each day. Do or die(fired).. and you MAKE $!\u00a0 \u00a0\u00a0\u00a0 \u00a0\u00a0\u00a0 College is a $2T industry with debt that creates endentured servitude.\u00a0\u00a0",
+                                            "score": -11,
+                                            "depth": 4,
+                                            "timestamp": "2024-05-01 13:29:39",
+                                            "replies": [
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "The truly crap thing.. they award the jobs to workers from countries where there is NO student debt! They can use the full salary to drive inflation, esp housing. Then climb the ladder and discriminate to hire only those from their countries, where old secret prejudices are far different and shocking than USA\u2019s, where we have open dialog and willing to discuss them. No other county looks itself in the mirror as much as USA, and that hides how bad other places are. It\u2019s gross when you start to realize how screwed it all is.\u00a0",
+                                                    "score": 4,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-05-01 13:48:27",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 17:34:07",
+                    "replies": [
+                        {
+                            "author": "Franc000",
+                            "body": "Umm, no. The tech companies do not just hire everyone that has AI skills. In fact, if you would have any, you would know that the market is actually saturated with people with those skills. Everybody and their grandmother wanted to be a data scientist and jumped on AI. The truth is that there are not that many positions that are truly about making AI. Those positions are highly sought after, and the competition is fierce. To get paid millions at deep mind in AI, you need to be exceptional at it, and willing to work in a few specific places.\n\nGoogle, and the tech companies, do not just gobble up all AI talents. They don't even try to poach from each other anymore.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-05-02 05:47:29",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Slow-Enthusiasm-1337",
+                    "body": "Objectively valid.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 14:29:12",
+                    "replies": []
+                },
+                {
+                    "author": "Deleted",
+                    "body": "No you can\u2019t just pick up core ML work, it takes years of study to be okay at and even more to be great at",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 15:42:04",
+                    "replies": [
+                        {
+                            "author": "Expert-Paper-3367",
+                            "body": "I find it hilarious that he thinks anyone in tech, especially IT can just \u201cpivot\u201d to AI. When those guys have been deep in the field rubbing shoulder with quants and others with near genius level understanding of computation and math",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-05-03 17:54:11",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "The hubris is really astounding",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-03 18:42:10",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "luckymethod",
+                    "body": "most of those people aren't ml experts. It's a shame though that layoffs have impacted so many people and I truly hope the market picks up soon",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 18:06:28",
+                    "replies": []
+                },
+                {
+                    "author": "OptiYoshi",
+                    "body": "That's actually not true, for senior engineers it's been joke easy getting jobs, most people layed off were support and project management.\n\nAlso there's a big difference between AI expertise and implementation engineers. It's joke easy implementing AI into a solution, but the background isn't something just any engineer can do.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-02 13:27:23",
+                    "replies": [
+                        {
+                            "author": "Expert-Paper-3367",
+                            "body": "Yeah, these companies are looking for real researchers and innovators, not guys who can pick up some ml/deep learning books and copy the models on there",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-03 17:55:23",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "GoldenHorizonAI",
+                    "body": "Ah, but they don't want to pay them...\n\nYou have to be more understanding of the big mega corp that's part of the monopoly on AI. They're really trying their best... really! They can't afford to pay people more! /s",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-02 22:38:05",
+                    "replies": []
+                },
+                {
+                    "author": "EstablishmentSad",
+                    "body": "A little late, but what did your journey into AI look like? I am looking for a pivot professionally and AI is something that is not only going to be in demand for the foreseeable future...but its something that interests me as well.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-03 10:06:46",
+                    "replies": [
+                        {
+                            "author": "SanDiegoDude",
+                            "body": "No prob! I actually get this question every once in awhile when I mention my career swing. Here, I wrote this last time I got this question https://www.reddit.com/r/ArtificialInteligence/comments/1cc04x8/how_ai_already_changed_my_life/l17m2oi/",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-03 10:42:39",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "It\u2019s all manipulation, all the time. Smart people at \u201csmart\u201d universities figure out most aren\u2019t like them and will still buy a whopper meal even for $16.. If they\u2019ll buy that, they\u2019ll buy anything at all. Sadly this is all from the same branch that creates the \u201cnobody is created equal, some are better\u201d spew that always end up in wars, crime, recessions, and violence.\u00a0",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 13:05:34",
+                    "replies": []
+                },
+                {
+                    "author": "Deleted",
+                    "body": "Dude this is what I have been saying... like wtf is even going on?",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 21:53:55",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "AnthonyOfPadua",
+            "body": "Translation: big corporation wants cheap labor even though we have plenty of people who can do the work here already.",
+            "score": 46,
+            "depth": 0,
+            "timestamp": "2024-05-01 15:25:39",
+            "replies": [
+                {
+                    "author": "kex",
+                    "body": "Yep, I have 30 yoe and I've been looking for over three months now and hardly a peep from ~ 400 applications",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 15:51:08",
+                    "replies": [
+                        {
+                            "author": "Caffeine_Monster",
+                            "body": "With what experience / asking salary / willingness to relocate though?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-01 16:37:57",
+                            "replies": [
+                                {
+                                    "author": "kex",
+                                    "body": "Most likely because I'm almost 50 and only have a two-year college degree.  Experience has always been sufficient up until the past few years.\n\nEdit: seeking at least 140k for an in-office staff or senior level job, but willing to go much lower for full remote.",
+                                    "score": 6,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-01 17:41:59",
+                                    "replies": [
+                                        {
+                                            "author": "luckymethod",
+                                            "body": "College REALLY doesn't matter. Experience in what?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-05-01 18:08:07",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "anomnib",
+                    "body": "Generally true but not for advanced STEM. I\u2019ve take math, stats, and computer science courses at top universities, as soon as you get to the advanced level courses, the percentage of American born students falls through the floor.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 18:39:49",
+                    "replies": []
+                },
+                {
+                    "author": "Deleted",
+                    "body": "Plenty of people with no jobs too...",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 21:55:20",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "ShoppingDismal3864",
+            "body": "Didn't Google just lay off a bunch of people from America though? It's a strange act to say this while doing that at the same time.\n\nGoogle wants more employees to come to America, so they can lay them off? I'm confused.",
+            "score": 16,
+            "depth": 0,
+            "timestamp": "2024-05-01 15:10:33",
+            "replies": [
+                {
+                    "author": "Narrow_Corgi3764",
+                    "body": "They want to lay off underperforming employees. They want to hire overperformers from other countries. It's not rocket science.",
+                    "score": -10,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 17:11:06",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "Get your head out of your own ass, they aren't hiring you because you are better its more about being um cheaper?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-05-01 21:57:50",
+                            "replies": [
+                                {
+                                    "author": "Narrow_Corgi3764",
+                                    "body": "Yeah sure buddy, they're hiring people like Diederik Kingma and Ashish Vaswani because they're cheaper, not because they're geniuses lmao",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-04 22:11:09",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "Did you really spend 3 days thinking of a reply lol?\n\nThere are exception to every rule ~",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-05-05 00:41:48",
+                                            "replies": [
+                                                {
+                                                    "author": "Narrow_Corgi3764",
+                                                    "body": "Nah, I only opened my reddit today.\n\nAnd no, Google's foreign hires that go through PERM are like 99% research scientists on that class. Believe it or not, if you're a run of the mill software engineer Google won't sponsor you for a visa.",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-05-05 00:59:43",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Solid_Illustrator640",
+            "body": "As AI talent, they just fired hella programmers and replaced them with bots and foreigners. Why would anybody want to do that",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2024-05-01 17:30:24",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2024-05-01 18:18:27",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "Yes, but not good 'weed'...",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 21:58:24",
+                    "replies": [
+                        {
+                            "author": "TucamonParrot",
+                            "body": "Not weed at all you goons. If you're at one of the top global tech companies that provides tons of free data to governments, you're all about that Adderall, blow, mushrooms (to get spiritually awakened), alcohol, and the gamut etc. I am not endorsing drugs, sales guys just happen to always have stuff just sitting around. Most of them drinking throughout the day to nail the sale. Confidence seekers.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-05-02 03:19:16",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2024-05-01 18:20:37",
+            "replies": [
+                {
+                    "author": "BK_317",
+                    "body": "they are trying to urge for bringing top talent not randos who get admitted to connegesta(?) college where they admit anyone who cant even speak english.\n\nyou are absolutely delusional if you think indians coming to us have low talent.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-05-02 02:02:14",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "[deleted]",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-02 05:20:30",
+                            "replies": [
+                                {
+                                    "author": "BK_317",
+                                    "body": "yeah those ms cs indian graduates from stanford,ucb,mit,cmu,uiuc etc all have fake resumes haha.\n\nget real mate",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-02 05:21:53",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "ReallySubtle",
+            "body": "Immigration benefits large corporations, that\u2019s all.",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2024-05-01 15:44:00",
+            "replies": [
+                {
+                    "author": "Star_Amazed",
+                    "body": "Immigration is what keeps our economy on top of the world. Declining or stagnating population = shit economy. Either make more babies, educate more Americans or let people in, those are your choices.\u00a0",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-02 07:55:26",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "If you\u2019re in IT that doesn\u2019t mean you\u2019re in AI.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-05-01 19:36:10",
+            "replies": []
+        },
+        {
+            "author": "cubej333",
+            "body": "I have years of AI experience and Google hasn\u2019t even spoken to me.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-05-01 22:49:37",
+            "replies": [
+                {
+                    "author": "BK_317",
+                    "body": "googles hiring bar is very high thats why.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-02 02:02:45",
+                    "replies": [
+                        {
+                            "author": "TucamonParrot",
+                            "body": "It's unrealistic and they want you to give up so much..in addition to layoffs, do you recall the turnover rates pre-covid? These companies are already hemorrhaging talent every day. Now, corporations have enough money to justify losing a few folks because the end up saving money on their budgets. They don't care how razer thin it is in terms of available staff with skill sets that are similar. I've worked in corporate since 2016, you just learn more about the cunty CFOs with unrealistic expectations of unlimited growth. Several various companies are slashing budgets to finally return the expected money to investors. Congratulations, you just made learned about pump and dumps. Get familiar, get angers, and start shorting companies that are hurting the planet. \n\nLet's all finally start some legit Tech unions and legalize it at the federal level to protect our talent that is here in the US - not abroad.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-02 03:28:12",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "The market is saturated as it is. We don\u2019t need more H1B visas.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-05-01 23:31:08",
+            "replies": [
+                {
+                    "author": "TucamonParrot",
+                    "body": "It's not just we don't need more... Americans value money too much, hence why we got into this problem in the first place. American CEOs are still making significantly more money than their counterparts in other countries. Why is no one asking why there's so much effin middle management? In my experience, the problem is that Americans have this obsession with money and then believe the narrative to trust poppa/Mama Bear corporate entities instead of your colleagues. Remember, you and your colleagues aren't too far off-base. So why wouldn't you share how much money you make with each other? Don't we all want to be properly compensated for our compounded years of knowledge? Listen, corporations are lined up to the teeth with all their lawyers and 'Human Resources' departmens 'to limit liability' and protect themselves from YOU in the event you lash out. CFOs don't care and majority make a million in a month (RSUs, RSOPs, stocks given to them with restrictions). We need H1Bs and American Born Children to compete. Competition is good for challenging each other, call it a necessary evil. What we need: better protections in place for the employee, a response to corporate greed to support and protect against corporations. There need to be people as experienced as a corporate shill, people to negotiate on the employee's behalf. I saw an union raise people's incomes randomly when looking at the difference between their colleagues. If everyone was paid the same, you wouldn't see competition either though. There's a balancing act to strike. Currently, we're not there..\n#TechUnions",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-02 03:41:22",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "advator",
+            "body": "Maybe help for education to learn Ai.\nMany doesn't know where to start",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-05-01 13:30:04",
+            "replies": [
+                {
+                    "author": "personwriter",
+                    "body": "Yes, this. Why not a combination of education starting early middle school and high school to teach students to become A.I. proficient? Additionally, have amenable laws for immigrants with skills specialized in the tech.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 13:50:30",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "GTFOOH. This is madness.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-05-01 16:23:34",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "you mean \"orders\"?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-02 00:43:56",
+            "replies": []
+        },
+        {
+            "author": "stikves",
+            "body": "Haha, jokes on them, as they cannot do layoffs, and apply for green cards (PERM) at the same time.\n\nAs long as they continue this process, Google would forever be locked out of \"talent\".",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-02 01:37:45",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "Just saw this article in ZDNet, which may be of interest: [https://www.zdnet.com/article/microsoft-wants-to-arm-2-5-million-people-in-asean-with-ai-skills/](https://www.zdnet.com/article/microsoft-wants-to-arm-2-5-million-people-in-asean-with-ai-skills/)",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-02 08:49:09",
+            "replies": []
+        },
+        {
+            "author": "nokenito",
+            "body": "We have enough Americans that know AI\u2026",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-02 11:15:05",
+            "replies": []
+        },
+        {
+            "author": "fiddysix_k",
+            "body": "If Google is starving for talent, why are they offshoring entire departments? Dead company, it will not last another decade. Vulture capitialism will leave them with their foot in their mouth when the cookie crumbles. Terrible product, terrible leadership: Google.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-02 11:29:20",
+            "replies": []
+        },
+        {
+            "author": "GoldenHorizonAI",
+            "body": "Ah geez. Get the fuck out with big tech companies telling the country what their political policies should be. \n\nThere's literally mass layoffs of tech workers in this country right now. Many don't have jobs. Why not hire them? \n\n(Let me guess, they're too expensive...)",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-02 22:37:31",
+            "replies": []
+        },
+        {
+            "author": "alancusader123",
+            "body": "Yo this news for real?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-30 16:57:07",
+            "replies": []
+        },
+        {
+            "author": "ai-jobs",
+            "body": "This would be a big win all around to attract the global AI talent shortage",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-10-10 15:27:17",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[removed]",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-01 12:39:29",
+            "replies": [
+                {
+                    "author": "spaetzelspiff",
+                    "body": "Companies looking for basic IT skills (DBA, sysadmin, entry level developers, etc) outsource to Accenture or whoever. \n\nCompanies looking for senior / PhD / specialist talent in areas that are critical to their business are not looking to pinch pennies to hire cheap labor from emerging markets.\n\nLook at the top/senior positions in tech and finance. They're still paying $300-900k easily. \n\nWe should continue hiring the best from around the world, and keeping them here.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 15:16:15",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "NaturalPlace007",
+            "body": "They just laid off a whole bunch of ppl. Couldnt they have fit into these roles?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-01 19:15:06",
+            "replies": []
+        },
+        {
+            "author": "redperson92",
+            "body": "there is no such thing as   AI talent.  also almost all work is done in the usa.  how did all these foreign people suddenly become AI experts?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-01 20:52:29",
+            "replies": []
+        },
+        {
+            "author": "mcwerf",
+            "body": "There's more nuance to this conversation than most people here are giving credit for. AI is in its infancy and is a technology that will determine whether America maintains its status as the next global superpower or whether that's ceded to countries like China. To stay competitive, we need talent. We don't have enough talent, and no, just because you're a mediocre IT professional with no background in AI who can't find a job doesn't mean we do. No, Google laying off a bunch of HR and back office people doesn't mean we do. If AI talent was so widely available, Zuck wouldn't be personally emailing Google's AI researchers to come work for Meta. \n\nAnd no, this isn't just Google \"looking for cheap labor.\" If it was, why wouldn't they just hire those researchers in the countries they're currently in? You think big bad evil corp who wants to pay people nothing wants to pay US engineer salaries? All you have to do is look at Google's, or any AI company's, careers website to understand these are jobs that pay well into the 6 figures, sometimes close to 7. Comments saying \"immigrant labor is cheaper\" is living in fantasy land where supply and demand apparently don't exist. \n\nEvery tech company submits comments like these because there are talented researchers who want to come work here and stay here but can't because our immigration system is broken and underfunded. Any cursory research into how many H1B applications were received vs. how many were processed will show you this. \n\nLook, love or hate Google, if America wants to win the AI race, they are one of the horses we have to bet on, along with companies like OpenAI, Anthropic, and Perplexity. They all are saying we need to make it easier for white collar talent to come here. Americans should want highly paid (read: bigly tax revenue) workers to come here and support America in the AI race.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2024-05-01 17:07:08",
+            "replies": [
+                {
+                    "author": "jawabdey",
+                    "body": "> And no, this isn't just Google \"looking for cheap labor.\" If it was, why wouldn't they just hire those researchers in the countries they're currently in?\n\n[Google lays off hundreds of 'Core' employees, moves some positions to India and Mexico](https://www.cnbc.com/2024/05/01/google-cuts-hundreds-of-core-workers-moves-jobs-to-india-mexico.html)",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-05-02 00:27:36",
+                    "replies": [
+                        {
+                            "author": "mcwerf",
+                            "body": "Literally proves my point; if they wanted AI researchers cheap they would hire them elsewhere.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-02 06:45:39",
+                            "replies": [
+                                {
+                                    "author": "jawabdey",
+                                    "body": "So, it wants to pay more\u2026why? All other engineers can be outside the US, but AI \u201cResearchers\u201d need to be here?\n\nMind you, Google forced RTO for the jobs they just moved to other countries, because supposedly those jobs needed to be done in person, until they didn\u2019t.",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-02 10:01:45",
+                                    "replies": [
+                                        {
+                                            "author": "mcwerf",
+                                            "body": "> So, it wants to pay more...why?\n\nThey don't \"want to pay more.\" Any public company will pay the bare minimum it can to attract the workers it needs. If they need the talent this bad then they have to attract them with the high pay it demands. If they're paying that kind of money, I imagine they want the researchers to be with the other researchers in the US where they're headquartered (or the UK if it's DeepMind). They can't do that if the immigration system is broken. That's in my post.\n\nAnd yeah, those jobs aren't AI jobs...again, it's in the post. Also keep in mind this company isn't just the CEO drawing org charts and writing job descriptions and doing hiring; it's 200,000 employees and something like hundreds of VPs that might make decisions independently. \n\nMy ultimate point is boiling this down to \"Google always bad\" isn't an accurate picture of reality. You can disagree with their approach but that's the truth is nuanced whether you want to believe it or not.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-05-02 12:25:11",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Big_Forever5759",
+            "body": "fact society apparatus psychotic market nine cause somber thumb consider\n\n *This post was mass deleted and anonymized with [Redact](https://redact.dev)*",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2024-05-01 16:44:42",
+            "replies": []
+        },
+        {
+            "author": "healthywealthyhappy8",
+            "body": "Google is a fucking asshole! They just laid off people.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2024-05-01 17:53:35",
+            "replies": []
+        },
+        {
+            "author": "Cryptotiptoe21",
+            "body": "I've been with Google since day one and watch them grow from nothing to a fucking Mega tropolis of centralization. That being said I've tried to give them my two cents thousands of times I've tried to help them evolve as best as I can and I could tell you out of the hundreds of emails that I've sent multiple streams of feedback I have never once in my entire life have gotten a response from Google. They know that they have no choice but to implement AI technology they also know that decentralization is being heavily adopted and they're going to have to drastically change their business practices to stay alive in the future. In my opinion they haven't really done shit in the past 5 years they're more focused on creating devices instead of focusing on what they're supposed to be doing which is software. There's certain technologies that they have that needs a whole lot of work for example Google Maps or Google's voice to text. These are two applications that direly need AI implementation since they're not going to use Manpower to evolve these apps fast enough. I cannot remember a time in the past 2 years that I've successfully been able to use Google maps without any problems or been able to use Google's voice to text for even a paragraph without having to edit it. Google lay down a lot of Foundations that being said we need other protocols and apps for services that Google has a conglomerate for.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2024-05-01 18:49:45",
+            "replies": []
+        },
+        {
+            "author": "SuspicousBananas",
+            "body": "Really confused by this headline, didn\u2019t big tech just lay off a TON of people?",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2024-05-01 20:10:38",
+            "replies": [
+                {
+                    "author": "BK_317",
+                    "body": "they laid off just 10 people recently",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-05-02 02:03:18",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "beehive3108",
+            "body": "Don\u2019t fall for this again!!! Big tech did the same thing back in late 90s. Saying we need the \u201cbest and brightest \u201c from the world here. Little did we know that was a guise to open the flood gates for cheaper tech labor and they never looked back.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2024-05-01 20:31:01",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "You know where top AI talent isn\u2019t coming from? Anywhere south of the border who is walking over",
+            "score": -2,
+            "depth": 0,
+            "timestamp": "2024-05-01 14:39:53",
+            "replies": [
+                {
+                    "author": "LSF604",
+                    "body": "and?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 16:56:26",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "And if we tightened up there we would be better able to handle importing people with the talents this field requires",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2024-05-01 16:59:29",
+                            "replies": [
+                                {
+                                    "author": "LSF604",
+                                    "body": "howso?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-05-01 17:06:53",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Flash_Discard",
+            "body": "Yeah I bet there\u2019s a ton of talent in Gaza right now just waiting to get in and make Google billions of dollars\u2026\ud83d\ude44\ud83d\ude44\ud83d\ude44",
+            "score": -2,
+            "depth": 0,
+            "timestamp": "2024-05-01 16:39:54",
+            "replies": []
+        },
+        {
+            "author": "Calm_Leek_1362",
+            "body": "\u201cAttract more talent\u201d bullshit. Indian ceo wants more low paid Indians.",
+            "score": -2,
+            "depth": 0,
+            "timestamp": "2024-05-01 21:21:03",
+            "replies": [
+                {
+                    "author": "BK_317",
+                    "body": "you are delusional,google pays min 250k for fresh sdes and ai/ml roles easily touch 500k at senior levels",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-02 02:04:16",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "panconquesofrito",
+            "body": "Nah, they should outsource the whole thing to China.",
+            "score": -4,
+            "depth": 0,
+            "timestamp": "2024-05-01 13:06:40",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-01 13:45:20",
+                    "replies": [
+                        {
+                            "author": "panconquesofrito",
+                            "body": "I mean that is what they have with everything is seems. Why stop now?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-01 13:46:07",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

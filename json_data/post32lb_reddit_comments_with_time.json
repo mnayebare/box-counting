@@ -1,0 +1,175 @@
+{
+    "post_title": "Google Is Helping the Trump Administration Deploy AI Along the Mexican Border | Google is part of a Customs and Border Protection plan to use machine learning for surveillance, documents reviewed by The Intercept reveal",
+    "post_timestamp": "2025-04-03 16:46:29",
+    "last_comment_timestamp": "2025-04-07 20:08:38",
+    "time_difference": "4 days, 3:22:09",
+    "comments": [
+        {
+            "author": "JDGumby",
+            "body": "Remember \"Don't be evil\"? I do, but Google obviously doesn't.",
+            "score": 27,
+            "depth": 0,
+            "timestamp": "2025-04-03 17:57:06",
+            "replies": [
+                {
+                    "author": "Boo_Guy",
+                    "body": "\"Don't Be Evil\" was long ago replaced with \"Ya But Money\".",
+                    "score": 20,
+                    "depth": 1,
+                    "timestamp": "2025-04-03 19:59:04",
+                    "replies": [
+                        {
+                            "author": "WrittenSwine",
+                            "body": "Don\u2019t be evil for free.",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2025-04-04 09:47:12",
+                            "replies": []
+                        },
+                        {
+                            "author": "Miguel-odon",
+                            "body": "Reminds me of engineering school: 1 semester of ethics/environment (combined into a single class), followed by 3 semesters of economics.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-04-05 10:32:47",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "imaginary_num6er",
+                    "body": "\"Be Evil\", \"Do the wrong thing\" \n\nSeems like they're becoming more like IBM",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-04-03 22:16:44",
+                    "replies": [
+                        {
+                            "author": "Hrmbee",
+                            "body": "\"IBM will provide its Maximo Visual Inspection software, a tool the company generally markets for industrial quality control inspections \u2014 not tracking humans.\"\n\nYup, they're all in this together.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-04-04 12:17:12",
+                            "replies": [
+                                {
+                                    "author": "mountaindoom",
+                                    "body": "[Not the first time IBM has helped fascists](https://www.theguardian.com/world/2002/mar/29/humanities.highereducation)",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-07 20:08:38",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "gentlegreengiant",
+                    "body": "Clearly they do, why else would they actively remove any mention or reference to that? That and their commitment to ban use of AI for development of weapons.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-03 19:44:39",
+                    "replies": []
+                },
+                {
+                    "author": "yall_gotta_move",
+                    "body": "What specifically is evil about monitoring the nation's borders to ensure people aren't entering the country illegally?\n\n\nCan you point to any successful nation in world history that had zero enforcement of its own borders?\n\n\nImmigration should happen through the proper legal channels. We should know who is coming in, what are they coming for, how long are they planning to stay, etc.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-03 21:38:34",
+                    "replies": [
+                        {
+                            "author": "i4mt3hwin",
+                            "body": "So how about Google works on improving the immigration system so it's significantly easier and cheaper for people to get in, legally, and contribute to our economy.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-04-04 05:41:00",
+                            "replies": [
+                                {
+                                    "author": "yall_gotta_move",
+                                    "body": "I'm all for it.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-04-04 16:25:40",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "turb0_encapsulator",
+            "body": "one of the reasons big tech moved right is that defense contracting presented a big opportunity for an industry that had already gobbled up nearly every other industry.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2025-04-03 21:38:14",
+            "replies": []
+        },
+        {
+            "author": "Hrmbee",
+            "body": "A number of key portions from this report:\n\n>U.S. Customs and Border Protection is planning to modernize older video surveillance towers in Arizona that provide the agency an unblinking view of the border. A key part of the effort is adding machine-learning capabilities to CBP cameras, allowing the agency to automatically detect humans and vehicles as they approach the border without continuous monitoring by humans. CBP is purchasing computer vision powers from two vendors, IBM and Equitus. Google, the documents show, will play a critical role stitching those services together by operating a central repository for video surveillance data.\n>\n>...\n>\n>Tying together these machine learning surveillance tools is Google, which the document reveals is supplying CBP with a cloud computing platform known as MAGE: the ModulAr Google Cloud Platform Environment. Based on the document, Google is providing a hub for video surveillance data and will directly host the Equitus AI analysis tool. It appears every camera in CBP\u2019s Tucson Sector will pipe data into Google servers: \u201cThis project will focus initially on 100 simultaneous video streams from the data source for processing,\u201d the document reads, and \u201cthe resulting metadata and keyframes will be sent to CBP\u2019s Google Cloud.\u201d\n>\n>The diagram also notes that one of Google\u2019s chief rivals, Amazon Web Services, provides CBP with unspecified cloud computing services.\n>\n>...\n>\n>In a statement provided to The Intercept, Google Public Sector executive Jim Kelly attempted to distance the company slightly from the border surveillance work. \u201cCBP has been public about how it has a multicloud strategy and has used Google Cloud for work like translation,\u201d Kelly wrote. \u201cIn this case, Google Cloud is not on the contract. That said, customers or partners can purchase Google Cloud\u2019s off-the-shelf compute, storage, and networking products for their own use, much like they might use a mobile network or run their own computer hardware.\u201d\n>\n>Kelly\u2019s statement indicates the government is acquiring Google Cloud services through a reseller, as is common in federal procurement. But Kelly\u2019s comparison of Google Cloud technology to buying off-the-shelf computer hardware is misleading. Even if it\u2019s supplied through a subcontractor or reseller, CBP\u2019s use of Google\u2019s service still requires a constant and ongoing connection to the company\u2019s cloud infrastructure. Were Google still serious about \u201cnot working on any projects associated with immigration enforcement at the southern border,\u201d as Kurian claimed in 2020, it would be trivial to prevent CBP from using Google Cloud.\n>\n>...\n>\n>\u201cOn top of the wasted tax dollars, border communities end up paying the price with their privacy, as demonstrated by the recent findings by the Government Accountability Office that CBP had failed to implement six out of six key privacy policy requirements,\u201d Dave Maass, director of investigations at the Electronic Frontier Foundation, told The Intercept, referring to the tower program\u2019s dismal privacy protections record. \u201cFor more than two decades, surveillance towers at the border have proven to be a boondoggle, and adding AI isn\u2019t going to make it any less of a boondoggle \u2014 it will just be an AI-powered boondoggle.\u201d\n\nIt's pretty clear that Google, like most other big tech companies, is more than happy to gorge on public money, regardless of how problematic the work might be. Their half-hearted attempts to distance themselves from the work are the thinnest veneer over what could cause some pushback by customers or employees.\n\nEdit: vocab",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2025-04-03 16:52:27",
+            "replies": []
+        },
+        {
+            "author": "whichwitch9",
+            "body": "So, just like their AI deployed for Google searches, people just need to feed it bad information so it learns the wrong things and they know how to get around it once it's model is operational. Got it",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-04-04 00:39:47",
+            "replies": []
+        },
+        {
+            "author": "GongTzu",
+            "body": "So what we all knew for years, Google is Evil, driven by evil people who will sell their mom for highest amount.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-04-04 01:17:31",
+            "replies": []
+        },
+        {
+            "author": "waitingtobeinspired",
+            "body": "Second guessing the actual purpose of the wall. Might not be for keeping Mexicans out but keeping Americans in when the country is in utter ruin.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-04-04 09:32:26",
+            "replies": []
+        },
+        {
+            "author": "MayContainRawNuts",
+            "body": "The refugees just need to dress up like traffic lights, ai won't be able to identify what sector they are in.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-04-03 19:32:54",
+            "replies": []
+        },
+        {
+            "author": "deadra_axilea",
+            "body": "Ah, do no evil has left the chat.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-04-03 21:52:14",
+            "replies": []
+        },
+        {
+            "author": "sniffstink1",
+            "body": "Yeah...\n\nAny mobile phones out there with an operating system that isn't Apple or Google?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-04-03 19:56:50",
+            "replies": [
+                {
+                    "author": "Hrmbee",
+                    "body": "There are a number of them out there, depending on what kind of hardware you have and how tech savvy you might be. But out of the box? Very few (maybe Blackberry and Jolla)?\n\nedit: added examples",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-04 12:17:47",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,944 @@
+{
+    "post_title": "I research Algorithmic Bias at Harvard. Racialized algorithms are destructive to black lives. AMA!",
+    "post_timestamp": "2020-11-20 10:57:01",
+    "last_comment_timestamp": "2024-02-22 16:20:03",
+    "time_difference": "1189 days, 5:23:02",
+    "comments": [
+        {
+            "author": "JennyBeckman",
+            "body": "What are some of the ways that an impacted individual can mitigate this machine bias? Basically, what workarounds are available (if any) to help people day to day whilst you work to change the algorithims? \n\nThis can be as mundane as \"use your palms to trigger the soap dispenser\" or as critical as \"demand a racial adjustment on your medical charts\". It seems like the deck is stacked against Black people in a myriad of ways and change is slow in coming. How do we get by until it comes?",
+            "score": 47,
+            "depth": 0,
+            "timestamp": "2020-11-20 11:41:24",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "More people would be able to mitigate machine bias in their everyday lives if they understood how individual algorithmic decisions are made. \n\nFor example, and as you point out, when I finally learned how automatic sinks work, I was able to \"trick\" the system by showing my palms. And there's a Black university professor who always tells her doctors to record her race as \"white\" in her medical records, because she's aware of how some important medical algorithms that treat \"white\" people as individuals and Black people as a group.\n\nThe challenge is that it's a heavy burden for individuals to know how each algorithm works, particularly when the code is proprietary and the people who built it also don't know exactly how the algorithm works. And for people who are discriminated against by an algorithm, there's usually no legal recourse unless you can prove that the algorithm's discriminatory prediction on you specifically was a function of your race, gender, disability status, etc.",
+                    "score": 42,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 13:52:55",
+                    "replies": []
+                },
+                {
+                    "author": "OohYeahOrADragon",
+                    "body": "Could either of yall explain the listing yourself white on medical records so the algorithms treat you differently? Is this for medical insurance approval or what?",
+                    "score": 15,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 15:55:44",
+                    "replies": [
+                        {
+                            "author": "for_i_in_range_1",
+                            "body": "I linked to three articles in the intro post that discuss how the algorithm used to measure kidney function arbitrarily increases kidney function score by 18% if the patient is perceived as Black by the doctor who orders the relevant blood test.\n\nThis means that, for equivalent blood samples, the algorithm will predict a Black person\u2019s kidney is healthier than a non-Black person. This is not based on science and is not done in other countries.\n\nSo if you are Black, and having kidney failure, and want to have a higher prioritization on the waitlist for receiving a kidney, you should ask your doctor to report your eGFR as if you were a white person.",
+                            "score": 21,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 22:54:22",
+                            "replies": [
+                                {
+                                    "author": "OohYeahOrADragon",
+                                    "body": "Ah, thank you! (I'm a nerd for pubmed research lol).\n\nSo it seems these algorithms may over/underestimate a person's risk assessment or other bodily functioning diagnostics when they're entered as Black in the system.",
+                                    "score": 10,
+                                    "depth": 3,
+                                    "timestamp": "2020-11-20 23:20:52",
+                                    "replies": [
+                                        {
+                                            "author": "for_i_in_range_1",
+                                            "body": "Yep, exactly!",
+                                            "score": 6,
+                                            "depth": 4,
+                                            "timestamp": "2020-11-20 23:22:36",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "head-intheclouds",
+                                    "body": "My eGFR actually comes up on reports (at least via labcorp i think it was) as two different numbers: non African american or African American. Interesting",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2020-11-22 18:01:09",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "bob256k",
+                            "body": "I need to hear the proof for \u201clisting yourself as white\u201d stat. I believe you 100% but I need to know before I tell my doctor I\u2019m a white man  married to a white woman and have my wife do the same",
+                            "score": 9,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 18:00:51",
+                            "replies": [
+                                {
+                                    "author": "for_i_in_range_1",
+                                    "body": "The most clearcut example is the algorithm used to measure your kidney function (eGFR). Black patients are arbitrarily given an 18% higher score than a nonblack person for an equivalent blood sample. This makes your kidneys look healthier. Last month, researchers from Brigham and Women\u2019s Hospital published a study showing how this results in worse outcomes for black people with renal disease. https://link.springer.com/article/10.1007/s11606-020-06280-5\n\nThe New England Journal of Medicine published an article in August highlighting other examples of problematic and unscientific race \u201ccorrections\u201d used in clinical algorithms. https://www.nejm.org/doi/full/10.1056/NEJMms2004740\n\nAlso, at around the 42:00 mark in this YouTube video, the Black University professor I mentioned earlier talks about her experience trying to get an accurate measurement of her risk for osteoporosis! Didn\u2019t provide any specifics before because I wanted to make sure she had already discussed it publicly first. But here she discusses it in a Keynote speech from over the summer https://youtu.be/5DXRS_eHs6A",
+                                    "score": 14,
+                                    "depth": 3,
+                                    "timestamp": "2020-11-20 23:06:00",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "bob256k",
+                                    "body": "OMG , I found sources backing this up [https://www.pbs.org/wgbh/nova/article/racial-bias-medical-algorithm-black-patients/](https://www.pbs.org/wgbh/nova/article/racial-bias-medical-algorithm-black-patients/)",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2020-11-20 18:06:16",
+                                    "replies": [
+                                        {
+                                            "author": "Zuezema",
+                                            "body": "Nah that's the wrong one. That article is saying that it's bad if you differentiate race.\n\n OP was saying the professor intentionally identified as white to help the algorithm.",
+                                            "score": 5,
+                                            "depth": 4,
+                                            "timestamp": "2020-11-20 19:40:22",
+                                            "replies": [
+                                                {
+                                                    "author": "OohYeahOrADragon",
+                                                    "body": "That's what I'm trying to figure out. Help the algorithm do *what* exactly?",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2020-11-20 21:54:58",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Ezl",
+                                                            "body": "He was saying they algorithms evaluate differently based on race.  For black people they used compiled information (averages and stuff) to accomplish whatever the task was.  For white people they use the specific data points from the actual patient so the result is more accurate. So their black prof listed themselves as white to get the better evaluation.",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2020-11-20 23:04:46",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "Do you find that your findings are readily accepted or is there reluctance to acknowledge these bias in the sectors they exist in?",
+            "score": 87,
+            "depth": 0,
+            "timestamp": "2020-11-20 11:18:20",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "Many AI researchers and developers just don't care. Sometimes, they think that they aren't biased, so their models can't be biased. Others pay lip service to ethics and fairness but don't make any investment of their time and resources to achieve these goals.\n\nThere's a growing group of people who care, but don't know what they can do to mitigate bias in their algorithms. My research focuses on helping these people take action.",
+                    "score": 141,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 11:43:09",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "[removed]",
+                            "score": 29,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 13:25:52",
+                            "replies": [
+                                {
+                                    "author": "for_i_in_range_1",
+                                    "body": "Yes, Caroline Criado Perez addresses many examples of algorithms being designed for men in her book Invisible Women! It's a great book.\n\n&#x200B;\n\nOther books addressing algorithmic fairness include Race After Technology by Ruha Benjamin, Weapons of Math Destruction by Cathy O'Neill, Automating Inequality by Virginia Eubanks, ...",
+                                    "score": 25,
+                                    "depth": 3,
+                                    "timestamp": "2020-11-20 18:17:00",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "bob256k",
+                                    "body": "I think one of the examples of designing for men as a default that proved dangerous for men is in the area of crash test dummies. I could be wrong or mis-remembering the article I read",
+                                    "score": 10,
+                                    "depth": 3,
+                                    "timestamp": "2020-11-20 17:58:27",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "SoftcoreDeveloper",
+                            "body": "There are many companies, doing more for furthering diversity and inclusion (than just lip service). This is very interesting.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 13:41:50",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "darkbluedeath",
+            "body": "As a software engineer at a Fortune 100 company, and a POC myself, what are some ways that I can incorporate/work to root out bias in my own code and also that of my team and dept?\n\nAlso, are there any patterns in particular that you see as repeat or common offenders in regards to bias?",
+            "score": 32,
+            "depth": 0,
+            "timestamp": "2020-11-20 12:35:21",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "Glad that you will bring this conversation to your team.\n\nI think the first step is to raise awareness of the insidious and harmful nature of algorithmic bias among your team. The second step is define exactly what it means for your software to be fair, and the actions that you will take to achieve fairness. And the third step is to audit your progress. Rinse and repeat.\n\nI recently hosted a (free) Skillsoft webinar with Ruha Benjamin and Merav Yuravlivker, where we discuss this. It's a self-contained 2.5 hours where we draw attention to the risks of algorithmic bias, than talk about some mitigation strategies. Stream here: [https://www.skillsoft.com/resources/understanding-bias-in-data-pg8354a1](https://www.skillsoft.com/resources/understanding-bias-in-data-pg8354a1)\n\nFor a more condensed version, see the 25 minute recording of my AfroTech World presentation on Lunchtable: [https://lunchtable.com/logout?redirect=/playlist/K3Ppe0Ua-the-tyranny-of-algorithmic-bias-and-how-to-end-it/on-demand](https://lunchtable.com/logout?redirect=/playlist/K3Ppe0Ua-the-tyranny-of-algorithmic-bias-and-how-to-end-it/on-demand)\n\nHere's a link to some slides summarizing my research on how organizations should make algorithmic fairness a part of their process! [https://mattfinney.github.io/assets/Algorithmic%20Fairness%20-%20AfroTech.pdf](https://mattfinney.github.io/assets/Algorithmic%20Fairness%20-%20AfroTech.pdf)",
+                    "score": 23,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 13:08:38",
+                    "replies": []
+                },
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "Also, check out Shalini Kantayya's new documentary Coded Bias. You can buy tickets and stream online as a team activity - we're planning to do this at Harvard for our data science students.\n\n[https://www.codedbias.com/](https://www.codedbias.com/)",
+                    "score": 13,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 13:09:55",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "trashlikeyourmom",
+            "body": "Was there a particular event in your own life that led you to choose Algorithmic Fairness as your research focus?",
+            "score": 33,
+            "depth": 0,
+            "timestamp": "2020-11-20 11:39:09",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "I wouldn't say there was one particular event. But my lifetime of experiences as a Black person have definitely shaped my perspective that we as data scientists should put in the work to ensure our tools are fair and unbiased.",
+                    "score": 55,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 12:22:17",
+                    "replies": [
+                        {
+                            "author": "MagikSkyDaddy",
+                            "body": "Thank you. You\u2019re doing hero labor.",
+                            "score": 19,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 13:07:37",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "TaticalSweater",
+            "body": "So I\u2019ve heard that the police have used facial recognition software to track BLM protesters accused of assault. If someone committed a crime i see how it can be helpful. It is however not allowing people to protest anonymously. I could see this software being used for a lot of bad. The police could gather protesters and comb their social media pages (which I know they already do) and compile a list of people that may intend to be violent in the future, they could identify the wrong person and end up killing them (similar to Breona Taylor), they could just do a lot wrong with it and face almost no repercussion for their wrong doing. \n\nI want to know what can be done to stop this type of over policing outside of reform. Should these companies not be allowed to work with police, should the citizens have some say, should we just accept that this is the type of minority report level policing that will be the norm in 20 years? \n\nhttps://www.theverge.com/2020/8/18/21373316/nypd-facial-recognition-black-lives-matter-activist-derrick-ingram\n\nhttps://www.theguardian.com/commentisfree/2020/jul/17/protest-black-lives-matter-database",
+            "score": 18,
+            "depth": 0,
+            "timestamp": "2020-11-20 11:21:37",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "You touch on a question that is actively discussed but with no clear answer. Some of the larger tech companies that make facial recognition software have put a moratorium on sales to law enforcement. But a lot of the less known companies are still selling this technology without limitation.\n\n[https://www.technologyreview.com/2020/06/12/1003482/amazon-stopped-selling-police-face-recognition-fight/](https://www.technologyreview.com/2020/06/12/1003482/amazon-stopped-selling-police-face-recognition-fight/)\n\nThe White House on Tuesday issued the first Federal guidance on the regulation of AI. Principles of public trust, fairness, scientific integrity, and privacy are all discussed. Perhaps this will be a precursor to Federal regulations that prohibit undemocratic uses of AI.  \n[https://www.whitehouse.gov/wp-content/uploads/2020/11/M-21-06.pdf](https://www.whitehouse.gov/wp-content/uploads/2020/11/M-21-06.pdf)",
+                    "score": 23,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 11:53:34",
+                    "replies": []
+                },
+                {
+                    "author": "Myfreecams_Is_CIA",
+                    "body": "Firstly assault is a fucking joke of a charge **(it is not assault and battery)** with all the white eyes, white witnesses, white cops, white minds, white judges etc etc etc I do not think at literally a BLM movement rely anyone soup\u2019s give a fuck about assault(especially if you know hire the cia works) **it is literally yet another case of laws for thee not for me** Yes they are literally murdering minorities then guilt tripping the white washed ones to feel like they should embrace moderation and white racist harmony. There is a reason why the slogan is no Justice no peace not something written by the producers of Gilmore girls",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2020-11-21 17:55:08",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Cheapskate-DM",
+            "body": "Is there any evidence of poverty-based algorithmic discrimination? If so, does it overlap with or instead *multiply* racial algorithmic discrimination?",
+            "score": 14,
+            "depth": 0,
+            "timestamp": "2020-11-20 11:20:00",
+            "replies": [
+                {
+                    "author": "jameane",
+                    "body": "I recommend, if you do not mind taking a deeper dive, reading \"Weapons of Math Destruction.\" A few chapters have examples of how this works in practice! And it is overall a really interesting book. Also it is aimed at average people, not mathematicians, so it is easily digestible.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 16:19:21",
+                    "replies": [
+                        {
+                            "author": "for_i_in_range_1",
+                            "body": "Yes! Weapons of Math Destruction is great. Automating Inequality, by Victoria Eubanks, also touches on a few examples of possible discrimination based on economic status. Chapter 4 (\"The Allegheny Algorithm\") discusses how the use of Medicaid and other social services data in a child abuse risk model could make poor families hyper visible, such that they get flagged for interventions with a lower threshold of evidence.",
+                            "score": 7,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 16:38:26",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Itsprobablysarcasm",
+            "body": "As black people are not the only people of colour and there are varying degrees of complexion lightness and darkness in black people and people of colour, has your research shown the same overall bias levels between the average light complexion black person and a darker complexion non-black person of colour?\n\nIn other words, it is shade/tone-based bias, or is it more genetic/ethnicity bias? (i.e., would a darker complexion predominantly Asian-looking person receive similar bias as a lighter complexion, predominantly African-looking person?",
+            "score": 10,
+            "depth": 0,
+            "timestamp": "2020-11-20 11:24:39",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "Some AI technologies show clear bias along discrete racial categories, whereas others show evidence of bias based on skin tone.\n\nFor example, if your doctor thinks you are Black, regardless of your genetic profile, the standard kidney function test will say your kidney is healthier than it would if the doctor did not think you are Black. This is bias based on a racial category, and it harms people who are perceived as Black. [https://www.wired.com/story/how-algorithm-blocked-kidney-transplants-black-patients/](https://www.wired.com/story/how-algorithm-blocked-kidney-transplants-black-patients/)\n\nThe most compelling scientific findings on algorithmic bias in facial recognition, however, show that the algorithms are less accurate on average for people with darker skin, regardless of ethnic background. [http://gendershades.org/](http://gendershades.org/)",
+                    "score": 17,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 12:00:20",
+                    "replies": [
+                        {
+                            "author": "Itsprobablysarcasm",
+                            "body": "Thanks for the reply! re: the kidneys - that's insane! Are you aware of any follow-up to that story, wherein (hopefully) someone is looking to correct this bias?\n\nAdditionally, is there any way (again, that you're aware of) to determine if the bias was implicitly/maliciously added, or rather, if it was a product of structural/systemic bias inherent in the system?",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 12:17:43",
+                            "replies": [
+                                {
+                                    "author": "for_i_in_range_1",
+                                    "body": "I don't think we can know if the bias was introduced maliciously. But there is an active conversation among U.S. doctors about whether to phase out the race \"correction\". [https://www.acpjournals.org/doi/10.7326/A19-0041](https://www.acpjournals.org/doi/10.7326/A19-0041)",
+                                    "score": 7,
+                                    "depth": 3,
+                                    "timestamp": "2020-11-20 15:26:22",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "hyperblob1",
+            "body": "Why are robots racist so often?",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2020-11-20 11:02:43",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "These are some of the reasons\n\n* The teams that build AI don't include many women or POC, and people make silly programming decisions out of ignorance (e.g., if you calibrate all sensors for light skin because you're not used to seeing anyone with darker skin)\n* The data used to train the AI model is made up of people from predominantly one race (e.g., if facial recognition training data only has pictures of white people)\n* The historical data encodes bias against disadvantaged racial groups (e.g., \"predictive\" policing algorithms that send police to the same neighborhoods where they have always spent the majority of their time)\n* Sometimes, but rarely, the AI is built by people with the intention for it to be maliciously racist",
+                    "score": 33,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 11:39:51",
+                    "replies": [
+                        {
+                            "author": "imsoawesome11223344",
+                            "body": "I have a friend doing their PhD in CS at Harvard, focusing on AI for environmental preservation. Just wanted to say that you and people like you are the homies.",
+                            "score": 18,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 12:03:37",
+                            "replies": []
+                        },
+                        {
+                            "author": "misdirected_asshole",
+                            "body": "\n>* Sometimes, but rarely, the AI is built by people with the intention for it to be maliciously racist\n\n\nI had only ever really thought about the first three but it makes me sad to see this is actually a thing.  It's also unsurprising. \n\nDo you have any concern that as AI tools become more readily accessible and more easily developed that we will see more intentional racism in them.  I had never even considered that until this moment.",
+                            "score": 7,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 12:43:08",
+                            "replies": [
+                                {
+                                    "author": "for_i_in_range_1",
+                                    "body": "I'm actually more worried about the opposite - broader access to tools that are easier to use could create more examples of people who apply AI in ways that are unintentionally racist, because they don't understand the underlying math and statistics. For example, people who know how to \"build\" predictive models in Alteryx but don't know to evaluate their regression on a separate test set.",
+                                    "score": 8,
+                                    "depth": 3,
+                                    "timestamp": "2020-11-20 15:08:08",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "XrosRoadKiller",
+                            "body": "Is there a link to an example of the last reason?\nWere there any repercussions?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2020-11-22 01:16:26",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2020-11-20 11:59:07",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "Wonderful! Glad that you will be an ambassador among your peers.\n\nExpose them to the harms caused by algorithmic bias (e.g., Coded Bias [https://www.codedbias.com/](https://www.codedbias.com/)), and teach them about computational approaches to algorithmic fairness (e.g., [https://responsiblecomputing.org/](https://responsiblecomputing.org/)).\n\nTell them that every time they write a program or train a model, they should think explicitly about the ways it could inadvertently cause harm., then apply the appropriate computational approach to mitigate this harm.\n\nFinally, remind them that technology exists in society, and even a perfectly unbiased software program can create harm if it is applied in a discriminatory way by the people who use it.",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 14:03:55",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "johnc98",
+            "body": "I am a public defender and when I meet my new clients in custody, one of the first things I get is a \"bail evaluation\" that reduces their lives to a score that largely determines if they will be released with a promise to return to court; released on certain conditions; or held unless they post exorbitant bail amounts.\nThe scores ding for things like: not currently employed, homeless, past number of arrest warrants for failure to appear in court, and past criminal convictions.  \nIt feels like racist crap disguised to appear objective but I don't know enough to argue to a judge why it is garbage.  \nAny ideas for talking points about why these evaluations place my black clients deeper in the hole for their \"crime\" of blackness?",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2020-11-20 12:03:32",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "My colleagues at Harvard Law School have been very active in lobbying against unethical pretrial risk assessments. As a public defender you may find some of their talking points relevant to serving your clients. [https://cyber.harvard.edu/story/2019-07/technical-flaws-pretrial-risk-assessments-raise-grave-concerns](https://cyber.harvard.edu/story/2019-07/technical-flaws-pretrial-risk-assessments-raise-grave-concerns)\n\nYou're right to point out the flawed logic that people sometimes assume a predictive model that doesn't include race as a variable cannot be racist. Academic researchers, however, have found that latent variables (variables not provided as input in a specific prediction) can still influence the prediction if they are strongly correlated with other input variables. [https://arxiv.org/pdf/1802.06309.pdf](https://arxiv.org/pdf/1802.06309.pdf)  \n\n\nThis is the case for race, employment history, homelessness, etc. due to historical inequities in the U.S. \n\nIn the case of bail evaluation, this flawed logic is amplified by fundamental sociotechnical flaws of many of the commercially available algorithms:\n\n* They are designed to predict the likelihood of rearrest, not the likelihood of committing a crime\n* The likelihood of rearrest is a function of existing policing practices, not criminality alone; for example, if the police are always in your neighborhood, or if you are unsheltered, you are more likely to have police contact\n* Since the bail evaluation models are trained on historical arrest data, they excel at replicating the historical behavior, where arrests are more likely to occur for people who experience police contact, regardless of criminality\n\nThis Pro Public article is also really insightful if you haven't seen it: [https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing)",
+                    "score": 14,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 12:41:57",
+                    "replies": [
+                        {
+                            "author": "johnc98",
+                            "body": "Thank you!",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 14:34:45",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "haiylie",
+            "body": "Every time I try to use a soap dispenser it takes a min of 4 tries. So frustrating",
+            "score": 10,
+            "depth": 0,
+            "timestamp": "2020-11-20 13:14:49",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "Same! I used to think that it happened to everybody!",
+                    "score": 8,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 13:20:20",
+                    "replies": [
+                        {
+                            "author": "Likely_not_Eric",
+                            "body": "I'm white (and quite pale) and automatic sinks, soap dispensers, and hand dryers can be pretty dodgy in general. To know that they're biased on top of that makes me realize even in such a mundane space that space it's a bigger issue; it hadn't occurred to me that others might have *even more* difficulty getting them to work.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 19:17:35",
+                            "replies": [
+                                {
+                                    "author": "for_i_in_range_1",
+                                    "body": "Worse than the soap dispensers, there\u2019s concern that the object detection algorithms in self driving cars may have a harder time recognizing darker skinned pedestrians! https://www.vox.com/future-perfect/2019/3/5/18251924/self-driving-car-racial-bias-study-autonomous-vehicle-dark-skin",
+                                    "score": 9,
+                                    "depth": 3,
+                                    "timestamp": "2020-11-20 23:13:48",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Etheropian",
+            "body": "KING!!!! IM GRATEFUL FOR U!",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2020-11-20 14:10:25",
+            "replies": []
+        },
+        {
+            "author": "justnocommoncents",
+            "body": "What self-care do you do to help you keep going when your hardwork is undervalued and dismissed?",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2020-11-20 12:09:25",
+            "replies": []
+        },
+        {
+            "author": "hendrixski",
+            "body": "I don't have a question but I just want to say thanks for your work and thanks for doing an AMA about a topic that desperately needs more public understanding.",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2020-11-20 12:51:41",
+            "replies": []
+        },
+        {
+            "author": "pheez98",
+            "body": "can't think of a question but i think your research & work is incredibly interesting. racialized algorithims are very important to examine and it unfortunately shows how deeply racist our society is. thank you for your post",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2020-11-20 12:15:31",
+            "replies": []
+        },
+        {
+            "author": "WomanNotAGirl",
+            "body": "Of course AI is racist and sexist. Over and over again studies proved it. Look at the make up of the software engineers. Yes there women and black people who are engineers but not enough. Code is mainly written by the white male engineers. \n\nSo white men can only write based on what their exposures are. The lack of exposure to male white problems produces solutions gear towards just that. It\u2019s no different than accessibly being created by non-disabled people as a result we get doors with automatic door with no ramp or target giving scooters but their mid isles aren\u2019t wide enough for those electric scooters. Because abled people do not understand the needs of disabled people. \n\nThen there is machine learning (ML). AI can only learn from what\u2019s available. If the data available is already racist/sexist then the ML is going to draw conclusions that are racist and sexist.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2020-11-20 12:45:11",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "I have no idea if this is related to your field but why is it that the motion sensing soap and sanitizer dispensers don\u2019t recognize my hands.",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2020-11-20 12:45:52",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "They use infrared sensors to recognize the presence of skin. The sensors measure the amount of infrared light reflect back to them from a surface to determine if there is a hand present. But darker skin absorbs more light than lighter skin, so less is reflected back to the sensor. \n\nThis is definitely related to my research. I consider this to be a (simple) algorithmic system because these sensors are calibrated to a specific threshold of light reflection to determine the presence of a hand.\n\nThere are more complex systems that look for the presence of skin to determine if there is a human in the field of view... for example, self-driving cars! And there are concerns that  these more complex systems also fail to detect darker skin tones, with deadly consequences! [https://arxiv.org/abs/1902.11097](https://arxiv.org/abs/1902.11097)",
+                    "score": 11,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 12:56:01",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "Thanks! dude? Do I say dude or professor?\n\nEdit: Also, how did you get into Data Science?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 13:01:45",
+                            "replies": [
+                                {
+                                    "author": "for_i_in_range_1",
+                                    "body": "Dude? King? But not professor!\n\nWould you believe me if I said I got into Data Science by accident? They day I started my first job out of college, my company had acquired a smaller firm that specialized in analytics. So I started hanging out with those guys and here I am!",
+                                    "score": 8,
+                                    "depth": 3,
+                                    "timestamp": "2020-11-20 13:11:51",
+                                    "replies": [
+                                        {
+                                            "author": "for_i_in_range_1",
+                                            "body": "Also, for anyone who is trying to get into data science, but not by accident, check out some resources my friend and I put together here: [https://github.com/MattFinney/practical\\_data\\_science\\_in\\_python/blob/main/README.md](https://github.com/MattFinney/practical_data_science_in_python/blob/main/README.md)",
+                                            "score": 6,
+                                            "depth": 4,
+                                            "timestamp": "2020-11-20 13:19:10",
+                                            "replies": [
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "Thanks dude.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2020-11-20 14:03:08",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "postdiluvium",
+            "body": "Have you ever uncovered additional weight manually applied to racial categories in a data system/process? And can you say what that system was for?",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2020-11-20 14:40:04",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "Sadly, that's exactly how the algorithm for evaluating kidney performance works! Patients who are perceived as Black are given a 15% higher eGFR score, which makes their kidneys look healthier than they are. [https://www.wired.com/story/how-algorithm-blocked-kidney-transplants-black-patients/](https://www.wired.com/story/how-algorithm-blocked-kidney-transplants-black-patients/)",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 15:10:19",
+                    "replies": [
+                        {
+                            "author": "postdiluvium",
+                            "body": "As a data scientist in an adjacent field, pharma, and a person of color, this disappoints me. \n\n>Researchers who created the formula in 2009 added the \u201crace correction\u201d to smooth out statistical differences between the small number of Black patients and others in their data.\n\nDid they add a \"race correction\" because the result of their algorithm had a skew to it that they did not like? I think it's odd that race is even a factor when it comes to human health. Humans are humans no matter the race. This is so disappointing. Even if it was done with good intentions, it really undercuts the intended functionality of the system.\n\nIf there was something biologically different between black people and others, I can understand having to implement a \"correction\". In this case there really isn't a biological difference. But my perspective may be skewed on this as my background is biological sciences. I see the issue purely from a biological standpoint.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 15:27:23",
+                            "replies": [
+                                {
+                                    "author": "for_i_in_range_1",
+                                    "body": "The researchers who developed that model essentially used perceived race as a proxy for muscle mass. This is not scientific.\n\nAmong the advantages of the CKD-EPI equation (with race correction) compared to other ways of measuring eGFR, the researchers note that it \"does not require \\[...\\] measurement of height and weight; \\[and\\] includes a term for ethnicity (which is important because chronic renal disease is more prevalent among black persons).\" \n\nWhile the researchers frame this narrative to suggest that the ethnicity variable is important to diagnosing chronic renal disease among black persons, the model's coefficients arbitrarily assign an 18% higher kidney function score to black patients, all else equal. In clinical practice, this has the impact of decreasing the likelihood of diagnosing kidney failure in Black Americans and leads to poorer health outcomes, including higher rates of end stage kidney disease and lower access to treatments like dialysis and transplantation. (Ahmed et al., 2020)\n\nSo despite an ostensible intention of improving care for all patients, and special attention to addressing the prevalence of chronic kidney disease in Black patients, the peer-reviewed CKD-EPI equation reinforces racial disparities in healthcare that harm Black Americans!",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2020-11-20 18:26:39",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Likely_not_Eric",
+            "body": "I'm a software developer and issues such as this one come up from time-to-time but I'm not working strictly in an AI space or even in a space that would make decisions on a racial metric. However, as we've seen with many historical cases of racist algorithms that some metrics or combinations of metrics are proxies for race whether intended that way or not.\n\nI read through your [The Tyranny of Algorithmic Bias & How to End It](https://mattfinney.github.io/assets/Algorithmic%20Fairness%20-%20AfroTech.pdf) and I noted a challenge for calibration, masking, and data augmentation when you don't have racial demographic data. I'm wondering if there's a way to think about the problems to better predict when we're making a mistake.\n\nAs a (only slightly hypothetical) example: if we were building a non-AI algorithm for detecting malicious activity on our system and we noted that a particular web browser version is an indicator or particular IP addresses, or any other metric that would be thought to be benign but what we don't know is that there's a popular device used by some community (perhaps there's a community that uses a popular application among within that community like a translating proxy) we would start disproportionately impacting that group.\n\nFrom that example a good way to counteract this would be to publish our algorithm so that someone with more knowledge could point out \"you know your breaking anyone that uses Hooli translate to view your site, right? That means that the following communities get locked out more frequently: ____\" but the publishing it would also immediately make actual malicious actors change tactics.\n\nIf we were to have part of our process involve collecting demographic data and monitoring for changes in user experience with respect to that data that would clearly help but that would be very hard to get approval on - not just for the added KPI but for having to actually collect the data and the adverse impact it would have on user trust (who ever likes to fill out demographic data when you don't need to).\n\nSo without publishing it, and without the visibility into how it's affecting a group, then how do we do a better job?",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2020-11-20 19:39:56",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "You raise a couple of important points!\n\n1) Algorithmic Fairness is not only important in AI, but also for rule-based decision making processes (e.g., if I see traffic from this IP address then...)\n2) \u201cFairness Through Awareness\u201d is an attractive approach, where we use information about a sensitive attribute like ethnicity in order to promote ethical outcomes. But is challenging because it requires access to the sensitive attribute, which may be unobserved or restricted due to user trust or regulation.\n\nThird party audit may be a potential solution, particularly if data is collected and retained but restricted for privacy or regulatory reasons, it would be fairly straightforward for the auditor to use the data to evaluate equality of outcomes. Even if the auditor doesn\u2019t have access to the sensitive attribute, their breadth of experience may allow them to identify model design choices that have created disparate impact when used elsewhere.\n\nAnother approach is to consider the diversity of your engineering team. While diversity is not a fail safe, teams that contain and empower a diversity of perspectives (e.g., socioeconomic background, national origin, languages spoken, disability status, gender, race, etc.) have a better shot at being able to anticipate potentially problematic design choices before they are rolled out into production.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 22:31:17",
+                    "replies": [
+                        {
+                            "author": "Likely_not_Eric",
+                            "body": "Thank you for coming back to answer this :)\n\nIdeally some regulation that mandates things like audits can come into place (I can't imagine many companies would volunteer to spend the money otherwise).",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2020-11-21 04:41:26",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "for_i_in_range_1",
+            "body": "1) Check out the Algorithmic Justice League, Data 4 Black Lives, or Black In AI - from time to time they run collaborative research projects\n\n2) AJL\u2019s Gender Shades dataset is a great start, but I don\u2019t know of any fully representative open source facial recognition datasets\n\n3) Collaborative editing in Google Colab",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2020-11-20 23:40:24",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2020-11-20 11:40:16",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "Vote with your wallets. Buy from organizations that have transparent and responsible AI practices.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 13:53:34",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "hasharin",
+            "body": "I understand that algorithmic bias can occur when algorithms are trained on 'biased' data sets and this is probably what happened with the automatic soap dispensers - the data set likely just included white faces.  Algorithmic bias can also occur when the algorithms are designed without minority input - this is probably likely for the algorithm for the kidney transplants. \n\nAs a lawyer, I'm most interested in the use of AI in criminal sentencing. As the criminal justice system has a disproportionate impact on minorities and African-Americans - how best can we try to tackle both of these types of algorithmic bias?\n\nThe problem I see is that all data sets will already be biased due to the inherent biases against minorities in the criminal justice system so using databases of historic sentences to help guide judges in sentencing will entrench these biases. Similarly, the criminal justice sector and the judiciary is not one where minorities are highly represented and so the use of AI may further entrench white viewpoints on sentencing.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2020-11-20 11:44:11",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "We need further study of how algorithms can be used ethically and responsibly in this space. Right now, there's a coalition of lawyers and technologists ([https://cyber.harvard.edu/story/2019-07/technical-flaws-pretrial-risk-assessments-raise-grave-concerns](https://cyber.harvard.edu/story/2019-07/technical-flaws-pretrial-risk-assessments-raise-grave-concerns)) who are deeply concerned!\n\nWe probably need more transparency and audit to ensure that current applications of AI in criminal justice (1) serve the public interest and (2) are aligned with the values of our democracy.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 14:31:38",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "imjustheretodomyjob",
+            "body": "Hi. Thanks for doing this. My question is about the thing you said about the soap dispenser (detecting skin colours) and facial recognition algorithms. What would be the solution to problems like this ? Is it just as simple as training it with more BIPOC faces ?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2020-11-20 11:47:51",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": ">Reply\n\nThere's no blanket solution, although, as you point out, training and testing technology on diverse groups of users will help identify problems in many cases!\n\nReal progress will require the people who design AI and other technologies to think critically about what it means for their models/products/services to be fair and equitable. Then they will need to do the work to reach this goal, the same way they currently define \"accuracy\" and perform model training to optimize accuracy.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 13:31:47",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Nasjere",
+            "body": "How does this play into the biases in healthcare data algorithms?",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2020-11-20 12:07:38",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "The New England Journal of Medicine, this summer, published an article summarizing some the most problematic racial \"corrections\" in clinical algorithms. [https://www.nejm.org/doi/10.1056/NEJMms2004740](https://www.nejm.org/doi/10.1056/NEJMms2004740)\n\nLast year, the academic journal *Science* published an article that found an algorithm used in US hospitals was less likely to refer black people than equally sick white people for advanced care. [https://science.sciencemag.org/content/366/6464/447](https://science.sciencemag.org/content/366/6464/447)",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 15:17:33",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "Is Harvard racially biased? What automated systems should we be most concerned about for algorithmic bias?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2020-11-20 12:11:40",
+            "replies": []
+        },
+        {
+            "author": "pretendsavagery",
+            "body": "Thanks for this AMA, Matthew. So there are a lot of examples with regards to individual companies or groups using these biased algorithms, but what would be required on a legal front to ensure that they follow certain regulations in the development of more sensitive algorithms and what would those regulations (at their most optimal) look like?",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2020-11-20 12:11:58",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "Last week the White House issued some guidelines on the regulation of AI applications. This could be a precursor to meaningful legislation. [https://www.whitehouse.gov/wp-content/uploads/2020/11/M-21-06.pdf](https://www.whitehouse.gov/wp-content/uploads/2020/11/M-21-06.pdf)\n\nBut I believe that education may be a more important intervention than legislation. The law does not require algorithms to be accurate (in most cases). People are taught about the importance of accuracy, and they are taught ways to optimize accuracy. The same needs to happen for algorithmic fairness.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 13:58:47",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "666space666angel666x",
+            "body": "I\u2019m a software developer, currently working on a (relatively simple) product categorization AI, but I have more interest in doing something like what you\u2019re doing. \n\nWithout a college degree, is there any way for me to branch out into Data Science, specifically in the research space?",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2020-11-20 12:20:26",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "There are plenty of Data Science certifications online, some are even free (e.g., Correlation One Data Science for All: [https://www.correlation-one.com/ds4a-empowerment](https://www.correlation-one.com/ds4a-empowerment)). These are helpful if you want to pivot to a job in Data Science.\n\nOn the research front, the great thing about data science / computer science research is that you don't need a lot of equipment to get started. Check out the ACM Digital Library to learn about curating edge research and open questions that are waiting for exploration: [https://dl.acm.org/](https://dl.acm.org/)\n\n&#x200B;\n\nYou might also think about doing some research on issues of equity and fairness in Data Science. Look for collaborations with the Algorithmic Justice League ([ajl.org](https://ajl.org)) or Data for Black Lives (d4bl.org).",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 13:17:51",
+                    "replies": [
+                        {
+                            "author": "666space666angel666x",
+                            "body": "Thank you!!",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 13:37:20",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "travisdeahl724",
+            "body": "Have you met any famous people?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2020-11-20 12:21:56",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "My friend, Avriel Epps-Darling, did a fireside chat about algorithmic bias at Google with Logan Browning, star of Dear White People!\nhttps://www.youtube.com/watch?v=MMqfOGA6TaQ",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 18:12:41",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2020-11-20 11:02:23",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "Many of the commercially available systems deployed today are dangerously inaccurate. The biggest problem is that a lot of people who use these systems assume that the computer is always right.\n\nIn January, Robert Julian-Borchak was arrested for a crime he didn't commit because the facial recognition system used in a Detroit store falsely identified him as a robbery suspect. [https://www.nytimes.com/2020/06/24/technology/facial-recognition-arrest.html](https://www.nytimes.com/2020/06/24/technology/facial-recognition-arrest.html)",
+                    "score": 13,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 11:27:16",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "siouxsie_siouxv2",
+            "body": "What is a summary of your proposed fixes for this issue?\n\nAlso, has Twitter offered an apology or explanation?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2020-11-20 11:37:26",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "Not having access to Twitter's algorithm here, I can't offer any specific proposed fixes. But they should probably do an Algorithmic Audit. [https://orcaarisk.com/](https://orcaarisk.com/)\n\nThey did apologize, but I haven't seen an explanation. [https://twitter.com/lizkelley/status/1307742267193532416?s=20](https://twitter.com/lizkelley/status/1307742267193532416?s=20)",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 12:20:20",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "[removed]",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2020-11-20 11:46:19",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "I worry mostly about data scientists who think their algorithms are fair because of the purity of their intentions, but who then take no action to actually ensure the ethical nature of the AI they put out into the world.\n\nI'm also concerned about the way different people experience the internet. There are all kinds of algorithmic predictions that dictate how you experience the internet and what you see when you're there (e.g., what content websites think you will like, or what gets moderated as being inappropriate, etc.). The engineers who build this AI don't always understand the potential consequences. For example, the people who built YouTube's  recommendation engine did great work by helping people access relevant information online, but probably never imagined that the same algorithm would be responsible for radicalizing white supremacist groups. [https://dl.acm.org/doi/10.1145/3351095.3372879](https://dl.acm.org/doi/10.1145/3351095.3372879)\n\nBy the time we learn about these unintentional consequences, the damage is often already done, and at a large scale.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 13:40:21",
+                    "replies": [
+                        {
+                            "author": "for_i_in_range_1",
+                            "body": "Shout out to my friend Avriel Epps-Darling, who told me about the YouTube radicalization study. Follow her here! [https://twitter.com/kingavriel](https://twitter.com/kingavriel)\n\nAnd watch Avriel's fireside chat with Dear White People's Logan Browning and Google's Francis Roberts last year [https://www.youtube.com/watch?v=MMqfOGA6TaQ](https://www.youtube.com/watch?v=MMqfOGA6TaQ)",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 13:43:02",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "misdirected_asshole",
+            "body": "Is it bad that I'm sorta happy that at least facial recognition software is very innacurate on POC because I can more easily defeat it to maintain anonymity?  Am I deluding myself?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2020-11-20 12:45:29",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "Really bad things can happen to people of color when these facial recognition systems inaccurately identify them as someone else! [https://www.nytimes.com/2020/06/24/technology/facial-recognition-arrest.html](https://www.nytimes.com/2020/06/24/technology/facial-recognition-arrest.html)",
+                    "score": 9,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 12:57:45",
+                    "replies": [
+                        {
+                            "author": "misdirected_asshole",
+                            "body": "Definitely aware.  My hope is that seeing the innacuracy helps to limit the ability of law enforcement to use facial recognition data for arrest and prosecution as the sole evidence.  I hope the work of people like you help make that real.  Because expletives aside, this is unsat.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2020-11-20 13:10:44",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "stoppage_time",
+            "body": "How do you feel about the massive increase in smart security like Ring in homes?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2020-11-20 14:32:35",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "There are problems with how people use the technology. Particularly the new \u201csocial media\u201d apps where people can share recordings with their neighbors and add commentary about who looks suspicious. Sometimes, this appears to be another extension of the historical biases in how different groups of Americans have experienced local law enforcement. I highly recommend Ruha Benjamin\u2019s book, Race After Technology, as well as the Coded Bias documentary, for deeper exploration of this topic!",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 23:36:04",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Sgt_Jupiter",
+            "body": "Is there a way to predict or detect algorithmic racial biases using AI, or do we only know it's happening if a human notices it while manually analyzing large data sets?\n\nLike is there a possibility that there are negative algorithmic biases that we just wouldn't catch while staring at a spreadsheet - and are there tools to discover them?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2020-11-20 16:04:01",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "IBM released an open source toolkit called AI Fairness 360, which includes code that is designed to help humans identify algorithmic bias more easily. \n\nHowever, this is not a task that machines can do by themselves - it takes an awareness of social context to be able to determine what variation in prediction outcomes is expected vs. what variation in outcomes could be discriminatory. Humans need to pay attention to this and not rely on machines to get it right.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2020-11-20 21:59:44",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "weoutheredummy",
+            "body": "Once again disappointed... once again, not surprised.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2020-11-20 21:51:15",
+            "replies": []
+        },
+        {
+            "author": "GaijinKindred",
+            "body": "Got a few questions for you after reading through the comments, hope you don\u2019t mind!\n\n- Is there any open source community or general community an undergrad in Computer Science - with 2 courses prior to graduation - can look to assist with any of the research in to inherent bias or programmatic bias incorporated intentionally by engineers?\n\n- Is there a generic dataset that excels at supplying variations of people from different regions, or do you think that we would actively have to train models either with varying races of people or implement a combination of facial recognition with OpenCV (non-ML) and facial recognition with Tensorflow/PyTorch?\n\n- If there was one tool you wished existed - related to your research or not - what would it be and why? :)",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2020-11-20 23:08:17",
+            "replies": []
+        },
+        {
+            "author": "OzExcel",
+            "body": "What would you say about my concern that bias is overblown? AI/ML is generally flimsy. It can't even give me decent Netflix suggestions, and sentiment analysis is easy to break. Thus, it's hard for me to take AI/ML seriously outside of VERY narrow, specific tasks.\n\nIn areas where bias is a real issue, it seems that AI/ML shouldn't be involved.\n\nI've seen too many basic examples of AI/ML screwing up. Why aren't we talking about how AI/ML is marketed, and pushed into production way before it's ready? It also seems to be a way to shift human responsibility away and onto technology.\n\nAs a black man, I understand that bias is a serious issue. It's hard to see \"fixing\" AI/ML. I do see a need for more responsible marketing and accountability.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2020-11-20 23:55:38",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[removed]",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2020-11-21 03:31:37",
+            "replies": [
+                {
+                    "author": "for_i_in_range_1",
+                    "body": "The automatic soap dispenser thing is a simple and low stakes example of this really troubling phenomenon observed in pedestrian detection algorithms for self driving cars https://arxiv.org/pdf/1902.11097.pdf",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2020-11-21 07:47:47",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "TheGreatScholar",
+            "body": "What about how Asians have to have better scores than any other race?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2020-11-21 19:41:33",
+            "replies": []
+        },
+        {
+            "author": "marylessthan3",
+            "body": "Thank you for not only the profession you have chosen, but for reaching out and facilitating this discussion in the Reddit forum, of which I rarely post and mostly lurk. \n\nI work as a legal assistant at a mid sized law firm within the employment practice group in the metro Detroit area. What sources or recommendations do you have for this field that is working on diversity training to employers and how to utilize data to overcome biases without scaring away the \u201cdecision makers\u201d who might not welcome the fact they have inherent biases.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2020-11-22 02:59:36",
+            "replies": []
+        },
+        {
+            "author": "acacacaca_acacacac",
+            "body": "Meaning we need more blacks to do algorithms",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2020-11-22 08:57:04",
+            "replies": []
+        },
+        {
+            "author": "Ok-Independent-4424",
+            "body": "Ths is true.\n\nPersonally I love all races. And will hire people into my \"cult\" based on their contribution to the cause.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2020-11-22 10:05:16",
+            "replies": []
+        },
+        {
+            "author": "Disastrous-Scallion9",
+            "body": "im a somewhat newbie, but very passionate about the field - im right now coming up with ideas for projects in a machine learning course. \n\nMy question is, would it in your pov be possible to build a ML model that \"monitors\" the produced data (in- and/or out-put / metadata) by other models? and what would it take - my technical knowledge is as i said still sparse, but what im thinking of could be applying a model that fx. monitors the degree of feedback in cluster-model crime prediction? \n\nAlso do you have any datasets that could be worked with in regards to \"predicting\" bias -- i dont really know if this makes any sense at all, and im sry if it doesn't. but i hope to find some answers as it is a subject of high importance to me and my community.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2021-03-02 19:54:07",
+            "replies": []
+        },
+        {
+            "author": "Asunbiasedasicanbe",
+            "body": "What is your analysis of the front page of this site and specifically at this moment, the video of Shaq and Iverson, their conversation and its content.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-02-22 16:20:03",
+            "replies": []
+        }
+    ]
+}

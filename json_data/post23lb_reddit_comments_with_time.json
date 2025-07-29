@@ -1,0 +1,262 @@
+{
+    "post_title": "Is AI actually unbiased until it is taught to have bias?  ",
+    "post_timestamp": "2024-11-05 10:54:32",
+    "last_comment_timestamp": "2024-11-07 23:25:23",
+    "time_difference": "2 days, 12:30:51",
+    "comments": [
+        {
+            "author": "63daddy",
+            "body": "Feminists often cite a study showing a bias for resumes with male names, but what you never hear about is that experiment was redone showing the opposite.  \n\nTry googling what the pay gap actually measures.  The facts will be buried under a mountain of feminist misinformation.    \n\nTry finding actual reported sexual assault rates of college students.   Same thing, actual data is again buried under a mountain of feminist propaganda.   \n\nIt\u2019s the same with convictions rates and so much other information:   Feminist and woke propaganda is prioritized while relevant facts are downplayed and hidden.     (Try googling the actual conviction rate for rape.   You won\u2019t find it, but you\u2019ll find plenty of misinformation about it propagated by RAINN)\n\nThere\u2019s a bias all right, the bias is to promote cherry picked information and propaganda favorable to the feminist cause.\n\nWhether it\u2019s evaluating resumes or prioritizing internet search results, what we call AI is really just programming and will reflect any bias of the programmer.",
+            "score": 64,
+            "depth": 0,
+            "timestamp": "2024-11-05 11:18:00",
+            "replies": [
+                {
+                    "author": "0rphu",
+                    "body": "Pretty sure there's been studies done where recruiters were asked to pick from totally anonymized resumes (the hypothesis being it would result in women being picked more often than usual because now the recruiters could not discriminate against women based on their names) and it actually resulted in men being picked more often than usual. So because the studies found women get preferential hiring on the basis of their feminine names, the recommendation is of course then to not anonymize the resumes.\n\ntl;dr: they set out to find sexism, find that there *is* sexism but it's the *desirable* kind of sexism according to their agenda, so everything's business as usual.",
+                    "score": 29,
+                    "depth": 1,
+                    "timestamp": "2024-11-05 12:30:09",
+                    "replies": [
+                        {
+                            "author": "motosandguns",
+                            "body": "Google did this too. Had to give a bunch of men raises because they found the women were overpaid",
+                            "score": 7,
+                            "depth": 2,
+                            "timestamp": "2024-11-05 17:34:24",
+                            "replies": []
+                        },
+                        {
+                            "author": "Grand-Juggernaut6937",
+                            "body": "I\u2019ve tried this experiment myself by using a more feminine nickname of my real name. It works alright.\n\nThis is why if I have a boy I\u2019m going to have to name him something ambiguous like Taylor. The world is a horrible place.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-11-06 13:17:30",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "InPrinciple63",
+                    "body": "Isn't AI trained on large amounts of real world data, so whatever biases are present in that data set will be present in the resulting AI condensed algorithms?\n\nIf women represent the squeakiest wheel, then they will be over-represented in complaints, which would bias the data because it only represents complaints and not applause (which usually is never presented as people rarely call up to applaud something that is working well, only when it isn't).",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-11-06 03:13:21",
+                    "replies": []
+                },
+                {
+                    "author": "Lexers624",
+                    "body": "Pay gap is a conspiracy theory that was debunked in the 90's.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-11-06 16:18:07",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Vegetable_Ad1732",
+            "body": "I think the answer to your question is yes.",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2024-11-05 13:16:24",
+            "replies": []
+        },
+        {
+            "author": "TheRkhaine",
+            "body": "As someone who went to school for I and big data, you are correct. AI isn't biased. It makes its decision based on the programmed algorithms and the data it was provided. Algorithms can be manipulated to make it look biased, the information in a database can also be heavily skewed, but that's not the fault of AI as a whole, but the humans involved in building it.",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2024-11-05 13:21:57",
+            "replies": []
+        },
+        {
+            "author": "wristcontrol",
+            "body": "1. It's not AI, it's machine learning. I am so tired of the media and general public conflating the two.\n\n2. ML is a stochastic process. It is unbiased unless you bias it yourself, by weighting reward/loss functions or initial system states.",
+            "score": 10,
+            "depth": 0,
+            "timestamp": "2024-11-05 12:59:34",
+            "replies": [
+                {
+                    "author": "EnvironmentalBuy244",
+                    "body": "Agreed!  I went with the article title, but you're absolutely correct.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-11-05 13:07:40",
+                    "replies": []
+                },
+                {
+                    "author": "BearlyPosts",
+                    "body": "The model can be biased if the data is biased. A lot of models are effectively data-predictors. We feed them hiring decisions so they can make hiring decisions on new resumes. But if there's systemic discrimination in hiring then the model could notice and copy that systemic discrimination.\n\nThe model isn't maximizing \"quality of hiring\" because that's *really* hard to gauge. It's just maximizing \"similarity to past hiring decisions\".",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-11-05 19:40:34",
+                    "replies": []
+                },
+                {
+                    "author": "Miserable_Arugula_75",
+                    "body": "Its AI, in onformatics machine learning is part of the topic AI. The defintion is not as you would define it, there a strong AIs and weak AIs.\nNot the function is biased, the data is.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-11-06 04:57:00",
+                    "replies": []
+                },
+                {
+                    "author": "lukuh123",
+                    "body": "Biases are also found in datasets which can influence the models conceptualization. Also, if we are talking about ChatGPT which is really a contextual vector embedding in multi-dimensional space I would call it AI. Deep learning models do kinda the same thing. But I do agree being the word conflated so much by everyone that don\u2019t know what it is. If you know about reward/loss functions, then we can talk money.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-11-05 17:22:19",
+                    "replies": []
+                },
+                {
+                    "author": "Deleted",
+                    "body": "> machine learning\n\nthats literally the defintion of ai\n\nartificial = machine\n\nintelligence = learning\n\nwhat youre talking about is the public thinking basic programming is ai when its not\n\nmachine learning is the closest thing we have to ai right now",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-11-06 17:43:13",
+                    "replies": [
+                        {
+                            "author": "Personal_Winner8154",
+                            "body": "Learning = intelligence is false equivocation. Intelligence can't be simplified to simple models that create an output from an input and refine input over generations. Learning is not intelligence. Artificial intelligence is what it sounds like, an intelligence that is artificial. Not a glorified function call",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-11-06 19:21:15",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Metraxis",
+            "body": "AI is just math in the absence of training data. Once trained, an AI will naturally have the biases contained in that training data.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2024-11-05 13:51:52",
+            "replies": []
+        },
+        {
+            "author": "TypicalNPC",
+            "body": "As if any big name company would dare purposely allow a machine to hold any open bias toward women. The moment any man benefits from something it becomes \"bias\" but if it was highly favoring women in any capacity we'd have a hundred thousand articles shouting about how women are better than men.\n\nMaybe those men were the best for the job? Why is it inherently an issue that an \"AI\" is favoring predominately white men in a world where women and \"women\" are able to get opportunities for simply existing?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-11-05 17:15:27",
+            "replies": []
+        },
+        {
+            "author": "lukuh123",
+            "body": "AI will really have just the biases that are in the datasets on which it was trained on. And biases exist in our datasets because we have conveyed them through natural language and LLMs like ChatGPT do exactly that. Natural Language Processing or NLP. Models like these are extremely fine-tuned because in computational linguistics eliminating bias is a very hard task to try to accomplish . How to distinguish bias from factual data and biased data? What is wrong and what is right and how to extract and label them correctly in semantic analysis? These are all actual and complex questions that computer science is trying to figure out with Natural Language Inference or NLI while training a model on different domains of knowledge. This topic is very heavily focused on the learning process of LLMs and inherently their transformers. Engineers try extremely hard to put restrains on the outputs, trying to prevent it from going to polarizing opinions, as all kinds of stuff can be learned from texts in datasets and corpora. This has nothing to do with the models fault. If you find my answer find to grasp, paste it into ChatGPT to extend my word for you. He will happily explain. If you find NLP interesting and want me to explain more feel free to DM me. I find this AI field to be very fun.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-11-05 17:17:15",
+            "replies": []
+        },
+        {
+            "author": "Downtown-Campaign536",
+            "body": "No because any training data will be biased.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-11-05 22:41:25",
+            "replies": []
+        },
+        {
+            "author": "adelie42",
+            "body": "Nothing is unbiased. There is only perspectives. But people have opinions about perspectives, and details about perspectives can be unknown in complex and dynamic ways.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-11-06 00:38:54",
+            "replies": []
+        },
+        {
+            "author": "Miserable_Arugula_75",
+            "body": "Of course AI is biased because the date is from humans and humans are biased.\nAnd the only bias I found was misandrist. A study showed that in hypothetical scenarios the AI saw women live worth more than men live, for example, the questioned, if the AI would kill one man if it saved the live 100 humans. The same with one woman. And result was, it would kill the man but not the woman.\nAlso for domestic violence, there is the same result as if you just google: my husband/wife beat me.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-11-06 04:59:51",
+            "replies": []
+        },
+        {
+            "author": "Lexers624",
+            "body": "The bias is anti-men, and such bias is hardcoded in the AI.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-11-06 16:17:29",
+            "replies": []
+        },
+        {
+            "author": "0rphu",
+            "body": "Vaccines cause autism, the earth is flat, climate change doesn't exist and AI is misogynistic. What else will these lunatics come up with next?\n\nhttps://www.reddit.com/r/MensRights/s/0JDkUegYmv",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2024-11-05 12:32:03",
+            "replies": []
+        },
+        {
+            "author": "tilldeathdoiparty",
+            "body": "You can literally set your own prompts, and make ChatGPT and expert in anything you want, it learns what you are telling it to learn, I don\u2019t see how people don\u2019t get this",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-11-05 18:07:53",
+            "replies": []
+        },
+        {
+            "author": "rabel111",
+            "body": "If you informed the AI algorithms with the data contained in the REDDIT comments and administration, the AI would express the same biases as the REDDIT data. However, the algorithms may alter the magnitidue of bias.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-11-05 19:00:55",
+            "replies": []
+        },
+        {
+            "author": "Huffers1010",
+            "body": "AI has the bias of the training data it was fed.\n\nHow you select that training data makes a very large difference to how the AI will behave. That's genuinely a very significant area of concern and a lot of research is done on it. Even identifying biased or unbiased training data is hard because \"bias\" is a very woolly term.\n\nMost current AIs come out of the USA which (at least politically) has a very, very hardline anti-guy, pro-woman position on issues of social justice and as such they often show quite a lot of bias. The oldest example in the books is that many of them will tell you that a man hitting a woman is never OK, whereas the opposite is sometimes OK.\n\nI don't think it's that clear whether this is being done deliberately. Making an AI work at all is hard. Making it not talk about sex to children is even more difficult. Making it take a deliberately politicised stance on gender is even *more* difficult. It's probably just reflecting the society from which it comes, as humans tend to. The result often isn't that pretty, though.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-11-06 05:15:14",
+            "replies": []
+        },
+        {
+            "author": "HikuroMishiro",
+            "body": "Since there's no such thing as real artificial intelligence, all 'ai' programs simply execute functions and regurgitate whatever data (and opinions) they've been fed. Since all humans (thus all human programmers) have their own biases it is impossible for there to be a truly unbiased ai. Programmers that are self reflective of their own biases and as a group could try to make as unbiased a model as possible (keeping in mind even including all known data sets that the data itself is already biased), but since creating an ai model from scratch takes so much time and money the ones that invest in doing so are going to make sure such a model is going to have the biases that they want it to have (which very much includes anti-male bias in Western countries).",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-11-07 23:25:23",
+            "replies": []
+        },
+        {
+            "author": "SidewaysGiraffe",
+            "body": "No- but that's not really relevant, since *AI does not yet exist*.  A generative program is a generative program, not an intelligence.  Detecting patterns isn't the same thing as thinking.\n\nThis isn't like people saying a dwarf planet isn't a planet or a specific brand of personal computer isn't a personal computer; this is a categorical difference with potentially devastating consequences for disregarding.  \n\nPlease- for all our sakes- learn the difference.",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2024-11-05 12:38:08",
+            "replies": [
+                {
+                    "author": "Saerain",
+                    "body": "Do you actually know what you need to see to stop being this way, or is it just an ego thing?",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2024-11-05 12:57:24",
+                    "replies": [
+                        {
+                            "author": "TypicalNPC",
+                            "body": "9/10 its an ego and attention thing.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-11-05 17:16:18",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Lazy-Exchange8895",
+            "body": "My experience with AI has been that it is not biased until it\u2019s \u201ctaught\u201d to be biased. Kind of like people.\u00a0",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2024-11-07 04:26:56",
+            "replies": []
+        }
+    ]
+}

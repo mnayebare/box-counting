@@ -1,0 +1,96 @@
+{
+    "post_title": "AI Surveillance & Privacy: Can They Coexist?",
+    "post_timestamp": "2025-03-09 00:28:42",
+    "last_comment_timestamp": "2025-03-12 12:14:13",
+    "time_difference": "3 days, 11:45:31",
+    "comments": [
+        {
+            "author": "sec_engineer",
+            "body": "Non AI-surveillance is more harmful to privacy and more prone to fraud and abuse.\n\nImagine basic surveillance is encrypted at client, transit and storage, and only becomes readable to humans whenever the risk level is (accurately) estimated above \"...%\".\n\nAt that point \"human in the loop\" would need to take over to make the judgement. \n\nIn the ideal world, the \"looped human\" will only perceive risks, and not the total scope.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-11 12:57:22",
+            "replies": [
+                {
+                    "author": "Theonewholivedinve",
+                    "body": "That is actually what I am trying to build. A system that automatically dectects and tracks crime at the moment it occurs, avoiding to store anynon related data.\n\nIt has been a bit challenging.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-03-11 13:24:44",
+                    "replies": [
+                        {
+                            "author": "sec_engineer",
+                            "body": "Sounds good! I applaud your courage.\n\nThis might help you for initial PoC:\n\nUse 2 SBC/camera systems, 1 regular and 1 \"ai vision\".\n\nThe regular camera system will be an \"on call\"-cam. It needs a endpoint/websocket to activate the stream on a specific client (your web-ui or local app ui).\n\nThen try to get some standard data for the ai vision -system. Make it detect an apple, and when it does so, task the \"on call\"-cam to do the websocket thing to your client. So every time the apple is displayed, the stream will be opened in your client.\n\nFinetune to a usable experience (what about multiple streams, closing it, applying follow-ups and some enterprise like users-system with rights/roles -structures.  \n  \nThen get it to work for non-apples. This will mean that you need to get loads of data. From my experience/knowledge (which is limited) it'll be way better to train a specific model per specific crime, and then apply the models at the same time (checking for their specific crime) on the same input-stream.\n\nif you come up with something that works, this would be the point where it would be wise to seek funding; I don't think a single engineer with limited time and budget will be able to achieve a production-grade system (within this niche) **and** is actually able to sell it.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-03-11 15:01:54",
+                            "replies": [
+                                {
+                                    "author": "Theonewholivedinve",
+                                    "body": "Hey thanks a lot for the advice I am actually building an open source community. \n\nHere is the web page: https://www.opear.org\n\nThis is the initial model for crime detection\nhttps://huggingface.co/OPear/videomae-large-finetuned-UCF-Crime",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-11 15:12:27",
+                                    "replies": [
+                                        {
+                                            "author": "sec_engineer",
+                                            "body": "Lol you're **a lot** further with this than I imagined. Nice work you got going! I'll make sure to keep an eye on it, would love to see this evolve.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-03-11 15:27:29",
+                                            "replies": [
+                                                {
+                                                    "author": "Theonewholivedinve",
+                                                    "body": "Great! I mean right now I am in aplce were I understood no many people are interested on privacy first cameras for their places and the people who do actually have used other solutions like verkada or flock safety so the project might die.\n\nIdk I have gotten a very good response from other people tho. But I do not know what I am going to do with it.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-03-11 17:10:41",
+                                                    "replies": [
+                                                        {
+                                                            "author": "sec_engineer",
+                                                            "body": "People aren't interested in privacy first camera's\n\nBut have always been interested in \"safeguarding their homes and families\". Marketing is a big thing for these kinds of services.\n\n  \nFor feasability of your proposition;\n\nCreate a Business Model Canvas, and/or Innovative Proposition Design. The last one in particular forces you to meet/interview potential customers. \n\nBased on your model and your findings, you can conclude if you can make your idea stand out for \"customer type x\". From the BMC you'll see if it is possible to build a business model from it (both logically and financially)\n\n\n\nFor the competitors-side of things, have you tried modelling your idea according to SWOT and Porters 5 Forces?\n\nSWOT - how is your proposition better/the same/worse than the one of the competitors\n\nPorter's Five Forces model - a scale that shows you how hard it is to enter a specific market \n\n  \nIf you find the proposition lacks, the market is too hard, or the business model is flawed, why not join one of the bigger ones that already exist? They would love your current progress and I can imagine you'll be hired on the spot.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-03-12 12:14:13",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "georgy56",
+                    "body": "The key to balancing AI surveillance and privacy lies in implementing robust safeguards. Prioritize encryption and decentralized data storage to keep sensitive information secure. Opt for user-controlled data retention and local processing of data by AI models for enhanced privacy protection. Open-source algorithms foster transparency and auditability. While challenges exist, designing AI surveillance systems with these features can help align technology with privacy concerns. Let's keep the conversation going on how to strike the right balance!",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-03-11 13:51:26",
+                    "replies": [
+                        {
+                            "author": "Theonewholivedinve",
+                            "body": "Hey georgy I laid out a roadmap and a system design here https://www.opear.org/developers\n\nDo you agree with it, what would you add or take",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-03-11 17:28:55",
+                            "replies": [
+                                {
+                                    "author": "georgy56",
+                                    "body": "Pretty cool \ud83d\udc4c",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-11 17:32:02",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

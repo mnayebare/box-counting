@@ -1,0 +1,309 @@
+{
+    "post_title": "Overlooked: Big Privacy Risk in AI-Enabled Devices",
+    "post_timestamp": "2025-03-09 13:12:21",
+    "last_comment_timestamp": "2025-03-10 01:13:03",
+    "time_difference": "12:00:42",
+    "comments": [
+        {
+            "author": "Digital-Chupacabra",
+            "body": "> on closed-source OS\n\nIt's not an issue on Linux, or any of the privacy focused forks of android.\n\nIt remains to be seen how much staying power the fad has. Ignoring the massive privacy and security issues I've yet to see any actual value add, for anyone other than the company pushing it, with something like Windows Recall.\n\nUsing Windows as an examples, most companies and governments, the majority of Microsoft's revenue, are going to require a version of windows without such nonsense so there will always be that option as tenuous as it may be.",
+            "score": 35,
+            "depth": 0,
+            "timestamp": "2025-03-09 14:09:46",
+            "replies": [
+                {
+                    "author": "privacy_by_default",
+                    "body": "Even if not an issue on Linux or privacy forks of Android, if your friend has a non-private OS, it could be a security risk since your messages and your contact info will show up in your friend's screen.",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2025-03-09 19:00:41",
+                    "replies": []
+                },
+                {
+                    "author": "Dynw",
+                    "body": "Oh, the value is tremendous - for copros from unrestrained data mining, that is.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2025-03-09 15:55:26",
+                    "replies": [
+                        {
+                            "author": "Digital-Chupacabra",
+                            "body": "Goes without saying, but I'll clarify.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-03-09 16:54:35",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "zombi-roboto",
+            "body": "s/Overlooked/Ignored\n\nAI pushers are those same arrogant twunts that profit from mined data & the ability to nudge/influence/control the masses.\n\nUser privacy is not a thing that is valued (much less, *respected*) by them.\n\nWe say \"privacy risk\", they say \"effective feature\".",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2025-03-09 17:14:26",
+            "replies": []
+        },
+        {
+            "author": "good4y0u",
+            "body": "It depends on if the model is LOCAL only or if it's using a cloud AI provider.\n\nIf it's cloud AI, there's definitely a risk. If it's a local on-device model, the risk is significantly lower.\n\nTechnically if SIRI for example was on device only then the risk would be low, but SIRI and Google assistant are both cloud services and that is being processed by their servers. It's the same for OpenAI (backing Siri Advanced in the new update) and Gemini, Google's newer AI. \n\nI run a local llama model for my home assistant to use, it lives on my own machine and doesn't have any outbound telemetry. This is an example of private AI. The only way to get something similar in the enterprise world is self hosting OR having something like a Zero Retention agreement with the cloud provider ( usually for use in medical {via BAA} or finance industries)",
+            "score": 14,
+            "depth": 0,
+            "timestamp": "2025-03-09 14:31:35",
+            "replies": [
+                {
+                    "author": "privacy_by_default",
+                    "body": "Yeah for it to be mostly safe it has to do local processing, open source and set up by the user. Even better if you can restrict network access for it.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-03-09 19:09:08",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "GriLL03",
+            "body": "At the end of the day, whenever you rely on closed-source OSes, you risk _something_ phoning home without you seeing it do so, or having backdoors into your system be exploited by an unknown attacker (unless you audit _all_ your router logs and trust your router's OS, of course, but if your threat model is that serious, you're not seeking advice here). \n\nIf you use an open-source OS (and you understand how to use it, etc), then at least you know _what_ is phoning home. \n\nThis is nothing new, but people should take it more seriously and start moving to computing software that respects their privacy and right to own their hardware.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-03-09 15:32:00",
+            "replies": []
+        },
+        {
+            "author": "Old-Benefit4441",
+            "body": "Yeah I think on device processing is just as risky as cloud pretty much. They can just scan your device/messages/whatever using local AI tools and then send the findings away and it'd possibly be harder to detect since they wouldn't need to send all the data over the network where it can be intercepted and inspected.",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2025-03-09 15:18:18",
+            "replies": [
+                {
+                    "author": "privacy_by_default",
+                    "body": "True, a local AI could send encrypted text which is even harder to detect / audit.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-03-09 19:04:44",
+                    "replies": [
+                        {
+                            "author": "Old-Benefit4441",
+                            "body": "Or just little flags that appear to be meaningless metadata but actually indicate you're an undesirable.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-03-09 19:57:53",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Casual-Snoo",
+            "body": "Yes, privacy is mostly no longer a thing depending on where you live. And we're paying exorbitant amounts of money to have these devices while corporations do this to us. These data brokers are making money off of our information while making us more vulnerable.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-03-09 15:57:02",
+            "replies": []
+        },
+        {
+            "author": "leshiy19xx",
+            "body": "> Devices with built-in AI are likely going to be taking screenshots\n\n\nTaking screenshots is a possible approach, but I do not see it as \"likely\"\n\n\nSending your data to server side for processing is expendive for the company, I believe they will try to avoid that.\n\n\nYes, one can implement ai in most insecure and anti privacy way or secure and with privacy mind. I expect the reality will be somewhere in the middle. Samsung permanently repeated that it's AI is local and privacy focused.\n\n\nAlso, do not forget about regulation, which often require an explicit consent.\n\n\nAnd finally, AI is a very broad term, my not so ai heavy phone already can recognize faces on photos and remove objects from photos. Locally, without taking screenshots all the time etc.\n\n\nSo, agree deep AI in ntegration brings new security and privacy risks, but it can be implemented without killing privacy .",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-03-09 14:07:58",
+            "replies": [
+                {
+                    "author": "privacy_by_default",
+                    "body": "Yeah it can be implemented like that, although it would be very hard to tell especially with closed source OS, as no one can even verify what the OS is really doing, except a few Engineers in some corporation that signed an NDA.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-03-09 19:06:35",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "No-Second-Kill-Death",
+            "body": "AI. Bro what at you going on about. If they want to steal data, they don\u2019t need \u201cAI\u201d",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-09 14:46:35",
+            "replies": [
+                {
+                    "author": "privacy_by_default",
+                    "body": "That's true,but it seems with cloud AI the risk is increased as it constantly takes screenshots and interprets the data on them. But maybe that can be done already without built-in AI. It looks like the only real private way of communication on mobile devices would be if the persons on both ends of the conversation are using both a privacy app and privacy OS.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-03-09 19:03:53",
+                    "replies": [
+                        {
+                            "author": "purebananamoon",
+                            "body": "I've never heard of any AI taking unprompted screenshots, but you keep claiming that it would be the case. Do you have any sources on this, or is this your paranoia speaking?",
+                            "score": -1,
+                            "depth": 2,
+                            "timestamp": "2025-03-09 19:16:23",
+                            "replies": [
+                                {
+                                    "author": "privacy_by_default",
+                                    "body": "This articles has a few months, not sure the current status, and there might be other built-in AI that does it, I have not done an extensive research and this is only one example: *\"Microsoft says it has \u201clistened to feedback\u201d following a privacy row over a new tool which takes regular screenshots of users\u2019 activity.*\" [https://www.bbc.com/news/articles/c869glx8endo](https://www.bbc.com/news/articles/c869glx8endo)",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-09 19:53:23",
+                                    "replies": [
+                                        {
+                                            "author": "purebananamoon",
+                                            "body": "It seems like that tool was never released:\n\n>Recall was never made publicly available.\n\nIt also doesn't seem like the screenshots taken were ever sent out of the computer:\n\n>It was designed to help people find things they had looked at or worked on previously by searching through desktop screenshots taken every few seconds.\n\n>The firm added that screenshots can only be accessed with a biometric login.\n\nI definitely understand and agree with the general privacy concerns regarding AI, but it doesn't seem like you have a deep understanding of how these things work. Please don't take this the wrong way. I'm saying this because I do agree with your sentiment, but poorly researched claims are hurting your own cause.\n\nSending whole images from client to server is not feasible for most if not all companies rolling out AI models on any larger scale. Obviously consumers have to watch out for what data is being collected, but all encompassing surveillance across a whole system and profiling you even through granular analysis on your friends' devices is not really something that's technically doable, at least the way you describe it. Not even Googles own infrastructure could handle the vast amount of data and server workload if they wanted to capture and analyze all users' screens every second.\n\nJust imagine the workload your hardware had to bear if an AI process tried to recorded everything on the screen, all sensors, and all in- and outgoing traffic from your device. Your device would run out of battery in 5 mins, while it has the temperature of the sun and any other tasks take tenfold of time to complete.\n\nAgain, I agree that companies collect as much data as they can from consumers. But for now that doesn't mean livestreaming your device's screen while simultaneously recording, analysing, and sending all events happening to the cloud. It more likely means recording select data they deem relevant and sending it to the server in an aggregated way. Not that that's much better, but it's still quite far from what I feel like you think is happening.",
+                                            "score": -1,
+                                            "depth": 4,
+                                            "timestamp": "2025-03-09 20:30:57",
+                                            "replies": [
+                                                {
+                                                    "author": "privacy_by_default",
+                                                    "body": "Screenshots and other data can be processed locally and then send only the encrypted text to remove servers, Current phones have pretty powerful hardware.\n\n\"What i think is happening\" i only mention it as a possibility because commonly used OS, system services or infra, are mostly closed source (you know, the top 2 brands that most users have, idk if it can be mentioned here). So even if we wanted, we can't really verify this things, and I believe just the unverified possibility is sufficient cause of concern.\n\nFor example, many people think they use Signal for chats and they're good to go with a good level of privacy. But i think only if the devices Operating Systems on both ends of the conversation are open source (Linux / privacy Android fork), which would remove the risk of built-in AI or other system services collecting unexpected data.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-03-10 01:13:03",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Annual-Beard-5090",
+            "body": "Thats a feature.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-09 22:00:40",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": -13,
+            "depth": 0,
+            "timestamp": "2025-03-09 13:25:27",
+            "replies": [
+                {
+                    "author": "_Enclose_",
+                    "body": "That's basically saying \"if you've got nothing to hide, you've got nothing to fear\"\n\nBy that logic, mind if I install some cameras in your home? You're not doing anything illegal are you, so that should be fine? Right?",
+                    "score": 15,
+                    "depth": 1,
+                    "timestamp": "2025-03-09 14:01:50",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "[deleted]",
+                            "score": -2,
+                            "depth": 2,
+                            "timestamp": "2025-03-09 14:09:59",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "[deleted]",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-09 14:12:36",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "_Enclose_",
+                                    "body": "I'm not even going to respond to that.\n\nAll I'd like to point out is that such comments are funny from someone posting from a new account with only 3 comments, all in this thread.\n\nWhat are you trying to hide? Bit ironic, no?",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-09 14:14:02",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "[deleted]",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2025-03-09 14:22:05",
+                                            "replies": [
+                                                {
+                                                    "author": "_Enclose_",
+                                                    "body": "So you recognize the need for privacy by using multiple accounts and deleting your data. Yet, you don't see the irony in the stance you're taking in this thread?\n\nEither you're a hypocrite, a troll, or a dumb fuck.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-03-09 14:24:13",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Deleted",
+                                                            "body": "[deleted]",
+                                                            "score": 0,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-03-09 14:25:26",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "_Enclose_",
+                                                                    "body": "Troll it is.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-03-09 14:26:43",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "Deleted",
+                                            "body": "[deleted]",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2025-03-09 14:23:18",
+                                            "replies": [
+                                                {
+                                                    "author": "_Enclose_",
+                                                    "body": "You still rubbing that hard-on while browsing through my comments? Or have you finished against the bottom of your desk yet?",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-03-09 14:25:56",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "privacy_by_default",
+                    "body": "There are risks to privacy loss even if you are a good or \"boring\" person, eg: identity theft or financial loss through security breaches, data collection that may affect insurance rates or job oportunities. It is hard to predict how someone could use our data so i believe having solid privacy is good in any case.",
+                    "score": 14,
+                    "depth": 1,
+                    "timestamp": "2025-03-09 13:31:30",
+                    "replies": [
+                        {
+                            "author": "micseydel",
+                            "body": "I would assume the profile you're replying to is a bot. It's a very common comment to make on Reddit, but this is a weird sub to do it in. The profile is over a year old but this is the only activity from it.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2025-03-09 13:46:01",
+                            "replies": [
+                                {
+                                    "author": "_Enclose_",
+                                    "body": "Yeah, also just noticed these are his first comments. Very sus account",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-09 14:15:41",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

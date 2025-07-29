@@ -1,0 +1,1886 @@
+{
+    "post_title": "AI can tell your race from an X-ray image \u2014 and scientists can't figure out how. Large research team taught AI program to read scans, and it outwitted them",
+    "post_timestamp": "2022-05-17 22:34:28",
+    "last_comment_timestamp": "2022-05-23 15:52:07",
+    "time_difference": "5 days, 17:17:39",
+    "comments": [
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": 308,
+            "depth": 0,
+            "timestamp": "2022-05-18 01:20:45",
+            "replies": [
+                {
+                    "author": "hbrthree",
+                    "body": "Yeah it\u2019s too early. Not enough is known about the sample set and also black and white. Seems meh. Throw some Asians and Latins in see what happens.",
+                    "score": 15,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 14:18:43",
+                    "replies": []
+                },
+                {
+                    "author": "Taooflayflat",
+                    "body": "What if it becomes magic?",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 14:13:51",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "[deleted]",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 14:26:26",
+                            "replies": [
+                                {
+                                    "author": "Kil0-",
+                                    "body": "Wrong I can make I can make water disappear in the sun .",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 18:05:24",
+                                    "replies": [
+                                        {
+                                            "author": "Cake_And_Pi",
+                                            "body": "Oh yeah, I can turn beer into piss.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-18 19:02:45",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "Deleted",
+                                            "body": "[deleted]",
+                                            "score": -4,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-18 18:12:59",
+                                            "replies": [
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "Sarcasm is magic, So magical in fact that you can\u2019t seem to understand it.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-18 20:00:28",
+                                                    "replies": []
+                                                },
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "[deleted]",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-18 21:16:48",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "wauve1",
+                                    "body": "Babe wake up, new copypasta just dropped",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 23:49:47",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "bwiisoldier",
+                                    "body": "Sir this is a reddit thread. Please calm down.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-19 07:42:28",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "bogeuh",
+                                    "body": "Well santa and easter bunny teach the kids that \u201cthis is made up magic hocus pocus\u201d it does make them think, maybe the other imaginary sky man is also made up.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-19 08:27:51",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "HeyImDrew",
+            "body": "Ghassemi (comp scientist @ MIT) believes it's based on melanin.\n\nGoodman (bio anthropologist @ Hampshire) believes it's based on geography.\n\nBoth proposals pretty logical and not as controversial as it would seem based on the headline.",
+            "score": 249,
+            "depth": 0,
+            "timestamp": "2022-05-17 23:22:18",
+            "replies": [
+                {
+                    "author": "timmablimma",
+                    "body": "Those biased datasets! I could believe both after having to look at a ton of pneumonia X-rays for a machine learning model demo.",
+                    "score": 67,
+                    "depth": 1,
+                    "timestamp": "2022-05-17 23:28:18",
+                    "replies": [
+                        {
+                            "author": "Shadowleg",
+                            "body": "i remember hearing about one of those pneumonia detection models that instead of detecting pneumonia detected whether or not the patient was lying on their back",
+                            "score": 11,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 13:49:23",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "HerbertWest",
+                    "body": "Isn't \"based on geography\" (i.e., geographic ancestry) essentially the same as \"based on race\" since they are so highly correlated anyway? Why feign confusion? There's nothing wrong with noting that there are groupings of traits that tend to correlate with the construct of \"race\" unless you yourself believe that those traits make someone inferior or superior.",
+                    "score": 19,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 08:58:42",
+                    "replies": [
+                        {
+                            "author": "HeyImDrew",
+                            "body": "No",
+                            "score": -11,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 09:00:37",
+                            "replies": [
+                                {
+                                    "author": "HerbertWest",
+                                    "body": ">No\n\nSeems to me like it is a semantic argument akin to the one I assumed:\n\n>So, while AI might be able to determine from an X-ray whether a person\u2019s ancestors were from Scandinavia, Africa or Asia, Goodman says it\u2019s not about race. \u201cYou call this race. I call this geographical variation,\u201d said Goodman \u2014 but he did admit it\u2019s unclear how AI could detect geographical location from an X-ray.\n\nCan you please explain how I'm wrong besides saying \"No?\" This is a science subreddit.\n\nEdit: Saying that people from different geographic origins tend to share certain traits and that those traits correspond with the concept of race more often than not should not be controversial in and of itself. A scientist should not be throwing up their hands and basically saying \"Who could have seen this coming?!\" to avoid citing the obvious explanation.",
+                                    "score": 8,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 09:19:37",
+                                    "replies": [
+                                        {
+                                            "author": "HeyImDrew",
+                                            "body": "No.  I owe you nothing. Posting a succinct synopsis does not invite you into a conversation with me over something neither of us have professional experience.",
+                                            "score": -29,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-18 09:21:13",
+                                            "replies": [
+                                                {
+                                                    "author": "HerbertWest",
+                                                    "body": ">No.  I owe you nothing. Posting a succinct synopsis does not invite you into a conversation with me over something neither of us have professional experience.\n\nWell, why did you feel the need to respond in the first place? It seems like you previously felt you owed me a \"No.\" Was that \"No\" based on professional experience or merely an emotional reaction?",
+                                                    "score": 8,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-18 09:27:36",
+                                                    "replies": [
+                                                        {
+                                                            "author": "HeyImDrew",
+                                                            "body": "No, now write me a longer paragraph.",
+                                                            "score": -23,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-05-18 09:28:29",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "sixdicksinthechexmix",
+                                                                    "body": "Right, so you got called out on having no idea what you\u2019re talking about.",
+                                                                    "score": 8,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-05-18 10:04:59",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "HeyImDrew",
+                                                                            "body": "I literally admitted to that already lol nice alt accounts.\n\nUmad you couldnt hijack the top comment?",
+                                                                            "score": -14,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2022-05-18 10:07:10",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "Enderhawk451",
+                                                                                    "body": "I don\u2019t think it\u2019s alt accounts\u2026",
+                                                                                    "score": 0,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2022-05-18 21:30:26",
+                                                                                    "replies": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "Lol you\u2019re a bum",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-18 12:14:54",
+                                                    "replies": [
+                                                        {
+                                                            "author": "HeyImDrew",
+                                                            "body": "Yes",
+                                                            "score": -2,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-05-18 12:33:47",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "Koraguz",
+                                            "body": "the reasoning is because this isn't selecting for other dark skinned people and assuming it's all from the same place, what about Papa new Guineans, Australian Aboriginals, can it do the same with Polynesian? where does it place Ainu? would it be Asia? or Siberia?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-19 01:00:13",
+                                            "replies": [
+                                                {
+                                                    "author": "HerbertWest",
+                                                    "body": ">the reasoning is because this isn't selecting for other dark skinned people and assuming it's all from the same place, what about Papa new Guineans, Australian Aboriginals, can it do the same with Polynesian? where does it place Ainu? would it be Asia? or Siberia?\n\nAs far as I have read, the known physical differences that are relevant to medical treatment are, indirectly, related to whether or not someone has pigmentation and features most would visually identify as \"black.\" It is unclear if there are large enough differences between specific geographic origins that the AI could further differentiate them with training. If not, which appears to be the case based on the article, then it would seem that these differences--if they exist--are not large enough to be predictive and therefore likely not large enough to be medically useful.\n\nAs for the Ainu people, that would depend completely upon what physical differences the AI would uncover through training. Since they have mixed with Japanese for so many generations and have been diluted through genocide, I would hazard a guess that it would identify them as whatever it would identify Japanese as.\n\nThe classification of other geographic ancestries may or may not line up with how we would classify people by \"race\" as it is currently constructed. It's not something that can be predicted without training the AI. \n\nWhat is making the scientists uncomfortable in this case is that the features the AI is detecting (whatever they are) appear to be able to accurately categorize people in a way that fits with our conceived notion of \"black\" as a race. This might not hold true for other \"races,\" but certainly seems to in this case, with a 90% degree of accuracy. Based on my reading of their statements, the scientists look to be downplaying this result to avoid that conclusion.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-19 14:34:20",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Koraguz",
+                            "body": "it would if you could tie geography and race, considering race is a socially constructed set of boxes that break themselves over and over again, maybe ethnicity? but then how do you measure that, they are ranges usually being based on common ancestry and muddle again due to migration, traders.  \n\n\nGeography can tie to melanin rates due to local adaption to specific geography...   \nWhile if it was \"race\", then somehow the same group of people settled very specifically the same environment across the same latitudes and altitudes",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-05-19 00:58:46",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "gjs628",
+                    "body": "Could it be based (or partially based) on bone density or shape? I\u2019m from Africa and it\u2019s pretty common \u201cknowledge\u201d that native African people have much stronger bones than the seemingly more fragile Caucasian population. Obviously it\u2019s anecdotal and not a fact, but from my own experiences it certainly feels true.",
+                    "score": 30,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 01:03:39",
+                    "replies": [
+                        {
+                            "author": "Zam8859",
+                            "body": "I was under the impression that this was similar to the belief that certain races feel less pain, a common myth based in racism. However, it seems that racial differences in bone density do exist and it is a current area of research\n\nhttps://pubmed.ncbi.nlm.nih.gov/9024231/",
+                            "score": 71,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 01:17:35",
+                            "replies": [
+                                {
+                                    "author": "gjs628",
+                                    "body": "What amazes me is, growing up, how apartheid racists always managed to turn something like being *literally* physically stronger and more resilient (since most labourers were African, they generally were incredibly physically fit and active) into something negative. They\u2019d say, \u201cnever hit a k****r in the head because you\u2019ll break your hand on their thick skulls\u201d.\n\nNow when you grow up hearing things like that day after day, generation after generation, you can see why racism became less about racial/cultural differences and more about hating other people for being different because you were told they\u2019re bad. It becomes institutional.\n\nBut then people like my mother would hire housekeepers and gardeners and pay them triple what anyone else would pay, she\u2019d buy them food and baby clothes because \u201ceven with what I\u2019m paying, I know other people aren\u2019t paying that and even I couldn\u2019t survive on that kind of wage with 4 or 5 kids\u201d. As such, the loyalty and friendships she made were with everybody and at least in that little home bubble, racism didn\u2019t exist. \n\nShe would always insist that the racists were mocking black people for being uneducated, but then took away any chance of an education they had with white-only schools. Making a group of people a certain way by denying them basic human rights and then mocking them for it is the height of human evil.",
+                                    "score": 99,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 01:58:24",
+                                    "replies": [
+                                        {
+                                            "author": "campionmusic51",
+                                            "body": "it\u2019s a classic move, though. in the middle ages, jews were forbade being allowed into most professions, except for a tiny handful of extremely undesirable jobs, the most potentially lucrative being usury. so, they became skilled money lenders, having no other choice if they wished to apply their intellect, and when they did, they were mocked for being obsessed with money (a pejorative that has stuck till modern day). a similar thing happened to the gypsies in central europe.",
+                                            "score": 73,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-18 02:24:26",
+                                            "replies": [
+                                                {
+                                                    "author": "Deleted",
+                                                    "body": "Also see lgbtq people who get kicked out of their homes and end up in sex work.",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-18 15:18:44",
+                                                    "replies": [
+                                                        {
+                                                            "author": "campionmusic51",
+                                                            "body": "or the poor, who are not able to spend their way out of poverty, and end up being called lazy and sorts of other things.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-05-18 16:16:06",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "big_trike",
+                                            "body": "Yup, it's hate based.  The same people who think that migrant workers are stealing all of our jobs because they work hard also think migrant workers are lazy and stealing all of the social security money.",
+                                            "score": 22,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-18 08:25:53",
+                                            "replies": [
+                                                {
+                                                    "author": "gjs628",
+                                                    "body": "Damn those immigrants! Coming over here and taking all of our jobs,  while also refusing to get a job and taking all our welfare! Then they have the audacity to stick together in their little \u201cgroups\u201d and they refuse to mingle and interact with our local culture, even though - when they do try to make friends - we tell them to GIT BACK TU YER OWN COUNTRY! \n\nAnd worst of all, they\u2019re bringing their authentic, high quality Mexican/African/European foreign cuisine over here and putting our locally made much-shittier rip-off Mexican/African/European restaurants out of business!!!\n\nI swear, if someone ever explains what Irony is to these racists, they\u2019re going to be awfully embarrassed one day.",
+                                                    "score": 8,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-18 11:12:57",
+                                                    "replies": [
+                                                        {
+                                                            "author": "dennismfrancisart",
+                                                            "body": "There is no way to explain away logical fallacies. They only change with some existential shock or emotional paradigm shift.",
+                                                            "score": 5,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-05-18 12:29:57",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "author": "tendimensions",
+                                                    "body": "Schrodinger's immigrants",
+                                                    "score": 4,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-18 12:24:12",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "Op2myst1",
+                                            "body": "It feels like a part of racism is non-acknowledged envy.",
+                                            "score": 5,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-18 12:34:29",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "stackered",
+                                    "body": "Redheads/gingers literally do feel less pain though, they have mutant pain receptors which is also why they require higher dosages of painkillers in hospitals",
+                                    "score": 12,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 11:46:24",
+                                    "replies": [
+                                        {
+                                            "author": "xRotKonigx",
+                                            "body": "More pain, not less. Hence the extra painkillers. As a ginger that is so real. Going to the dentist is where I learned. I always have to ask for extra Novocain. To the point that they are like I can\u2019t give you much more. Also I take colder showers than anyone I know, because I don\u2019t need it as hot.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-18 15:32:25",
+                                            "replies": [
+                                                {
+                                                    "author": "stackered",
+                                                    "body": "You have more pain tolerance, so that is why you feel less pain and require more painkillers to dull your pain.  You actually technically have more opioid signaling and a higher pain threshold.  I think one study demonstrated that thermal pain is an exception, like from heat, where you may feel it more.  Its not necessarily only red heads but its a gene commonly found amongst red heads\n\n[https://www.science.org/doi/10.1126/sciadv.abd1310](https://www.science.org/doi/10.1126/sciadv.abd1310) \\- Reduced MC4R signaling alters nociceptive thresholds associated with red hair",
+                                                    "score": 6,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-18 16:04:24",
+                                                    "replies": [
+                                                        {
+                                                            "author": "xRotKonigx",
+                                                            "body": "Very interesting read, I\u2019ll admit my ability to follow after the abstract was limited. But weird, I\u2019ve noticed some of those side effects before, especially with painkillers. From an internal perspective and comparing things like tattoos, heat, and other types sensations it feels like my ability to detect touch is heightened compared to non gingers. And other gingers I\u2019ve know have described similar  experiences.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-05-18 17:04:07",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "stackered",
+                                                                    "body": "No worries man, I'm a scientist with a particular interest in genetics, so that helps haha.  But your case is interesting, perhaps you don't have the gene.  Its totally possible, its just a common association I believe.  Have you ever had your genotype done, like with 23andme or Ancestry?  I'm not sure if they cover that gene in their array",
+                                                                    "score": 3,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-05-18 17:09:52",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "dennismfrancisart",
+                                    "body": "Yeah, but is it really racial? Isn't it time we put the whole \"race\" thing to bed and actually come up with a scientific term?",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 12:25:44",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "stackered",
+                            "body": "I think this is probably a big factor in it, there are proven differences between black and white people in bone density but there are definitely outliers in these situations.  I'm Caucasian but I have a top 0.3% bone density measure and so does my mother, though she's Sicilian which is near Africa.  My father does too but he's Scottish... and a laborer - you can build bone density by lifting or putting stress on your bones, so a lot of the differences do come from if you are a laborer or not, but I think a lot of it is genetic given that I had that super high bone density before I even started lifting weights.  I played video games all day as a kid and somehow have bones like wolverine and I suspect its similar with the differences between ethnicities on a high level.  However, to overall broadly say Africans have stronger bones would likely be wrong given that the diversity of genetics amongst African's is actually greater than between African's and Caucasians! Pretty crazy right?",
+                            "score": 8,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 11:50:19",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "There must be outliers in the AI correctiveness as well. I\u2019m sure it\u2019s not 100% right about the persons race all the time. It could easily be facial structure or small variation on a variety bone shapes that we wouldn\u2019t notice day to day.  It\u2019s silly to pretend there could be no differences between race\u2019s bones.",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 12:14:11",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "soshjitza",
+                            "body": "You are incorrect. Wolffs Law says bone density is directly proportional to stress put on the bone. Pretty cool stuff to read up on if you\u2019re ever bored.",
+                            "score": 30,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 07:45:23",
+                            "replies": [
+                                {
+                                    "author": "Orbitskylab",
+                                    "body": "But there may be differences in structure or shape beyond that? I don\u2019t think that\u2019s a crazy hypothesis.",
+                                    "score": 8,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 10:06:01",
+                                    "replies": [
+                                        {
+                                            "author": "HerbertWest",
+                                            "body": ">But there may be differences in structure or shape beyond that? I don\u2019t think that\u2019s a crazy hypothesis.\n\nBeyond not being a crazy hypothesis, it's well-established science. One can tell both the likely race and sex of a skeleton with a high degree of certainty. It's somehow so taboo to bring this up now that scientists are feigning surprise that AI can detect race based on skeletal features. No, osteoarchaeologiste are not 100% accurate, but who knows if AI could be?\n\nFrom the article:\n\n>So, while AI might be able to determine from an X-ray whether a person\u2019s ancestors were from Scandinavia, Africa or Asia, Goodman says it\u2019s not about race. \u201cYou call this race. I call this geographical variation,\u201d said Goodman \u2014 but he did admit it\u2019s unclear how AI could detect geographical location from an X-ray.\n\nIt's a sad day when social considerations are so strong that they impede scientists from arriving at the obvious conclusion.",
+                                            "score": 11,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-18 10:22:59",
+                                            "replies": [
+                                                {
+                                                    "author": "biernini",
+                                                    "body": "It's not sad at all since race is a social construct and does not exist. There is only geographical ancestry and history has shown that mixing the two only leads to unnecessary confusion at best, crimes against humanity at worst.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-18 12:21:55",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Orbitskylab",
+                                                            "body": "Race is only a social construct in that it\u2019s our attempt to classify the underlying real variation that exists between different ethnic groups. The variation is real, but our categories that we slap ontop can be wrong or carry added baggage that isn\u2019t there.",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-05-18 22:48:23",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "biernini",
+                                                                    "body": "And when that baggage has proven to be the root cause of so much needless suffering it is not a construct we need to be \"saddened\" by it's self-censorship, as OP suggests. We are an adaptive species in every way, so finding ways to describe population variations without using the loaded term \"race\" is not an insurmountable challenge.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-05-19 06:58:58",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "author": "HerbertWest",
+                                                            "body": ">It's not sad at all since race is a social construct and does not exist. There is only geographical ancestry and history has shown that mixing the two only leads to unnecessary confusion at best, crimes against humanity at worst.\n\nRace was already relevant to the topic at hand since the researchers themselves brought it up when pondering how the AI can make such identifications. Obfuscating the results by saying \"we have no idea why this AI can detect race based on someone's bone structure; bone structure is based on geographic origin and not on race\" serves no purpose and directly avoids answering the question posed. The fact is that the researchers are perfectly capable of answering that question; they just prefer not to either because it makes them uncomfortable on a personal level or they feel socially pressured to dance around the issue. Bone structure is, in fact, at least loosely correlated with race; it is simply lying to claim otherwise.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-05-18 13:05:01",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "biernini",
+                                                                    "body": "There are several genetic studies that support the idea that what we call \"race\" does not exist. This study only supports the idea that an AI reflects the same hidden biases in data collection and categorization when it crunches numbers and spit out it's results. AI's are not omniscient and what they produce does not lend credence to the idea that races exist, only that how we treat population data is very likely racialized.",
+                                                                    "score": 0,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-05-19 07:11:25",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "HerbertWest",
+                                                                            "body": "So, to be clear, you are claiming that bone structure is not at all correlated with socially constructed racial categories? And that there are absolutely no other correlations of physical traits and racial categories? Please think carefully about what the word correlation means before you say no and I provide links to evidence that says otherwise.\n\nI am not claiming that \"race\" is an objective reality; all I am claiming is that it does have some degree of predictive power. The categories that humanity has constructed are not entirely arbitrary and ephemeral. In most cases, they *coincidentally* do correlate to varying degrees with geographic ancestry, which makes race itself a construct with some degree of validity, i.e., it is not 0% predictive. \n\nThe researchers pretend that the reason the AI can identify race is mysterious because they don't want to acknowledge that race has any correlation with the physical world. They go to great rhetorical lengths to dance around the easy explanation that exists, the one I mentioned above. This is not the action of a scientific mind, but of one that is driven by ideological considerations.\n\n**Edit:** With respect to the AI, the issue is that it can predict race without considering \"geographic ancestry\" at all. In other words, the chest x-rays of two darker skinned people who most would identify as \"black\" but who may have different \"geographic ancestries\" share something in common that humans cannot detect; therefore, the AI is classifying them both in a racial category that the researchers would rather believe has absolutely no validity. The fact that the AI is able to do this suggests that the category does have some physical basis, a conclusion that the researchers are obfuscating for questionable reasons. \n\nThe fact that there is some validity to \"race\" *does* make it useful in certain medical contexts, i.e., you can make a reasonably accurate guess when dosing certain drugs or improve interpretation of certain blood test results. The alternative would be to intentionally ignore this useful information and wait for the results of a DNA test; I hope I don't have to explain how stupid that is when health is on the line.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2022-05-19 07:40:55",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "biernini",
+                                                                                    "body": "My opinions line-up with Alan Goodman, a professor of biological anthropology at Hampshire College who was quoted at the end of the article:\n\n>Osteoarcheologists and geneticists have found no evidence of substantial racial differences in the human genome, but they do find major differences between people based on where their ancestors lived. [...] \u201cInstead of using race, if they looked at somebody\u2019s geographic co-ordinates, would the machine do just as well? My sense is the (AI) machine would do just as well,\u201d Goodman told the paper. So, while AI might be able to determine from an X-ray whether a person\u2019s ancestors were from Scandinavia, Africa or Asia, Goodman says it\u2019s not about race. \u201cYou call this race. I call this geographical variation,\u201d said Goodman.\n\nTo reiterate, race is a social construct with insignificant genetic basis that provides no more useful information than basic geographic ancestry. Considering the horrific societal damage that has been wrought by the misuse of what is only an informal biological science phylum I would say the diagnostic health benefits in continued usage is marginal to the point of irrelevance, and the avoidance of usage is not something that should be concerned about *scientifically*.",
+                                                                                    "score": 0,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2022-05-19 12:27:07",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "HerbertWest",
+                                                                                            "body": "And, much like him, you are dancing around the topic of race without actually addressing the points at hand. At no point have you offered a rebuttal to anything I've said--because you can't. Have a good day!\n\nEdit:\n\n>...race is a social construct with insignificant genetic basis that provides no more useful information than basic geographic ancestry.\n\nIt provides it faster and in a far less resource-intensive way. For example, are you suggesting that we DNA test every patient who comes into the ER unresponsive before giving them Warfarin, so that we can be sure to administer an appropriate dosage? Or should we just note \"that patient appears to be Black--let's administer what is overwhelmingly likely to be an appropriate dosage.\" You're going to kill a lot of people just to be politically correct.",
+                                                                                            "score": 1,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2022-05-19 12:33:42",
+                                                                                            "replies": []
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "I don\u2019t think this is actually true. Can you find a credible source?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 12:08:35",
+                            "replies": [
+                                {
+                                    "author": "gjs628",
+                                    "body": "As I mentioned, it\u2019s purely anecdotal and isn\u2019t a fact. So no, no sources I\u2019m afraid.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 17:52:42",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Koraguz",
+                            "body": "How so? there's more genetic variation within African populations that outside combined, due to the genetic bottleneck when human left the continent.   \nFeels like it's basing everything on it's one understanding of what \"black\" is, which is going to be western populations as that's where a majority of the african american population came from due to the slave trade.  \n\n\nI'd give up that idea if they can replicate showing that Hadza, pygmy, Bantu, are included, as well as Afro asiatic, does it put Berber as originating from Africa?  \n\n\nand then I would want to see it be able to exclude similarly high melanin groups like Austronesian groups",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-05-19 01:05:17",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "stackered",
+                    "body": "most likely on the known factors of differentiation in bone density",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 11:41:21",
+                    "replies": []
+                },
+                {
+                    "author": "LawHelmet",
+                    "body": "From the study itself, once you click thru the popular news article:\n\n> To conclude, our study showed that medical AI systems can easily learn to recognise self-reported racial identity from medical images, and that this capability is extremely difficult to isolate. We found that patient racial identity was readily learnable from medical imaging data alone, and could be generalised to external environments and across multiple imaging modalities.\n\nBoth of the supplies explanations are not supported by the study. This is fuckin weird, the study shows that race may not strictly be a social construct.",
+                    "score": -5,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 08:47:14",
+                    "replies": [
+                        {
+                            "author": "krell_154",
+                            "body": "< the study shows that race may not strictly be a social construct.\n\nI can't believe anyone literally thining that races are solely a social construct",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 09:06:41",
+                            "replies": [
+                                {
+                                    "author": "HerbertWest",
+                                    "body": ">< the study shows that race may not strictly be a social construct.\n>\n>I can't believe anyone literally thining that races are solely a social construct\n\nThe fact of the matter is that race *is* a social construct, but the way race is constructed is so highly correlated with ancestry in most cases that the difference isn't worth mentioning. What is racist is not to admit this fact, but to believe that these measurable differences have any effect on  someone's intrinsic worth as a human being, on their potential, on their moral character, etc.",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 10:28:41",
+                                    "replies": [
+                                        {
+                                            "author": "krell_154",
+                                            "body": ">The fact of the matter is that race is a social construct\n\nNah mate, race is a cluster of properties, some of which are purely phenotypical, others genetic and others yet historical and geographical",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-18 15:41:02",
+                                            "replies": [
+                                                {
+                                                    "author": "HerbertWest",
+                                                    "body": ">>The fact of the matter is that race is a social construct\n>\n>Nah mate, race is a cluster of properties, some of which are purely phenotypical, others genetic and others yet historical and geographical\n\nI think we are actually saying similar things if you read the second half of that sentence. What I was saying is that race is a loosely fit categorization that does encompass significant physical properties. Many of those properties, genetic and biological, can be measured as different between the groupings; some cannot and are based on those historical and geographical factors. The fit of the categorization of race is predictive of many things, but it is not a 100% fit.\n\nThe rest of my post proposes that it's not racist to acknowledge the differences that do exist in congruence with racial categorizations. What *is* racist is to ascribe an outsized importance or judgment to those differences.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-18 15:54:27",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "sixdicksinthechexmix",
+                                    "body": "Agreed. Put 5 Vietnamese people and 5 Norwegians together and tell me race is a social construct. \n\nI understand wanting to be very careful when we have used things like phrenology in the past to justify treating different groups of people differently, but science should be completely based in objective truth. Really we need to stop bending science to whatever social truth we are trying to prove.",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 10:33:18",
+                                    "replies": [
+                                        {
+                                            "author": "SevenSharp",
+                                            "body": "I agree .  But the very idea of objective truth has been challenged & described as 'white supremacy' or ' Eurocentric cis-heteronormative white patriarchal able-bodied epistemology' - or some combination . Serving to maintain pervasive power dynamics & baked into language itself . See ' Lived experience ' & other ' ways of knowing ' & more generally postmodernism & Michel Foucault.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-18 12:21:17",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "HeyImDrew",
+                            "body": "Don't act like you have some magic info no one else found lol",
+                            "score": -3,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 08:53:49",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "PhantomMenaceWasOK",
+            "body": ">Ghassemi believes the answer to the mystery is related to melanin, where X-rays and CT scanners detect the higher melanin content of darker skin, and embed this information in the digital image in some way that has gone unnoticed. More research will be carried out on this \u2014 but not everyone agrees with the hypothesis.  \n  \n>  \n>Rather than being proof of innate differences between races, Alan Goodman, a professor of biological anthropology at Hampshire College and coauthor of the book Racism Not Race, suggests AI is picking up differences resulting from geography.  \n  \n>  \n>Osteoarcheologists and geneticists have found no evidence of substantial racial differences in the human genome, but they do find major differences between people based on where their ancestors lived.\n\nOne proposed explanation is that the AI is actually detecting differences based on geography which is corelated to race.",
+            "score": 68,
+            "depth": 0,
+            "timestamp": "2022-05-17 23:14:13",
+            "replies": [
+                {
+                    "author": "anony-mouse8604",
+                    "body": "What do they mean by geography? How could anyone, AI or otherwise, learn anything about geography from a ct can? Even if it could, how would it then correctly guess race unless that geography happened to point to a place with 100% racial homogeneity?",
+                    "score": 31,
+                    "depth": 1,
+                    "timestamp": "2022-05-17 23:46:20",
+                    "replies": [
+                        {
+                            "author": "Pairaboxical",
+                            "body": "Yeah, I'm not clear on this. Granted it's late here, I'm missing something. Aren't race and \"where a person's ancestors are from\" usually correlated? Like, the same thing?",
+                            "score": 18,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 01:38:38",
+                            "replies": [
+                                {
+                                    "author": "Mydpgisjunior",
+                                    "body": "That's what I was confused about too. It seems like the scientist is just rewording the original hypothesis",
+                                    "score": 11,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 02:29:29",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "CaptainGrasshopper",
+                                    "body": "Similar, but different in the scientific/genetics sense. Ancestry is your lineage. If there were enough genetic samples and available documentation, you could trace your ancestors back centuries and centuries. You share a portion of your genetic makeup with all of your ancestors. Race is a way of grouping people into categories based on similar characteristics that society has decided on, regardless of whether there\u2019s any genetic basis for the grouping. For example, while \u201cBlack\u201d is a race, there are many different ancestries among Black folks, and you\u2019d see a lot of differences between people with different ancestries (ie eastern vs western African, to put it vaguely).",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 12:18:39",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "puravida3188",
+                                    "body": "It\u2019s a semantic game scientists are forced to play lest they be accused of racism by postmodern anthropologists",
+                                    "score": -1,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 12:04:42",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "PhantomMenaceWasOK",
+                            "body": "People in the same geography are more likely to be genetically similar. Genetic similarities can reflect in bone structure and potentially other artifacts like melanin that may subtly manifest on X-rays and CT scans. I'm not sure why you think you would need 100% racial homogeneity. The predictions are 90% accurate. Plenty of room for some heterogeneity.",
+                            "score": 28,
+                            "depth": 2,
+                            "timestamp": "2022-05-17 23:58:57",
+                            "replies": []
+                        },
+                        {
+                            "author": "matethemouse",
+                            "body": "Just guessing, but could it be related to differences in CT scanners and the scanning procedure itself between countries/geographical locations?",
+                            "score": 9,
+                            "depth": 2,
+                            "timestamp": "2022-05-17 23:53:43",
+                            "replies": []
+                        },
+                        {
+                            "author": "sixdicksinthechexmix",
+                            "body": "I think it\u2019s more like saying \u201cblack people have different bone structure than white people\u201d isnt accurate because \u201cblack people\u201d for example only share increased melanin production, but vary quite a bit genetically based on where they are from. (Same with white people), and any other general race). \n\nI think a not great analogy would be \u201cford can tow more than chevy\u201d based on having an f250 tow against a Chevy impala. Sure we label one a ford, and one a Chevy, And they look different, but a ford f250 and chevy 2500 are far closer than a Ford F-250 and a Ford Fiesta. In the same way saying that you can tell someone is of Northern European descent based on bone structure is much more accurate than saying you can identify someone is white based on bone structure, even though both are true.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 14:16:06",
+                            "replies": [
+                                {
+                                    "author": "MEMEOW87",
+                                    "body": "I think they just mean that they didn't program AI to determine race in its computing & it learned on its own by mathematical probability with the demographics included of each xray it was fed. Nice to know that this is definitely the new age of AI. \nThe scientists wouldn't be aware of how unless they are the builders of the AI's technology , programming etc and not the one just inputting",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-23 15:52:07",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Kroutoner",
+                            "body": "A number of possible geographic effects could come into play here. Geographic correlation in how imaging is conducted, e.g. subtle differences in training lead to subtle positioning differences of subject in imaging. Geographic correlation of machine characteristics, such as suppliers and distributors providing machines that behave slightly differently. Geographically correlated effects of environmental exposures: air, water, and dietary differences could lead to subtle differences in bone density or body composition that are detectable on machines. Geographic correlation in behavior: exact bone structure, joint structure, etc may be influenced by behavioral differences between geographic regions.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 10:26:08",
+                            "replies": []
+                        },
+                        {
+                            "author": "QuasarMaster",
+                            "body": "Clearly there\u2019s a world map etched into their skull with a \u201cYOU ARE HERE\u201d dot",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 12:51:18",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "akm3",
+                    "body": "Get a white corpse. X ray it. It says white. \nTake off skin and put on black corpse skin. X-ray again. If it says black, then it\u2019s the melanin tada",
+                    "score": 16,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 00:53:20",
+                    "replies": [
+                        {
+                            "author": "chipstastegood",
+                            "body": "ah yes the man in black method",
+                            "score": 14,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 04:10:00",
+                            "replies": []
+                        },
+                        {
+                            "author": "beener",
+                            "body": "Or like just get an albino, then you don't have to deskin any corpses",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 09:03:01",
+                            "replies": [
+                                {
+                                    "author": "Whind_Soull",
+                                    "body": "Donate your body to science, they said. It'll help cure cancer or something, they said. Then they skin you to see if a computer can still guess that you're black.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 11:16:10",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "FlyingApple31",
+                    "body": "I find it strange that location that the CT or x-ray was taken is part of the data or training set",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 00:51:05",
+                    "replies": [
+                        {
+                            "author": "PhantomMenaceWasOK",
+                            "body": "The article doesn't mention whether the location of CT/x-ray was part of the data set. But that doesn't need to be true for the training to pick up on genetic differences correlated to geography.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 01:04:42",
+                            "replies": [
+                                {
+                                    "author": "Orbitskylab",
+                                    "body": "Genetic differences correlated to geography, or in other words, race?\n\nEdit: why am i downvoted? Lol this just seems like a different way of saying the exact same thing.",
+                                    "score": -1,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 10:09:04",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "stackered",
+                    "body": "It is a fact that there is greater genetic diversity amongst Africans than there is in Caucasians or between Africans and Caucasians.  Meaning, Africans are super, super diverse and lumping black people together as one thing is actually crazier than pointing out differences between other ethnicities to Africans.  They are more different than themselves than they are different than other races and thus this whole genetic grouping by ethnicity is outdated and silly.  I actually don't think many scientists in the field seem to know this, as one myself.  I learned this from building polygenic models for disease prediction and studying this field for 6 years\n\nSo what I'm saying in a clearer way is that any given African could be further genetically from another African than they would from a Caucasian person of similar genetics.  The diversity amongst African's, genetically, is just far greater than other ethnicities like Caucasians, which to some people might seem strange because of the changes in phenotypes like eye color or hair color across Caucasians.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 11:52:55",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "SaiyanGodKing",
+            "body": "All races are inferior to our future robot overlords.",
+            "score": 43,
+            "depth": 0,
+            "timestamp": "2022-05-17 23:46:40",
+            "replies": [
+                {
+                    "author": "Robot_Basilisk",
+                    "body": "Your support has been noted. Thank you.",
+                    "score": 29,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 00:33:57",
+                    "replies": [
+                        {
+                            "author": "myaltduh",
+                            "body": "Lmao",
+                            "score": 9,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 01:18:56",
+                            "replies": []
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "Username checks out",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 13:31:18",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Goodbye_Games",
+            "body": "Ahhh yes and from watching all seasons of Bones, I\u2019ve learned numerous things from the image in the article. The individual is of Ashkenazic descent, was left handed but grew up forced to use their right. They played polo once, but didn\u2019t like it and switched to football. They stayed at a holiday inn frequently in South Carolina and stubbed their toe on the table a few times. Unfortunately at death they only had $136 in their bank account\u2026\n\n/s\n\nEdit: stubbed so much that I forgot Toe",
+            "score": 60,
+            "depth": 0,
+            "timestamp": "2022-05-18 00:05:21",
+            "replies": [
+                {
+                    "author": "According_Cellist_17",
+                    "body": "This was a well made joke and I want to acknowledge that, but when I read it all I could think was \u201chuh Bones was a show. How long did that last?\u201d",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 04:24:53",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Jman1a",
+            "body": "Maybe the AI actually read the patient\u2019s chart.",
+            "score": 13,
+            "depth": 0,
+            "timestamp": "2022-05-18 10:17:26",
+            "replies": []
+        },
+        {
+            "author": "FellingtoDO",
+            "body": "I don\u2019t know a lot about AI technology\u2026 but isn\u2019t this something that would have needed to be programmed in at some point so the AI can learn the pattern recognition?",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2022-05-18 02:21:46",
+            "replies": [
+                {
+                    "author": "JadedIdealist",
+                    "body": "Learning systems aren't programmed in the way you may imagine.     \nThey are shown labelled examples and learn to predict the labels from the other data.     \nYou then test them with a completely different set of data that they've never seen.        \nIt's essential that they are tested with a different dataset otherwise they may simply be learning \"oh that's Bob Smith's xray and Bob Smith is 46, married, lives in Austin, Texas, has 2 cats, is a painter and is black\"",
+                    "score": 10,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 03:12:38",
+                    "replies": []
+                },
+                {
+                    "author": "Deleted",
+                    "body": "Machine learning models are programmed for pattern recognition in general, but they're not programmed to find specific patterns. They can find patterns in data entirely on their own without being told the patterns exist, and they sometimes find patterns that are completely surprising. However, it would be up to humans to figure out what those patterns it found represent. The model just says, \"there's a pattern in the numbers you've given me associated with these sets of input.\" Humans have looked at the data and realized that race is being associated with certain x-rays. The model itself has no concept of race or x-rays. It's all numbers and patterns to it.\n\nThis type of pattern finding is often done by \"clustering\"\n\n[https://www.geeksforgeeks.org/clustering-in-machine-learning/](https://www.geeksforgeeks.org/clustering-in-machine-learning/)\n\n[https://www.explorium.ai/blog/clustering-when-you-should-use-it-and-avoid-it/](https://www.explorium.ai/blog/clustering-when-you-should-use-it-and-avoid-it/)\n\n[https://en.wikipedia.org/wiki/Cluster\\_analysis](https://en.wikipedia.org/wiki/Cluster_analysis)",
+                    "score": 13,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 06:41:06",
+                    "replies": []
+                },
+                {
+                    "author": "Mydpgisjunior",
+                    "body": "In the article it says the ai was fed x-rays that were labeled by race and that's how the program learned.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 02:33:09",
+                    "replies": []
+                },
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 07:10:03",
+                    "replies": [
+                        {
+                            "author": "big_trike",
+                            "body": "Yup.  To make it clear to the racists reading the above, it's picking up on existing patterns of racism by humans rather than some inherent deficit or superiority in a given race.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 08:38:54",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "RenaKunisaki",
+                    "body": "They would have had to give it a bunch of X-ray images and told it which race each person is. The strange part is that it works. They didn't expect there to be any pattern for it to find, and they still aren't sure how it's able to correctly deduce the race from an X-ray when it hasn't been told.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 12:32:16",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "zorbathegrate",
+            "body": "There is little i find more terrifying than \u201cAI outwitting\u201d someone",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2022-05-18 11:11:24",
+            "replies": []
+        },
+        {
+            "author": "ariphron",
+            "body": "I watched all 13 seasons of bones last month and dr Brennan could tell race in like 2 seconds from just the bones why would a computer not?",
+            "score": 13,
+            "depth": 0,
+            "timestamp": "2022-05-18 06:03:20",
+            "replies": []
+        },
+        {
+            "author": "mythicas",
+            "body": "Now i wonder if there are differences in anatomic shapes of bones between ethnicities that the mere eye couldnt spot.\nShapes and positions of body parts are influenced by epigenetics, which is inheritable and which itself is influenced by habits, culture, traditions, stresses and environments and overall by experience of ancestors.\n\nEpigenetics are a new field of science and I know even less right?\n\nEdit: i feel like this is racist\n\nEdit edit: i dont even know why i insisted on writing those half bred thoughts without cross checking actual studies or up to date common knowledge on heredity and biology. Work less ramble more, i guess",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2022-05-18 04:52:45",
+            "replies": [
+                {
+                    "author": "hindusoul",
+                    "body": "This\u2026 and it was a bunch of programming that made this happen.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 05:37:55",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "muffukkinrickjames",
+            "body": "It\u2019s skull features. This has been a known thing I. Forensic anthropology for ages. Same way you can tell gender and a range of ages. Also utterly meaningless for any other purpose than identifying who a dead person was.",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2022-05-18 09:06:23",
+            "replies": [
+                {
+                    "author": "pseudo-boots",
+                    "body": "That's true but the article was talking about chest x-rays specifically. I think what happened here was that the AI picked up patterns in chest bone features that are harder for people to notice. Which isn't too surprising since pattern recognition is what Machine learning is great at.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 12:19:23",
+                    "replies": [
+                        {
+                            "author": "muffukkinrickjames",
+                            "body": "I guess it helps to actually read the article before commenting. Caught me slipping. Upvote to you :)",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 12:56:03",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "CallMeCatchy",
+            "body": "bump, just wanna read what ppl say",
+            "score": 11,
+            "depth": 0,
+            "timestamp": "2022-05-17 22:55:45",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "Aight Catchy",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2022-05-17 23:34:17",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Amnesty_SayGen",
+            "body": "It\u2019s almost like it\u2019s ok to acknowledge the scientific truth people are different.",
+            "score": 16,
+            "depth": 0,
+            "timestamp": "2022-05-18 00:56:44",
+            "replies": [
+                {
+                    "author": "LinkFan001",
+                    "body": "Don't start. It never ends at \"people are different, teehee.\" The next step is always leveraging those differences to commit atrocities against each other.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 08:34:49",
+                    "replies": [
+                        {
+                            "author": "Msdamgoode",
+                            "body": "But\u2026 people are? For instance it\u2019s important for a Doctor to know someone is of African ancestry, because certain diseases will be more common and need to be looked for. Think Sickle Cell. While racism is a social construct, there are physiological differences between people of different ancestry populations and it\u2019s not a negative to acknowledge that.",
+                            "score": 7,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 08:49:52",
+                            "replies": [
+                                {
+                                    "author": "englishcrumpit",
+                                    "body": "He's not saying that everyone is the same and should be treated as such but rather avoiding things like eugenics.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 10:19:31",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "HonestCephalopod",
+            "body": "Could it have to do with frame and proportions? Maybe different races have different ratios and shapes of bones? Humans probably would have noticed that by now though.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2022-05-18 09:56:01",
+            "replies": []
+        },
+        {
+            "author": "Puzzleheaded-Ice-212",
+            "body": "Different evolutions I'd assume that every people would have evolved to be better suited for their environment even if it's a small difference.",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2022-05-17 23:57:56",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "I\u2019m not sure why they would be surprised by this. If there is enough time apart for evolution to change skin tone there is enough time to change bone structure too.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 06:57:10",
+                    "replies": []
+                },
+                {
+                    "author": "big_trike",
+                    "body": "Perhaps, but our human made definition of race tends to group a whole lot of people from very different environments together.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 08:43:37",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "mtnbikeforlife",
+            "body": "Scary",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2022-05-18 05:33:33",
+            "replies": []
+        },
+        {
+            "author": "squidking78",
+            "body": "You was always under the impression you could tell someone\u2019s race and gender generally from their skulls. Since it\u2019s not popular to say, but yes, there are subtle differences when it comes to human variety.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2022-05-18 07:32:26",
+            "replies": []
+        },
+        {
+            "author": "dunnkw",
+            "body": "Is that like when Microsoft\u2019s twitter bot named Tay became racist in like 24 hours?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2022-05-18 10:42:55",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "That\u2019s mostly cos it was taught by its user base, quite literally monkey see, monkey do",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 12:49:57",
+                    "replies": [
+                        {
+                            "author": "dunnkw",
+                            "body": "I\u2019m wondering what it is that makes races so physiologically different that even a doctor can\u2019t see.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 13:15:01",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "Idk some people in the comments say it\u2019s spotting tiny genetic variations, who knows \ud83e\udd37\u200d\u2642\ufe0f",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 13:16:48",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "I mean, duh. Why would we expect different races to have the same bones to begin with? We were separated by hundreds of thousands of years of evolution",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2022-05-18 06:55:31",
+            "replies": [
+                {
+                    "author": "elpatho",
+                    "body": "I am also unable to understand why are people freaking out. I can clearly see how vastly diverse people are around the world. I don't know how it's a problem to acknowledge it and why it's something else than awesome.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 08:46:43",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "revosugarkane",
+            "body": "I wonder if the AI can just extrapolate the full image from the X-ray, like there\u2019s info that just doesn\u2019t show up to us be can be noticed when viewed as data.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2022-05-17 23:55:10",
+            "replies": []
+        },
+        {
+            "author": "BatXDude",
+            "body": "Something to do with joints/growth plates? \n\nI have 0 experience in this field and this is my completely uneducated guess.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2022-05-18 00:10:11",
+            "replies": []
+        },
+        {
+            "author": "Dayray1",
+            "body": "We about to be a bunch of organic batteries",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2022-05-18 09:44:31",
+            "replies": []
+        },
+        {
+            "author": "f1nneass",
+            "body": "AI looked at X-ray and went like \"Yup this mf is asian\"",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2022-05-17 23:54:08",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "oH nO tHe Ai Is RaCiSt",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2022-05-17 23:21:41",
+            "replies": [
+                {
+                    "author": "sitad3le",
+                    "body": "Go figure.\n\nIt's going to be the least racist thing on the planet.\n\nAll Hail Glorious AI!",
+                    "score": -4,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 00:06:08",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Phartjoose",
+            "body": "So it begins\u2026",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2022-05-17 23:25:34",
+            "replies": [
+                {
+                    "author": "freelanceredditor",
+                    "body": "I\u2019m terrified of racist AIs because they\u2019re the ones who will be viewing resumes",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 00:10:00",
+                    "replies": [
+                        {
+                            "author": "Robot_Basilisk",
+                            "body": "AIs can be programmed to ignore race more easily than humans can.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 00:33:23",
+                            "replies": [
+                                {
+                                    "author": "freelanceredditor",
+                                    "body": "If they get programmed by I doubt it",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 01:24:31",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "Deleted",
+                                    "body": "[deleted]",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 07:20:01",
+                                    "replies": [
+                                        {
+                                            "author": "big_trike",
+                                            "body": "To clarify for others, correlation to \"poor employee performance\" is problematic because this is an input that is largely subjective and influenced by racism of humans.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-18 08:45:56",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Phartjoose",
+                            "body": "Yeah thanks to affirmative action laws whites won\u2019t be hired by ai lol",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 10:40:06",
+                            "replies": [
+                                {
+                                    "author": "freelanceredditor",
+                                    "body": "Is that why they\u2019re the top paid people throughout all fields?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 10:41:28",
+                                    "replies": [
+                                        {
+                                            "author": "Phartjoose",
+                                            "body": "Naw that\u2019s just hard work they earned those jobs they weren\u2019t givin out by daddy government so they gotta work to advance instead of screaming everyone is a racist like some people",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-18 10:52:56",
+                                            "replies": [
+                                                {
+                                                    "author": "freelanceredditor",
+                                                    "body": "Hahahaha hard work by stealing and enslaving and getting the upper hand and handing it to their offsprings. Yes hard work indeed. Eat a bag of dicks. That\u2019s hard work too. Bon apetit",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-18 10:53:42",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Phartjoose",
+                                                            "body": "I think your confusing groups of people. Muslims enslaved people for 1000s of years the khazarian false joos that invaded Europe enslaved they created a central banking system that that led to them creating wars while they ran the slave trade for all of the world at the time blacks enslave they sold their fellow blacks to slavers the first slave owner in America was a black man blacks in America owned slaves. Quick history lesson for the public school education you seem to have been given",
+                                                            "score": 0,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-05-18 10:59:45",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "freelanceredditor",
+                                                                    "body": "Yes empires rise and fall and get built on the backs of the less fortunate. You\u2019re currently experiencing the fall of the white empire",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-05-18 14:12:20",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "FurtiveAlacrity",
+            "body": "Oh, I know how it's going to go among the Woke right now. \n\n> Race is a purely social construct borne of racism. \n\n> -AI can detect race from x-ray images. \n\n> The AI is racist. \n\n> -But...\n\n> And *you're* racist for using that AI! Read \"Race Beyond Technology\" for details on how the New Jim Code is putting the racism of humans minds into the technology of tomorrow! \n\n> -Are you doubting the accuracy of the AI? \n\n> You're racist for even asking that.\n\nIt *looks* like I'm satirising, but I'm not.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2022-05-18 07:53:39",
+            "replies": [
+                {
+                    "author": "big_trike",
+                    "body": "Your straw man is missing the point.  AI is usually trained on data that is labeled by humans.  If you feed it biased input data, you will get biased output data.  In this instance it may not exactly be correlated to what we as a society define as race, but particular genetics.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 09:04:52",
+                    "replies": [
+                        {
+                            "author": "FurtiveAlacrity",
+                            "body": "> Your straw man is missing the point. \n\nSo you *don't* think that I just described a widespread belief? I've actually read \"Race Beyond Technology\". It's a widespread belief (or widespread enough that a Princeton professor can write a book promoting the idea). So, input was maybe biased. What do you mean by that?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 12:35:44",
+                            "replies": []
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "Geographic clustering of cultural and genetic traits is exactly what people mean by race, no?\n\nThere are statistical differences between such groups. For example dark skinned people from sub-Sahara Africa handle sunlight better than light skinned ones (on average). They also tend to have larger penises than some other groups. \n\nPlease don\u2019t tell me I\u2019m being racist by saying this. I really don\u2019t get it.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 10:23:44",
+                            "replies": [
+                                {
+                                    "author": "big_trike",
+                                    "body": "IMO, if you were to group all of Africa together and lump in every descendant of them purely on the basis of which skin pigmentation genes or visible facial features they received, that's racist.  Sub-saharan african is a much better grouping because it's grouping by many shared genetic traits instead of only visible attributes.  Further, if you make sweeping generalizations about an individual's fitness for a particular task based only on the visible appearance and then double down by using a biased metric such as IQ, crime conviction statistics, etc., that's racist.  One example would be using \"Jew\" as a race.  Ashkenazi and Sephardic jews were separated for long enough that disease risks are very different.  A racist would dump them together.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 10:42:25",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "Still not clear to me why it would be racist to claim someone is more likely to be sun tolerant when they have darker skin? Yes I\u2019m making a generalisation based on purely visual traits. Doesn\u2019t mean it\u2019s not correlated right?\n\nA person with a beard is more likely to have a dick than one without. Not always true of course! Individual exceptions always apply.\n\nNow I lumped all bearded humans together, is that bad?",
+                                            "score": 0,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-18 10:45:55",
+                                            "replies": [
+                                                {
+                                                    "author": "big_trike",
+                                                    "body": "Perhaps.  You wouldn't want to make the generalization that \"africans have darker skin and therefore are better suited to farm work\" when making a hiring decision about an individual.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-18 10:54:08",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Deleted",
+                                                            "body": "I\u2019m still struggling sorry. I understand how that would be perceived as racist. However a similar statement like \u201cpeople from African descent are more likely to win the 100m Olympic sprint\u201d would not be perceived as such right? \n\nBecause it\u2019s more about the condescending implication that about the statistical accuracy I think? Or?",
+                                                            "score": 0,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-05-18 10:59:18",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "big_trike",
+                                                                    "body": "IMO, that's a bit of a grey area.  Personally, I wouldn't have an issue with that.  Saying to someone \"you must be a good runner, you have dark skin\" would be.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-05-18 11:14:34",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "Deleted",
+                                                                            "body": "Okay interesting, thanks for elaborating. So it\u2019s more about tone & context and it\u2019s hard to draw a sharp line? That explains why I struggle with the concept I guess.\n\nOne last question (again kinda inappropriate sorry) but  do you have non-white skin yourself?",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2022-05-18 11:21:38",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "big_trike",
+                                                                                    "body": "Yeah.  In general I think it's fine (and even necessary when it comes to risk for diseases or responses to medication) to make observations of the population as a whole.  Where it definitely goes into racism is if you cherry pick one or a few attributes of that population and then make logic leaps as to how individuals or a group should be treated in society.  It's also necessary to make sure that whatever metrics you're using to measure a population aren't potentially biased in some way themselves, such as arrest statistics or something founded on subjective behavior.  In your example, a disproportionate number of marathon winners do come from Kenya.  It becomes definitely racist if you then assume that athletes are less smart and therefore refuse to hire a Kenyan you've never met even if they have the same credentials as someone else.\n\nI look very caucasian, although I do have some sub-saharan african genes.",
+                                                                                    "score": 1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2022-05-18 16:32:46",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "Deleted",
+                                                                                            "body": "Thanks for elaborating!",
+                                                                                            "score": 1,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2022-05-18 16:48:53",
+                                                                                            "replies": []
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Deleted",
+                    "body": "Whenever AI points out anything socially uncomfortable it will immediately be blamed on biased programming and thus an invalid conclusion.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 11:26:10",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Kushnerdz",
+            "body": "I can already see the headline \u201cracist AI\u2026",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-17 23:54:31",
+            "replies": []
+        },
+        {
+            "author": "xnolmtsx",
+            "body": "skynet is becoming self aware",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 09:33:37",
+            "replies": []
+        },
+        {
+            "author": "xxizxi55",
+            "body": "We are all human beings, but that doesn\u2019t mean we haven\u2019t branched off into different subsets or classifications. Depending on our environments we may have evolved slightly differently across biomes. The worlds not ready for that talk though. Too many woke people.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 11:50:27",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "That is an established fact - our physical differences are a result of geographical adaptations. But just like the article says those geographical differences, if they are affecting the AI ability to identify people, shouldn\u2019t be used in a biased way.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 12:13:54",
+                    "replies": [
+                        {
+                            "author": "xxizxi55",
+                            "body": "Yes. Try having that conversation without it unfolding into \u201coh so your more evolved than me?\u201d Or \u201cI\u2019m less evolved than you?\u201d Not seeing how a machine is going to be biased if it wasn\u2019t programmed to be that way. If it\u2019s identifying the different sub divisions of human then it is only narrowing its vision to be more effective in its diagnosis.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 14:59:02",
+                            "replies": [
+                                {
+                                    "author": "pea3nuts",
+                                    "body": "Exactly! Why wouldn\u2019t this information be relevant to diagnosis? Wouldn\u2019t it be racist to intentionally leave out this information for fear of being racist and cause people to live with undiagnosed/underdiagnosed conditions?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-23 10:30:29",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "And the eugenics war begins",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2022-05-18 02:35:07",
+            "replies": [
+                {
+                    "author": "Msdamgoode",
+                    "body": "It\u2019s not eugenics to acknowledge physiological differences in subsets of populations. That\u2019s like saying Sickle Cell, which predominantly occurs in those of African ancestry, is a racist disease. Or Cystic Fibrosis, which mainly effects caucasians is racist.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 09:02:48",
+                    "replies": [
+                        {
+                            "author": "zblofu",
+                            "body": "Interestingly, people that don't develop full blown Sickle cell but still cary the gene mutation may have some advantage with regards to malaria.  Sickle cell is more prominent in people with recent ancestry in malaria-stricken areas, such as\u00a0Africa, the\u00a0Mediterranean,\u00a0India, and the\u00a0Middle East.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 09:45:31",
+                            "replies": [
+                                {
+                                    "author": "Msdamgoode",
+                                    "body": "Yes, I\u2019ve no doubt there are many, many differences from small changes in evolution based on geographic necessity. And the more we know about those things the better we can help treat people.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 10:05:39",
+                                    "replies": [
+                                        {
+                                            "author": "Deleted",
+                                            "body": "Treat people? So they may become the uniform unity they were destined to be, void of any differences?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2022-05-18 10:27:40",
+                                            "replies": [
+                                                {
+                                                    "author": "Msdamgoode",
+                                                    "body": "Treat people so that disease doesn\u2019t negatively impact their lives",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-18 11:41:29",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Deleted",
+                                                            "body": "Ah completely misread your intentions! My bad.. or did I? Hmm..",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-05-18 11:42:16",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Msdamgoode",
+                                                                    "body": "No, people should be treated as human beings with dignity and equality across the spectrum. But the differences in humans based on ancestry is real, and acknowledgment of that helps us treat things like Sickle Cell, which occurs primarily in those of African decent, and Cystic Fibrosis which occurs primarily in those of Eastern European decent. Those are just two examples of many things that effect different populations, differently.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-05-18 11:46:38",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "Deleted",
+                                                                            "body": "But am I correct in assuming you want to remove both? Make the gene pool more uniform and healthier? No implied judgement, just trying to understand.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2022-05-18 11:48:59",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "Msdamgoode",
+                                                                                    "body": "I am not interested in uniformity at all. What helps people live longer, happier, healthier lives is the goal, not creating some homogeneous super human. Differences in people\u2019s physiological & chemical aspects is the reason there are differences in treatments for the same things. Acknowledging that and creating treatments that achieve better results will always be better than having a singular treatment across the spectrum. Similarly to how we have different antibiotics for different things, and different people respond differently to antidepressants.",
+                                                                                    "score": 1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2022-05-18 11:54:26",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "Deleted",
+                                                                                            "body": "Great elaboration, thank you!",
+                                                                                            "score": 2,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2022-05-18 12:06:39",
+                                                                                            "replies": []
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "author": "Wart_",
+                                                    "body": "No, to treat people for genetic diseases that will harm them.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-05-18 11:42:01",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Deleted",
+                                                            "body": "\ndisease: a particular quality or disposition regarded as adversely affecting a person or group of people",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2022-05-18 11:46:05",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Wart_",
+                                                                    "body": "Yes...?",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2022-05-18 11:50:12",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "Deleted",
+                                                                            "body": "Well that does imply the will to treat diseases is in some way equivalent to the will to unify by removing outliers.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2022-05-18 11:52:30",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "Wart_",
+                                                                                    "body": "That's such an insane take I really don't know how to respond.\n\nTreating diseases is an effort to help people or ease suffering, not deconstruct social identity (???).",
+                                                                                    "score": 1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2022-05-18 11:55:06",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "Deleted",
+                                                                                            "body": "Sorry I was just having fun with words for a moment",
+                                                                                            "score": 1,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2022-05-18 12:07:03",
+                                                                                            "replies": []
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "JustHereForTheBeer_",
+            "body": "I\u2019m no scientist, so forgive me if I just sound like an idiot but I have a theory on differences in bone density/ structure between races. Africans evolved on open plains, while Caucasians evolved in caves and in the woods (more hiding places). Africans had a higher need for speed and denser bones due to the higher probability of attack from animals or other people so they evolved denser bones and bone structures fit for running. Caucasians could simply hide or be sheltered from threats. Also, it\u2019s well documented that Caucasians are better at swimming, maybe partially due to less dense bones (more buoyant). \nAgain, this might already be known or something, just my 2 cents.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2022-05-18 07:52:39",
+            "replies": [
+                {
+                    "author": "Truthoverdogma",
+                    "body": "So in your mind Caucasians are one race and Africans are another?\n\nDo you not even see the contradictions in that?",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 15:34:17",
+                    "replies": [
+                        {
+                            "author": "JustHereForTheBeer_",
+                            "body": "Caucasian/white is a race. African/black is a race. What do you mean?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-05-18 15:52:45",
+                            "replies": [
+                                {
+                                    "author": "Truthoverdogma",
+                                    "body": "Simply that those racial categories are not clear enough for any kind of scientific analysis, Africa being a continent of many people not all sharing strong genetic links and Caucasian being a group of people who do share strong genetic links. \n\nthese descriptions Caucasian/African are at best a shorthand for white and black, but scientifically the category of white does not make a lot of sense, for example the genetic make up of people from Scotland who are white is quite different from people from Finland who are white, in the same way that people from Kenya who are black have very different genetic and biological characteristics to people from Ghana who are black.\n\nOnce you start to include characteristics such as bone density and other biological and genetic features It is widely known scientifically that these do not correlate well with skin colour.\n\nSo essentially my point is that studies and analysis that proclaim to discuss race from a scientific point of view, but are really talking about skin colour are already too flawed to be taken seriously.\n\nWhile it is absolutely true that human beings differ on things other than skin colour, it is not true that all of those things are perfectly correlated with skin colour.\n\nThis is also immediately obvious when you consider people who are multiracial. \n\nMy critique is not really a critique against your post but rather against the way we all assume we are talking about the same thing when we race and how often that thing doesn\u2019t make sense scientifically for any kind of analysis.\n\nEdited for clarity",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-18 18:57:44",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Wenhuanuoyongzhe91",
+            "body": "That\u2019s racist",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2022-05-18 07:54:41",
+            "replies": []
+        },
+        {
+            "author": "VCRdrift",
+            "body": "One step closer to skynet..\n\nRace? It's a humanoid... mdk!",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2022-05-17 23:29:46",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "Who\u2019s Al?",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2022-05-18 09:14:03",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "Damn, AI.  You racist.",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2022-05-18 09:20:00",
+            "replies": []
+        },
+        {
+            "author": "Weltallgaia",
+            "body": "Phrenology is back in style!",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2022-05-18 10:48:28",
+            "replies": []
+        },
+        {
+            "author": "bernardobrito",
+            "body": "\\[artificial intelligence used to read X-rays and CT scans can predict a person\u2019s race with 90 per cent accuracy \u2014 and humans can\u2019t. \\]  \n\n\n  \nAnd humans can't discern another's race at 90% accuracy?!?",
+            "score": -6,
+            "depth": 0,
+            "timestamp": "2022-05-18 00:03:09",
+            "replies": [
+                {
+                    "author": "BearDown75",
+                    "body": "Not by looking at a CT scan",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 00:26:07",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Onlyanidea1",
+            "body": "Bullshit.  The TV Show BONES explained how they could tell and that was accurate and faithful to anthropology.   This post is bullshit 100%.",
+            "score": -4,
+            "depth": 0,
+            "timestamp": "2022-05-18 00:31:20",
+            "replies": []
+        },
+        {
+            "author": "rawsuber",
+            "body": "If you belive in the idea of there being seperate races you are by definition a racist. Racist AI.",
+            "score": -4,
+            "depth": 0,
+            "timestamp": "2022-05-18 09:12:15",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 12:55:51",
+                    "replies": [
+                        {
+                            "author": "rawsuber",
+                            "body": "We are genetically mostly the same, not exactly the same. Not enough distinction for a race classification of the species. You are talking about culture, and subjective appearance that is generally only different adaptations due to environmental conditions like UV exposure, local climate, food etc. You cannot look at someone and know thier \"race\". There is more genetic variation between people who live in the same area than there is between people who live in two different areas ironically. The term race is a cultural theory, not a scientific theory, so it requires belief.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2022-05-19 00:20:22",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "indoildguy",
+            "body": "Well that s should help our ultra intelligent people see where intelligence really lies. Unless they wanna stick with their guns and say it's inside their own brainz so they can remain proud always.",
+            "score": -9,
+            "depth": 0,
+            "timestamp": "2022-05-17 23:16:15",
+            "replies": []
+        },
+        {
+            "author": "cajunsoul",
+            "body": "It is so frustrating to see articles like this promote the construct of race. (Unless the results are simply \u201chuman\u201d, in which case I applaud the satirical wit of AI).",
+            "score": -10,
+            "depth": 0,
+            "timestamp": "2022-05-18 00:07:25",
+            "replies": []
+        },
+        {
+            "author": "asl619",
+            "body": "singularity ?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 07:58:58",
+            "replies": []
+        },
+        {
+            "author": "Over_Television_9600",
+            "body": "Well thanks for actually creating Skynet . Nice knowing the human race.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 10:25:56",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "Ummm\u2026.more tools to fuel  societal divisiveness? Of course, medicine has found some health trends with people with different ethnic origins.\n\nIn any case, I am curious as to what tags a person as race X vs race Y.\nEven the AI should have a \u201creference table\u201d somewhere:\n\nIf Skin colour = green & Hair=blue\nThen race = something\n\nwondering how our future overloads will tag me for their undoubtedly evil purposes",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 11:47:44",
+            "replies": []
+        },
+        {
+            "author": "yourwaifuslayer",
+            "body": "Ah so I do have 1 less bone",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 12:19:11",
+            "replies": []
+        },
+        {
+            "author": "fanglord",
+            "body": "I don't think it's massively controversial to say that the slight structural differences in skeletons can be detected through ai algorithms. For example, there are very distinct geographical \"faces\" and faces that are in part a result of your frontal skull (muscle attachments, spacing etc) and you'd expect that to show. Not as obvious but I wouldn't be surprised if minor differences in the rest of the skeleton showed the same things, at least roughly.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 12:23:04",
+            "replies": []
+        },
+        {
+            "author": "Pocketfists",
+            "body": "And it begins\u2026..",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 12:23:51",
+            "replies": []
+        },
+        {
+            "author": "dennismfrancisart",
+            "body": "Hey, corporate media, can we dispel the notion of \"race\" once and for all and move on to more scientific terms? If you want to make up a new phrase for the genetic/cultural/geographical classification of people, now would be a good time.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 12:33:05",
+            "replies": [
+                {
+                    "author": "Truthoverdogma",
+                    "body": "Underrated comment! You deserve more upvotes\n\nThese science and race related headlines are so dumb and so poorly thought out as to be laughable, the only unfortunate thing is the amount of people who don\u2019t notice how stupid these things are.\n\nWhat would an AI consider a mixed race person to be if his or her x-ray was part of this study? Does the AI follow the one drop rule.\n\nI don\u2019t have a problem with scientists trying to determine if other factors can successfully identify the \u201crace of a person\u201d but I have massive problems with the public taking every single proclamation of this as undeniable scientific proof.\n\nInvariably when it comes to this x-ray study and the AI police study and the race and IQ studies, absolutely none of these are comprehensive enough or effective enough to warrant a promotion to scientific validity.\n\nThe experiments are always too small to be representative, the definitions of race are too vague and inconsistent to be relied upon, the results are always overblown and mischaracterised by the media, and the results always match the existing prevalent ideas on race.\n\nIt\u2019s frankly quite boring that they keep making these studies and these headlines and so many people just uncritically assume that there could not be any problems with the way the science or the study was done or is being reported.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 15:17:50",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "RenaKunisaki",
+            "body": "In before it turns out to be something dumb like \"the pictures of race A are very slightly larger than the ones of race B because they were taken at a different hospital with different equipment\" or \"there's a pattern to the order of the images\".",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 12:34:38",
+            "replies": [
+                {
+                    "author": "Truthoverdogma",
+                    "body": "How exactly was race determined for the purpose of this study?\n\nWhere patients separated by pigment? Or by DNA ancestry results? Or perhaps by a self reported assessment?\n\nWhy do we even let these people pretend they\u2019re doing science?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 15:28:10",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Herr_Bier-Hier",
+            "body": "There\u2019s key physical differences between different races other than skin tone. Bone density, jaw structure, teeth, brow ridge, height, etc every physical characteristic we have directly corresponds to our dna and our dna comes from our ancestry and this labeling of genetic traits or lineage is referred to as race. So it\u2019s not surprising at all. Skin tone is one minor difference across the varying human races. It might be the most easily visible to humans but it\u2019s just one of thousands of physical differences. There used to be other human like species on the planet. These other species intermingled with homo Sapiens  and this mixing didn\u2019t happen evenly everywhere. Also we cannot account for all ancient human like species. So our ancient ancestor we share with everyone alive today actually interbred with other species and did this on different parts of the globe. This is the theory for why there are such stark physical differences among varying races of people today. So we all have homo sapien dna, but each race has varying degrees of other human like species within them. Thus the differences. Also evolution plays a role, however this inter-specie admixture is becoming more mainstream as the science matures.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 14:23:25",
+            "replies": [
+                {
+                    "author": "Truthoverdogma",
+                    "body": "And for the purpose of the study what races exist? What are the criteria for the grouping of these races in this study. \n\nThe characteristics you mention are well known to show great variance even among sub-Saharan Africans. As a matter of fact sub-Saharan African has the greatest genetic diversity on the planet.\n\nI\u2019m very curious to know which of these criteria were used to grip the races before allowing the AI to determine its assessment.\n\nIt\u2019s a thin line between good science with meaningful results, and pseudoscience that sounds good but at key stages has abandoned the scientific method in favour of pre-existing beliefs.",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2022-05-18 15:32:17",
+                    "replies": [
+                        {
+                            "author": "pea3nuts",
+                            "body": "The differences would define the race. It doesn\u2019t matter if two sub Saharan Africans are the same color if they are genetically different they would be classified as a different race. Humans clearly can\u2019t distinguish these characteristics without being dicks. Why not let a robot characterize all known races while being completely unbiased? It\u2019s not being used to put down someone else. It\u2019s just describing the characteristics and groupings of humans way better than humans can, and it\u2019s medically/scientifically useful",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2022-05-23 10:36:44",
+                            "replies": [
+                                {
+                                    "author": "Truthoverdogma",
+                                    "body": "The approach you describe would be more scientific and valid than the approaches I\u2019ve seen discussed when topics like this come up. And it would be far more insightful.\n\nThe moment we are stuck because race is still mostly defined by skin colour despite our scientific knowledge that clearly shows skin colour alone is not a strong enough or reasonable feature along which to define \u201crace\u201d",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2022-05-23 11:06:05",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "DsWd00",
+            "body": "CT and X-ray scanners cannot detect the amount of melanin in the skin.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 14:50:50",
+            "replies": []
+        },
+        {
+            "author": "DanDanDan0123",
+            "body": "\u201cResearchers taught the AI program by showing it large numbers of race-labelled images of different parts of the body, including the chest, hand and spine \u2014 with no obvious markers of race, such as skin colour or hair texture \u2014 and then sets of unlabelled images. The program identified the race in the unmarked images with more than 90 per cent accuracy, and could differentiate Black patients from white even when images were from people of the same size, age or gender.\u201d\n\nWhy would the researchers add race labels to x-rays?   I feel they were looking for difference\u2019s.  Race labels doesn\u2019t seem like something an AI would need.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 16:02:08",
+            "replies": []
+        },
+        {
+            "author": "selfmadeoutlier",
+            "body": "Rule n1: use explanatory models",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 16:20:52",
+            "replies": []
+        },
+        {
+            "author": "ExplodingHalibut",
+            "body": "Is it because the AI isn\u2019t worried about social constructs?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 17:24:15",
+            "replies": []
+        },
+        {
+            "author": "SpaceAdventureCobraX",
+            "body": "How\u2019d you do it? Not telling! Why\u2019d you launch all the nukes? Not telling!",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-05-18 22:04:00",
+            "replies": []
+        }
+    ]
+}

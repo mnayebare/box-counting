@@ -1,0 +1,466 @@
+{
+    "post_title": "CMV: OpenAI\u2019s \"ethical AI\" is a myth . Their model is racist, classist, and exploitative",
+    "post_timestamp": "2025-05-12 14:06:05",
+    "last_comment_timestamp": "2025-05-28 09:52:31",
+    "time_difference": "15 days, 19:46:26",
+    "comments": [
+        {
+            "author": "DeltaBot",
+            "body": "/u/Disastrous-Lynx-3247 (OP) has awarded 1 delta(s) in this post.\n\nAll comments that earned deltas (from OP or other users) are listed [here](/r/DeltaLog/comments/1klgo70/deltas_awarded_in_cmv_openais_ethical_ai_is_a/), in /r/DeltaLog.\n\nPlease note that a change of view doesn't necessarily mean a reversal, or that the conversation has ended.\n\n^[Delta\u00a0System\u00a0Explained](https://www.reddit.com/r/changemyview/wiki/deltasystem) ^| ^[Deltaboards](https://www.reddit.com/r/changemyview/wiki/deltaboards)",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-13 04:20:37",
+            "replies": []
+        },
+        {
+            "author": "GiveMeAHeartOfFlesh",
+            "body": "\u201cPaywalling GPT-4 is Classist by design\u201d lol this isn\u2019t free therefore classist! \n\nThere is nothing wrong by putting a price on your own product. Just because it\u2019s expensive doesn\u2019t make it unethical. \n\nThe racism is due to either poor guard rails on internet content it pulls from or lack of context for the information it is pulling. Not really unethical, just a work in progress. Not sure if you support the claim that it was a feature well enough. You just say it did do certain things as if that supports it was intended to have done those things. You also are seemingly aware that they are trying to fix the issue, thus indicating it is a bug/unintended action of the software. \n\nSo again, nothing unethical there.\n\nOutsourcing jobs to foreign countries for pay less than minimum wage in America is probably the best argument for any unethical practice, but we also need to see if the amount they were paying is still a great amount for the people in those locations. So it could even be a win win situation tbh.",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2025-05-12 14:18:02",
+            "replies": [
+                {
+                    "author": "Disastrous-Lynx-3247",
+                    "body": "Then isn't OpenAI\u2019s original claim to \u2018benefit all of humanity' a hoax ?",
+                    "score": -3,
+                    "depth": 1,
+                    "timestamp": "2025-05-12 14:21:03",
+                    "replies": [
+                        {
+                            "author": "Lylieth",
+                            "body": "Why are you confusing marketing with reality?\n\nIn a round about way, humanity as a whole likely will benefit from AI.  Just because not everyone can use it doesn't mean they don't benefit from it in some way.  You're confusing direct use and benefit with indirect benefit.\n\nHave you ever received a vaccine?",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2025-05-12 14:24:08",
+                            "replies": [
+                                {
+                                    "author": "Disastrous-Lynx-3247",
+                                    "body": "OpenAI's 'benefit humanity' claim isn't just marketing , it's the legal basis for their original non-profit status and tax exemptions. This would be like Pfizer claiming to 'end disease globally' while selling COVID vaccines exclusively to billionaires. The hypocrisy is structural, not rhetorical.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-12 14:29:12",
+                                    "replies": [
+                                        {
+                                            "author": "Lylieth",
+                                            "body": "OpenAI initially applied for non-profit status as a way to prioritize AI safety and ethical development, focusing on research and development without the pressure of profit maximization. The founders recognized the potential risks associated with artificial general intelligence (AGI) and believed a non-profit structure would allow them to work towards a safe and beneficial AGI, unconstrained by financial incentives.  Just because they used marketing speak in their submission for non-profit doesn't mean much...\n\nAI's in general have already benefited humanity in multiple ways.  Here's a bunch of ways humanity can benefit:\n\n1. Enhanced Healthcare:\n  * AI can aid in faster and more accurate diagnoses, personalized treatments, and drug discovery. \n  * AI-powered robots can perform surgery, assist with rehabilitation, and provide remote patient monitoring. \n\n2. Boosted Economic Growth:\n  * AI can automate tasks, increase productivity, and drive innovation in various industries. \n  * AI can help businesses optimize operations, improve customer service, and gain a competitive edge. \n\n3. Climate Change Mitigation: \n  * AI can help monitor climate change patterns, predict extreme weather events, and optimize energy consumption.\n  * AI can be used to develop more sustainable technologies and processes. \n\n4. Advanced Transportation:\n  * AI can enable self-driving cars, optimize traffic flow, and improve logistics. \n  * AI can enhance safety and efficiency in transportation systems. \n\n5. Customer Service Excellence:\n  * AI can power chatbots and virtual assistants that provide instant and personalized support. \n  * AI can help businesses analyze customer data and tailor their services accordingly. \n\n6. Scientific Discovery:\n  * AI can analyze large datasets and identify patterns that might otherwise be missed, leading to new scientific breakthroughs. \n  * AI can accelerate research in fields like genomics, materials science, and drug discovery. \n\n7. Enhanced Financial Services:\n  * AI can automate financial transactions, detect fraud, and provide personalized financial advice. \n  * AI can improve the efficiency and security of financial systems. \n\n8. Improved Agriculture:\n  * AI can optimize crop yields, reduce waste, and improve food production. \n  * AI can help farmers make more informed decisions and manage their resources effectively. \n\n9. Enhanced Cybersecurity:\n  * AI can detect and prevent cyberattacks, protect sensitive data, and enhance overall cybersecurity. \n  * AI can help organizations stay ahead of evolving cyber threats. \n\nHow isn't humanity benefiting from those thing?  I would argue you are falling for an Equality of Rights fallacy.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-12 14:38:16",
+                                            "replies": [
+                                                {
+                                                    "author": "Disastrous-Lynx-3247",
+                                                    "body": "OpenAI\u2019s \u2018non-profit\u2019 origins are irrelevant when they ,pivoted to a capped-profit model in 2019 (LP structure). Took $10B from Microsoft while claiming independence and paywalled the only tools that could theoretically \u2018benefit humanity\u2019.\n\nThis isn\u2019t about equal outcomes , it\u2019s about reparations for stolen data/labor, democratic control over essential infrastructure , preventing AI from replicating colonial hierarchies.",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-12 14:43:13",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "GiveMeAHeartOfFlesh",
+                            "body": "Not all of humanity has to afford it to benefit all of humanity. If someone builds a rocket to another planet and says this will benefit all of humanity, it\u2019s not a lie even if everyone else can\u2019t afford said rocket rides. The discoveries by those who do use it, could benefit all of humanity still.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2025-05-12 14:27:10",
+                            "replies": [
+                                {
+                                    "author": "Disastrous-Lynx-3247",
+                                    "body": "Space exploration is publicly funded science with open results. OpenAI is privatizing publicly-funded AI research (they took NSF grants), locking away discoveries behind paywalls , using exploited labor to build their 'rocket'",
+                                    "score": -2,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-12 14:31:56",
+                                    "replies": [
+                                        {
+                                            "author": "GiveMeAHeartOfFlesh",
+                                            "body": "Privately funded makes more sense for it to be more locked than publicly. \n\nTotally ethical to hide private research behind a paywall.\n\nThe publicly funded yet expensive rocket would actually be more unethical in this situation. \n\nRegardless the rocket was a metaphor, the gist is obviously not everyone needs to afford it for it to be overall beneficial to society\n\nThe exploitation may be the one and only argument that holds weight, which apparently they stopped over the backlash. (Which was probably disappointing for those who were being payed to do it, because $2 a hour is still a lot in some countries.) \n\nSo\u2026 what\u2019s the problem?",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-12 14:39:38",
+                                            "replies": [
+                                                {
+                                                    "author": "Disastrous-Lynx-3247",
+                                                    "body": "Calling OpenAI 'private research' is like calling the East India Company a 'private trade collective.' \ud83d\ude02\n\nThey took public datasets (Wikipedia, scientific papers, your social media posts) , used publicly funded research (NSF grants, university partnerships) , hired exploited global labor $2/hr Kenyan moderators , then locked the results behind a paywall. This isn't 'private research' it's corporate piracy",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-12 14:46:08",
+                                                    "replies": [
+                                                        {
+                                                            "author": "GiveMeAHeartOfFlesh",
+                                                            "body": "Public data sets are available for use in the public\u2026 \n\nThey then made a tool to quickly compile that information and think of solutions to your prompt based on it. \n\nIt\u2019s a private tool/research utilizing other research. \n\nMany researchers use other researched data and results in their own. \n\nAgain the only potential issue is the $2/hour which they stopped doing and was still probably very nice for the Kenyan moderators. Of course they had some greed which made them pay less than they should, but it was still likely more than they would get from other jobs. \n\nMaybe we can focus on that specific fault which they already addressed, but if we are going to do that here, we have to do that everywhere, otherwise we are just being hypocrites.",
+                                                            "score": 3,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-05-12 14:52:54",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Disastrous-Lynx-3247",
+                                                                    "body": "Public data isn't free to steal . Turning Wikipedia into paywalled AI isn't 'research,' it's digital enclosure.\n\n$2/hr is pure exploitation no less. It's half Nairobi's living wage for PTSD-inducing work while OpenAI spends $540M on servers  \nAnd no they didn't fix it  , they just moved exploitation to other poor countries  .\n\nThis isn't 'private enterprise.' They took public resources , exploited cheap labor and sold it back to the public at monopoly prices  .",
+                                                                    "score": 0,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-05-12 14:59:02",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "GiveMeAHeartOfFlesh",
+                                                                            "body": "That\u2019s an obvious strawman you\u2019re working with there. They made a whole tool that not anyone could just do. It\u2019s essentially a really advanced search engine that conveys what it found to you. It searches the internet and also whatever data it was trained on then communicates it in your preferred communication style if set.\n\nIt\u2019s not just \u201cpublic data behind a pay wall\u201d. That\u2019s a horrible characterization of it which does not fit at all. \n\nAt this point we\u2019re going in circles I guess, I agree they should pay their workers at least minimum wage, or at least legally, like situations with tips or if they pay out based on flaws found, like by the item. Perhaps they could legally and ethically pay less than minimum wage depending on their payment system. I don\u2019t know enough about it, but I\u2019ll say I agree it should be legal at least.",
+                                                                            "score": 3,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2025-05-12 15:09:12",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "Disastrous-Lynx-3247",
+                                                                                    "body": "Nobody is denying the engineering feat. But Microsoft also built amazing software while engaging in monopolistic practices . Brilliance doesn't immunize you from criticism. The question is why must progress come through data colonialism, and why the default solution is always more privatization of knowledge?(Erodes the core mission of OpenAI themselves )",
+                                                                                    "score": 0,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2025-05-12 15:15:12",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "GiveMeAHeartOfFlesh",
+                                                                                            "body": "Is your issue that people built a product and sell said product? \n\nThey didn\u2019t ban the ways of gaining knowledge that existed before, they just made a learning tool that may be more helpful for those who can pay for it. \n\nTutors cost money, is that unethical?",
+                                                                                            "score": 3,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2025-05-12 15:19:16",
+                                                                                            "replies": [
+                                                                                                {
+                                                                                                    "author": "Disastrous-Lynx-3247",
+                                                                                                    "body": "Tutors don't steal their lesson plans from public libraries without compensation , pay their teaching assistants in PTSD wages and claim to be \"democratizing education\" while charging Harvard prices.\n\n\"Didn't ban old ways\" is pointless when they're actively replacing those systems (Google Search is already AI-polluted).",
+                                                                                                    "score": 0,
+                                                                                                    "depth": 11,
+                                                                                                    "timestamp": "2025-05-12 15:36:04",
+                                                                                                    "replies": [
+                                                                                                        {
+                                                                                                            "author": "GiveMeAHeartOfFlesh",
+                                                                                                            "body": "Tbh sounds like this is more whining than anything unethical about OpenAi. I\u2019m sure Tutor\u2019s probably bring people to libraries and utilize some public services in doing so. \n\nAI itself isn\u2019t necessarily unethical, and not all AI is even Open Ai, but from how you talk about Google AI overview (which from my search I can\u2019t find anything saying it is OpenAi) seems this is more so your agenda against AI in general speaking more than anything.",
+                                                                                                            "score": 1,
+                                                                                                            "depth": 12,
+                                                                                                            "timestamp": "2025-05-12 15:41:33",
+                                                                                                            "replies": []
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "Lylieth",
+                                            "body": "> Space exploration is publicly funded\n\nThis is mostly incorrect.  Did you mean NASA?  Not ALL space agencies are publicly funded.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-12 14:39:39",
+                                            "replies": [
+                                                {
+                                                    "author": "Disastrous-Lynx-3247",
+                                                    "body": "Yes",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-12 14:50:03",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "rightful_vagabond",
+                            "body": "I can 100% agree that OpenAI isn't living up to its original goals without agreeing that it is inherently immoral. Those two aren't inherently linked.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-12 20:36:47",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "jatjqtjat",
+            "body": "The racists stuff i don't know anything about.\n\nThe main classist argument seems to be that they charge for their product.  to use their product you must pay for it.  That is how all private enterprises in a capitalist economy operate.  sometimes people charge for their product and give free samples.\n\nThe second classist argument is they paid workers in Kenya a low wage.  But against then are a private enterprises operating in a world where basically everyone uses capitalism.  They paid fair market rate for labor, in a place were labor is extremely cheap.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2025-05-12 14:21:56",
+            "replies": [
+                {
+                    "author": "Disastrous-Lynx-3247",
+                    "body": "This isn\u2019t about private enterprise , it\u2019s about feudalizing the future . OpenAI takes public data (your Reddit posts, Wikipedia, artists\u2019 work), uses slave-wage labor to clean it , sells it back to you as a subscription and you\u2019re defending it as 'just business'?\n\nOh and btw , $2/hr is below Kenya\u2019s living wage ($4.82/hr for Nairobi). \"Market rate\" = starvation wages.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-05-12 14:26:36",
+                    "replies": [
+                        {
+                            "author": "NaturalCarob5611",
+                            "body": "Lots of businesses take public data, pay people to clean it, and sell it back to you. This is true of news websites, encyclopedias, law review websites, etc.\n\n> Oh and btw , $2/hr is below Kenya\u2019s living wage ($4.82/hr for Nairobi). \"Market rate\" = starvation wages.\n\nWhere are you getting that? [This site](https://www.globallivingwage.org/living-wage-benchmarks/non-metropolitan-urban-kenya/) has their living wage as KSh 38,648, or about $299, which would mean working 150 hours a month, which is about 35 hours a week.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-05-12 15:55:38",
+                            "replies": [
+                                {
+                                    "author": "Disastrous-Lynx-3247",
+                                    "body": "The Scale of Theft is Unprecedented here.\nNews sites and encyclopedias :\n\n-specific content (AP articles, expert contributors)\n\n-Don't scrape all human knowledge without consent\n\n-Aren't replacing the original sources\n\nOpenAI ingested ,60+ years of copyrighted books ,every Wikipedia edit ever made , your private blog posts, forum comments, artwork then locked the synthesis behind paywalls. \n\nUnlike legal databases or news sites , OpenAI is actively replacing the sources it stole from.\n\nTheir product degrades original research (hallucinations passed off as facts).",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-12 16:26:03",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "jatjqtjat",
+                            "body": "I wasn't defending it, i was just saying its not classism.  Charging money for a product or service is not classism.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-12 16:14:10",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "bellend1991",
+            "body": "It's so so hard to actually build stuff. It's even harder when you are at the frontier. They haven't gotten everything right. The models are a mirror of humanity distilled from the internet. They beat them into alignment in a later step. I would say they are doing the best they can. Sitting on a moral high horse gets humanity nowhere.",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2025-05-12 14:12:03",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "[removed]",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-05-12 14:16:27",
+                    "replies": [
+                        {
+                            "author": "changemyview-ModTeam",
+                            "body": "Your comment has been removed for breaking Rule 5: \n\n> **Comments must contribute meaningfully to the conversation**.  \n\nComments should be on-topic, serious, and contain enough content to move the discussion forward. Jokes, contradictions without explanation, links without context, off-topic comments, and \"written upvotes\" will be removed. AI generated comments must be disclosed, and don't count towards substantial content. Read [the wiki](https://www.reddit.com/r/changemyview/wiki/rules#wiki_rule_5) for more information.  \n\nIf you would like to appeal, review our appeals process [here](https://www.reddit.com/r/changemyview/wiki/modstandards#wiki_appeal_process), then [message the moderators by clicking this link](http://www.reddit.com/message/compose?to=%2Fr%2Fchangemyview&subject=Rule%205%20Appeal&message=Author%20would%20like%20to%20appeal%20the%20removal%20of%20their%20post%20because\\.\\.\\.) within one week of this notice being posted. **Appeals that do not follow this process will not be heard.** \n\nPlease note that multiple violations will lead to a ban, as explained in our [moderation standards](https://www.reddit.com/r/changemyview/wiki/modstandards).",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-12 14:34:52",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "AcephalicDude",
+            "body": "What's your process for drawing a line between a company not caring about ethics, and a company just failing to resolve challenging ethical problems?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-05-12 14:18:43",
+            "replies": []
+        },
+        {
+            "author": "Segull",
+            "body": "What is your definition of \u201cethical AI\u201d?\n\nI found this definition of \u201cethical AI\u201d online: \n\u201cEthical AI is artificial intelligence that adheres to well-defined ethical guidelines regarding fundamental values, including such things as individual rights, privacy, non-discrimination, and non-manipulation. Ethical AI places fundamental importance on ethical considerations in determining legitimate and illegitimate uses of AI. Organizations that apply ethical AI have clearly stated policies and well-defined review processes to ensure adherence to these guidelines.\u201d\n\nI don\u2019t believe they are not \u201cethical\u201d based on this definition. They are a corporation in a capitalist society, not the messiah of our species woes.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-12 14:18:36",
+            "replies": [
+                {
+                    "author": "Disastrous-Lynx-3247",
+                    "body": "Then they shouldn't claim things that they can't back by current societal capitalistic standards , simple as",
+                    "score": -1,
+                    "depth": 1,
+                    "timestamp": "2025-05-12 14:22:31",
+                    "replies": [
+                        {
+                            "author": "Lylieth",
+                            "body": "How does this answer the question, \"What is your definition of \u201cethical AI\u201d?\"\n\nCan you define \"ethical AI\"?  And can you cite which ethics model you are referring to?",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2025-05-12 14:25:44",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "EggoedAggro",
+            "body": "As Bellend1991 said AI is so new. We are literally on the frontier of a massive breakthrough in technology and advanced AI that mistakes will be made. \n\nYes OP maybe the corporations running this has nefarious goals but most everything in the world becomes corrupted somehow whether it was made with good intentions or not.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-12 14:20:59",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[removed]",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-12 14:22:15",
+            "replies": [
+                {
+                    "author": "changemyview-ModTeam",
+                    "body": "Your comment has been removed for breaking Rule 5: \n\n> **Comments must contribute meaningfully to the conversation**.  \n\nComments should be on-topic, serious, and contain enough content to move the discussion forward. Jokes, contradictions without explanation, links without context, off-topic comments, and \"written upvotes\" will be removed. AI generated comments must be disclosed, and don't count towards substantial content. Read [the wiki](https://www.reddit.com/r/changemyview/wiki/rules#wiki_rule_5) for more information.  \n\nIf you would like to appeal, review our appeals process [here](https://www.reddit.com/r/changemyview/wiki/modstandards#wiki_appeal_process), then [message the moderators by clicking this link](http://www.reddit.com/message/compose?to=%2Fr%2Fchangemyview&subject=Rule%205%20Appeal&message=Author%20would%20like%20to%20appeal%20the%20removal%20of%20their%20post%20because\\.\\.\\.) within one week of this notice being posted. **Appeals that do not follow this process will not be heard.** \n\nPlease note that multiple violations will lead to a ban, as explained in our [moderation standards](https://www.reddit.com/r/changemyview/wiki/modstandards).",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-05-12 14:33:44",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Ill_Dragonfruit4580",
+            "body": "this just seems like a hitpiece written against open ai by a really bad ai.. it is like very specific but the argument itself is not there.\n\nputting a pricetag on a product does not make it classist.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-12 14:26:44",
+            "replies": []
+        },
+        {
+            "author": "zoomiewoop",
+            "body": "The main problem with your critique is that it isn\u2019t really targeted at AI at all. You could make the same critique for almost any new technology. \n\nThe price issue is a critique of capitalism itself, not OpenAI. You could make that same critique about Apple computers and iPhones, cars, or almost any other technology product. Any argument that non-specific isn\u2019t an argument \u2014 or at least isn\u2019t properly framed. (I say this as someone critical of capitalism myself).\n\nThe racism issue is interesting but as people have pointed out, AI is a technology in development. The way LLMs are trained will have those problems, and it will take time to figure out how to develop them in better, more ethical ways. \n\nThe saying \u201cdon\u2019t let the perfect be the enemy of the good\u201d applies here. Cars have gotten safer over the last 100 years with a steady decline in deaths per mile traveled, as safety measures have increased. To say cars are unethical in the 1920s because they were imperfect death-mobiles is both somewhat true and also not useful. To lambast a car company for saying cars will \u201cbenefit humanity\u201d would be fine but also somewhat pointless. Anyway we can argue about whether cars or AI ultimate do more harm than good, but that\u2019s an ethical argument that will attract many opinions, no single one of which can be established as definitive.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-12 14:34:22",
+            "replies": [
+                {
+                    "author": "Disastrous-Lynx-3247",
+                    "body": "I agree with your broader point . But I digress about OpenAIs specific claims and motives behind ChatGPT .\n\nOpenAI-  \u201cEnsure AGI benefits all of humanity.\u201d\nThis is part of OpenAI's core mission. Notice the word ***ALL*** here . If they wanted the betterment and progress of \"humanity in general\" , there would've been no need to add the \"all of \" part . Just \" Ensure AGI benefits humanity\". \n\nThat's the part that frustrates me, their implementation of stated core goals .",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-05-12 14:39:18",
+                    "replies": [
+                        {
+                            "author": "zoomiewoop",
+                            "body": "I\u2019m not sure you\u2019re being open to having your views challenged, which is a requirement for this sub.\n\nBut to humor you\u2026 Consider that you\u2019re taking a very narrow view of what it means to benefit all humanity. You\u2019re saying that because of pricing making AI products not available to poorer people, this violates OpenAI\u2019s mission. But that does not follow. Making AI available to those who can afford it can still benefit all humanity if those who can afford it use it to make new discoveries, do more efficient work, etc. Those benefits then accrue for all humanity.\n\nLet\u2019s say you consider the Dalai Lama and important figure who benefits the world. The Dalai Lama\u2019s chef might have a core value of benefitting all humanity by cooking for the Dalai Lama. Your critique is that if the Chef isn\u2019t cooking for every person on the planet, he isn\u2019t benefiting all humanity. That\u2019s too narrow an interpretation. \n\nReductio ad absurdum: no one could ever say their mission is to benefit all humanity because no one could possibly benefit every person directly, only indirectly.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-12 19:13:26",
+                            "replies": [
+                                {
+                                    "author": "Disastrous-Lynx-3247",
+                                    "body": "\u2206\n\nI have considered your point about OpenAI positively impacting humanity indirectly, not directly . Indirect benefits can theoretically uplift humanity even without universal access(especially in medicine). While I maintain that OpenAI\u2019s *execution* remains exploitative, your point about indirect benefit frameworks is logically valid within their stated goals.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-13 04:20:23",
+                                    "replies": [
+                                        {
+                                            "author": "DeltaBot",
+                                            "body": "Confirmed: 1 delta awarded to /u/zoomiewoop ([2\u2206](/r/changemyview/wiki/user/zoomiewoop)).\n\n^[Delta\u00a0System\u00a0Explained](https://www.reddit.com/r/changemyview/wiki/deltasystem) ^| ^[Deltaboards](https://www.reddit.com/r/changemyview/wiki/deltaboards)",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-13 04:20:37",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "zoomiewoop",
+                                            "body": "Yes, good point. Paradoxically, both can be true. Ideally we would strive to make our execution better match our mission, but few achieve that in a perfect sense, especially in the systems our societies currently operate. Thanks for the delta.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-13 09:12:05",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Disastrous-Lynx-3247",
+                                    "body": "That's a fair point . But it still relies on trickle down applicability rather than direct usage of their AIs .",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-13 02:09:05",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Reynvald",
+            "body": "I find some arguments contradictory. You claim that outpoots is racist, but than you mostly critique it for being financially inaccessible. If it becomes much more accessible, won't it exaggerate the problem of racism, since much more people will be exposed to it?\nIf money question is overweighting the racism one, than, I believe, it's not so big of a problem in a first place and it's not more racist then data, it was trained on (which is a big chunk of the entire internet + synthetic data). Besides, why do you see the problem in \"They tweak outputs but won\u2019t overhaul the exploitative data pipeline.\" It's just a data deep inside the servers. If the problem is solved for the end user, what the difference in how it was achieved? Data itself is not racist. People are.\n\nThan I find the argument, about normalization of life changing tools being luxury goods, being strange. As I see it, it's already normalized and fairly common. Besides, it's not really about being life-changing, since it more of a by-product of development of this technology. When there is only one cure from deadly disease on the market and it's price artificially lifted tenfolds \u2014 it would be a fair critique. But according to the OpenAI reports and other sources \u2014 they not super profitable, compared to many tech companies, and still rely on investors heavily. Mostly due to the astronomical spendings on the stuff, model trainings and infrastructure maintenance. So I don't see the problem in putting any price on their service. They are far from being monopoly and inadequate pricing will eventually backfired for them.\n\nYou also talk about paywalling stuff and downgrading models for free users, but I see the great service, that I can use for free and without any ads and invasive marketing, despite it being costly to the service providers. If so happens that I run from the free limit - I go to the Claude, Gemini or DeepSeek (where you can't even ask what happened in 1989). And, as you pointed out, there is much cheaper alternatives. And also discounted plans for students and educational facilities. \n\nClaim about cheap labor exploration is fair. I agree on this.\n\nAnd the last claim about ethics-washing for spending money on the alignment problem due to AGI risks \u2014 we probably won't hear each other here. I believe strongly that OpenAI is spending not nearly enough resources on the alignment, including their media presence. Risks are real and immense. And, in the perfect scenario, at some point in the future, with international cooperation, all AI development should be paused completely until alignment problem will be solved without shadow of the doubt.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-12 14:51:54",
+            "replies": [
+                {
+                    "author": "Disastrous-Lynx-3247",
+                    "body": "More access to racist outputs is bad yes , but paywalls make bias a luxury good.  The core issue is that OpenAI monetizes harm then pretends it's completely unavoidable.\n\nComparing AI to existing paywalls misses the civilizational shift happening in the world.\nGPT isn't another SaaS product . It's becoming essential infrastructure for education, legal aid, and healthcare . Your \"by-product\" framing ignores how OpenAI actively markets these life-changing applications while restricting access in the countries they exploit cheap labor from .\n\nTheir lack of profitability stems from reckless spending (e.g., $540M on compute), not some noble sacrifice here .",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2025-05-12 15:06:08",
+                    "replies": [
+                        {
+                            "author": "Reynvald",
+                            "body": ">More access to racist outputs is bad yes , but paywalls make bias a luxury good.  The core issue is that OpenAI monetizes harm then pretends it's completely unavoidable.\n\nI prefer less emotion-loaded claims. They monetize their services. But cause some harm in the process. in this formulation it's applicable to literally ANY relatively large business on the planet. And I completely miss how bias can be a luxury good. Is there some error in your wordings? Or you saying that they make a racism a luxury good and it's bad?\n\n>Comparing AI to existing paywalls misses the civilizational shift happening in the world.\nGPT isn't another SaaS product . It's becoming essential infrastructure for education, legal aid, and healthcare . Your \"by-product\" framing ignores how OpenAI actively markets these life-changing applications while restricting access in the countries they exploit cheap labor from.\n\nNot entirely ethical marketing. Sure. Prices are too biting for many people. Sure. But as far as the base subscriptions is their main source of income, reducing it by the factor x2 or more, will mean that they will have to scale down their R&D greatly or cease to exist as business (I don't count investments here, because investments will dry out if they will stop pursuing profit).\n\n>Their lack of profitability stems from reckless spending (e.g., $540M on compute), not some noble sacrifice here.\n\nI never said thay it was a noble sacrifice. Just a regular business expenses. But to call compute the reckless spending, when compute is basically the model trainings itself and processing queries from users, to keep their GPTs working... It just doesn't make much sense to me as an argument.\nAnd I hope you understand, that if they reduce prices to the point, that everyone on the planet can afford it without any limits, we will be talking about dozens if not hundreds billions dollars, not just 540$ mil, on compute.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-12 15:43:50",
+                            "replies": [
+                                {
+                                    "author": "Disastrous-Lynx-3247",
+                                    "body": ">I prefer less emotion-loaded claims. They monetize their services. But cause some harm in the process. in this formulation it's applicable to literally ANY relatively large business on the planet. And I completely miss how bias can be a luxury good. Is there some error in your wordings? Or you saying that they make a racism a luxury good and it's bad?\n\nThis false equivalence ignores scale and **intent**:  \nMost businesses don\u2019t claim to \u2018benefit humanity\u2019 while exploiting labor/data .\nMost businesses aren\u2019t monopolizing essential knowledge infrastructure.\n\n>never said thay it was a noble sacrifice. Just a regular business expenses. But to call compute the reckless spending, when compute is basically the model trainings itself and processing queries from users, to keep their GPTs working... It just doesn't make much sense to me as an argument.\nAnd I hope you understand, that if they reduce prices to the point, that everyone on the planet can afford it without any limits, we will be talking about dozens if not hundreds billions dollars, not just 540$ mil, on compute.\n\nThe compute costs argument is again faulty here .\n\nOpenAI chose to build a monolithic, inefficient model  . They rejected distributed/federated alternatives to maintain control  .\n\nTheir \"$540M compute\" budget includes reckless overtraining( training GPT-4 multiple times due to alignment failures)  \n\nAlternatives also exist like Open-source models (Mistral, Llama) prove efficient AI is possible , publicly-funded AI (like Finland\u2019s) shows non-extractive models can also work\n\nTheir cost crisis is self-inflicted . A result of prioritizing investor returns over accessibility",
+                                    "score": 0,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-12 16:21:55",
+                                    "replies": [
+                                        {
+                                            "author": "Reynvald",
+                                            "body": ">This false equivalence ignores scale and **intent**:  \nMost businesses don\u2019t claim to \u2018benefit humanity\u2019 while exploiting labor/data .\nMost businesses aren\u2019t monopolizing essential knowledge infrastructure.\n\nI didn't claim equivalency here, same as you didn't claim that OpenAI is the most harmful company in the world. I just pointed out that they not unique. \nActually many businesses claim to benefit humanity. You can look corpo's missions \u2014 they all susceptible to critique. Big difference that OpenAI still have a non-profit part to it and, therefore much more restricted by government regulations. Btw, non-profit's missions itself has little to non legal commitments, but rather charitable purpose and non profit corporate law. And charitable purpose of OpenAI is stated: \"Building safe and beneficial artificial general intelligence for the benefit of humanity.\" Therefore helping humanity right now is not part of their goal, until AGI doesn't achieved. And in this context spending on alignment and ensuring safty of AGI is becoming part of the legally required non-profit spendings.\nI really don't want to dive deep into law and corporate wordings. But I assure, that it's far less obviouse than it seems. \n\nAnd yes, claim that OpenAI monopolizing the essential knowledge infrastructure is blatantly false. OpenAI can't be considered as monopoly by any criteria, unless I'm missing something.\n\n>OpenAI chose to build a monolithic, inefficient model. They rejected distributed/federated alternatives to maintain control.\n\nI really hate to sound arrogant, and I can't explain it in two words. Firstly, their model is non monolithic. It's a modular model, also known like Mixture of Experts with many submodels inside it. But I'm not sure how it's relatable to your initial arguments. Distributied solutions is also unrealistic. It would have been generally uncontrollable, unscalable and unsafe decision. And with much more racism inside, due to all added complexity of fine-tuning and data management of the distributed model.\n\nBesides, how their model can be inefficient, if you earlier called them out on monopolizing knowledge? Doesn't it implying that their model is superior, compared to competitors? \n\n>Their \"$540M compute\" budget includes reckless overtraining( training GPT-4 multiple times due to alignment failures)  \n\nAlingnment is a singlehandedly most complex problem even known to humanity. There is still not enough evidences that it can be fully solved even from a purly mathematical standpoint. So failure here is a natural part of R&D.\nOvertraining (or overfitting) has it's downsides, but, after certain threshold, it can drastically improve reasoning. And it's a deliberate decision, not some rookie mistake. And significant improvement in reasoning in the newest models is most likely attributed exactly to overtraining.  https://arxiv.org/abs/1906.11300\n\nI suggest that we won't touch technical side of the problem, since it's tiresome to write it all down and we can't discuss it live.\n\n>Alternatives also exist like Open-source models (Mistral, Llama) prove efficient AI is possible , publicly-funded AI (like Finland\u2019s) shows non-extractive models can also work.\n\nThey legally prohibited from doing so, due to the potential security breaches, because they are oversaw by government as a nonprofit. I won't go into technicals details here, but I will just say, that at this point it would required immense investment and rebuilding complete infrastructure and will result in lesser efficiency with higher risks and reduced quality of service. So I see no point for them in doing so.\n\n>Their cost crisis is self-inflicted . A result of prioritizing investor returns over accessibility\n\nThis claim is illogical. As business, they have a legal obligation to prioritizing stakeholders' profit. Therefore, such costs is serve to maximize profit. If you think that it's just a bad business decision - I can't assess it myself. But I believe that board members of the OpenAI generally know more about their company than me and you.\nThey also legally binded to uphold their charitable purpose and they already doing it. And when they're not, board members is being replaced (which is already happened before several times for different reasons).  But I will repeat \u2014 accessibility to their service is not the part of their charitable purpose. They can cut off free access entirely, without breaking a non-profit corporate law.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-12 17:27:20",
+                                            "replies": [
+                                                {
+                                                    "author": "Disastrous-Lynx-3247",
+                                                    "body": "Yes OpenAI\u2019s practices reflect a deeper systemic issue you're not wrong , but they stand out due to their scale and hypocrisy. While they claim that they \"benefit humanity,\" they replicate exploitative data and labor practices, scraping decades of content including books, Wikipedia, and private posts only to replace open knowledge with paywalled outputs. \n\nTheir non-profit status is a cover up. OpenAI LP is profit-driven, backed by $10B from Microsoft, and operates under a vague mission . If they truly aimed to help humanity, they'd open-source models, pay fair wages, and compensate data contributors.\n\nClaims that they\u2019re not a monopoly ignore their control over AI infrastructure, lobbying power, and Microsoft partnership. They\u2019ve essentially built a knowledge cartel .\n\nTechnical excuses are also off the table , public alternatives exist, but OpenAI chose compute heavy models to manufacture scarcity and prioritize investor demands. Their alignment failures aren\u2019t about technical complexity but ethical neglect.\n\nFinally, they can't claim to be too poor to pay workers while spending millions on redundant model runs. Either they\u2019re a business , drop the \"for humanity\" mask , or a charity and they should act like one. Right now, it's exploitation dressed as innovation.",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-12 18:22:29",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Reynvald",
+                                                            "body": ">While they claim that they \"benefit humanity,\" they replicate exploitative data and labor practices, scraping decades of content including books, Wikipedia, and private posts only to replace open knowledge with paywalled outputs. \n\nDue to my personal stance on digital copyright and my own understanding of the model training process, I don't share the position on data theft/scraping. But I suggest we not arguing about this, since it's mostly ideological differences. For the labor matter \u2014 yes, I agree and yes, it's bad. Even if some guys in Africa is happy to work for 2 dollars.\n\n>Their non-profit status is a cover up. OpenAI LP is profit-driven, backed by $10B from Microsoft, and operates under a vague mission . If they truly aimed to help humanity, they'd open-source models, pay fair wages, and compensate data contributors.\n\nI'm just don't see it like this. Non-profit status bring little to not benefits for them. Even classical arguments like tax evasion is not applicable here, since they have a \"profit\" part of business, which is paying taxes alright.\nTheir mission is pretty clear, despite the disagreements on AGI definition. But it's not OpenAI-specific problem. \nAlso I believe that different people can have different understanding of how to help humanity. Someone feed war refugees, someone build rockets, someone constructing AGI. \n\nOpen source is a two-bladed sword. It is extremely unwise to release powerful model's weights. For ones, most of the people won't be able to use it anyway, since it require a serious hardware (even a compressed models) and it open endless possibilities for bad actors. Powerful AI in corpo's hands \u2014 bad. Powerful AI in everyone's hands \u2014 tenfolds worse.\n\n>Claims that they\u2019re not a monopoly ignore their control over AI infrastructure, lobbying power, and Microsoft partnership. They\u2019ve essentially built a knowledge cartel .\n\nAgain, it's emotional claim. \n1. They have nothing form cartel, in a legal terms.\n2. They controle their own infrastructure that they build themselves (OpenAI and Microsoft). As far as I'm aware, USA is not a communist country. Owning and partnershiping is legal.\n3. 99% of knowledge, that AI possess is available to you as well. It will just take more time and efforts. So we talking here not about knowledge, but about convenience. And I believe that in capitalism it's exactly the commodity that you usually paying for.\n\n>Technical excuses are also off the table , public alternatives exist, but OpenAI chose compute heavy models to manufacture scarcity and prioritize investor demands. Their alignment failures aren\u2019t about technical complexity but ethical neglect.\n\nYou made an inaccurate technical claims, and when I point it out, you call it excuses, and than just repeat your claimes from previous message. I'm sorry, but this particular part of the conversation is entirely unproductive and I have to skip this part. Detailed answers for this will take at least an entire A4.\n\n>Finally, they can't claim to be too poor to pay workers  \n\nYes, not paying your workforce is bad. I already third time agreed to this. You don't have to repeat multiple times the argument, with which I am not argue.\n\n> while spending millions on redundant model runs.\n\nOvertraining is not redundant, as I pointed out before and even provide link of proof, that you apparently didn't read.\n\n>Either they\u2019re a business , drop the \"for humanity\" mask , or a charity and they should act like one. Right now, it's exploitation dressed as innovation.\n\nI'm sorry, but this an another emotional claim. They have legally allowed business structure, that existed long before Open AI was founded. They are not the only one, that combined profit and nonprofit. Company doesn't have to drop something become someone think it's hypocritical. \n\nAnd again they are NOT charity. They are non-profit. One can be non-profit without being charity. Hell, most of the government institutions is non-profit.\nAnd they DON'T HAVE TO HELP people right now. It's not the part of their charitable purpose. Their only obligation as a non-profit is to build safe and useful for humanity AGI.\n\nI believe that we should stop this discussion, because all your claims in the last message it's the ones that I already addressed. Some of them - twise. I clearly and miserably failed in changing your view in \"change my view\" subreddit. Therefore, I admit defeat.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-05-12 19:16:17",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "rightful_vagabond",
+            "body": "I'm not sure if I understand what your vision of an ethical version of ChatGPT would look like given our current technology. \n\nGiven that these models are pretrained on basically all text on the Internet, it's impossible to perfectly filter out everything racist or bigoted from the training Corpus (leaving aside the difficulty of a unified definition of racism you can apply to every page on the internet). What would the data cleaning and pretraining pipeline look like in a model you would consider 100% ethical?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-12 20:31:50",
+            "replies": []
+        },
+        {
+            "author": "DryEditor7792",
+            "body": "OpenAI was edited to function as state propaganda. If you believe that makes it racist/classist then you would be accidentally correct.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-28 09:52:31",
+            "replies": []
+        }
+    ]
+}
