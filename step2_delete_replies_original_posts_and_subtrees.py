@@ -30,10 +30,10 @@ def load_conversations_from_folder(folder_path):
             
             # Determine conversation type based on post_id
             conversation_type = ""
-            if "hb" in post_id.lower():
-                conversation_type = "richly branching"
-            elif "lb" in post_id.lower():
-                conversation_type = "poorly branching"
+            if "con" in post_id.lower():
+                conversation_type = "controversial"
+            elif "tec" in post_id.lower():
+                conversation_type = "technical"
             else:
                 conversation_type = "unknown"
             
@@ -300,8 +300,8 @@ def print_before_after_summary_table(all_results):
         return
     
     # Separate by conversation type
-    richly_branching = [r for r in all_results if r['conversation_type'] == 'richly branching']
-    poorly_branching = [r for r in all_results if r['conversation_type'] == 'poorly branching']
+    controversial = [r for r in all_results if r['conversation_type'] == 'controversial']
+    technical = [r for r in all_results if r['conversation_type'] == 'technical']
     
     def calculate_before_stats(conversations):
         """Calculate statistics BEFORE filtering"""
@@ -343,22 +343,22 @@ def print_before_after_summary_table(all_results):
             'count': len(conversations)
         }
     
-    rb_before = calculate_before_stats(richly_branching)
-    pb_before = calculate_before_stats(poorly_branching)
-    rb_after = calculate_after_stats(richly_branching)
-    pb_after = calculate_after_stats(poorly_branching)
+    rb_before = calculate_before_stats(controversial)
+    pb_before = calculate_before_stats(technical)
+    rb_after = calculate_after_stats(controversial)
+    pb_after = calculate_after_stats(technical)
     
     print(f"\n{'='*120}")
     print("BEFORE vs AFTER CONTENT FILTERING COMPARISON")
     print(f"{'='*120}")
     
     # BEFORE TABLE
-    print(f"\n📊 BEFORE FILTERING (Original Data):")
+    print(f"\n BEFORE FILTERING (Original Data):")
     print(f"{'-'*80}")
     print(f"{'Conversation Type':<20} {'Count':<8} {'Total Comments':<15} {'Max Depth':<12} {'Comments to Remove':<18}")
     print(f"{'-'*80}")
-    print(f"{'Richly Branching':<20} {rb_before['count']:<8} {rb_before['total_comments']:<15} {rb_before['max_depth']:<12} {rb_before['removed_comments']:<18}")
-    print(f"{'Poorly Branching':<20} {pb_before['count']:<8} {pb_before['total_comments']:<15} {pb_before['max_depth']:<12} {pb_before['removed_comments']:<18}")
+    print(f"{'Controversial':<20} {rb_before['count']:<8} {rb_before['total_comments']:<15} {rb_before['max_depth']:<12} {rb_before['removed_comments']:<18}")
+    print(f"{'Technical':<20} {pb_before['count']:<8} {pb_before['total_comments']:<15} {pb_before['max_depth']:<12} {pb_before['removed_comments']:<18}")
     
     # Calculate totals for before
     total_before_count = rb_before['count'] + pb_before['count']
@@ -371,12 +371,12 @@ def print_before_after_summary_table(all_results):
     print(f"{'-'*80}")
     
     # AFTER TABLE
-    print(f"\n📊 AFTER FILTERING (Clean Data):")
+    print(f"\n AFTER FILTERING (Clean Data):")
     print(f"{'-'*110}")
     print(f"{'Conversation Type':<20} {'Count':<8} {'Total':<8} {'Both Del':<10} {'Author Del':<12} {'Content Del':<12} {'Active':<8} {'Max Depth':<12}")
     print(f"{'-'*110}")
-    print(f"{'Richly Branching':<20} {rb_after['count']:<8} {rb_after['total_comments']:<8} {rb_after['both_deleted']:<10} {rb_after['author_only']:<12} {rb_after['content_only']:<12} {rb_after['active']:<8} {rb_after['max_depth']:<12}")
-    print(f"{'Poorly Branching':<20} {pb_after['count']:<8} {pb_after['total_comments']:<8} {pb_after['both_deleted']:<10} {pb_after['author_only']:<12} {pb_after['content_only']:<12} {pb_after['active']:<8} {pb_after['max_depth']:<12}")
+    print(f"{'Controversial':<20} {rb_after['count']:<8} {rb_after['total_comments']:<8} {rb_after['both_deleted']:<10} {rb_after['author_only']:<12} {rb_after['content_only']:<12} {rb_after['active']:<8} {rb_after['max_depth']:<12}")
+    print(f"{'Technical':<20} {pb_after['count']:<8} {pb_after['total_comments']:<8} {pb_after['both_deleted']:<10} {pb_after['author_only']:<12} {pb_after['content_only']:<12} {pb_after['active']:<8} {pb_after['max_depth']:<12}")
     
     # Calculate totals for after
     total_after_count = rb_after['count'] + pb_after['count']
@@ -392,7 +392,7 @@ def print_before_after_summary_table(all_results):
     print(f"{'-'*110}")
     
     # IMPACT SUMMARY
-    print(f"\n📈 FILTERING IMPACT SUMMARY:")
+    print(f"\nFILTERING IMPACT SUMMARY:")
     print(f"{'-'*60}")
     
     if total_before_comments > 0:
@@ -402,19 +402,19 @@ def print_before_after_summary_table(all_results):
         print(f"  Comments remaining: {total_after_comments:,} ({(total_after_comments/total_before_comments)*100:.1f}%)")
         print(f"  Depth preservation: {total_before_depth} → {total_after_depth}")
         
-        print(f"\n  RICHLY BRANCHING:")
+        print(f"\n  Controversial:")
         if rb_before['total_comments'] > 0:
             rb_removal_rate = (rb_before['removed_comments'] / rb_before['total_comments']) * 100
             print(f"    Removed: {rb_before['removed_comments']:,}/{rb_before['total_comments']:,} ({rb_removal_rate:.1f}%)")
             print(f"    Remaining: {rb_after['total_comments']:,} ({(rb_after['total_comments']/rb_before['total_comments'])*100:.1f}%)")
         
-        print(f"\n  POORLY BRANCHING:")
+        print(f"\n  Technical:")
         if pb_before['total_comments'] > 0:
             pb_removal_rate = (pb_before['removed_comments'] / pb_before['total_comments']) * 100
             print(f"    Removed: {pb_before['removed_comments']:,}/{pb_before['total_comments']:,} ({pb_removal_rate:.1f}%)")
             print(f"    Remaining: {pb_after['total_comments']:,} ({(pb_after['total_comments']/pb_before['total_comments'])*100:.1f}%)")
     
-    print(f"\n✅ VALIDATION:")
+    print(f"\nVALIDATION:")
     print(f"  Both Deleted: {total_after_both} (should be 0)")
     print(f"  Content Only: {total_after_content} (should be 0)")
     print(f"  Author Only: {total_after_author} (content preserved from deleted accounts)")
@@ -447,11 +447,11 @@ def print_deletion_summary(all_results):
     removed_counts = [r['removed_count'] for r in all_results]
     
     print(f"Total conversations processed: {total_conversations}")
-    print(f"📊 CONTENT FILTERING SUMMARY:")
-    print(f"   Original total comments: {sum(original_counts):,}")
-    print(f"   After filtering: {sum(filtered_counts):,}")
-    print(f"   Total removed: {sum(removed_counts):,} ({sum(removed_counts)/sum(original_counts)*100:.1f}%)")
-    print(f"   Comments in analysis: {total_comments_all:,} (full depth preserved)")
+    print(f"CONTENT FILTERING SUMMARY:")
+    print(f"Original total comments: {sum(original_counts):,}")
+    print(f"After filtering: {sum(filtered_counts):,}")
+    print(f"Total removed: {sum(removed_counts):,} ({sum(removed_counts)/sum(original_counts)*100:.1f}%)")
+    print(f"Comments in analysis: {total_comments_all:,} (full depth preserved)")
     
     # Aggregate deletion counts by type (should mostly be Author Only now)
     total_both_deleted = sum(r['analysis']['deletion_counts']['both_deleted'] for r in all_results)
@@ -463,15 +463,15 @@ def print_deletion_summary(all_results):
     overall_deletion_rate = (total_deleted_all / total_comments_all * 100) if total_comments_all > 0 else 0
     
     print(f"\n--- REMAINING DELETION TYPES (AFTER CONTENT FILTERING) ---")
-    print(f"📍 BOTH DELETED: {total_both_deleted:,} (should be 0 - {total_both_deleted/total_comments_all*100:.2f}%)")
-    print(f"👤 AUTHOR ONLY (preserved content): {total_author_only:,} ({total_author_only/total_comments_all*100:.2f}%)")
-    print(f"💬 CONTENT ONLY: {total_content_only:,} (should be 0 - {total_content_only/total_comments_all*100:.2f}%)")
-    print(f"✅ ACTIVE COMMENTS: {total_active:,} ({total_active/total_comments_all*100:.2f}%)")
-    print(f"\n🔄 TOTAL REMAINING DELETIONS: {total_deleted_all:,} ({overall_deletion_rate:.2f}%)")
+    print(f"BOTH DELETED: {total_both_deleted:,} (should be 0 - {total_both_deleted/total_comments_all*100:.2f}%)")
+    print(f"AUTHOR ONLY (preserved content): {total_author_only:,} ({total_author_only/total_comments_all*100:.2f}%)")
+    print(f"CONTENT ONLY: {total_content_only:,} (should be 0 - {total_content_only/total_comments_all*100:.2f}%)")
+    print(f"ACTIVE COMMENTS: {total_active:,} ({total_active/total_comments_all*100:.2f}%)")
+    print(f"\nTOTAL REMAINING DELETIONS: {total_deleted_all:,} ({overall_deletion_rate:.2f}%)")
     
     # By conversation type
-    richly_branching = [r for r in all_results if r['conversation_type'] == 'richly branching']
-    poorly_branching = [r for r in all_results if r['conversation_type'] == 'poorly branching']
+    controversial = [r for r in all_results if r['conversation_type'] == 'controversial']
+    technical = [r for r in all_results if r['conversation_type'] == 'technical']
     
     print(f"\n{'='*60}")
     print("FILTERING IMPACT BY CONVERSATION TYPE")
@@ -491,13 +491,13 @@ def print_deletion_summary(all_results):
         type_content = sum(r['analysis']['deletion_counts']['content_only'] for r in conversations)
         type_active = sum(r['analysis']['deletion_counts']['active'] for r in conversations)
         
-        print(f"\n🌳 {type_name.upper()} ({len(conversations)} conversations):")
+        print(f"\n {type_name.upper()} ({len(conversations)} conversations):")
         print(f"   Content filtering: {type_original:,} → {type_filtered:,} (removed {type_removed:,}, {type_removal_rate:.1f}%)")
-        print(f"   📍 Both deleted: {type_both:,} | 👤 Author only: {type_author:,}")
-        print(f"   💬 Content only: {type_content:,} | ✅ Active: {type_active:,}")
+        print(f"   Both deleted: {type_both:,} |  Author only: {type_author:,}")
+        print(f"   Content only: {type_content:,} |  Active: {type_active:,}")
     
-    print_type_stats(richly_branching, "Richly Branching")
-    print_type_stats(poorly_branching, "Poorly Branching")
+    print_type_stats(controversial, "Controversial")
+    print_type_stats(technical, "Technical")
     
     # Per-conversation detailed breakdown
     print(f"\n{'='*80}")
@@ -507,20 +507,20 @@ def print_deletion_summary(all_results):
     for result in all_results:
         counts = result['analysis']['deletion_counts']
         
-        print(f"\n📁 {result['post_id']} ({result['conversation_type']})")
+        print(f"\n {result['post_id']} ({result['conversation_type']})")
         print(f"   Filtering: {result['original_count']} → {result['filtered_count']} (removed {result['removed_count']}, {result['removal_percentage']:.1f}%)")
         print(f"   Depth: {result['original_max_depth']} → {result['filtered_max_depth']} (preserved)")
-        print(f"   Remaining: 📍{counts['both_deleted']} | 👤{counts['author_only']} | 💬{counts['content_only']} | ✅{counts['active']}")
+        print(f"   Remaining: {counts['both_deleted']} | {counts['author_only']} | {counts['content_only']} | {counts['active']}")
     
     print(f"\n{'='*60}")
     print("LEGEND")
     print(f"{'='*60}")
-    print(f"📍 BOTH DELETED = Should be 0 after filtering")
-    print(f"👤 AUTHOR ONLY = Account deleted but content preserved (kept)")
-    print(f"💬 CONTENT ONLY = Should be 0 after filtering")
-    print(f"✅ ACTIVE = Normal comments with content and author (kept)")
-    print(f"🎯 CONTENT FILTERING = Removed Both Deleted + Content Only types")
-    print(f"📏 FULL DEPTH = No level-4 capping applied (handled by other scripts)")
+    print(f"BOTH DELETED = Should be 0 after filtering")
+    print(f"AUTHOR ONLY = Account deleted but content preserved (kept)")
+    print(f"CONTENT ONLY = Should be 0 after filtering")
+    print(f"ACTIVE = Normal comments with content and author (kept)")
+    print(f"CONTENT FILTERING = Removed Both Deleted + Content Only types")
+    print(f"FULL DEPTH = No level-4 capping applied (handled by other scripts)")
 
 def save_deletion_analysis_to_csv(all_results, filename='reddit_deletion_analysis.csv'):
     """
@@ -627,7 +627,7 @@ def save_deletion_details_to_csv(all_results, filename='reddit_deletion_details.
                 'comment_id': detail['comment_id'],
                 'depth': detail['depth'],
                 'author': detail['author'],
-                'body': detail['body'][:100] + '...' if len(detail['body']) > 100 else detail['body'],  # Truncate long bodies
+                'body': detail['body'][:200] + '...' if len(detail['body']) > 200 else detail['body'],  # Truncate long bodies
                 'score': detail['score'],
                 'timestamp': detail['timestamp'],
                 'parent_id': detail['parent_id'],
@@ -661,7 +661,7 @@ if __name__ == "__main__":
     print("Removing Content Only + Both Deleted comments while preserving full conversation depth")
     
     # Specify the folder containing your JSON files
-    json_data_folder = "json_data"  # Change this path if your folder is named differently
+    json_data_folder = "json_data"  
     
     # Load all conversations from the folder
     print(f"\n=== Loading conversations from '{json_data_folder}' folder ===")
@@ -725,13 +725,13 @@ if __name__ == "__main__":
             
             # Print individual results with detailed breakdown
             print(f"Final analysis (Content-Filtered ONLY - Full Depth):")
-            print(f"📊 Total comments: {deletion_analysis['total_comments']}")
-            print(f"📍 Both deleted: {deletion_analysis['deletion_counts']['both_deleted']} (should be 0)")
-            print(f"👤 Author only deleted: {deletion_analysis['deletion_counts']['author_only']}")
-            print(f"💬 Content only deleted: {deletion_analysis['deletion_counts']['content_only']} (should be 0)")
-            print(f"✅ Active comments: {deletion_analysis['deletion_counts']['active']}")
-            print(f"🔄 Total deleted: {deletion_analysis['total_deleted']} (should only be Author Only)")
-            print(f"📏 Max depth preserved: {deletion_analysis['max_depth']}")
+            print(f"Total comments: {deletion_analysis['total_comments']}")
+            print(f"Both deleted: {deletion_analysis['deletion_counts']['both_deleted']} (should be 0)")
+            print(f"Author only deleted: {deletion_analysis['deletion_counts']['author_only']}")
+            print(f"Content only deleted: {deletion_analysis['deletion_counts']['content_only']} (should be 0)")
+            print(f"Active comments: {deletion_analysis['deletion_counts']['active']}")
+            print(f"Total deleted: {deletion_analysis['total_deleted']} (should only be Author Only)")
+            print(f"Max depth preserved: {deletion_analysis['max_depth']}")
             
             if deletion_analysis['total_deleted'] > 0:
                 print(f"Remaining deletions by depth: {deletion_analysis['deleted_by_depth']}")
@@ -763,10 +763,10 @@ if __name__ == "__main__":
     print(f"  - Details: {details_csv}")
     print(f"\nTotal conversations processed: {len(all_results)}")
     print(f"Output directory: {output_dir}/")
-    print(f"\n🎯 PROCESSING APPLIED:")
-    print(f"   ✅ Content filtering on FULL TREE (removed Content Only + Both Deleted)")
-    print(f"   ✅ Orphaned replies reconnected to maintain tree structure")
-    print(f"   ✅ Original conversation data MODIFIED IN-PLACE")
-    print(f"   ✅ All depths preserved (no level-4 capping)")
-    print(f"\n💡 RESULT: Your JSON files now contain clean conversation data")
-    print(f"🚀 READY: Run your fractal analysis scripts - they will handle level-4 capping")
+    print(f"\nPROCESSING APPLIED:")
+    print(f"Content filtering on FULL TREE (removed Content Only + Both Deleted)")
+    print(f"Orphaned replies reconnected to maintain tree structure")
+    print(f"Original conversation data MODIFIED IN-PLACE")
+    print(f"All depths preserved (no level-4 capping)")
+    print(f"\nRESULT: Your JSON files now contain clean conversation data")
+    print(f" READY: Run your fractal analysis scripts - they will handle level-4 capping")

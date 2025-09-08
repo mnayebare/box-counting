@@ -1,0 +1,278 @@
+{
+    "post_title": "Compared performance of vLLM vs SGLang on 2 Nvidia GPUs - SGLang crushes it with Data Parallelism",
+    "post_timestamp": "2025-03-25 10:48:25",
+    "last_comment_timestamp": "2025-07-12 12:11:43",
+    "time_difference": "109 days, 1:23:18",
+    "comments": [
+        {
+            "author": "randomfoo2",
+            "body": "For dev/synthetic data I've been swapping back and forth between vLLM and SGLang over the past few months. I think it's very fluid and hard to say which is really best, especially for bigger models (mostly using 70B+ models which require at least tp=4 up to tp=16 (2xH100 nodes) for DeepSeek-V3/R1). It's great to have multiple strong options.\n\n* When DeepSeek-V3 first came out SGLang was much faster than vLLM, but they are now neck and neck. Both are racing on features/improvements from multiple contributors for faster implementations (DeepGEMM, MLA, etc). Both are not 100% stable btw and a bit crashy, especially at high concurrency\n* vLLM is currently transitioning to the V1 engine (doesn't work for everything and sometimes is slower). I think in the long term this is going to be a big improvement. In a lot of ways vLLM has been carrying a fair amount of technical debt, and a lot of settings required for tuning perf.\n* A lot of labs have standardized on vLLM/work with so you get Day 1 support for Mistral, Gemma 3 models  for example. I'd recommend having envs w/ both SGLang and vLLM (stable and nightlies) to be able to swap off as necessary\n* This is especially worth doing as some builds may not be happy w/ your config. On p5d SageMaker nodes (Ubuntu 20.04.6, Linux 5.15.0-1072-aws, Nvidia driver 550.127.05) even with CUDA 12.6 in the env (which addresses some NCCL errors), vLLM is crashier than SGLang - I think one thing often overlooked is actualy just how often specific versions of your kernel, drivers, libs, and system setup will affect benchmarks - vLLM and SGLang are largely a combination of python glue code and GPU kernels, there's a lot that's outside their control and a lot of results are going to vary, so it's best to test for your own setup\n* While vLLM has more mature speculative decoding, SGLang just launched EAGLE2/EAGLE3 sd - this is super fast, but requires additional training to get EAGLE draft models - if you're optimizing a production workload it will probably be worth it tough - the EAGLE team reported 400 TPS for a Llama 3.1 8B model on a single H100, that's bonkers: [https://x.com/hongyangzh/status/1903109123895341536](https://x.com/hongyangzh/status/1903109123895341536)\n* For multinode, I much prefer SGLang's simple setup vs Ray - the docs for vLLM are *barely* adequate for setting up Ray w/ slurm. I would probably have burnt days on this without the help of Claude and o1-Pro and even then, it's just ugly.\n* On a single GPU on older gen GPUs (A10G, 3090 equivalent) running a single smallish model I did extensive testing and found w/ the Marlin kernels that vLLM was slightly faster on throughput, but SGLang had a much better P99 TTFT - Doing tests w/ FP16, FP8, and a bunch of quant formats I found W8A8 to be optimal for my use case btw (best scaling for concurrency, lowest TTFT and decent throughput all at \\*better\\* than FP16 downstream perf due to an optimized calibration set). I feel like at the end of the day, any shootoff will be \"it depends\" rather than a A or B is better.\n* Last year I was doing a lot of perf comparison/tunings w/ vLLM: [https://shisa.ai/posts/tuning-vllm-mi300x/](https://shisa.ai/posts/tuning-vllm-mi300x/) \\- I found that changing configurations could often result in 2-3X differences in perf numbers and I felt like I was largely still just scratching the surface. For anyone doing production deployments, I'd highly recommend that people deep dive into the various writeups and tuning guides available. Especially for vLLM I feel like there is a *lot* of juice to squeeze there on perf.",
+            "score": 78,
+            "depth": 0,
+            "timestamp": "2025-03-25 11:54:19",
+            "replies": [
+                {
+                    "author": "__JockY__",
+                    "body": "Top dollar post.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2025-03-25 13:44:40",
+                    "replies": []
+                },
+                {
+                    "author": "never-yield",
+                    "body": "Very well written!!!",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-03-28 21:03:24",
+                    "replies": []
+                },
+                {
+                    "author": "Shivacious",
+                    "body": "Hey can you test it on 8 x mi325x if provided?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-04-20 04:30:07",
+                    "replies": [
+                        {
+                            "author": "randomfoo2",
+                            "body": "I have my infra bucket pretty full atm and not really in the mood to wrestle more hardware anytime soon - I also think any tests is going to be pretty specific to the specific models and type of parallelism you're going to test. Assuming you have the software (or are using the dockers) setup it's really just a matter of running a concurrency sweep with sglang.bench\\_serving, though so not too bad to do yourself for whatever you're interested in.\n\nHere are some repos w/ scripts you can poke at if you want:\n\n* [https://github.com/AUGMXNT/speed-benchmarking](https://github.com/AUGMXNT/speed-benchmarking)\n* [https://github.com/AUGMXNT/MI300-testing](https://github.com/AUGMXNT/MI300-testing)\n\nHere's the graph output I use to visualize (should be somewhere in the repos but otherwise ChatGPT should let you replicate similar output pretty easily): \n\nhttps://preview.redd.it/zz4gk35pdyve1.png?width=4041&format=png&auto=webp&s=5c2930a6c98837ae2be96d7a7844c9cbe9d83a99",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-04-20 04:53:48",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "ortegaalfredo",
+            "body": "SGlang supports very cool features like Data parellism (basically two copies of the LLM in memory) and LLM routing. VLLM only supports pipeline-parallelism and in my experience it don't have the same performance as DP. BTW both support tensor-parallel, when multi-GPUs acts as a single faster GPU.\n\nBut SGLang implementation of quantized cache was very buggy, it appears to be fixed in the latest version, and also it totally lacks support of speculative decoding, unlike VLLM.\n\nStill think it's the fastest engine out there for multi-gpu inference.",
+            "score": 17,
+            "depth": 0,
+            "timestamp": "2025-03-25 11:01:58",
+            "replies": [
+                {
+                    "author": "lilunxm12",
+                    "body": "That sounds like just start x services on x cards and add a nginx before them, or does Data parellism offer any other magic?",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2025-03-25 19:37:42",
+                    "replies": []
+                },
+                {
+                    "author": "External_Natural9590",
+                    "body": "how expensive is the Data paralellism? 2x the VRAM or?",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-03-25 13:08:38",
+                    "replies": [
+                        {
+                            "author": "ortegaalfredo",
+                            "body": "It's 2X the VRAM, but also exactly 2X the performance, something that tensor-parallel or pipeline-parallel do not guarantee.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-03-25 13:58:45",
+                            "replies": [
+                                {
+                                    "author": "_qeternity_",
+                                    "body": "You can\u2019t just say 2x the performance. It isn\u2019t. It\u2019s 2x the throughout, which is one dimension of performance.",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-25 21:35:17",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "celsowm",
+                    "body": "What is LLM routing?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-03-25 17:32:47",
+                    "replies": [
+                        {
+                            "author": "ortegaalfredo",
+                            "body": "Sglang acts as a load-balancer for other openAI-style-api endpoints.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-03-25 18:40:47",
+                            "replies": [
+                                {
+                                    "author": "celsowm",
+                                    "body": "Could be multiple sglangs servers too with the same model and router handling the multiple concurrent requests?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-25 18:42:26",
+                                    "replies": [
+                                        {
+                                            "author": "ortegaalfredo",
+                                            "body": "Yes I use it that way. Works very well, also has cache-aware load balancing.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-03-25 18:46:42",
+                                            "replies": [
+                                                {
+                                                    "author": "celsowm",
+                                                    "body": "Thanks for all the explanations and its good to know because my company gonna buy a server with 8xh100 so I think balacing some llama 70b or similar gonna be good",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-03-25 18:52:17",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Potential_Duty_6095",
+            "body": "Create a Blog would gladly share it on other social media.  BTW LinkedIn published this paper: https://arxiv.org/abs/2502.14305 they also run SGLang in production, their reason is somewhat different but as the LLM serving race heats up, SGLang seems to be in lead, and yes it is part of Pytorch foundation now.",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2025-03-25 11:21:25",
+            "replies": []
+        },
+        {
+            "author": "Cannavor",
+            "body": "I really don't understand the point of people comparing tensor parallelism and data parallelism. It's not an apples to apples comparison because you need to be able to fit the entire model on a single GPU to do data parallelism, which completely defeats the only purpose of doing tensor parallelism in the first place. So yeah, if you don't need to do tensor parallelism, data paralellism is faster. This is the same as saying fitting your model on one gpu is faster than splitting it onto two. It's obvious and not really helpful.",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2025-03-25 18:28:14",
+            "replies": []
+        },
+        {
+            "author": "A_Wanna_Be",
+            "body": "Does it make a difference for a single request performance?",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2025-03-25 12:56:08",
+            "replies": []
+        },
+        {
+            "author": "bash99Ben",
+            "body": "Recently we have special use case that is a Input 6\\~12K / output 4K task, with stddev 3K/2K, and we encounter vllm 0.7.3 problem, it has a performance drop after 8k context, from 28 tokens/s to 17 t/s.\n\nI switch to sglang lastest version(0.4.4), we run it two old box, both have 2080ti 11G \\* 4, so both vllm and sglang use -tp 4, with model qwen-coder-32b-4bit-gptqmodel-vertorx-v1.\n\nsglang's init performance is above vllm, 40 tokens/s, and just slow decrease to 36 t/s at the end, total tokens (input + output) = 14k.\n\nSo we switch to it as overall time is important for us in this case, and we don't notify major model ability difference.",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2025-03-28 04:20:54",
+            "replies": []
+        },
+        {
+            "author": "AppearanceHeavy6724",
+            "body": "type of gpus? 3060?3090?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-25 10:56:01",
+            "replies": [
+                {
+                    "author": "aospan",
+                    "body": "NVIDIA GeForce RTX 3060, 12GB VRAM",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2025-03-25 11:09:42",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "aadoop6",
+            "body": "Lora and vision support?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-25 14:48:42",
+            "replies": [
+                {
+                    "author": "aospan",
+                    "body": "Do you have specific models or engines in mind?",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-03-25 16:19:44",
+                    "replies": [
+                        {
+                            "author": "aadoop6",
+                            "body": "Does sglang have lora support for models like Qwen2.5? Also can it run Qwen 2.5 VL models?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-03-25 22:58:11",
+                            "replies": [
+                                {
+                                    "author": "aospan",
+                                    "body": "Yep, I\u2019ve created a separate doc on how to run Qwen2.5-VL in vLLM and SGLang in an automated way using the Sbnb Linux distro and Ansible:  \n\ud83d\udc49 [https://github.com/sbnb-io/sbnb/blob/main/README-QWEN2.5-VL.md](https://github.com/sbnb-io/sbnb/blob/main/README-QWEN2.5-VL.md)\n\nHappy experimenting! Feel free to reach out if you have questions or suggestions for improvement!",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-28 14:49:02",
+                                    "replies": [
+                                        {
+                                            "author": "aadoop6",
+                                            "body": "Great. Will check it out. Thanks!",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2025-03-28 14:52:48",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "celsowm",
+            "body": "Nice ! Would mind to compare concurrents prompts on stream mode? 3 or more if possible at the same time",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-25 17:31:10",
+            "replies": []
+        },
+        {
+            "author": "IntroductionAfter599",
+            "body": "I also did a benchmark myself, through my benchmark [https://github.com/qiulang/vllm-sglang-perf](https://github.com/qiulang/vllm-sglang-perf) I find sglang only uses 1/3 of GPU memory compared vllm and get a better result. I was hoping someone can help me understanding why sglang uses so little memory",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-04-26 23:29:36",
+            "replies": []
+        },
+        {
+            "author": "yehyakar",
+            "body": "to be fair it would be more convenient to compare both with dp=2,tp=1?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-07-03 19:23:31",
+            "replies": []
+        },
+        {
+            "author": "tkpred",
+            "body": "From what I understand, vLLM doesn't support data parallelism. Also, it is incorrect to compare DP and TP, as they are entirely different concepts. In DP=2, we load two copies of the model on two GPUs. In TP=2, we split a single model and distribute the parts across two GPUs (which adds communication overhead). If you want an approximately fair comparison, use the numbers from vLLM on a single GPU and then double them to compare with the numbers from SGLang (with DP=2).",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-06-25 03:23:40",
+            "replies": []
+        },
+        {
+            "author": "humanoid64",
+            "body": "Do we know what's better on Blackwell?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-07-02 20:28:34",
+            "replies": []
+        },
+        {
+            "author": "ausar_huy",
+            "body": "I'm new to LLM serving. Which framework should I start with? I plan to serve models ranging from 7B to 40B. It's hard to find discussions or resources related to SGLang compared to vLLM. However, it seems like SGLang is outperforming vLLM, right?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-07-12 12:11:43",
+            "replies": []
+        }
+    ]
+}

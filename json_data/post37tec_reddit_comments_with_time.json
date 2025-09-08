@@ -1,0 +1,203 @@
+{
+    "post_title": "Not clear which vector database to use for large scale update",
+    "post_timestamp": "2025-07-29 08:59:45",
+    "last_comment_timestamp": "2025-08-14 16:58:18",
+    "time_difference": "16 days, 7:58:33",
+    "comments": [
+        {
+            "author": "BubbaThing",
+            "body": "You are going to get a lot of biased answers from people working at their respective DB companies. Nearly all the solutions for the bigger projects (projects that offer some form of distributed compute and usually a paid service) are doing the exact same thing under the hood and relying on the same algorithm/algorithm combos to do the index building and searching. I would just pick a solution that has an api that clicks with you.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-07-29 15:48:51",
+            "replies": []
+        },
+        {
+            "author": "binarymax",
+            "body": "For this I would recommend using OpenSearch with FAISS and IVFPQ (Product Quantization) as the algorithm.  PQ works with codebooks and compresses the index, and there is no graph that is changing as you update individual documents/vectors - it's a flat index with ANN lookups based on clustering.\n\nThe downsides of PQ:\n\n * With PQ you will lose some recall (3%-5%), which you can mitigate with a two-pass rerank with oversampling and full precision calculation.\n * The codebooks need to be calculated offline, so you need to do a calculation up-front before loading all your documents/vectors, and as content drifts you should recalculate at some frequency (every month or so is common)\n\nThe upsides are very good:\n\n * Updates without any issue, and OpenSearch/FAISS will handle this very well.\n * You actually compress the index, and it requires about 1/10th RAM.\n * It's very fast, and even with oversampling and rerank you'll hit latency targets easily",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-07-29 10:01:06",
+            "replies": [
+                {
+                    "author": "regentwells",
+                    "body": "Good answer. LanceDB is a vector database that offers IVF PQ by default.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-07-29 16:40:36",
+                    "replies": [
+                        {
+                            "author": "binarymax",
+                            "body": "That sounds really interesting, and I'm just learning about lancedb. Is IVFPQ the default algorithm used, or is it offered as a default? How do you handle vector-space/codebook drift as you add additional documents?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-07-30 10:24:09",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "redsky_xiaofan",
+                    "body": "TBH, I don't think can handle massive amount of write. And your search performance will suffer a lot when you have do cocurrent read and write",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2025-07-29 22:17:44",
+                    "replies": [
+                        {
+                            "author": "binarymax",
+                            "body": "You are wrong. I get 6k writes per second of complex documents (lots of metadata and vectors) against a small data node and this scales linearly as I add nodes.  This means I can index half a billion docs in 24 hrs on a single node.  I also get high reads (hundreds of full-hybrid qps) at the same time.  This is well within the parameters of 99% of use cases.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-07-30 10:07:41",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "CarpenterAnt91",
+            "body": "CockroachDB uses a Scann, SpFresh, Clustering approach that handles large updates a lot better from our testing, depending on the updates Lance will use an inverted index segment merging approach that will handle large updates pretty well too (https://www.microsoft.com/en-us/research/publication/spfresh-incremental-in-place-update-for-billion-scale-vector-search/)\n\nIt really depends on your data too, are your vectors highly clustered, are they evenly distributed in the vector space?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-07-29 15:09:03",
+            "replies": []
+        },
+        {
+            "author": "codingjaguar",
+            "body": "how much throughput of update is expected? In Milvus, first of all it doesn't update the index in place, whether it's HNSW or DiskANN, it puts the new updates in growing segments, seal it and builds index. and there is background job to compact smaller sealed segments into larger segments to optimize the index overtime. here explains how it works exactly: [https://milvus.io/blog/a-day-in-the-life-of-milvus-datum.md](https://milvus.io/blog/a-day-in-the-life-of-milvus-datum.md)\n\nthe handling of streaming new updates and growing segment has been largely optimized in milvus 2.6 which can handle throughput of **750 MB/s** ingestions with S3 as the backend: [https://milvus.io/blog/we-replaced-kafka-pulsar-with-a-woodpecker-for-milvus.md](https://milvus.io/blog/we-replaced-kafka-pulsar-with-a-woodpecker-for-milvus.md)\n\n|**System**|**Kafka**|**Pulsar**|**WP MinIO**|**WP Local**|**WP S3**|\n|:-|:-|:-|:-|:-|:-|\n|Throughput|129.96 MB/s|107 MB/s|71 MB/s|450 MB/s|**750 MB/s**|\n|Latency|58 ms|35 ms|184 ms|1.8 ms|**166 ms**|",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-07-30 00:36:00",
+            "replies": []
+        },
+        {
+            "author": "jeffreyhuber",
+            "body": "Chroma uses SPANN and SPFresh for this exact reason.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-07-30 15:09:34",
+            "replies": [
+                {
+                    "author": "jeffreyhuber",
+                    "body": "[https://www.youtube.com/watch?v=1QdwYWd3S1g](https://www.youtube.com/watch?v=1QdwYWd3S1g) more here",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-07-30 15:10:44",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "jah_reddit",
+            "body": "I did an unsponsored, unbiased comparison and wrote about it in a blog post: [Best open source vector databases](https://datasystemreviews.com/best-open-source-vector-databases.html).",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-08-01 17:33:57",
+            "replies": []
+        },
+        {
+            "author": "Extra_Package_6456",
+            "body": "I\u2019d recommend to try out early access of: https://linkedin.com/company/vectorsight-tech\nThey will analyze your performance data with each DB and recommend the best suited for your use-case.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-08-14 16:58:18",
+            "replies": []
+        },
+        {
+            "author": "redsky_xiaofan",
+            "body": "The way how Milvus handle update is very different from all competitors.\n\nWe didn't apply any ingestions directly to index.\n\nWe have a special growing segments which handled all writes. Historical data is immutable and delete only.\n\nThus you can ingestion really fast and handled garbage collection later.\n\nOf course you can update on HSNW, SPFresh and maybe other index, but it's usually slow and will lose accuracy after enough updates.  We decided to handle difficult part in a async mode.\n\nAnd the other reason milvus can support it is due to our micro service design, so we can easily scale compaction and index build without affect our online serving",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2025-07-29 22:16:45",
+            "replies": [
+                {
+                    "author": "HeyLookImInterneting",
+                    "body": "Typical vendor response. In another thread you say OpenSearch can\u2019t handle writes, but immutable write segments is exactly how OpenSearch/Lucene works - and what Milvus is doing was basically copied from Lucene, which is 25 years old.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-07-30 02:26:54",
+                    "replies": [
+                        {
+                            "author": "redsky_xiaofan",
+                            "body": "Actually, OpenSearch does not support remote index building \u2014 all indexing operations occur on the same node that handles both reads and writes. This has been a major blocker in our evaluation of OpenSearch.\n\nYou can check our benchmark at [https://zilliz.com/vdbbench-leaderboard?dataset=vectorSearch](https://zilliz.com/vdbbench-leaderboard?dataset=vectorSearch). In our streaming test, where we run search queries during ongoing writes, we observed a significant performance drop in OpenSearch. It also failed to keep up with compaction.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-08-01 05:31:24",
+                            "replies": []
+                        },
+                        {
+                            "author": "Shivacious",
+                            "body": "tbh a lot of engineering designs does not need to be out of the normal framework that is tested for far long , so changing it , while getting exposed to different tradeoff. i am sure we make those daily",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2025-07-31 15:35:12",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "PsychologicalTap1541",
+            "body": "mariadb latest version maybe?",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2025-07-29 10:12:53",
+            "replies": [
+                {
+                    "author": "binarymax",
+                    "body": "Why?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-07-29 10:22:06",
+                    "replies": [
+                        {
+                            "author": "PsychologicalTap1541",
+                            "body": "Optimized for read/write heavy tasks, and free",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-07-29 10:24:45",
+                            "replies": [
+                                {
+                                    "author": "binarymax",
+                                    "body": "But what ANN index does it use?  Also, all the databases are optimized for heavy read/write - the OP is asking about updates (replacing the vector of a document already indexed).  Does MariaDB offer anything special there?",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-07-29 10:28:12",
+                                    "replies": [
+                                        {
+                                            "author": "PsychologicalTap1541",
+                                            "body": "HNSW. One of the index enabled tables in several of the databases i own have 8+ million records. I use replace to update records.  Never faced any performance issue to date.\n\n  \n\\+----------+\n\n| count(\\*) |\n\n\\+----------+\n\n|  8362758 |\n\n\\+----------+\n\n1 row in set (2.160 sec)",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-07-29 10:29:50",
+                                            "replies": [
+                                                {
+                                                    "author": "binarymax",
+                                                    "body": "So then, not MariaDB, as the OP specifically said they were looking for an alternative to that algo.\n\nEDIT: you edited your reply, so replying to your edit :).  Is 2 seconds considered performant? Most look for sub 150ms latency for a query.  Also, are you updating the row data or the vector itself and are you tracking recall? You will likely lose recall over time as you update the vector if you don't rebuild the index.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-07-29 10:32:57",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "ZestyData",
+            "body": "Weaviate offers a flat index (non HNSW). Haven't used it though.\n\nI think HNSW is so prevalent because it is so performant. your use case is clearly very rare, are your updates truly that much more frequent than your searches that you'd lose a significant overhead re-indexing?\n\nCould you not add elements without re-indexing and accept your already-approximate nearest neighbours is already approximate, now it'll be marginally more approximate for new elements until you reindex hourly, etc?",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2025-07-29 13:07:00",
+            "replies": []
+        }
+    ]
+}

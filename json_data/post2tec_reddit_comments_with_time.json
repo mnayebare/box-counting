@@ -1,0 +1,161 @@
+{
+    "post_title": "[D] retrieval-augmented generation vs Long-context LLM, are we sure the latter will substitute the first?",
+    "post_timestamp": "2024-09-06 06:29:12",
+    "last_comment_timestamp": "2025-03-30 11:36:19",
+    "time_difference": "205 days, 5:07:07",
+    "comments": [
+        {
+            "author": "Seankala",
+            "body": "> If we can put everything in the prompt, we don't have to do retrieval.\n\nI'm on the side that until we can find a working solution for hallucinations (which may be never) that this is a hot take.\n\nMost of the benchmarks that current LLMs are being evaluated on are sandbox settings. This isn't unique to LLMs or machine learning but it's definitely a problem that's overlooked. I'm not sure if we can conclude that long-context LLMs can replace RAG systems despite the literature being published.",
+            "score": 14,
+            "depth": 0,
+            "timestamp": "2024-09-06 06:50:03",
+            "replies": [
+                {
+                    "author": "NoIdeaAbaout",
+                    "body": "I utterly agree. Hallucinations are a big problem and have often been treated as a monolith (while they are different categories and of different origins). \n\nThe benchmarks we have were not designed for long contest, but I think in general in NLP we need new benchmarks",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-09-06 08:22:54",
+                    "replies": []
+                },
+                {
+                    "author": "Deleted",
+                    "body": "Literature support never, there's a paper that shows (proves) it using a formal model. It's aligned with intuition to be honest.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-09-06 20:09:49",
+                    "replies": []
+                },
+                {
+                    "author": "yashdes",
+                    "body": "Strawberry/q star or whatever you wanna call it hopefully is a working solution for hallucinations, at least imo based on how it's been explained to me",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-09-06 21:02:48",
+                    "replies": [
+                        {
+                            "author": "Immediate-Cricket-64",
+                            "body": "Idk man, seems like a lot of hype to me, Imo I think if they had something interesting they'd at least tease it right?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-09-07 03:24:18",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "RhubarbSimilar1683",
+                    "body": "I believe hallucinations will never be fixed because, just like in humans, they are necessary for creativity.\u00a0",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-03-30 11:36:19",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "sosdandye02",
+            "body": "I think in the long run we won\u2019t be using either of these approaches for what people are currently trying to do with them. In my view both these ultra long context LLMs and RAG are both hacky ways of trying to dynamically teach an LLM new things.\n\nI believe that in the long run someone will come up with a better way of dynamically encoding and retrieving memories in an LLM. The memories will not be stored in plaintext like with rag, but will instead be highly compressed embeddings of some sort, or maybe even small sub-networks.",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2024-09-06 13:21:02",
+            "replies": [
+                {
+                    "author": "arg_max",
+                    "body": "I don't doubt that you can come up with something smarter than what we already have, but to store more information without forgetting something you learned previously, we need to either increase the compression ratio, which becomes infeasible at some point or increase the \"storage\" space. In a way, longer context follows the second route, but you end up with quadratic growth (at least with standard attention) and it becomes harder to find what you're looking for in all that data. I think we'd definitely need something with at most log-linear increase in compute and memory, but filtering out relevant data from an increasing amount of total data while also scaling better than attention seems challenging.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2024-09-06 17:02:37",
+                    "replies": [
+                        {
+                            "author": "sosdandye02",
+                            "body": "The thing about both longer context and rag is that they both need to store the original text uncompressed. With longer context there is also the quadratic scaling problem you mention, and with ordinary RAG the retrieval mechanism isn\u2019t dynamically tuned.\n\nSomehow the human brain is capable of storing new memories dynamically and also holding onto these memories indefinitely. There is obviously some kind of compression going on along with a system for determining when memories should be created and retrieved.\n\nWith LLMs I could see it going a couple of different ways. Maybe like a more dynamic form of MoE where new experts can be dynamically created without impacting existing experts. It could also be more like RAG, but instead of storing the raw text, the model learns to store and retrieve some kind of compressed embedding. There could also be some system for \u201cforgetting\u201d stale information that seems to be of low value.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-09-06 22:09:37",
+                            "replies": [
+                                {
+                                    "author": "Entire_Ad_6447",
+                                    "body": "but that's not true at all about the human mind.  Its is constantly killing unused memory and rewriting and linking memories and hallucinating freely. Its why human recollection of events is one of the least reliable bits of evidence.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-09-07 11:28:25",
+                                    "replies": [
+                                        {
+                                            "author": "sosdandye02",
+                                            "body": "Human memory is unreliable but nevertheless extremely useful for practical purposes. In the vast majority of cases people don\u2019t need to remember every little tiny detail. We filter massive amounts of information and only hold on to the stuff that\u2019s usually most important.\n\nObviously this is bad for things like court cases where tiny, seemingly insignificant details matter a lot. But if I\u2019m trying to learn a new skill for a job, the stitching pattern on the instructor\u2019s shoes is not something I need to retain.\n\nWith computers we can have both kinds of memory. We can keep RAG for cases where exact details are important, but when dealing with huge amounts of information some kind of compression is necessary.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-09-07 16:55:23",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "jan04pl",
+                    "body": "You just invented fine-tuning which has its drawbacks as well, mainly it's relatively compute intensive.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-09-06 14:14:12",
+                    "replies": [
+                        {
+                            "author": "sosdandye02",
+                            "body": "No, it\u2019s not fine tuning, at least not in the form that we currently have it. Fine tuning is not effective at adding new memories to an LLM, and in many cases seems to \u201coverwrite\u201d or \u201csuppress\u201d information learned during pre training. Fine tuning is only really effective for guiding the model, e.g. to follow chat prompts.\n\nThere needs to be new techniques that can reliably and efficiently add new information to a model without overwriting any previously learned information. RAG and long contexts are just hacks imo.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-09-06 15:10:48",
+                            "replies": [
+                                {
+                                    "author": "currentscurrents",
+                                    "body": "This is continual learning, and there's a bunch of research into it especially for RL where iid data is not possible.\n\nSurvey of the field: https://arxiv.org/abs/2302.00487",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-09-06 17:10:29",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "NoIdeaAbaout",
+                    "body": "Continual learning could be a solution, but for the moment is a bit tricky. I have seen the KAN article about continual learning but it is still not convincing. Also there was a bit of hype of continual backpropagation. I have seen people coming with nice approach with memory augmented LLM, I think it is early to say it will work great",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-09-06 14:35:08",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "pilooch",
+            "body": "The near-future answer is probably a search policy involving actions for retrieval and analysis. Similar to how we do search information when we need it. The search policy can be learnt, and the retrieval/reading phases planned. Difficulty is in crafting the reward signal. So math and code, that can be more or less easily checked, are coming first. More should follow.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-09-07 04:49:52",
+            "replies": []
+        },
+        {
+            "author": "WrapKey69",
+            "body": "Maybe I don't understand something, but let's say you have thousands of documents or more, how are you going to solve this with longer context instead of RAG?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-09-07 10:04:56",
+            "replies": [
+                {
+                    "author": "NoIdeaAbaout",
+                    "body": "I utterly agree, this is one of the reasons I think long-context LLM would not eliminate RAG",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-09-07 16:42:32",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}

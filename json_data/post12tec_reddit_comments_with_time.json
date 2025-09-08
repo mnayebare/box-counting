@@ -1,0 +1,162 @@
+{
+    "post_title": "[D] Finetuning ModernBERT is taking 3hrs (2 epochs) and 35gigs of vram. is it normal?",
+    "post_timestamp": "2025-02-17 20:22:30",
+    "last_comment_timestamp": "2025-02-18 10:35:02",
+    "time_difference": "14:12:32",
+    "comments": [
+        {
+            "author": "prototypist",
+            "body": "Can you run \\`nvidia-smi\\` or similar command, or copy the exact error, to prove that the GPU is being filled and not a CPU / RAM issue?  \nSometimes when things are running slowly I see the model is only being loaded into the CPU. I don't see you mentioning using Transformers but sometimes a param like \\` device\\_map=\"auto\" \\` makes the difference.",
+            "score": 21,
+            "depth": 0,
+            "timestamp": "2025-02-17 21:38:24",
+            "replies": [
+                {
+                    "author": "Solaris1712",
+                    "body": "the 48gb vram is quickly filled almost immediately after I run the train() command on the HF trainer object.\n\ni can run the \"nvidia-smi\" tool during the initial 10 seconds and I see the vram quickly filling up. If I use any batch size above 4, it gives me a OOM error.",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2025-02-17 23:16:59",
+                    "replies": [
+                        {
+                            "author": "prototypist",
+                            "body": "I see in other parts that this is your first finetune and you're using the training code from the Transformers docs. That's super generalized and rarely updated with tips, etc.  \nI'd recommend trying out the inference code on the model's readme page first ( [https://huggingface.co/answerdotai/ModernBERT-base](https://huggingface.co/answerdotai/ModernBERT-base) ) to make sure that the basics are working, have flash attention installed, etc.  Once you're happy with the model and coding environment, try code examples from the GitHub repo, which use SentenceTransformerTrainer: [https://github.com/AnswerDotAI/ModernBERT/blob/main/examples/train\\_st.py](https://github.com/AnswerDotAI/ModernBERT/blob/main/examples/train_st.py)",
+                            "score": 11,
+                            "depth": 2,
+                            "timestamp": "2025-02-17 23:26:00",
+                            "replies": [
+                                {
+                                    "author": "Solaris1712",
+                                    "body": "THANK YOU!\n\nI did two things, i don't exactly know which one fixed my problem, but it did.\n\nI installed flash-attn and then I changed my evaluation compute function to a different one. I saw in another forum post that improperly written metric computations was causing a lot of memory leakage. \n\nthis fixed it!\n\nthe model is training much faster - the same two epochs were completed in about 8 mins. and the memory usage is still on the higher side - 13gigs but much better than using up 45 gigs almost instantly",
+                                    "score": 18,
+                                    "depth": 3,
+                                    "timestamp": "2025-02-18 00:17:07",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "illuminascent",
+            "body": "If you are doing FP32 training with 8192 sequence length, this much memory usage is completely normal since the activation memory grows linearly wrt seqlen and easily dominates anything else.  \nSome tricks to consider when using HF Trainer:  \n\\- use FP16 or BF16  \n\\- use gradient accumulation  \n\\- use gradient checkpointing if you really do want a big native batch size  \nAll of those are configurable via the TrainingArguments interface.  \nPlus, a 45MB file in the fine-tuning domain is nothing \\*small\\* :)",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2025-02-18 10:03:36",
+            "replies": [
+                {
+                    "author": "Solaris1712",
+                    "body": "I'm using bf16 for training but I see what you mean! All the online resources I found where about the base bert with 512 context length so this makes sense!\n\nI will try using gradient accumulation and checkpointing next.\n\nWith the fixes mentioned in a above comment - I can train 5 epochs in about 22 mins with a batch-size of 8 and that's taking up about 13gigs of vram",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-02-18 10:33:58",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "cajmorgans",
+            "body": "On another note, you can use larger batch-sizes by accumulating the gradients for multiple iterations, before calling \u201d.step()\u201d, effectively achieving equivalent results as long as the model doesn\u2019t use layers depending on the batch size",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2025-02-17 22:10:49",
+            "replies": [
+                {
+                    "author": "Solaris1712",
+                    "body": "hmm, I'm using the trainer class of the transformers library. I'm not sure how i can modify my code to do this. I should learn to write a custom pytorch loop for finetuning bert-like models maybe. \n\nThanks for the help!",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-02-17 23:18:26",
+                    "replies": [
+                        {
+                            "author": "atomicant89",
+                            "body": "You can pass gradient_accumulation_steps to TrainingArguments, you don't need to implement it in your own pytorch loop. But you may not need it at all now you've reduced the memory requirements anyway.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-02-18 03:48:56",
+                            "replies": []
+                        },
+                        {
+                            "author": "cajmorgans",
+                            "body": "Just load the model and weights using the library, then you can train it independently using PyTorch, it\u2019s pretty straightforward",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-02-17 23:21:19",
+                            "replies": [
+                                {
+                                    "author": "Solaris1712",
+                                    "body": "yeah i'll try that",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-02-17 23:25:00",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Infrared12",
+            "body": "ModernBERT base is a 149 million parameter model, there is absolutely no way it fills up that much memory,  i don't think training would even exceed ~3-4GBs of memory, the model is ~0.6GBs, the optimizer would add another 0.6 x 2 if you are using Adam/w, gradients another 0.6, all in fp32 (which you can even reduce more), with the activations and stuff, feels hard to exceed ~4GBs, let alone 35GBs.\n\nEdit: it has 8k seq len, it can have huge activations actually if you are filling up that sequence length adding a huge amount of GBs, might easily go beyond 10GBs so I retract my simplified assumptions",
+            "score": 13,
+            "depth": 0,
+            "timestamp": "2025-02-17 23:05:05",
+            "replies": [
+                {
+                    "author": "Deto",
+                    "body": "I thought for transformer models the memory is mostly taken up by intermediate matrices that need to be retained for the backdrop step - not the actual model weights.  This ends up being a bigger issue for transformers on sequences because the same model weights are reused for every element of the context window.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2025-02-18 00:04:24",
+                    "replies": [
+                        {
+                            "author": "Infrared12",
+                            "body": "Actually true, it could actually skyrocket the usage, specially that modernBERT  has an 8k seq length (not 500 like older BERTs)",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2025-02-18 02:54:49",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Solaris1712",
+                    "body": "Right?  \nThat's what was confusing me.   \nI'm using the transformers library (Trainer) and it fills up if I put the batch size more than 4.   \nI'm using the transformers documentation guide found here - (modified for modernBERT ofc)\n\n[https://huggingface.co/docs/transformers/training](https://huggingface.co/docs/transformers/training)\n\nI don't know where i'm going wrong. Gimme 5 mins, I can share a collab link for the notebook i'm using.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-02-17 23:13:08",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "asankhs",
+            "body": "You can try using adaptive classifier - [https://github.com/codelion/adaptive-classifier](https://github.com/codelion/adaptive-classifier) You can build the classifier over time instead of training on the full set and it supports dynamic class/label additions in future.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2025-02-18 04:09:57",
+            "replies": [
+                {
+                    "author": "Solaris1712",
+                    "body": "wait this is actually pretty cool! thanks for giving me this resource!",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-02-18 10:35:02",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deto",
+            "body": "I thought gradient accumulation is already equivalent to a larger batch size?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-02-18 10:30:38",
+            "replies": []
+        }
+    ]
+}

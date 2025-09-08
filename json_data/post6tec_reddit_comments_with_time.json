@@ -1,0 +1,291 @@
+{
+    "post_title": "[D] Why are Byte Pair Encoding tokenizers preferred over character level ones in LLMs?",
+    "post_timestamp": "2024-02-22 08:54:52",
+    "last_comment_timestamp": "2025-07-27 19:51:18",
+    "time_difference": "521 days, 10:56:26",
+    "comments": [
+        {
+            "author": "catzilla_06790",
+            "body": "I am by no means an expert on LLMs, just someone interested in learning about them. This video by Andrej Karpathy showed up on youtube a few days ago.\n\n[https://www.youtube.com/watch?v=zduSFxRajkE&t=1659s](https://www.youtube.com/watch?v=zduSFxRajkE&t=1659s)\n\nOne of the things he mentions is that the longer token sequence with byte level tokens consume more of the context window and that makes them less effective.",
+            "score": 49,
+            "depth": 0,
+            "timestamp": "2024-02-22 09:25:05",
+            "replies": [
+                {
+                    "author": "Initial-Image-1015",
+                    "body": "He mentions a couple of limitations @1:43:33: https://youtu.be/zduSFxRajkE?si=FbTEm6dBXePHXRWm&t=6212.\n\nSummary of the trade-offs:\n- Each token in the vocabulary adds a row in the embedding vector.\n- Each token in the vocabulary increases the number of dot products necessary to compute the output of the final linear layer.\n- Some tokens may be **undertrained** on (each individual token has fewer training examples).\n- If there are too few tokens in the vocabulary, there may be too much information squished into a single vector.\n\n\nAnd yes, OP, the too many tokens also unnecessarily fill a model's  context window.",
+                    "score": 36,
+                    "depth": 1,
+                    "timestamp": "2024-02-22 09:52:15",
+                    "replies": [
+                        {
+                            "author": "ClearlyCylindrical",
+                            "body": "If anyone wants to read into the third point here I suggest taking a look at the \" SolidGoldMagikarp\" phenomenon. Where in the data it was very common so it got its own token, but all instances of it were removed when training gpt2 and early versions of gpt3.",
+                            "score": 12,
+                            "depth": 2,
+                            "timestamp": "2024-02-22 10:07:48",
+                            "replies": [
+                                {
+                                    "author": "Smallpaul",
+                                    "body": ">SolidGoldMagikarp\n\nThat's [six tokens](https://platform.openai.com/tokenizer) though.\n\nAnd what data would it be in?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-02-22 10:22:41",
+                                    "replies": [
+                                        {
+                                            "author": "ClearlyCylindrical",
+                                            "body": "It used to be 1 token, thats the issue.\n\nIt was in a lot of reddit comments as theh participated in a sunreddit whose goal was to count as high as possible.\n\nEdit: you can tokenise on the legacy gpt3 using that site to see this, it has a space at the front so put in \" SolidGoldMagikarp\" without the quotation marks.",
+                                            "score": 12,
+                                            "depth": 4,
+                                            "timestamp": "2024-02-22 10:23:48",
+                                            "replies": [
+                                                {
+                                                    "author": "Smallpaul",
+                                                    "body": ">SolidGoldMagikarp\n\nYes, I do see that it's a single token in GPT-3.\n\nBut how would it have BECOME a single token.",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-02-22 10:34:59",
+                                                    "replies": [
+                                                        {
+                                                            "author": "ClearlyCylindrical",
+                                                            "body": "In the initial dataset they used to generate the token list, it was extremely common. In this counting subreddit every 1000 numbers or so there was a new post which displayed a leaderboard of sorts, and a user with the name SolidGoldMagikarp was a prolific user agent this sub and so his username was in a lot of posts.\n\nWhen they trained the model they removed this useless data and so there was now a token with almost no usage, if any at all --- but the token still existed.",
+                                                            "score": 10,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-02-22 10:37:39",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Smallpaul",
+                                                                    "body": "Thanks for explaining. I also found [this video](https://www.youtube.com/watch?v=WO2X3oZEJOA) about the phenomenon for anyone reading this.\n\nI hope that as we move into the realm of million-token models we can move away from tokenization altogether soon. I think a lot of weird corner cases will clean themselves up. And LLMs may be better at arithmetic than we currently think they are.",
+                                                                    "score": 2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2024-02-22 11:40:16",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "Pas7alavista",
+                                                                            "body": "I find it hard to imagine a representation for language that doesn't involve breaking up input text into discrete chunks first",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2024-02-22 17:31:56",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "Smallpaul",
+                                                                                    "body": "Why???\n\n[https://arxiv.org/abs/2305.07185](https://arxiv.org/abs/2305.07185)\n\n[https://arxiv.org/pdf/2401.13660.pdf](https://arxiv.org/pdf/2401.13660.pdf)",
+                                                                                    "score": 4,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2024-02-22 17:40:10",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "Pas7alavista",
+                                                                                            "body": "Megabyte segments byte sequences into patches, and the input to mamba is a discrete time sequence that gets converted to a continuous one using the ZOH discretization. I would describe both of these techniques as fundamentally breaking the input text into discrete chunks. Maybe my definition is too broad though",
+                                                                                            "score": 3,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2024-02-22 18:15:54",
+                                                                                            "replies": []
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "author": "Wild_Persian_Appears",
+                                                                                    "body": "Tokens are effectively just the numerical abstraction of phonemes, though. \n\nEvolution seems to have already agreed with the concept.",
+                                                                                    "score": 1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2024-02-23 08:39:32",
+                                                                                    "replies": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "mk22c4",
+            "body": "We need to go back in history a bit. Before language models, we used word2vec and similar models. They can produce vector representations for words in the training data, however fail to generalize for out-of-vocabulary words. The solution to this was learning vector representations for character ngrams in addition to word representations (e.g. fasttext). Character ngram vectors can be combined to produce word vectors for out-of-vocabulary words. Ngram-based vectors convey less meaning than word vectors, but they\u2019re still more efficient than vectors based on individual characters. BPE is a natural development of this idea.",
+            "score": 22,
+            "depth": 0,
+            "timestamp": "2024-02-22 12:11:36",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "Tokenizing is simply compression. It's done to speed up training and get more data into the context.\u00a0\n\n\nTokenizing has some negative effects that weren't appreciated until recently. Namely that the model doesn't learn how to spell words.\n\n\n\nThe best example is how image generation models trained with tokenized encoders can't spell properly. That's the reason text in AI art is\u00a0garbled. Image models with byte encoders can spell fine",
+            "score": 17,
+            "depth": 0,
+            "timestamp": "2024-02-22 13:02:20",
+            "replies": [
+                {
+                    "author": "putinwhat",
+                    "body": "This was actually the path that led me to this question. I was wondering why LLMs like GPT use tokenizers when in theory a model should be able to learn spelling given just the characters that make up the word. I don\u2019t know a lot about non-Latin based languages but is the compression necessary for these modes to learn or is it because the vocabulary would be too large using something like Unicode?",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2024-02-22 14:28:24",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "It's simply for speed/memory savings. Nothing stopping transformers from working on pure Unicode character bytes.\u00a0\u00a0\u00a0\n\n\nTokenizers are usually a modified version of Huffman encoding (prefix compression).\u00a0\n\n\nSome newer models do use byte pair encoding",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-02-22 14:37:46",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "cdsmith",
+            "body": "Rereading your question, I think you *might* be fundamentally misunderstanding what BPE means.  It does *not* mean that each token is two characters long.  What it means is that you choose longer tokens by looking at a corpus of text and deciding with two-token sequences occur most often when tokenizing that text, and then replace those two-token sequences with a single token, and repeat until you have the desired vocabulary size.  Notably:\n\n1. You don't discard the single tokens.  Indeed, the single-character tokens you start with must still exist, because otherwise you couldn't represent input with single letters by themselves.\n2. You don't stop at two characters.  Despite the name, \"byte-pair encoding\" absolutely continues to combine two-token sequences even after those tokens represent input text much longer than a single character, so a token can represent a variable number of characters, not just two.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2024-02-22 23:27:04",
+            "replies": [
+                {
+                    "author": "putinwhat",
+                    "body": "Sorry I\u2019m coming back to this late but I\u2019m pretty sure I understand the fundamentals about how BPE works. As an example: \u201ctalking\u201d might be tokenized to \u201ctalk\u201d and \u201cing\u201d. Meanwhile, the word \u201ca\u201d would get its own token. I\u2019m curious why we don\u2019t feed some base vocabulary, like Unicode, and then let the model learn how to form words from those. For example, \u201ctalking\u201d would always be entered as \u201ct\u201d, \u201ca\u201d, \u201cl\u201d, \u201ck\u201d, \u201ci\u201d, \u201cn\u201d, \u201cg\u201d.\n\nOn the one hand I imagine this would take quite a bit more compute and limit the context window, but on the other hand unknown tokens would be very rare and I imagine the model would be much better at things like spelling, dealing with misspelled words, logographic languages, etc. Is it mostly a matter of compute? I know there are character-aware encoders that exist so I\u2019m curious why a character vocabulary model isn\u2019t practical in an LLM.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-03-14 14:43:36",
+                    "replies": []
+                },
+                {
+                    "author": "nanoGAI",
+                    "body": "I like your explanation. It seems that the level of text (i.e. 2nd grade vs University, or professional journalism)  would have different sets of word combinations for the same thing maybe. Not saying that's bad, just would add more to the corpus. Also it seems that the tokenization is actually learning stuff like, e.g. cat, cat in, cat on, can next to concepts before it feeds it to the LLM. And if it combines stuff like (cat in) box, (cat in) bed, (cat in) hat, then it might miss out on something it hasn't seen. I guess the larger the text corpus the more it will learn. Correct my understanding on this.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-02-28 03:14:19",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "cdsmith",
+            "body": "A good tokenizer defines tokens for sequences of characters that:\n\n1. Come up a lot, as they then produce more benefit.\n2. Have a relatively coherent and consistent meaning, or at least short list of possible meanings, since the meaning can then be captured in the embedding layer (input) instead of needing to be inferred as a partial result by several layers of the model.\n3. Includes all single characters, since in many cases there will be characters that are not part of a longer sequence that's assigned its own token.\n\nThe question is how you come up with such a set.  Byte pair encoding techniques are an approximation that mostly ignore the second condition, but satisfy the first and third by adding new tokens corresponding to the most frequently occurring sequences of two tokens, and building up from there, which is a decent starting point.  If you're more ambitious, you can prune this token set based on some proxy for the second criterion, as well, such as how well simple models do for each token on downstream tasks that involve understanding their meaning.\n\nThere is some evidence that better tokenization has a positive effect on model quality, but it's not a huge effect, and this gets more complex and subjective, so a simple process that performs decently has some value.\n\nAll of this is independent of the question of how coarse-grained tokens should be.  Of course no matter how you choose with longer tokens to build (BPE or something more complex), you can still stop the process at different points to choose different trade-offs between vocabulary size and sequence length.  So that balance isn't relevant to whether you use BPE or something else.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-02-22 23:22:33",
+            "replies": []
+        },
+        {
+            "author": "Motylde",
+            "body": "Because not everyone speaks english. Thare are many languages with it's own, sometimes huge alphabets like chinese, thai etc. Also you may want your model to be able to output emojis and different utf-8 symbols. Also if there is any new symbol that model (tokenizer) didn't saw in the training, you want to be able to process it and not just crash. BPE is superior for all those usecases.",
+            "score": 10,
+            "depth": 0,
+            "timestamp": "2024-02-22 11:17:02",
+            "replies": [
+                {
+                    "author": "krallistic",
+                    "body": "While non-Latin-based is undoubtedly an advantage, it is by no means the original motivation but more a side-effect.\n\nNLP has a longstanding tradition of ignoring other languages than English or other alphabets :P",
+                    "score": 9,
+                    "depth": 1,
+                    "timestamp": "2024-02-22 11:43:56",
+                    "replies": []
+                },
+                {
+                    "author": "putinwhat",
+                    "body": "Theoretically if we used a large enough dictionary, say for example all Unicode characters, wouldn\u2019t that be more advantageous to the model because it would be able to account for more combinations? \n\nAre LLMs just not at a scale where they can learn from dictionaries that large? Is the compression required in order for the model to actually learn from the data?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-02-22 14:23:40",
+                    "replies": []
+                },
+                {
+                    "author": "Glum-Mortgage-5860",
+                    "body": "This is the only comment on this thread that is even remotely close to being right",
+                    "score": -7,
+                    "depth": 1,
+                    "timestamp": "2024-02-22 11:34:32",
+                    "replies": [
+                        {
+                            "author": "new_name_who_dis_",
+                            "body": "It's actually pretty far off the mark. Character level encodings would be less biased towards English (or any few dominant languages) than BytePair encodings which have tokens for full English/French/Spanish words but don't have that for rare languages e.g. Albanian, Finnish, etc.\n\nBut to answer OP's question, with character level encodings the precious context window of LLMs that grows quadratically in terms of compute, would be 2x-4x its current size with BPE. A sentence like \"This cat in that hat\" would be 9 tokens in BPE but 20 with character level.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-02-22 14:25:41",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "bigcoldflyer",
+            "body": "Meta just released a paper that goes back to basics to use a local encoder for byte level input.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-12-17 12:09:45",
+            "replies": [
+                {
+                    "author": "putinwhat",
+                    "body": "Mind linking it?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-12-18 23:14:03",
+                    "replies": [
+                        {
+                            "author": "TimmyKTY",
+                            "body": "I believe it's this one. [https://arxiv.org/abs/2412.09871](https://arxiv.org/abs/2412.09871)",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-01-04 03:03:52",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Party_Cabinet7466",
+            "body": "Character level encoding reduces the vocabulary size example utf-8(256) but this would mean we have more number of tokens for the same string. Example: \"Hello World\" In this case we will have 11 tokens(utf-8)  instead of 2 tokens(\"Hello\", \" World\"). The LLM has a finite fixed context window that it uses to generate new tokens(outputs). By using character level encoding we will be looking at less number of language  words in a context where with byte-pair we can accommodate more language words in the same context window. \n\nThis is more evident when we have the input which follows some structure like indentation in python. For a context window X we will have many spaces in the input sequence if we follow character level encoding and hence the LLM would only be able to generate tokens by looking at small sections/lines of code and may produce bad results.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-09 08:29:42",
+            "replies": []
+        },
+        {
+            "author": "squareOfTwo",
+            "body": "most answers here are not correct.\n\nIt's most likely done so in practice because the compute scales quadratically with context length in vanilla attention layers. Meaning 2x context takes 4x compute to train to the same loss/compression/capability.\n\nNot even the \"big players\" can afford to do so.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-02-22 20:43:16",
+            "replies": [
+                {
+                    "author": "Snoo_9504",
+                    "body": "Ironically your answer also isn't correct.\n\n2x context takes far less than 4x compute, the vast majority of FLOPS comes from the MLP: https://twitter.com/BlancheMinerva/status/1760020927188697160.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2024-02-23 12:14:21",
+                    "replies": [
+                        {
+                            "author": "Informal-Lime6396",
+                            "body": "That tweet doesn't say much in way of explanation. Scaled dot product attention contains matrix multiplication between the query and key, and both of them have a dimension sized at the sequence (context) length. For multihead attention query and key are the same, then wouldn't a 2x increase in sequence (context) length lead to a 4x (n\u00b2) increase in compute time? If not, would it be so for just that operation alone?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-07-27 19:51:18",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Shakalaka_Pro",
+            "body": "Takes too long to generate / decode in practice?\u00a0",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-10-16 16:46:16",
+            "replies": []
+        }
+    ]
+}

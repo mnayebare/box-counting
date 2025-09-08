@@ -1,0 +1,169 @@
+{
+    "post_title": "Comparing Linear Rope Scaling vs NTK Scaling for 8K Superhot and Hermes-LLongMA-2 8K Models",
+    "post_timestamp": "2023-08-05 07:12:16",
+    "last_comment_timestamp": "2023-08-15 06:32:34",
+    "time_difference": "9 days, 23:20:18",
+    "comments": [
+        {
+            "author": "Sabin_Stargem",
+            "body": "KoboldCPP had a commit yesterday, where 16k context support was added.  I am looking forward to using Airoboros 33b 16k after the new Kobold releases.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-08-05 11:33:05",
+            "replies": []
+        },
+        {
+            "author": "mll59",
+            "body": "Thank you. I should have mentioned that, in my experience, the number behaviour using NTK with the superhot 8K variant of the (llama-1 based) models, like  chronos-hermes-13b-superhot-8k.ggmlv3.q4\\_0.bin is much better with than with the untuned equivalent chronos-hermes-13b.ggmlv3.q4\\_0.bin.  \nWith the untuned models with NTK, I also often see problems in the numbers that it gives me.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-08-05 08:45:34",
+            "replies": []
+        },
+        {
+            "author": "seanthenry",
+            "body": "Have you tried playing with any of the 32K models? \n\nhttps://www.reddit.com/r/LocalLLaMA/comments/15ce6sq/llama27b32k_by_togethercomputer/",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-08-05 09:32:57",
+            "replies": [
+                {
+                    "author": "mll59",
+                    "body": "No, I haven't seen quantized ggml files for that model yet that I can use with koboldcpp.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-08-05 10:53:32",
+                    "replies": [
+                        {
+                            "author": "seanthenry",
+                            "body": "https://huggingface.co/models?search=llama-2-7b-32k\n\nHere you go one is the version mentioned and there is an orca version also both in ggml.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-08-05 12:44:22",
+                            "replies": [
+                                {
+                                    "author": "mll59",
+                                    "body": "Thank you. I have tried both models several times and I don't see any obvious problems with numbers in the 8000 tokens produced using ropeconfig 0.125 10000 (linear).  \nI didn't try NTK scaling since I'm not sure which frequency base value is appropriate for 8x NTK scaling.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2023-08-05 15:23:31",
+                                    "replies": [
+                                        {
+                                            "author": "Sabin_Stargem",
+                                            "body": "I definitely would like someone to explain the formula for NTK scaling.  I can't wrap my head around why 10,000 is x1, 32,000 is x2 and x4 is 82,000.   I am horrible at math, and simply don't understand what I am looking at here.",
+                                            "score": 6,
+                                            "depth": 4,
+                                            "timestamp": "2023-08-05 15:40:56",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "mll59",
+            "body": "Upon closer inspection of the results for the 16K model vicuna-13b-v1.5-16k.ggmlv3.q4\\_K\\_S.bin, NTK scaling does produce problems with numbers for this model, but still no problems seen with linear rope scaling.  \nSo this model behaves as one would expect.\n\nKoboldcpp v1.39.1 now supports 16K context buffer so I tested this model again, now with 16K context, generating 16000 tokens with linear rope scaling and I didn't see any issues with numbers or generated text.\n\nOnly, instead of 8 minutes for the entire test, it now took about 90 minutes, near the end slowing down to about 2 token/s...",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-08-07 14:41:30",
+            "replies": []
+        },
+        {
+            "author": "a_beautiful_rhind",
+            "body": "I just use untuned models with NTK alpha. Works fine for me.",
+            "score": -2,
+            "depth": 0,
+            "timestamp": "2023-08-05 07:24:11",
+            "replies": []
+        },
+        {
+            "author": "CasimirsBlake",
+            "body": "Interesting findings.\n\nTheBloke has a GPTQ model of this:\nhttps://huggingface.co/TheBloke/Hermes-LLongMA-2-13B-8K-GPTQ\n\nLooks like it's very new. Maybe finally there is a potential llama 2 replacement for Chronos Hermes, with 8k. Let's see if it holds up for RP...",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-08-05 08:38:33",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "[removed]",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-08-05 08:52:49",
+                    "replies": [
+                        {
+                            "author": "CasimirsBlake",
+                            "body": "This will hopefully mean meaningful 8k rather than the effective 6k of Superhot, and better overall responses, verbosity etc. Exciting stuff!",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2023-08-05 09:12:00",
+                            "replies": []
+                        },
+                        {
+                            "author": "CasimirsBlake",
+                            "body": "I think I'll wait for that, I've just tried this and it doesn't work as well for RP. It sometimes answers, but gets parenthesis mixed up, but usually it gives story description rather than acting as the character.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-08-05 13:36:06",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "WolframRavenwolf",
+            "body": "This is very interesting stuff. Didn't know you could use NTK instead of linear scaling with these models.\n\nSo far I only used the \"official\" way for e. g. Hermes-LLongMA-2-13B-8K. And no matter which >4K model I tried, for LLaMA (1) or Llama 2, they all fell short of what I was used to with the base models.\n\nI'll definitely try NTK scaling now, to see if that improves the quality of the text, not just numbers. Could you explain how the NTK scale value is determined?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-08-05 17:41:12",
+            "replies": [
+                {
+                    "author": "mll59",
+                    "body": "Thank you, I'm curious at your impression. I took the NTK frequency base values from the koboldcpp FAQ, I don't know how they were determined.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-08-05 18:11:18",
+                    "replies": [
+                        {
+                            "author": "WolframRavenwolf",
+                            "body": "Ah, thanks for the info. I read the [FAQ](https://github.com/LostRuins/koboldcpp/wiki/), but completely ignored the NTK part, assuming only the linear scaling was required/supported by the models I used.\n\nI'll do a comparison between Hermes-LLongMA-2-13B-8K with either scaling method. The 4K Nous-Hermes-Llama2 is my current favorite Llama 2 model, but the 8K just didn't work as well for me, so hopefully NTK-Aware Scaling can bring it on par with the orignal.\n\nThanks for all the tips. I'll report back with my impression once I've tested this thoroughly.\n\n**Update:**\n\nTried both the normal Linear Scaling `--contextsize 8192 --ropeconfig 0.5 10000` and this experimental NTK-Aware Scaling `--contextsize 8192 --ropeconfig 1.0 32000` with deterministic settings to compare them with each other, using the same prompts, with Hermes-LLongMA-2-13B-8K.\n\nNeither convinced me to keep using this model, though: With Linear Scaling, the conversation was good and normal, until after a good dozen messages when the [Llama 2 repetition bug](https://www.reddit.com/r/LocalLLaMA/comments/155vy0k/llama_2_too_repetitive/) hit hard and completely ruined the chat. With NTK-Aware Scaling, it started confused right from the first message, where it mixed an asterisk action and speech in parenthesis with just regular textual chat speech, and it was lacking detail, completing detailed activities in a single, short message.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-08-05 18:29:04",
+                            "replies": [
+                                {
+                                    "author": "mll59",
+                                    "body": "Thanks for your effort. I've tested vicuna-v1.5-13B-16k today with 16K context on koboldcpp v1.39.1 today generating 16000 tokens with linear rope and I saw no obvious problems, it just became very slow near the end. NTK did cause problems. So I'll stick to linear rope as well.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-08-07 18:28:48",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "Sabin_Stargem",
+                                    "body": "I have the impression that NTK scaling can change the output of a model.  Notably, on some scalings the output is more of a novelization feel, while on others the focus is on character dialogue.\n\nIn effect, scaling might be handy for picking between \"chat\" and \"story\" focuses.\n\nHere is an output of a \"chat\" type.\n\nKoboldCPP Airoboros GGML v2.0m - L2-70b q6 - 8192 in koboldcpp x2 ROPE [1.0 + 82000] - Godlike preset, (2 TEMP) - Tokegen 2024 for 8182 Context setting in Lite.\n\n\n\n\"We ran,\" said Private James, his voice cracking as he spoke. \"We ran because we knew you wouldn't want us to stay.\" He paused, looking down at his hands. They shook slightly. \"You saved our lives, Commander. We won't forget that.\"\n\n\nCorporal Lisa nodded. Her eyes were red from crying. \"I wish there was more we could do...\"\n\n\nSpecialist Miller snorted. \"Yeah, well, it's not like we could've done anything anyway. The damn thing was huge! You did what you thought best.\"\n\n\nJames looked up sharply. \"It wasn't a matter of size! It was about strategy!\"\n\n\nMiller shrugged. \"Maybe so, but we still lost him.\"\n\n\nLisa sighed. \"He died a hero. That's all that matters now.\"\n\n\n---\n\"Hey, remember when we first met?\" asked Specialist John. His face was somber. \"The commander told me I was doing great work.\"\n\n\nPrivate Mark smiled sadly. \"And then he made fun of how you tripped over your own feet during training.\"\n\n\nJohn laughed quietly. \"Yeah. He always knew how to lighten the mood.\"\n\n\nMark grinned. \"True enough. And he always put others before himself.\"\n\n\n---\n\"I hate him,\" whispered Corporal Linda. She wiped her tears on her sleeve. \"He shouldn't have sacrificed himself.\"\n\n\nPrivate Henry looked at her in surprise. \"But he wanted to save us!\"\n\n\n\"I know,\" she replied. \"That's why I hate him. Why didn't he let us help? We could've fought together!\"\n\n\nHenry hesitated. \"Perhaps he knew we weren't strong enough.\"\n\n\nLinda glared at him. \"He should've given us the choice!\"\n\n\n---\n\"Well, he's dead now,\" said Sergeant Robert bluntly. \"Won't bring him back by crying.\"\n\n\nPrivate Davis frowned. \"What kind of person are you?\"\n\n\nRobert shrugged. \"Just being realistic. Besides, he was a fool. Didn't even try to run.\"\n\n\nDavis shook his head. \"You're wrong. He knew we couldn't win. He chose to sacrifice himself instead of letting us die.\"\n\n\nRobert scoffed. \"He was weak.\"\n\n\nDavis glared. \"No, he was brave.\"\n\n/GOOD - KoboldCPP Airoboros GGML v2.0m - L2-70b q6 - 8192 in koboldcpp x2 ROPE [1.0 + 82000] - Godlike preset (2 TEMP) - Tokegen 2024 for 8182 Context setting in Lite.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-08-05 18:43:41",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Nazi-Of-The-Grammar",
+            "body": "Can this be done with Oobabooga textgen webui?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-08-15 06:32:34",
+            "replies": []
+        }
+    ]
+}

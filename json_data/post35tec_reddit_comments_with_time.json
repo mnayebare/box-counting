@@ -1,0 +1,120 @@
+{
+    "post_title": "[R] Illustrating Reinforcement Learning from Human Feedback (RLHF)",
+    "post_timestamp": "2022-12-09 12:16:24",
+    "last_comment_timestamp": "2023-02-27 19:51:29",
+    "time_difference": "80 days, 7:35:05",
+    "comments": [
+        {
+            "author": "FerretDude",
+            "body": "Team lead at Carper happy to answer questions",
+            "score": 22,
+            "depth": 0,
+            "timestamp": "2022-12-09 13:50:00",
+            "replies": [
+                {
+                    "author": "bigblueboo",
+                    "body": "I\u2019ve been wondering, why/how is it better to train a reward model on human preferences and do RL then just doing supervised fine tuning on that human data? Is there an intuition, empirical finding, logistical reason?",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2022-12-10 06:58:52",
+                    "replies": [
+                        {
+                            "author": "wardellinthehouse",
+                            "body": ">bigblueboo\n\nDid you ever figure this one out?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-02-04 01:44:19",
+                            "replies": [
+                                {
+                                    "author": "clam004",
+                                    "body": "There is a nice figure addressing this point in the instructGPT paper actually. basically rlhf seems to be better than simply fine-tuning on examples of your desired behavior. I think probably because there is more than one way to do the task well and more than one way to do the task badly, which is not something built into fine-tuning. In pretraining and fine tuning, you are basically saying, this one way is the best way. There is a short spoken explanation in this youtube video [https://www.youtube.com/live/WnGFR-bSNWM?feature=share&t=7386](https://www.youtube.com/live/WnGFR-bSNWM?feature=share&t=7386)",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-02-27 19:51:29",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "ReginaldIII",
+                    "body": "This is a really nice write up, thank you. \n\nI'm interested what your thoughts are on prompt manipulation and \"reasoning\" your way around ChatGPT's ethical responses (and how those responses were even added during training). What direction do you see being best to combat these issues?\n\nAlso, have you looked at incorporating querying external sources for information by decomposing problems to reason about them? The quality of ChatGPT made me think of Binder https://lm-code-binder.github.io/ and how powerful a combination they could be. A benefit of Binder is the chain of reasoning is encoded in the intermediate steps and queries which can be debugged and audited. \n\nSomething ChatGPT lacks is that ability to properly explain itself. You can ask it to explain it's last output, but you can also ask it to lie to you and it does. \n\nIf you ask it to lie to you convincingly, who is to say it isn't? \n\nCan a conversationally trained LLM ever be used in a production application (as many are beginning to do) without a more rigorous rule based framework around it?",
+                    "score": 11,
+                    "depth": 1,
+                    "timestamp": "2022-12-09 16:46:03",
+                    "replies": []
+                },
+                {
+                    "author": "zaptrem",
+                    "body": "Are there any plans to reproduce WebGPT as part of the InstructGPT reproduction seeing as ChatGPT appears to already have or will be receiving such functionality soon?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2022-12-10 04:38:11",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "cfoster0",
+            "body": "About this bit\n\n> At the moment, TRLX has an API capable of production-ready RLHF at the scales required for LLM deployment (e.g. 33 billion parameters). Future versions of TRLX will allow for language models up to 200B parameters. As such, interfacing with TRLX is optimized for machine learning engineers with experience at this scale.\n\nHas TRLX been used to tune models in production already? Or if not, what did the blog post mean by \"capable of production-ready RLHF\"? I haven't seen any RLHF-ed models built on open source software yet, much less a 33B parameter one.\n\nEDIT: Also hi @FerretDude",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2022-12-09 21:01:44",
+            "replies": [
+                {
+                    "author": "FerretDude",
+                    "body": "It's already being used in production with a number of our partners. We have some chonky models coming out really soon. Expect things well into the tens of billions in the coming months.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2022-12-10 11:36:40",
+                    "replies": [
+                        {
+                            "author": "cfoster0",
+                            "body": "Who? Who's even using RLHF in production yet, besides OpenAI (and maybe Cohere)?",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2022-12-11 02:07:45",
+                            "replies": [
+                                {
+                                    "author": "FerretDude",
+                                    "body": "Not allowed to share, many groups are looking into using RLHF in production though",
+                                    "score": -1,
+                                    "depth": 3,
+                                    "timestamp": "2022-12-11 08:49:34",
+                                    "replies": [
+                                        {
+                                            "author": "cfoster0",
+                                            "body": "Did y'all stop doing work out in the open? That's a shame. End of an era, I guess.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2022-12-11 20:00:29",
+                                            "replies": [
+                                                {
+                                                    "author": "FerretDude",
+                                                    "body": "RLHF is a bit tricky because you have to either work with data vendors or groups that have access to feedback data. Eventually we'll rely more on crowd sourcing I think.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2022-12-12 16:17:34",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Operation_Ivy",
+            "body": "Nit: Elo is a name, not an acronym",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2022-12-09 22:36:28",
+            "replies": []
+        }
+    ]
+}

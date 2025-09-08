@@ -1,0 +1,74 @@
+{
+    "post_title": "[N] FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+    "post_timestamp": "2023-07-17 17:32:26",
+    "last_comment_timestamp": "2023-07-21 18:22:46",
+    "time_difference": "4 days, 0:50:20",
+    "comments": [
+        {
+            "author": "nogop1",
+            "body": "How is this done by one guy? Should optimizing attention not be the main focus of nvidia, pytorch, huggingface, pretty much everyone using transformer as their backbone etc be?\n\nI also think that this plus all the other methods of externalizing old embeddings into a nearest neighbor search or summarization should put to rest all non-scaled dot attention methods like hyena or rwkv.",
+            "score": 24,
+            "depth": 0,
+            "timestamp": "2023-07-17 20:16:00",
+            "replies": [
+                {
+                    "author": "visarga",
+                    "body": "> How is this done by one guy?\n\nmind blown, you are 100% right, whole departments working on this, and this guy runs alone ahead of the pack\n\nflash attention was the only attention matrix optimization that stuck, all the rest were disappointments",
+                    "score": 14,
+                    "depth": 1,
+                    "timestamp": "2023-07-18 14:05:45",
+                    "replies": []
+                },
+                {
+                    "author": "Witty-Elk2052",
+                    "body": "there's a reason why people get phds for gpgpu. still high level of expertise needed",
+                    "score": 11,
+                    "depth": 1,
+                    "timestamp": "2023-07-18 12:54:46",
+                    "replies": []
+                },
+                {
+                    "author": "NickCanCode",
+                    "body": "Nvidia is busy counting money",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-07-21 18:22:46",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Singularian2501",
+            "body": "Github: [https://github.com/Dao-AILab/flash-attention](https://github.com/Dao-AILab/flash-attention) \n\nBlog: [https://crfm.stanford.edu/2023/07/17/flash2.html](https://crfm.stanford.edu/2023/07/17/flash2.html) / [https://together.ai/blog/tri-dao-flash-attention](https://together.ai/blog/tri-dao-flash-attention) and [https://princeton-nlp.github.io/flash-atttention-2/](https://princeton-nlp.github.io/flash-atttention-2/)",
+            "score": 14,
+            "depth": 0,
+            "timestamp": "2023-07-17 18:16:33",
+            "replies": []
+        },
+        {
+            "author": "I_will_delete_myself",
+            "body": "Great work. It\u2019s pretty impressive for one person to do all this work to further humanity\u2019s knowledge of the unknown.",
+            "score": 24,
+            "depth": 0,
+            "timestamp": "2023-07-17 23:41:34",
+            "replies": []
+        },
+        {
+            "author": "badabummbadabing",
+            "body": "Pretty impressive benchmarks. Does anyone with more knowledge on the matter see how these might be unrealistic?",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-07-18 05:47:02",
+            "replies": [
+                {
+                    "author": "VarietyElderberry",
+                    "body": "It's good to be sceptical and I too am interested in comments on the quality of these benchmarks. However, I'd like to point out that this author was also part of the original FlashAttention paper and seems to be an expert in this field.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2023-07-19 05:24:30",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}

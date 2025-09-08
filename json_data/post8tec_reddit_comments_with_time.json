@@ -1,0 +1,758 @@
+{
+    "post_title": "[D] Non-deterministic behavior of LLMs when temperature is 0",
+    "post_timestamp": "2025-01-30 18:43:00",
+    "last_comment_timestamp": "2025-02-03 05:48:26",
+    "time_difference": "3 days, 11:05:26",
+    "comments": [
+        {
+            "author": "phree_radical",
+            "body": "In their case it might have to do with batching",
+            "score": 80,
+            "depth": 0,
+            "timestamp": "2025-01-30 19:20:44",
+            "replies": []
+        },
+        {
+            "author": "new_name_who_dis_",
+            "body": "It\u2019s because GPUs make slight (no deterministic) errors and those add up in large models. I think on cpu this wouldn\u2019t be the case.\u00a0",
+            "score": 159,
+            "depth": 0,
+            "timestamp": "2025-01-30 18:48:05",
+            "replies": [
+                {
+                    "author": "SmolLM",
+                    "body": "This is correct. To be more precise, GPU operation execution order is non-deterministic (bc everything is happening in parallel as much as possible), but float operations are generally not associative, ie (a+b)+c != a+(b+c). So slight differences will compound over time, leading to big differences in massive models like LLMs.",
+                    "score": 193,
+                    "depth": 1,
+                    "timestamp": "2025-01-30 19:31:15",
+                    "replies": [
+                        {
+                            "author": "light24bulbs",
+                            "body": "There was a whitepaper on here last year from this ml researcher who wanted to stick it to his professor and show that he could get a linear activated model to have nonlinear results just from float imprecision. It was a great whitepaper. Funny and captivating and very interesting. In the end he showed that as long as the models were really compressed like it four bits or two bits he could use a linear activation and have almost identical performance to RELU.\n\nSo the point is it doesn't take a lot of nonlinearity to get results like that and it shows how very small differences in the math can compound.",
+                            "score": 124,
+                            "depth": 2,
+                            "timestamp": "2025-01-30 20:41:44",
+                            "replies": [
+                                {
+                                    "author": "busybody124",
+                                    "body": "I think you might be describing \"GradIEEEnt Half Decent\" http://tom7.org/grad/",
+                                    "score": 94,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-30 22:54:58",
+                                    "replies": [
+                                        {
+                                            "author": "hugganao",
+                                            "body": "that's an amazing title",
+                                            "score": 23,
+                                            "depth": 4,
+                                            "timestamp": "2025-01-30 23:44:04",
+                                            "replies": [
+                                                {
+                                                    "author": "TserriednichThe4th",
+                                                    "body": "Seriously tho give them an award and a grant just off that.",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-01-31 13:46:03",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "EyedMoon",
+                                            "body": "Tom7 keeps on giving. Hoping he releases a video soon.",
+                                            "score": 7,
+                                            "depth": 4,
+                                            "timestamp": "2025-01-31 05:12:41",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "BrowneSaucerer",
+                                            "body": "Love love this",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-01-31 02:06:26",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "light24bulbs",
+                                            "body": "You know what's weird is this site went down for me just now when I tried to load the article. Maybe it's temporary",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-02-03 00:48:44",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Raphaelll_",
+                                    "body": "OpenAI did a similar thing a few years back: [https://openai.com/index/nonlinear-computation-in-deep-linear-networks/](https://openai.com/index/nonlinear-computation-in-deep-linear-networks/)",
+                                    "score": 8,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-31 05:55:06",
+                                    "replies": [
+                                        {
+                                            "author": "light24bulbs",
+                                            "body": "Oh nice back when they used to publish their work",
+                                            "score": 8,
+                                            "depth": 4,
+                                            "timestamp": "2025-01-31 10:49:33",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "k_means_clusterfuck",
+                                    "body": "Tom7?",
+                                    "score": 6,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-30 21:19:43",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "siegevjorn",
+                            "body": "Even if gpu calculation order is non-detemininstic, the result is. For instance, in A\u00d7B ,when x is matrix multiplication, GPU split matrix B in colum order when doing the multiplication, so that the resulting C can be just concatenated. GenAI stochasticity has nothing to do with parallel processing of GPU.",
+                            "score": 9,
+                            "depth": 2,
+                            "timestamp": "2025-01-30 20:45:48",
+                            "replies": []
+                        },
+                        {
+                            "author": "programmerChilli",
+                            "body": "No this isn\u2019t true. Most operations are run to run deterministic on GPUs",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-01-30 21:39:46",
+                            "replies": [
+                                {
+                                    "author": "SmolLM",
+                                    "body": "Nope. You can typically flip a switch in the settings to make everything deterministic, but this will butcher your performance, so in every single case I encountered, CUDA is kept nondeterministic",
+                                    "score": 14,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-31 04:31:58",
+                                    "replies": [
+                                        {
+                                            "author": "programmerChilli",
+                                            "body": "There are specific operators that are non-deterministic, like scatter add (or anything that involves atomic adds). And for those, forcing deterministic algorithms can affect performance significantly.\n\nBut for the vast majority of operators (like matmuls), they are fully \u201crun to run\u201d deterministic.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2025-01-31 12:40:01",
+                                            "replies": [
+                                                {
+                                                    "author": "SmolLM",
+                                                    "body": "Sure. A deterministic system with a small amount of non-determinism is a non-deterministic system.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-01-31 12:43:27",
+                                                    "replies": [
+                                                        {
+                                                            "author": "programmerChilli",
+                                                            "body": "Yes, but for LLM inference none of the non-deterministic operators are used.",
+                                                            "score": 5,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-01-31 12:51:00",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "shawnz",
+                                            "body": "Furthermore even if you use deterministic algorithms wherever possible, that still doesn't guarantee you'll get the same results on different hardware",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-01-31 11:08:21",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "JustOneAvailableName",
+                                    "body": "Batch size, memory pressure (so current results depend on previous batches), CUDA/Torch version, minor python changes (e.g. \u201cf(a + b)\u201d instead of \u201cc = a + b; f(c)\u201d), etc. All make quite the difference. In practice, the exact same code on the exact same machine might be deterministic, but it\u2019s virtually useless from a reproducibility perspective.",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-30 23:34:12",
+                                    "replies": [
+                                        {
+                                            "author": "programmerChilli",
+                                            "body": "Yes, all of those (although not usually memory pressure) can cause changes to the results. But the OP is specifically talking run by run determinism (ie: the API returning different results) which is primarily influenced by the batch size.",
+                                            "score": 8,
+                                            "depth": 4,
+                                            "timestamp": "2025-01-30 23:58:22",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "imadade",
+                            "body": "Is this what leads to \u201challucinations\u201d in LLM\u2019s?",
+                            "score": -13,
+                            "depth": 2,
+                            "timestamp": "2025-01-30 20:09:48",
+                            "replies": [
+                                {
+                                    "author": "new_name_who_dis_",
+                                    "body": "No. Hallucinations are just the model getting the answer wrong. It's not a \"bug\" in the sense of traditional programming.",
+                                    "score": 16,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-30 20:27:53",
+                                    "replies": [
+                                        {
+                                            "author": "piffcty",
+                                            "body": "More of a truncation error than a bug in traditional sense. It's not that the code is behaving in an unexpected way, it's that small rounding error build up over time.",
+                                            "score": -6,
+                                            "depth": 4,
+                                            "timestamp": "2025-01-30 20:33:00",
+                                            "replies": [
+                                                {
+                                                    "author": "new_name_who_dis_",
+                                                    "body": "The GPU being non-deterministic is due to truncation error. But that's not the reason there's hallucination.",
+                                                    "score": 16,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-01-30 20:36:13",
+                                                    "replies": [
+                                                        {
+                                                            "author": "piffcty",
+                                                            "body": "For sure. Hallucinations are an entirely different phenomenon would still exist in a 100% deterministic machine. I was speaking to the nature of the non-deterministic behavior.",
+                                                            "score": -4,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-01-30 20:41:16",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "curryeater259",
+                    "body": "Gotcha thanks. I'm just wondering if anyone has done some research on quantifying this \"non-determinism\" and delving deeper into the GPU architecture that causes this\n\nThanks!",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2025-01-30 18:49:07",
+                    "replies": [
+                        {
+                            "author": "currentscurrents",
+                            "body": "https://stackoverflow.com/questions/50744565/how-to-handle-non-determinism-when-training-on-a-gpu\n\n>The heart of the problem is that, when you run operations on several parallel threads, you typically do not know which thread will end first. It is not important when threads operate on their own data, so for example, applying an activation function to a tensor should be deterministic. But when those threads need to synchronize, such as when you compute a sum, then the result may depend on the order of the summation, and in turn, on the order in which thread ended first.\n\nIn theory this wouldn't matter, because addition and multiplication are associative operations. But *floating-point* addition is not quite associative because of rounding errors, so order does matter.",
+                            "score": 33,
+                            "depth": 2,
+                            "timestamp": "2025-01-30 18:56:29",
+                            "replies": [
+                                {
+                                    "author": "FernandoMM1220",
+                                    "body": "are there benchmarks on this?\n\nthis might be a big problem for gpus.",
+                                    "score": 5,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-30 20:06:22",
+                                    "replies": [
+                                        {
+                                            "author": "currentscurrents",
+                                            "body": "It is a fundamental limitation of concurrent computation. Threads can operate in any order. The only way to avoid it is to spend a bunch of time and effort on synchronization, which has a performance cost.\n\nLuckily, it's not a big deal for neural networks because they are highly robust to small errors.",
+                                            "score": 13,
+                                            "depth": 4,
+                                            "timestamp": "2025-01-30 20:43:40",
+                                            "replies": [
+                                                {
+                                                    "author": "FernandoMM1220",
+                                                    "body": "as long as threads are running independent calculations there should be absolutely no errors.",
+                                                    "score": -4,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-01-30 20:44:29",
+                                                    "replies": [
+                                                        {
+                                                            "author": "currentscurrents",
+                                                            "body": "They're not fully independent, since the results are aggregated at the end.",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-01-30 21:05:54",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "FernandoMM1220",
+                                                                    "body": "they\u2019re supposed to be. they arent supposed to update the weights until every parallel calculation is finished.",
+                                                                    "score": -1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-01-30 21:06:49",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "currentscurrents",
+                                                                            "body": "You can make it do that if you want to. [Pytorch has a setting for it.](https://pytorch.org/docs/stable/notes/randomness.html)\n\nBut there will unavoidably be a performance hit, and it usually isn't worth it.",
+                                                                            "score": 7,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2025-01-30 21:13:37",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "redd-zeppelin",
+                                                                                    "body": "This wouldn't fix the issues with parallel processing or floating point math, if I'm not mistaken. Please correct me if I'm wrong.",
+                                                                                    "score": 1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2025-01-31 10:56:31",
+                                                                                    "replies": []
+                                                                                },
+                                                                                {
+                                                                                    "author": "FernandoMM1220",
+                                                                                    "body": "alright hopefully this gets figured out because we do need fully deterministic models no matter what the settings are.",
+                                                                                    "score": -1,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2025-01-30 21:16:14",
+                                                                                    "replies": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "new_name_who_dis_",
+                            "body": "Actually it might be because T=0 is set to some small epsilon > 0. It depends on the implementation. Since T=0 would produce division by 0, so the code would need to explicitly do if T==0, argmax(logits).",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2025-01-30 18:56:05",
+                            "replies": [
+                                {
+                                    "author": "PM_ME_Sonderspenden",
+                                    "body": "Never saw a codebase that doesn\u2019t use argmax when t=0",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-30 20:24:41",
+                                    "replies": [
+                                        {
+                                            "author": "new_name_who_dis_",
+                                            "body": "But the gpu rounding errors shouldn\u2019t be large enough to actually change the argmax. So I can\u2019t really think of another reason why t=0 would be non deterministic\u00a0",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2025-01-30 22:39:17",
+                                            "replies": [
+                                                {
+                                                    "author": "Captain_Cowboy",
+                                                    "body": "If there are multiple equivalent maximal values, choosing any one of them is still consistent with t=0, but potentially non-deterministic, either explicitly (collecting equivalent values and picking randomly -- that would likely share a code path with a top-k implementation anyway) or implicitly if the argmax search is done in parallel.\n\nFor that matter, if the goal is a deterministic implementation, it must handle this case somehow. In my experience, typically a single-valued argmax function returns the least index.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-01-31 10:30:34",
+                                                    "replies": [
+                                                        {
+                                                            "author": "new_name_who_dis_",
+                                                            "body": "But the probability of there being two values that are exactly the same is prohibitively small\u2026 I guess at lower bit widths, like fp4 or even fp8 maybe it could happen. But at full precision that should never happen.\u00a0",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-01-31 13:03:47",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Captain_Cowboy",
+                                                                    "body": "Eh, assuming uniform token probability (i.e., worst case), even with fp16 you hit better-than-even odds of it happening around 46k tokens. That's a lot, but not unreasonable. With fp8 it's less than 200.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-01-31 22:43:18",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "new_name_who_dis_",
+                                                                            "body": "I thought about it. And I think you\u2019re right. Especially at fp8, that\u2019s only 1/256, that would happen all the time. And it\u2019s definitely not uniform.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2025-01-31 23:41:12",
+                                                                            "replies": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "monkChuck105",
+                    "body": "Most floating point operations violate commutative and associative properties, so the order matters. This leads to differences when the problem is refactored and executed in parallel, whether on CPU or GPU. This means that almost any computation will not be entirely reproducible, particularly with different hardware. \nLLMs are particularly sensitive to such variation because a sequence is produced recursively, producing a single different token will lead to an entirely different response as it becomes the basis for the subsequent tokens. This is not the case for regression or image recognition, where minor variations of probabilities might not change classification.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-02-01 03:35:02",
+                    "replies": []
+                },
+                {
+                    "author": "billpilgrims",
+                    "body": "Might also be because meta data in the input from request to request is slightly different e.g. the time of day in minutes and seconds.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-02-01 09:09:08",
+                    "replies": []
+                },
+                {
+                    "author": "siegevjorn",
+                    "body": "This is incorrect. If this is right, than games will suffer from random effects all the time. It is the underlying generative AI model that does this.",
+                    "score": -4,
+                    "depth": 1,
+                    "timestamp": "2025-01-30 20:41:57",
+                    "replies": [
+                        {
+                            "author": "new_name_who_dis_",
+                            "body": "The phenomenon is definitely real (you can easily test it on GPU) but the errors are slight so it's unlikely that this is the reason (and in games there's way less calculations than in LLMs so the errors would be even more slight so you wouldn't notice anything when playing). I sort of changed my mind, and now I think that T=0 gets clamped to some small epsilon in most implementations. The errors shouldn't be large enough to change argmax.",
+                            "score": 8,
+                            "depth": 2,
+                            "timestamp": "2025-01-30 21:01:16",
+                            "replies": [
+                                {
+                                    "author": "PacmanIncarnate",
+                                    "body": "Most backends switch to greedy token selection at temp 0 rather than setting it extremely small and doing the math. Just makes way more sense.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-31 02:04:13",
+                                    "replies": [
+                                        {
+                                            "author": "new_name_who_dis_",
+                                            "body": "But then how do you explain OPs question? Cause the GPU non determinism is too small to change the argmax. Or maybe it\u2019s not actually a thing?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-01-31 08:28:39",
+                                            "replies": [
+                                                {
+                                                    "author": "gartin336",
+                                                    "body": "GPU non-determinism is too small to change the largest value in softmax (continuous argmax in attention) but changes the rest of the tensor as well. If this repeats 32 times (32 layers), the change accumulates. Especially when many words are equally likely (e.g. creative writing) the argmax (topk 1 in the output) can select different word.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-02-03 05:48:26",
+                                                    "replies": []
+                                                },
+                                                {
+                                                    "author": "PacmanIncarnate",
+                                                    "body": "I don\u2019t have a great answer, other than often people aren\u2019t sending the exact same prompt/context each time. I also think modern tokenizers have a bit of randomness in how they tokenize words and phrases and that can lead to some noise.\n\nAlso, the better way, in my opinion, to get deterministic results is to set top k to 1. Can\u2019t have randomness shenanigans when you only have one token available as an option.",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-01-31 08:37:11",
+                                                    "replies": [
+                                                        {
+                                                            "author": "redd-zeppelin",
+                                                            "body": "I'm not sure I follow how this would work.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-01-31 10:57:47",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "PacmanIncarnate",
+                                                                    "body": "Which part? The top k? Top k is saying to keep this many tokens, starting with the most probable. If you *only* want the top token every time, you set top k to 1.\n\nAs for the tokenization; context can be broken into different token blocks. The tokenizer does it\u2019s best to break it most efficiently, but in that process, a small change to that context can cause it to change how it breaks up that context in ways that impact the next token prediction.",
+                                                                    "score": 2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-01-31 11:01:56",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "redd-zeppelin",
+                                                                            "body": "How would setting top k to 1 deal with parallelization and floating point math non determinancy? I don't see how it would. \n\nTokenization I agree is another point of potential drift.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2025-01-31 11:46:39",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "PacmanIncarnate",
+                                                                                    "body": "Sorry, I didn\u2019t mean to claim that it would deal with those. I was responding to the claim that temp 0 is actually temp 0.0001 or something of that nature. Setting temp to 0 is a hack to do what top k 1 does naturally, so it\u2019s my preference.",
+                                                                                    "score": 2,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2025-01-31 11:53:06",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "redd-zeppelin",
+                                                                                            "body": "Gotcha gotcha sorry for my confusion re the other issues. \n\nI thought temp modulated a different param. Does it actually work through top k? TIL.",
+                                                                                            "score": 1,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2025-01-31 12:08:07",
+                                                                                            "replies": [
+                                                                                                {
+                                                                                                    "author": "PacmanIncarnate",
+                                                                                                    "body": "Temp modulates the scores of each logit, making the differences more or less pronounced, which in turn makes lower scores Logits more or less likely to be selected (logits are chosen based on weighted probabilities; temp adjusts those weights). So, a very low temp will have the effect of making the top token nearly impossible to not be selected. A temp of zero technically can\u2019t exist because it would imply dividing by zero. So systems see temp=O and set top k to 1 in the background.\n\nTop k determines the size of the pool of possible Logits to be selected from for that next token. If the pool contains 10 of the top tokens, one will be selected based on the weighted probability of those tokens (after being adjusted by temp). If you only have 1 token available, there\u2019s no probability involved anymore. That top 1 token will be the only one possible to be chosen and has a weighted probability of 100%.",
+                                                                                                    "score": 2,
+                                                                                                    "depth": 11,
+                                                                                                    "timestamp": "2025-01-31 12:14:27",
+                                                                                                    "replies": [
+                                                                                                        {
+                                                                                                            "author": "redd-zeppelin",
+                                                                                                            "body": "Better explanation of the difference than any I've found on stack exchange. Saved!\n\nI think part of my confusion with this debate is that in the transformers library you can't set temp to 0 to begin with, so the confusion there has always confused me. One of those things where obfuscation is done to spare people but ends up just confusing the issue by adding a layer of abstraction.",
+                                                                                                            "score": 2,
+                                                                                                            "depth": 12,
+                                                                                                            "timestamp": "2025-01-31 12:16:48",
+                                                                                                            "replies": []
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "dankerton",
+                            "body": "Wait, Do they not?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-01-30 22:55:32",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "sketchdraft",
+            "body": "Same discussion here:  \n[https://news.ycombinator.com/item?id=37006224](https://news.ycombinator.com/item?id=37006224)\n\nGPU's are deterministic based on that discussion the problem lies in the software. One guy below noted that and it was downvoted.  Which one is the correct answer?",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-01-31 01:17:26",
+            "replies": []
+        },
+        {
+            "author": "Lexski",
+            "body": "I\u2019d also be interested to know why. In practice with openai apis I couldn\u2019t get them to behave deterministically even with temperature 0 and a fixed random seed. It was such a pain for testing and debugging.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-01-31 05:55:16",
+            "replies": []
+        },
+        {
+            "author": "amejin",
+            "body": "Says who? What happens when the next token is literally 50/50? LLMs are non deterministic by nature",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-01-31 19:45:29",
+            "replies": []
+        },
+        {
+            "author": "cubacaban",
+            "body": "One key reason for non-deterministic behavior is that many LLMs use a Mixture of Experts (MoE) architecture. This is true for models like DeepSeek-v3 and DeepSeek-R1, and it\u2019s also rumored to apply to several OpenAI models.  \n  \nIn an MoE architecture, each token is processed by only a subset of the neural network, the so-called \"expert\". A router decides which expert processes each token. During training, the model learns to distribute tokens across experts to balance the computational load. Crucially, this routing can depend on the other inputs in the batch.  \n  \nThis means that when you send a request to an LLM provider hosting an MoE model, how your input is routed - and thus which experts process it - can depend on other inputs in the batch. Since these other inputs are random from your perspective, this introduces non-determinism even when the temperature is set to 0.  \n  \nIf you were to self-host an MoE model and had full control over the batch inputs, this particular source of non-determinism could be eliminated.  \n  \nOf course, other sources of randomness mentioned in the thread, such as GPU non-determinism and numerical instability, still apply. But it\u2019s important to recognize that MoE models introduce a fundamental layer of non-determinism from an API consumer\u2019s perspective.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-02-01 02:16:15",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-01-30 19:08:28",
+            "replies": [
+                {
+                    "author": "new_name_who_dis_",
+                    "body": "Well with T=0, that should be the argmax. Hence OP's question. It's probably because T=0 is actually clamped to some small epsilon in most implementations since it would require an explicit if T=0, then do argmax, otherwise you get division by 0.",
+                    "score": 15,
+                    "depth": 1,
+                    "timestamp": "2025-01-30 19:20:02",
+                    "replies": [
+                        {
+                            "author": "amang0112358",
+                            "body": "There is no such thing as T=0 - in vllm you can't set it to exact 0 if I recall correctly.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-01-30 19:37:49",
+                            "replies": [
+                                {
+                                    "author": "new_name_who_dis_",
+                                    "body": "In my opinion you should be able to set T=0 and for it to simply do argmax, but you're probably right in that in most implementations they don't do that.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-30 20:23:35",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Mysterious-Rent7233",
+                    "body": "What is it that you think that the temperature hyperparameter does?",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2025-01-30 19:43:47",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "no_witty_username",
+            "body": "This is serendipitous, because I was discussing an adjacent topic with deepseek for a hypothetical hypothesis I been working on. First non deterministic behavior could be added easily with an RNG system through function calling.  But what I was personally interested in was an RNG system without function calling.  basically a way to get a random number between 1-100 through an LLM alone, no external tool use at all.  And basically I came to the conclusion that its possible via large amount of model responses to the users query  past the context length of the model.  So you ask it what a random number between 1-100, and it starts spitting out thousands of numbers between 1-100. In fact spitting out thousands past it context window, then it internally without any tool use averages the number out and it gets its answer.  Because the pool of distribution is so large and its past the context window, the answer must be not deterministic, because if the answer was deterministic that would allow us as the developers to use that knowledge to extend the context window indefinitely.  Anyways this is a very low level explanation and it goes a lot deeper as fluctuations in the gpu, cpu, temperature, cosmic ray bombardment on the chip 9very unlikely thought0 and many other factors boost the noise from the exterior environment to help in amplifying the signal.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2025-01-31 01:49:49",
+            "replies": [
+                {
+                    "author": "redd-zeppelin",
+                    "body": "How would it get the avg without a tool? I also don't follow the part about devs extending the context window.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-01-31 10:25:43",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "siegevjorn",
+            "body": "Generative AI is by design stochastic. It is nothing to do with GPU calculation. If it had, all the frames when gaming will suffer from wierd glitches, which in default uses GPU calculations. However, they show the perspective changes of objects and surroundings as perfectly as designed.",
+            "score": -12,
+            "depth": 0,
+            "timestamp": "2025-01-30 20:48:05",
+            "replies": [
+                {
+                    "author": "kevinpl07",
+                    "body": "So much wrong here. Don\u2019t even know where to start.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-01-30 22:10:55",
+                    "replies": [
+                        {
+                            "author": "siegevjorn",
+                            "body": "Obviously you know nothing about deep learning. No wonder you don't know where to start.",
+                            "score": -10,
+                            "depth": 2,
+                            "timestamp": "2025-01-30 22:20:10",
+                            "replies": [
+                                {
+                                    "author": "kevinpl07",
+                                    "body": "Let\u2019s start here:\nGenerative AI is stochastic in the way you sample new tokens. The outputs logits of the pure network are deterministic (or should be).\n\nThose are two different things.\n\nAs for your comparison with games, the GPU just calculates matrices. One application can have random components (AI) others don\u2019t (shaders and rendering).",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-30 22:30:47",
+                                    "replies": [
+                                        {
+                                            "author": "siegevjorn",
+                                            "body": "Look, I agree with all of your points. How is your point proving my statements wrong? \n\nThey said: LLM stochasticity is due to randomness lies in GPU calculation\n\nI said:\n\n1. LLM outputs are stochastic by design, not due to how GPU calculation is done. GPU calculation is intended to be exact, it just does matrix calculations in parallel, which is not designed to be introduce random errors.\n\n2. If GPU calculation were to introduce random errors, games we play will see random shifts in angle, or random colorizations, due to calculation errors in projecting angle / color changes. That would be a huge problem for gamers.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-01-30 23:33:52",
+                                            "replies": [
+                                                {
+                                                    "author": "willb_ml",
+                                                    "body": "GPU calculations do have floating-point errors though. The other comments already addressed it but summing order matters and this introduces a certain level of randomness when you have race conditions. How much randomness there is due to matrix calculations versus implementation details in commercial LLM we don't know but to say GPU calculations don't introduce randomness is just wrong",
+                                                    "score": 4,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-01-31 00:48:53",
+                                                    "replies": [
+                                                        {
+                                                            "author": "siegevjorn",
+                                                            "body": "You are grossly misunderstanding the concept of machine calculation. All machine calculations have floating point errors.\u2014 GPU or CPU. That choice does not introduce the randomness that affects LLM ouputs. That's my main point. \n\nIf the floating point errors were the main reason for its randomness in LLM output token, how can the modern LLMs output comprehensive converstion, not some random gibberish?\n\nAnd why do you see the same randomness in LLM when you are only running it on CPU? If GPU is the problem here? Now will you say it's due to the floating point errors in CPU calculations? \n\nAnd before promoting false information that GPU calculation is much less precise than that of CPU, at least conduct an experiment to see if that's really true. For instance, you can try doing matrix multiplication, only CPU vs. with GPU (remember to do it under the same precision, FP64). You'll see difference between the two is negligible.\n\nEdit: by negligible, I mean like 1e-30.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-01-31 01:15:24",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "willb_ml",
+                                                                    "body": "Did you see the part where I said the \"summing order matters and this introduces a certain level of randomness when you have race conditions\"? Do you agree or disagree with this statement? It's been known that race conditions with atomic adds introduce nondeterministic behavior aka randomness. I don't get how you even think I'm talking about GPU vs CPU comparison or this is somehow disagreeable.\n\n>That choice does not introduce the randomness that affects LLM ouputs. That's my main point.\n\nHere's a good discussion from an NVIDIA employee. https://forums.developer.nvidia.com/t/reproducibility-of-atomic-operations/136299. \"The order in which CUDA threads are run is non-deterministic, hence the atomic can executed in a different order each time the code is run.\"",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-01-31 02:11:35",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "siegevjorn",
+                                                                            "body": "I agree that operation order can be critical and can cause more errors in some cases. And you can certainly make an arbitrary case that arithematic order matters in machine calculation. But my point is that is irrelevant to randomized outputs in LLMs.\n\nFurther info about GPU calculation:\n\nhttps://docs.nvidia.com/cuda/floating-point/index.html\n\nIn deep learning the operarions are sets of well-defined routines. And these routines are optimized in libraries such as Cudnn to make neural networks work. Thus LLMs (deep neural networks) outputs from GPU are not errorenous enough to make notable difference in output tokens. Matrix multiplication is one of the well optimized operations, so you'll find out by comparing GPU vs CPU calculation results of matrix multiplication.",
+                                                                            "score": 0,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2025-01-31 02:48:40",
+                                                                            "replies": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "willb_ml",
+                                    "body": "Sad mindset to insult someone when they say you're wrong.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-30 23:16:19",
+                                    "replies": [
+                                        {
+                                            "author": "siegevjorn",
+                                            "body": "\"You are so wrong in so many level that I cannot even tell\" You truly think that was a perfectly respectful and sensible arugment?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-01-30 23:44:09",
+                                            "replies": [
+                                                {
+                                                    "author": "willb_ml",
+                                                    "body": "I don't and it doesn't matter. Instead of insulting, you could've asked why",
+                                                    "score": 0,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-01-31 00:43:41",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "sketchdraft",
+                    "body": "Stop downvoting. GPU's are deterministic. The problem lies on software.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-01-31 01:23:57",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "jackshec",
+            "body": "did you set the seed value? torch.manual_seed(SEED)",
+            "score": -8,
+            "depth": 0,
+            "timestamp": "2025-01-30 18:51:21",
+            "replies": []
+        },
+        {
+            "author": "Heasterian001",
+            "body": "Depending on implementation, there is a chance you just disabled temperature sampler. Try setting it to 0.01 instead.",
+            "score": -2,
+            "depth": 0,
+            "timestamp": "2025-01-31 02:04:24",
+            "replies": []
+        },
+        {
+            "author": "unlikely_ending",
+            "body": "They are, if you fix the random seed, which determines the initial layer weights",
+            "score": -5,
+            "depth": 0,
+            "timestamp": "2025-01-31 03:01:39",
+            "replies": []
+        }
+    ]
+}

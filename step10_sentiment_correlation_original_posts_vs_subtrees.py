@@ -123,10 +123,10 @@ def create_correlation_plots(richly_results, poorly_results, metric='mean_compou
                     fontweight='bold', fontsize=12, pad=10)
         
         # Add statistics text box (more compact for research paper)
+        # MODIFIED: Removed R² line from the graph
         stats_text = f'n = {results["n_posts"]}\n'
         stats_text += f'r = {results["correlation"]:.3f}\n'
-        stats_text += f'p = {results["p_value"]:.2e}\n'
-        stats_text += f'R² = {results["r_squared"]:.3f}'
+        stats_text += f'p = {results["p_value"]:.2e}'
         
         # Determine significance stars
         if results['p_value'] < 0.001:

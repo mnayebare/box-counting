@@ -1,0 +1,229 @@
+{
+    "post_title": "[D] List of Large Language Models to play with.",
+    "post_timestamp": "2023-02-05 11:54:46",
+    "last_comment_timestamp": "2023-08-11 03:43:34",
+    "time_difference": "186 days, 15:48:48",
+    "comments": [
+        {
+            "author": "gopher9",
+            "body": "[RWKV](https://github.com/BlinkDL/RWKV-LM) 14B, trained on The Pile.",
+            "score": 17,
+            "depth": 0,
+            "timestamp": "2023-02-05 14:07:36",
+            "replies": [
+                {
+                    "author": "m98789",
+                    "body": "     (final release around Feb-15-2023):",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-02-06 07:11:45",
+                    "replies": [
+                        {
+                            "author": "gopher9",
+                            "body": "With RWKV-4-Pile-14B-20230204-7324.pth released 2 hours ago, as you can see at https://huggingface.co/BlinkDL/rwkv-4-pile-14b/tree/main.\n\nBut yeah, it's still WIP.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-02-06 08:53:20",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "MysteryInc152",
+            "body": "GLM-130b https://huggingface.co/spaces/THUDM/GLM-130B\n\nCohere's models https://cohere.ai/\n\nAleph Alpha's models https://app.aleph-alpha.com/\n\nAI21's models https://www.google.com/url?sa=t&source=web&rct=j&url=https://studio.ai21.com/&ved=2ahUKEwigktrH-_78AhWAFlkFHefHC3IQFnoECAsQAQ&usg=AOvVaw1L0TKoIvBtSFFB1oJsG5nW",
+            "score": 15,
+            "depth": 0,
+            "timestamp": "2023-02-05 13:03:08",
+            "replies": [
+                {
+                    "author": "Cheap_Meeting",
+                    "body": "Are any benchmark scores such as MMLU or BigBench available for Aleph Alpha's models?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-02-05 14:58:37",
+                    "replies": [
+                        {
+                            "author": "MysteryInc152",
+                            "body": "don't think so",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-02-06 09:58:46",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Taenk",
+            "body": "[Comprehensive list of LLMs](https://docs.google.com/spreadsheets/d/1O5KVQW1Hx5ZAkcg8AIRjbQLQzx2wVaLl0SqUu-ir9Fs/edit#gid=1158069878).",
+            "score": 11,
+            "depth": 0,
+            "timestamp": "2023-02-15 11:30:09",
+            "replies": []
+        },
+        {
+            "author": "Cheap_Meeting",
+            "body": "In terms of Consumer Apps, the Poe app from Quora has access to two models from Open AI and one from Anthropic.\n\n[Perplexity.ai](https://Perplexity.ai), YouChat and Neeva are search engines that integrated LLMs.\n\nGoogle has an AI + Search Event on Wednesday where they are likely to announce something as well.\n\nIn terms of APIs and getting a feeling for these models, I would use OpenAI's APIs. Their models are the best publically available models. Open Source models are still far behind.",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2023-02-05 14:49:43",
+            "replies": [
+                {
+                    "author": "danysdragons",
+                    "body": "To pre-empt possible confusion by people wanting to try YouChat, its URL is [you.com/chat](https://you.com/chat), while [youchat.com](https://youchat.com) is an unrelated messaging service.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-02-06 13:19:47",
+                    "replies": []
+                },
+                {
+                    "author": "MysteryInc152",
+                    "body": "GLM-130B is really really good. \nhttps://crfm.stanford.edu/helm/latest/?group=core_scenarios\n\nI think some instruction tuning is all it needs to match the text-davinci models",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-02-06 11:04:42",
+                    "replies": [
+                        {
+                            "author": "Cheap_Meeting",
+                            "body": "That's not my takeway. GLM-130B is even behind OPT according to the mean win rate, and the instruction tuned version of OPT in turn is worse than FLAN-T5 which is a 10x smaller model ([https://arxiv.org/pdf/2212.12017.pdf](https://arxiv.org/pdf/2212.12017.pdf) Table 14)",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-02-06 23:17:47",
+                            "replies": [
+                                {
+                                    "author": "MysteryInc152",
+                                    "body": "I believe the fine-tuning dataset matters as well as the model but I guess we'll see. I think they plan on fine-tuning. \n\nThe set used to tune OPT doesn't contain any chain of thought.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-02-06 23:45:27",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "mrpogiface",
+            "body": "Do we actually know that chatGPT is the full 175B? With codex being 13B and still enormously powerful, and previous instruction tuned models (in the paper) being 6.7B it seems likely that they have it working on a much smaller parameter count",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2023-02-06 10:09:26",
+            "replies": []
+        },
+        {
+            "author": "NoLifeGamer2",
+            "body": "I love how bloom was just like \"F\\*ck it let's one-up openAI\"",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-02-06 11:50:10",
+            "replies": [
+                {
+                    "author": "sinavski",
+                    "body": "Yeah, I think its a just like a 1B MLP with random weights not connected to any outputs:)",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-02-06 12:10:05",
+                    "replies": [
+                        {
+                            "author": "NoLifeGamer2",
+                            "body": "Honestly wouldn't be surprised lol",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-02-06 12:13:54",
+                            "replies": []
+                        },
+                        {
+                            "author": "visarga",
+                            "body": "Does Bloom do tasks? is it well behaved?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-02-06 15:55:13",
+                            "replies": [
+                                {
+                                    "author": "farmingvillein",
+                                    "body": "bloom is pretty terrible, unfortunately",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2023-02-07 00:00:22",
+                                    "replies": [
+                                        {
+                                            "author": "Long_Two_6176",
+                                            "body": "What do you mean by that?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2023-07-17 19:36:59",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "yaosio",
+            "body": "I've been trying out [you.com](https://you.com)'s chatbot and it seems to work well, sometimes. It has the same problem ChatGPT has with just making stuff up, but it provides sources (real and imagined) so if it lies you can actually check. I asked it what Todd Howard's favorite cake it and it gave me an authorative answer without a source, and when I asked for a source it gave me a Gamerant link that didn't exist. When it does provide a source it notates it like Wikipedia. It also can access the Internet as it was able to tell me about events that happened in the last 24 hours.\n\nIt's able to produce code, and you can have a conversation with it but it really prefers to give information from the web whenever possible. It won't tell me what model they use, it could be their own proprietary model. They also have Stable Diffusion, and a text generator but I don't know what model that is.\n\nChatbot: [https://you.com/search?q=who+are+you&tbm=youchat&cfr=chat](https://you.com/search?q=who+are+you&tbm=youchat&cfr=chat)\n\nStable Diffusion: [https://you.com/search?q=python&fromSearchBar=true&tbm=imagine](https://you.com/search?q=python&fromSearchBar=true&tbm=imagine)\n\nText generator: https://you.com/search?q=python&fromSearchBar=true&tbm=youwrite",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-02-06 13:23:13",
+            "replies": []
+        },
+        {
+            "author": "CriticalTemperature1",
+            "body": "Google has their AI Test Kitchen for LaMDA",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-02-06 10:03:36",
+            "replies": []
+        },
+        {
+            "author": "xeneks",
+            "body": "I am looking at parametric search, where I can highlight in a graph-database style way, the mistakes with the results, by reassigning weights or links, to redo the search, until I get answers that are more correct, based off things like 'water isn't useful for cleaning dried paint, acetone or paint thinners may be more useful'. Is it possible to build such features into any of the open source tools here, or are lacking any gui for the feedback, beyond text and a thumb up or down as one sees in the commercial packages?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-02-07 08:36:24",
+            "replies": []
+        },
+        {
+            "author": "lostmsu",
+            "body": "I would love to see comparison of these models on some common tasks.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-02-07 16:38:32",
+            "replies": [
+                {
+                    "author": "bro_please",
+                    "body": "https://super.gluebenchmark.com/",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-03-20 18:57:24",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "monolidth",
+            "body": "Maybe add: [https://www.reddit.com/r/LocalLLaMA/comments/142locy/finllama\\_llama\\_for\\_finance/](https://www.reddit.com/r/LocalLLaMA/comments/142locy/finllama_llama_for_finance/)\n\n&#x200B;\n\nto the list",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-06-06 19:36:44",
+            "replies": [
+                {
+                    "author": "emillindstrom",
+                    "body": "Which one is best if I want help to find research papers and makes references?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-08-11 03:43:34",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}

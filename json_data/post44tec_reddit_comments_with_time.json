@@ -1,0 +1,136 @@
+{
+    "post_title": "How is \"grammar\" achieved with LLMs?",
+    "post_timestamp": "2023-10-06 08:09:20",
+    "last_comment_timestamp": "2024-07-06 21:34:58",
+    "time_difference": "274 days, 13:25:38",
+    "comments": [
+        {
+            "author": "mambrino",
+            "body": "Not 100% sure but I guess it happens on sampling.\n\nThe running model knows nothing about the grammar you have loaded. It's just that, during sampling, only the tokens that are \"legal\" according to the grammar are considered; the rest are \"discarded\". It is not that easy because clearly sometimes generation slows down and it looks like it's backtracking internally (trying some branch of your grammar, not finding a solution, and going back to some parent node/token), but that's the gist of it.\n\nIt doesn't affect the model otherwise. The model does not \"know\" there is a grammar, it does not use context, there is no prompt.\n\nBTW: be careful with the grammar: if it is too restrictive, it will force the model to sample very low probability tokens and it will start to operate in \"out of distribution\" and it will break down. For instance, you can create a grammar that prohibits the letter \"e\" or \".\" and the poor model will sample absurd tokens and eventually produce garbage.",
+            "score": 22,
+            "depth": 0,
+            "timestamp": "2023-10-06 08:34:53",
+            "replies": [
+                {
+                    "author": "psi-love",
+                    "body": "Hmm, thank you that was my assumption: That the program itself rejects produced tokens somehow and asks for a different one? That makes sense to me.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-10-06 08:48:00",
+                    "replies": [
+                        {
+                            "author": "modeless",
+                            "body": "The neural net doesn't \"produce\" tokens. It produces, at each step, a giant list of probabilities, one for each possible token. The program then selects one token from the list of all possible tokens using any policy it wants. For example you can pick the highest probability token every time (\"greedy\"). Or you can randomly sample from all the tokens according to their probabilities. Or you can modify the probabilities before sampling, using a \"temperature\", or simply by setting the probability of tokens you don't want to zero. (For example, the ones that don't match a grammar!) You can also choose multiple possibilities at each step and try all of them, then pick the best one at the end (beam search).",
+                            "score": 8,
+                            "depth": 2,
+                            "timestamp": "2023-10-06 15:36:08",
+                            "replies": [
+                                {
+                                    "author": "psi-love",
+                                    "body": "Yeah that was a misconception. I am now more familiar with what the LLM is actually doing - I somehow assumed it already decides for a specific token given the input parameters.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2023-10-06 15:43:36",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "psi-love",
+                    "body": ">It doesn't affect the model otherwise. The model does not \"know\" there is a grammar, it does not use context, there is no prompt.\n\nNow that I tested it a bit, I am still confused about it. Because let's consider a simple JSON grammar file (mentioned in the link I provided). So if I tell the model to \"give me a list of five names\" and force the grammar file, it will produce 5 names in that format - even if not mentioning JSON at all. That means, that the model probably never created a token like \"{\" or \"}\" as part of its reply, but those tokens were inserted by the grammar module, right?\n\nOtherwise if I would ask the model to tell me a joke and force the JSON grammar, nothing really is produced. But it's also not like the model is hanging, it instantly produces an empty output enclosed by brackets.\n\nThis kind of makes my head spin.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-10-06 09:54:56",
+                    "replies": [
+                        {
+                            "author": "SoylentMithril",
+                            "body": "The model outputs a value for every single token simultaneously. So for instance, it will be a 1, 32000 tensor with a value for each of the 32000 possible tokens. So the LLM always has a result for both \"{\" and \"}\" every single time it infers a token (and a result for \"Yes\", \"No\", \"hi\", \"z\", etc). Normally a sampler looks at the tokens with the highest values and picks one of them.\n\nThe results for \"{\" and \"}\" in this case may be negative numbers lower than all the other ones so they'll never get picked normally, but if a grammar bans everything but the allowed tokens then whatever has the relatively highest values will get picked, no matter how low those values may be in the absolute sense.",
+                            "score": 13,
+                            "depth": 2,
+                            "timestamp": "2023-10-06 10:14:35",
+                            "replies": [
+                                {
+                                    "author": "psi-love",
+                                    "body": "Thank you so much!",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2023-10-06 10:49:33",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "AutomataManifold",
+                            "body": "This is a very rough analogy, but you can think of it like this:\n\nWhen the model is predicting the next token, it's a little like taking a bag of scrabble tiles, ranking them based on how likely they are, and randomly picking one based on the weighting.\n\nA grammar is a set of rules that defines what the output should look like; you can think of it like a regex pattern. (Only more powerful, since BNF defines a context-free grammar, which is type 2 and regular expressions are type 3.) For any given string, you can compare and see if it matches the rules laid out by the grammar. \n\nWhen the LLM sampler uses the grammar, it discards all of the scrabble tiles that don't match the patterns described by the rules. Then it picks from the remaining tiles.\n\nSome fine-tuned models expect to sometimes output javascript, while others do not. If you've got one where Javascript is unlikely, then it's not going to put very high weighting on valid javascript syntax. After `{` you'd expect to see either ` \"` or `}` or maybe `\\n`. If it doesn't assign a high weight to ` \"` then it'll have a high chance of closing off the whole thing with `}` and stopping. Or even just outputting the end-of-sequence token instead of `{`.\n\nYou can help it a bit for explicitly asking for JSON (which hopefully increases the weighting of the JSON tokens) or pre-priming the response to start with `{ \"` just to get it started. But if it's never seen JSON used as a response before, it's going to have a hard time either way.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2023-10-06 11:09:03",
+                            "replies": [
+                                {
+                                    "author": "psi-love",
+                                    "body": "I just realized how cool this concept is. And yes, I was just thinking that explicitely asking for JSON will help out. Thank you too!",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2023-10-06 15:08:44",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "staviq",
+            "body": "A model doesn't literally produce new words it one go. It calculates probabilities for a set of known words ( models vocabulary ), and then, the actual new word is picked from that list, using top_k, top_p, mirostat etc.\n\nYou can simply take that list, and only select candidates matching grammar rules, discard the rest, and only then pass that trimmed list of candidates to top_k, top_p etc.\n\nNormal inference, basically goes like this:\n\n    usertext -> tokenizer -> model -> candidates -> sampler -> winner (one token ) - > done ? -> (yes) -> detokenizer -> output\n        ^- append <----------------------------------------------------------------- (no) <-'\n\nWith grammar:\n\n    usertext -> tokenizer -> model -> candidates -> [grammar filter] -> sampler -> winner (one token ) - > done ? -> (yes) -> detokenizer -> output\n        ^- append <------------------------------------------------------------------------------------- (no) <-'",
+            "score": 13,
+            "depth": 0,
+            "timestamp": "2023-10-06 17:54:46",
+            "replies": []
+        },
+        {
+            "author": "bubudumbdumb",
+            "body": "Not sure about llama.cpp but hugginface has a similar functionality called constrained sampling. The way it works is that the grammar produces a (non deterministic) finite state automata, effectively a graph of the character sequences that can be produced. When the generative model produces probabilities for the next token in the sequence that graph is used to filter the possible next tokens.",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2023-10-06 10:46:13",
+            "replies": [
+                {
+                    "author": "AnomalyNexus",
+                    "body": "So basically takes a sorted table of outcomes ranked and eliminates everything that isn't grammar compliant?",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-10-06 14:38:57",
+                    "replies": [
+                        {
+                            "author": "bubudumbdumb",
+                            "body": "Correct. This, token by token.",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2023-10-06 14:40:49",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "KelseyFrog",
+            "body": "I can speak to Jsonformer. It warps logits before picking the next token and adds the schema to the prompt - the latter likely to condition the output to more closely conform to the schema. It includes a few LogitWarpers[1] for constraining output to numbers, arrays, strings, etc.\n\n1. https://huggingface.co/docs/transformers/main/en/internal/generation_utils#transformers.LogitsWarper",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2023-10-06 11:10:08",
+            "replies": []
+        },
+        {
+            "author": "No_Rhubarb_9698",
+            "body": "I recently wrote a paper about this called SynCode. The tool is available here: [github](https://github.com/uiuc-focal-lab/syncode) and if you check the related work section of the paper [here](https://arxiv.org/abs/2403.01632), you can see a table with various tools that can do this.\n\nAll of the compared approaches such as SynCode, LMQL, Outlines, LLAMA.CPP and Guidance use constrained decoding to filter syntactically invalid tokens during generation. They remove the set of bad tokens when the LLM is choosing the next token.\n\nTo answer your original question:   \nLLAMA.CPP models a nondeterministic pushdown automaton (NPDA) with N stacks to maintain possible parse states. You can see the original [PR](https://github.com/ggerganov/llama.cpp/pull/1773) with some important comments there. They decided to implement their own simplified grammar syntax called GBNF and a simulation algorithm that updates the state of the NPDA. This method works reasonably well on smaller grammars that have been tested like JSON. But it is unlikely to scale to larger grammars. This is mainly because using an NPDA as a parser is computationally expensive for large grammars. Typically, compilers use parsers like LL(k) or LR(k), which are fast simulators of PDAs and support a major subset of context-free grammars that we generally care about.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-07-06 21:34:58",
+            "replies": []
+        }
+    ]
+}

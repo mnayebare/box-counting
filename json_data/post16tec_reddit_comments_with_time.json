@@ -1,0 +1,152 @@
+{
+    "post_title": "Adaptive RAG: A retrieval technique to reduce LLM token cost for top-k Vector Index retrieval [R]",
+    "post_timestamp": "2024-03-28 14:55:31",
+    "last_comment_timestamp": "2024-03-31 23:21:08",
+    "time_difference": "3 days, 8:25:37",
+    "comments": [
+        {
+            "author": "proturtle46",
+            "body": "Couldn\u2019t we just use a distance threshold instead of top k to dynamically retrieve documents \n\nMy main issue with self rag and this is that it incurs extra llm calls which is what drives cost and inference time",
+            "score": 16,
+            "depth": 0,
+            "timestamp": "2024-03-28 17:46:36",
+            "replies": [
+                {
+                    "author": "dxtros",
+                    "body": ">Couldn\u2019t we just use a distance threshold instead of top k to dynamically retrieve documents\n\nThis is unlikely to change anything in the LLM token cost question. Vector index retrievals are fast and inexpensive compared to LLM use. In the RAG setup, the usefulness of the vector metric is first of all in that it allows to sort (rank) documents by relevance (from the closest to the furthest, with some cutoff), and to pass them to the LLM, in this order. Then, cutting off by vector metric value rather than fixed k is unlikely to help in any practical scenario, and is usually worse than fixed k.\n\n>My main issue with self rag and this is that it incurs extra llm calls which is what drives cost and inference time\n\nActually, LLM API's like OpenAI don't charge per call, they charge per token used - and this is consistent with their computational effort. The presented approach saves tokens - it uses several calls with fewer tokens \\*in total\\*, rather than one call that costs a lot of tokens. While network/API latency may sometimes be a factor when calculating latencies, overall, the described approach should also have lower total inference time.\n\nThanks for these questions by the way - these are great points to bring up with the authors to clarify!",
+                    "score": 17,
+                    "depth": 1,
+                    "timestamp": "2024-03-28 17:59:29",
+                    "replies": [
+                        {
+                            "author": "proturtle46",
+                            "body": "Thanks for the explanation I\u2019ll try using this in my rag setup and see how it affects cost nice job",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-03-28 18:16:32",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Evirua",
+            "body": "What does \"if the llm refuses to answer\" mean? Isn't it a strong assumption that an arbitrary llm is proficient enough to not hallucinate and admit it doesn't know enough to answer?\n\nRefusal could also be due to safeguards, or reasons other than \"not enough context\". How is refusal detected or parsed? I couldn't figure that out from the article.",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2024-03-28 21:05:46",
+            "replies": [
+                {
+                    "author": "dxtros",
+                    "body": "Great question, and indeed the point might merit more visibility in the text. The LLM \"refusing to answer\" means that the LLM conforms to its prompt, which explicitly asks it to print a specific string: information\\_not\\_found\\_response = \"I could not find an answer.\" in case it decides it is unable to provide an answer. See here for the exact prompt template used [https://github.com/pathwaycom/pathway/blob/main/python/pathway/xpacks/llm/prompts.py#L134](https://github.com/pathwaycom/pathway/blob/main/python/pathway/xpacks/llm/prompts.py#L134) . If the LLM prints this string precisely, and only then, a further call to the LLM is made with more chunks in the prompt. Of course, this vanilla approach leaves room for further improvement in different directions, possibly depending on the use case and the specific LLM used.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-03-28 21:20:35",
+                    "replies": [
+                        {
+                            "author": "Evirua",
+                            "body": "I see. Thank you for the explanation.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-03-28 21:41:48",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "EchoOdysseus",
+            "body": "How does this compare to something like MMR search? I\u2019ll take a better look at the paper tonight but off hand it seems like something to check.",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2024-03-28 20:14:28",
+            "replies": [
+                {
+                    "author": "dxtros",
+                    "body": "The two approaches are distinct and could be complementary. MMR search uses cosine distance to sparsify and/or re-rank the set of top-k candidates, before ever calling into an LLM. Adaptive RAG makes use of LLM outputs obtained in multiple stages to decide at what stage (for what value of k) the k chunks it has seen so far are sufficient to provide a definite answer.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-03-28 20:24:19",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Adventurous_List_365",
+            "body": "Have you tried this with DBRX?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-03-29 03:57:51",
+            "replies": [
+                {
+                    "author": "dxtros",
+                    "body": "Not quite yet - DBRX is... well, big, but yes, we'll take a moment to take it for a spin soon.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-03-29 04:00:52",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "RippSir",
+            "body": "This is a good approach however I can see two potential problems:\n1. This approach would reduce accuracy on questions that require the combined knowledge of several documents. The LLM could confidently answer from only a franction of what is necessary and this could lead to wrong answers.\n2. It is problematic to use this approach in situations where the response is streamed to reduce time to the first visible token.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-03-29 06:39:42",
+            "replies": [
+                {
+                    "author": "dxtros",
+                    "body": ">This approach would reduce accuracy on questions that require the combined knowledge of several documents.\n\nTrue! - this limitation on the type of supported questions is (hopefully) discussed in the text. Workarounds are potentially interesting. One partial one could be to start the adaptive k-value not from 2 but from a larger constant (like 4 or 5). Another partial one could be allow the LLM to answer according to a template, signifying that it has found a partial answer but would be likely to need more context - it often knows this if one document e.g. references another that seems to be missing. \n\n>It is problematic to use this approach in situations where the response is streamed to reduce time to the first visible token.\n\nActually, the problem exists already in any top-k RAG approach. If the answer is in the n-th chunk in the prompt, the LLM cannot start streaming output before getting to this chunk. In this approach the delay may indeed be aggravated, but by a factor of 2x at most if you are really unlucky (more like 1.4x on average depending on answer distributions in chunks); this can be reduced further by tuning geometric series parameters. By contrast, if for a given problem the LLM is unable to stream first outputs before reading all inputs, the delay is actually reduced.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-03-29 08:29:13",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "SatoshiNotMe",
+            "body": "This is an interesting take on a 3-way tradeoff: accuracy (precision/recall), token cost, latency. This prioritizes token cost and precision at the expense of latency. \n\nAnother approach is to retrieve top k chunks via various methods (e.g. semantic via vecdb, lexical via keyword/bm25, fuzzy search, etc), then apply **relevance extraction:** use k async/concurrent calls to the LLM to identify **relevant extracts** from each of these, and feed those into the context for the LLM compose a final answer. During relevance extraction, all k chunks will be \"seen\" by the LLM (hence we don't save on *input* token cost), but you can avoid a large *output* token cost by *numbering* your sentences or segments and simply asking the LLM to identify the relevant segment numbers. This approach addresses the issue of confusion due to too many irrelevant chunks (hence achieves good precision, as well as good recall if k is sufficiently large), but latency stays low due to the async relevance extraction.\n\nWe use this approach in Langroid's [DocChatAgent](https://github.com/langroid/langroid/blob/main/langroid/agent/special/doc_chat_agent.py), which uses a separate RelevanceExtractorAgent to do the async/concurrent relevance extraction. I've written about this in [this post](https://www.reddit.com/r/LocalLLaMA/comments/17k39es/relevance_extraction_in_rag_pipelines/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-03-29 08:28:03",
+            "replies": [
+                {
+                    "author": "dxtros",
+                    "body": "Interesting to compare approaches! The *prioritization* is as you write (token cost and precision come before latency), however, very often - not to say in principle - the approach may *improve* latency, too. A lot of discussions around this in comments!",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-03-29 08:32:04",
+                    "replies": []
+                },
+                {
+                    "author": "dxtros",
+                    "body": "Also thanks for the tips on reducing output cost, it may be compatible / possible to combine approaches, for the use cases where both apply. But LLM's are so unpredictable that it's better to benchmark this before saying anything definite.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-03-29 08:44:21",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Combination-Fun",
+            "body": "if at all you wish to learn basic RAG before advanced topics like this, check these quick videos: \n\nTheory: [https://youtu.be/4XTLrPvayew?si=j8XQ2BBAtAiksfPN](https://youtu.be/4XTLrPvayew?si=j8XQ2BBAtAiksfPN)\n\nImplementation: [https://youtu.be/WcgoYKLkQos?si=dvCsqhItiOSyNS9l](https://youtu.be/WcgoYKLkQos?si=dvCsqhItiOSyNS9l)",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-03-30 14:05:10",
+            "replies": []
+        },
+        {
+            "author": "CudoCompute",
+            "body": "A 4x cost reduction is substantial! We can understand the challenge of managing costs while trying to get the most out of your LLM token with vector retrieval. In cases like this, [Cudo Compute](https://www.cudocompute.com/?utm_source=reddit&utm_medium=organic&utm_campaign=community-engagement&utm_term=/r/machinelearning) \\- a high-performance computing marketplace, can be a great help. It provides an affordable and accessible alternative to AWS, Azure, and Google Cloud without compromising performance. You might find it has the resources and pricing model best suited for AI and machine learning tasks you're working on. Best of luck!",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-03-31 23:21:08",
+            "replies": []
+        }
+    ]
+}

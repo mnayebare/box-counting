@@ -1,0 +1,264 @@
+{
+    "post_title": "[R] Say What You Mean: A Response to 'Let Me Speak Freely'",
+    "post_timestamp": "2024-11-21 17:57:45",
+    "last_comment_timestamp": "2025-03-23 01:03:57",
+    "time_difference": "121 days, 7:06:12",
+    "comments": [
+        {
+            "author": "ResidentPositive4122",
+            "body": "Great rebuttal. The errors in the paper are glaring, and remind me of the early papers saying \"synthetic data leads to model collapse\", which obviously didn't happen w/ L3.1 and all the other models heavily trained on synthetic data. Sure, if you're using it poorly, it can do that, but that's a different discussion.\n\nI don't know if this was a \"need to publish something\" problem or a deep lack of understanding about what guided generation really means, but the glaring errors in the prompting and the lack of examples, choice of poor examples and so on is really amateur level. You'd expect better.",
+            "score": 16,
+            "depth": 0,
+            "timestamp": "2024-11-22 02:11:56",
+            "replies": [
+                {
+                    "author": "marr75",
+                    "body": "When OpenAI reimplemented SWE-Bench (Verified), the summary of the work included an important tidbit: based on the setup/configuration/agentic \"harness\", there was a 8-fold difference in performance. No model change, no tuning.\n\nI don't think most research teams have absorbed that and I believe even fewer could do anything about it if they had. It doesn't help that there's a large bias against \"post-training research.\"\n\nTo evaluate a technique/idea, you must give it a charitable setup. That takes time, effort, funds, and expertise. It's hard to do that when you have an idea to dunk on something and want to do it quickly and cheaply (in deference to your constraints).",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2024-11-22 09:57:46",
+                    "replies": []
+                },
+                {
+                    "author": "CountBayesie",
+                    "body": "Thanks! \n\nWhat is interesting is that going through the code and the experiment data it is clear that a fair bit of time and effort was put into this paper.\n\nGiving the benefit of the doubt, I suspect what happened here (and in many of these other cases) is a failure to heed Feynman's famous advice:\n\n> \u201cThe first principle is that you must not fool yourself\u2014and you are the easiest person to fool.\u201d\n\nRight now everyone working in this space is hoping to find something interesting and novel that they can publish. There's so much poorly understood or explored that it's not even terribly unlikely that any given researcher *will* find something new and exciting just by poking around. The trouble I'm guessing in this case was seeing something that *looked* interesting and running with it before really doing the due diligence and checking that it was in fact as interesting as it appeared.\n\nI sometimes joke that in ML work the difference between a junior and an experience practitioner is that a junior practitioner sees a great result on the first run of a model and says \"awesome! I can't believe this is so good on my first pass!\" and the more experience practitioner says to themselves \"darn it, I bet there's a bug in there...\". I think that's a bit of what's happening here, compounded by the fact that the community also doesn't have time/energy for due diligence, which means more junior researchers don't get the guidance/feedback they should.",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2024-11-22 13:46:35",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "314kabinet",
+            "body": "Wow, the instruct prompt in the paper they rebut was hilariously bad.",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2024-11-22 04:52:06",
+            "replies": [
+                {
+                    "author": "cameron_pfiffer",
+                    "body": "\"please use the tool\"",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-11-22 12:06:36",
+                    "replies": [
+                        {
+                            "author": "314kabinet",
+                            "body": "The real tool was them all along.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-11-22 12:07:25",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "JustOneAvailableName",
+            "body": "> One practice I encourage when writing prompts is to always ask yourself \u201cdoes this prompt contain enough information that a reasonably well informed human could answer the question correctly?\u201d\n\n\nI am concerned that people need this hint",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2024-11-22 09:31:58",
+            "replies": [
+                {
+                    "author": "marr75",
+                    "body": "Seems like fundamental information theory alone should lead you to it, but alas.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-11-22 09:34:35",
+                    "replies": []
+                },
+                {
+                    "author": "currentscurrents",
+                    "body": "It\u2019s an even bigger issue for tabular or time series datasets, because they contain relatively less information.\n\nIf you can\u2019t see a trend on a time series graph, odds are there isn\u2019t one.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-11-22 11:50:47",
+                    "replies": [
+                        {
+                            "author": "DeceptivelyQuickFish",
+                            "body": "thats grossly over generalizing",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-11-22 15:04:59",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "medcanned",
+            "body": "Outlines is a great library, really appreciate the work you do. I am happy to read a critique of this paper, I didn't take the time to critically read it when it came out and must say it left me with a negative view of structured generation. I am glad to learn this was inaccurate as unstructured data is quite painful to work with!",
+            "score": 15,
+            "depth": 0,
+            "timestamp": "2024-11-21 18:09:06",
+            "replies": [
+                {
+                    "author": "CountBayesie",
+                    "body": "Thanks so much! It's great to hear such positive feed back!\n\nIt is definitely a challenge in this space to just keep up with the papers, let alone dive into the details to make sure their claims are accurate.\n\nGlad you can confidently use structured generation again!",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2024-11-22 11:53:13",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "marr75",
+            "body": "> We are passionate about structured generation, and truly believe it has the potential to transform the work being done with LLMs in profound ways. \n\nStraight up, hard agree. Even if LLMs were frozen in place today, they'd still have incredible value based on this application. Guess what you can do with structured generation:\n\n- Create databases from chaos\n- Fill out forms\n- Call functions\n- Use tools\n\nWe will be implementing software and data systems relying on these functionalities for a decade and apps based around pointing, clicking, and filling out web forms will feel like terminal green-screens soon.",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2024-11-22 09:50:24",
+            "replies": []
+        },
+        {
+            "author": "SatoshiNotMe",
+            "body": "Very interesting! In my experience one area where performance *does* suffer with structure constraints is when you are trying to get an LLM to return **code** within a JSON-structured format. There are two issues - \n\n* JSON is very restrictive in what can appear inside the quoted value - escaped newlines, etc. Especially weak models have a hard time doing this right, and results are often mangled beyond repairability by libs such as json-repair.\n* The very act of restricting to JSON *seems* to hurt code quality/accuracy, according to some studies, e.g. [https://aider.chat/2024/08/14/code-in-json.html](https://aider.chat/2024/08/14/code-in-json.html)\n\nTo address the first issue, an alternative to JSON-structured responses is to use XML-based structures, -- now code can be returned **verbatim** within a CDATA XML block, no need to escape newlines, etc.  LLMs have seen tons of XML in their training so they have no problem generating valid XML. To support this, we recently added XML-based tool-calls to Langroid (a multi-agent LLM framework from CMU/UW-Madison researchers):\n\n[https://langroid.github.io/langroid/notes/xml-tools/](https://langroid.github.io/langroid/notes/xml-tools/)",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2024-11-22 07:28:31",
+            "replies": [
+                {
+                    "author": "CountBayesie",
+                    "body": "The code generation one *is* interesting and we haven't had time to dive into this one yet (but are well aware of that post).\n\nWhat's interesting is that prior to working with .txt a team I was on *was* using function calling (this was before OpenAI released their structured features) for code gen and our internal evals got better results when the code was in FC JSON response.\n\nThat said, I'm less initially skeptical of aider's results as it wouldn't surprise me if getting code back in a JSON response impacted the code quality. Not because of inherent limitations with structured generation, but rather because the most straight forward structure would clearly be *the code itself*.\n\nNow it should be possible to use structured gen to actually enforce the Python/SQL/whatever grammar directly, and I would be very curious to see how that performs.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-11-22 12:31:00",
+                    "replies": [
+                        {
+                            "author": "SatoshiNotMe",
+                            "body": "I personally ran into the code-gen issue when trying to have the LLM generate code edits, where it has to send a structured msg with a few different fields - filename, line_range, and new_content. The frontier LLMs are usually but not always good at doing this in JSON and taking care of the various escaping required, but the weaker LLMs do badly. Switching to Langroid\u2019s XML-based tools got rid of this issue even for weak LLMs.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-11-22 18:00:10",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Terrible_Net8466",
+            "body": "I read your blog post in showing that Struct actually does well than Unstruct. And I see how the authors have missed an important error in the \"Perfect Text Parser\". Thank you for pointing that out.\n\nBut, I really don't think the whole conclusion in the **paper** is about *Structured Generation* as conforming to a specific schema/pattern. I think they meant to compare formats like JSON/XML with natural language reasoning. Their JSON reasoning, however, simply a separation of *\"step-by-step reasoning\"* and *\"answer\".* \n\n>***Abstract***  \n*Structured generation, the process of producing content in standardized formats like JSON and XML, is widely utilized in real-world applications to extract key output information from large language models (LLMs)*\n\nIn your **blog**, I understand that you are comparing Structured vs. Unstructured as conforming to a particular pattern or not (correct me if I'm wrong)? And while this is a pretty interesting result that uncovers model behaviour, I am not convinced if it categorically rebuts the paper.\n\n  \nFurthermore, you speak of comparing apples-to-apples, but aren't you using an enhanced prompt for the JSON experiments while using the same simple prompt for NL? Like you say, the whole point should be to have a fair battle ground for both of them. I accept that the authors have used a slightly worse prompt in their JSON experiments (I think this accounts for having multiple investigators and poor communication about the prompts to be used?), but the same goes in your blog where you are using the same prompt in the paper for NL while using an enhanced prompt for JSON.\n\n  \nI would like to discuss this and explore further with you guys about this behaviour, as I'm currently doing a study comparing JSON vs NL as well.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-12-13 03:40:04",
+            "replies": [
+                {
+                    "author": "CountBayesie",
+                    "body": "Thanks for this detailed response! I'll try my best to answer:\n\nI'm a bit confused here:\n\n> but aren't you using an enhanced prompt for the JSON experiments while using the same simple prompt for NL?\n\nStructure is used for *both* the NL and JSON prompt. So the comparison is NL structured vs NL unstructured, and JSON structured vs JSON unstructured. Structure can be applied to natural language just as easily as it can JSON.\n\nOne of the challenges with \n\n> I think they meant to compare formats like JSON/XML with natural language reasoning\n\nis that ultimately the paper isn't really sure itself what it's testing: they're testing different prompts, different formats, different parsers all at the same time so you can't come to any meaningful conclusion about what is being said. The only thing to go with is what they claim in the paper: \"Our study reveals that structured generation constraints significantly impact LLM performance across various tasks.\"\n\n- If they wanted to test different *formats* for prompts, then there's no reason constraint the output at all. But, for this to work, there also needs to be an earnest effort to squeeze the most performance out of each format. This is because, as [Sclar et al](https://arxiv.org/abs/2310.11324) showed, prompts are *extremely* sensitive to small changes in format. Note that they *do* cite Sclar, but then use the average of 9 arbitrary prompts which isn't a great way to compare, in practice people will always use the *best* prompt they can.\n\n- If they wanted to test the impact of *structure* (i.e. constrained outputs) then they should have done comparison of identical prompts with and without structure, and parsed the output of each in identical ways. \n\n- If they wanted to test AI parsing then all they needed to do run the prompt once and run a series of parsers on the output. However, if this was the test they wanted to do, they also should have seen how well the AI parsing model would have done on the task by itself (that is, why use two models when you can use just one, the parsing model).\n\nI'd love to chat more if you're interested in researching this area! You can email me at \"will\" at the company domain (\"dottxt.co\"). Another person who has done a really nice further exploration of this specific paper is Dylan Castillo who found that the [papers conclusion *did* hold in most cases when working with GPT](https://x.com/dylanjcastillo/status/1867154938759155750) (though to be fair, we don't know what OpenAI uses for structured gen, though it doesn't seem to be using the same technique as Outlines). Dylan was also able to successfully reproduce the results of our blog post (and improve them!).\n\nAll that said (and I know this is a lot!), what this space really needs is not endless evaluations (which imho should mostly stick to blog posts) but real theoretical foundations. We can only make theoretical claims about the implications of evaluations if we actually back up those claims with a *theoretical* foundation. After all, structured generation is just a conditional probability distribution over the logits and *all generation is really structured generation* it's just the default structure is `.*`. To really answer the question \"does structured generation impact results\" we need to dive into sequential Monte-carlo research and start describing what the conditions where constraining the output has a theoretical impact and are those conditions met in real world LLM usage. Clearly constraining to `.*` has no impact since that's what we consider \"unstructured\" and clearly constraining to `[A-Z]{3}`will hurt generation because it's not possible to correctly output 4 letters.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-12-13 14:00:21",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Then_Income_6563",
+            "body": "Check out our new paper, where we theoretically prove that constrained decoding preserves performance when the output grammar is augmented with additional rules to parse Chain-of-Thought (CoT) reasoning steps.   \n  \nBuilding on this insight, we introduce **CRANE**, a constrained decoding algorithm that enforces the output grammar only when the LLM generates the final answer, leaving intermediate reasoning steps unconstrained. Experiments on multiple open-source LLMs and benchmarks demonstrate that CRANE significantly outperforms both state-of-the-art constrained decoding methods and standard unconstrained decoding, achieving up to a **10-percentage-point** accuracy boost over baselines on symbolic reasoning benchmarks like GSM-symbolic and FOLIO.    \n  \nArXiv: [https://arxiv.org/abs/2502.09061](https://arxiv.org/abs/2502.09061)",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-02-22 16:57:15",
+            "replies": [
+                {
+                    "author": "CountBayesie",
+                    "body": "This is very cool! Thanks for sharing and I'll definitely take a look!",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-03-12 19:35:18",
+                    "replies": []
+                },
+                {
+                    "author": "CountBayesie",
+                    "body": "In the paper you claim:\n\n> We theoretically show that the loss of expressivity of\nLLMs under constrained decoding arises because the out-\nput grammar G is too restrictive to accommodate the inter-\nmediate reasoning steps required to compute the answer\n\nBut we have a trivial counter example we did [last year]( https://blog.dottxt.co/performance-gsm8k.html). In those example we allow the model to essentially reason freely (we use a slightly more restrictive constraint than `.*`, but essentially it can reason however it wants). \n\nIt's not clear to me how CRANE represents anything novel over what's currently possible using structured generation. CRANE can be expressed as regex/Grammar with an essentially some variation on `.*` for the reasoning step.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-03-14 14:54:47",
+                    "replies": [
+                        {
+                            "author": "Then_Income_6563",
+                            "body": "Hey,  \nSorry for the late reply\u2014I just saw your comment. The main claim is that constrained decoding with an **overly restrictive output grammar** results in a loss of precision. However, this is not an inherent issue with constrained decoding itself but rather a limitation of the grammar being too restrictive. If you augment the grammar with additional rules\u2014such as the regular grammar (as you did)\u2014it will preserve expressivity for **any arbitrary task** (i.e., any given Turing machine). This provides a theoretical explanation for your observation.\n\nIn summary, **constrained decoding does not inherently reduce expressivity for any task**, as long as the grammar used is sufficiently expressive.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-03-23 01:03:57",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "f0urtyfive",
+            "body": "I can see the value in structure, but why do you think structure means \"json\", that seems rather silly, I'd see a lot more value in a linguistically programatic structure that allows for extreme variation while maintaining consistency in the core message, and reversibility to a common format to allow for training regeneration.",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2024-11-22 01:13:00",
+            "replies": [
+                {
+                    "author": "ResidentPositive4122",
+                    "body": "It's not just json though. I've seen teams implement xml with good results. Or \"custom\" schemes. The trick seems to be to find a structured form that the model has seen plenty of in the pre-training phase, and explain / give examples of the desired output while also constraining the outputs via libraries such as outlines. Doing one without the other leads to bad results.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-11-22 01:52:38",
+                    "replies": [
+                        {
+                            "author": "Familiar_Text_6913",
+                            "body": "Structured outputs sound very useful compared to typical LLM output. To me there seems to be 3 different components to it. Structure of the source material (prompt), abstraction level (image of an astronaut -- string 'astronaut') and of course output (json, xml..).\n\nIf I understand dottxt correctly, they mostly focus on the last, while any LLM can provide the first 2? I'm sorry for being ignorant, I've not read about this before.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-11-22 04:35:54",
+                            "replies": []
+                        },
+                        {
+                            "author": "f0urtyfive",
+                            "body": "Right, but you could achieve the same \"structure\" with normal language.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-11-22 01:53:57",
+                            "replies": [
+                                {
+                                    "author": "ResidentPositive4122",
+                                    "body": "You could, but then you'd have to worry about and implement response parsing. That's the key about structured output. You get a guaranteed grammatically correct output every time. Semantically correct is up to you (via prompting, examples provided, etc.)\n\nThe blog post explains this. You can't prompt the model *without an example* and expect it to provide semantically correct json automagically. I have no idea why the paper did that, but it's extremely bad.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-11-22 02:08:12",
+                                    "replies": [
+                                        {
+                                            "author": "f0urtyfive",
+                                            "body": "Well right, my point is more you don't need literal structure to have structure, you can have virtual structures within your content.\n\nI can't imagine what kind of weird maladaption a human would have if you forced them to speak in valid JSON... but I would expect it to have weird side effects in any intelligence.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-11-22 09:30:11",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "CountBayesie",
+                    "body": "> do you think structure means \"json\"\n\nI could be misunderstanding who \"you\" is in this context, but in our rebuttal this is one of our major points: structured generation is not about specifically JSON, but rather running the results parser in reverse.\n\nIt just happens that in this example JSON (even unstructured) *does* yield better results on the last letter eval.\n\nMost of my personal use of structured generation rarely uses JSON directly and typically starts with modeling the structure of the task as it appears in natural language. \n\nI do have an experiment I would like to run at some point that does iterate on a variety of formats for a variety of tasks *and* a variety of models ([here is an example](https://blog.dottxt.co/images/gsm8k_consistency_result.png) where JSON, unstructured, does worse than a NL style prompt) and see if we can find any evidence of consistently better formats.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-11-22 12:36:04",
+                    "replies": [
+                        {
+                            "author": "f0urtyfive",
+                            "body": "Well right, I'm just saying more, I would think that structured output that is created with natural language rather than programmatically parsed languages, would improve things much further than either of those.\n\nEssentially, applying a translation layer that outputs a deterministically varied natural language output, which can be transformed in either direction to and from the underlying \"structure\".",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-11-22 13:56:02",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

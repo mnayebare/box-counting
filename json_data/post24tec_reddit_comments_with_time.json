@@ -1,0 +1,403 @@
+{
+    "post_title": "Beginner's guide to finetuning Llama 2 and Mistral using QLoRA",
+    "post_timestamp": "2023-11-06 11:23:26",
+    "last_comment_timestamp": "2025-08-14 05:52:35",
+    "time_difference": "646 days, 18:29:09",
+    "comments": [
+        {
+            "author": "Deleted",
+            "body": "Amazing, I stil feel like a complete noob in this space and tutorials like this are a great help",
+            "score": 10,
+            "depth": 0,
+            "timestamp": "2023-11-06 13:06:19",
+            "replies": []
+        },
+        {
+            "author": "Diligent-Direction95",
+            "body": "Great guide. \n\nCan I get a ballpark on how long, how much memory, and what GPU fine tuning Mistral with QLoRA takes?",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2023-11-06 18:17:05",
+            "replies": [
+                {
+                    "author": "HatEducational9965",
+                    "body": "~~for the OA dataset: 1 epoch takes 40 minutes on 4x 3090 (with accelerate). extrapolating from this, 1 epoch would take around 2.5 hours on a single 3090 (24 GB VRAM), so 7.5 hours until you get a decent OA chatbot .~~\n\nSingle 3090, OA dataset, batch size 16, ga-steps 1, sample len 512 tokens -> 100 minutes per epoch, VRAM at almost 100%\n\n&#x200B;\n\nhttps://preview.redd.it/sducq6i44yyb1.png?width=5056&format=png&auto=webp&s=bbd5d09098c080d78099cf422a0a3d195b33b5a4",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-11-07 00:51:52",
+                    "replies": [
+                        {
+                            "author": "HatEducational9965",
+                            "body": "&#x200B;\n\nhttps://preview.redd.it/tl18tf2a4yyb1.png?width=5056&format=png&auto=webp&s=5291e5c22e85c8f91a4e8c2324f0fd578870e3e2",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-11-07 10:40:10",
+                            "replies": []
+                        },
+                        {
+                            "author": "Formal_Adeptness8189",
+                            "body": "RuntimeError: \\[enforce fail at inline\\_container.cc:764\\] . PytorchStreamWriter failed writing file data/87: file write failed During handling of the above exception, another exception occurred: RuntimeError Traceback (most recent call last) RuntimeError: \\[enforce fail at inline\\_container.cc:595\\] . unexpected pos 4160943872 vs 4160943760 During handling of the above exception, another exception occurred: RuntimeError Traceback (most recent call last) RuntimeError: \\[enforce fail at inline\\_container.cc:764\\] . PytorchStreamWriter failed writing file data/0: file write failed During handling of the above exception, another exception occurred: RuntimeError Traceback (most recent call last) /usr/local/lib/python3.10/dist-packages/torch/serialization.py in \\_\\_exit\\_\\_(self, \\*args) 473 474 def \\_\\_exit\\_\\_(self, \\*args) -> None: --> 475 self.file\\_like.write\\_end\\_of\\_file() 476 if self.file\\_stream is not None: 477 self.file\\_stream.close() RuntimeError: \\[enforce fail at inline\\_container.cc:595\\] . unexpected pos 576 vs 470\n\nCan anyone explaine i try to save  my mixtral 7b in q4\\_k\\_m GGUF ith a T4",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-06-02 05:45:44",
+                            "replies": []
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "[deleted]",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-11-07 15:00:22",
+                            "replies": [
+                                {
+                                    "author": "HatEducational9965",
+                                    "body": "you could rent a GPU on [https://www.runpod.io/](https://www.runpod.io/), 3090 for $0.34/hr",
+                                    "score": 6,
+                                    "depth": 3,
+                                    "timestamp": "2023-11-07 15:44:18",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "o_hi_mrk",
+            "body": "Nice tutorial. I did notice that your explanation of LoRA Rank is inaccurate. LoRA always trains all the parameters of each layer, but it keeps them in two smaller matrices that get multiplied together. Rank determines the size of these two smaller matrices, which affects the final precision of the training, but they always get multiplied together into the same size output, which has the same number of parameters as the layer and gets added to it.",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2024-01-01 09:04:08",
+            "replies": [
+                {
+                    "author": "HatEducational9965",
+                    "body": "Just updated the text. Thank you!",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-01-01 10:43:15",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "night_2_dawn",
+            "body": "Thanks for breaking everything down clearly. Quick question: when you mention dataset creation, are you mostly using pre-existing datasets, or can this setup handle pulling fresh data from the web (e.g., dynamic content or structured data scraping)? I\u2019ve used Oxylabs in the past to automate data collection from websites at scale (for building training sets), and I\u2019m wondering if that kind of setup would integrate well with a QLoRA-based finetuning pipeline like this.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-08-14 05:30:19",
+            "replies": [
+                {
+                    "author": "HatEducational9965",
+                    "body": "I've mostly used custom or modified datasets. After all this guide was about customising an LLM to your specific needs",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-08-14 05:52:35",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "herozorro",
+            "body": "can this run on a local M1/16gig. or is this suppposed to be done on a pay for compute place?",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-11-06 15:06:53",
+            "replies": [
+                {
+                    "author": "Amgadoz",
+                    "body": "If it's a qlora, you can try it on the free T4 colab notebook",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-11-06 16:17:42",
+                    "replies": [
+                        {
+                            "author": "herozorro",
+                            "body": "what is the final output that you can take with you to use locally?\n\ni thought the collab compute are hampered by a few minutes/hour of use. what would stop and resume look like?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-11-06 16:27:19",
+                            "replies": [
+                                {
+                                    "author": "Amgadoz",
+                                    "body": "You can download the finetuned model to use it however you want. You can also save it in your google drive (assuming it fits there).",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2023-11-06 16:42:46",
+                                    "replies": [
+                                        {
+                                            "author": "herozorro",
+                                            "body": "thank you for your many replies",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2023-11-06 17:20:35",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "herozorro",
+            "body": "how would this method be adapted to trying to train a base code LLM to learn a new python frameworks api?",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-11-06 15:08:35",
+            "replies": [
+                {
+                    "author": "Amgadoz",
+                    "body": "The method is the same, you just need a \"good\" dataset for this task.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-11-06 16:17:02",
+                    "replies": [
+                        {
+                            "author": "herozorro",
+                            "body": "so how would that look like? a cheat sheet format?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-11-06 16:17:44",
+                            "replies": [
+                                {
+                                    "author": "Amgadoz",
+                                    "body": "I would suggest taking a look at existing code datasets. You can search for them on huggingface hub.",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2023-11-06 16:39:05",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "Byt3G33k",
+                                    "body": "I haven't fine tuned yet but made a dataset for my Machine learning course by converting PDF contents to XML and then extracting the non meta-data as each \"response\" in a traditional \"prompt\"-\"response\" pair. I then synthetically generate a prompt for each response using OpenAI's API.\n\nSo your data could be extracted as the response  you are expecting from the LLM and then generate the prompts.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2023-11-06 23:49:06",
+                                    "replies": [
+                                        {
+                                            "author": "herozorro",
+                                            "body": "> I then synthetically generate a prompt for each response using OpenAI's API.\n\nhow is this done? what do you mean?\n\n> So your data could be extracted as the response you are expecting from the LLM and then generate the prompts\n\nSo for coding framework, it would be what kind of questions a user would be likely to ask to get the code they want? How would i go about knowing all the combinations though?  \n\nANd how on earth does the LLM go about konwing exactly how the framework api (with all its boilerplate code, parameters, etc) works?",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2023-11-06 23:55:52",
+                                            "replies": [
+                                                {
+                                                    "author": "Byt3G33k",
+                                                    "body": "My groups project isn't the same in terms of training on code but rather educational textbooks. \n\nWe are working on querying OpenAI's API with just a Python script where we prompt GPT 3.5 (cheaper than 4 and 'good enough' for my group project). In the prompt, we inform it that we are making a synthetic dataset, and for each message we send it, we want a prompt where an LLM would generate such a response. Then GPT *should* respond with the prompt, and we loop it from there. It'll probably require some cleaning, but tis the life of making a dataset. \n\nFor your use case, I would imagine that you would give it a program, or code snippet, if it's too long, as the responses. But in a similar manner, GPT could generate prompts for LLMs to use that would generate said response (or for them to be fine-tuned to generate that response). \n\nThe goal isn't to brute force this. It's more or less to allow the model to learn patterns in the dataset. Syntax is a bit harder since that is rote memorization, whereas my use case, English has patterns that can be measured via perplexity as a metric against a given dataset, like wikitext.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2023-11-07 01:55:12",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "SoapDoesCode",
+            "body": "Do you know if your QLoRA script allows for finetuning a base model (in my case RedPajama-INCITE-Base-3B), and then being able to fine tune the produced checkpoint even further with more data in the future? I've tested that RedPajama itself can be used with the script but not yet fine tuning a 2nd time",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-03-28 09:53:23",
+            "replies": [
+                {
+                    "author": "HatEducational9965",
+                    "body": "Technically yes. If it makes sense, I don't know, have not tried this myself",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-03-28 10:55:09",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Infamous_Company_220",
+            "body": "\n\nI have a doubt, I fine tuned a peft model using llama 2. when I inference , it returns out of the box (previous knowledge/ base knowledge). But I just only want the model to reply only with my private data. How can I achieve it ?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-07-11 05:12:47",
+            "replies": [
+                {
+                    "author": "CheatCodesOfLife",
+                    "body": "You can't. Fine tuning doesn't really teach the model things (unless you overfit and make the model repeat the training verbatim, but you don't want to do that lol).\n\nWhat you're after is RAG. Store your data in a vector db, and it will prepend your prompt with the relevant sections. Then ensure your system prompt tells the model to only reference data with the prompt.\n\nHere's an implementation of RAG but retrieving data from web search instead of a private dataset.\n\nhttps://www.perplexity.ai/\n\nSo if you try to search for \"sklejKJAOITGRJOijfOIEJAGOIJlksdjfglkRJEEALGKJ\" then it won't find any results, and will tell you this.\n\n(note: If someone reads this in the future after this reddit post is indexed, the specific random string above might show up lol)",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-07-18 19:50:45",
+                    "replies": [
+                        {
+                            "author": "Grand_Internet7254",
+                            "body": "Or function calling or tool use might also be useful in your case :)",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-08-10 09:03:53",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "edwios",
+            "body": "Would this work locally on a Mac M1 / M2 machine? Don\u2019t want the training data to be seen by the others.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2023-11-07 14:34:43",
+            "replies": []
+        },
+        {
+            "author": "toothpastespiders",
+            "body": "I think it's fantastic, it's definitely going to be one I recommend to people starring out! \n\nAnd since you're asking for thoughts and suggestions? And with quick apologies in advance since my ability to see is fading fast and my reading comprehension is sinking along with it. \n\nOne point that I think could be expanded on is the load_dataset function. In particular some explanation on how it can be used for both local and remote datasets. I know that's bordering on explaining how to use ls or something, but I think it's it's a point that could cause confusion for some people depending on what background they're coming from. \n\nAnd for the 'Create dataset based on a book' section it might be useful to show both how to use it with your formatting and also how to format the dataset so that it specifies Anthony Bourdain with each item in the dataset. Kind of a 'train a model on a book' and 'train a model about a book' differentiation. \n\nI also wanted to specifically applaud the fact that you included library versioning information. I think people lose sight of just how often changes to libraries over time complicate the learning process. Having a specific set of libraries to know are verified as working for a tutorial like this is a really, really, valuable thing that I don't see done very often. \n\nBut those are pretty minor suggestions within an overwhelming appreciation for a really great, and I think much needed, guide.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-11-06 14:36:40",
+            "replies": [
+                {
+                    "author": "HatEducational9965",
+                    "body": "thank you!\n\n\\>And for the 'Create dataset based on a book' section it might be useful to show both how to use it with your formatting and also how to format the dataset so that it specifies Anthony Bourdain with each item in the dataset. Kind of a 'train a model on a book' and 'train a model about a book' differentiation.\n\nthis not clear to me, sorry, could you please elaborate on what you mean?",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-11-06 15:02:25",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Merchant_Lawrence",
+            "body": "this toturial are limited to llma and mistral or i can finetune any 3b model with this method ?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-11-07 08:39:56",
+            "replies": [
+                {
+                    "author": "HatEducational9965",
+                    "body": "depends on the architecture. which model exactly did you have in mind?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-11-07 10:38:07",
+                    "replies": [
+                        {
+                            "author": "Merchant_Lawrence",
+                            "body": "sorry for late reply 3B marx",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-11-09 02:04:21",
+                            "replies": [
+                                {
+                                    "author": "HatEducational9965",
+                                    "body": "just checked, and yes, it works in principle, starts training at least. you would have to try and see if it produces anything useful",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2023-11-10 02:57:00",
+                                    "replies": [
+                                        {
+                                            "author": "Merchant_Lawrence",
+                                            "body": "ok thanks",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2023-11-10 03:06:25",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "HatEducational9965",
+                                    "body": "this one? [https://huggingface.co/acrastt/Marx-3B-V2](https://huggingface.co/acrastt/marx-3b-v2)\n\nthis model is finetuned already, you would want to finetune the base model, in this case OpenLlama [https://huggingface.co/openlm-research/open\\_llama\\_3b\\_v2](https://huggingface.co/openlm-research/open_llama_3b_v2)",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-11-09 03:28:44",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Amgadoz",
+            "body": "!remindme",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-11-08 16:18:04",
+            "replies": [
+                {
+                    "author": "RemindMeBot",
+                    "body": "**Defaulted to one day.**\n\nI will be messaging you on [**2023-11-09 21:18:04 UTC**](http://www.wolframalpha.com/input/?i=2023-11-09%2021:18:04%20UTC%20To%20Local%20Time) to remind you of [**this link**](https://www.reddit.com/r/LocalLLaMA/comments/17p6hup/beginners_guide_to_finetuning_llama_2_and_mistral/k8euen8/?context=3)\n\n[**CLICK THIS LINK**](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5Bhttps%3A%2F%2Fwww.reddit.com%2Fr%2FLocalLLaMA%2Fcomments%2F17p6hup%2Fbeginners_guide_to_finetuning_llama_2_and_mistral%2Fk8euen8%2F%5D%0A%0ARemindMe%21%202023-11-09%2021%3A18%3A04%20UTC) to send a PM to also be reminded and to reduce spam.\n\n^(Parent commenter can ) [^(delete this message to hide from others.)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Delete%20Comment&message=Delete%21%2017p6hup)\n\n*****\n\n|[^(Info)](https://www.reddit.com/r/RemindMeBot/comments/e1bko7/remindmebot_info_v21/)|[^(Custom)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5BLink%20or%20message%20inside%20square%20brackets%5D%0A%0ARemindMe%21%20Time%20period%20here)|[^(Your Reminders)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=List%20Of%20Reminders&message=MyReminders%21)|[^(Feedback)](https://www.reddit.com/message/compose/?to=Watchful1&subject=RemindMeBot%20Feedback)|\n|-|-|-|-|",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-11-08 16:18:56",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "ProfessionalMark4044",
+            "body": "One simple question: for getting information of a 1000page book would you suggest RAG or fine tuning?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-11-09 05:01:45",
+            "replies": [
+                {
+                    "author": "HatEducational9965",
+                    "body": "RAG; finetuning adds style but only little knowledge IMO and experience",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-11-09 05:11:22",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "No-Point1424",
+            "body": "Thank you so much for the guide. I Have a few physics books and I want to finetune mistral on those. Whats the best way to get the data into correct format? should they be in Q and A pairs?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-12-15 18:44:13",
+            "replies": [
+                {
+                    "author": "HatEducational9965",
+                    "body": ">should they be in Q and A pairs?\n\nyes, I would try and see if it leads to a useful model",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-12-16 00:55:37",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "cyclistNerd",
+            "body": "Thanks so much for a great tutorial - super helpful!\n\nI am adapting your code to fine tune an adapter for Llama2 with my own dataset using 2x Titan RTX GPUs and I'm running into a perplexing issue which I can't figure out - am wondering if anyone else here has encountered anything similar, or has any suggestions.\n\nI'm using a fresh environment with torch version 2.1.1+cu121 when midway through training the training run fails with:\n            \n\n>     File ~/anaconda3/envs/qlora/lib/python3.10/site-packages/torch/autograd/__init__.py:251, in backward(tensors, grad_tensors, retain_graph, create_graph, grad_variables, inputs)\n>         246     retain_graph = create_graph\n>         248 # The reason we repeat the same comment below is that\n>         249 # some Python versions print out the first line of a multi-line function\n>         250 # calls in the traceback and some print out the last line\n>     --> 251 Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\n>         252     tensors,\n>         253     grad_tensors_,\n>         254     retain_graph,\n>         255     create_graph,\n>         256     inputs,\n>         257     allow_unreachable=True,\n>         258     accumulate_grad=True,\n>         259 )\n>     \n>     RuntimeError: Expected is_sm80 || is_sm90 to be true, but got false.  (Could this error message be improved?  If so, please report an enhancement request to PyTorch.)\n\nHowever, my torch config shows \n\n    - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90\n\nso it seems like the `is_sm80` or `is_sm90` checks should not fail... which seems related to [this](https://github.com/pytorch/pytorch/issues/98140) issue with pytorch that was patched a few months ago, and therefore my newer version of pytorch should work OK... any suggestions? Thanks!",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-12-16 02:20:55",
+            "replies": [
+                {
+                    "author": "cyclistNerd",
+                    "body": "If anyone else is looking at this, adding the following before calling `train()` fixed this for me:\n\n> with torch.cuda.amp.autocast(enabled=True, dtype=torch.float16) as autocast, torch.backends.cuda.sdp_kernel(enable_flash=False) as disable:",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-12-17 01:48:09",
+                    "replies": [
+                        {
+                            "author": "tainangao",
+                            "body": "amazing! Works for me as well",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-01-05 05:47:38",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,121 @@
+{
+    "post_title": "[R] Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation",
+    "post_timestamp": "2021-08-25 10:37:11",
+    "last_comment_timestamp": "2021-08-26 09:58:25",
+    "time_difference": "23:21:14",
+    "comments": [
+        {
+            "author": "computerResearcher",
+            "body": "Wow what a great result! It\u2019s great that this works across both large and small language models",
+            "score": 10,
+            "depth": 0,
+            "timestamp": "2021-08-25 13:06:19",
+            "replies": []
+        },
+        {
+            "author": "maizeq",
+            "body": "Looks great. What\u2019s the intuition behind why this works?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2021-08-25 22:51:18",
+            "replies": [
+                {
+                    "author": "ofirpress",
+                    "body": "Thanks! \nI think the main problem with sinusoidal embeddings is that the model 'remembers' specific position embeddings and associates certain things with them, and doesn't really understand the 'concept' that the sinusoidal embeddings are trying to encode.\n\nBy totally removing the position embeddings from the model, we block the model's ability to do this. But we still need to feed the model positional information, and so we find a much better way to do this, by just changing attention scores based on distance.\n\nThis is super hand wavy and might be totally wrong, but thats my intuition! I'm happy to answer more questions :)",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2021-08-26 00:24:05",
+                    "replies": [
+                        {
+                            "author": "ChuckSeven",
+                            "body": "Various works have shown that in autoregressive transformer models position embeddings are not necessary and even hurt performance.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2021-08-26 04:30:40",
+                            "replies": [
+                                {
+                                    "author": "ofirpress",
+                                    "body": "I know that in some cases that's true, but I've tried training word-level language models without position embeddings and it has really hurt performance. All the big autoregressive LMs that we have use position embeddings. \n\nMost (or all) of those results that you are talking about are either in speech recognition or for character-level LMs.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-26 09:48:21",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "hadaev",
+            "body": "Would be more convincing if tested in encoder and encoder-decoder tasks.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2021-08-25 14:58:07",
+            "replies": [
+                {
+                    "author": "ofirpress",
+                    "body": "Why do you think so? GPT-3 is a decoder-only model, and that was a driving force in us trying to solve this issue for decoder-only models. \nI definitely have encoder-decoder models on my to-do list, but I think our results, on 3 different LMing datasets, with models with up to 1.3B parameters, are pretty convincing as is.",
+                    "score": 11,
+                    "depth": 1,
+                    "timestamp": "2021-08-25 17:15:58",
+                    "replies": [
+                        {
+                            "author": "hadaev",
+                            "body": "There are pretty many use cases for encoder and encoder-decoder models.\n\nIf this decoder is good because it does not pay attention to distance information, it's kind of a bad thing, right?\n\nAs for gpt3, I know it is decoder only, also I found it very unstable for real applications.\n\nActually, I'm not sure what you really able to do with the decoder only model.\n\nExploring generalization on unseen sample length is very important for my tasks (what's why I'm here), but I'm not convinced to try it immidiatly.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2021-08-25 17:35:41",
+                            "replies": [
+                                {
+                                    "author": "ofirpress",
+                                    "body": "> If this decoder is good because it does not pay attention to distance information, it's kind of a bad thing, right?\nWe discuss this in depth in the analysis section. \n\nExtrapolation allows us to train a model on 1024 and test it on 2048 tokens, achieving the same accuracy as a sinusoidal model trained on 2048 tokens. This saves 11% memory and time in the 1.3B param setting, and will probably save even more resources for larger models.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2021-08-26 00:21:49",
+                                    "replies": [
+                                        {
+                                            "author": "hadaev",
+                                            "body": "Yes, I read the paper and my first thought was \"it was tested on only one task, could this be a lottery?\".\n\nClaim \"our method superior to rotary and t5\" sounds strong.\n\nSo I wonder is it general or task specific.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2021-08-26 08:06:34",
+                                            "replies": [
+                                                {
+                                                    "author": "ofirpress",
+                                                    "body": "We've tested our method on 3 pretty different datasets, ranging in size from 1 to 460 gigabytes, using models whose size is between 247M and 1.3B parameters. Lucky is not what I would call this. \n\nThis was just the initial paper and hopefully we'll be able to apply this method to more tasks and models.",
+                                                    "score": 6,
+                                                    "depth": 5,
+                                                    "timestamp": "2021-08-26 09:50:47",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Competitive-Rub-1958",
+            "body": "why isn't this on the LRA?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2021-08-26 09:50:59",
+            "replies": [
+                {
+                    "author": "ofirpress",
+                    "body": "We're focused on improving language model perplexity, training speed, memory usage and parameter count. I feel like the best tasks to evaluate our models on are language modeling and downstream tasks. \n\nIn the analysis section we try to better understand what the meaning of extrapolation actually is, both in our model and with the T5 bias. I think you'd find that interesting. We show that this isn't really about longer-range attention, this is more about improving short-range attention.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2021-08-26 09:58:25",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}

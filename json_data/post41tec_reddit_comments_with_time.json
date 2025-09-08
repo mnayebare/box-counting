@@ -1,0 +1,214 @@
+{
+    "post_title": "We built a reranker that follows custom ranking instructions",
+    "post_timestamp": "2025-03-11 13:36:17",
+    "last_comment_timestamp": "2025-03-19 23:43:41",
+    "time_difference": "8 days, 10:07:24",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "body": "**Working on a cool RAG project?**\nSubmit your project or startup to [RAGHut](https://raghut.com) and get it featured in the community's go-to resource for RAG projects, frameworks, and startups.\n\n\n*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/Rag) if you have any questions or concerns.*",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-11 13:36:17",
+            "replies": []
+        },
+        {
+            "author": "Harotsa",
+            "body": "Are you using larger decoder-based LLMs like the GPT or Llama series for reranking? If so, this is a very common use case and tutorials for reranking have been on the OpenAI website for years.\n\nThe reason why people care about using bi-encoders for reranking is because they are much smaller, faster, and cheaper than using decoder-based language models. That allows the end user to rerank a larger number of results before passing them to the decoder model.\n\nHowever, if you were able to achieve these results using only bi-encoders and other models with << 1b parameters then that\u2019s a great feat and I\u2019d be super interested in reading a blog post or paper about how you achieved the results!",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2025-03-11 17:44:36",
+            "replies": [
+                {
+                    "author": "ishanthedon",
+                    "body": "While bi-encoders are efficient, they don't generalize that well. I would love a world where they also generalize well.  \n  \nFine-tuning medium sized LLMs to be rerankers works and is more accurate and significantly more efficient than prompting GPT-4. There are multiple formulations of this though:  \n\\- Pointwise: [https://arxiv.org/pdf/2310.08319](https://arxiv.org/pdf/2310.08319)  \n\\- Setwise: [https://arxiv.org/abs/2310.09497](https://arxiv.org/abs/2310.09497)  \n\\- Listwise-FIRST [https://arxiv.org/abs/2406.15657](https://arxiv.org/abs/2406.15657)  \n  \nWe use something similar.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-03-11 21:50:39",
+                    "replies": [
+                        {
+                            "author": "Harotsa",
+                            "body": "I don\u2019t think prompting GPT-4 is a good comparison point because that is a massive model (1.2t parameters) and isn\u2019t even a SOTA model and hasn\u2019t been for a while.\n\nI think a better comparison is prompting the 5-10b parameter models like gpt-4o-mini or Llama 3.1 8b models. The pointwise paper you sent was a fine tune of a 7b parameter Llama model. And if you already knew about the papers, then why did you think your solution was the first of its kind?\n\nAnd again, even beyond those papers, using decoder-based LLMs to rerank results has been around for years (and I know of a couple of companies that even have it as part of their API offerings). \n\nIn the article on your site, you are comparing reranking results to Voyage and Cohere. But their reranker models are in the 300-700m parameter range. Assuming your solution is something similar to pointwise and you are using a fine-tuned 5-10b parameter LLM, I don\u2019t think it\u2019s helpful to only compare it to much smaller cross-encoder models. Cross-encoders are used for the reranking purpose because they are fast and cheap, allowing for reranking a larger set of results without costing much latency before passing to an LLM.\n\nAt my company we host a bge-m3 reranker model (568m params) and our reranking is sub 50 ms and it is pretty cheap to run compared to something like the Llama models.\n\nSo in curious how this reranking method compares to something like pointwise or even just raw prompting of 4o-mini or Llama 3.1 8b.\n\nAlso your project isn\u2019t open source so if my assumptions are wrong or you need to clarify something I\u2019m happy to learn, I just want to understand what you think makes your solution unique and better than well-known alternatives.",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2025-03-11 23:11:29",
+                            "replies": [
+                                {
+                                    "author": "halfprice06",
+                                    "body": "Bro you typed all that for nothing lol. Dude is a salesman he is selling his company he ain\u2019t reading all that and coming back and responding \u201cyeah you are right\u201d lmao",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-12 14:22:56",
+                                    "replies": [
+                                        {
+                                            "author": "Harotsa",
+                                            "body": "Perhaps I wasted my time, but I made the comment primarily to help inform other people that are reading this sub that may not already know the ins and outs of rerankers. That way people can get a more neutral context on why we use the tools we use and trade offs between different models.\n\nAlso, the founder of contextual AI (not the three people presenting this project in the vid) is a very accomplished AI researcher and his company is well-funded. I was also hoping that because the founders are serious researchers that they might have built a culture of honesty and transparency, and so there is a small chance that we get some clarifications around comparative cost and latency and comparisons to other models of similar size.",
+                                            "score": 4,
+                                            "depth": 4,
+                                            "timestamp": "2025-03-12 15:07:20",
+                                            "replies": [
+                                                {
+                                                    "author": "halfprice06",
+                                                    "body": "fair enough",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-03-12 15:10:17",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "ishanthedon",
+                                    "body": "We like the discussion! \n\n\"I just want to understand what you think makes your solution unique and better than well-known alternatives.\" --> 1) Ours is the first commercially available reranker with instruction-following capabilities. Other rerankers fail to follow instructions 2) We have SOTA results on BEIR. \n\nWe are not comparing to Cohere and Voyage's smaller bi-encoder embedding models. We are comparing to their cross-encoder rerankers with similar latency and pricing. Bi-encoders don't generalize in our experiments. Our reranker is both more accurate and much smaller (lower latency) than 4o-mini and Llama 3.1 8b.\n\nWhere did you get the parameter counts in your message from?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-12 17:31:17",
+                                    "replies": [
+                                        {
+                                            "author": "Harotsa",
+                                            "body": "If you don\u2019t know, cross-encoders and bi-encoders have similar parameter counts. For example, BGE-m3 is a popular open source set of models with both a bi-encoder and a cross-encoder. Both of the models have ~560m parameters. Also if you look at families of models on the MTEB leaderboard on hugging face you\u2019ll see that these models are generally of comparable sizes. For context, BGE-m3 is one of the models that you compare against. You also compare against Jina-v2 which has 278m parameters. So at least the open source models you are comparing against have <1b parameters.\n\nAnd as for parameter counts, the open source ones are publicly available, and for a lot of the closed source models some of the sizes have been leaked and other ones have pretty solid industry-accepted estimations. If you are contesting a specific model parameter count that I mentioned I\u2019m happy to provide additional information.\n\nI was guessing that the model you guys used was around 5-10b parameters since you linked a paper and said \u201cwe do something similar to this.\u201d And in that paper they fine-tuned a 7b parameter Llama model. Again, if you\u2019re open to sharing the rough size of your model I\u2019m happy to be corrected.\n\nAlso, will you be adding your reranker to the BEIR leaderboard or MTEB leaderboard?\n\nAlso pricing isn\u2019t everything but your endpoint is 2.5x voyage\u2019s reranker per million tokens",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-03-12 18:54:48",
+                                            "replies": [
+                                                {
+                                                    "author": "sh-ag",
+                                                    "body": "Voyage reranker is not <1B parameters. I don't know where you got 300-700m number from.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-03-13 13:59:02",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Harotsa",
+                                                            "body": "How many parameters is it?\n\nAlso we know for a fact the parameters of the open source models they compared to (Jina and bge-m3) and both of those are sub-600m parameters. And on the BEIR benchmark Contextual AI is only 4% ahead of Jina, a model with under 300m parameters.",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-03-13 14:08:23",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Fast_Hovercraft_7380",
+                                    "body": "Saving your comment.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-15 07:29:41",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Entire-Alternative40",
+            "body": "Are there benchmarks for this reranker? Currently using cohere and frustrated with its performance. Excited to try it out",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-03-11 14:31:24",
+            "replies": [
+                {
+                    "author": "firedragonxx9832",
+                    "body": "BEIR is a standard one. Looks like there's more info about this reranker on their website: [https://contextual.ai/blog/introducing-instruction-following-reranker/](https://contextual.ai/blog/introducing-instruction-following-reranker/)",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-03-11 15:59:40",
+                    "replies": []
+                },
+                {
+                    "author": "ishanthedon",
+                    "body": "Yes! We are state-of-the-art on BEIR and other internal customer benchmarks: https://contextual.ai/blog/introducing-instruction-following-reranker/. Looking forward to hearing your feedback!",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2025-03-11 16:00:13",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "597firebird",
+            "body": "Looks cool! How well does it do with handling nuanced instructions in resolving conflicting docs?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-11 14:41:57",
+            "replies": [
+                {
+                    "author": "ishanthedon",
+                    "body": "It can handle complex instructions very well! For example, it can handle \"Prioritize internal sales documents over market analysis reports. More recent documents should be weighted higher. Enterprise portal content supersedes distributor communications.\" Try it out and let me know how it works! We evaluated it on instructions for recency, document type, source, and metadata, and it can generalize to other instructions as well.",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2025-03-11 16:01:25",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "faileon",
+            "body": "I see the Api accepts documents as an array of strings and metadata as an array of strings as well. When I want to give instructions to reranker based on document type (i.e. internal sales vs market analysis reports), those come into the metadata field on the same index as the document?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-11 16:22:43",
+            "replies": [
+                {
+                    "author": "ishanthedon",
+                    "body": "Yes, precisely!",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-03-11 16:34:23",
+                    "replies": [
+                        {
+                            "author": "faileon",
+                            "body": "Nice, thanks for confirming. Do you have recommendations on the format? Do I just dump a JSON there as a string or format it as key=value?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-03-11 16:36:17",
+                            "replies": [
+                                {
+                                    "author": "ishanthedon",
+                                    "body": "It probably performs best if you format the JSON as \"key1: value1. key2: value2...\". Let me know how that performs vs. dumping it without formatting!",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-03-12 17:32:49",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "RakOOn",
+            "body": "Ruh-roh raggy thats a cool model man",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-12 07:51:36",
+            "replies": []
+        },
+        {
+            "author": "drfritz2",
+            "body": "Do you think that its possible to use this rerank with openwebui? There we can select a rerank model.  \n\nAlso, does it work with RAGFlow?\n\nLast question: the preference instructions means that the rerank will consider the user prompt to the model?  Or its a separate prompt?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-15 20:54:42",
+            "replies": [
+                {
+                    "author": "ishanthedon",
+                    "body": "We haven't built integrations with OpenWebUI or RAGFlow. If they support adding rerankers through external APIs, then it should be possible. We have integrations with Langchain and LlamaIndex. \n\nThe reranker takes in \"query\" and \"instruction\" parameters (see our documentation: https://docs.contextual.ai/reference/rerank\\_rerank\\_post). That said, the API also works if the instructions are included with the query.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-03-19 23:43:41",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}

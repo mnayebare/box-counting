@@ -1,0 +1,518 @@
+{
+    "post_title": "Dynamically Scaled RoPE further increases performance of long context LLaMA with zero fine-tuning",
+    "post_timestamp": "2023-06-30 01:34:06",
+    "last_comment_timestamp": "2024-01-25 13:47:45",
+    "time_difference": "209 days, 12:13:39",
+    "comments": [
+        {
+            "author": "panchovix",
+            "body": "I did a PR to add experimental NTK RoPE scaling, and it seems to work for me. https://github.com/turboderp/exllama/pull/118\n\nTurbo won't merge it now (or never), since he's waiting to see more results of finetuning, which is perfectly fine.\n\nBut if you want try this scaling on exllama, you can apply the PR.",
+            "score": 20,
+            "depth": 0,
+            "timestamp": "2023-06-30 02:14:28",
+            "replies": [
+                {
+                    "author": "ElBigoteDeMacri",
+                    "body": "I tried running it and I'm getting good results, but only if I also compress the position of embeddings.  \n\n\nIs it supposed to work like that?, or am I missing something?\n\n&#x200B;\n\ni have the alpha value set to 4",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-06-30 02:26:56",
+                    "replies": [
+                        {
+                            "author": "ElBigoteDeMacri",
+                            "body": "Ah, actually I can confirm that change works, without it it's not able to do passkey retrieval.\n\n&#x200B;\n\nedit: with compression at 4 by itself won't work, but it will with the change, amazing!",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2023-06-30 02:34:58",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "ambient_temp_xeno",
+            "body": "I go to sleep and everything's improved massively yet again! Thank you.\n\nIs there a one line or so c++ change in llama.cpp that adds this to yesterday's NTK RoPE scaling? Just asking ;)",
+            "score": 14,
+            "depth": 0,
+            "timestamp": "2023-06-30 03:50:56",
+            "replies": [
+                {
+                    "author": "E_Snap",
+                    "body": "I am stoked to see this PR when it happens",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2023-06-30 12:44:28",
+                    "replies": []
+                },
+                {
+                    "author": "Deleted",
+                    "body": "Any updates on this? Has this been added to llama.cpp?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-08-05 21:58:29",
+                    "replies": [
+                        {
+                            "author": "ambient_temp_xeno",
+                            "body": "My hunch is that once llama2 chat came out which actually pays attention to the context, especially such a decent amount (4096 as you know) most people stopped caring about stretching it thinner with ROPE scaling of any kind.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-08-06 04:15:54",
+                            "replies": [
+                                {
+                                    "author": "Deleted",
+                                    "body": "I need the rope scaling for my needs. Otherwise I have to use OpenAI's apis.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2023-08-06 05:43:43",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "Severe_Savings_562",
+                                    "body": "there's Falcon lite using it [https://huggingface.co/amazon/FalconLite](https://huggingface.co/amazon/FalconLite)",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2023-08-15 21:09:37",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "EnricoShippole",
+            "body": "We will be releasing a suite of fine-tunes on both Llama (7b, 13b) and Open-Llama (3b, 7b, 13b, 20b) in the coming days.",
+            "score": 14,
+            "depth": 0,
+            "timestamp": "2023-06-30 02:19:50",
+            "replies": [
+                {
+                    "author": "kidovate",
+                    "body": "Where can I subscribe to updates to be notified when you release these?",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-06-30 14:49:48",
+                    "replies": [
+                        {
+                            "author": "EnricoShippole",
+                            "body": "They will be released under a unified organization on Huggingface after further evaluation. The first model is training now.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-07-01 17:23:09",
+                            "replies": [
+                                {
+                                    "author": "AltNomad",
+                                    "body": "I've been keeping an eye on this space. Any updates on the model releases? I think I found you and u/emozilla 's HuggingFace repos but I want to make sure I'm grabbing the right models",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-07-18 07:51:10",
+                                    "replies": [
+                                        {
+                                            "author": "EnricoShippole",
+                                            "body": "All of the models are available here: [https://huggingface.co/conceptofmind](https://huggingface.co/conceptofmind)",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2023-07-19 18:57:53",
+                                            "replies": [
+                                                {
+                                                    "author": "AltNomad",
+                                                    "body": "Thank you!",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2023-07-19 20:49:07",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "AuzBoss",
+            "body": "That is exciting! I cant wait to read the meta paper on it in the morning \ud83e\udd2a",
+            "score": 14,
+            "depth": 0,
+            "timestamp": "2023-06-30 01:46:27",
+            "replies": [
+                {
+                    "author": "waltercrypto",
+                    "body": "When you do please explain to us what this means in English",
+                    "score": 9,
+                    "depth": 1,
+                    "timestamp": "2023-06-30 01:58:36",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "[removed]",
+                            "score": 16,
+                            "depth": 2,
+                            "timestamp": "2023-06-30 03:12:17",
+                            "replies": [
+                                {
+                                    "author": "twisted7ogic",
+                                    "body": "So basically it's like that meme where you remove half the letters of a text and everyone can still read it normally because they subconsciously fill in the blanks?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-06-30 03:58:33",
+                                    "replies": [
+                                        {
+                                            "author": "PookaMacPhellimen",
+                                            "body": "No. No. It\u2019s not like that at all",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2023-06-30 04:08:33",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "ironborn123",
+            "body": "The last week seems like the revenge of the interpolators :) ~~Open~~ClosedAI better watch out",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2023-06-30 02:31:11",
+            "replies": []
+        },
+        {
+            "author": "twisted7ogic",
+            "body": "Amazing, great work! (also, can everybody please wait a bit before sharing their groundbreaking insights? I'm getting dizzy trying to keep up.)",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2023-06-30 02:33:10",
+            "replies": []
+        },
+        {
+            "author": "a_beautiful_rhind",
+            "body": "Wow.. from an idea on this sub to implementation in record time!",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-06-30 06:31:27",
+            "replies": []
+        },
+        {
+            "author": "Stepfunction",
+            "body": "Great work! I think this is probably the best possible way to solve the problem since it:\n\n* Doesn't involve needing to pre-specify a context length at all.  Even if a lower context length is desired, the context truncation feature which already exists would be sufficient.\n* Guarantees a matching perplexity to the base model at lower context lengths.\n* Expands to any context length dynamically.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-06-30 09:35:36",
+            "replies": [
+                {
+                    "author": "Caroliano",
+                    "body": "From what I understand, it's the best only if your input is usually smaller than the maximum context length you can run, as it performs slightly worse compared with fully using an extended context window. People always try to fit the biggest model/lest quantized model they can for their amount of RAM/VRAM. Leaving vast amounts of unused VRAM for a dinamic context seems wasteful, and if you run out of it the generation will slow dramatically. Remember, dense attention is quadratic.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-06-30 13:19:34",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "drwebb",
+            "body": "WTF, reddit generating more quality research than some actual labs.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2023-06-30 10:45:21",
+            "replies": []
+        },
+        {
+            "author": "Mysterious_Brush3508",
+            "body": "Fantastic! It's going to be interesting to see how these different methods compare once a model is finetuned on each of them.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-06-30 02:02:28",
+            "replies": []
+        },
+        {
+            "author": "hold_my_fish",
+            "body": "This seem interesting, but since it's dynamic, I wonder if it might perform worse after fine-tuning compared to the other techniques, since it doesn't have consistent positional embeddings to train against.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-06-30 04:34:34",
+            "replies": []
+        },
+        {
+            "author": "pseudonerv",
+            "body": "for this, dynamic would mean for context length larger than the trained length, your rope embedding uses different frequency for different location in the sequence.\n\ndo you compute the K&V for previous tokens with the new embedding, or do you just reuse the K&V generated with different rope frequency for the previous tokens?\n\ni guess the ppl increase is likely due to your reusing the K&V cache computed with different rope frequency thus different embedding. what do you think?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-06-30 10:54:26",
+            "replies": []
+        },
+        {
+            "author": "ReturningTarzan",
+            "body": ">The idea again is to dynamically scale the hyperparameter as the sequence length increases. Behold:\n\nI'm sorry, but I don't know what I'm supposed to be looking at in that chart? This looks like a non-result to me, and you could trivially improve upon it without changing the original RoPE function at all and just using a sliding window of 2k tokens.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2023-06-30 03:45:05",
+            "replies": [
+                {
+                    "author": "kaiokendev",
+                    "body": "It is showing a number of things:\n\n* NTK alpha = 4 can use 5000 tokens without any fine-tuning. I expect with fine-tuning the perplexity gap will collapse, same as linear scaling.\n* NTK alpha = 2 can take an un-fine-tuned model to 3500 without any fine-tuning with only minor perplexity loss\n* dynamic scaling might be better than raw scaling the entire frequency range to maintain the performance of the first 2048 + 128 tokens (I believe llama.cpp users found this as well)\n* dynamic NTK performs better than dynamic scale\n\n>just using a sliding window of 2k tokens\n\nI keep seeing this, and I **still** cannot understand why sliding window keeps being brought up?\n\nIf you have 4000 tokens and you take a minor perplexity loss when retrieving content overall, then of course the solution is not a sliding window -- yes the perplexity would improve, but then you don't have the first 2048 tokens anymore so it's irrelevant, it's not even a comparison: **you no longer have longer context**. You no longer have any of the information that was in those 2048 tokens.\n\n* Raw perplexity will show if longer context is being used based on if the perplexity is decreasing as the context length increases. **As long as the line is going down**, it is using the long context. Now, why is the line still above the base model? Could be several reasons, the disturbance to the position cancels out any benefits, the model is not able to learn long range patterns this way, etc. But as long as the line keeps going down, it is using that longer context -- it is attending to all of the tokens.\n* Sliding window perplexity will inform if the model is benefiting from long-range patterns. This only makes sense in fine-tuning case, without fine-tuning on longer data the model cannot learn long-range patterns, so this question is not relevant yet until the fine-tuning results are seen.\n* Long-range benchmarks will show if the model's overall performance improves with longer context. These benchmarks should improve when specifically looking at >2048 cases even without fine-tuning as long as the perplexity line is going down (because it is actually attending to more tokens). Of course, with fine-tuning the results should improve, even <2048.\n\n&#x200B;\n\n\\*I should caveat that the first point really depend on the dataset being used to test. You need a dataset with long range dependencies (i.e. referencing information farther back than the pre-trained context window)\n\nSimply because there is a constant overhead does not mean it is not working, just that there is some loss without any fine-tuning.",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2023-06-30 04:48:34",
+                    "replies": [
+                        {
+                            "author": "ReturningTarzan",
+                            "body": "Oh, I get that. I'm not suggesting a sliding window is a solution at all. I'm considering it as a baseline that any long-context approach should at least be able to beat.\n\nSpecifically [in this case](https://preview.redd.it/2qdj7itsb39b1.png?width=662&format=png&auto=webp&v=enabled&s=f9b2f044f59fbad5ad51fefacda0b61f724f12f1), a sliding window approach would perform strictly better than the green and orange lines. It would give the same result up to 2k tokens, but then the line would go roughly horizontal from 2k onward instead of starting to climb. Which would be a better result, as far as perplexity goes.\n\nWhat this graph seems to *want* to say is that the method \"works\" because the model is failing less catastrophically than the unmodified model. But it's still failing. If the argument is that the model is doing well in spite of perplexity increasing where it should be decreasing, a graph showing just the failure mode isn't enough to make that argument.\n\nBy contrast, the red or yellow lines show the model successfully making use of an extended context. The thing to note is that you get a better result for 3k tokens than for 2k tokens. The offset may or may not be addressable with finetuning, but as you say it's besides the point.",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2023-06-30 05:21:52",
+                            "replies": [
+                                {
+                                    "author": "kaiokendev",
+                                    "body": "I think the confusion comes from that there is multiple methods being used there. My excitement is mainly the NTK case, I have not looked much into the dynamic NTK (for instance, why it has worse performance than the standard NTK when it should be the same >2048). I agree the chart does not clearly show what the benefit of dynamic NTK is, but the sense that I got from it is that we can maintain the <2048 performance while still improving the >2048 performance potentially. I think these charts without fine-tuning are just confusing in general and it makes the discussion harder",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2023-06-30 05:31:28",
+                                    "replies": [
+                                        {
+                                            "author": "ReturningTarzan",
+                                            "body": ">but the sense that I got from it is that we can maintain the <2048 performance while still improving the >2048 performance potentially\n\nI would call attention to [this](https://user-images.githubusercontent.com/11859846/248038968-0b08e754-0f01-4a33-85f8-876c16bee68a.png) again. Specifically, note the yellow line which is the result of extrapolating the position embeddings past 2k. It also very closely aligns with the base model up to 2k tokens, but it's still a negative result because the curve turns around after that. Even if it had bottomed out and stayed horizontal at that point, that would still only be as good as a sliding window, which is to say it wouldn't be useful.\n\nAs for finetuning, I don't know how you'd finetune a model on a dynamic scaling factor.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2023-06-30 06:08:46",
+                                            "replies": [
+                                                {
+                                                    "author": "kaiokendev",
+                                                    "body": "No, I get that and I agree with you on the point. When the line trends upwards it is because it is not able to leverage the full context. My only point is that the explosion does improve with dynamic versions, so potentially it may provide better results after fine-tuning, or at least there is something to take away from those methods to improve the technique further.\n\nFor fine-tuning, I imagine you either do not use padding, or if you have access to the token length before padding is added, simply adjust to the non-padded length",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2023-06-30 06:26:30",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Caroliano",
+                                    "body": "Perplexity depends on the benchmark. Your sliding window with 2k tokens would fail catastrophically if your first 2k tokens is a series of passcodes and the chat after that is recovering those passcodes, while all those methods here that increase the context, although not able to make as refined use of it, would do fine.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2023-06-30 09:39:15",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "hold_my_fish",
+                                    "body": "Am I understanding correctly that your view on long context is that it ought to improve the perplexity (compared to default context length), since the extra information should only be able to help? And so far the tricks mostly get worse perplexity than default context (except maybe NTK-aware with alpha=2, which the graph shows doing slightly better).\n\nMaybe the idea is that, even if the perplexity gets worse, it's still useful as a starting point for fine-tuning. In that case, I wonder if it's possible to set up the model so that it performs like a sliding window initially but can be fine-tuned to use the extra information. The idea would be to use some kind of learnable gating parameter on the additional context. (I'm inspired by the Flamingo paper, which used that technique to introduce visual context into a pre-trained LLM, though the exact technique it used doesn't quite apply here.) For example, maybe apply an additive bias before the softmax, or a multiplier after the softmax followed by renormalization. (Getting the gradients to work out nicely might be a bit tricky in both cases.)",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-07-01 19:49:26",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Bored_AFI_149",
+                            "body": "Hi, I still don't understand what is the green line represent in the github? Is it the DynamicScaleRotationEmbeddings? Or is it the LinearScaleRotationEmbeddings?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-07-15 03:25:17",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "pseudonerv",
+                    "body": "I don't like the ppl increase either. seems like losing context. maybe lmsys's longeval could tell us how good this actually is.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-06-30 17:59:48",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "campfirepot",
+            "body": "Is it possible to combine the minimum line segments from this graph in the same inference session? \nLike:\n0 to ~3k tokens use orange line;\n~3k to ~3.7k use red line;\n~3.7k to ~5.3k use orange again;\n~5.3k use ~5.7 use yellow line;\n~5.7 to 8k use orange again?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-06-30 08:52:08",
+            "replies": []
+        },
+        {
+            "author": "big_ol_tender",
+            "body": "Does anyone know if full fine tuning is required or if LoRa etc also work? Would be amazing if the latter.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-06-30 10:13:19",
+            "replies": []
+        },
+        {
+            "author": "New-Lychee-5223",
+            "body": "[https://lmsys.org/blog/2023-06-29-longchat/](https://lmsys.org/blog/2023-06-29-longchat/)",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-06-30 12:05:47",
+            "replies": [
+                {
+                    "author": "Voxandr",
+                    "body": "This one using same way ROPE+NTK ?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-07-01 15:19:33",
+                    "replies": [
+                        {
+                            "author": "guohai_xu",
+                            "body": "It uses linear interpolating.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-07-28 07:37:42",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "ReMeDyIII",
+            "body": "So for the current SuperHOT 8k models, is this graph suggesting we should lower context to a little less than 6k? Sure seems like it, or is that method unrelated?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-06-30 16:06:32",
+            "replies": []
+        },
+        {
+            "author": "Zelenskyobama2",
+            "body": "OpenAI has probably already found these scaling methods, we're just discovering them now",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-06-30 21:03:34",
+            "replies": [
+                {
+                    "author": "Voxandr",
+                    "body": "No , they haven't yet. Their context sucks. If you look at the experiment post , the guy pasted whole paper and then make it answer.   \nThat isn't possilbe with chatgpt yet",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-06-30 23:55:25",
+                    "replies": [
+                        {
+                            "author": "Mandus_Therion",
+                            "body": "GPT4 has 32k context length",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-07-01 12:02:47",
+                            "replies": [
+                                {
+                                    "author": "Charuru",
+                                    "body": "We already know how GPT4 got to 32k context length, it's not via this. They can presumably combine the tricks to access 128k context length, that would be amazing.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2023-07-02 08:14:17",
+                                    "replies": [
+                                        {
+                                            "author": "BeautifulTraffic98",
+                                            "body": "Hi, can you guide me where they released on how they got GPT4 to 32k context? Thanks!",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2023-08-08 16:22:57",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Voxandr",
+            "body": "Would that work with Falcon models too ? Falcok 7B with 16k would be so cool. Also how about starcoder ?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-06-30 23:58:07",
+            "replies": [
+                {
+                    "author": "Mandus_Therion",
+                    "body": "i am trying to do the same with falcon, if you find a way please do tell me.\n\ncontact me on DM if you wanna work together on tuning Falcon models",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-07-01 12:02:15",
+                    "replies": [
+                        {
+                            "author": "Voxandr",
+                            "body": "That's so cooI , I will dm in 9 hr, gonna sleep now",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-07-01 15:20:27",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "pepe256",
+            "body": "This might be totally on me, but it was not clear to me this was different from SuperHOT. The post is written in a very technical way and could use a TLDR at the beginning. I only realized this was better than SuperHOT because someone linked to this post saying it was a newer approach.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-07-01 07:44:01",
+            "replies": [
+                {
+                    "author": "epicfilemcnulty",
+                    "body": "There are three main approaches (I mean, there are more, but we are talking about those developed by the guys from this sub, and particularly those using interpolation) to increase context length of LLaMA models:\n\n1. Linear scaling, proposed by u/kaiokendev and used in his SuperHOT models. This requires specially fine-tuned models, it kinda works on vanilla LLaMAs, but the quality degrades.\n2. NTK Aware scaling, proposed by /u/bloc97 , which uses a different scaling technique. This method works much better on vanilla LLaMAs without fine-tuning, the quality degrades a little bit. And supposedly it will be much better with models fine-tuned for this method. AFAIK we don't have fine-tuned models fro this method now (I'm planning to fine-tune LLaMA13 with QLoRA for this scaling method).\n3. Dynamic NTK Aware scaling, proposed in this post. Seems that it should be even better than (2), but it is not really clear for dummies like me how we would fine-tune models for this method.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-07-01 09:17:08",
+                    "replies": [
+                        {
+                            "author": "pepe256",
+                            "body": "Thank you so much for this overview and summary! Can't wait for NTK Aware scaling!",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-07-01 10:11:35",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "ReMeDyIII",
+            "body": "So when will we be getting Samantha-Uncensored-SuperHOT-8k-RoPE?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-07-02 01:00:01",
+            "replies": []
+        },
+        {
+            "author": "Bored_AFI_149",
+            "body": "I'm sorry if I'm asking a dumb question. In your github, if I want to make contexts size bigger, do I have to change max_positional_embedding? In The Bloke monkey patch code, max_positional_embedding is change based on the size of context. But, reading your code, it seems that max_positional_embedding better stays at 2048 but the ntk value (scaling_factor) is raised. Is it correct?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-07-15 00:10:16",
+            "replies": []
+        },
+        {
+            "author": "Resident_Second9043",
+            "body": "I have a theory question about extending the context length from **n** into **n\u2032**  by interpolating the positional encodings --\n\nHow does the self-attention matrix, configured as an **n \u00d7 n** matrix, adapt to accommodate the extended context size of **n\u2032 x n\u2032** ?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-11-20 13:58:06",
+            "replies": []
+        },
+        {
+            "author": "Winter_Lavishness328",
+            "body": "Quick question. Say i have a model pre-trained with 2k context. I want to cont. pre-train or fine-tune it with DynamicNTK for 4k. How does that training looks like? Do i calculate a different base for each position > 2k? Or this is only a inference thing?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-01-25 13:47:45",
+            "replies": []
+        }
+    ]
+}

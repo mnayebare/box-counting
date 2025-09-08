@@ -1,0 +1,109 @@
+{
+    "post_title": "GRPO (Group Relative Policy Optimization) explanation compared to PPO",
+    "post_timestamp": "2025-01-27 19:59:48",
+    "last_comment_timestamp": "2025-05-10 14:55:05",
+    "time_difference": "102 days, 18:55:17",
+    "comments": [
+        {
+            "author": "t3c30",
+            "body": "If you already understand PPO, then GRPO can be summed up into two distinct changes. \n\n1. The advantage does away with the use of the value function (aka the critic, aka the neural network that takes in the state and estimates the reward) this can sometimes be a part of a multi headed network (shared with the actor network), or a separate network depending on your implementation. This is replaced by normalizing the rewards over a 'group' of samples. In laymen's terms this is the current reward minus the mean rewards (across the group), divided by the std dev of the rewards (across the group)\n\n2. The 'GR' part or the grouping element is effectively taking multiple samples using the same 'old' policy, then evaluating them as a group before updating gradients. Effectively smoothing out the reward variance in probabilistic RL environments.\n\nThis is so elegant is many ways. My application of PPO is using a direct reward in a single step manner (referred to as a contextual bandit problem), and I have to train a critic and value network on the fly because the training data is (like a true on-line policy method) totally dependent on the samples genrated from the agent interacting with the environment. This GRPO method is a HUGE advantage since I no longer have to underscore the advantage calculation by learning a second network, and deal with the reward directly.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-02-04 23:55:29",
+            "replies": []
+        },
+        {
+            "author": "calebkaiser",
+            "body": "According to the paper, they are not using a neural network to calculate the reward. It looks like they have a series of reward functions that assign reward based on accuracy and formatting. I believe they use different reward functions for different datasets as well, for example, using a sandboxed environment to run tests on generated code samples. \n\n  \nFrom the paper:\n\n>2.2.2. Reward Modeling   \n  \nThe reward is the source of the training signal, which decides the optimization direction of RL. To train DeepSeek-R1-Zero, we adopt a rule-based reward system that mainly consists of two types of rewards:  \n  \n\\- **Accuracy rewards**: The accuracy reward model evaluates whether the response is correct. For example, in the case of math problems with deterministic results, the model is required to provide the final answer in a specified format (e.g., within a box), enabling reliable rule-based verification of correctness. Similarly, for LeetCode problems, a compiler can be used to generate feedback based on predefined test cases.  \n  \n\\- **Format rewards**: In addition to the accuracy reward model, we employ a format reward model that enforces the model to put its thinking process between \u2018\u2019 and \u2018\u2019 tags.   \n  \nWe do not apply the outcome or process neural reward model in developing DeepSeek-R1-Zero, because we find that the neural reward model may suffer from reward hacking in the large-scale reinforcement learning process, and retraining the reward model needs additional training resources and it complicates the whole training pipeline.\n\n  \nGRPO is just another method for updating a model relative to some reward function. It does not stipulate what that reward function is. So, in many cases, people use GRPO with a neural network reward model. In the case of R1, the \"reward model\" appears to just be a series of reward functions.\n\nIt might help to look at HuggingFace's docs for their GRPO trainer to get a sense of how that might look: [https://huggingface.co/docs/trl/main/en/grpo\\_trainer](https://huggingface.co/docs/trl/main/en/grpo_trainer)",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-01-28 11:24:17",
+            "replies": [
+                {
+                    "author": "Prestigiouspite",
+                    "body": "The fact that you can train such a versatile and powerful model purely with reward functions seems almost impossible to me. But it was based on v3 and certainly also on other open LLMs. But thanks for the comments! Very exciting!",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-01-28 16:45:18",
+                    "replies": []
+                },
+                {
+                    "author": "me_but_darker",
+                    "body": "Hey, thanks for the reply. \n\nPrevious LLM used SFT for instruction tuning i.e. ensuring that given a prompt, the LLM learns human preference for generating the response. However, without this step how is the model learning human preference i.e. without SFT how is the model adhering to prompt (such as putting information in <think> and not going completely of the rails?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-01-30 21:14:00",
+                    "replies": [
+                        {
+                            "author": "calebkaiser",
+                            "body": "Good question! From my understanding, there are two parts to this:\n\n- The \"format rewards\" encourage the model to do things like put information between <think> tags. This alone seems to be enough to coax the model towards this behavior.\n\n- The DeepSeek-R1-Zero model still, however, would exhibit weird \"off the rails\" behavior on some samples, doing things like mixing languages despite formatting them correctly. To address this, DeepSeek-R1 used SFT before GRPO, which seems to have largely prevented this.\n\nIt's also worth noting that the team behind the ARC prize did some testing and came to the conclusion that SFT might not actually be necessary, at least in many cases: https://arcprize.org/blog/r1-zero-r1-results-analysis",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-01-31 15:08:54",
+                            "replies": [
+                                {
+                                    "author": "me_but_darker",
+                                    "body": "Thanks. I'll read the blog post",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-01-31 15:18:17",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "Physical-Artist-6997",
+                                    "body": "What I dont finally understand is the following: ok, every time the actioner produce and action (outputs of the model in this case) the environment gives you a reward (based in this case on accuracy and format). But the actioner (model) has to start with an initial policy, right? Which one is it? How did DeepSeek started their policy for the model?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-02-01 08:38:36",
+                                    "replies": [
+                                        {
+                                            "author": "calebkaiser",
+                                            "body": "The \"policy\" in this case would just be the base model (DeepSeek-V3-Base). I think the nomenclature from reinforcement learning can obscure things a little bit, particularly if your background is more around traditional deep learning or LLMs. So think of this way:\n\n- The \"action\" the model is taking is just sampling a series of tokens. \n- The \"reward\" is a loss function that applies to an entire sequence of tokens, instead of calculating the loss for each specific token like you might see in supervised fine-tuning.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-02-01 14:38:04",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "BusinessWeb3669",
+            "body": "Yes, neural networks can be used for group evaluations, depending on the context and goal of the evaluation. Let me break this down for you:\n\nNeural Networks in Group Evaluation\n\nA neural network can process and evaluate group performance or dynamics by analyzing various data inputs. Here\u2019s how this might work:\n\n1. Data Input:\n\nIndividual contributions (e.g., work quality, engagement, etc.).\n\nGroup-level metrics (e.g., collaboration efficiency, task completion time).\n\nBehavioral or social interaction data (e.g., communication patterns, decision-making dynamics).\n\n\n\n2. Feature Extraction: The neural network extracts patterns and features from the data, such as:\n\nHow well group members complement each other\u2019s skills.\n\nConsistency and efficiency of collaboration.\n\nSentiment or tone in group communication.\n\n\n\n3. Training the Model: If using supervised learning, the network is trained on historical data with labeled outcomes (e.g., \"successful group\" vs. \"unsuccessful group\"). It learns to associate input patterns with specific outcomes.\n\n\n4. Evaluation: The trained neural network evaluates unseen group data and predicts outcomes, such as:\n\nOverall group success or productivity.\n\nLikelihood of achieving specific goals.\n\nRecommendations for improvement (e.g., better skill allocation).\n\n\n\n\nPractical Application Examples\n\nTeam Productivity Assessment: Companies can use neural networks to evaluate team performance based on project data, timelines, and collaboration quality.\n\nEducational Group Projects: Neural networks can assess student group performance by analyzing participation levels, contribution balance, and project results.\n\nSports Teams: Analyzing player performance metrics to optimize team dynamics and predict game outcomes.\n\n\nHow This Works in Practice\n\nIn practice, a neural network works by:\n\n1. Receiving input features about individuals and group interactions.\n\n\n2. Using hidden layers to process and identify patterns in these features.\n\n\n3. Outputting an evaluation score, classification (e.g., \"effective/ineffective\"), or actionable insights for improving group performance.\n\n\n\nChallenges\n\nData availability: Requires detailed and accurate input data.\n\nBias: Neural networks might reflect biases present in the training data.\n\nInterpretability: Understanding the \"why\" behind the predictions can be tricky.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-01-27 20:57:01",
+            "replies": [
+                {
+                    "author": "Prestigiouspite",
+                    "body": "But as far as I know, there seems to be only a reward model (static) and no value model (critic model - dynamic - looking at the overall perspective).\n\nSee page 13 of 30: [https://arxiv.org/pdf/2402.03300](https://arxiv.org/pdf/2402.03300)\n\nSo is a reward model a neural network or not? ChatGPT said no.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-01-27 21:13:25",
+                    "replies": []
+                },
+                {
+                    "author": "zacharygreeenman",
+                    "body": "A source would be nice. Also, did an LLM write the above?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-01-30 16:24:07",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Great-Reception447",
+            "body": "Here is a good blog about all RL for LLM: [https://comfyai.app/article/llm-posttraining/optimizing-ppo-based-algorithms](https://comfyai.app/article/llm-posttraining/optimizing-ppo-based-algorithms)",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-10 14:55:05",
+            "replies": []
+        }
+    ]
+}

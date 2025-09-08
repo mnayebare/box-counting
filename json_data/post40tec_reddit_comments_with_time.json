@@ -1,0 +1,200 @@
+{
+    "post_title": "[D] Do you know a sub linear vector index with perfect accuracy?",
+    "post_timestamp": "2025-02-08 09:26:30",
+    "last_comment_timestamp": "2025-02-10 19:19:17",
+    "time_difference": "2 days, 9:52:47",
+    "comments": [
+        {
+            "author": "marr75",
+            "body": "I love it when new people encounter unsolved hard problems in my domain! \n\nAnswer: Run it on N units of compute. Congratulations! It's constant time now. \n\nIn geometry/geography queries, an R-tree index where higher nodes in the tree represent the bounding box of all children allow you to query the geometries in sub linear time. You have to reformulate nearest neighbors queries into \"within a respectable distance of the point\" to use the index, though. \n\nThose are great for 2D, weaker for 3D, and the curse of dimensionality starts making 4D rough in terms of:\n\na. the memory required\nb. the difficulty of picking a distance/volume from your query point to narrow the nearest neighbors search \n\nApproximate nearest neighbors techniques like hnsw relax the constraints to build indices that allow sub linear queries without the challenges of a high dimensional R-tree index. \n\nAll that to say: yes, you can do it in sub linear time if you have infinite compute. Otherwise, you are trying to solve a novel problem in computer science and you're not the first to try. As an exercise to see how hard this is, grab an R-tree index python library and start building n-dimensional trees starting with n=2.",
+            "score": 32,
+            "depth": 0,
+            "timestamp": "2025-02-08 23:55:10",
+            "replies": []
+        },
+        {
+            "author": "eamonnkeogh",
+            "body": "A simple low effort trick will get you pretty close to what you need.\n\nIf you concatenate all 20 million vectors into one long time series, you have a long vector of..\n\nlength C = 2560000000.    Long, but not outrageous \n\nNow you have your query Q of length 128\n\nJust run MASS \\[a\\], and you are done!!!\n\n\\>> MASS\\_V3(randn(C,Q,2\\^23);\n\nThere is now an official MATLAB version of MASS, and there is a C++ version at \\[a\\] etc\n\nIf the vectors have autocorrelation, then you can down sample before using MASS to make it faster ( with a tiny reduction in accuracy) See slide 15 of \\[b\\].\n\n  \nIn summary, I think this would get you close, and you could do all this  in 5 min with a few lines of code. Anything better that this (indexing etc) will be a lot of work/coding\n\nIf you think  C = 2560000000 is too long, break it into chucks, but make the chunks powers of two (see slide 16)\n\n\n\n\\[a\\] [https://www.cs.unm.edu/\\~mueen/FastestSimilaritySearch.html](https://www.cs.unm.edu/~mueen/FastestSimilaritySearch.html)\n\n\\[b\\] [**https://www.cs.ucr.edu/%7Eeamonn/100\\_Time\\_Series\\_Data\\_Mining\\_Questions\\_\\_with\\_Answers.pdf**](https://www.cs.ucr.edu/%7Eeamonn/100_Time_Series_Data_Mining_Questions__with_Answers.pdf)",
+            "score": 13,
+            "depth": 0,
+            "timestamp": "2025-02-09 00:28:40",
+            "replies": [
+                {
+                    "author": "marr75",
+                    "body": "I had two concerns that I was hoping you could clarify:\n\n#### Preserving Embedding Boundaries\n\n- Since MASS slides a window across the concatenated sequence, wouldn\u2019t this cause misalignment issues, where query embeddings (length 128) overlap partial embeddings in the concatenated sequence?\n- Would enforcing a fixed step size of 128 (to ensure queries align with full embeddings) negate the efficiency gains of MASS\n\n#### Time Complexity Compared to Brute Force and ANN\n\n- While MASS accelerates Euclidean distance computation via FFT, doesn\u2019t the requirement to scan all valid starting positions make it at least O(n) (assuming step size = 128)?\n- Given that ANN methods like FAISS and HNSW achieve sub-linear search time via indexing, would MASS still offer an efficiency advantage in practice?",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-02-10 13:06:47",
+                    "replies": [
+                        {
+                            "author": "eamonnkeogh",
+                            "body": "For the first point, you can just take the minimum value in the distance profile, that is a multiple of 128\n\n\n\nFor the second point...\n\nYes, there is a trade off. You may be able to get faster with an index, but...\n\n1) An index takes time to build, MASS takes zero time.\n\n2) An index takes memory overheard, MASS takes very little memory\n\n3) MASS supports arbitrary weighed euclidean distance queries.\n\n4) MASS can exploit GPUs with almost zero effort\n\n5) MASS queries take exactly predicable time, in contrast almost all indexes have good cases and bad cases based on the query. So with the worse case query, they can be unpredictably slow.\n\n6) MASS is exact, but if you want a faster approx version, you can do that with one line of code (slide 15 of \\[a\\])\n\nI am not saying that MASS is the best or only solution, but for the amount of effort needed (five minutes) the quality of solution is very good\n\n\n\n\\[x\\] [https://www.cs.ucr.edu/%7Eeamonn/100\\_Time\\_Series\\_Data\\_Mining\\_Questions\\_\\_with\\_Answers.pdf](https://www.cs.ucr.edu/%7Eeamonn/100_Time_Series_Data_Mining_Questions__with_Answers.pdf)",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-02-10 14:07:52",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "TohaChe",
+                    "body": "Nice read, TY",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-02-10 19:19:17",
+                    "replies": []
+                },
+                {
+                    "author": "Familiar_Text_6913",
+                    "body": "Lol I was coming to say this same thing but the man itself blessed this thread...",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-02-09 08:29:14",
+                    "replies": [
+                        {
+                            "author": "eamonnkeogh",
+                            "body": ";-)",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-02-09 14:16:09",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "NoisySampleOfOne",
+            "body": "I have a strong feeling, that without any assumptions on the distribution of vectors, this is a no-free-lunch territory and for every search method and querry there is a distribution of vectors that would require calculating lower boundaries of the distances for each one of them.",
+            "score": 16,
+            "depth": 0,
+            "timestamp": "2025-02-08 22:03:37",
+            "replies": []
+        },
+        {
+            "author": "gratus907",
+            "body": "In general this cannot be done unless there are strong assumptions. Exact nearest neighbor is more of a computational geometry problem than a machine learnig one. \nLet the number of vectors be N and the dimensionality be d.\nOn low dimensions a voronoi diagram allows you to query in time logarithmic to N and polynomial to d. However it takes N^d time (I dont remeber the exact exponent but anyways) hence it cannot be used in high dimensional settings.\nAFAIK there are some well proven hardness results even on approximation, i.e., you cannot find an approximate nn algorithm with certain theoretical guarantee if you want sub-linear query time. \n\nOf course the practical ann search is entirely different problem. Maybe you should try something like HNSW and check if you really need the exact result.",
+            "score": 12,
+            "depth": 0,
+            "timestamp": "2025-02-08 22:52:32",
+            "replies": [
+                {
+                    "author": "plc123",
+                    "body": "Yeah, HNSW is the first thing I would try. Then, if you truly need exactly the nearest neighbor, you can attach a list of the top k nearest neighbors to each example (that you precompute). Then you do brute force on that. Might not be terribly fast for large k, but it will almost certainly give you exactly the nearest neighbor.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2025-02-09 00:05:56",
+                    "replies": [
+                        {
+                            "author": "NoisySampleOfOne",
+                            "body": "Something similar, but using distance instead of number of neighbors as a hyperparameter:  \nIf most pairs of vectors are further than 2**\u03b5** away from each other then for every vector you can store a list of all other vectors in its 2**\u03b5** range. If approximately closes vector happens to be closer than **\u03b5** to the query, then you have a guarantee, that the exact closest one is in its 2**\u03b5** range.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-02-09 01:41:21",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "blobules",
+            "body": "Depending on the statistical distribution of you data, you might be able to use Local sensitivity hashing (LSH).",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-02-09 08:10:47",
+            "replies": []
+        },
+        {
+            "author": "daV1980",
+            "body": "Because you have so many dimensions, the curse of dimensionality is really working against you. K-d trees (or a specialization, such as BSP) is typically used, but efficient k-d requires that n >> 2^k, and you are obviously nowhere near 2^128.\u00a0\n\nInstead, your best bet is probably to use a gpu and just efficiently compute distance squared to every vector in the set, one page at a time.\n\nEnvelope math says that you need to do 128 subs, 128 muls and 127 adds for each vector, so at 50M vectors you are talking 19B floating point ops. A 4080 has a theoretical throughput of 47 Tflops, so you should be able to do this in less than a millisecond.\u00a0",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2025-02-09 01:32:02",
+            "replies": [
+                {
+                    "author": "InternationalMany6",
+                    "body": "Can you push all that data through GPU that fast though?\u00a0",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-02-09 10:02:49",
+                    "replies": [
+                        {
+                            "author": "daV1980",
+                            "body": "You can load the 50M vectors onto the gpu one time, then you only need to push the query vector each request, which is approximately zero bytes by comparison.\u00a0",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-02-09 10:35:36",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Zealousideal_Money99",
+            "body": "Check out Stumpy and the Matrix Profile: \nhttps://github.com/TDAmeritrade/stumpy",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-02-09 14:16:03",
+            "replies": []
+        },
+        {
+            "author": "Pink_fagg",
+            "body": "Does the data have obvious clusters?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-02-08 23:36:37",
+            "replies": []
+        },
+        {
+            "author": "transducer",
+            "body": "Do you really need perfect accuracy? If you are ready to settle for an approximation, HNSW will solve your problem. There are different hyper parameters that would allow you to trade off memory and latency for accuracy.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-02-09 01:37:45",
+            "replies": []
+        },
+        {
+            "author": "extraforme41",
+            "body": "If you have a big enough GPU (A100 for example is more than enough), just treat it as a simple dot product between your query and the entire index. Smaller than a standard 7B model, and basically O(1)",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-02-09 01:47:41",
+            "replies": []
+        },
+        {
+            "author": "powerexcess",
+            "body": "\nThis is an embarrassingly parallel problem. Use multiple cpus and boom done. Better yet use a gpu\n\nVectorise the comparison. Use a gpu.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-02-09 04:29:06",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "No idea. What language are you using?",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2025-02-08 19:38:39",
+            "replies": [
+                {
+                    "author": "someuserwithwifi",
+                    "body": "I want to use the index in python but I can implement it in c++ and build python bindings",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-02-08 19:46:11",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "LelouchZer12",
+            "body": "You can always have perfect accuracy, if you bruteforce.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2025-02-09 07:37:25",
+            "replies": []
+        }
+    ]
+}

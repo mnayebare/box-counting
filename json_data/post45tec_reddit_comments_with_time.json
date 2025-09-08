@@ -1,0 +1,186 @@
+{
+    "post_title": "Implementing function calling (tools) without frameworks?",
+    "post_timestamp": "2024-05-19 05:43:54",
+    "last_comment_timestamp": "2025-02-01 05:08:02",
+    "time_difference": "257 days, 23:24:08",
+    "comments": [
+        {
+            "author": "Such_Advantage_6949",
+            "body": "Yes, i had just decided to give up on langchain and langraph (after like 10 tries). Ultimately coding something myself seems easier. Granted it might not have as much feature but at least i know where i can tweak thing. I will leverage on function from those framework where convenient e.g. rag, tools. But for the agent orchestration, i am building my own which is kinda similar to langraph but i dont need to touch the bloody LCEL and runnable thingy.",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2024-05-19 07:23:25",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "Yeah that's fair enough. It seems that maybe using the langtools might just be more pragmatic than coding it from scratch.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-19 14:53:21",
+                    "replies": []
+                },
+                {
+                    "author": "fasti-au",
+                    "body": "Langgraph is gone for self hosting so neoj and your own pipelines are the go now",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-07-19 07:17:50",
+                    "replies": [
+                        {
+                            "author": "Such_Advantage_6949",
+                            "body": "Didnt expect someone to still read my posts after so long haha. Thanks for your comment. Here is a sneak peak. I am trying to build something that work generic and not like only single purpose (e.g. web search, rag). This is real time speed using qwen2-70b: https://www.youtube.com/watch?v=qwjyyPf9nUk",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-07-19 09:36:14",
+                            "replies": [
+                                {
+                                    "author": "fatihmtlm",
+                                    "body": "Looking cool! Now I want to try it.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-07-29 03:32:17",
+                                    "replies": [
+                                        {
+                                            "author": "Such_Advantage_6949",
+                                            "body": "Haha i havent released it yet cause alot of wotk need to be done on the llm backend. So i endup creating my own backed (similar to ollama, tabby) that have feature for agentic stuff",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-07-29 03:34:23",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "kryptkpr",
+            "body": "[Hermes-Function-Calling](https://github.com/NousResearch/Hermes-Function-Calling)",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2024-05-19 09:37:58",
+            "replies": [
+                {
+                    "author": "boris_and_proud",
+                    "body": "the repo uses langchain under the hood and failed to correctly call any of my custom functions, even though the llm has produced the correct output :(",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-24 09:50:42",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Open_Channel_8626",
+            "body": "Frameworks don\u2019t really do anything to solve the main problem, which is the LLM being able to use the right tools and the right parameters at the right time.\n\n\nI am eagerly waiting for GPT 5 (and then one more year wait for GPT 5 level open source models) because I don\u2019t think GPT 4 level models or below are reliable yet at tool use.",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2024-05-19 05:55:21",
+            "replies": [
+                {
+                    "author": "danielcar",
+                    "body": "After GPT 5 arrives, there will be people here saying they are waiting for GPT 5.1.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-05-19 09:59:31",
+                    "replies": [
+                        {
+                            "author": "Open_Channel_8626",
+                            "body": "No doubt yes there will be",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-19 10:00:38",
+                            "replies": []
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "People still waiting for 5 \ud83d\ude02",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-02-01 05:08:02",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "mrjackspade",
+            "body": "I've got the model calling the functions at the right times and using the proper syntax (8x22B) but I haven't wired up the response yet. I've got the model using the format `@invoke(\"function_name\", parameters)`\n\nHonestly past that point its pretty trivial. Its just a matter of actually executing the function. \n\nSince I'm working in C# that really only involves using reflection to find and invoke the function, and converting the parameters to the proper data type.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-05-19 06:05:48",
+            "replies": []
+        },
+        {
+            "author": "segmond",
+            "body": "Yes, your code passes the function definition/tool specs to the LLM, your code passes the user input to the LLM, your code captures the output from the LLM, you inspect the output to see if the LLM decided to call a tool, if it did, you extract the function and parameters, You call the function with the given parameters, you take the result.   You pass the result back to the LLM, the LLM combines the result with it's output, you present the output to the user.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-05-19 09:21:06",
+            "replies": [
+                {
+                    "author": "Noiselexer",
+                    "body": "Indeed. So might as well use a framework that does all that... Lol",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-19 16:59:55",
+                    "replies": [
+                        {
+                            "author": "segmond",
+                            "body": "nah, the field is new and a lot of tooling are not so great, so don't make the mistake of thinking a tool/framework is great because it has a bazillion stars on github.  most of the tools out there are tailored for OpenAI, so if you wish to run localLLMs, your result might vary.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-05-19 17:35:11",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "remyxai",
+            "body": "[FFMPerative](https://github.com/remyxai/FFMPerative) is an example using a fine-tuned 3B model and an abstract syntax tree.  \nllama.cpp and llamafile helped to simplify dependencies in packaging.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-19 10:54:03",
+            "replies": []
+        },
+        {
+            "author": "StrikeOner",
+            "body": "did implement various parsers/mini frameworks for various local models like gorilla-llm/gorilla-openfunctions-v2, cognitivecomputations/fc-dolphin-2.6-mistral-7b-dpo-laser and some self trained ones lately. most of the time it didnt take more then 40 lines of code to implement the whole logic and maybe 60 - 100 more lines for various tools like wolfram search, calculator, web search, summarization, weather etc. and the good thing on it is that the execution is 5-100 times faster then when using a framework with a model thats not properly trained for the synthax the framework is expecting and then the back and forth starts.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-20 16:15:54",
+            "replies": []
+        },
+        {
+            "author": "tensorwar9000",
+            "body": "unfortunately, you need a framework to do the intermediatory calls to the localLLM, and constrain generation (e.g. with regex and CFGs).  This, and they all suck. One that I haven't tested that looks promising was function tool calling with LocalAI\n\n\nhttps://github.com/mudler/LocalAI/tree/master/examples/functions\n\n\nI have been meaning to check it out but haven't. What I need is near or exact to assistant api.",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2024-05-19 17:03:25",
+            "replies": []
+        },
+        {
+            "author": "MasterDragon_",
+            "body": "The frameworks are only helping you in organizing your prompt for function calling, there is nothing complex that is handled by them as of now. \n\nThis before is an example taken from open ai docs. This is all you need to implement function calling\n\n\nfrom openai import OpenAI\nimport json\n\nclient = OpenAI()\n\n# Example dummy function hard coded to return the same weather\n# In production, this could be your backend API or an external API\ndef get_current_weather(location, unit=\"fahrenheit\"):\n    \"\"\"Get the current weather in a given location\"\"\"\n    if \"tokyo\" in location.lower():\n        return json.dumps({\"location\": \"Tokyo\", \"temperature\": \"10\", \"unit\": unit})\n    elif \"san francisco\" in location.lower():\n        return json.dumps({\"location\": \"San Francisco\", \"temperature\": \"72\", \"unit\": unit})\n    elif \"paris\" in location.lower():\n        return json.dumps({\"location\": \"Paris\", \"temperature\": \"22\", \"unit\": unit})\n    else:\n        return json.dumps({\"location\": location, \"temperature\": \"unknown\"})\n\ndef run_conversation():\n    # Step 1: send the conversation and available functions to the model\n    messages = [{\"role\": \"user\", \"content\": \"What's the weather like in San Francisco, Tokyo, and Paris?\"}]\n    tools = [\n        {\n            \"type\": \"function\",\n            \"function\": {\n                \"name\": \"get_current_weather\",\n                \"description\": \"Get the current weather in a given location\",\n                \"parameters\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"location\": {\n                            \"type\": \"string\",\n                            \"description\": \"The city and state, e.g. San Francisco, CA\",\n                        },\n                        \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n                    },\n                    \"required\": [\"location\"],\n                },\n            },\n        }\n    ]\n    response = client.chat.completions.create(\n        model=\"gpt-4o\",\n        messages=messages,\n        tools=tools,\n        tool_choice=\"auto\",  # auto is default, but we'll be explicit\n    )\n    response_message = response.choices[0].message\n    tool_calls = response_message.tool_calls\n    # Step 2: check if the model wanted to call a function\n    if tool_calls:\n        # Step 3: call the function\n        # Note: the JSON response may not always be valid; be sure to handle errors\n        available_functions = {\n            \"get_current_weather\": get_current_weather,\n        }  # only one function in this example, but you can have multiple\n        messages.append(response_message)  # extend conversation with assistant's reply\n        # Step 4: send the info for each function call and function response to the model\n        for tool_call in tool_calls:\n            function_name = tool_call.function.name\n            function_to_call = available_functions[function_name]\n            function_args = json.loads(tool_call.function.arguments)\n            function_response = function_to_call(\n                location=function_args.get(\"location\"),\n                unit=function_args.get(\"unit\"),\n            )\n            messages.append(\n                {\n                    \"tool_call_id\": tool_call.id,\n                    \"role\": \"tool\",\n                    \"name\": function_name,\n                    \"content\": function_response,\n                }\n            )  # extend conversation with function response\n        second_response = client.chat.completions.create(\n            model=\"gpt-4o\",\n            messages=messages,\n        )  # get a new response from the model where it can see the function response\n        return second_response\nprint(run_conversation())",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2024-05-19 06:36:48",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "Sorry should of specified local LLMs. For OpenAI I'm assuming the python/tool execution is handled on their end?",
+                    "score": -1,
+                    "depth": 1,
+                    "timestamp": "2024-05-19 06:40:33",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}

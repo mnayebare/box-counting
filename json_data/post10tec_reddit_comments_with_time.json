@@ -1,0 +1,277 @@
+{
+    "post_title": "[D] Why do LLMs like InstructGPT and LLM use RL to instead of supervised learning to learn from the user-ranked examples?",
+    "post_timestamp": "2023-02-02 08:13:31",
+    "last_comment_timestamp": "2025-01-28 11:31:16",
+    "time_difference": "726 days, 3:17:45",
+    "comments": [
+        {
+            "author": "koolaidman123",
+            "body": "1. Outputs are not ranked 1-5, they're ranked 2 at a time head to head and the rm predicts which is more favored by humans\n2. Empirically they found rl outperformed supervised fine-tuning (sft) on human evaluations, meaning humans generally preferred the rlhf model vs the sft model. The sft model was ft using the top ranked answer\n\nAs to why rl outperform sft, not a lot of orgs have the resources to test this (yet), I've heard a plausible theory from ai2 that the main difference comes from the fact that sft uses a token level loss, whereas rl loss takes the entire sentence, so maybe instead of rl being \"better\" its just next token prediction task is worse\n\n\nReseachers ive spoken with dont believe rl is the critical component to enable these models, and that we could eventually discover the right training regime to enable sft to perform on par (or better) than rl",
+            "score": 66,
+            "depth": 0,
+            "timestamp": "2023-02-02 08:31:18",
+            "replies": [
+                {
+                    "author": "alpha-meta",
+                    "body": "Thanks for the response! I just double-checked the InstructGPT paper and you were right regarding the rankings -- they are pairwise, and I am not sure why I thought otherwise.\n\nRegarding the updates on a sentence level, that makes sense. That would be more of a discrete problem as well for which you probably can't backpropagate (otherwise, you would be back to token-level).",
+                    "score": 9,
+                    "depth": 1,
+                    "timestamp": "2023-02-02 08:46:31",
+                    "replies": []
+                },
+                {
+                    "author": "was_der_Fall_ist",
+                    "body": "ChatGPT had labelers rank outputs from best to worst, not head to head. (Different than InstructGPT, maybe?)\n\n\u201cA prompt and several outputs are generated. A labeler ranks the outputs from best to worst.\u201d\n\nhttps://openai.com/blog/chatgpt/",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-02-02 13:08:03",
+                    "replies": [
+                        {
+                            "author": "koolaidman123",
+                            "body": "have you even read the instructGPT paper?\n\n>In Stiennon et al. (2020), the RM is trained on a dataset of comparisons between two model outputs\non the same input. They use a cross-entropy loss, with the comparisons as labels\u2014the difference in\nrewards represents the log odds that one response will be preferred to the other by a human labeler.\nIn order to speed up comparison collection, we present labelers with anywhere between K = 4 and\nK = 9 responses to rank. This produces (K C\n2\n) comparisons for each prompt shown to a labeler. Since\ncomparisons are very correlated within each labeling task, we found that if we simply shuffle the\ncomparisons into one dataset, a single pass over the dataset caused the reward model to overfit.5\nInstead, we train on all (K C\n2\n) comparisons from each prompt as a single batch element. This is much\nmore computationally efficient because it only requires a single forward pass of the RM for each\ncompletion (rather than (K\n2\n) forward passes for K completions) and, because it no longer overfits, it\nachieves much improved validation accuracy and log loss.\nSpecifically, the loss function for the reward model is:\nloss (\u03b8) = \u2212 1/\n(K C\n2\n) E(x,yw ,yl )\u223cD [log (\u03c3 (r\u03b8 (x, yw) \u2212 r\u03b8 (x, yl)))] (1)\nwhere r\u03b8 (x, y) is the scalar output of the reward model for prompt x and completion y with parameters\n\u03b8, yw is the preferred completion out of the pair of yw and yl, and D is the dataset of human\ncomparisons.\n\nyou know that figure you're referencing comes from the instructgpt paper... right?",
+                            "score": -5,
+                            "depth": 2,
+                            "timestamp": "2023-02-02 13:14:23",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Certain-Captain-9687",
+                    "body": "Have the researchers changed their mind in the last year? Asking as DeepSeek seems to be trained using rl.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-01-28 11:31:16",
+                    "replies": []
+                },
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-02-02 09:23:09",
+                    "replies": [
+                        {
+                            "author": "koolaidman123",
+                            "body": "sure? you can have multiple ways of ranking, but:\n\n1. the instructGPT paper strictly uses pairwise ranking\n2. asking annotators to rank however many passages 1-k in 1 shot is much more difficult and subject to noise than asking for pairwise comparisons",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2023-02-02 09:37:53",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "crt09",
+                    "body": "This paper seems very relevant: https://arxiv.org/abs/2205.13636 I haven't read it closely enough to give strong opinions with confidence but it seems to beat PPO with a token level loss thats works similar to the Upside Down Reinforcement Learning paper, where you give a target reward between 1 and 5 as an input token before the prompt and train it to output a response of a coressponding quality, trained on the standard LM loss on an existing target output with the given 1-5 reward rank. Then during inference you just append 1 to the start of the prompt and it outputs a response of high quality",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-02-02 13:49:40",
+                    "replies": []
+                },
+                {
+                    "author": "mtocrat",
+                    "body": "supervised fine-tuning seems inherently limited here. You regress to the best in the set of answers but that's it. RLHF can improve beyond that, up to the point where the generalization capabilities of the reward model fail..",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-02-02 19:04:15",
+                    "replies": []
+                },
+                {
+                    "author": "HurryPrudent6709",
+                    "body": "Kind of like the eye exam  contraption.  How many loops/iterations are typically done per token?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-10-02 11:14:18",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "_Arsenie_Boca_",
+            "body": "Since it wasnt mentioned so far: RL does not require the loss/reward to be differentiable. This enables us to learn from complete generated sentences (LM sampling is not differentiable) rather than just on token-level",
+            "score": 15,
+            "depth": 0,
+            "timestamp": "2023-02-02 17:10:53",
+            "replies": [
+                {
+                    "author": "hami21",
+                    "body": "I was actually looking for such a point. Is it safe to say RL optimizes the model weights w.r.t the sampling output? And if so, has anyone tried to just do RLHF on the sampling algorithm without changing the model weights?",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-04-29 20:56:43",
+                    "replies": [
+                        {
+                            "author": "_Arsenie_Boca_",
+                            "body": "Yes. I assume someone has tried that. I am not an expert in RL and don't have a deep understanding of PPO but from what I hear, RL is just very hard to get right. Probably, RLHF is simply the first setup that has given decent results",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-04-30 00:36:13",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "alpha-meta",
+                    "body": "Good point, so you mean they incorporate things like beam search + changing temperature, top-k sampling, and nucleus sampling in the RL PPO-based optimizaton?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-02-03 11:08:13",
+                    "replies": [
+                        {
+                            "author": "_Arsenie_Boca_",
+                            "body": "Im not sure if they vary the sampling hyperparemeters. The point is that langauge modelling objectives are to some degree ill-posed because we calculate the loss on intermediate results rather than the final output that we care about.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-02-03 11:23:42",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "VP4770",
+                    "body": "This",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-02-03 04:55:52",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "wardellinthehouse",
+            "body": "I asked this same question: https://www.reddit.com/r/reinforcementlearning/comments/zqfw7r/why_cant_we_do_supervised_learning_in_step_3_of/?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=1&utm_content=share_button\n\nI believe the answer is due to the fact that sampling from the policy network is a non-differentiable operation.",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2023-02-02 20:11:10",
+            "replies": []
+        },
+        {
+            "author": "Jean-Porte",
+            "body": "The traditional language modeling loss (negative log-likelihood) is misaligned with human expectations. One negation radically changes the meaning of a sentence. It doesn't radically change the loglikelihood. It isn't more important than a \"the\" or a superfluous word.\n\nWith RLHF, important words have important impact, and the loss is exactly aligned to human interests.",
+            "score": 24,
+            "depth": 0,
+            "timestamp": "2023-02-02 08:50:29",
+            "replies": [
+                {
+                    "author": "alpha-meta",
+                    "body": "But isn't this only if you train it on the  loss (negative log-likelihood) via next-word prediction, i.e., what they do during pretraining?\n\nIf you use the ranks (from having users rank the documents) to compute the loss on the instead of the words as labels, would that still be the case?",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2023-02-02 09:33:56",
+                    "replies": [
+                        {
+                            "author": "Jean-Porte",
+                            "body": "Yes but the LM has to take many steps to produce the text\n\nWe need to train the LM to maximize a far-away reward and we need RL to do that",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2023-02-02 10:21:51",
+                            "replies": [
+                                {
+                                    "author": "alpha-meta",
+                                    "body": "Could you help me understand what the far-away rewards represent here in this context? The steps are generating the individual words? So in this case you mean words that occur early in the text? In this case, a weighting scheme for the cross-entropy loss components could be used?",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2023-02-02 13:04:24",
+                                    "replies": [
+                                        {
+                                            "author": "Jean-Porte",
+                                            "body": "The beginning of the best possible answer might not be the best beginning. It's the final outcome, the complete answer that counts, so it makes sense to evaluate that. The reward is the feedback on the complete answer.",
+                                            "score": 7,
+                                            "depth": 4,
+                                            "timestamp": "2023-02-02 13:15:27",
+                                            "replies": [
+                                                {
+                                                    "author": "alpha-meta",
+                                                    "body": "Ah yes, I see what you mean now, thanks!",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2023-02-02 16:21:58",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Glittering-Feed855",
+                                                            "body": "How is that loss implemented? Like in reinforcement learning in general, we give a single loss for each token in the sequence based on the ultimate success of the whole sequence, success being the human rank for this sequence over other sequences?",
+                                                            "score": 1,
+                                                            "depth": 6,
+                                                            "timestamp": "2023-04-29 13:54:37",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "hblarm",
+            "body": "For tasks like summarisation and abstractive question answering, there is no *single correct way* to phrase the target sequence/answer.\n\n\u201cSome of the cups contained brown liquid\u201d means almost the same as \u201cA few vessels had brown fluid in them\u201d. Now imagine how many different ways you could phrase a 4 paragraph essay on globalisation.\n\nIn SL, the model is forced to learn the precise answer you feed it, and metrics like ROUGE penalise the use of synonyms. This causes models to perform badly when testing for human preference. The only reliable way to train/evaluate a model to impress humans is to directly incorporate human preferences into training.\n\nThis doesn\u2019t lend itself to SL very well, due to the unlimited possible phrasings of sentences, so instead the authors train a reward function that can estimate human preference, and use RL to update model weights to create better and better predictions. Any valid, nicely written phrasing will now get a good score.\n\nImportantly, the model they start with is almost SOTA on the summarisation tasks they are learning. So RL can take them further and further towards human preferences.\n\nIn a nutshell, RL allows human preference to be trained on directly, which allows the model to exhibit remarkably creativity.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-02-03 03:37:34",
+            "replies": []
+        },
+        {
+            "author": "mtocrat",
+            "body": "Let's say your initial model is quite racist and outputs only extremely or moderately racist choices. If you rank those against each other and do supervised training on that dataset you train it to mimic the moderately racist style. You might however plausibly train a model from this that can judge what racism is and extrapolate to judge answers free of it to be even better. Then you optimize with respect to that model to get that style",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-02-02 19:14:19",
+            "replies": []
+        },
+        {
+            "author": "bigabig",
+            "body": "I thought this was also because you do not need so much supervised training data because you 'just' have to train the reward model in a supervised fashion?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-02-02 17:18:31",
+            "replies": [
+                {
+                    "author": "alpha-meta",
+                    "body": "I think it's probably the non-differentiable nature of the sampling techniques. If it's just about limited training data and using the reward model, in that case you can also use weakly supervised learning with that reward model.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-02-03 11:09:39",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "scraper01",
+            "body": "The RL loss landscape is richer.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-02-02 21:02:38",
+            "replies": []
+        },
+        {
+            "author": "gamerx88",
+            "body": "Without referring to the paper again, my intuition is that a pairwise loss over final outputs does not gel well with how the model is auto-regressively generating the text.\n\nGeneration with GPT is basically a token by token decoding process with the previous time steps taken into account. Think about the difference between a supervised learning problem vs reinforcement learning. The former ignores the step-by-step nature of the generation scheme, and is a poorer fit for a decoding problem.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-02-03 01:19:59",
+            "replies": []
+        },
+        {
+            "author": "prototypist",
+            "body": "You can fine-tune language models on a dataset, and that's essentially how people have been typically doing NLP with transformers models?  It's more recent that research has been having success with RL for these kinds of tasks. So whatever rationale and answers you get here, the main reason is that they were doing supervised learning before and the RL people started getting better results.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-02-03 08:12:24",
+            "replies": []
+        },
+        {
+            "author": "blimpyway",
+            "body": "I guess the point of the reward model is to approximate human feedback and instead of hiring humans to actually rank (e.g.) 1billion chats needed to update the LLM, train a reward  model with 1% of them  then use it to simulate human evaluators 99% of the times.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-02-03 17:37:50",
+            "replies": []
+        }
+    ]
+}

@@ -1,0 +1,306 @@
+{
+    "post_title": "You Can't Call RAG Context - Current Context Coherence is Akin to 1-Shot - Is This a Confabulation of What Context is Meant to Be?",
+    "post_timestamp": "2024-02-17 18:06:06",
+    "last_comment_timestamp": "2024-02-18 19:00:08",
+    "time_difference": "1 day, 0:54:02",
+    "comments": [
+        {
+            "author": "NYPizzaNoChar",
+            "body": "RAG:\n\n> Retrieval-Augmented Generation is a technique for enhancing the accuracy and reliability of generative AI models with facts fetched from external sources.",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2024-02-17 19:08:07",
+            "replies": [
+                {
+                    "author": "Xtianus21",
+                    "body": "Yes that",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-02-17 20:12:28",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "StuartGray",
+            "body": "It\u2019s not using RAG for 10m context. \n\nThe 10m figure is both technically correct, and deliberately misleading marketing bait.\n\nGemini\u2019s large context is based on the technique developed by the Mistral team, but scaled up to the max.\n\nThat gets you to 1m, and that\u2019s only available on request to select users.\n\nThe 10m figure is taken from their research paper, where they pushed it as far as they were able to see what, if any, the limit was.\n\n10m was as far as they took it, likely because of the memory & resources required to do the test vs. the cost of providing those things to an end user.\n\nSo, as far as it\u2019s been tested, Gemini is has technically been shown to be capable of operating with a context of up to 10m, and quite possibly higher.\n\nAt the same time, 10m context using this technique will never be available to end users (outside of Google research), unless some kind of crazy cost reduction breakthrough happens to GPU hardware that makes it affordable & profitable.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-02-18 10:42:13",
+            "replies": [
+                {
+                    "author": "Xtianus21",
+                    "body": "Can you explain a little more detail how it's not rag? Claude is saying that's it rag. How is this not rag? I get your point about not commercially available but how is it not data organization preload and search focus on a query? Again not being true context.",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-02-18 10:47:08",
+                    "replies": [
+                        {
+                            "author": "StuartGray",
+                            "body": "You need to read their technical paper, not rely on a chatbot for answers.\n\nKeep in mind that DeepMind have only said what it's capable of so far, and not published any details about how it's implemented. Short of that, they have access to a *lot* of hardware, and a *lot* of VRAM.\n\nThis is DeepMind's technical capability report for Gemini 1.5:\n\n(https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf)\n\nFrom section 4.2. Long-context Evaluations:\n\n> Gemini 1.5 Pro significantly extends this context length frontier to multiple millions of tokens\nwith almost no degradation in performance, making it possible to process significantly larger inputs.\n**Compared to Claude 2.1 with a 200k token context window, Gemini 1.5 Pro achieves a 100% recall\nat 200k tokens, surpassing Claude 2.1\u2019s 98%. This 100% recall is maintained up to 530k tokens,\nand recall is 99.7% at 1M tokens. When increasing from 1M tokens to 10M tokens, the model\nretains 99.2% recall.** Moreover, Gemini 1.5 Pro\u2019s native multimodal capabilities enables the model to\ningest multiple hours of audio and video recordings alongside or interleaved with text.",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2024-02-18 11:05:07",
+                            "replies": [
+                                {
+                                    "author": "Xtianus21",
+                                    "body": "I read the paper and broke it down. Did you read my update? It leads me more to rag then before. Google refers to rag in the paper. Did you read it?",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2024-02-18 11:09:11",
+                                    "replies": [
+                                        {
+                                            "author": "StuartGray",
+                                            "body": "Could you point me to where in the paper they mention RAG?\n\nIf they do, they don\u2019t use that term in the paper, and I can\u2019t find any mention of it?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-02-18 11:17:42",
+                                            "replies": [
+                                                {
+                                                    "author": "Xtianus21",
+                                                    "body": "I put it in my update. Sorry I'm on my phone now. But do you see they call it retrieval augmentation model. Read what I say about it. Claude does it too.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-02-18 11:19:20",
+                                                    "replies": [
+                                                        {
+                                                            "author": "StuartGray",
+                                                            "body": "I think I can sort of see your confusion over this.\n\nFirst, the only reference to RAG in the google paper, is a link to a couple of papers on it, and one mention of it as part of a list giving an overview of different technques that have been tried to increase long-context capabilities in different LLMS. Yes, RAG is one of the things that has been tried by other people. NO, RAG is not used by either Gemini or Claude to provide what they term \"Context\".\n\nFor Claude, you are mis-reading the documentation you posted - a larger in-memory context improves RAG because you can hold & process more matches. That's all the Claude documentation is saying. It is NOT saying that 200K context is all or even partly RAG. \n\nI really don't know how else to explain this.\n\nI can run a locally hosted model with 64K in-memory context, with no RAG involved. I'm only limited by my local hardware. Otherwise, I'd download and try the model that has 1M in-memory context, again, no RAG involved.\n\nIf you think relative amateurs can create LLMs with 1M in-memory context, but orgs like OpenAI, Anthropic, and Google, with all of their money and resources, can't. Then there's not much point in continuing this discussion.",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-02-18 11:46:49",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Xtianus21",
+                                                                    "body": "To be fair there is confusion but there shouldn't be. It should be clear if this is real coherent context or not.\n\nWhen Claude says it can take several minutes to upload and get a document ready that leads me to believe that under the hood they are organizing data for retrieval. So it's a search query method and not true in memory context. Do you see my argument?im not saying it's not a good thing or not valuable but it's not pure coherence. It's etl and retrieve. It's rag.",
+                                                                    "score": 2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2024-02-18 11:51:22",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "StuartGray",
+                                                                            "body": "I can understand why you might think this way if you\u2019ve never used a local, offline LLM model - because if you have, you should have direct experience of this.\n\nIf not, you need to understand that no matter what hardware you throw at the problem, processing speed grows increasingly slower in direct relation to the size of the context. You\u2019ll note that the Google paper talks about recall accuracy, and doesn\u2019t mention performance or response times for 10M tokens.\n\nLLM context has a scaling problem that hasn\u2019t been solved yet. The memory required for every 1k of context directly depends on the parameter size of the model. I forget the exact sizes involved, but let\u2019s say a 7B model needs 500mb RAM for 1k of context. For a 13B model, that figure would be 1Gb for the same 1k tokens of context, because of the models extra parameters.\n\nI have no idea how big Gemini or Claude are, but even at 80B, that would mean around 9GB of RAM just to store that same 1k tokens of context. Remember, the data in the context is the same every time, but it\u2019s encoded and stored differently because of the different model  parameter sizes.\n\nHopefully it\u2019s obvious that processing 9GB of data takes longer than 500mb of data, regardless of the hardware you\u2019re using.\n\nHowever, it gets worse.\n\nAs the context grows larger, it takes longer and longer to process e.g. it\u2019s not unusual for a 7B model to halve its processing speed once it\u2019s context reaches 16K+\n\nExactly how much it slows down will depend on the hardware, but it will slow down. The same applies to all LLMs regardless of parameter size.\n\nSo, then you combine these two things together; 9GB for 1k tokens takes more compute power to process, and the larger the number of tokens in the context, the slower it gets\u2026\n\nYou can do the math to figure it out for 500k or 1M tokens, but there is any hardware setup will take a *long* time to process that much data, compared with a 1-2K tokens in a typical prompt.\n\nLastly, remember, you can\u2019t get an answer to any questions about your data until it\u2019s been processed and added to the in-memory context - that\u2019s the processing time they\u2019re talking about; how long it takes to encode your data and start providing a response.\n\nThey aren\u2019t hiding anything, it\u2019s just a reality of how LLMs work at scale.",
+                                                                            "score": 2,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2024-02-18 13:16:12",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "Xtianus21",
+                                                                                    "body": "Thanks for the great response. But this is my point. A way to get around this would to create an Auto RAG technique right. If I can clean your data then I can go retrieve it upon query. I think this is the point I'm trying to make. What is this really. I agree with everything you're saying.",
+                                                                                    "score": 2,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2024-02-18 13:28:09",
+                                                                                    "replies": [
+                                                                                        {
+                                                                                            "author": "StuartGray",
+                                                                                            "body": "Not really. RAG just semantically matches your query/prompt to one or more documents/paragraphs/sentences in your corpus - any results are just a literal word for word copy of what\u2019s in the match(es).\n\nIf you want some level of understanding, or ability to ask questions that involve some level of interpreting, analysis or summarising the RAG matches, you *have* to load all that text into the in-memory context of an LLM.\n\nCan you use RAG without an LLM? Yes, but that\u2019s not really RAG, it\u2019s just semantic search.\n\nRAG is specifically intended for passing a cut down list of interesting results to an LLM (or some other text/language processing tool), to both provide relevant content to the process & cut down the need to process otherwise huge amounts of irrelevant text.\n\nYou can certainly use semantic search on its own for small scale problems, like searching a small website, or document.\n\nBut if your source document/collection is too large, you\u2019ll either be overwhelmed with relevant matches, or be forced to ignore a large amount of potentially useful matches - the bigger the LLM in-memory context, the less of a problem this is, and the greater the number & length of the documents you can usefully search over.",
+                                                                                            "score": 1,
+                                                                                            "depth": 10,
+                                                                                            "timestamp": "2024-02-18 13:51:11",
+                                                                                            "replies": [
+                                                                                                {
+                                                                                                    "author": "Xtianus21",
+                                                                                                    "body": "Mmm rag isn't regex. It's embeddings with a vector dB so there is a \"model\" to it. It is literally training your data into a model.",
+                                                                                                    "score": 1,
+                                                                                                    "depth": 11,
+                                                                                                    "timestamp": "2024-02-18 18:49:34",
+                                                                                                    "replies": []
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Xtianus21",
+                                    "body": "This doesn't have anything to do with my point. I'm talking about the methodology of getting these results not the results. The results are marketing.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-02-18 11:10:41",
+                                    "replies": [
+                                        {
+                                            "author": "StuartGray",
+                                            "body": "So, are you saying that Claude 2.1 uses RAG to achieve its 200k context, as described in that passage I quoted from their paper?\n\nKeeping in mind there is a publicly available 7B parameter LLM on hugging face with 1M context you can run on your own hardware - if you have the VRAM.\n\nAre you seriously suggesting that Google couldn\u2019t make a 1M context model without RAG?\n\nIf you accept all of the figures up to 1M are genuine in-memory context, what reason do you have to believe anything higher is RAG, and not also in-memory?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-02-18 11:22:50",
+                                            "replies": [
+                                                {
+                                                    "author": "Xtianus21",
+                                                    "body": "Yea looks like it. No? Read their docs. An upload can take several minutes. They mention better rag in their docs.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-02-18 11:23:50",
+                                                    "replies": []
+                                                },
+                                                {
+                                                    "author": "Xtianus21",
+                                                    "body": "What I'm saying is that a model is designed to have a certain amount of coherence upon 0 shot or 1 shot. Context is akin to 1 shot. The things you know and the things you may not know or don't know. Carrying that through to a pure coherence is difficult. I don't think it's a memory issue I think it's a model scale issue. That and memory. Meaning, the model has to be able to handle that many layers of comprehension simultaneously like humans do. We can keep many parts of coherence and context all at once in our heads. I'm just saying this needs to be explained better.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-02-18 11:27:07",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "OfficialHashPanda",
+            "body": "I see this huge text not mentioning once where you have a source that shows the new Gemini pro 1.5 uses RAG for the bulk of its context.\n\nThey put out a technical paper, I recommend you to read it: [https://storage.googleapis.com/deepmind-media/gemini/gemini\\_v1\\_5\\_report.pdf](https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf)",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2024-02-17 20:34:40",
+            "replies": [
+                {
+                    "author": "Xtianus21",
+                    "body": "I didn't an update to the post. You can read the full update and tell me what you thing. This is a snippet. But I did go through and analyze the paper.   \n\n\nUpdate After reading Google DeepMind release paper:  \nSo let's break it down.   \nGemini 1.5 Pro is built to handle extremely long contexts; it has the ability to recall and reason over fine-grained information from up to at least 10M tokens.   \nUp to at least? Well, that's a hell of way to put that. lol. Seems like they were a little nervous on that part and the edit didn't make it all the way through. Also, the 10M seems to be regarding code but I am not entirely sure.  \nNext they give us what would be believed to be something of comprehensive and equal weight coherence across a large token set.   \nqualitatively showcase the in-context learning abilities of Gemini 1.5 Pro enabled by very long context: for example, learning to translate a new language from a single set of linguistic documentation. With only instructional materials (500 pages of linguistic documentation, a dictionary, and \u2248 400 parallel sentences) all provided in context, Gemini 1.5 Pro is capable of learning to translate from English to Kalamang, a language spoken by fewer than 200 speakers in western New Guinea in the east of Indonesian Papua  \nThe problem is with this setup:  \n500 pages x 400 words per page = 200,000 words  \na dictionary in that language is estimated to have 2800 entries so roughly 14,000 words",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2024-02-18 00:23:52",
+                    "replies": []
+                },
+                {
+                    "author": "Xtianus21",
+                    "body": "Does that paper explain how they get to 10 million context?",
+                    "score": -1,
+                    "depth": 1,
+                    "timestamp": "2024-02-17 21:10:12",
+                    "replies": [
+                        {
+                            "author": "OfficialHashPanda",
+                            "body": "No. They leave out the how. However, they do show a lot of results.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-02-17 23:02:31",
+                            "replies": [
+                                {
+                                    "author": "Xtianus21",
+                                    "body": "I published an update. let me know what you think. I think this is important to distinguish. I don't know how you feel but I would want to know. That's a hell of a price differential. I can do my own RAG.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-02-18 00:32:15",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "heavy-minium",
+            "body": "Well you're right it's not the same, but truth be told, I never cared for people confusing that, because it's only one of our dozens. It's just to much work correcting people on things they desperately want to deny.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-02-18 05:19:11",
+            "replies": [
+                {
+                    "author": "Xtianus21",
+                    "body": "What do you mean exactly. It's a little cryptic what you're saying. In my opinion this is huge because if an internal ETL/RAG process is going on 1) that's a different cost to us the consumer and 2) I would think that all data scientists and AI automation engineers would want to know the specs and capabilities of this. Am I going to plan my RAG or are you going to do it for me. If you do it for me then how good is it? Is it better than what I can do manually? \n\nOne of the great things about RAG is that it allows you to control your data and LLM costs. If you're just out-of-the boxing it for us truly how good is it. That's a fair question. \n\nTrue memory function would work differently to me.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-02-18 13:00:05",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "loopy_fun",
+            "body": "i asked the gemini ai chatbot if it used graph of thought reasoning and it does not .\n\n[https://deepai.org/publication/beyond-chain-of-thought-effective-graph-of-thought-reasoning-in-large-language-models](https://deepai.org/publication/beyond-chain-of-thought-effective-graph-of-thought-reasoning-in-large-language-models)",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-02-18 09:13:31",
+            "replies": [
+                {
+                    "author": "Xtianus21",
+                    "body": "RAG can be anything it doesn't have to be got",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-02-18 10:15:42",
+                    "replies": [
+                        {
+                            "author": "loopy_fun",
+                            "body": "did you read it ?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-02-18 12:24:55",
+                            "replies": [
+                                {
+                                    "author": "Xtianus21",
+                                    "body": "Read what?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-02-18 12:32:46",
+                                    "replies": [
+                                        {
+                                            "author": "loopy_fun",
+                                            "body": "the link .",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-02-18 12:34:59",
+                                            "replies": [
+                                                {
+                                                    "author": "Xtianus21",
+                                                    "body": "yes of course and i did a breakdown. oh sorry not that link. can you tell me what it is. I want to see your take first.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2024-02-18 12:53:26",
+                                                    "replies": [
+                                                        {
+                                                            "author": "loopy_fun",
+                                                            "body": "graph of thought reasoning is a nonlinear process like humans reasoning .",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2024-02-18 13:50:14",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "Xtianus21",
+                                                                    "body": "But that's on the inference layer",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2024-02-18 16:40:22",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "loopy_fun",
+                                                                            "body": "i think there must be a way to program a langauge  model to use it inside itself.",
+                                                                            "score": 1,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2024-02-18 19:00:08",
+                                                                            "replies": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

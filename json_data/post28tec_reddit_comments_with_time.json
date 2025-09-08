@@ -1,0 +1,124 @@
+{
+    "post_title": "Confused about temperature, top_k, top_p, repetition_penalty, frequency_penalty, presence_penalty? Me too, until now!",
+    "post_timestamp": "2023-07-23 08:25:42",
+    "last_comment_timestamp": "2024-08-27 12:14:54",
+    "time_difference": "401 days, 3:49:12",
+    "comments": [
+        {
+            "author": "NandaVegg",
+            "body": "Unfortunately the explanation of penalties here are completely hallucinated.\n\nPenalties have nothing to do with training data; it reduces the chance of tokens that already in the context based on how many times each tokens appeared.\n\nPresence penalty applies the same-value penalty to tokens that appeared at least once.",
+            "score": 29,
+            "depth": 0,
+            "timestamp": "2023-07-23 11:53:55",
+            "replies": [
+                {
+                    "author": "jl303",
+                    "body": "Thanks for pointing it out! I guess this is a classic example for danger of trying to learn with gpt. When it gets right, it's great, but when it's wrong, you end up learning completely inaccurate information. :)",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2023-07-23 13:00:13",
+                    "replies": [
+                        {
+                            "author": "Working_Amphibian",
+                            "body": "Will be great when it can output a truthful \u201cI don\u2019t know\u201d or \u201cI\u2019m not 100% sure on this but here\u2019s my best guess\u201d.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2023-07-23 20:20:27",
+                            "replies": []
+                        },
+                        {
+                            "author": "Zulfiqaar",
+                            "body": "Yeah this is the kind of thing that I'd feed the documentation into GPT first in order to ground its context with accurate information, before it reinterprets it in a creative way to explain",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-07-23 13:25:27",
+                            "replies": []
+                        },
+                        {
+                            "author": "NoYesterday7832",
+                            "body": "Yeah, that's why I don't use it for very specific things. ChatGPT recently told me that a book by Stephen King had x number of chapters even though it doesn't have.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-07-23 16:22:50",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Crypt0Nihilist",
+            "body": "Why are you having a conversation with it and risking hallucination when you can use its huge context to drop in the articles you don't understand and ask it to use those as the source info to describe those features in easy to understand English?\n\nAsking LLMs questions when you don't know the answer or can't even sanity check the answer is going to land you in a world of hurt.",
+            "score": 15,
+            "depth": 0,
+            "timestamp": "2023-07-23 17:00:22",
+            "replies": []
+        },
+        {
+            "author": "HatsusenoRin",
+            "body": "Do not try to learn technical concepts solely from ChatGPT.\n\nIt's an expert in languages but that's about it. You won't ask a linguistic PhD for quantum physics (unless a multidiscipline scholar, of course).\n\nA good teacher should be able to say \"I don't know\" instead of lying.",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2023-07-23 17:09:15",
+            "replies": [
+                {
+                    "author": "jl303",
+                    "body": "Obviously I'm not trying to learn solely from ChatGPT. As I mentioned in the post, I have read articles about those before in the past, including  a forum thread people arguing about who is correct. Most of them were too technical showing ML math.\n\nI've also read different API documentation for inferencing LLM, but explanations were too short to understand fully. I guess those are meant for people who already know their stuff.\n\nAs a non- comp-sci major who just wants to play with LLMs for fun, I wanted to know the implication of setting different values, not necessarily how it exactly works.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-07-23 17:44:06",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Amgadoz",
+            "body": "Can you please ask it about the repetition penalty? I don't have access to gpt-4",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-07-23 09:49:23",
+            "replies": [
+                {
+                    "author": "Frankelstner",
+                    "body": "When the model wants to find the next token, it has a weight for each of the possible 32000 different tokens and then picks one token (more or less randomly depending on settings). Lower temperature causes unlikely tokens to become even more unlikely. The repetition penalty works like temperature but in a selective manner. It causes tokens to be less likely to be picked if they had been picked recently.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-07-23 11:06:07",
+                    "replies": []
+                },
+                {
+                    "author": "Working_Amphibian",
+                    "body": "Ask Claude2 or Perplexity. Both free and high quality. Use a VPN if you\u2019re outside the US or UK for Claude2, just need it once to create an account with an email.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-07-23 20:23:57",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "FunkProductions",
+            "body": "Hey u/jl303, sorry I'm late to this thread but maybe I can help clear some things up about the GPT API settings.\n\n**From tinkering with these a bunch, here's my quick rundown:**\n\n* Temperature is basically your creativity knob. Crank it up and you'll get wild, unexpected responses - could be amazing, could be totally off-base nonsense. Dial it down for straightforward, focused outputs.\n* Top\\_p is like a rule that tells ChatGPT how many words it can look at before it picks one to use. Higher top\\_p opens it up to consider some more out-there options that could get interesting (or weird).\n* Frequency and presence penalties are like word-candy. Each candy (word) starts with a full 'yumminess' score. The kid wants the yummiest candies. Each time the kid takes a candy (uses a word), that candy becomes a little less yummy (less desirable). When ChatGPT talks, it uses words with the most points. If a word is used, it loses points.\n\nTruthfully, there's no one-size-fits-all setting. You've got to experiment and find what meshes best for your particular use case. It's a lot like messing with an equalizer - tweak the different parameters until you get that sweet spot.\n\nI actually put together a guide [breaking down gpt parameters with actual examples](https://funkpd.com/devlog/improving-text-with-chatgpt-top_p-frequency-penalty-presence-penalty/). But don't overthink it too much, part of the fun is just embracing the wonkiness that comes from different setting combos.\n\nLet me know if any of that still needs clarifying! Always happy to ramble more about this weird AI stuff.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-04-23 05:44:20",
+            "replies": []
+        },
+        {
+            "author": "Open-Opinion-7338",
+            "body": "Please have a look at this study: [Balancing Diversity and Risk in LLM Sampling: How to Select Your Method and Parameter for Open-Ended Text Generation](https://arxiv.org/abs/2408.13586) and the associated github repo (https://github.com/ZhouYuxuanYX/Benchmarking-and-Guiding-Adaptive-Sampling-Decoding-for-LLMs).",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-08-27 12:14:54",
+            "replies": []
+        },
+        {
+            "author": "SRavingmad",
+            "body": "Have you tried out it\u2019s suggested settings to see how they do?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-07-23 11:38:03",
+            "replies": []
+        }
+    ]
+}

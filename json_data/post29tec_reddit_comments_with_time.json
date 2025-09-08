@@ -1,0 +1,190 @@
+{
+    "post_title": "[R] A simple explanation of Reinforcement Learning from Human Feedback (RLHF)",
+    "post_timestamp": "2023-01-18 15:05:46",
+    "last_comment_timestamp": "2023-04-01 23:47:25",
+    "time_difference": "73 days, 8:41:39",
+    "comments": [
+        {
+            "author": "dataslacker",
+            "body": "That\u2019s a nice explanation but I\u2019m still unclear as to the motivation for RL. You say the reward isn\u2019t differentiable but since it\u2019s just a label that tells us which of the outputs is best why not simply use that output with supervised training?",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2023-01-18 17:40:13",
+            "replies": [
+                {
+                    "author": "JClub",
+                    "body": "You're not the first person that asks me that question! I need to add a more detailed explanation for that :)\n\nThe reward is non-differentiable because it was produced with a reward model, and this reward model takes text as input. This text was obtained by decoding the log probabilities of the output of your model. This decoding process is non-differentiable and we lose the gradient link between the LM model and the reward model.\n\nDoes this make sense? Also, if the reward is given directly by a human, instead of a reward model, it's clearer that this reward is non-differentiable.\n\nRL helps transforming this non-differentiable reward into a differentiable loss :)",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2023-01-18 18:03:40",
+                    "replies": [
+                        {
+                            "author": "dataslacker",
+                            "body": "Sorry I think didn\u2019t do a great job asking the question. The reward model, as I understand it, will rank the N generated responses from the LLM. So why not take the top ranked response as ground truth, or a weak label if you\u2019d like and train in a supervised fashion predicting the next token. This would avoid a he RL training which I understand is inefficient and unstable.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-01-18 23:46:31",
+                            "replies": [
+                                {
+                                    "author": "JClub",
+                                    "body": "Yes, the reward model can rank model outputs but it does that by giving a score to each output. You want to train with this score, not with \"pseudo labeling\" as you are stating. But the reward score is non-differentiable, and RL helps to construct a differentiable loss. Does that make sense?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-01-19 02:09:53",
+                                    "replies": [
+                                        {
+                                            "author": "dataslacker",
+                                            "body": "Yes, your explanations are clear and are also how I understood the paper, but I feel like there's some motivation for the RL training that's missing. Why not \"pseudo labeling\"? Why is the RL approach better? Also the reward score is non-differentiable because it was designed that way, but they could have designed it to be differentiable. For example instead of decoding the log probs why not train the reward model on them directly? You can still obtain the labels via decoding them doesn't mean that has to be the input to the reward model. There are a number of design choice the authors made that are not motivated in the paper. I haven't read the reference so maybe they are motivated elsewhere in the literature, but RL seems like a strange choice for this problem since there isn't a dynamic environment that the agent is interacting with.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2023-01-19 02:58:15",
+                                            "replies": [
+                                                {
+                                                    "author": "JClub",
+                                                    "body": "Yes, 100% agree with you. I believe that the researchers have also tried pseudo labeling or making the reward differentiable as you say, and maybe RL is the SOTA approach now. But these are just guesses!",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2023-01-19 04:12:59",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "wardellinthehouse",
+                            "body": "\\> This text was obtained by decoding the log probabilities of the output of your model. This decoding process is non-differentiable and we lose the gradient link between the LM model and the reward model.\n\nCan you clarify what you mean by \"decoding the log probabilities\"? Are you referring to sampling from the language model? Or the fact that we need to sample multiple times in an autoregressive manner to generate the final prompt completion output that we pass as input to the reward model?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-02-04 01:49:16",
+                            "replies": [
+                                {
+                                    "author": "JClub",
+                                    "body": "I mean the way you transform the log probabilities of each generation step into text.   \nAt each step, the model produces a distribution of probabilities for each token in the vocabulary. To generate text, we pick a single probability of this distribution (the highest if we are greedy decoding). When you pick those probabilities and decode them into text, this decoding process is not differentiable.  \nDoes this make sense?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-02-04 05:36:14",
+                                    "replies": [
+                                        {
+                                            "author": "wardellinthehouse",
+                                            "body": "Yeah, that makes sense. It's just sampling then.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2023-02-04 12:43:01",
+                                            "replies": [
+                                                {
+                                                    "author": "JClub",
+                                                    "body": "Usually the term sampling is used when the text decoding process is sampled (i.e., non-deterministic), I thought you were referring to that.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2023-02-04 12:48:51",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "mtocrat",
+                    "body": "What you're describing is a general approach to RL that is used in different forms in many methods: sample actions, weight or rank them in some way by the estimated return, regress to the weighted actions.  So you're not suggesting to do something other than RL but to replace one RL approach with a different RL approach.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-01-19 04:10:18",
+                    "replies": []
+                },
+                {
+                    "author": "crazymonezyy",
+                    "body": "Amongst other things, RLs major benefit is for learning from a sequence of reward over simply \"a reward\" which would be the assumption when you treat this is a SL problem. Do remember IID observations is one of the fundamental premises of SL.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-01-18 22:44:24",
+                    "replies": [
+                        {
+                            "author": "wardellinthehouse",
+                            "body": "However, in the case of ChatGPT it is a contextual bandit, so each \"episode\" comprises a single step. So there is really only a single reward to be learned over (per episode).",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-02-04 01:48:15",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Ouitos",
+            "body": "Hi, thanks for the explanation !\n\nTwo comments :\n\n> 1. Make \"New probs\" equal to \"Initial probs\" to initialize.\n\nShouldn't it be the opposite ? Make the initial be equal to the first occurence of new probs ? I mean equality is transitive, but here we think you change new probs to be equal to initial probs, but I contradicts the diagram that says that new probs is always the output of our LM.\n\n> `loss = min(ratio * R, clip(ratio, 0.8, 1.2) * R)`\n\nIsn't the min operation redundant with the clip ? How is that different from `min(ratio * R, 1.2 * R)` ? Does 0.8 have any influence at all ?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-01-19 09:57:10",
+            "replies": [
+                {
+                    "author": "JClub",
+                    "body": "\\> Shouldn't it be the opposite ? \n\nYes, that makes more sense. Will change!\n\n\\> How is that different from min(ratio \\* R, 1.2 \\* R) ? Does 0.8 have any influence at all ?\n\nMaybe I did not explain properly what the clip is doing. If you have ratio=0.6, then it become 0.8 and if it is > 1.2, it becomes 1.2  \nDoes that make more sense? Regarding the min operation, it's just an heuristic to choose the smaller update tbh",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-01-19 14:08:41",
+                    "replies": [
+                        {
+                            "author": "Ouitos",
+                            "body": "Yes, but If you have a ratio of 0.6, you then take the min of 0.6 * R and 0.8 * R, which is ratio * R. In the end, the clip is only effective one way, and the 0.8 lower limit is never used. Or maybe R has a particular property that makes this not as straight forward ?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-01-20 05:56:29",
+                            "replies": [
+                                {
+                                    "author": "JClub",
+                                    "body": "ah yes, you're right. I actually don't know why, but you can [check the implementation](https://github.com/lvwerra/trl/blob/e954fa00e5558ce0a2553bdee2bfd6eedabbc18d/trl/trainer/ppo_trainer.py#L593) and ask it on GitHub",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2023-01-20 19:09:09",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "JoeHenzi",
+            "body": "Taking a look - wanting to implement this in [my application](https://nlp.henzi.org) to explore parameter space, shoot for optimal, but actually am finding ChatGPT gets *very cagey* on the topic lately. Explored the topic of Genetic Algorithms, which it suggested would be less computationally expensive, then decided to not help me really get to coding it.\n\n**EDIT:** This is exactly *my* use case...",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-01-18 23:25:51",
+            "replies": [
+                {
+                    "author": "JClub",
+                    "body": "This package is pretty simple to use! [https://github.com/lvwerra/trl](https://github.com/lvwerra/trl)\n\nIt supports decoder-only models like GPT and it is in the process of supporting enc-dec like T5.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-01-19 02:11:36",
+                    "replies": [
+                        {
+                            "author": "JoeHenzi",
+                            "body": "I'll take a look, thanks again. Building up a dataset, at the very least, that could be interesting to analyze or crunch. Would love to implement a GA to explore the space and have the example code from ChatGPT but need to dive deeper. As I may have mentioned on my GH comment, when trying to do predictions around parameters I end up blocking/slowing the API call so either my code is trash (likely!) or I'm trying to do too-too much at once.\n\nOn my short term list is using a T5-like model to produce summaries but I was trying to execute them at bad times, trying to make too many changes at once. \n\nThanks again for sharing. Enjoying playing in the space and love when you find people willing to share. (Unlike OpenAI who is slowly closing out the world to their toys).",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-01-19 11:19:56",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "_Party_Pooper_",
+            "body": "Could you build a build an RLHF into the mechanisms of Reddit and bot",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-04-01 23:47:25",
+            "replies": []
+        }
+    ]
+}

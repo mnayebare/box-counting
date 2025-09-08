@@ -1,0 +1,133 @@
+{
+    "post_title": "Peter from Lightblue here. I'd like to share our ORPO experiments with training a multilingual Llama 3 model. We find a new simple data-based Repeated Ranking technique that can reduce training time/cost by up to 2-4x while increasing accuracy",
+    "post_timestamp": "2024-05-30 03:13:41",
+    "last_comment_timestamp": "2024-05-31 22:10:13",
+    "time_difference": "1 day, 18:56:32",
+    "comments": [
+        {
+            "author": "Open_Channel_8626",
+            "body": ">we evaluate the same responses multiple times and train only on those responses which are consistently ranked.\n\n\nThis may be a very good idea because there was a paper last year saying that they think LLM responses that contain hallucinations have a higher sensitivity to hyperparameters (temp, top-p etc) than responses that don't. So using consistency as an indicator could be good.",
+            "score": 10,
+            "depth": 0,
+            "timestamp": "2024-05-30 09:11:46",
+            "replies": [
+                {
+                    "author": "Peter_Lightblue",
+                    "body": "Yeah, I really think this could be useful. As I say in the paper, an even simpler metric (that I have still not properly investigated) could be the perplexity over the ranking itself. You may be able to tell sensitivity directly from the probability scores of the ranking, rather than the brute force approach we currently take by generating the ranking multiple times.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2024-05-30 09:27:01",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "prostospichkin",
+            "body": "Great stuff, and yet there is a major inherent downside of these models. Because they rely on GPT4 and other LLMs for fine-tuning, they create text based on patterns that are almost instantly recognizable, which is particularly noticeable in the opening and closing words.",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2024-05-30 11:27:04",
+            "replies": []
+        },
+        {
+            "author": "fullouterjoin",
+            "body": "Odds Ratio Preference Optimization (ORPO) (Hong et al., 2024)\n\n* https://arxiv.org/abs/2403.07691\n* https://huggingface.co/papers/2403.07691\n* https://github.com/xfactlab/orpo\n\nYou would get more engagement on your research if you define what ORPO is and why it is important for what you are trying to accomplish.\n\nThe paper has *9* citations, https://www.semanticscholar.org/paper/ORPO%3A-Monolithic-Preference-Optimization-without-Hong-Lee/973814cd535facbf4f27c3de477b05bf19366030 I would wager that most people here don't know or have never heard of ORPO. \n\n* https://huggingface.co/kaist-ai/mistral-orpo-alpha\n* https://huggingface.co/kaist-ai/mistral-orpo-beta\n\n> ORPO (Odds Ratio Preference Optimization) is a novel preference alignment algorithm for language models that incorporates an odds ratio-based penalty into the conventional negative log-likelihood loss during supervised fine-tuning. By contrasting the odds of generating favored responses against disfavored ones, ORPO efficiently guides the model to differentiate between preferred and rejected generation styles without the need for a separate reference model. This monolithic approach simplifies the training pipeline, reduces computational overhead, and achieves state-of-the-art performance on various benchmarks, surpassing larger models trained with other preference alignment methods.\n\n(my summary, with assistance, please correct any errors)\n\nhttps://www.youtube.com/watch?v=N6-SPUeCB8U",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2024-05-31 15:03:41",
+            "replies": [
+                {
+                    "author": "Peter_Lightblue",
+                    "body": "Thanks for the feedback! I do try and make the case for using ORPO in the paper, but I agree that explaining it better in this blog-post would have been good. I will use this feedback for future posts. Thanks again!",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-31 22:10:13",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "nanowell",
+            "body": "What's the template for 50% model?",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2024-05-30 04:39:43",
+            "replies": [
+                {
+                    "author": "Peter_Lightblue",
+                    "body": "Hey, it's the standard Llama 3 template. Here is the template for the model:\nhttps://huggingface.co/lightblue/suzume-llama-3-8B-multilingual-orpo-borda-half/blob/b82150a9840ba5ba93918c745adc70afc6ad2ce1/tokenizer_config.json#L2053\n\nI have been using the Llama 3 template preset on LM Studio for the GGUFs and it has been working as expected.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2024-05-30 05:59:45",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "vesudeva",
+            "body": "Incredible job! Your team is doing some amazing work in the multilingual realm, hope you get the deserved recognition as more people see the quality of your research and work! Kudos!",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2024-05-30 10:55:01",
+            "replies": []
+        },
+        {
+            "author": "Singsoon89",
+            "body": "Cool work!",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-05-30 07:21:17",
+            "replies": []
+        },
+        {
+            "author": "Languages_Learner",
+            "body": "Made q6 and q5\\_k\\_m ggufs for 50% trained model: [https://huggingface.co/NikolayKozloff/suzume-llama-3-8B-multilingual-orpo-borda-half-Q6\\_K-GGUF](https://huggingface.co/NikolayKozloff/suzume-llama-3-8B-multilingual-orpo-borda-half-Q6_K-GGUF), [https://huggingface.co/NikolayKozloff/suzume-llama-3-8B-multilingual-orpo-borda-half-Q5\\_K\\_M-GGUF](https://huggingface.co/NikolayKozloff/suzume-llama-3-8B-multilingual-orpo-borda-half-Q5_K_M-GGUF)",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-05-30 09:18:51",
+            "replies": [
+                {
+                    "author": "Peter_Lightblue",
+                    "body": "Thanks!",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-05-30 09:27:33",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "apel-sin",
+            "body": "[https://huggingface.co/Apel-sin/suzume-llama-3-8B-multilingual-orpo-borda-half-exl2](https://huggingface.co/Apel-sin/suzume-llama-3-8B-multilingual-orpo-borda-half-exl2)",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-05-30 11:01:32",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[removed]",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-05-30 09:09:24",
+            "replies": [
+                {
+                    "author": "Peter_Lightblue",
+                    "body": "I'm an LLM researcher at a smaller startup in Japan. All our clients are Japanese, meaning that this post will almost definitely not serve to drive up our business in any way.\nWhile I would have wanted to do these experiments whether I was in my current position or whether I was just a hobbyist, I literally wouldn't have been able to do these experiments without the R&D funding at our company. But I have been pushing (and my company has been very obliging) with being as open as possible to release any findings/models/datasets we have to contribute to the LLM community. I consider r/LocalLlama to be the best LLM community online, hence why I post here, so I am just a bit annoyed to see this sort of feedback.\nI fully take the point that the LLM space has been used by many companies to generate hype and funding rather than any actual results, but I'd like to think that I am contributing more to the community than that.\nI'd like you and other people that are knowledgeable about LLMs to use our findings, maybe disprove them, maybe improve upon them, but hopefully find them useful in some way.\nNot trying to shill - just trying to do research within my small team at the pace of change that LLMs are being developed at.",
+                    "score": 4,
+                    "depth": 1,
+                    "timestamp": "2024-05-30 09:24:00",
+                    "replies": []
+                },
+                {
+                    "author": "ahmetegesel",
+                    "body": "Can you elaborate a little bit more?",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-05-30 09:13:27",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}

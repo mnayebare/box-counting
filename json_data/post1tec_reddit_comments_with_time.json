@@ -1,0 +1,137 @@
+{
+    "post_title": "[D] How does 'self-attention' work in transformer models?",
+    "post_timestamp": "2023-09-23 12:25:44",
+    "last_comment_timestamp": "2023-09-25 16:25:14",
+    "time_difference": "2 days, 3:59:30",
+    "comments": [
+        {
+            "author": "robinestsurreddit",
+            "body": "Please have a look at the illustrated transformers here http://jalammar.github.io/illustrated-transformer/ I found the explanation here to be pretty clear. If you want to complement this by some actual code have a look at the annotated transformers here http://nlp.seas.harvard.edu/annotated-transformer/. I also found chat gpt to be pretty good at filling my knowledge gap when trying to understand how attention works",
+            "score": 12,
+            "depth": 0,
+            "timestamp": "2023-09-23 18:41:06",
+            "replies": [
+                {
+                    "author": "GraphicsMonster",
+                    "body": "Thank you so much! Just going through it and it already looks clearer than all of the breakdowns I've come across on the internet.\n\nThis will be super helpful.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-09-24 01:29:28",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Vangi",
+            "body": "This post should be in r/learnmachinelearning",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2023-09-23 21:42:42",
+            "replies": []
+        },
+        {
+            "author": "minh6a",
+            "body": "Matrices multiplication Q.KT is defined by dot product of row of Q and col of KT, which is row of K. Dot product gives the similarities between 2 vectors (remember cosine similarities, but we now also care about the vectors' magnitudes), the higher number is the higher the importance of the Key wrt to the Query.\n\nSo now you might ask, what if the vectors have high magnitudes, that's where we have those LayerNorm to force them back to L2-Norm=1. Tbh I'd want to see what if we use LayerNorm right before first attention layer, bc the Linear layer for the first attention actually do a lot of normalization and projection.\n\nIn self attention, Q=K so what you have is the importance of each token to other tokens in the sentence. Note, there is a linear layer that acts as projections of Q and K to different spaces and that's the part that actually learns the language model",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2023-09-23 12:37:04",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "Hum, I either don't understand your explanation or it's a little incorrect... You say that in self-attention Q=K - IMHO no it's not, and there is no *one* linear layer, there are multiple linear layers, one for each set of relevant weights. That is (I ignore the bias), Q = W_q\\*x, K = W_k\\* x, V=W_v\\*x; \nattention_formula(V, K, V) \nWhile you understand the idea, IMHO the math is not aligned with your explanation. So the mask is computed using these matrices, and we use a linear layer regardless. You skipped these matrices, that is the attention part - you started to explain the transformer here.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2023-09-23 17:25:54",
+                    "replies": [
+                        {
+                            "author": "minh6a",
+                            "body": "Thing is, when implementing QKV attention, there's only 1 linear layer from x dim (let's say 3 tokens 768 embeddings, (3,768)) to a (3,768x3), then we split QKV from that to get 3 tensors of (3,768).\n\nThe input is indeed x=Q=K=V, if you look at Attention is all you need paper ([https://arxiv.org/pdf/1706.03762.pdf](https://arxiv.org/pdf/1706.03762.pdf)) \n\nOriginal idea of attention doesn't have the linear layer ([https://arxiv.org/pdf/1409.0473.pdf](https://arxiv.org/pdf/1409.0473.pdf)), but to make the attention learnable we can put a linear in front of the input.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-09-23 17:57:42",
+                            "replies": [
+                                {
+                                    "author": "PuzzleheadedCash7312",
+                                    "body": "Doing the linear layer to 3x the size of each QKV is for efficiency. We could have a separate linear layer for each q k v. Even in that case of the 3x linear layer, none of the weights are the same or even interacting with eachother between the q k v. x!=q!=k!=v",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-09-25 08:36:25",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "neu_jose",
+            "body": "andrej karpathy's youtube channel is your friend.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-09-23 22:09:47",
+            "replies": []
+        },
+        {
+            "author": "FyreMael",
+            "body": "I see it like this ...\n\nThink of a dictionary in programming (dictionary=associative array).\n\nRegular ones are static with a 1:1 mapping between keys and values.\n\nWhen we need a dictionary that is more flexible, i.e. one that is differentiable, as a component in a transformer or maybe elsewhere, we can implement this **differentiable dictionary** using the **mechanism of self-attention**.\n\nEach self-attention mechanism can represent different contextual relationships among a set of elements, by comparing the set to itself (as in dot product itself), scaling, soft-maxing the result and using that to represent the amount of weighting to assign to each value. So the weighting is based on self-referential context.\n\nThis mechanism acts as a type of **smoothing kernel**.\n\nWe combine a whole bunch of these self-attention mechanisms with some other components (like residual connections, normalizers, and mlps) and we get a transformer.\n\nThe ability to have different self-attention mechanisms focusing on different contexts all at once and then combining those attentions in myriad ways is what helps to make transformers so powerful.\n\nParticularly when carried out with **massive compute and data**.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-09-23 22:12:21",
+            "replies": [
+                {
+                    "author": "GraphicsMonster",
+                    "body": "so each attention head tunes itself in a way to calculate just one kind of contextual similarity between each token? and then we somehow combine multiple attention heads to give us a whole bunch of contextual information between all the tokens in the vocabulary?\n\nis that what you're implying?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-09-24 15:01:11",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "InterstitialLove",
+            "body": ">I don't quite understand why this multiplication gives us a meaningful metric for importance.\n\nBecause of gradient descent. The model is trained to find query and key values such that this multiplication will give a meaningful metric for importance. There is literally no other constraint on the key and query vectors, they're not used for anything else, so gradient descent is free to \"choose\" whatever vectors work best\n\nAs for why it's possible to use inner product as a measure of importance, imagine each entry in the key vector as an attribute, like \"implies a location\" or \"usually a noun\" or \"signals a casual tone,\" etc. The key vector is a list of how much the token has each attribute. The query vector is a list of how useful each attribute would be to know. Obviously we don't know in general what the attributes are or how they're represented, but the point is you can represent attributes with a vector and then find the total relevance with an inner product.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-09-24 13:07:17",
+            "replies": [
+                {
+                    "author": "GraphicsMonster",
+                    "body": "Thanks. This helped in kind of visualizing the importance/significance of key and query vectors.\n\nWhat would you say the value vector is for in the same sense? We take the dot product between key and query, divide by root of key dimensionality and apply softmax which gives a normalized representation of how important each token is to each token (total\\_tokens, embedding\\_dim). (is this correct btw?)\n\nThen we, for some reason pass this through another linear layer(value layer). Why do we do this?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-09-24 14:55:15",
+                    "replies": [
+                        {
+                            "author": "InterstitialLove",
+                            "body": "The square-root-of-dimension thing is just for training purposes, it improves computational stability but doesn't really change things because the vectors can just get bigger/smaller to compensate\n\nThink of the value vector as a way of perturbing the representation of your vector. The tokens are represented by vectors in the embedding space. The value vector is added to that embedding vector, changing it slightly, yielding a new point in latent space. \n\nThe softmax roughly means \"choose the best one,\" in this case the single context token which best matches the query, and add only that token's value to the original embedding. Except literally choosing just one wouldn't be differentiable so we use softmax (instead of max) to hedge our bets. If two tokens are equally good, we split the difference and hope it works. If one token is twice as good as another, we do 2/3 of that one and 1/3 of the other. Etc.\n\nI'm not sure what you mean by \"pass through another linear layer.\" Are you referring to multi-headed attention?\n\nA linear layer (no activation) is just rotation in latent space. It doesn't do anything at all in terms of adding information, it just relabels the information. Maybe to get it ready for some nonlinear operation that needs a specific labeling, or because it was being stored in a lower dimension and couldn't get properly labeled when it was created\n\nIn the case of multi-headed attention, since each head outputs a vector much smaller (in dimension) than the embedding space, the linear layer is just a list of what embedding vector each head's outputs correspond to\n\n[I'm simplifying things, this is just an intuitive place to start from]",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-09-24 15:44:31",
+                            "replies": [
+                                {
+                                    "author": "GraphicsMonster",
+                                    "body": ">I'm not sure what you mean by \"pass through another linear layer.\" Are you referring to multi-headed attention?\n\nI was referring to the value vector here.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-09-25 15:27:04",
+                                    "replies": [
+                                        {
+                                            "author": "InterstitialLove",
+                                            "body": "Is the value vector passed through a linear layer before being added to the original embedding in a single-headed attention?\n\nSuppose token n is attending token m. If v is the value of token m, and x is the embedding of token n before the attention, then the embedding of token n after the attention will be x+v. If, instead, the embedding is x+f(v) where f is some operation, then you have to ask why we didn't just give token m the value f(v) in the first place. \n\nIn particular, if f is linear, the fact that we do a weighted sum (with softmax for coefficients) of multiple value vectors is irrelevant. You can still just use f(v) for all the values and get the same answer.\n\nSo there must be something nonlinear happening, or there must be some reason to output the values in the wrong basis (like in multi-headed attention, where we want to use lower-dimensional values and then combine the values from multiple heads)",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2023-09-25 16:25:14",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

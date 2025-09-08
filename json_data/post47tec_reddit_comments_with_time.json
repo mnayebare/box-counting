@@ -1,0 +1,58 @@
+{
+    "post_title": "[D] Constrained decoding as stateful navigation?",
+    "post_timestamp": "2024-07-05 12:57:49",
+    "last_comment_timestamp": "2024-07-06 19:22:52",
+    "time_difference": "1 day, 6:25:03",
+    "comments": [
+        {
+            "author": "bregav",
+            "body": "I think you're right that this is similar to path exploration in games, which is why some people have been approaching the LLM agent issue using similar algorithms.\n\nWhat you want is probably reinforcement learning or monte carlo tree search. In either case you want to model the probability that a given choice for next token will produce an entire path/string will be valid in your grammar, which you would train another model to be able to do. The LLM would sort of provide a prior probability for this that would then be adjusted by another model.\n\nI personally am skeptical of this entire domain of work. It seems like a lot of effort to do that much additional modeling on top of the LLM, and it's not clear to me that the LLM itself ultimately confers much of an advantage over just training reinforcement learning or MCTS from scratch.\n\nLike, even if you get the LLM to give you outputs with the structure that you want, you then have the problem of connecting those outputs with real things in external data from the real world, which itself is a nontrivial task. Throwing the pretrained LLM on top of the main algorithm is potentially adding unnecessary complication and performance issues to an already large task that doesn't necessarily benefit a lot from it.",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2024-07-05 14:22:23",
+            "replies": [
+                {
+                    "author": "jpfed",
+                    "body": "Yes, I definitely have a hard time imagining how all this could be made performant.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-07-05 14:39:17",
+                    "replies": [
+                        {
+                            "author": "bregav",
+                            "body": "Depending on how hard the grammar issue proves to be, you might be able to improve things by changing the balance of LLM:MCTS. Like, instead of using a big LLM and a small MCTS model, it might be better to use a small LLM and a big MCTS model; a small LLM model probably gets you 90% of the way to having a well-informed prior anyway.",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-07-05 15:32:43",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "jpfed",
+            "body": "\\*I put a footnote-y asterisk in there without its corresponding footnote. The model of a grammar as a graph with states as nodes and tokens as edges is only capable of representing regular grammars. Solving this problem may be simpler than solving for CFGs. For CFGs, the \"player\" carries around a \"return\" stack with locations to teleport back to once they've completed mini side quests...",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-07-05 13:07:11",
+            "replies": []
+        },
+        {
+            "author": "mr-herpas",
+            "body": "(in case the set of actions is small)\n\nhave you considered assigning a token for each action and restricting the set of valid tokens the model may emit? potentially less cognitive load on the model and likely easier for you to parse.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-07-05 19:04:51",
+            "replies": []
+        },
+        {
+            "author": "OneCryptographer",
+            "body": "If you know precisely what tokens are valid/invalid, the typical reinforcement learning (RL) approach is to apply an \"action mask\" over it when learning so the actions (or tokens in this case) are completely invalid. You don't _search_ in that region. \n\nThe more exotic approaches would appear in \"Offline RL\" or similar setups which may include penalising the policy if it goes beyond its known policy (typically via some kind of divergence loss function) or restricting its update (e.g. like \"trust region policy optimisation\")",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-07-06 19:22:52",
+            "replies": []
+        }
+    ]
+}

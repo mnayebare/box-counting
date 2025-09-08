@@ -1,0 +1,292 @@
+{
+    "post_title": "Why isn\u2019t QLoRA being used more widely for fine tuning models?",
+    "post_timestamp": "2023-07-04 00:42:49",
+    "last_comment_timestamp": "2023-09-20 16:13:52",
+    "time_difference": "78 days, 15:31:03",
+    "comments": [
+        {
+            "author": "kaiokendev",
+            "body": "I can only speak personally, but I never used it because:\n\n* [4-bit GPTQ LoRA](https://github.com/johnsmith0031/alpaca_lora_4bit) training was available since early April. I did not see any comparison to it in the QLoRA paper or even a mention, so it makes me think they were not aware it already existed.\n* Most of the paper is about Guanaco and how you can recover a lot of performance loss by using QLoRA. When I looked at the [QLoRA config for Guanaco](https://huggingface.co/timdettmers/guanaco-33b/blob/main/adapter_config.json), I saw it is exporting most of the modules and has rank of 64. If you know LoRA, it is already mentioned in the original paper that a LoRA with rank equal to the rank of the weight matrix is ~equivalent to a full fine-tuning. So personally, I thought there was nothing really new in the paper or a reason to switch to the new approach. Most of the LoRAs today only export Q and K and keep the rank small because it is mentioned in the LoRA paper you do not need to do more than that to get _good enough_ performance, and in QLoRA paper they did not demonstrate that the same approach couldn't have been achieved with the existing 4-bit LoRA approach by also exporting most of the modules and using a high rank, so it did not give any reason to really switch.\n\nAt least, that's only my reason",
+            "score": 21,
+            "depth": 0,
+            "timestamp": "2023-07-04 03:44:53",
+            "replies": [
+                {
+                    "author": "tronathan",
+                    "body": "afaik alpaca\\_lora\\_4bit is also roughly twice as fast.  that's a pretty damn good reason to use it over qlora.",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2023-07-04 04:32:12",
+                    "replies": []
+                },
+                {
+                    "author": "georgesung",
+                    "body": "Is the rank of the original weight matrix just the smallest dimension of the matrix? E.g. The Q, K, V matrices in LLaMA are 4096x4096, so the rank would be 4096? Sorry I didn't pay attention in linear algebra class, genuinely asking \\^\\^ From [Wikipedia](https://en.wikipedia.org/wiki/Rank_(linear_algebra)), I guess it's the number of linearly independent columns, which is approximately just the number of columns in the matrix after pre-training (my guess).\n\nSo for a LoRA adapter for Q/K/V with rank 64, the A and B matrices would be size 4096x64 and 64x4096, so the A and B matrices combined would have 524,288 trainable parameters. Compared to the Q/K/V matrices which have 16,777,216 trainable params, that would be a 32x reduction in trainable params. Granted, you'd still need memory to run the forward/backward pass on the original weights for training, so I'd be curious about the overall memory savings of LoRA w/ high rank vs full fine-tuning. Maybe there is more memory required per parameter for trainable params vs non-trainable params during back-prop -- I need to review how the optimizers work.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-07-04 14:45:30",
+                    "replies": [
+                        {
+                            "author": "kaiokendev",
+                            "body": "I think your confusion is the trainable parameters? You do not need to copy the weight matrices entirely, you only need enough to train behavior comparable with a full fine-tune.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-07-04 15:07:33",
+                            "replies": [
+                                {
+                                    "author": "georgesung",
+                                    "body": "I guess I was confused when you said \"LoRA with rank equal to the rank of the weight matrix is \\~equivalent to a full fine-tuning\", since LoRA with rank 64 would still be less than the rank of the original weight matrix. The effectiveness could be the same as full fine-tuning for specific tasks (e.g. instruction tuning). Were you referring to the implicit \"intrinsic rank\" of the original weight matrix mentioned in the paper?\n\nIn any case thanks for bringing up alpaca\\_lora\\_4bit, I'll take a look!",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2023-07-04 15:17:02",
+                                    "replies": [
+                                        {
+                                            "author": "kaiokendev",
+                                            "body": "Yes sorry! My mistake, I meant when rank is equal to the full rank of the weight matrices. The LoRA paper is made to argue that the matrices are not full rank and their intrinsic rank is small, hence why low ranks like 64 are used compared to the hidden size",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2023-07-04 15:23:52",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Mysterious_Brush3508",
+                    "body": "What rank and alpha are you using for your training @kaiokendev?",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-07-04 06:21:59",
+                    "replies": [
+                        {
+                            "author": "kaiokendev",
+                            "body": "Rank = 4 and alpha of 8, maybe rank = 2 in some cases. It seem low but according to the LoRA paper, exporting all attention modules with rank = 1 performed on par or better than just Q and K with rank 8, and SuperCOT is using Q and K with rank 8. Exporting everything with high rank of 64 will be better, but the adapter can be quite large (2 GB in case of Guanaco)",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2023-07-04 06:33:34",
+                            "replies": [
+                                {
+                                    "author": "a_beautiful_rhind",
+                                    "body": "This explains why my alpha 128/rank 256 ballooned the adapter so much. \n\nRaising those did make the desired effects much stronger though.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2023-07-04 07:30:58",
+                                    "replies": [
+                                        {
+                                            "author": "FPham",
+                                            "body": "did you use all 7 layers or just Q and V",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2023-07-04 12:45:17",
+                                            "replies": [
+                                                {
+                                                    "author": "a_beautiful_rhind",
+                                                    "body": "No.. I have not played with that yet but I should.  I suppose I will lower rank in that case.\n\nOn the roleplay lora I d/l a while ago, the one targeted at all layers seemed worse than the one targeted at just the 2.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2023-07-04 14:13:53",
+                                                    "replies": [
+                                                        {
+                                                            "author": "FPham",
+                                                            "body": "I tried all 7 layers - but Chatgpt says the  gate\\_proj down\\_proj up\\_proj should not be normally trained so next I tried just the 4 attention layers.\n\nThe training with 7 layers had a strange tendency to answer with a question....",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2023-07-04 18:14:54",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "a_beautiful_rhind",
+                                                                    "body": "Probably better to do the 4 then.",
+                                                                    "score": 1,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2023-07-04 18:15:52",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Mysterious_Brush3508",
+                                    "body": "Thanks!",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-07-04 07:06:58",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "FPham",
+                    "body": "I did a lot of \"old\" 4bit LoRA and QLora and the result is ..... same.\n\nNot exactly same, but same in the end result.\n\nIn the later ooba training I added PR with info how many parameters QLora adds. More efficient or not - we are still adding a tiny % of parameters. You can't really make a cake with a spoon of flour.\n\n&#x200B;\n\nBTW, what is \"rank of the weight matrix\". I thought it is hidden\\_size (which is something like 5000 something)",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-07-04 10:57:09",
+                    "replies": [
+                        {
+                            "author": "kaiokendev",
+                            "body": "Yeah it would be 5120 in the case of 13B, 6144 in case of 30B, but the point of the paper is that the weight matrices are not full rank, which is why you can get away with using only a low rank adaptation of the matrices",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-07-04 15:10:17",
+                            "replies": [
+                                {
+                                    "author": "FPham",
+                                    "body": "Gotcha!",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-07-04 16:19:28",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "generalDevelopmentAc",
+                    "body": "Not sure if you missed it, but the whole main point of qlora is that you can get basically same quality but with half the  memory footprint, allowing bigger parameter sizes on consumer level graphic cards. Thats the actual meaning of the paper. Though you are right, a comparision to 4bit gptq results would have been nice.\n\nAnd a rank of 64 compared to the standard hidden size of 4096 in Llama is not the equivalent rank. (unless i highly misunderstood something, which i would gladly hear a correction about)  \nThe original Lora paper also mention that low ranks are fine for slightly finetuning the models, but they do not make any claims for usecases of adding new/very diffrent knowledge to the original models. So there definitly might be situations where higher ranks than 4-8 are usefull.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-07-05 03:37:46",
+                    "replies": [
+                        {
+                            "author": "kaiokendev",
+                            "body": "> the whole main point of qlora is that you can get basically same quality but with half the memory footprint, allowing bigger parameter sizes on consumer level graphic cards\n\nYes, I am saying that this is already achievable with the 4-bit LoRA trainer, so using QLoRA did not add anything new besides using a different float quant type, and since they did not compare against the existing 4-bit LoRA trainer, I could not see what the value is in changing\n\n> The original Lora paper also mention that low ranks are fine for slightly finetuning the models, but they do not make any claims for usecases of adding new/very diffrent knowledge to the original models. \n\nI don't know what you mean. In any case, any limitation of LoRA I would expect to also see in QLoRA. There is nothing I saw in QLoRA paper to suggest it is improving LoRA, only allowing for LoRAs in resource constrained environments (which again the existing trainer already did)\n\n> And a rank of 64 compared to the standard hidden size of 4096 in Llama is not the equivalent rank. (unless i highly misunderstood something, which i would gladly hear a correction about)\n\nBy equivalent I meant full rank. You do not need to use full hidden size to replicate performance of full-finetuning. That is what I see in the LoRA paper. Additionally, QLoRA paper backs it up and even makes the claim that rank is irrelevant when all modules are targeted in their Appendix A:\n> When using the standard practice of applying LoRA to query and value attention projection matrices, we are not able to replicate full finetuning performance for large base models. As shown in Figure 2 for LLaMA 7B finetuning on Alpaca, we find that the most critical LoRA hyperparameter is how many LoRA adapters are used in total **and that LoRA on all linear transformer block\nlayers are required to match full finetuning performance.**\n\n> We do a hyperparameter search for LoRA over the following variables: LoRA dropout { 0.0, 0.05, 0.1}, LoRA r { 8, 16, 32, 64, 128, 256}, LoRA layers {key+query, all attention layers, all FFN layers, all layers, attention + FFN output layers}. We keep LoRA \u03b1 fixed and search the learning rate, since LoRA \u03b1 is always proportional to the learning rate. We find that LoRA dropout 0.05 is useful for small models (7B, 13B), but not for larger models (33B,\n65B). **We find LoRA r is unrelated to final performance if LoRA is used on all layers as can be seen in Figure 4**",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-07-05 04:36:29",
+                            "replies": [
+                                {
+                                    "author": "generalDevelopmentAc",
+                                    "body": "Do you have a link for the 4bit Lora trainer? Would love to check it out.\n\nMy comment about additional knowledge training was not meant to be completly mushed into the discussion Lora vs Qlora but rather general to the Lora-Training.\n\n>Table 6 shows that, surprisingly, LoRA already performs competitively with a very small r (more  \n>  \n>so for {W q ,W v } than just W q ). This suggests the update matrix \u2206W could have a very small  \n>  \n>\u201cintrinsic rank\u201d. 6 To further support this finding, we check the overlap of the subspaces learned by  \n>  \n>different choices of r and by different random seeds. We argue that increasing r does not cover a  \n>  \n>more meaningful subspace, which suggests that a low-rank adaptation matrix is sufficient.  \n>  \n>**6 However, we do not expect a small r to work for every task or dataset. Consider the following thought**  \n>  \n>**experiment: if the downstream task were in a different language than the one used for pre-training, retraining**  \n>  \n>**the entire model (similar to LoRA with r = d model ) could certainly outperform LoRA with a small r.**\n\nMy tests where with adding japanese into the training. Thus having lower memory footprint and allowing for higher ranks in the training looked promising. Though further experiments seem to suggest that i will have to fully retrain a model with a better fitting vocabulary anyways.\n\nYou mention on using all layers, even fully connected, is interesting. Will have to incorporate that into my experiments. Thanks for that \\^\\^",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-07-06 01:15:12",
+                                    "replies": [
+                                        {
+                                            "author": "kaiokendev",
+                                            "body": "Here is link to it: [https://github.com/johnsmith0031/alpaca\\_lora\\_4bit](https://github.com/johnsmith0031/alpaca_lora_4bit)",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2023-07-06 01:55:48",
+                                            "replies": [
+                                                {
+                                                    "author": "generalDevelopmentAc",
+                                                    "body": "Thank you \\^\\^",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2023-07-07 14:49:10",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Technical-Owl3342",
+                    "body": "have you compared the efficiency of lora 4bit compared with qlora?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-09-20 16:13:52",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "BangkokPadang",
+            "body": "I think because it really seems more focused on personal use, like making a model work better for your own uses, and most people don\u2019t need to finetune their own models because they\u2019re getting \u201cgood enough\u201d results. Also it\u2019s slightly advanced, and people don\u2019t know they can do it on a 16 or 24GB gpu, or in a google colab.\n\nI think also the rapid speed that new fully trained models are coming out makes it feel \u201cunnecessary.\u201d\n\nI think if there weren\u2019t dozens of models coming out all the time, we\u2019d see more finetuned models with QLoRA, but it\u2019s just easier to chase my holy grail waifu by clicking download on a new model than building up a dataset and finetuning one myself.",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2023-07-04 01:35:31",
+            "replies": [
+                {
+                    "author": "tronathan",
+                    "body": ">making a model work better for your own uses\n\nThis is also what businesses do. The use case is for the businesses' customers instead of an individual.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-07-04 04:33:09",
+                    "replies": [
+                        {
+                            "author": "BangkokPadang",
+                            "body": "Yeah, but they probably aren\u2019t throwing their finetuned models up on huggingface for us to try out with our waifus, so OP would never even know they did it.",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2023-07-04 04:34:11",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Featureless_Bug",
+            "body": "Well, there are several reasons for that. First of all, bits and bytes library that is required for LORA doesn't work on like 50% of systems, so there is that (see issues of bitsandbytes on gh). Also, the QLORA training is super slow. And in addition to being slow, it is very unstable, about 3 out of 4 finetuning runs break. \n\nOh, and also the people who were trying to push the model here on reddit were super obnoxious (saying stuff like \"GPT 4 is dead because we have qlora now\") - it probably was irrelevant for most but did not help in my case.",
+            "score": 9,
+            "depth": 0,
+            "timestamp": "2023-07-04 06:00:48",
+            "replies": []
+        },
+        {
+            "author": "squareOfTwo",
+            "body": "well I am using it. QLoRA is just great if pre-trained models aren't good enough or simply lack knowledge.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2023-07-04 05:09:46",
+            "replies": []
+        },
+        {
+            "author": "ArthurFischel",
+            "body": "I am using QLoRA to fine tune a 3 billion parameter model on the guanaco data set. I'm using a rank of 64 with an alpha 16. My target modules are:\n\n* the query and key values \n* all the dense layers.\n\nThe guanaco data set is about 10,000 samples. \n\nWith a batch size of 4 and with gradient accumulation steps of 16 it takes about 160 steps for one full epoch. It's still under trained as it takes roughly 7 hours and I'm only using Google colab.\n\n\nAccording to [Scaling Data Constrained Language Models:] (https://arxiv.org/pdf/2305.16264.pdf) you can get more performance by training around three extra epochs for a total of four on your same data set and get almost as good as new data set results so I'll be trying that. \n\nI've got the LM training harness setup so I'll be evaluating before and after.\n\n\nI'm curious, how do these numbers compare to someone who's doing LoRA versus 4-bit Q LoRA?\n\nWhat is the memory consumption like for a 3 or 7 billion parameter model using or LoRA?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-07-04 13:05:12",
+            "replies": [
+                {
+                    "author": "georgesung",
+                    "body": "Memory consumption numbers I observed for 4-bit QLoRA with rank 8 and batch size 1:  \n\\* Using a 24GB GPU (A10G), I observed 14GB VRAM usage  \n\\* Using a 15GB GPU (T4), I observed 11GB VRAM usage  \n\n\nMore here: [Open LLaMA 7B uncensored + HuggingFace QLoRA fine-tuning guide : LocalLLaMA (reddit.com)](https://www.reddit.com/r/LocalLLaMA/comments/14phxe8/open_llama_7b_uncensored_huggingface_qlora/)",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-07-04 14:52:28",
+                    "replies": [
+                        {
+                            "author": "ArthurFischel",
+                            "body": "Thanks for the link. I actually have your repo open in another tab \ud83d\ude05. I was interested in seeing how you merged the QLoRA. I was working on a guide for Q LoRA like this in a colab notebook for a couple weeks so I was really happy to see how you did it.\n\n\nThanks for sharing your work!",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-07-04 19:45:39",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "dizzy3gg",
+            "body": "Is is?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-07-04 01:34:37",
+            "replies": []
+        },
+        {
+            "author": "ambient_temp_xeno",
+            "body": "One person can't really recreate a LIMA style dataset by themselves without a large amount of time and effort. Just this portion of it alone:\n\n*To further diversify our data beyond questions asked by users in online communities, we collect prompts from ourselves (the authors of this work). We designate two sets of authors, Group A and Group B, to create 250 prompts each, inspired by their own interests or those of their friends.1 We select 200 prompts from Group A for training and 50 prompts as a held-out development set. After filtering some problematic prompts, the remaining 230 prompts from Group B are used for test.*\n\n*We supplement the 200 training prompts with high-quality answers, which we write ourselves. While authoring answers, we try to set a uniform tone that is appropriate for a helpful AI assistant. Specifically, many prompts will be answered with some acknowledgment of the question followed by the answer itself. Preliminary experiments show that this consistent format generally improves model performance; we hypothesize that it assists the model in forming a chain of thought, similar to the \u201clet\u2019s think step-by-step\u201d prompt.*",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-07-04 05:13:59",
+            "replies": []
+        }
+    ]
+}

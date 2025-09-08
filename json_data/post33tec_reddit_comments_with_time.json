@@ -1,0 +1,77 @@
+{
+    "post_title": "[R] preference learning: RLHF, best of n sampling, or direct preference optimization?",
+    "post_timestamp": "2024-08-05 09:53:58",
+    "last_comment_timestamp": "2024-11-08 15:24:30",
+    "time_difference": "95 days, 5:30:32",
+    "comments": [
+        {
+            "author": "kawin_e",
+            "body": "i'm in research, but having talked to industry people:\n\nRLHF: has the highest ceiling of the options (according to the latest research and hearsay) but very hard to reach that ceiling. in industry, only openai/anthropic/gdm manage to do it well. \n\nDPO/KTO: vastly more common, especially among startups. even meta has switched to it for llama-3.1. if you know you have high-quality pairwise preferences and are willing to do a round of SFT, dpo is probably still your best option. If you have noisy preferences, if you don't want to do SFT, or if you only have thumbs-up/down feedback (and especially if that feedback is class-imbalanced), then KTO is the better option. I've met many startups in particular who've had better success with KTO since their data tends to be noisier, though some teams at meta seem to like it as well (disclaimer: i'm on the paper that proposed it, so there is some exposure bias here).\n\nBest-of-n: I haven't really heard people using this in practice, mostly due to concerns around inference efficiency and because training a good reward model is still very hard.",
+            "score": 23,
+            "depth": 0,
+            "timestamp": "2024-08-05 13:22:38",
+            "replies": [
+                {
+                    "author": "CheetahFair2770",
+                    "body": "thanks for your reply! do you think DPP/KTO is less prone to overoptimization (since they avoid reward models completely)?",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2024-08-05 13:36:54",
+                    "replies": [
+                        {
+                            "author": "kawin_e",
+                            "body": "it depends. if you do standard offline dpo, then it's not really going to be prone to reward-hacking in the way that online rlhf is. however, if you do online dpo (i.e., sampling from the model, inferring a preference, taking a step), then you can run into the same issues as rlhf iiuc, though there hasn't been a ton of research on this.\n\ncomparing dpo vs. kto, kto is less prone to over-fitting on the same data (which in this case would mean taking a preference and breaking it up into 1 good, 1 bad). this is simply because you're learning from a weaker signal. this may help explain why kto is particularly good for aligning models to do mathematical reasoning and doesn't suffer from the same length-increase issues that dpo does",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-08-05 14:19:43",
+                            "replies": [
+                                {
+                                    "author": "Saltysalad",
+                                    "body": "Are pairs typically acquired by running the same input twice with high temperature?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-08-05 15:06:08",
+                                    "replies": [
+                                        {
+                                            "author": "kawin_e",
+                                            "body": "That is a common way in which it's done, yes.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-08-05 22:21:58",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "South-Conference-395",
+                                    "body": "some results on this are out: [https://arxiv.org/pdf/2406.02900](https://arxiv.org/pdf/2406.02900)",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-08-06 04:39:31",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Internal_War3919",
+                    "body": "Best-of-n actually yield very strong results despite its simplicity(OpenAI webgpt reported this. RAFT paper reports this too). Theres a recent paper (Reward Steering with Evolutionary Heuristics..) that compares best of N to all preference tuning method (DPO/SIMPO/KTO ... ) on alpaca eval2 and MT bench.\n\nHowever, i dont think is fair to compare best of n with DPO/KTO all these. Best-of-n is an inference time algorithm while DPO/KTO actually updates the model's parameter. Its like comparing SFT  to few shot prompting of the same model.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-08-06 04:09:25",
+                    "replies": [
+                        {
+                            "author": "maketheworldabetterp",
+                            "body": "Best-of-n can kinda be both an inference algo and training data enhancement method. Imagine originally you only have 50k high quality but 10M of low quality data. You can use SFT to train a poor model. Use preference data, you train a reward model. Then use best-of-n with the reward model on the 10M low quality data to obtain much better quality data. Now you have 50k high quality + 10M decent quality data. Then you use SFT again on the combined data.\n\nBut now I can curious how this would compare to DPO. Both draw from the preference. One immediate advantage I see in DPO is its ability to punish the model for the negatives, whereas best-of-n training is still just encouraging the positives.\n\nAlso, now I am a bit confused because I am noob. If best-of-n can turn lots of bad data to better data, does it mean that if I have 10M of high quality data to begin with, I don't need RLHF or any of these post training method?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-11-08 15:24:30",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

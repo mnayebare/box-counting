@@ -1,0 +1,102 @@
+{
+    "post_title": "[D] Can Direct Preference Optimization (DPO) be used to replace any type of RL for LLMs, or is it better suited for just scenarios like RLHF?",
+    "post_timestamp": "2023-10-16 10:22:22",
+    "last_comment_timestamp": "2024-07-08 23:55:34",
+    "time_difference": "266 days, 13:33:12",
+    "comments": [
+        {
+            "author": "cthorrez",
+            "body": "normal RL problems involve interacting with an environment. Things like PPO optimize a policy to pick good actions that give high reward in the environment given access to trajectories of episodes sampled from the environment using the current policy. \n\nWhat we have in RLHF really isn't RL since there is no environment. They collect a static dataset of preferences. Doing RL on required going out of your way to treat a predefined sequence of tokens like a trajectory from environment interactions and training a supplemental model to give rewards. \n\nDPO realized this is not really a necessary since you already have a static dataset, you can just maximize the likelihood over it (but using a different likelihood than next token prediction).\n\nBut in general, DPO is not a drop in substitute for RL, it's specific to places where RL is used but that weren't RL problems to begin with.",
+            "score": 16,
+            "depth": 0,
+            "timestamp": "2023-10-16 11:59:51",
+            "replies": [
+                {
+                    "author": "30299578815310",
+                    "body": "What if you did the following:\n\n1 - Use an LLM as an agent in an environment\n\n2 - Capture state/action pairs where the LLM gets positive feedback (in the paper I linked they use successful actions that lead to successful completed tasks)\n\n3 - Generate (perhaps with humans, another model, or the LLM itself) examples of bad responses \n\nCouldn't DPO be used on this new dataset?",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-10-16 12:45:33",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "Even if the agent has access to an online environment, RLHF is still very different from standard RL. In RLHF, the human prompt is treated as the initial state. After initialization, the state transitions only depend on the LLM itself, unless it is a multi turn dialogue task, whereas standard RL deals with the passive dynamics in the environment. I guess the primary reason that people use RL for fine tuning is that the rewards are delayed until the end of the episodes. But DPO demonstrates that delayed rewards in a non-stochastic environment can be addressed by non-RL approaches. Although DPO isn\u2019t tested in online environments, it is reasonable to believe that it will work effectively online. BTW, if the environment doesn\u2019t provide rewards, which might be the case if RLHF is applied online, training the reward model online becomes a necessity, making DPO a preferable choice over PPO in such scenarios.",
+                            "score": 5,
+                            "depth": 2,
+                            "timestamp": "2023-10-17 00:59:37",
+                            "replies": [
+                                {
+                                    "author": "30299578815310",
+                                    "body": "Yeah I think the reason I find DPO so exciting is the lack of the need for a reward model.\n\nThat's where I am wondering if there are ways to leverage it when training in an environment. In principle I think if you can get it to work for RLEF, you could get it to work for anything, since any activity could be thought of as a series of tasks and actions. This would let you basically create static datasets which could be used to grant arbitrary models the advantages of \"reinforcement learning\" via DPO.\n\nI think the main difficulties I see are \n\n1. Where to get the non-desired outputs when the LLM does well. One thought I had is you could ask the model to generate its own bad ideas, although I am not sure if there is good research regarding the optimal \"bad ideas\" to use during DPO.\n2. Where to get the good ideas when you only have negative feedback. Perhaps in this case you don't use DPO and use a different loss function which minimizes the likelihood of results with negative feedback. This could be weird though because without a positive example, you might just encourage the LLM to create gibberish. Alternatively, you could use DPO to encourage the model to take some sort of \"safe\" action in the environment instead of whatever resulted in negative feedback, such as doing nothing, or reflecting on data.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2023-10-17 08:21:29",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "cthorrez",
+                            "body": "You could try it. But what benefits would you be hoping to get? The primary benefit of DPO vs PPO for RLHF is that you don't have to train a reward model. In this case you already have an env so you already don't need a reward model.\n\nAlso by doing it the way you described you are now in this scenario where you have a static dataset representing an environment. And you're trying to train an agent to navigate the env. If you have access directly to the env, why not use it? Why get a poor static representation of it?",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2023-10-16 15:32:07",
+                            "replies": [
+                                {
+                                    "author": "30299578815310",
+                                    "body": "Ok this might be me being really ignorant, and if so apologies, but doesn't PPO require a state-value network to calculate the advantage? In that case you still need a model for the reward don't you?",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2023-10-16 15:42:50",
+                                    "replies": [
+                                        {
+                                            "author": "cthorrez",
+                                            "body": "You're not really ignorant but I think there are some distinctions. One is I think in most PPO implementations they do parameter sharing with the various networks involved which helps. If you cast it to DPO it would be less coupled.\n\nI do encourage you to try it though, you are making me more curious",
+                                            "score": 6,
+                                            "depth": 4,
+                                            "timestamp": "2023-10-16 15:47:56",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "OneFeed9578",
+            "body": "the DPO deduction requires a Bradley Terry model to cancel out the Z term. Otherwise it's non differentiable and cannot use back propagation. \n\n[https://realcwl.github.io/posts/rlhf\\_to\\_ipo/](https://realcwl.github.io/posts/rlhf_to_ipo/) has a good deduction of DPO",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-07-08 23:55:34",
+            "replies": []
+        },
+        {
+            "author": "No-Belt7582",
+            "body": "TRL has released code for both:  \n \\- RLHF (PPO)}  \n \\- DPO\n\n[training code with PPO and DPO](https://github.com/huggingface/trl/tree/main/examples/research_projects/stack_llama/scripts)",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-11-19 00:48:45",
+            "replies": []
+        },
+        {
+            "author": "Crazy_Suspect_9512",
+            "body": "I am also puzzled why even DPO is necessary: equation 4 of the paper shows we have an exact solution of the optimal policy once we know the short term reward function r(x, y). So why not still learn the reward function through pairwise preference, and plug in to equation 4 directly to get the unnormalized optimal policy? During inference the normalization factor Z(x) doesn\u2019t matter since we just need to compare one action y to another under the same state x right?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-01-14 02:31:44",
+            "replies": [
+                {
+                    "author": "kei147",
+                    "body": "I think the issue here is that the reward function acts on full model completions rather than individual token outputs. So there's not really a way to use the formula during inference without sampling all possible model completions and then re-scaling them so their sum is 1.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-05-25 15:49:40",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}

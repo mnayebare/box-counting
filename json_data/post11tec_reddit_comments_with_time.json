@@ -1,0 +1,76 @@
+{
+    "post_title": "[P] My experiments with Knowledge Distillation",
+    "post_timestamp": "2025-02-10 21:44:23",
+    "last_comment_timestamp": "2025-02-13 01:07:51",
+    "time_difference": "2 days, 3:23:28",
+    "comments": [
+        {
+            "author": "DumberML",
+            "body": "Thanks for the post! How do you explain that fine-tuned and distilled 1.5B versions can't outperform the pretrained 7B model on MMLU and GSM8k, but it vastly outperform them on WikiSQL?",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2025-02-11 03:17:50",
+            "replies": [
+                {
+                    "author": "darkItachi94",
+                    "body": "Generally, the teacher model forma the upper bound of performance for most datasets and tasks we tried. But for some, including WikiSQL, the model falls apart. Our hypothesis is that it has not seen such data during its training stages and requires finetuning/distillation to work well.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-02-11 21:33:56",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "rrenaud",
+            "body": "This is very cool. Are you doing any verification of the samples that you are doing the distillation on?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-02-11 02:18:49",
+            "replies": [
+                {
+                    "author": "darkItachi94",
+                    "body": "Not sure what you mean by verification.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-02-11 21:34:46",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "roym1",
+            "body": "Hi! It is cool you are looking into KD and the blog+repo looks great.\n\nI just thought I'd share some of my input on this. The layer distillation loss you use [here](https://github.com/horus-ai-labs/DistillFlow/blob/368a10b5463ebf6feda0c329a7edc6ba73242ddc/src/distillflow/trainer/layers_distillation.py#L86) is very non-standard and not suprising it performs worse than logit distillation. It seems you are rehashing the KL logit loss for the intermediate representations? using a learnable projection is usually sufficient to learn a good metric implicitely.\n\nIt would be interesting to see a simple learnable projection (throw away after training), pooling over sequence-dims, and a l1 loss. I think it is likely to perform much better. Similarly, using a seperate head for the teacher logit loss and ensembling the two at test time is very effective, like [here](https://arxiv.org/abs/2012.12877).\n\n[here](https://github.com/roymiles/VkD/blob/6f8a5072447a1c5bb6043cdc035cf7b78d3854d8/engine.py#L94) is an example, but in your case it would be pooling over the sequence-dim for the teacher (as it is not a CNN). The projector would also be a simple linear layer as opposed to an orthogonal projection.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-02-12 14:41:15",
+            "replies": [
+                {
+                    "author": "darkItachi94",
+                    "body": "Hi! Thanks so much for your response and helpful suggestions. Would you be interested in contributing this to the repo? Alternatively, we could collaborate to experiment together. Looking forward to hearing from you!",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-02-13 01:07:51",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "DiscountPotential564",
+            "body": "If validation data contain samples or dataset used in training the teacher model, but not in training the student model, do it also affect benchmark?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-02-11 07:21:00",
+            "replies": [
+                {
+                    "author": "darkItachi94",
+                    "body": "Made sure that there is no data leakage in all data partitions for our training.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-02-11 21:35:44",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}

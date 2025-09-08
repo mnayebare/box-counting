@@ -1,0 +1,269 @@
+{
+    "post_title": "[D] Discussing Apple's Deployment of a 3 Billion Parameter AI Model on the iPhone 15 Pro - How Do They Do It?",
+    "post_timestamp": "2024-06-14 07:50:36",
+    "last_comment_timestamp": "2024-07-30 15:15:56",
+    "time_difference": "46 days, 7:25:20",
+    "comments": [
+        {
+            "author": "marr75",
+            "body": "Quantization and specialist LoRA can do a lot of lifting. At 4-bit quantization, this model goes from needing 14.4GB of massively parallel RAM to only 1.8 GB. If your fine-tuning can bring the task specific performance back up to the full-width model (or improve it), you're cooking.\n\nThis tech is in the very early stages of optimization, interpretability, and alignment. I think we'll see releases like this where some clever use of existing techniques looks like a big leap forward pretty frequently for a few years.",
+            "score": 50,
+            "depth": 0,
+            "timestamp": "2024-06-14 12:29:21",
+            "replies": [
+                {
+                    "author": "trowawayatwork",
+                    "body": "rip battery life for next few generations of iphones",
+                    "score": 11,
+                    "depth": 1,
+                    "timestamp": "2024-06-15 03:00:54",
+                    "replies": [
+                        {
+                            "author": "marr75",
+                            "body": "It won't be much worse than as if you were playing a game for a few seconds when any of the AI features is activated. So, yeah, it'll have an effect but it's not going to be like running Docker on a laptop.",
+                            "score": 15,
+                            "depth": 2,
+                            "timestamp": "2024-06-15 07:24:38",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "blackkettle",
+            "body": "You should cross post this to r/localllama as well.  I\u2019d say it\u2019s relevant to both but you\u2019ll get potentially different and equally interesting discussions from both spots.",
+            "score": 63,
+            "depth": 0,
+            "timestamp": "2024-06-14 08:53:35",
+            "replies": [
+                {
+                    "author": "BriefAd4761",
+                    "body": "Yes, posted",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2024-06-14 09:12:17",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "atgctg",
+            "body": "> Shared Vocabulary Embeddings: Honestly I don't have much idea about this - I need to understand it more\n\nLikely refers to using the same weights for the input and output embeddings. See https://arxiv.org/abs/1608.05859\n\nKarpathy also talks about this in his recent GPT-2 from scratch video: https://www.youtube.com/watch?v=l8pRSuU81PU&t=4122s",
+            "score": 33,
+            "depth": 0,
+            "timestamp": "2024-06-14 09:52:43",
+            "replies": []
+        },
+        {
+            "author": "Eastwindy123",
+            "body": "I'm pretty sure they fine-tune lora adapters on top of a common base model. Then you can dynamically apply and remove adapters depending on the task. So they have a summarisation Lora, tone editing Lora... It's actually not that difficult to do. Llama cpp, vllm already have this capability",
+            "score": 24,
+            "depth": 0,
+            "timestamp": "2024-06-14 10:27:45",
+            "replies": [
+                {
+                    "author": "Deleted",
+                    "body": "[deleted]",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-06-14 12:00:21",
+                    "replies": [
+                        {
+                            "author": "tidier",
+                            "body": "They mention LoRA [here](https://machinelearning.apple.com/research/introducing-apple-foundation-models):\n\n>For on-device inference, we use low-bit palletization, a critical optimization technique that achieves the necessary memory, power, and performance requirements. To maintain model quality, we developed a new framework using LoRA adapters that incorporates a mixed 2-bit and 4-bit configuration strategy \u2014 averaging 3.5 bits-per-weight \u2014 to achieve the same accuracy as the uncompressed models.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-06-14 17:17:51",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "BriefAd4761",
+                    "body": "Hi, \nThanks for the info\nCan you provide  link of paper or tutorial video that helps me understand loading of lora adapter dynamically please.\n\n\nFrom my understanding lora will add a new layer or extension to the orginal model which will result in a new model\n\nI've not seen a trained one as a adapter which we can load dynamically\n\n\nCorrect me if my understanding is wrong.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-06-14 12:58:48",
+                    "replies": [
+                        {
+                            "author": "Eastwindy123",
+                            "body": "Yeah sure np. \n\nHere is an example, https://docs.vllm.ai/en/v0.4.0/models/lora.html\n\nSo you're right in that Lora adds a new part to the model. It adds a low rank matrix on top of specific layers. (Mainly the q,k,v). However these are kept seperate. They are only merged while inference for speed. But recently there have been implementations like s-lora(https://arxiv.org/abs/2311.03285) punica (https://arxiv.org/abs/2310.18547) where you can keep the adapters seperate from the base model and \"apply\" it at will. \n\nWhich makes hosting multiple finetunes much more efficient.",
+                            "score": 8,
+                            "depth": 2,
+                            "timestamp": "2024-06-14 13:49:17",
+                            "replies": []
+                        },
+                        {
+                            "author": "linverlan",
+                            "body": "A LoRA module does not add a layer, it is just a stored (and factored) weight update that you can add and subtract from the model weights freely.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2024-06-14 15:13:13",
+                            "replies": []
+                        },
+                        {
+                            "author": "Smartaces",
+                            "body": "There is also predibase... \n\n[https://arxiv.org/pdf/2405.00732](https://arxiv.org/pdf/2405.00732)\n\nThey recently published a research paper, they have a solution called Lorax, which allows for swapping of adapters... \n\n'Finally, we evaluate the latency and concurrency capabilities of LoRAX, an open-source Multi-LoRA inference server that facilitates the deployment of multiple LoRA fine-tuned models on a single GPU using shared base model weights and dynamic adapter loading. LoRAX powers LoRA Land, a web application that hosts 25 LoRA fine-tuned Mistral-7B LLMs on a single NVIDIA A100 GPU with 80GB memory. LoRA Land highlights the quality and cost-effectiveness of employing multiple specialized LLMs over a single, general-purpose LLM.'",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2024-06-14 14:55:08",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "Round_Card",
+                    "body": "No they don\u2019t, you can\u2019t swap loras on the fly, people request this feature for months.",
+                    "score": -6,
+                    "depth": 1,
+                    "timestamp": "2024-06-14 11:43:48",
+                    "replies": [
+                        {
+                            "author": "Eastwindy123",
+                            "body": "https://docs.vllm.ai/en/v0.4.0/models/lora.html\n\nYes they do?",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2024-06-14 12:43:27",
+                            "replies": [
+                                {
+                                    "author": "Round_Card",
+                                    "body": "I was talking about llama.cpp, vllm don\u2019t support k- quants, useless for most cases.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-06-14 12:50:53",
+                                    "replies": [
+                                        {
+                                            "author": "Eastwindy123",
+                                            "body": "You can run 4bit awq, or marlin which is even better.",
+                                            "score": 3,
+                                            "depth": 4,
+                                            "timestamp": "2024-06-14 13:44:00",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "swegmesterflex",
+            "body": "I remember seeing someone get 1.6B locally at 30 tokens/sec on an iPhone last year. I think a big part of it was just the quantization, and probably using an open source library like local llama.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-06-14 11:42:51",
+            "replies": []
+        },
+        {
+            "author": "tyoma",
+            "body": "Saw this via the LocalLlama cross post and will x-post my reply. I wrote a blog post with details on what was released, looking at the videos and documents:\u00a0https://blog.trailofbits.com/2024/06/14/understanding-apples-on-device-and-server-foundations-model-release/\n\n* there are at least 5 models released; three on-device, two server\n* the on device language models are likely variants of OpenELM\n* Apple goes into detail about their palletization and quantization strategies",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-06-15 03:01:44",
+            "replies": [
+                {
+                    "author": "changtimwu",
+                    "body": "I just read it. It's an in-depth analysis that's being underestimated! I think llama.cpp has significant room for improvement in leveraging Apple hardware (MPS). What are your thoughts?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-07-30 15:15:56",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Mysterious-Stretch-7",
+            "body": "Link?",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2024-06-14 08:34:23",
+            "replies": [
+                {
+                    "author": "BriefAd4761",
+                    "body": "https://machinelearning.apple.com/research/introducing-apple-foundation-models",
+                    "score": 7,
+                    "depth": 1,
+                    "timestamp": "2024-06-14 09:11:31",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "slashdave",
+            "body": "Tight integration of software and hardware. Don't forget, it's their own \"neural engine\" chip, and the IPhone's processor takes advantage of unified, high-speed memory.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-06-14 16:14:04",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2024-06-14 09:31:57",
+            "replies": [
+                {
+                    "author": "JustOneAvailableName",
+                    "body": "It's in the attention heads. So less K and V heads, so smaller KV-cache and less computation to get K and V",
+                    "score": 15,
+                    "depth": 1,
+                    "timestamp": "2024-06-14 09:48:08",
+                    "replies": []
+                },
+                {
+                    "author": "marr75",
+                    "body": "That's because they're not from the user. \"Query\" here is a term of art referring to part of the parameters (KVQ, Key, Value, Query) to the self-attention part of the encoder/decoder.",
+                    "score": 9,
+                    "depth": 1,
+                    "timestamp": "2024-06-14 12:21:39",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "Sorry, I am both not trusting their technical report and not finding it impressive at the same time. First, they didn't compare to llama.\nSecond, I don't trust the way they conduct experiments on pr reports. Lastly, I don't care about their tech as long as they don't publish papers, similarity to OpenAI (Apple is even worst).\n\nIt's probably not so difficult to do what they did if you are Apple, and they probably mostly integrated existing technology, now marketing it as their ideas because there is no f***ing paper.\n\nRegarding how feasible it is, well, there is a lot of engineering for powe consumption, etc., but I would say that on the basic form it is utterly trivial, if you root your device you can do it yourself (just slower and takes more battery).\n\nFor example, the way they described adapters implies it's innovative, although they said \"utilize\" to not claim it's their idea. However, they do imply it is not an idea everyone who does NLP uses.\nPersonally, I have used it as well for similar tasks.\nOverall, I didn't like the report at all.\n\nA win for the marketing team, though. It's also an interesting experiment at scale, but the results will never be shared since they share nothing.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-06-14 20:08:37",
+            "replies": [
+                {
+                    "author": "RenoHadreas",
+                    "body": "Technical paper released today.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-07-29 22:48:57",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "maxpayne07",
+            "body": "Has others folks already said it, its a Quant version. I run a 5Q of Phi 3 on a redmi note pro 5G and gives me more than 9 Tokens for second.  Try to understand other approach. Recent processor of Phones ares beasts, u should check out the benchmarks of latest snapdragons, they run faster than most of  6 years old medium home processors cores, Intel or AMD.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-06-15 12:52:22",
+            "replies": []
+        },
+        {
+            "author": "Wheynelau",
+            "body": "1. I may be misunderstanding but is this referring to GQA or the forward(qkv)? GQA does improve speed while reducing memory. Last model I saw was llama3 using this. If it's the qkv_proj(qkv), it should be more common now. \n\n2. This should be referring to tied embedding weights, so your input embedding and lm_head shares the same weights\n\n3. This should be the major one for memory reduction and some speed.\n\n4. Mentioned by other commenters, most likely some PEFT method, LORA, prefix etc. \n\n5. I only know the normal KV cache\n\n6. Ehh not too sure about this, will add it to my evergrowing watchlist haha\n\n7. This is related to point 4 I guess\n\n\nI think it's feasible, in fact also as mentioned by a lot of LocalLLaMa people that they were already running on their devices. \n\nI think these strategies are already used in a desktop environment, nothing very unique here except the fine tuning methods and possibly their own optimised kernels for their chips.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-06-15 21:33:44",
+            "replies": []
+        },
+        {
+            "author": "Final-Rush759",
+            "body": "Does it work well in terms of the quality of outputs?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-06-14 13:32:04",
+            "replies": []
+        }
+    ]
+}

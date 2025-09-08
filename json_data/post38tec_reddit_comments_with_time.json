@@ -1,0 +1,50 @@
+{
+    "post_title": "OpenAI vs local (sentence transformers) for embeddings - does it make a noticeable difference?",
+    "post_timestamp": "2025-03-23 14:45:39",
+    "last_comment_timestamp": "2025-04-01 00:09:51",
+    "time_difference": "8 days, 9:24:12",
+    "comments": [
+        {
+            "author": "marvindiazjr",
+            "body": "You don't need to pay for open ai's nor use only the one it comes with. You can download any number of them that are damn good.\n\nYour choice of reranker is just as important.\n\nI'll say this combo delivers top tier performance and put them against any open AI embeddings.\n\nsentence-transformers/all-mpnet-base-v2\nAnd then for reranking:\ncross-encoder/ms-marco-MiniLM-L-12-v2",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2025-03-23 16:52:47",
+            "replies": []
+        },
+        {
+            "author": "drfritz2",
+            "body": "I use it at a VPS. \n\nUse Tika, use hybrid search, \n\nI use openAI as embedding (default is too heavy)\n\nI use a small model for rerank (small lag)\n\nI want to use a top rerank with API, but requires Litellm config (I cannot get there yet)\n\nThere is a lot of configuration and presets.\n\nI try to pre process many things. It's better.\nNeed to find a pre processor \n\nIt's good for everyday use. You can download docs and code, then ask about it. \n\nAlso your docs, but there are many things to learn\n\nNot good for teams, because poor roles permission system (admin or user)",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-23 17:37:10",
+            "replies": []
+        },
+        {
+            "author": "kantydir",
+            "body": "OWUI RAG performance with local embeddings and reranker (hybrid search) is very good if you choose the right models and tune the parameters accordingly. I've experimented with many embeddings and reranker models and for the time being I've settled with [Snowflake/snowflake-arctic-embed-l-v2.0](https://huggingface.co/Snowflake/snowflake-arctic-embed-l-v2.0) for the embeddings and [BAAI/bge-reranker-v2-m3](https://huggingface.co/BAAI/bge-reranker-v2-m3) for the reranker. For the Tok-K and Minimum Score I go back and forth all the time but for now I'm using 10 and 0.3.\n\nOne important thing to consider when using local embeddings/reranker is that you need to use a GPU accelerated container for open-webui. If you're using Docker that would be the [ghcr.io/open-webui/open-webui:main-cuda](http://ghcr.io/open-webui/open-webui:main-cuda) image",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-24 02:51:11",
+            "replies": [
+                {
+                    "author": "RideNorth6547",
+                    "body": "To clarify OpenWebUI itself actually needs to be GPU accelerated? Not just the Ollama Host that is running the embed/rerank?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-03-31 17:30:31",
+                    "replies": [
+                        {
+                            "author": "kantydir",
+                            "body": "If you use Sentence Transformers the embedding happens within the OWUI container. And if you enable Hybrid Search the reranking is also done on the OWUI container. Both will benefit from the GPU, especially the reranker",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-04-01 00:09:51",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

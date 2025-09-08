@@ -1,0 +1,137 @@
+{
+    "post_title": "What's your opinion on a network of experts being the correct way to go?",
+    "post_timestamp": "2023-08-14 14:49:17",
+    "last_comment_timestamp": "2023-08-17 16:25:07",
+    "time_difference": "3 days, 1:35:50",
+    "comments": [
+        {
+            "author": "Deleted",
+            "body": "[removed]",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-08-14 15:39:09",
+            "replies": [
+                {
+                    "author": "TrainquilOasis1423",
+                    "body": "That last sentence caught my eye. Why would other experts get distracting? Wouldn't it be possible to send an input to one expert saved on some clarification from the umbrella network? Like if a sentence is asking 2+2=? There's no need to send it to the Greek mythology expert. As an absurd example.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-08-14 15:46:03",
+                    "replies": [
+                        {
+                            "author": "Repulsive_Pen_5232",
+                            "body": "Well I think the problem there would be how to differentiate what message goes to what \u201csection\u201d or specialist. For simple problems like your statement, I imagine some sort of classification would be possible. But something more complicated (that is with multiple sub-categories) which \u201cexpert\u201d do you listen to?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-08-14 16:42:37",
+                            "replies": [
+                                {
+                                    "author": "Astazha",
+                                    "body": "There needs to be an executive module that is trained also.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-08-15 07:13:21",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "nextnode",
+                    "body": "The first point does not seem supported by papers when the task is not simply self-supervised learning; and self-supervised learning is just a trick rather than what we actually want.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-08-14 19:11:39",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Lonligrin",
+            "body": "Generalized meta AIs specially trained how to use specialized expert AIs",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-08-17 15:17:53",
+            "replies": [
+                {
+                    "author": "TrainquilOasis1423",
+                    "body": "Yes this. I feel like this is the way to go. I mean we can kinda think of it like the prefrontal cortex(likely a bad analogy). Give it the main purpose of fetching similar data from organized structured database. Then prompting the expert AIs with that data, and returning the response. You could test the meta net on different specialized datasets to fine-tune it's ability to pick the right expert(s) for the task.\n\nIdk just makes sense to me.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-08-17 15:49:02",
+                    "replies": [
+                        {
+                            "author": "Lonligrin",
+                            "body": "I like that analogy. The meta AI would be a top level decision maker. Quite similar to how our prefrontal cortex delegates to specialized regions in our brains. The expert AIs then would operate autonomously, similar to the subconscious functions of the brain. Like basic motor skills that as a child require a lot of conscious effort and then less and less as we grow older.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-08-17 16:25:07",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Mental-Swordfish7129",
+            "body": "I'm working on this",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-08-14 14:57:48",
+            "replies": [
+                {
+                    "author": "TrainquilOasis1423",
+                    "body": "Awesome. Mind ELI5 what you're working on specifically?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-08-14 15:41:21",
+                    "replies": [
+                        {
+                            "author": "Mental-Swordfish7129",
+                            "body": "That would be very difficult. I don't think I can",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-08-14 15:46:23",
+                            "replies": [
+                                {
+                                    "author": "Talkat",
+                                    "body": "Cmon",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-08-15 08:06:46",
+                                    "replies": [
+                                        {
+                                            "author": "Mental-Swordfish7129",
+                                            "body": "Are you familiar with active inference models?",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2023-08-15 08:31:38",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "nextnode",
+            "body": "I think as broadly as you describe it, it is something that has existed for a while. Notably also the point of Google Brain and their pathways; and if we want, back to pre-DL ensemble models.\n\nI don't see it as more than a trick to make training and inference at scale more feasible. You naturally won't get higher scores than training a single network of the same size.\n\nIt does seem very interesting to make use of it though and the primary reason that it is not done more is just cause the tooling is immature.\n\nIt should be interesting as a way to reduce training and inference demands. Some, imagine, also would like to use it for local models to specialize different models. I think that is not immediately relatable to what OpenAI did though and probably requires more experimentation. The most notable difference is that the local application would not want all pieces of the network in any memory for all the inference steps.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-08-14 19:09:33",
+            "replies": []
+        },
+        {
+            "author": "Unique_Detective3454",
+            "body": "I'm all in for new technologies that help the human race, but is it really gonna help or hinder the future of man kind ?\nNot only less jobs.\nLess tax base.\nLess human to human interactions. \nHow does everyone thrive & survive if there's no jobs  to make money ?\nTo raise a family ?\nTo buy a home ?\nTo just generally exist in this world ?",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2023-08-14 23:30:49",
+            "replies": []
+        }
+    ]
+}

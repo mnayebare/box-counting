@@ -1,0 +1,67 @@
+{
+    "post_title": "[D] Why beam search and autoregressive models yield poor results",
+    "post_timestamp": "2020-11-10 01:50:23",
+    "last_comment_timestamp": "2020-11-13 10:37:45",
+    "time_difference": "3 days, 8:47:22",
+    "comments": [
+        {
+            "author": "silverlightwa",
+            "body": "Thank you! Its was a great read (and good papers too)",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2020-11-10 13:33:21",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2020-11-10 07:18:09",
+            "replies": [
+                {
+                    "author": "cekeabbei",
+                    "body": "You are right that beam search improves results above sampling using the model's output distribution directly. This is consistent with the inflection point paper I linked. Good generated samples typically have higher likelihoods than the model's average sample. However, there's a limit where it falls off steeply.\n\nBeam search with a large enough beam size seems to yield universally bad results. Some of the papers mentioned in the article talk about this. Most papers (aka literally all that I've seen) that do use beam search aren't using a very large search width.\n\nBlindly doing beam search without knowing where this limit is is probably not the best way to do things. High likelihood alone is not the goal and the highest likelihoods are often nothing like what we want to generate. Ex. a translation consisting of a blank string. Or a completely silent audio sample.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2020-11-10 08:08:00",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "cekeabbei",
+            "body": "The model inflection point I mentioned:\n\nhttps://arxiv.org/abs/2004.10450\n\nAnd the paper introducing nucleus search:\n\nhttps://arxiv.org/abs/1904.09751",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2020-11-10 01:56:17",
+            "replies": []
+        },
+        {
+            "author": "benanne",
+            "body": "Thanks for sharing this here, and for your feedback :) I'd be very curious to hear what you find.\n\nFor perceptual signals, I've also found nucleus sampling to be insufficient. For language it definitely delivers though. What you propose seem connected to the \"selective sampling\" procedure proposed in Zhang et al. 2020 (the first paper you linked), though it isn't quite the same thing.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2020-11-10 13:31:09",
+            "replies": [
+                {
+                    "author": "cekeabbei",
+                    "body": "Hi, well, thanks for writing the article!\n\nHere are my initial observations. I haven't done anything blinded just yet -- I might do this a little more rigorously at some point, but I may want to train a larger model or switch model architectures (I'm thinking of the Transformer XL) before setting up a better experiment here.\n\nI am using the music transformer approach described in [Huang et al 2018](https://arxiv.org/abs/1809.04281) -- I'm currently training on 400 length midi events for now, but am attempting to use all other hyperparameters as they did.\n\nOn the testing set, I'd say I \"agree\" with the model's assessment of random samples. Roughly, the bottom 50% of the samples seem to be not very good (parts of a song that seem like it's missing context, or sounds otherwise unstructured). The upper 50% sound more song-like for lack of a better description.\n\nAs for model-generated sequences: I generated a few hundred samples using both temperature sampling (T=0.95) and nucleus sampling (with value 0.95). It seems like the generated songs (from both sampling methods) with likelihoods in the upper quartile of the testing set likelihood distribution are where most of the decent-sounding samples lie. Definitely not all the generated samples in that range are good. I don't have a sense of if the peak of good sounding samples is contained entirely within the distribution of likelihoods on the test set or extends slightly higher -- if it extends beyond at all, it doesn't seem that it does by much for me.\n\nAs an aside, do you happen to know what type of sampling Huang et al (2018) did? I didn't see it mentioned in the paper. (And further, were the samples that they included in the supplemental materials truly random samples from that sampling method or selected in any way?)",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2020-11-11 05:24:01",
+                    "replies": [
+                        {
+                            "author": "benanne",
+                            "body": "Cool! I don't know what sampling strategy they used. I would guess it's quite likely they tuned the temperature, but you might want to ask the authors directly to know for sure :)\n\nFrom experience, samples are usually cherry-picked unless it is explicitly stated that they aren't.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2020-11-13 10:37:45",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,97 @@
+{
+    "post_title": "[D] LLM quantization advice",
+    "post_timestamp": "2025-03-04 19:17:01",
+    "last_comment_timestamp": "2025-03-05 17:55:43",
+    "time_difference": "22:38:42",
+    "comments": [
+        {
+            "author": "pikachu14297",
+            "body": "Check out AWQ, GPTQ to learn about research in weight quantization. KIVI, KVQuant for KV cache quantization. Quarot, ResQ for activation quantization in LLMs. In terms of quantization difficulty, I believe it is Activations > Weights > KV cache where Activations are hardest to quantize.",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2025-03-04 21:56:32",
+            "replies": []
+        },
+        {
+            "author": "Master-Meal-77",
+            "body": "GGUF is my preferred quantization method since I don't have an H100 lying around, and it's easy to create any GGUF quant that you want if you download the weights of the model\n\n\nIf you want to learn more about quantization I would suggest reading through certain sections of the llama.cpp repo as well as HF's guide: https://huggingface.co/docs/hub/en/gguf",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2025-03-04 20:29:04",
+            "replies": []
+        },
+        {
+            "author": "Square_Bench_489",
+            "body": "GGUF, AWQ are my starting point. They are adopted by a lot of people.",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2025-03-04 20:05:18",
+            "replies": []
+        },
+        {
+            "author": "tsengalb99",
+            "body": "The most recent (and probably best) weight only PTQ methods are QTIP and PV Tuning. There are some derivatives of these works out there that also get similar quality.\u00a0",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-05 00:53:57",
+            "replies": []
+        },
+        {
+            "author": "Gusanidas",
+            "body": "I liked the beginning of this video as an explanation:  \n[https://www.youtube.com/watch?v=2ETNONas068&t=799s](https://www.youtube.com/watch?v=2ETNONas068&t=799s)\n\nAnd that guy (Tim Dettmers) has many papers and talks in the topic if you want read more",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-05 03:55:55",
+            "replies": []
+        },
+        {
+            "author": "gtxktm",
+            "body": "Exl2 seems to be the fastest one. It's very efficient",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-05 00:18:14",
+            "replies": []
+        },
+        {
+            "author": "Luuigi",
+            "body": "I tried implementing matryoshka quantizatipn myself! Thats pretty fun as its so simple (but it requires training from scratch)",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-05 06:47:49",
+            "replies": [
+                {
+                    "author": "kidfromtheast",
+                    "body": "Hi, my goal is to build a GPT. do you have good tutorial to train from scratch?\n\nWhat I\u2019ve learned:\n1. How to implement Decoder-Only Transformer (Word Embedding, Pre-computed Position Encoding, Transformer Block: Masked Self Attention, Add & Norm, Feed Forward, Add & Norm, Linear)\n2. How to implement Encoder-Decoder Transformer. But I don\u2019t see the use case for GPT. I see this for text-to-text tasks (translation), text-to-image (image generation), image-to-text (image captioning)\n3. How to implement Encoder-Only Transformer. I heard GPT use Decoder-Only Transformer, but BERT use Encoder-Only Transformer. So I am not sure.\n\nWhat I\u2019ve not learned yet:\n1. How to tokenize (i.e. it\u2019s seems complex)\n2. How to train (I am completely blind on this. I only know how to train the model to predict the next token. I don\u2019t know how to make the model can have conversation. My goal is simple if it can answer factual questions and follow up questions, I am happy.\n\nMy tomorrow\u2019s aim:\n1. Learn how to implement BitNet 1.58b in PyTorch.",
+                    "score": 0,
+                    "depth": 1,
+                    "timestamp": "2025-03-05 10:34:16",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "ProfessionalFox8649",
+            "body": "Thankyou all for your suggestions!\ud83d\udd25 any ideas on mixed precision quantization?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-05 17:44:38",
+            "replies": []
+        },
+        {
+            "author": "VenerableSpace_",
+            "body": "RemindMe! 1 month",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-05 17:55:43",
+            "replies": []
+        },
+        {
+            "author": "lqstuart",
+            "body": "In my experience the perf is so bad it\u2019s not worth doing unless you\u2019re doing some kind of LoRA thing. Just use a smaller dense model. \n\nIn theory there\u2019s math you can do to figure out which parameters can be quantized without loss of perf, but you can also just prune those entirely and not try to juggle a bunch of broken C++ dependencies that break with every patch release",
+            "score": -2,
+            "depth": 0,
+            "timestamp": "2025-03-05 00:46:35",
+            "replies": []
+        }
+    ]
+}

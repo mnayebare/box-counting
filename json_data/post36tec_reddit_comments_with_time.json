@@ -1,0 +1,222 @@
+{
+    "post_title": "Which sentence transformer is the best one for similarity search and document retrieval",
+    "post_timestamp": "2023-09-07 07:50:19",
+    "last_comment_timestamp": "2025-07-02 05:18:16",
+    "time_difference": "663 days, 21:27:57",
+    "comments": [
+        {
+            "author": "mphycx00",
+            "body": "checkout this leaderboard:\n\nhttps://huggingface.co/spaces/mteb/leaderboard",
+            "score": 11,
+            "depth": 0,
+            "timestamp": "2023-09-07 09:10:41",
+            "replies": []
+        },
+        {
+            "author": "gentlecucumber",
+            "body": "Women and kids *are* people. Semantically, the \"not happy\" option is the least similar. You're thinking in terms of direct keyword match. If that's what you want, you don't need a transformer model, you need a TF/IDF algorithm.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-09-07 11:25:37",
+            "replies": [
+                {
+                    "author": "IamFuckinTomato",
+                    "body": "Yeah, so shouldn't the sentence \"the woman is happy\" be more similar than the sentence \"the man is not happy\"?",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-09-07 11:32:38",
+                    "replies": [
+                        {
+                            "author": "gentlecucumber",
+                            "body": "Oop, yeah I'd agree there, I didn't pay close enough attention to the order. I'd look at the other commenter's link to other embedding models, try the current sota models instead. But keep in mind those scores, like 50-70% accuracy on many benchmarked tasks. Even the best embedding models aren't perfect",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-09-07 11:45:27",
+                            "replies": [
+                                {
+                                    "author": "IamFuckinTomato",
+                                    "body": "Yeah I'll give it a look. Have you heard about elasticsearch?",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2023-09-07 11:46:14",
+                                    "replies": [
+                                        {
+                                            "author": "gentlecucumber",
+                                            "body": "ES has been around for a while, I'm not sure exactly what method of similarity search it uses, but I know it's capable of hybrid search, which is a combination of sparse and dense vector representations. Several OS vector DB options can do hybrid search, including Weaviate and I think Chroma too, but don't quote me on that.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2023-09-07 14:43:29",
+                                            "replies": [
+                                                {
+                                                    "author": "IamFuckinTomato",
+                                                    "body": ">but don't quote me on that.\n\n\ud83d\ude02\nYou know how retrieval is a huge issue in RAG. I've been wondering about it and a colleague told me to check out ES. So I was just wondering if anyone has actually used it.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2023-09-07 14:54:36",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Bright-Ad-9021",
+            "body": "try hybrid search.. our team manages it well using traditional search and vector embedding models to improve the relevant results.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-01-22 00:30:50",
+            "replies": [
+                {
+                    "author": "IamFuckinTomato",
+                    "body": "Yep, I did this and it worked well.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-01-22 01:19:37",
+                    "replies": [
+                        {
+                            "author": "kayhai",
+                            "body": "I\u2019m using chromadb and \nall-MiniLM-L6-v2. How do I implement reranking on the top N matches from a vector search?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-06-12 14:39:02",
+                            "replies": []
+                        },
+                        {
+                            "author": "kcneichsisj",
+                            "body": "Can i ask what library did you use specifically?\nI am encountering the exact same problem you showed above.(differentiating between statements having \u201cnot\u201d in it)\n\nIf you could point me in a general direction, i would really appreciate it.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-02-21 04:54:18",
+                            "replies": [
+                                {
+                                    "author": "IamFuckinTomato",
+                                    "body": "I changed from dense vectors to sparse vectors to implement search and retrieval. I used tf-idf vectorization",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-02-29 04:12:08",
+                                    "replies": [
+                                        {
+                                            "author": "Pristine_Team6344",
+                                            "body": "can you share your solution please?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-02-20 08:39:50",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "CaptTechno",
+            "body": "Hey which one did you decide on? Im in the same delimma right now.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-04-23 08:37:20",
+            "replies": [
+                {
+                    "author": "itsmekalisyn",
+                    "body": "Any updates?",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-07-31 04:44:09",
+                    "replies": [
+                        {
+                            "author": "CaptTechno",
+                            "body": "I ended up using \\`all-mpnet-base-v2\\`.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-07-31 07:03:46",
+                            "replies": [
+                                {
+                                    "author": "itsmekalisyn",
+                                    "body": "Thank you!",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2024-07-31 07:04:35",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "Physical_Mess_560",
+                                    "body": "hey, i have been using all minilm l6 and l12 and now want to use all mpnet but the issue is l6 and l12 are having 384 dimension whereas later one uses 768 double the previous one   \nso how can i do that. Also i use qdrantDB for the storing the vectors and its also 384 dimension based. Help!!",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-07-02 05:18:16",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "KindlyPineapple8588",
+            "body": "Recently, I explored several top models listed on the MTEB leaderboard (current as of this writing). A shoutout to mphycx00 for the recommendation! I discovered that the top-ranked models generally outperformed the default ones from SentenceTransformers. However, due to size constraints and other limitations, I wasn't able to test all the best models, but I found that the following performed quite well.\n\nI assigned a score of 7 to these two models:\n\n\"Alibaba-NLP/gte-large-en-v1.5\"  \n\"w601sxs/b1ade-embed\"\n\nThese models each received a score of 6:\n\n\"mixedbread-ai/mxbai-embed-large-v1\"  \n\"WhereIsAI/UAE-Large-V1\"\n\nI rated all other models I tested with a score of 5 or lower. Of course, beauty is in the eye of the beholder.\n\nWith gte-large-en-v1.5 I get this (w.r.t. 'That is a happy person'):\n\n'That is a happy kid' = 0.85  \n'that person is not happy' = 0.70  \n'that woman is happy' = 0.80\n\nPretty good I would say.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-06-18 05:13:20",
+            "replies": [
+                {
+                    "author": "Pretty-Shine9923",
+                    "body": "Thank you!!",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-10-20 00:21:11",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "BippityBoppityBool",
+            "body": "are you using L2 Euclidian or cosine similarity (or something else)?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-08-24 12:00:55",
+            "replies": []
+        },
+        {
+            "author": "No_Airport_1450",
+            "body": "Hello OP,\nI am working on a similar case of recommendation system where a part of it uses user's bio to match description of entities. I don't want it be just term matching but actually understand the context of both text. New to transformers and models. Could you please give some advice on implementing this?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-03-13 09:41:35",
+            "replies": []
+        },
+        {
+            "author": "SimpleComposer1586",
+            "body": "The embedding models find similarities in the domain you use them. All of your texts talk about people and happiness, so the model finds them similar.\n\nBut, you could retrain the model (I suggest to do it so for every specific domain project), so it \"captures\" the difference when you talk about negation. I've done it in the past with small models such as MiniLM-L12-v2:\n\n  'Hoy ha comido y cenado mucho' vs  'El residente ha comido bien'\n\n  \\-> Similitud: 0.6811\n\n  'Hoy ha comido y cenado mucho'  vs  'Hoy apenas ha comido y cenado'\n\n  \\-> Similitud: 0.0133\n\nTranslation to english:\n\n\"Today he has eaten and dined a lot\" vs. \"The resident has eaten well\"  \n\\-> Similarity: 0.6811  \n\"Today he has eaten and dined a lot\" vs. \"Today he has barely eaten and dined\"  \n\\-> Similarity: 0.0133",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-30 06:59:40",
+            "replies": [
+                {
+                    "author": "dreamlibrarian",
+                    "body": "Can you say more about the finetuning? Did more knowledge of the domain produce that difference?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-03-30 11:24:06",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Deleted",
+            "body": "[deleted]",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2023-09-07 09:54:51",
+            "replies": []
+        }
+    ]
+}

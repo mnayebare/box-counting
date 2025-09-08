@@ -1,0 +1,75 @@
+{
+    "post_title": "Building a Rule-Guided LLM That Actually Follows Instructions",
+    "post_timestamp": "2025-06-04 17:26:43",
+    "last_comment_timestamp": "2025-06-05 15:09:55",
+    "time_difference": "21:43:12",
+    "comments": [
+        {
+            "author": "geeeffwhy",
+            "body": "how well do you understand the basics of transformer models and the way the prompt makes it\u2019s way to the model? i ask because the basics are where i\u2019d start. \n\nof course the model forgets instructions halfway through; the model itself doesn\u2019t remember anything, so the whole chat is sent every time, right? that means that the longer the chat, the further the instructions are from the tokens it\u2019s generating next, so it\u2019s implicitly lower importance and competing with more context. memory systems augment this functionality by adding some prompt fragments to every chat, giving the illusion of learning across chats. have you tried simply including the rules you need followed much more frequently in the prompts?  \n\nlikewise, of course it gives different responses to the same prompt, it uses (pseudo)random numbers and selects from a probability distribution for the next token. if you turn down the temperature _and_ use the same RNG seed, it will be a lot more deterministic, though that may not actually help you overall. depending on your goal. if it\u2019s natural writing, determinism may not be what you want.\n\nand what about a LoRA or some other heavier weight fine-tuning strategy? if you have enough corpus of writing you want to emulate, that could work, too. \n\nif you think you can reduce aspects of your guidance to regex, you could maybe build a custom logit bias function, but in my experience, regex is brittle and often more of a foot-gun for things to do with natural language. \n\nand how about multi-stage and/or multi-model generation. first generate the response with a primary prompt, then include that response in a prompt along with edit requirements, which is a slightly more complex version of just sending your rules every time. \n\ni guess really i\u2019m saying, start with the simplest thing that might work before moving onto whole de novo systems and research topics, unless those are your goals themselves. my interpretation of your question is that you want a good tool, not to be researching LLMs per se, but perhaps i\u2019m off base.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-06-04 21:17:48",
+            "replies": []
+        },
+        {
+            "author": "CalmBison3026",
+            "body": "I have faced this issue and after learning more about the LLM itself, I don\u2019t believe it\u2019s possible. Primarily because chatgpt for example, doesn\u2019t understand abstraction. I mean it doesn\u2019t \u201cunderstand\u201d anything, but in language especially, the composition and position of words changes their meanings just enough that the llm can\u2019t always follow grammatical rules. Grammar and style, even structure, involves quite a bit of abstraction. \n\nThe other inherent challenge is that it doesn\u2019t write recursively. It\u2019s like NEXT WORD NEXT WORD NEXT WORD. It\u2019s not reading what it\u2019s written as it\u2019s writing, which is part of understanding meaning. Even when I say, go back and check for x, it doesn\u2019t actually \u201cgo\u201d back. It sort of scans its recent memory and guesses what it should say next. \n\nI haven\u2019t found any way to really control llm writing except start with constraints that naturally lead it to the words I would want. Like, \u201cdon\u2019t use dependent clauses\u201d doesn\u2019t work as well as \u201cwrite like Hemingway.\u201d Because it is basically a runaway train. It just tumbles downhill. There\u2019s little way to steer it once it\u2019s moving and the best shot is to steer it as close as possible from the start.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-06-04 22:37:40",
+            "replies": []
+        },
+        {
+            "author": "NeedleworkerNo4900",
+            "body": "I don\u2019t see the word weasel in that example at all.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-06-04 18:25:38",
+            "replies": [
+                {
+                    "author": "Puzzleheaded_Owl577",
+                    "body": "Sorry for the confusion. I did not mean the word \"weasel\" itself. Weasel words refer to vague or noncommittal phrases like \u201csome people say,\u201d \u201cit is believed,\u201d or \u201cmany experts agree.\u201d These are usually avoided in academic writing because they are unclear and unsupported.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-06-04 18:40:30",
+                    "replies": [
+                        {
+                            "author": "NeedleworkerNo4900",
+                            "body": "The point I was trying to make is that maybe you just need clearer instructions? Are you providing one shot or multishot examples with your prompts?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-06-04 18:43:01",
+                            "replies": [
+                                {
+                                    "author": "Puzzleheaded_Owl577",
+                                    "body": "Thanks for the question. Yes, I\u2019ve actually provided multi-shot examples along with explicit regex patterns and a full list of weasel words to avoid. The prompts are quite detailed and consistent. Despite that, the model still breaks the rules occasionally or changes behavior between runs, even with temperature set to zero. So I don\u2019t think it\u2019s just a prompt clarity issue at this point.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-06-04 18:49:02",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Actual__Wizard",
+            "body": "Sure: Dump LLMs entirely.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-06-04 18:37:26",
+            "replies": []
+        },
+        {
+            "author": "torama",
+            "body": "You can:  \nDo a second pass with another LLM chunk by chunk and paraphrase the weasly statements.  \nKeep your context short so that LLM can adhere to rules better. Also some LLM's are better than others in this aspect.  \nDo some finetuning-RL to reduce the behaviour",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-06-05 15:09:55",
+            "replies": []
+        }
+    ]
+}

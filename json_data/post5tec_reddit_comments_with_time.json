@@ -1,0 +1,67 @@
+{
+    "post_title": "[P] A Visual Guide to Mixture of Experts (MoE) in LLMs",
+    "post_timestamp": "2024-10-07 11:13:45",
+    "last_comment_timestamp": "2024-11-12 12:15:45",
+    "time_difference": "36 days, 1:02:00",
+    "comments": [
+        {
+            "author": "iaziaz",
+            "body": "I love it! what did you use to create those pictures?",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-10-07 12:00:01",
+            "replies": [
+                {
+                    "author": "MaartenGr",
+                    "body": "I use Figma! But in all honesty, these could have been created just as easily with Keynote/Powerpoint.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-10-08 06:30:31",
+                    "replies": [
+                        {
+                            "author": "NotPepus",
+                            "body": "figma balls",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-10-08 19:56:00",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Birdperson15",
+            "body": "Very helpful thanks",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-10-07 13:34:57",
+            "replies": []
+        },
+        {
+            "author": "elliofant",
+            "body": "I've heard a little bit about mixture of experts and them having some advantages over transformers. Is this something you could comment on?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-10-08 05:15:12",
+            "replies": [
+                {
+                    "author": "MaartenGr",
+                    "body": "They are not an alternative to transformers (or technically related to them specifically at all depending on your view), they are just an extension of the (or most LLM) architecture. Mixture of Experts, for example, can also be used in Mamba blocks which use a very different architecture. \n\nIt seems to me that MoE models are very interesting to businesses that do have compute to load in these large models but then need to use less compute for serving users.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-10-08 06:30:00",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "ifthisisit_",
+            "body": "This is great, thanks for putting the time and effort into this!",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-11-12 12:15:45",
+            "replies": []
+        }
+    ]
+}

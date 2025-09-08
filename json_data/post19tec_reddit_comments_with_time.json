@@ -1,0 +1,84 @@
+{
+    "post_title": "[R] What is Flash Attention? Explained ",
+    "post_timestamp": "2024-07-14 12:32:43",
+    "last_comment_timestamp": "2025-08-21 22:23:21",
+    "time_difference": "403 days, 9:50:38",
+    "comments": [
+        {
+            "author": "intpthrowawaypigeons",
+            "body": "space complexity, sure, but how can it improve time complexity?",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2024-07-14 12:40:11",
+            "replies": [
+                {
+                    "author": "ipullguard",
+                    "body": "It improves time but not time complexity.",
+                    "score": 25,
+                    "depth": 1,
+                    "timestamp": "2024-07-14 13:05:28",
+                    "replies": [
+                        {
+                            "author": "Elostier",
+                            "body": "This comment is confusing. Did you mean that it improves space but not time complexity? Because that is true since we do not really change the number of operations, we just optimize the memory operations, which is space, not time \u2014 and it gives the speed up simply because we use a faster memory throughout. Although I would argue that a) reducing the number of memory swap calls can be seen as time complexity since we reduce the number of operations in the algorithm, which by the way kind of dominate the runtime, and b) they do kernel fusion to merge several operation together \u2014 and I am not acquainted enough with cuda and all this low level jazz, but it is possible some sort of time complexity reduction might be happening there",
+                            "score": -1,
+                            "depth": 2,
+                            "timestamp": "2024-07-15 02:36:05",
+                            "replies": [
+                                {
+                                    "author": "InterstitialLove",
+                                    "body": "The comment you're responding to seems to be drawing a distinction between runtime and algorithmic complexity\n\nImproving the complexity would be like turning an O(n^2) algorithm into an O(n log n) algorithm. Improving runtime would be like turning something with runtime 0.05 n^2 + 0.1 n + 3 seconds into 0.01 n^2 + 0.05 n + 1 seconds. Notice that both are O(n^2)\n\nSo basically, if the new runtime is bounded by a constant multiple of the old runtime, then the time complexity hasn't changed",
+                                    "score": 10,
+                                    "depth": 3,
+                                    "timestamp": "2024-07-15 05:21:05",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Odd_Positive_5146",
+                    "body": "It's faster because gpus are memory bottlenecked not because it has better time complexity.",
+                    "score": 9,
+                    "depth": 1,
+                    "timestamp": "2024-07-14 15:32:58",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "ArchiMickey",
+            "body": "As far as I know, flash attention requires support on hardware level. I guess it doesn't improve time complexity?",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2024-07-15 03:44:34",
+            "replies": []
+        },
+        {
+            "author": "nihaljn",
+            "body": "Thanks for the video. The video introduces and illustrates tiling at a high level but does not really explain how it actually reduces the memory footprint of the attention calculation. It would be great to add more details!",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-07-17 23:54:39",
+            "replies": [
+                {
+                    "author": "mehul_gupta1997",
+                    "body": "Thanks for the feedback.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-07-17 23:57:02",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Behold_413",
+            "body": "uh, you didn't go into anything in detail.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-08-21 22:23:21",
+            "replies": []
+        }
+    ]
+}

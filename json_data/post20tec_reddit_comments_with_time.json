@@ -1,0 +1,145 @@
+{
+    "post_title": "Why people use RoPE instead of Alibi when buliding their models?",
+    "post_timestamp": "2023-08-30 06:33:41",
+    "last_comment_timestamp": "2023-10-07 17:27:39",
+    "time_difference": "38 days, 10:53:58",
+    "comments": [
+        {
+            "author": "BangkokPadang",
+            "body": "I think it had a lot to do with being able to implement rope retroactively with a small code change. Currently existing models sortof \u201cjust work\u201d with it. Llama 1 models can be bumped up to 4k and even llama 2 models can be bumped up to 8k without doing any finetuning or training of the model at a pretty minimal quality loss.\n\nThen for the models finetuned on it specifically, it didn\u2019t require a full retraining of the model- just a relatively inexpensive finetune, that was basically able to be dropped in to the existing finetuning pipeline.",
+            "score": 14,
+            "depth": 0,
+            "timestamp": "2023-08-30 08:08:24",
+            "replies": [
+                {
+                    "author": "stereoplegic",
+                    "body": "These retroactive RoPE techniques are recent developments, as the OP mentioned. OP's question is why ALiBi wasn't attempted more widely before then.",
+                    "score": 10,
+                    "depth": 1,
+                    "timestamp": "2023-08-30 09:11:53",
+                    "replies": [
+                        {
+                            "author": "Chen806",
+                            "body": "Hi can you share the reference about retroactive RoPE techniques?",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2023-10-03 21:14:47",
+                            "replies": [
+                                {
+                                    "author": "stereoplegic",
+                                    "body": "OP mentioned NTK-aware scaled RoPE, one of a handful of context length extension techniques based on models pretrained with rotary positional embeddings that cropped up around the same time.",
+                                    "score": 2,
+                                    "depth": 3,
+                                    "timestamp": "2023-10-03 21:21:14",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "reversedefenestrator",
+            "body": "It's expensive to train big models, and the largest model trained with ALiBi (BLOOM) is bad. One can argue about /why/ it's bad, it's very undertrained, but I imagine if you're going to spend millions of dollars to train a new model you'd rather play it safe.",
+            "score": 12,
+            "depth": 0,
+            "timestamp": "2023-08-30 06:59:53",
+            "replies": [
+                {
+                    "author": "stereoplegic",
+                    "body": "I don't think BLOOM's issues had to do with ALiBi. I was listening to Yannick Kilcher's interview with Connor Leahy after the release of GPT-NeoX-20B (while he was still with EleutherAI, before he went full \"AI IS GONNA KILL US ALL!!1!1!!1!11!1\"), and he mentioned BigScience having to restart BLOOM training several times due to tons of random loss spikes (which I guess could have been due to ALiBi, but at that scale could be as simple as one faulty GPU or dataset storage device, or bad random initialization), on the topic of why training large models is so hard and the need for lots of ablations.",
+                    "score": 10,
+                    "depth": 1,
+                    "timestamp": "2023-08-30 08:52:51",
+                    "replies": [
+                        {
+                            "author": "Maykey",
+                            "body": ">I don't think BLOOM's issues had to do with ALiBi. \n\nMPT also uses Alibi and it doesn't seems to suffer from it.",
+                            "score": 11,
+                            "depth": 2,
+                            "timestamp": "2023-08-30 11:29:14",
+                            "replies": []
+                        },
+                        {
+                            "author": "stereoplegic",
+                            "body": "To your point, though, BLOOM's faceplant probably did scare off a lot of people. I was initially excited about its architecture. It could very well have something to do with an early ALiBi implementation not yet ready for primetime. MPT came along later, with more than just academic motivations, and by comparison does pretty well with ALiBi on what's otherwise just GPT-NeoX/Pythia architecture. Same with Cerebras' new BTLM (along with using SwiGLU and muP), at least as far as 3b models go.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2023-08-30 09:16:04",
+                            "replies": [
+                                {
+                                    "author": "zetiansss",
+                                    "body": "Yeah I think BLOOM is one of the reason that people keep away from alibi. I will try the models you mentioned above.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2023-08-30 13:53:18",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "permalip",
+                    "body": "Falcon and MPT do have ALiBi. They are both very large models that work well",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-08-30 19:01:04",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "a_beautiful_rhind",
+            "body": "Rope is supported without retraining.",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2023-08-30 08:43:24",
+            "replies": []
+        },
+        {
+            "author": "Alternative_World936",
+            "body": "I think it is because alibi has worse performance on long text. Some of its heads can only see limited tokens.\n\nRecall that the alibi is designed to add a scaled relative position bias to the attention scores before softmax. As the sequence length grows, the alibi score bias added to the attention score will be very large.\n\nAlibi is more like putting a sliding window along the sequence, however, the window size is really small as the sequence grows long. This will definitely harm the performance of LLM on a certain downstream task.\n\n&#x200B;\n\nFor example, you want to do information extraction with BLOOM. The max input sequence length is 1024. Our prompt and context are very long, let's say, 800 tokens, Our question starts from 801, and the answer is at the beginning of the context, say 10, Can the 801th token see the 10th token with Alibi?\n\nI think BLOOM can hardly see it because of Alibi. Since the relative bias between question and answer is\n\n(801 - 10 ) \\* m = 791 \\* m, m is a scale factor.\n\nThe huge bias will lead to an attention score A\\_{801, 10} close to 0, which means that question tokens can only see nearby tokens and ignore answer tokens.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-08-30 12:35:47",
+            "replies": [
+                {
+                    "author": "zetiansss",
+                    "body": "I think your points are two folds:\n1. ALibi is a variant of window attention, so its receptive field is restricted.\n2. The window is small that it cannot perform good performance on long context.\n\nFor 1, I think for any relative positional encoding method, remote attenuation is needed (it's intuitive to pay more attention on more recent tokens), so one of the differences between alibi and rope is the scale of window. The authors of RoPE mentioned in the paper that the upper bound of RoPE is decreasing when the distance between two tokens is increasing,  too.\n\nFor 2, the theoretical receptive field of alibi is actually  wr, where w is the window size, r is the number of layers for a model. So if the window size is 256, theoretically a model using alibi as its positional encoding with 4 layers can see both the question and the answer in your case.\n\nSince the author of alibi only purpose its performance in language modeling(with ppl.), maybe more experiments are needed to show the downsteam performances about alibi and its variants.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-08-30 13:43:15",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "stereoplegic",
+            "body": "FWIW, I'm planning on using NoPE (cute, clever name for just literally \"No Positional Embeddings\" ... kind of*) in my first from-scratch model (hopefully as more than just an ablation). It was \"introduced\" in [The Impact of Positional Encoding on Length Generalization in Transformers](https://arxiv.org/abs/2305.19466), and their results suggest that not having positional embeddings at all actually scales the best in terms of context length.\n\nI'm skeptical (though it's clear both interpolation and extrapolation of RoPE have their limits), but hopeful.\n\n*Even without, the model behaves in ways resembling those with different explicit embeddings.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-10-03 22:24:06",
+            "replies": [
+                {
+                    "author": "zetiansss",
+                    "body": "That's great, but I was told that NoPE performs not that good in the LLM case (it seems to be suitable for small size language models).\n\nSo gently asking what's the size of your from-scratch-trained model?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-10-06 04:40:57",
+                    "replies": [
+                        {
+                            "author": "stereoplegic",
+                            "body": "I haven't started, but I'm interested in seeing how far I can go without the need to finetune to a specific context length (without being at the mercy of extrapolation a la ALiBi and xPos, or one of the many interpolation techniques, each with their own shortcomings).",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-10-07 17:27:39",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

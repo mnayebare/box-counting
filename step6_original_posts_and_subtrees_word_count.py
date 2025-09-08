@@ -31,10 +31,10 @@ def load_conversations_from_folder(folder_path):
             
             # Determine conversation type based on post_id
             conversation_type = ""
-            if "hb" in post_id.lower():
-                conversation_type = "richly branching"
-            elif "lb" in post_id.lower():
-                conversation_type = "poorly branching"
+            if "con" in post_id.lower():
+                conversation_type = "controversial"
+            elif "tec" in post_id.lower():
+                conversation_type = "technical"
             else:
                 conversation_type = "unknown"
             
@@ -183,7 +183,7 @@ def analyze_comment_word_lengths(comments, post_id, conversation_type, results_l
     Parameters:
     - comments: List of comment dictionaries
     - post_id: Post identifier
-    - conversation_type: Type of conversation (richly/poorly branching)
+    - conversation_type: Type of conversation (controversial/technical branching)
     - results_list: List to append results to
     - comment_counter: Counter for unique comment IDs
     """
@@ -381,19 +381,19 @@ def print_depth_analysis(all_detailed_results):
         depth = result['depth']
         word_count = result['word_count']
         
-        if result['conversation_type'] == 'richly branching':
+        if result['conversation_type'] == 'controversial':
             richly_by_depth[depth].append(word_count)
-        elif result['conversation_type'] == 'poorly branching':
+        elif result['conversation_type'] == 'technical':
             poorly_by_depth[depth].append(word_count)
     
-    print("\nRICHLY BRANCHING conversations:")
+    print("\nCONTROVERSIAL conversations:")
     for depth in sorted(richly_by_depth.keys()):
         words = richly_by_depth[depth]
         avg_words = round(np.mean(words), 2)
         count = len(words)
         print(f"  Depth {depth}: {count} comments, avg {avg_words} words/comment")
     
-    print("\nPOORLY BRANCHING conversations:")
+    print("\nTECHNICAL conversations:")
     for depth in sorted(poorly_by_depth.keys()):
         words = poorly_by_depth[depth]
         avg_words = round(np.mean(words), 2)
@@ -409,7 +409,7 @@ def print_depth_analysis(all_detailed_results):
         rich_count = len(richly_by_depth[depth])
         poor_count = len(poorly_by_depth[depth])
         
-        print(f"  Depth {depth}: Richly={rich_avg} words ({rich_count} comments) vs Poorly={poor_avg} words ({poor_count} comments)")
+        print(f"  Depth {depth}: Controversial={rich_avg} words ({rich_count} comments) vs Technical={poor_avg} words ({poor_count} comments)")
 
 # MAIN EXECUTION
 if __name__ == "__main__":
@@ -504,11 +504,11 @@ if __name__ == "__main__":
     
     if richly_branching:
         rich_avg = round(np.mean([r['word_count'] for r in richly_branching]), 2)
-        print(f"  Richly branching avg words/comment: {rich_avg}")
+        print(f"  Controversial avg words/comment: {rich_avg}")
     
     if poorly_branching:
         poor_avg = round(np.mean([r['word_count'] for r in poorly_branching]), 2)
-        print(f"  Poorly branching avg words/comment: {poor_avg}")
+        print(f"  Technical avg words/comment: {poor_avg}")
     
     # Print detailed depth analysis
     print_depth_analysis(all_detailed_results)

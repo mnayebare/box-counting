@@ -1,0 +1,126 @@
+{
+    "post_title": "[R] Sliding Window Attention Training for Efficient LLMs",
+    "post_timestamp": "2025-03-01 18:13:32",
+    "last_comment_timestamp": "2025-06-30 02:57:19",
+    "time_difference": "120 days, 8:43:47",
+    "comments": [
+        {
+            "author": "Imaginary_Belt4976",
+            "body": "Nice! Yeah Titans made huge waves then nothing. Was hoping to see some code for it. This might be my queue to work on a better understanding of rotary embeddings too!",
+            "score": 16,
+            "depth": 0,
+            "timestamp": "2025-03-01 18:20:02",
+            "replies": [
+                {
+                    "author": "DigThatData",
+                    "body": "https://github.com/lucidrains/titans-pytorch",
+                    "score": 12,
+                    "depth": 1,
+                    "timestamp": "2025-03-01 21:53:01",
+                    "replies": [
+                        {
+                            "author": "1deasEMW",
+                            "body": "Thanks",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-03-02 11:51:03",
+                            "replies": []
+                        },
+                        {
+                            "author": "Savings_Indication95",
+                            "body": "I believe there are some problems in this implementation, the model gives errors when setting the neural memory layer at dimensions 256 or larger\n\n  \nanyone worked with this and able to provide input?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-06-30 00:38:22",
+                            "replies": [
+                                {
+                                    "author": "DigThatData",
+                                    "body": "the author is active and responsive, try creating an issue on the repo.\n\nwhat error are you getting? if it's an OOM, that's probably a constraint from your hardware",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-06-30 02:57:19",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "1deasEMW",
+                    "body": "There\u2019s also fourier positional embeddings which is an enhanced rope and rope extended by Microsoft which uses an evolutionary algorithm",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2025-03-02 11:50:46",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "techdaddykraken",
+            "body": "Pretty sure that the Titan architecture is currently powering Gemini, that\u2019s why they are able to have such a large context",
+            "score": 13,
+            "depth": 0,
+            "timestamp": "2025-03-01 21:17:32",
+            "replies": [
+                {
+                    "author": "1deasEMW",
+                    "body": "Yeah and flash vs pro models are likely differences between the different memory types as well",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-03-02 11:51:59",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "vornamemitd",
+            "body": "Slightly off-topic: depending on the problem/project context I have hopes for their nice KV-trick: https://arxiv.org/abs/2502.12962",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2025-03-02 06:26:18",
+            "replies": [
+                {
+                    "author": "1deasEMW",
+                    "body": "True\u2026 but does this stack without latency issues on any new architecture? I get that it is promising and can be applied to a ton of places but would dumping it on qwen or smt slow it down, or is that something that doesn\u2019t matter too much if you get even longer context lengths like going from 2M to 4M on Gemini. Or would the hope be to develop smaller networks to have better retrieval and maybe more iterative processing to then also utilize that info to simulate reasoning as well as to make better slms",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-03-02 11:56:00",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Tricky-Appointment-5",
+            "body": "Unrelated but how do you know about these interesting papers when they publish? Do i have to search around arxiv every day?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-03-02 07:00:39",
+            "replies": [
+                {
+                    "author": "prototypist",
+                    "body": "I was searching Google Scholar, and there's an option to get a regular email for any search term / cited paper.\nOther than that, one might show up on BlueSky, and then if I don't see a Reddit discussion I'll consider it",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-03-02 10:13:15",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "k_means_clusterfuck",
+            "body": "Sliding window attention? So longformer?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-02 09:49:16",
+            "replies": []
+        },
+        {
+            "author": "newtestdrive",
+            "body": "How about the vanishing gradients problem that happens when using sigmoid?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-03-03 22:54:24",
+            "replies": []
+        }
+    ]
+}

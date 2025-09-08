@@ -1,0 +1,110 @@
+{
+    "post_title": "[D] What happened to \"creative\" decoding strategy?",
+    "post_timestamp": "2024-07-15 14:35:11",
+    "last_comment_timestamp": "2024-07-18 08:35:50",
+    "time_difference": "2 days, 18:00:39",
+    "comments": [
+        {
+            "author": "JustOneAvailableName",
+            "body": "Please correct me, but isn\u2019t a temperature of 1+ spreading the distribution? Anyways, nucleus sampling and top-k are practically always used. Repetition seems to be largely solved by better models and training processes.",
+            "score": 15,
+            "depth": 0,
+            "timestamp": "2024-07-15 17:35:31",
+            "replies": [
+                {
+                    "author": "zyl1024",
+                    "body": "Yes, but I don't think nucleus sampling and top-k are the default anymore. For example, the default top-P for GPT models (via API or playground) is 1, meaning that all tokens are considered, which is something that nucleus and top-k sampling both try to avoid.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-07-15 18:04:44",
+                    "replies": [
+                        {
+                            "author": "JustOneAvailableName",
+                            "body": "Which to use might also be a technical/speed consideration, as it does not seem to matter that much for quality anyways. Nucleus needs softmax->sort->cumsum over the tokens, which takes a measurable amount of extra time over greedy. Top-k needs sort->select_range->softmax and is a lot faster. Doing top-k before nucleus is a lot faster than just nucleus, or I dinged the implementation.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2024-07-15 18:39:04",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "nihaljn",
+                    "body": "> solved by better models and training processes\n\n2 questions: What about these fixed the repetition issues? Why do the \u2018worse\u2019 models suffer from repetition anyway? They are also models of language and almost nowhere in the training data do such patterns occur",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-07-18 00:02:32",
+                    "replies": [
+                        {
+                            "author": "JustOneAvailableName",
+                            "body": "> What about these fixed the repetition issues? \n\nModels learning to consider more context.\n\nBasic language prediction is can be done with a very, very short context. Based on the past one or two words, you can often predict the next word decently well. So if we have a model that basically only looks at the past 2 words, and we take the most probable next word, it's very easy to get stuck in a loop. Ngrams and RNNs do this very easily. Transformers are the first architecture that have a strong enough signal from far enough back to have the ability to overcome this. \n\nThat the model has that ability, doesn't mean it always learns to carefully look at the context. The previous few words are still by far the strongest predictor of the next word. So even a Transformer needs to look at the previous few words first, before it could start to consider the whole context.\n\nAnyways, this is my human interpretation of how and why this works this way. \"Looking\", \"first\", and \"consider\" are kinda undefined terms for a neural network.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2024-07-18 05:34:37",
+                            "replies": [
+                                {
+                                    "author": "nihaljn",
+                                    "body": "But how come the earlier models learned to look at only a few previous words? The optimization process, the training data both should encourage the model to consider the whole context and predict a token that syntactically and semantically makes sense.\n\nMy confusion is where is this inflection point in model scale that allowed models to stop being repetitive. And why does such an inflection point occur",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-07-18 08:21:42",
+                                    "replies": [
+                                        {
+                                            "author": "JustOneAvailableName",
+                                            "body": "> The optimization process, the training data both should encourage the model to consider the whole context and predict a token that syntactically and semantically makes sense.\n\nEncourage is not enforce. Same as we encourage correct answers, but still get wrong answers more then we'd like.\n\n> My confusion is where is this inflection point in model scale that allowed models to stop being repetitive. And why does such an inflection point occur\n\nIt's nothing different from an any other version of \"the models slowly got better\". The models themselves got good enough that we now need less simple decoding tricks afterwards to get good results.\n\nFor a current project, I literally filter out common hallucinations after an answer is generated. My goal is to fix this in the model, but until then, I fix it in post processing. Using sampling to counteract repetition is the same, it's an easy way to counteract commonly know failure cases in a somewhat hacky way.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2024-07-18 08:35:50",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "elbiot",
+            "body": "Vllm is talking about dropping beam search: https://github.com/vllm-project/vllm/issues/6226",
+            "score": 8,
+            "depth": 0,
+            "timestamp": "2024-07-15 23:33:35",
+            "replies": [
+                {
+                    "author": "DigThatData",
+                    "body": "oh wow, interesting! thanks for sharing",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-07-16 03:07:39",
+                    "replies": []
+                },
+                {
+                    "author": "DigThatData",
+                    "body": "TLDR\n\n> Here's what we've decided to do:\n\n> 1. We'll add a deprecation warning for beam search ([Misc] Add deprecation warning for beam search #6402) and plan to release a new version next week.\n> 2. After the release, we'll gather user feedback and usage data (Report usage for beam search #6404) for 2-3 weeks.\n> 3. In the meantime, we'll work on a separate branch to remove beam search and implement code simplification and optimizations.\n> 4. For the v0.6.0 release, unless we receive strong pushback, we'll merge the changes from the branch developed in step 3.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-07-16 03:12:08",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Lorenzo_yang",
+            "body": "Yea, from my experience, if you have a strong model and a clean data, you dont need worry about repetition a lot in many situation.\n\nBut for some situation such as math or code, they need low temp for correctness. In such situation, except decoding strategy, you may need some postprocess to detect repetion and break it.\n\nFor example, when we test the gpt4-turbo, we find it if it generate content in some repetition pattern it will break automatically.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2024-07-15 22:46:34",
+            "replies": []
+        },
+        {
+            "author": "bullno1",
+            "body": "If your output is structured (YAML, JSON, code...), filtering the tokens and then do beam search/greedy decoding is actually quite useful.\n\nWhen there is an objectively correct answer, it doesn't make sense to do random sampling.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-07-16 04:46:19",
+            "replies": []
+        }
+    ]
+}

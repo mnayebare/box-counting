@@ -1,0 +1,181 @@
+{
+    "post_title": "LLMs and Structured Output: struggling to make it work",
+    "post_timestamp": "2024-12-10 13:54:27",
+    "last_comment_timestamp": "2025-06-25 09:20:38",
+    "time_difference": "196 days, 19:26:11",
+    "comments": [
+        {
+            "author": "m98789",
+            "body": "Lower the temperature",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2024-12-10 18:56:54",
+            "replies": [
+                {
+                    "author": "Dry_Parfait2606",
+                    "body": "Approved + add the desired output format (if idn't work smoothly still add the same at end+beginning or multiple places of the promt)",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-12-11 11:37:27",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "acloudfan",
+            "body": "Just so you know, you are not alone experiencing this issue :-) There are multiple factors that govern the behavior of LLM in this scenario.\n\n\\- Is the LLM trained to generate structured output (JSON). Keep in mind not all LLMs are good at it. Check the model card/documentation for your LLM to figure out if its good at structured responses.\n\n\\- Assuming your model is good at structured response generation : pay attention to your prompt, make sure you are provide the schema in valid format. In addition, depending on the model you may need to provide few shots.\n\n\\- Assuming your prompt is good - use a framework like LangChain and Pydantic to address any schema issues\n\nHere is a sample that shows the use of Pydantic:  \n[https://genai.acloudfan.com/90.structured-data/ex-2-pydantic-parsers/](https://genai.acloudfan.com/90.structured-data/ex-2-pydantic-parsers/)\n\nPS: The link is to the guide for my course on LLM app development. [https://youtu.be/Tl9bxfR-2hk](https://youtu.be/Tl9bxfR-2hk)",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-12-10 15:50:53",
+            "replies": []
+        },
+        {
+            "author": "Eastern_Ad7674",
+            "body": "Schemas with structured outputs",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-12-10 14:10:44",
+            "replies": [
+                {
+                    "author": "Dry_Parfait2606",
+                    "body": "Approved + set temperature",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2024-12-11 11:37:45",
+                    "replies": [
+                        {
+                            "author": "Eastern_Ad7674",
+                            "body": "Hey   \nDo you think people have a lot of trouble working with structured outputs?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2024-12-11 12:52:00",
+                            "replies": [
+                                {
+                                    "author": "Dry_Parfait2606",
+                                    "body": "Just lazy. There are 2 factors, an LLM can generate quality output or it doesn't. And if it can, you'd have to engineer the prompt... So just lazy to engineer...",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2024-12-11 14:30:17",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "palmer_eldritch88",
+            "body": "[Outlines](https://dottxt-ai.github.io/outlines/latest/welcome/) ftw",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-12-11 09:02:45",
+            "replies": []
+        },
+        {
+            "author": "Leo2000Immortal",
+            "body": "I use llama 3.1 for structured json outputs. Basically, you've to -\n\n1. Instruct the model to respond in json\n\n2. Provide an example json template you need responses in\n\n3. Use json_repair library on output and voila, you're good to go. This setup works in production",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-12-11 11:40:27",
+            "replies": []
+        },
+        {
+            "author": "gamesntech",
+            "body": "LLMs vary significantly in output capabilities and compliance so that\u2019s pretty vague. What models are you trying with? In general the larger ones do a better job.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-12-10 23:45:40",
+            "replies": []
+        },
+        {
+            "author": "GolfCourseConcierge",
+            "body": "Are you outputting in JSON mode and using keys?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-12-11 03:10:48",
+            "replies": []
+        },
+        {
+            "author": "dooodledoood",
+            "body": "Advice from production:\n- if you can, use structured output with schemas from OpenAI \n- if not, implement a parser that can capture the easy cases of an embedded JSON inside the response (common mistakes is talking then outputting the json or wrapping it in quotes or something)\n- this will cover 90% of parsing fails, to cover another 9.9% you can implement a small mechanism to resend to the LLM its latest response, tell it the error and to try and fix it, possible multiple rounds of that \n- try to simplify the schema you need if possible\n- upgrade to a smarter model. \n- use temperature 0.0\n- besides the schema, put real output examples for it in the prompt\n- you can also try to prefill the assistant response with the beginning of your expected output\n\nThis will cover 99.9% of parsing failures based on my experience",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2024-12-11 10:45:57",
+            "replies": []
+        },
+        {
+            "author": "International_Quail8",
+            "body": "Are you building in Python? If so, highly recommend integrating Pydantic to enable better consistency in the output as well as provide validation of issues. There are some frameworks that enable logic like retries, etc. Check out Instructor and Outlines.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-12-10 14:37:21",
+            "replies": [
+                {
+                    "author": "knight1511",
+                    "body": "The pydantic team recently released a framework for exactly this purpose and much more:\n\nhttps://ai.pydantic.dev/#why-use-pydanticai",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2024-12-10 23:27:09",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "knight1511",
+            "body": "You might find this useful: https://ai.pydantic.dev/#why-use-pydanticai",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-12-10 23:25:19",
+            "replies": []
+        },
+        {
+            "author": "fluxwave",
+            "body": "You can try using BAML! It solves having to think about parsing or json schemas and it just works.\n\nhttps://docs.boundaryml.com/guide/introduction/what-is-baml",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-12-11 11:58:53",
+            "replies": []
+        },
+        {
+            "author": "zra184",
+            "body": "It's not often talked about but many of the methods used to produce structured outputs can make the models perform worse. Can you explain a bit more about what you're trying to generate? I'm experimenting with an alternative method for doing this and can point you to a few demos if it's a good fit.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-12-11 16:32:14",
+            "replies": []
+        },
+        {
+            "author": "Elegant_ops",
+            "body": "OP , which foundation model are you using ? keep in mind you are trying to output a json over the wire",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-12-13 12:56:22",
+            "replies": []
+        },
+        {
+            "author": "334578theo",
+            "body": "https://python.useinstructor.com/\u00a0\n\nShould solve this no bother",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2024-12-16 02:31:37",
+            "replies": []
+        },
+        {
+            "author": "reacher1000",
+            "body": "In my case, sometimes it's successful and sometimes it's not. I'm using langchain langgraph. Is there a way to use a loop to run until it's successful?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-25 17:32:10",
+            "replies": []
+        },
+        {
+            "author": "DocteurW",
+            "body": "If you're using Ollama then try Yacana (https://github.com/rememberSoftwares/yacana). It has it's own tool calling system that doesn't rely on the complicated JSON from OpenAI.  \nNext update will allow to mix OpenAi and Yacana tool calling systems and won't be dependent on the backend anymore.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-06-25 09:20:38",
+            "replies": []
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "post_title": "This paper Eliminates Re-Ranking in RAG \ud83e\udd28",
+    "post_timestamp": "2025-05-30 21:01:41",
+    "last_comment_timestamp": "2025-08-19 19:44:10",
+    "time_difference": "80 days, 22:42:29",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "body": "**Working on a cool RAG project?**\nConsider submit your project or startup to [RAGHub](https://github.com/Andrew-Jang/RAGHub) so the community can easily compare and discover the tools they need.\n\n\n*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/Rag) if you have any questions or concerns.*",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-30 21:01:41",
+            "replies": []
+        },
+        {
+            "author": "Harotsa",
+            "body": "It looks like their flow uses an LLM to generate a rationale that assist in the other part of that search. That LLM generation is going to be an order of magnitude slower and more expensive than the baseline.\n\nThis is definitely an interesting approach, but it\u2019s generally not too surprising that if you use significantly larger and more expensive models on a task, then they are going to do better on that task.\n\nThe core of the approach is essentially using Llama-3.1-8b for query expansion and for reranking. The cross-encoder used for reranking in the baseline is a 19M parameter model and no form of query expansion is used.\n\nThe model for their approach has 8b parameters, 400 times larger than the baseline model. It\u2019s honestly more surprising that their approach didn\u2019t do even better.\n\nAnd I would say that it\u2019s been well-known for a while that you can improve search quality quite a bit if you incorporate generative LLMs into the search pipeline, but the cost and latency constraints don\u2019t always allow for that and cross-encoder rerankers shine in those cases.",
+            "score": 17,
+            "depth": 0,
+            "timestamp": "2025-05-30 22:49:18",
+            "replies": [
+                {
+                    "author": "Numerous-Schedule-97",
+                    "body": "These were the same opinions that I also had before diving deep into the paper.\n\nThey use RankRAG as one of their baselines, which uses a fine-tuned Llama-3.1-8b-Instruct model (was published in NeurIPS 2024). RankRAG basically uses this fine-tuned llm as a generator as well as a retriever and a re-ranker. Now, seeing RankRAG scores and their scores was a shocker, RankRAG didn't even come close to their approach in any setting. So, they kind of burst another myth that larger models will be better retrievers.\n\nI have to give props to them for pitching their research intelligently. They explicitly say that it is for high-stakes domains where factual accuracy is more important than compute time. This argument makes sense to me.",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2025-05-30 23:10:07",
+                    "replies": [
+                        {
+                            "author": "Harotsa",
+                            "body": "RankRAG performed a lot worse than everything else, but it could also be an implementation issue. I think that happens often enough when one research group attempts to implement a complex architecture from another paper. Either that or RankRAG was overfitting on the original dataset.\n\nBut even the 20M parameter cross-encoder had comparable precision and pretty good recall compared to their method. And if you doubled the returned results from the reranker you would probably improve the recall even more while having a faster search with similar e2e costs.\n\nI\u2019m also not sure I totally buy the \u201cwe can wait for better results in high-stakes domains\u201d argument for the paper. Having a search taking a few hundred ms has a use case since it enables real-time processes for things like voice agents.\n\nThe other end of the spectrum also makes sense for agentic search flows or research agents where you are fine waiting 30 seconds - 10 minutes to get a very accurate and well-reasoned answer.\n\nThe 2-5 second retrieval latency seems kind of like a dead zone to me in terms of relevance for real-world applications. It\u2019s to slow for real-time processes but its speed advantage over agentic searches don\u2019t really manifest as far as I can see.\n\nLike if they are going to use llama-3.1-8b and it\u2019s a high stakes situation, why not just use the 70b model? Again, 8b is cheaper and faster but it\u2019s only like 20% cheaper compared to being an order of magnitude more expensive than running the cross-encoder.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-05-31 01:50:10",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Latter-Confidence634",
+            "body": "I consider this work to be an outstanding contribution, particularly given its applications to sensitive domains such as healthcare, law, and academic research. The scarcity of reliable RAG implementations in these critical fields makes this effort particularly valuable. Upon analyzing the improvement in Recall across all challenging datasets, along with resilience to data poisoning, I see a vast scope and promise in this approach. What do you guys think?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-06-06 05:59:18",
+            "replies": []
+        },
+        {
+            "author": "Kathane37",
+            "body": "We stop using reranking for more than a year too, because model are smart enough to sort the chunk retrieved",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-05-31 03:26:08",
+            "replies": [
+                {
+                    "author": "Harotsa",
+                    "body": "The main value of rerankers isn\u2019t to just sort the chunks that are being returned to your generative, the point is that you use rerankers to return higher quality results to the generative model.\n\nFor example, if you intend to return 10 chunks, then you should set your initial search limit to something larger like 30 results. Then the reranker will sort those thirty results, and you return the top 10 to your generative model.\n\nRerankers are a lot faster and cheaper than generative models so whatever your cost and latency considerations are, it makes sense to use rerankers.\n\nFurthermore, if you are using any form of hybrid search then some type of reranking (not necessarily a cross-encoder) is necessary to combine the results.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2025-05-31 17:11:44",
+                    "replies": [
+                        {
+                            "author": "Kathane37",
+                            "body": "Yes but it is mostly useless in our use case since the embedding model is already good enough to help us pull out the best chunks\nThen the LLM is strong enough to sort out the few irrelevent chunks\nSo there is no point in adding latences for a reranker wich akwardly sit between what an embedding model and an llm already do",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-31 17:27:21",
+                            "replies": [
+                                {
+                                    "author": "Harotsa",
+                                    "body": "If you don\u2019t have a ton of documents in your system or if there if these is clear enough delineation between them then a reranker might not provide increased value.\n\nBut rerankers are very fast and pretty cheap. We run a BGE-M3 reranker on a single GPU and it ranks over 100M chunks a month with a p95 of <40 ms. So it is a negligible increase in costs and latency, and it is a net cost savings since it allows us to maintain the quality of returning 30 chunks while returning 10. And the reduction in token costs and latency in the agent more than makes up for adding the reranker.",
+                                    "score": 7,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-31 17:41:22",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "macronancer",
+            "body": "We implemented Colbert Rerank model and had almost no measurable improvement.\n\nWe have 30K+ vector points and selecting 100 for re-ranking.\n\nThe problem is that the original RAG search for the 100 records to rerank did not produce the best matches. Reranking this list had almost no effect.\n\nIncreasing rerank to 200+ points causes major performance issues, because this is a local model and the difficulty in ranking increases geometrically with more records. We use bedrock and they dont provide a rerank model.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-05-31 09:53:31",
+            "replies": [
+                {
+                    "author": "Harotsa",
+                    "body": "Colbert reranking complexity for each individual document should be independent of the number of documents being reranked as the score only depends on the query and the individual document. In theory if you had enough compute then every single document could be scored in parallel, and then it is a simple sorting algorithm at the end (which will take microseconds).\n\nIt might be the case that you are just overwhelming whatever resources you have allocated to your model with the increased number of reranking calls. And if you\u2019re having issues with sending long lists of documents to your reranker, you can also send them off in chunks (parallelized or serialized) and then do a final sorting with all of the returned scores at the end for the final ranking.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-05-31 17:27:26",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "TheAIBeast",
+            "body": "I have worked on only one RAG project so far. For this, factual accuracy is really important as this was based on official financial process, policy, LOA documents. In my case I am feeding in a FAQ section first and calling a LLM api to check if the query can be answered from the FAQ or not. If it fails to answer from FAQ, then I feed in a overall process flowchart in mermaid format to see if the question can be answered from there (Another LLM call), this agent returns an integer based on what type of question it is. After that I go for vector search + BM25 search (Removing stopwords and also add a fuzzy matching with 92% threshold).\n\nWhen I used a reranker (I used Flashrankrerank from cohere), it looked like the reranker was ranking most important retrieved document chunks to the bottom. That's why I had to remove it.\n\n  \nBtw, how does my approach seem to you guys?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-31 06:47:33",
+            "replies": []
+        },
+        {
+            "author": "ghita__",
+            "body": "The paper you shared essentially moves the ranking burden into a big generative model,  letting it score or filter results inline rather than delegating that to a lightweight cross-encoder. That can work, and sometimes it looks like \u201cno reranker,\u201d but in practice you\u2019re just using a slower, more expensive reranker with reasoning baked in....\n\nA few observations from our side, since we\u2019ve been benchmarking rerankers heavily at ZeroEntropy (and even released our own):\n\n* **Cost/latency tradeoff**: Cross-encoder rerankers can run in tens of milliseconds and handle 100M+ docs/month on a single GPU. LLM-based filtering is usually 1\u20132 orders of magnitude slower and pricier. That makes them viable only when accuracy is worth the latency hit.\n* **Scaling matters**: At small scale (few thousand docs, clear semantic separation), you *might* get away without reranking. But as corpora get large and noisy, embeddings alone often plateau. Rerankers squeeze out meaningful gains in recall@k and especially factual precision.\n* **\u201cDead zone\u201d risk**: Latency in the 2\u20135 second range is awkward \u2014 too slow for real-time (voice/chat agents), not slow enough to justify deep agentic reasoning. This is where efficient rerankers actually shine, because they deliver near-LLM quality without pushing you into that dead zone.\n* **Hybrid search**: If you\u2019re mixing lexical + dense retrieval, some form of reranking is almost unavoidable to reconcile signals. Otherwise you\u2019ll either over-trust BM25 or drown in embedding false positives.\n\nSo I wouldn\u2019t say \u201crerankers are obsolete.\u201d It\u2019s more that you can decide where you want to spend your budget: do you let a massive LLM rerank implicitly, or do you offload that to a specialized reranker that\u2019s 100\u00d7 cheaper and faster, and then give the LLM a cleaner context to reason over?\n\nAnother point is that LLMs are only as good as the context you give them, so you actually might get a much better answer from a topk=15 high quality reranked chunks, than a topk=50 chunks without reranking which might contain garbage.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-08-19 19:44:10",
+            "replies": []
+        }
+    ]
+}

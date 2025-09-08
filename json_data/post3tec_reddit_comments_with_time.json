@@ -1,0 +1,305 @@
+{
+    "post_title": "[D] What is the motivation for parameter-efficient fine tuning if there's no significant reduction in runtime or GPU memory usage?",
+    "post_timestamp": "2023-11-28 20:06:13",
+    "last_comment_timestamp": "2024-02-04 01:00:53",
+    "time_difference": "67 days, 4:54:40",
+    "comments": [
+        {
+            "author": "TuanBC",
+            "body": "In my personal usage of this technique, I saw a significant reduce in the memory consumption when training the Whisper model, which I think the reason is because most of the big model is frozen. Because of that, batch size can be increase, or you can train bigger model with fewer resource.\n\nhttps://github.com/huggingface/peft/blob/main/examples/int8_training/peft_bnb_whisper_large_v2_training.ipynb\n\nAlso, I haven't tried this personally, but in the inference phase, I saw a lot of people deploy 1 big model with multiple adapters, which with some clever MLOps, will save more memory than deploying multiple big models at the same time.",
+            "score": 20,
+            "depth": 0,
+            "timestamp": "2023-11-28 20:38:41",
+            "replies": [
+                {
+                    "author": "nbviewerbot",
+                    "body": "\nI see you've posted a GitHub link to a Jupyter Notebook! GitHub doesn't \nrender large Jupyter Notebooks, so just in case, here is an \n[nbviewer](https://nbviewer.jupyter.org/) link to the notebook:\n\nhttps://nbviewer.jupyter.org/url/github.com/huggingface/peft/blob/main/examples/int8_training/peft_bnb_whisper_large_v2_training.ipynb\n\nWant to run the code yourself? Here is a [binder](https://mybinder.org/) \nlink to start your own Jupyter server and try it out!\n\nhttps://mybinder.org/v2/gh/huggingface/peft/main?filepath=examples%2Fint8_training%2Fpeft_bnb_whisper_large_v2_training.ipynb\n\n\n\n------\n\n^(I am a bot.) \n[^(Feedback)](https://www.reddit.com/message/compose/?to=jd_paton) ^(|) \n[^(GitHub)](https://github.com/JohnPaton/nbviewerbot) ^(|) \n[^(Author)](https://johnpaton.net/)",
+                    "score": 6,
+                    "depth": 1,
+                    "timestamp": "2023-11-28 20:38:53",
+                    "replies": []
+                },
+                {
+                    "author": "patricky168",
+                    "body": "Thanks for the resource! It looks like LoRA plus 8 bit (?) quantization? So if I'm not understanding incorrectly, does it seem that most of the memory saved here is due to 8 bit quantization, but how does LoRA then help? (It feels a bit like QLoRA, which I haven't fully read yet)",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-11-28 20:49:24",
+                    "replies": [
+                        {
+                            "author": "TuanBC",
+                            "body": "That's a fair point, but I think all of them added up for that. Also, the goal here is to save memory while training, but having to maintain the accuracy. I haven't tried, but when quantized awared training in int8, I would assume it produce lower accuracy compared with float16.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2023-11-28 20:53:59",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "residentmouse",
+            "body": "The focus of LoRA isn't inference, rather it's all about optimising training. If you need to shrink / optimise your model for inference then yes, I reckon you'd use other tools like quantisation or knowledge distillation.",
+            "score": 30,
+            "depth": 0,
+            "timestamp": "2023-11-28 20:24:11",
+            "replies": [
+                {
+                    "author": "patricky168",
+                    "body": "Oh shoot sorry I actually had a typo in my post - I actually meant that LoRA doesn't significantly improve GPU memory consumption or runtime during training for my custom model.",
+                    "score": 11,
+                    "depth": 1,
+                    "timestamp": "2023-11-28 20:30:47",
+                    "replies": [
+                        {
+                            "author": "residentmouse",
+                            "body": "Oh, OK. So you ran tests & found LoRA didn\u2019t improve your memory? What size was your base model & what was the LoRA rank? AdamW? Were you doing full LoRA or targeted to KQ?\n\nIdeal case for LoRA would be targeted, low rank, large model, with a costly backprop like Adam compared against full fine tune with the same backprop algorithm.\n\nI\u2019ve heard the memory & inference savings are there due the reduced gradients but vaguely recall someone saying something similar, i.e that they didn\u2019t see much memory spent on their gradients.",
+                            "score": 7,
+                            "depth": 2,
+                            "timestamp": "2023-11-28 20:43:14",
+                            "replies": [
+                                {
+                                    "author": "patricky168",
+                                    "body": "Yes so my base model was \\~50M parameters. The lora rank was rank 4, typical Adam scheduler (no weight decay). I applied it to the value, query, key, and attention layer output matrices (so not only KQ). I did also fine tune the decoder aka the last few layers (I have an large encoder to small decoder arch) but when I computed the trainable parameters, it came to only \\~3% of parameters. But yeah that was the run that only reduced GPU memory from 8.5G->8.1G.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2023-11-28 20:55:08",
+                                    "replies": [
+                                        {
+                                            "author": "bearific",
+                                            "body": "LoRA is mostly useful for models that are about 1000 times larger than that, for those it will actually reduce GPU memory usage massively, while for in your case comparatively tiny model there are other bottlenecks in terms of GPU memory. An added benefit at the billion parameter model scale is that you only need one set of weights for the base model, and can serve/share many different fine-tunes with ~10k times less disk space usage.",
+                                            "score": 15,
+                                            "depth": 4,
+                                            "timestamp": "2023-11-29 01:56:12",
+                                            "replies": []
+                                        },
+                                        {
+                                            "author": "Saltysalad",
+                                            "body": "As the other guy said, 50M is too small for Lora to show results.\n\nI\u2019m curious how you reached 8 gb with a 50M model. Is your dataset huge or did you use an enormous batch size? Something else?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2023-11-29 11:53:40",
+                                            "replies": [
+                                                {
+                                                    "author": "Hobit104",
+                                                    "body": "This is pretty easy actually. I have a current model that's 10 million parameters however my memory usage is almost 80 GB due to the fact that I'm processing audio and the length of the sequences is quite large.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2023-11-30 09:55:13",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "When you say \"my custom model\" what do you mean?  Are you training a base model from scratch?  My understanding of LoRA is limited, but I was under the impression that it is only for use in fine tuning a pretrained model.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-11-28 20:50:59",
+                            "replies": [
+                                {
+                                    "author": "patricky168",
+                                    "body": "Yeah so LoRA really is just a framework, and you can theoretically use it to parameter-efficient tune any model. In this case, I tuned only the attention layers (all query/key/value/attention output matrix) and the small decoder in my model and froze all other layers.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-11-28 20:57:54",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "lightSpeedBrick",
+            "body": "My understanding is that with LoRA you reduce the number of trainable parameters and therefore the memory needed to track optimizer states (e.g for Adam that tracks 2 state parameters for each model parameter). This means that you need far less RAM to fine-tune the model. Imagine 70B parameters * 4 bytes for fp32 training plus 70B * 8bytes for Adam. Lora reduces that second part to say 1% of 70B * 8 bytes. \n\nYou can also use gradient checkpointing, which isn\u2019t specific to LoRA, to reduce memory consumption at the expense of training time. Here you recompute activations during back-prop and cache some intermediate activations. \n \nCan you explain what you mean by \u201ccaching intermediate gradients during backprop\u201d? I\u2019m not familiar with what that is.",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2023-11-28 21:03:51",
+            "replies": [
+                {
+                    "author": "patricky168",
+                    "body": "Yeah what I mean is that despite LoRA only updating gradients for the adapters on the attention weights, we still need to calculate gradients for downstream layers that aren't being updated and that takes GPU memory. So the only memory saved is from the optimizer states if I am not mistaken.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-11-28 21:16:26",
+                    "replies": [
+                        {
+                            "author": "Maykey",
+                            "body": "This \"only memory saved\" amounts to throwing away 2 copies of the entire model. Pretty sweet deal.",
+                            "score": 6,
+                            "depth": 2,
+                            "timestamp": "2023-11-29 02:14:37",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "currentscurrents",
+            "body": ">from a practical point-of-view, I feel that most people suffer from a lack of compute (e.g. GPU memory) than hard disk space.\n\nDisk space adds up, especially if you have many fine-tunes of a large model. The StableDiffusion community uses LoRAs to train on particular styles or objects, and some people have hundreds of them. The smaller size makes them practical to store and share.",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2023-11-28 20:42:39",
+            "replies": []
+        },
+        {
+            "author": "CrysisAverted",
+            "body": "So you froze the non lora weights and you arent seeing significant improvement to train time or memory usage during training?",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-11-28 20:55:28",
+            "replies": [
+                {
+                    "author": "patricky168",
+                    "body": "Yep basically. I only tuned the key/query/value/attention output matrix and decoder of my model and froze all other layers, which came up to 3% of all model params. But it still only reduced memory usage from 8.5G->8.1G.",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2023-11-28 20:59:18",
+                    "replies": [
+                        {
+                            "author": "n3utrino",
+                            "body": "It sounds like you're using a very small model. How much of that 8G is the model, vs how much is the data?",
+                            "score": 3,
+                            "depth": 2,
+                            "timestamp": "2023-11-28 21:24:31",
+                            "replies": [
+                                {
+                                    "author": "EcstaticAd162",
+                                    "body": "I think the model should be most of the 8G? (its a model with 12 layers and a decoder, and I\u2019m doing batch size 4), and takes in maximum ~1500 tokens as input but not sure how much GPU memory the data eats up. I assume with larger deeper models and a larger batch size the gains of LoRA increase?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2023-11-28 21:34:17",
+                                    "replies": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "koolaidman123",
+            "body": "You're doing something wrong. I've managed to reduce vram usage cost by >4x w lora on 7b llama models from 160gb vram to 40gb. \n\nPerformance is a separate issue, but thats the tradeoff for memory savings",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2023-11-28 22:19:14",
+            "replies": [
+                {
+                    "author": "kei147",
+                    "body": "How are you reducing cost by 4x? That's more than I would expect by just using LoRA. Are you also quantizing the weights/gradients in addition to using LoRA/are you using something like QLoRA?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-12-03 01:00:13",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "noob_improove",
+            "body": "My understanding is that the appeal of LoRA is a combination of\n\n1) Less data hunger. We are tuning fewer free parameters, so our model is more restricted, which can be beneficial in low to moderate data regimes. Full fine-tuning is more prone to overfitting (and catastrophic forgetting, as you've mentioned).  \n2) Optimizer states are much smaller with LoRA, which results in a serious GPU memory difference during training if AdamW or something similar is used (you won't see this if you are using SGD, however).  \n3) Symbiosis with quantization techniques (see QLoRA).  \n4) As others pointed out, at least in theory, you don't need to fully compute dL/dw to compute gradients needed for LoRA, you only need gradients for intermediate activations. But I don't know to what extent PyTorch implementation takes advantage of that & how much data it would save. These are good questions to look into :)  \n5) Easier to share your fine-tuned model.",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2024-02-04 01:00:53",
+            "replies": []
+        },
+        {
+            "author": "bjergerk1ng",
+            "body": "I think the big win comes from combining LoRA with quantization (i.e. QLoRA) which you can't normally do with full fine-tuning.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-11-29 02:05:05",
+            "replies": [
+                {
+                    "author": "patricky168",
+                    "body": "Thanks - I was wondering though, for QLoRA what does the LoRA bit really do?\n\nSince I feel like there have been some success(?) in just quantizing the model and doing full fine-tuning and it still reduces memory consumption, so does the LoRA mainly assist in trying to \"recover\" the lost precision? Or does the LoRA part in QLoRA still significantly reduce memory further than vs. say, just 4 bit quantization + full finetuning?",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2023-11-29 13:47:18",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Becomefilthyrich",
+            "body": "Have extensively working with this past 6 months , specifically llm and whisper finetuning\n\nLora defenitly gives a significant boost in training speed as well as a massive  reduction in mem requirements",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-11-29 02:11:25",
+            "replies": []
+        },
+        {
+            "author": "gogonzo",
+            "body": "you missed reason 3. economics. It enables products like fine tuning in a way that is cost effective and scalable for folks like openai.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-11-28 20:34:53",
+            "replies": [
+                {
+                    "author": "patricky168",
+                    "body": "Gotcha, thanks for the response - but I'm wondering what aspect of param-efficient fine tuning do you think makes it cost effective and scalable? (e.g. would it be the memory saved for model checkpoints?)",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2023-11-28 20:37:27",
+                    "replies": [
+                        {
+                            "author": "gogonzo",
+                            "body": "yes, as an llm provider you can offer fine tuning for a cost and the resulting asset to manage is relatively tiny to what you are used to managing so it's relatively simple to offer inferences from those as a service",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2023-11-28 21:15:22",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "gwern",
+            "body": ">  For example, in prompt tuning, we only need to save the tiny trained soft prompt (~very few megabytes), rather than the entire changed model weights (~many, many GBs) on our hard disk/SSD. But from a practical point-of-view, I feel that most people suffer from a lack of compute (e.g. GPU memory) than hard disk space. In other words, it seems that training time and GPU memory consumption are more relevant concerns than saving on checkpoint storage space.\n\nI think you severely overestimate how many people are training a LoRA ever, and underestimate how many are *using* them (ie. downloading them). For every person who actually gets their hands dirty training their own LoRA and burning GPU, there's probably >100 downloading it (often repeatedly) just as part of a set of LoRAs to generate their own images. Look at Civitai or Hugging Face bandwidth usage. It makes a huge difference to the vastly overwhelming majority of people if the checkpoint is 100 gigabytes or 0.001 gigabytes! And if you have to spend terabytes of disk space to store a few dozen mods you want to try out, too...",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2023-11-28 21:34:55",
+            "replies": []
+        },
+        {
+            "author": "lorenmontez",
+            "body": "I had the exact same observations and concerns in my projects. For developing a VLM, I have tested to confirm that LoRA/adaptors can lead to significantly better training efficiency and improved robustness as OP suggested. For developing a 3D diffusion model, I found that LoRA has minimal advantages, and so simply fine tune a smaller model can have a better performance (larger batches help significantly in diffusion models).",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2023-11-28 21:33:43",
+            "replies": []
+        },
+        {
+            "author": "anything_but",
+            "body": "Found this very interesting wrt LoRA memory requirements. https://xiaosean5408.medium.com/fine-tuning-llms-made-easy-with-lora-and-generative-ai-stable-diffusion-lora-39ff27480fda",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2023-11-28 23:26:11",
+            "replies": []
+        },
+        {
+            "author": "SouthernXBlend",
+            "body": "Not a LoRA expert, but I\u2019m guessing that your model is also on your GPU. The majority of that 8.5GB footprint is probably just your model, meaning that LoRA actually is giving you a significant decrease in GPU memory usage added during training.\n\nTry just loading your model and checking your GPU memory usage. If it\u2019s ~8GB, LoRA is cutting your training memory usage from 0.5 to 0.1GB.",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2023-11-28 22:28:41",
+            "replies": []
+        },
+        {
+            "author": "MadScie254",
+            "body": "The motivation for parameter-efficient fine-tuning lies in the ability to improve model performance without drastically increasing computational requirements. While it may not directly reduce runtime or GPU memory usage, it allows for better utilization of existing resources. By fine-tuning only a subset of the model parameters, we can achieve similar performance gains as full fine-tuning while minimizing the computational overhead. This approach is particularly useful when working with limited computing resources or when fine-tuning large models that would otherwise be impractical to train from scratch.",
+            "score": -1,
+            "depth": 0,
+            "timestamp": "2023-11-29 01:07:38",
+            "replies": []
+        }
+    ]
+}

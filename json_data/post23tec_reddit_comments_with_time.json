@@ -1,0 +1,713 @@
+{
+    "post_title": "Sliding Window Attention support merged into llama.cpp, dramatically reducing the memory requirements for running Gemma 3",
+    "post_timestamp": "2025-05-20 02:48:35",
+    "last_comment_timestamp": "2025-06-19 05:09:47",
+    "time_difference": "30 days, 2:21:12",
+    "comments": [
+        {
+            "author": "-p-e-w-",
+            "body": "80% less VRAM required for the KV cache according to the paper, though based on the comments in the PR the reduction appears to be slightly more modest (~75%), but still an absolute game changer.",
+            "score": 166,
+            "depth": 0,
+            "timestamp": "2025-05-20 02:53:12",
+            "replies": [
+                {
+                    "author": "Fox-Lopsided",
+                    "body": "Does this basically mean i can Run the 14b Variant or even 27b Variant (quantized with QAT) on 12GB VRAM?",
+                    "score": 22,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 06:08:23",
+                    "replies": [
+                        {
+                            "author": "shing3232",
+                            "body": "It's  just mean you can have bigger context",
+                            "score": 30,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 12:25:07",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "AlanCarrOnline",
+                    "body": "Does this mean it will forget the earlier parts of the conversation? LM Studio and other apps already do that, using llama.cpp, so I'm not sure what the big deal is?",
+                    "score": 24,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 04:44:34",
+                    "replies": [
+                        {
+                            "author": "Deleted",
+                            "body": "[deleted]",
+                            "score": 46,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 05:14:27",
+                            "replies": [
+                                {
+                                    "author": "chibop1",
+                                    "body": "Then is there any disadvantage of using the new feature?",
+                                    "score": 11,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 07:50:07",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "danish334",
+                            "body": "It might relate to the concept of receptive fields. Read more about it online.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-29 14:38:23",
+                            "replies": [
+                                {
+                                    "author": "AlanCarrOnline",
+                                    "body": "I'll ask the perplexity... So... KV cache.",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-30 11:25:18",
+                                    "replies": [
+                                        {
+                                            "author": "danish334",
+                                            "body": "The multiple decoder setup makes sure that the previous knowledge is passed for the next token prediction. Use the attention weights of the first two decoder blocks and check how and which tokens are weighted. Ask gpt to do it.",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-30 12:39:16",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "author": "Kaifat",
+                    "body": "Could you provide a full llama.cpp command you're using? I3Q_XXS with q8 kv quant fails at context >4096 for me on 12 gb vram. I have the latest llama.cpp build on linux.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 14:30:45",
+                    "replies": [
+                        {
+                            "author": "-p-e-w-",
+                            "body": "I was running IQ3_XXS on 12 GB with 4k Q8 cache even before SWA was merged (with FA enabled also). Perhaps your Desktop is taking too much VRAM? I use a headless setup where llama.cpp is the only program on the GPU.",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 20:44:59",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Few_Painter_5588",
+            "body": "Thank goodness, Gemma is one fatfuck of a model to run",
+            "score": 88,
+            "depth": 0,
+            "timestamp": "2025-05-20 02:55:10",
+            "replies": [
+                {
+                    "author": "-p-e-w-",
+                    "body": "Well, not anymore. And the icing on the cake is that according to my tests, Gemma 3 27B works perfectly fine at IQ3_XXS. This means you can now run one of the best local models at 16k+ context on just **12 GB** of VRAM (with Q8 cache quantization). No, that\u2019s not a typo.",
+                    "score": 99,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 03:00:57",
+                    "replies": [
+                        {
+                            "author": "logseventyseven",
+                            "body": "how does IQ3\\_XXS compare to gemma 3 12b Q6?",
+                            "score": 12,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 03:25:39",
+                            "replies": [
+                                {
+                                    "author": "-p-e-w-",
+                                    "body": "Much better. Always choose the largest model you can fit, as long as it doesn\u2019t require a 2-bit quant, which are usually broken.",
+                                    "score": 36,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 03:28:50",
+                                    "replies": [
+                                        {
+                                            "author": "logseventyseven",
+                                            "body": "that's good to know. Most people claim that anything below Q4\\_M is pretty bad so I tend to go for the smaller models with a better quant.",
+                                            "score": 13,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 03:30:51",
+                                            "replies": [
+                                                {
+                                                    "author": "Evening_Ad6637",
+                                                    "body": "Do not believe these claims. There is no universal rule for how a model performs under different quantizations. It's not technically possible to make general assumptions about it because it very much depends on the *architecture* of the model - what I mean by architecture is not just the underlying architecture in the strict sense, but also how a model has been trained, how it has been fine-tuned, etc etc.\n\n\nNote that e.g. Google's Qat seems to provide a lot of benefit in terms of quantizations - and that's obvious, right?\n\n\nImagine a small model (with few parameters) has been trained on extremely many tokens, so that it almost regurgitates its training. That is, this model is probably quite overfitted in many areas and its weights really need every digit after the decimal point, so it is very sensitive to changes in its internals.\n\nThat's why the rule of thumb says that a model of the same family with more parameters and stronger/lower quantization will probably be smarter than the small one with higher quants, because the big one has ideally understood and learned high level concepts during its training the small model couldn\u2019t learn, and was probably not as close to oversaturation as the small model was.\n\nBut as I said, rule of thumb... if the models differ more in the ratios of the layers, attention heads etc., or if the larger model is a MoE etc. then you quickly realize that such comparisons can't really be valid and that you can't establish a universal rule.\n\n\nThe best thing to do is to simply test it yourself.",
+                                                    "score": 34,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-20 04:09:39",
+                                                    "replies": [
+                                                        {
+                                                            "author": "sammcj",
+                                                            "body": "I've always found that as long as a model is at least IQ3_M it will outperform its smaller variant no matter the quant. I can't think of one model that's behaved otherwise.",
+                                                            "score": 9,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-05-20 07:17:17",
+                                                            "replies": []
+                                                        },
+                                                        {
+                                                            "author": "RealKrolon",
+                                                            "body": "I'm pretty sure a small model with a lot of data is not overfitted, it's properly generalized. Contrary, a large model with small amount of training data will memorize it. Unless you mean small amount data with many epochs? Still, a larger model can better memorize and be overfitted.",
+                                                            "score": 17,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-05-20 04:24:41",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "brownman19",
+                                                                    "body": "It depends. You\u2019d need to feed enough data to make sure it goes past the point of overfitting to generalization. \n\nThat\u2019s the key - it\u2019s not arbitrary. Read up on grokking",
+                                                                    "score": 5,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-05-20 11:46:10",
+                                                                    "replies": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "author": "SoAp9035",
+                                                    "body": "In my tests, below Q4 makes the model lose multilingual capabilities because they have been trained with smaller data compared to English (or the model's main language). So if you want better multilingual capabilities, you will want to use higher quantities.",
+                                                    "score": 8,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-20 03:36:59",
+                                                    "replies": [
+                                                        {
+                                                            "author": "kweglinski",
+                                                            "body": "some languages are terrible even below q8",
+                                                            "score": 3,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-05-20 03:40:27",
+                                                            "replies": [
+                                                                {
+                                                                    "author": "sammcj",
+                                                                    "body": "That should only be the case if you're using a very small model (<7b), data shows that Q6_K is practically indistinguishable from fp16 if they're correctly quantised.\u00a0There are an awful lot of poor quantisation out there and more often than not folks are using them thinking it's the type - rather than the implementation.",
+                                                                    "score": 2,
+                                                                    "depth": 7,
+                                                                    "timestamp": "2025-05-20 07:21:31",
+                                                                    "replies": [
+                                                                        {
+                                                                            "author": "stoppableDissolution",
+                                                                            "body": "Sometimes its just an unlucky quant. I've seen it happen even with reputable quantizers (like bartowski), when lets say Q3\\_K\\_S is working well, Q4 is working well, and Q3\\_K\\_M is absolute garbled mess that can barely put a sentence together, let alone perform.",
+                                                                            "score": 3,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2025-05-20 07:45:07",
+                                                                            "replies": []
+                                                                        },
+                                                                        {
+                                                                            "author": "kweglinski",
+                                                                            "body": "well, given the models have a hard time with my native language (we're only roughly 40-50milion speakers)  and it's very complex I guess the \"practically indistinguishable\" matters. I'm yet to see a model that speaks my language on a valid level and doesn't degrade below q8. Of course, as you've said, size matters as well, I did not see major degradation at q6 in models that are way too big to run on my 96gb mac.",
+                                                                            "score": 2,
+                                                                            "depth": 8,
+                                                                            "timestamp": "2025-05-20 08:52:17",
+                                                                            "replies": [
+                                                                                {
+                                                                                    "author": "sammcj",
+                                                                                    "body": "Sorry I thought you meant programming language. I don't know about less common written languages.\u00a0",
+                                                                                    "score": 3,
+                                                                                    "depth": 9,
+                                                                                    "timestamp": "2025-05-20 09:04:32",
+                                                                                    "replies": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "author": "Double_Cause4609",
+                                                    "body": "There's not really a perfect rule for what type of model you should use; it really does depend on the situation.\n\nFor creative domains, or general knowledge ones, you typically want the largest model you can get, even if the quant goes quite low.\n\nOn the other hand, for technical domains with some level of logic, reasoning, or formatting involved, you typically want as close to original weights as possible. Coding comes to mind. It's not that big models are bad, but that when formatting is really important, quantization noise adds up really fast. (if you have to run quantized you can add a bit more min\\_p than usual as a stop gap.)\n\nAnything else, or any hybrid? It's hard to say. It depends on the use case, and the exact models.\n\nI personally use large lower quant models for discussing ideas, and sometimes directing smaller higher quant models to actually implement things.",
+                                                    "score": 3,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-21 01:21:35",
+                                                    "replies": []
+                                                },
+                                                {
+                                                    "author": "silenceimpaired",
+                                                    "body": "I disagree with the person who say Mistral Large works well at Q2\u2026 but I\u2019m doing so for my use cases and experience\u2026 as are they. As the comment says below don\u2019t take any rule as a hard fast fact with AI and your OS. What works on one setup and use case may not work for another.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-20 07:50:44",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "stoppableDissolution",
+                                            "body": "Mistral large is very usable in Q2, as is Command-A",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 07:30:30",
+                                            "replies": [
+                                                {
+                                                    "author": "albuz",
+                                                    "body": "Qwen3 235B  Q2\\_K\\_XL from Unsloth is very capable also",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-20 12:12:54",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "author": "Own-Potential-2308",
+                                            "body": "You all use bartowski quants?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 16:45:36",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Duxon",
+                            "body": "As a beginner, can you briefly summarize to me what tools and software I need to reproduce that (if it's possible right now already)?\n\nGemma 3 27b on 12 GB of VRAM?",
+                            "score": 4,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 05:37:17",
+                            "replies": [
+                                {
+                                    "author": "giant3",
+                                    "body": ">  reproduce that\n\nNot sure what you are asking? If you want to run the model, \n\n* install llama.cpp \n* download gemma 3(.gguf file) from huggingface.co \n* start `llama-server`\n* access the web UI from browser and setup the parameters in top right corner.",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 10:50:40",
+                                    "replies": []
+                                },
+                                {
+                                    "author": "Individual_Holiday_9",
+                                    "body": "Following",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 08:59:09",
+                                    "replies": []
+                                }
+                            ]
+                        },
+                        {
+                            "author": "AppealSame4367",
+                            "body": "Hey, i run my stuff on an old laptop. 4gb vram and 16gb ram. can i use one of the gemma models for something useful now?",
+                            "score": 2,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 07:27:34",
+                            "replies": [
+                                {
+                                    "author": "BlueSwordM",
+                                    "body": "Yes, you can definitely use an Unsloth QAT UD 2.0 Q4/5 XL quant with reasonable context: https://huggingface.co/unsloth/gemma-3-4b-it-qat-GGUF/resolve/main/gemma-3-4b-it-qat-UD-Q5_K_XL.gguf",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 11:15:06",
+                                    "replies": [
+                                        {
+                                            "author": "AppealSame4367",
+                                            "body": "Thx. Trying to use continue in vs code. No matter what i set in config.yaml, it wont allow me to add a file of 22kb (kilobyte) in size to the convo. context size is 128k and 22kb should be around 5k-10k. is that a limitation of continue, does anybody know about it?",
+                                            "score": 1,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 12:52:56",
+                                            "replies": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Few_Painter_5588",
+                            "body": "That's good, these models are good. They are just fat as fuck. Finetuning them is awful.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 03:28:56",
+                            "replies": []
+                        },
+                        {
+                            "author": "trenchgun",
+                            "body": "Holy shit. Care to share a download link?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 03:37:27",
+                            "replies": [
+                                {
+                                    "author": "-p-e-w-",
+                                    "body": "Bartowski has all the quants.",
+                                    "score": 3,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 03:58:24",
+                                    "replies": [
+                                        {
+                                            "author": "No_Pilot_1974",
+                                            "body": "Sky is blue",
+                                            "score": -5,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 06:24:30",
+                                            "replies": [
+                                                {
+                                                    "author": "silenceimpaired",
+                                                    "body": "Redditors are rude.",
+                                                    "score": 2,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-20 07:48:31",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "deadcoder0904",
+                            "body": "Well, I get **Likely too large** even tho I have 16 GB M4.\n\nhttps://imgur.com/24nK7PH\n\nAm I doing this right? Or did the new model hasn't released yet?",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 10:24:04",
+                            "replies": [
+                                {
+                                    "author": "-p-e-w-",
+                                    "body": "You have to enable KV cache quantization, which will halve the VRAM it occupies.",
+                                    "score": 4,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 10:47:03",
+                                    "replies": [
+                                        {
+                                            "author": "deadcoder0904",
+                                            "body": "Is there a setting for it in LMStudio? I can't see it nor there are any blogs on it.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 11:38:11",
+                                            "replies": [
+                                                {
+                                                    "author": "Vaddieg",
+                                                    "body": "Use bare llama-server. Giving precious gigabytes of your 16 to LMStudio defeats the purpose of cache quantization",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-21 04:42:48",
+                                                    "replies": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "author": "Deleted",
+                            "body": "You guys are super delusional if you think those 3bit quants are remotely usable\n\nLiterally everything below QaT quant was unusable quality loss for me",
+                            "score": 0,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 15:40:05",
+                            "replies": []
+                        }
+                    ]
+                },
+                {
+                    "author": "MoffKalast",
+                    "body": "A heckin chonker if you will",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 07:56:22",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Quazar386",
+            "body": "It's great although it has a big caveat of not supporting KV cache context shifting due to how iSWA works for Gemma. Good for use cases like RAG, and I've seen a massive performance boost due to the lighter KV cache.",
+            "score": 39,
+            "depth": 0,
+            "timestamp": "2025-05-20 02:54:53",
+            "replies": [
+                {
+                    "author": "Far_Buyer_7281",
+                    "body": "What does that mean in practice? when exceeding the context length it needs to re-process the full conversation?",
+                    "score": 10,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 03:34:50",
+                    "replies": [
+                        {
+                            "author": "Quazar386",
+                            "body": "llama.cpp allows you to reuse prompts by shifting chunks of the previous context to new positions. This allows you to not reprocess the whole prompt if most of the prompt is similar to the old one. With iSWA you will have to reprocess the entire prompt every time. ~~Even for retries where the prompt is the exact same~~. This applies even when your context length limit is not reached as the prompt has to be reprocessed due to how SWA works.",
+                            "score": 16,
+                            "depth": 2,
+                            "timestamp": "2025-05-20 03:41:36",
+                            "replies": [
+                                {
+                                    "author": "gliptic",
+                                    "body": "> Even for retries where the prompt is the exact same.\n\nThis doesn't make sense to me. If the initial state is the same, why would you need to reprocess it? Reusing a KV-cache state as-is doesn't require any shifting, only rewinding it to that previous known state.\n\nEDIT: Yes, you need to store and restore a copy of the state, of course, because it's not recoverable from the final state after processing tokens.",
+                                    "score": 6,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 03:57:16",
+                                    "replies": [
+                                        {
+                                            "author": "Quazar386",
+                                            "body": "you're right whoops",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 04:01:16",
+                                            "replies": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "author": "Dr_Ambiorix",
+                                    "body": "So this means the time-to-first-token is gonna be larger than usual, if we are doing a conversation where we're basically just \"adding to the prompt\" every new 'turn'?",
+                                    "score": 1,
+                                    "depth": 3,
+                                    "timestamp": "2025-05-20 09:25:09",
+                                    "replies": [
+                                        {
+                                            "author": "Quazar386",
+                                            "body": "Yes, so it's not really recommended if your prompt processing speeds are slow like on Mac and you're just doing a back and fourth continuous conversation. Although I have seen a boost in token generation speeds.",
+                                            "score": 2,
+                                            "depth": 4,
+                                            "timestamp": "2025-05-20 11:59:14",
+                                            "replies": [
+                                                {
+                                                    "author": "gliptic",
+                                                    "body": "Are you saying this doesn't support fast decode of several known tokens with a non-empty KV-cache? I'm not seeing any evidence of that. Why would it not be supported? Just adding tokens to the context doesn't require any llama\\_kv\\_self\\_seq\\_* operations.",
+                                                    "score": 1,
+                                                    "depth": 5,
+                                                    "timestamp": "2025-05-20 13:40:13",
+                                                    "replies": [
+                                                        {
+                                                            "author": "Quazar386",
+                                                            "body": "I'm not an expert at this. All I can say is that I have been using Gemma with iSWA enabled and have been reprocessing the full prompt every time with conversations. This does not happen when I disable it. Could be a skill issue from me.",
+                                                            "score": 2,
+                                                            "depth": 6,
+                                                            "timestamp": "2025-05-20 13:47:38",
+                                                            "replies": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Far_Buyer_7281",
+            "body": "Nice! from offloading 27 layers now I can offload 39 layers on 27b q4. that is quite the speed bump",
+            "score": 10,
+            "depth": 0,
+            "timestamp": "2025-05-20 03:50:00",
+            "replies": []
+        },
+        {
+            "author": "TheTerrasque",
+            "body": "*Here I go recompiling llama.cpp again*\n\nEdit: Hoo damn, I could *quadruple* the tokens and it still fits. Insane!",
+            "score": 14,
+            "depth": 0,
+            "timestamp": "2025-05-20 05:44:21",
+            "replies": []
+        },
+        {
+            "author": "ExtremeAcceptable289",
+            "body": "Is this Gemma only? Gemma is a good model but it'd seem neat for other models, e.g qwen 3 30b to run on 12gb vram",
+            "score": 7,
+            "depth": 0,
+            "timestamp": "2025-05-20 05:15:31",
+            "replies": [
+                {
+                    "author": "Far_Buyer_7281",
+                    "body": "Measured on the complaints, my guess is the gemma its k/v cache always was unusually large.  \nI do not suspect the same win is to be gotten on other models with THIS exact upgrade...",
+                    "score": 5,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 05:51:05",
+                    "replies": []
+                },
+                {
+                    "author": "b3081a",
+                    "body": "Llama 4 also benefits from this change.",
+                    "score": 3,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 12:03:03",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Far_Buyer_7281",
+            "body": "On a slightly related topic, does anyone know there is way around re-processing images on every turn?  \nmmproj does essentially tokenize the image? how do I keep that in the cache?\n\nhow do other llms deal with this?",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2025-05-20 05:48:43",
+            "replies": []
+        },
+        {
+            "author": "Maykey",
+            "body": "Does it work with mistral?",
+            "score": 6,
+            "depth": 0,
+            "timestamp": "2025-05-20 07:34:48",
+            "replies": []
+        },
+        {
+            "author": "OGScottingham",
+            "body": "Would this also work well for qwen3?  I can fit about 15k tokens in 36gb of vram currently",
+            "score": 5,
+            "depth": 0,
+            "timestamp": "2025-05-20 08:19:21",
+            "replies": []
+        },
+        {
+            "author": "Qxz3",
+            "body": "When are we getting this in LM Studio?",
+            "score": 10,
+            "depth": 0,
+            "timestamp": "2025-05-20 10:06:11",
+            "replies": [
+                {
+                    "author": "TerminalNoop",
+                    "body": "look at the llama cpp version in the runtime manager and then you know if it's there or not.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-05-24 17:19:14",
+                    "replies": [
+                        {
+                            "author": "one-joule",
+                            "body": "How can I correlate the llama.cpp version to whether it contains this PR? Their GitHub releases are auto-created for seemingly every commit, and there are no version tags or release notes anywhere on the web that I could find in a few minutes of searching. So I have no idea whether this is in, for example, the 1.33.0 version that LM Studio just installed.",
+                            "score": 1,
+                            "depth": 2,
+                            "timestamp": "2025-05-25 09:02:06",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Zestyclose_Yak_3174",
+            "body": "Hopefully this works beyond just Gemma 3",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2025-05-20 12:19:35",
+            "replies": []
+        },
+        {
+            "author": "AppearanceHeavy6724",
+            "body": "well I have mixed success with that: first of all, it started recomputing  full prompt every once in a while, which is dam slow; and also I am getting <unused12> token I never observed QAT gemma when used without SWA.",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2025-05-20 13:16:03",
+            "replies": []
+        },
+        {
+            "author": "Deleted",
+            "body": "[removed]",
+            "score": 3,
+            "depth": 0,
+            "timestamp": "2025-05-20 08:39:57",
+            "replies": [
+                {
+                    "author": "agntdrake",
+                    "body": "Yes, Ollama has supported it for over a month. The implementation for Gemma is different between Ollama and llama.cpp.",
+                    "score": 1,
+                    "depth": 1,
+                    "timestamp": "2025-05-21 04:05:21",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "celsowm",
+            "body": "Do I need to use any additional parameter?",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-05-20 13:22:19",
+            "replies": []
+        },
+        {
+            "author": "MelodicRecognition7",
+            "body": "as with many other things in this sub, the people are happy and such but when I try that thing myself it appears to be a fucked up crap lol. I have to use `--swa-full` to unfuck the model and the VRAM usage becomes even higher than before the \"fix\".",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-06-19 05:09:47",
+            "replies": []
+        },
+        {
+            "author": "meta_voyager7",
+            "body": "what is kv cache?",
+            "score": 4,
+            "depth": 0,
+            "timestamp": "2025-05-20 03:29:00",
+            "replies": [
+                {
+                    "author": "Evening_Ad6637",
+                    "body": "Key-value Cache. In llamacpp for example you can control at which quantization those information should be stored and processed",
+                    "score": 9,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 04:14:10",
+                    "replies": []
+                },
+                {
+                    "author": "LinkSea8324",
+                    "body": "It's the memory used for the context",
+                    "score": 8,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 04:45:48",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "a_beautiful_rhind",
+            "body": "I must be terrible because I never even noticed. Running Q8/Q6 27b, it just used 2 cards anyway and all the context fit.\n\nSWA is horrible, btw. Makes the model pay attention to context even less. Every model with it has done such.",
+            "score": 2,
+            "depth": 0,
+            "timestamp": "2025-05-20 09:34:54",
+            "replies": []
+        },
+        {
+            "author": "NeoChen1024",
+            "body": "Would be great if this is implemented on vLLM/SGLang.",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-20 11:50:12",
+            "replies": []
+        },
+        {
+            "author": "Green-Ad-3964",
+            "body": "Slightly ot, can vllm do this?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-21 02:46:25",
+            "replies": []
+        },
+        {
+            "author": "Capital-Drag-8820",
+            "body": "Can anyone point to the actual PR? Or how to use sliding window attention? Also, do you think I can run this on an Android phone using Llama.cpp and termux?",
+            "score": 1,
+            "depth": 0,
+            "timestamp": "2025-05-31 06:21:04",
+            "replies": []
+        },
+        {
+            "author": "No_Pomegranate1844",
+            "body": "Sliding window isn't an old technique? Instead they should be implementing sparse attention?",
+            "score": 0,
+            "depth": 0,
+            "timestamp": "2025-05-20 08:42:34",
+            "replies": [
+                {
+                    "author": "datbackup",
+                    "body": "I know how to use question marks?",
+                    "score": 2,
+                    "depth": 1,
+                    "timestamp": "2025-05-20 18:12:07",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}
