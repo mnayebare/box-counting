@@ -66,7 +66,7 @@ def create_fractal_dimension_plot(combined_df, save_path=None):
     )
     
     # Customize the plot for publication standards
-    ax.set_title('Fractal Dimensions Distribution:\nHighly vs Poorly Branched Conversations', 
+    ax.set_title('Fractal Dimensions Distribution:\nControversial Vs Technical Posts', 
                  fontsize=14, fontweight='bold', pad=15)
     ax.set_xlabel('Category', fontsize=12, fontweight='bold')
     ax.set_ylabel('Fractal Dimension', fontsize=12, fontweight='bold')
@@ -131,12 +131,12 @@ def compare_groups(combined_df):
     print(f"  Difference in means: {abs(original_fractal.mean() - subtree_fractal.mean()):.4f}")
     
     # Compare Poorly vs Richly Branching
-    poorly_fractal = combined_df[combined_df['conversation_type'] == 'poorly branching']['fractal_dimension']
-    richly_fractal = combined_df[combined_df['conversation_type'] == 'richly branching']['fractal_dimension']
+    poorly_fractal = combined_df[combined_df['conversation_type'] == 'technical']['fractal_dimension']
+    richly_fractal = combined_df[combined_df['conversation_type'] == 'controversial']['fractal_dimension']
     
-    print(f"\nPoorly vs Richly Branching:")
-    print(f"  Poorly Branching - Mean: {poorly_fractal.mean():.4f}, Std: {poorly_fractal.std():.4f}")
-    print(f"  Richly Branching - Mean: {richly_fractal.mean():.4f}, Std: {richly_fractal.std():.4f}")
+    print(f"\nControversial vs Technical Posts:")
+    print(f"  Controversial - Mean: {poorly_fractal.mean():.4f}, Std: {poorly_fractal.std():.4f}")
+    print(f"  Technical - Mean: {richly_fractal.mean():.4f}, Std: {richly_fractal.std():.4f}")
     print(f"  Difference in means: {abs(poorly_fractal.mean() - richly_fractal.mean()):.4f}")
 
 def main():
@@ -144,7 +144,7 @@ def main():
     Main function to run the fractal dimension analysis
     """
     # File paths - update these to match your CSV file names
-    original_posts_file = "original_posts_fractal_analysis_results.csv"
+    original_posts_file = "original_posts_fractal_analysis.csv"
     subtree_file = "subtree_fractal_analysis.csv"
     
     try:

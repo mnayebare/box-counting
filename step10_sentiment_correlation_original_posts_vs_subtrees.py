@@ -234,8 +234,8 @@ def main():
     tst_agg = aggregate_post_level_sentiment(tst_df, "TST Subtrees")
     
     # Perform correlation analysis for each conversation type
-    richly_results = create_correlation_analysis(original_agg, tst_agg, 'richly branching')
-    poorly_results = create_correlation_analysis(original_agg, tst_agg, 'poorly branching')
+    richly_results = create_correlation_analysis(original_agg, tst_agg, 'controversial')
+    poorly_results = create_correlation_analysis(original_agg, tst_agg, 'technical')
     
     # Create visualization
     create_correlation_plots(richly_results, poorly_results)

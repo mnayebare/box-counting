@@ -88,7 +88,7 @@ def load_and_analyze_data(original_posts_file, subtree_file):
 
 def analyze_conversation_type(df, type_column, data_type):
     """
-    Analyze conversation data by type (richly vs poorly branching)
+    Analyze conversation data by type (controversial vs technnical branching)
     """
     results = {}
     
@@ -105,14 +105,12 @@ def analyze_conversation_type(df, type_column, data_type):
             'total_comments': {
                 'sum': subset['total_comments'].sum(),
                 'mean': subset['total_comments'].mean(),
-                'median': subset['total_comments'].median(),
                 'std': subset['total_comments'].std(),
                 'min': subset['total_comments'].min(),
                 'max': subset['total_comments'].max()
             },
             'avg_words_per_comment': {
                 'mean': subset['avg_words_per_comment'].mean(),
-                'median': subset['avg_words_per_comment'].median(),
                 'std': subset['avg_words_per_comment'].std(),
                 'min': subset['avg_words_per_comment'].min(),
                 'max': subset['avg_words_per_comment'].max()
@@ -138,37 +136,33 @@ def create_research_table(original_analysis, subtree_analysis):
     table_data = []
     
     # Original Posts - Controversial Posts
-    rich_orig = original_analysis['controversial posts']
+    rich_orig = original_analysis['controversial']
     table_data.append([
         'Controversial Posts',
         f"{rich_orig['total_comments']['sum']:.0f}",
         f"{rich_orig['total_comments']['mean']:.1f}",
         f"{rich_orig['total_words']['sum']:.0f}",
         f"{rich_orig['total_words']['mean']:.0f}",
-        f"{rich_orig['total_words']['median']:.0f}",
         f"({rich_orig['total_words']['std']:.0f})",
         f"{rich_orig['avg_words_per_comment']['mean']:.1f}",
-        f"{rich_orig['avg_words_per_comment']['median']:.1f}",
         f"({rich_orig['avg_words_per_comment']['std']:.1f})"
     ])
     
     # Original Posts - Technical Posts
-    poor_orig = original_analysis['technical posts']
+    poor_orig = original_analysis['technical']
     table_data.append([
         'Technical Posts',
         f"{poor_orig['total_comments']['sum']:.0f}",
         f"{poor_orig['total_comments']['mean']:.1f}",
         f"{poor_orig['total_words']['sum']:.0f}",
         f"{poor_orig['total_words']['mean']:.0f}",
-        f"{poor_orig['total_words']['median']:.0f}",
         f"({poor_orig['total_words']['std']:.0f})",
         f"{poor_orig['avg_words_per_comment']['mean']:.1f}",
-        f"{poor_orig['avg_words_per_comment']['median']:.1f}",
         f"({poor_orig['avg_words_per_comment']['std']:.1f})"
     ])
     
     # Subtrees - Richly Branching
-    rich_sub = subtree_analysis['controversial posts']
+    rich_sub = subtree_analysis['controversial']
     table_data.append([
         'Subtrees',
         'Controversial Posts',
@@ -176,26 +170,22 @@ def create_research_table(original_analysis, subtree_analysis):
         f"{rich_sub['total_comments']['mean']:.1f}",
         f"{rich_sub['total_words']['sum']:.0f}",
         f"{rich_sub['total_words']['mean']:.0f}",
-        f"{rich_sub['total_words']['median']:.0f}",
         f"({rich_sub['total_words']['std']:.0f})",
         f"{rich_sub['avg_words_per_comment']['mean']:.1f}",
-        f"{rich_sub['avg_words_per_comment']['median']:.1f}",
         f"({rich_sub['avg_words_per_comment']['std']:.1f})"
     ])
     
     # Subtrees - Poorly Branching
-    poor_sub = subtree_analysis['technical posts']
+    poor_sub = subtree_analysis['technical']
     table_data.append([
-        '',
+        'Subtrees',
         'Technical Posts',
         f"{poor_sub['total_comments']['sum']:.0f}",
         f"{poor_sub['total_comments']['mean']:.1f}",
         f"{poor_sub['total_words']['sum']:.0f}",
         f"{poor_sub['total_words']['mean']:.0f}",
-        f"{poor_sub['total_words']['median']:.0f}",
         f"({poor_sub['total_words']['std']:.0f})",
         f"{poor_sub['avg_words_per_comment']['mean']:.1f}",
-        f"{poor_sub['avg_words_per_comment']['median']:.1f}",
         f"({poor_sub['avg_words_per_comment']['std']:.1f})"
     ])
     
@@ -204,14 +194,12 @@ def create_research_table(original_analysis, subtree_analysis):
         'Dataset',
         'Conversation Type',
         'Total Comments',
-        'Total Comments\n(Mean)',
+        'Total Comments(Mean)',
         'Total Words',
-        'Total Words\n(Mean)',
-        'Total Words\n(Median)',
-        'Total Words\n(SD)',
-        'Avg Words/Comment\n(Mean)',
-        'Avg Words/Comment\n(Median)',
-        'Avg Words/Comment\n(SD)'
+        'Total Words(Mean)',
+        'Total Words(SD)',
+        'Avg Words/Comment(Mean)',
+        'Avg Words/Comment(SD)'
     ]
     
     df_table = pd.DataFrame(table_data, columns=columns)
@@ -302,7 +290,7 @@ def print_research_table(table_df):
     Print a nicely formatted research table
     """
     print("=" * 140)
-    print("CONVERSATION ENGAGEMENT ANALYSIS: CONTROVERSIAL VS TECHNICAL CONVERSATIONS")
+    print("CONVERSATION ENGAGEMENT ANALYSIS: CONTROVERSIAL VS TECHNICAL POSTS")
     print("=" * 140)
     print()
     
@@ -355,11 +343,11 @@ def create_visualization(original_posts, subtree_data):
     fig, axes = plt.subplots(2, 3, figsize=(18, 12))
     
     # Original Posts - Total Comments
-    rich_orig = original_posts[original_posts['conversation_type'] == 'controvrsial posts']
+    rich_orig = original_posts[original_posts['conversation_type'] == 'controversial posts']
     poor_orig = original_posts[original_posts['conversation_type'] == 'technical posts']
     
     axes[0,0].boxplot([rich_orig['total_comments'], poor_orig['total_comments']], 
-                      tick_labels=['Controversial Posts', 'Technical Posts'])
+                      tick_labels=['Controversial', 'Technical'])
     axes[0,0].set_title('Original Posts: Total Comments')
     axes[0,0].set_ylabel('Total Comments')
     
@@ -367,13 +355,13 @@ def create_visualization(original_posts, subtree_data):
     rich_orig_words = rich_orig['total_comments'] * rich_orig['avg_words_per_comment']
     poor_orig_words = poor_orig['total_comments'] * poor_orig['avg_words_per_comment']
     axes[0,1].boxplot([rich_orig_words, poor_orig_words], 
-                      tick_labels=['Controversial Posts', 'Technical Posts'])
+                      tick_labels=['Controversial', 'Technical'])
     axes[0,1].set_title('Original Posts: Total Words')
     axes[0,1].set_ylabel('Total Words')
     
     # Original Posts - Average Words per Comment
     axes[0,2].boxplot([rich_orig['avg_words_per_comment'], poor_orig['avg_words_per_comment']], 
-                      tick_labels=['Controversial Posts', 'Technical Posts'])
+                      tick_labels=['Controversial', 'Technical'])
     axes[0,2].set_title('Original Posts: Average Words per Comment')
     axes[0,2].set_ylabel('Average Words per Comment')
     
@@ -381,11 +369,11 @@ def create_visualization(original_posts, subtree_data):
     subtree_type_column = 'conversation_type' if 'conversation_type' in subtree_data.columns else 'conversation_type'
     
     # Subtrees - Total Comments
-    rich_sub = subtree_data[subtree_data[subtree_type_column] == 'richly branching']
-    poor_sub = subtree_data[subtree_data[subtree_type_column] == 'poorly branching']
+    rich_sub = subtree_data[subtree_data[subtree_type_column] == 'controversial']
+    poor_sub = subtree_data[subtree_data[subtree_type_column] == 'technical']
     
     axes[1,0].boxplot([rich_sub['total_comments'], poor_sub['total_comments']], 
-                      tick_labels=['Controversial Posts', 'Technical Posts'])
+                      tick_labels=['Controversial', 'Technical'])
     axes[1,0].set_title('Subtrees: Total Comments')
     axes[1,0].set_ylabel('Total Comments')
     
@@ -393,13 +381,13 @@ def create_visualization(original_posts, subtree_data):
     rich_sub_words = rich_sub['total_comments'] * rich_sub['avg_words_per_comment']
     poor_sub_words = poor_sub['total_comments'] * poor_sub['avg_words_per_comment']
     axes[1,1].boxplot([rich_sub_words, poor_sub_words], 
-                      tick_labels=['Controversial Posts', 'Technical Posts'])
+                      tick_labels=['Controversial', 'Technical'])
     axes[1,1].set_title('Subtrees: Total Words')
     axes[1,1].set_ylabel('Total Words')
     
     # Subtrees - Average Words per Comment
     axes[1,2].boxplot([rich_sub['avg_words_per_comment'], poor_sub['avg_words_per_comment']], 
-                      tick_labels=['Richly Branching', 'Poorly Branching'])
+                      tick_labels=['Controversial', 'Technical'])
     axes[1,2].set_title('Subtrees: Average Words per Comment')
     axes[1,2].set_ylabel('Average Words per Comment')
     
@@ -446,10 +434,3 @@ def main():
 # Example usage
 if __name__ == "__main__":
     research_table = main()
-    
-    # Optional: Save the table to CSV
-    # research_table.to_csv('conversation_analysis_research_table.csv', index=False)
-    
-    # Optional: Export as LaTeX for academic papers
-    # print("\nLaTeX Table Code:")
-    # print(research_table.to_latex(index=False, escape=False))

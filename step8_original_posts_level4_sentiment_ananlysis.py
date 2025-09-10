@@ -123,7 +123,7 @@ class GeneralSentimentAnalyzer:
                     data = json.load(f)
                 
                 post_id = json_file.replace('_reddit_comments_with_time.json', '').replace('.json', '')
-                conversation_type = "richly branching" if "hb" in post_id.lower() else "poorly branching"
+                conversation_type = "controversial" if "con" in post_id.lower() else "technical"
                 
                 conversations.append({
                     'post_id': post_id,
@@ -525,7 +525,7 @@ class GeneralSentimentAnalyzer:
                               alpha=0.4, s=8, edgecolors='none')
             
             # Bold, research-appropriate styling
-            title_text = f'{conv_type.replace("richly branching", "High Branching").replace("poorly branching", "Low Branching")}'
+            title_text = f'{conv_type.replace("controversial","controversial posts").replace("technical", "technial posts")}'
             ax.set_title(title_text, fontweight='bold', fontsize=12, pad=10)
             ax.set_ylabel('VADER Compound Score', fontweight='bold', fontsize=11)
             ax.set_xlabel('Comment Level', fontweight='bold', fontsize=11)

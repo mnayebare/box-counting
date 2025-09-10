@@ -30,7 +30,7 @@ plt.rcParams.update({
 })
 
 # Load the datasets
-original_posts_df = pd.read_csv('original_posts_fractal_analysis_results.csv')
+original_posts_df = pd.read_csv('original_posts_fractal_analysis.csv')
 subtree_df = pd.read_csv('subtree_fractal_analysis.csv')
 
 # Clean column names (remove any whitespace)
@@ -54,8 +54,8 @@ def analyze_correlation(conversation_type_name, original_df, subtree_df):
     return merged_data
 
 # Analyze correlations for both conversation types
-richly_branching_data = analyze_correlation('richly branching', original_posts_df, subtree_df)
-poorly_branching_data = analyze_correlation('poorly branching', original_posts_df, subtree_df)
+richly_branching_data = analyze_correlation('controversial', original_posts_df, subtree_df)
+poorly_branching_data = analyze_correlation('technical', original_posts_df, subtree_df)
 
 # Create the correlation plots with black and white styling
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))
@@ -73,7 +73,7 @@ if not richly_branching_data.empty:
                           richly_branching_data['fractal_dimension_subtree'], 
                           alpha=0.8, color=rich_color, s=80, 
                           edgecolors='black', linewidth=1.0, 
-                          marker='o', label='Richly Branching')
+                          marker='o', label='Controversial Posts')
     
     # Calculate correlation
     pearson_r_rich, p_value_rich = pearsonr(richly_branching_data['fractal_dimension_original'], 
@@ -92,7 +92,7 @@ if not richly_branching_data.empty:
     ax1.set_ylabel('Subtree Fractal Dimension', fontweight='bold', fontsize=16)
     
     # Enhanced title with statistical information
-    title_text = f'Richly Branching Conversations\nr = {pearson_r_rich:.3f}, p = {p_value_rich:.3f}, n = {len(richly_branching_data)}'
+    title_text = f'Controversial Posts\nr = {pearson_r_rich:.3f}, p = {p_value_rich:.3f}, n = {len(richly_branching_data)}'
     ax1.set_title(title_text, fontweight='bold', fontsize=16, pad=20)
     
     # Enhanced grid with gray color
@@ -108,7 +108,7 @@ else:
     ax1.text(0.5, 0.5, 'No richly branching data found', 
              ha='center', va='center', transform=ax1.transAxes, 
              fontweight='bold', fontsize=14, color='black')
-    ax1.set_title('Richly Branching Conversations - No Data', fontweight='bold')
+    ax1.set_title('Controversial Conversations - No Data', fontweight='bold')
 
 # Graph 2: Poorly Branching Conversations
 if not poorly_branching_data.empty:
@@ -117,7 +117,7 @@ if not poorly_branching_data.empty:
                           poorly_branching_data['fractal_dimension_subtree'], 
                           alpha=1.0, facecolors=poor_color, s=80, 
                           edgecolors='black', linewidth=1.5, 
-                          marker='o', label='Poorly Branching')  # Round markers
+                          marker='o', label='Technical Posts')  # Round markers
     
     # Calculate correlation
     pearson_r_poor, p_value_poor = pearsonr(poorly_branching_data['fractal_dimension_original'], 
@@ -136,7 +136,7 @@ if not poorly_branching_data.empty:
     ax2.set_ylabel('Subtree Fractal Dimension', fontweight='bold', fontsize=16)
     
     # Enhanced title with statistical information
-    title_text = f'Poorly Branching Conversations\nr = {pearson_r_poor:.3f}, p = {p_value_poor:.3f}, n = {len(poorly_branching_data)}'
+    title_text = f'Technical Posts\nr = {pearson_r_poor:.3f}, p = {p_value_poor:.3f}, n = {len(poorly_branching_data)}'
     ax2.set_title(title_text, fontweight='bold', fontsize=16, pad=20)
     
     # Enhanced grid with gray color
@@ -152,7 +152,7 @@ else:
     ax2.text(0.5, 0.5, 'No poorly branching data found', 
              ha='center', va='center', transform=ax2.transAxes,
              fontweight='bold', fontsize=14, color='black')
-    ax2.set_title('Poorly Branching Conversations - No Data', fontweight='bold')
+    ax2.set_title('Technical Conversations - No Data', fontweight='bold')
 
 # Add overall figure title
 fig.suptitle('Fractal Dimension Correlation Analysis: Original Posts vs. Subtrees', 
@@ -166,20 +166,9 @@ plt.savefig('fractal_dimension_correlation_analysis_bw.png',
             dpi=600, bbox_inches='tight', 
             facecolor='white', edgecolor='black',
             format='png')
-plt.savefig('fractal_dimension_correlation_analysis_bw.pdf', 
-            bbox_inches='tight', 
-            facecolor='white', edgecolor='black',
-            format='pdf')
-plt.savefig('fractal_dimension_correlation_analysis_bw.svg', 
-            bbox_inches='tight', 
-            facecolor='white', edgecolor='black',
-            format='svg')
 
 print("Enhanced BLACK AND WHITE correlation plots saved as:")
 print("- fractal_dimension_correlation_analysis_bw.png (600 DPI, publication quality)")
-print("- fractal_dimension_correlation_analysis_bw.pdf (vector format)")
-print("- fractal_dimension_correlation_analysis_bw.svg (vector format, ideal for journals)")
-
 plt.show()
 
 # Print detailed statistics with enhanced formatting
@@ -187,7 +176,7 @@ print("="*80)
 print("FRACTAL DIMENSION CORRELATION ANALYSIS - RESEARCH SUMMARY")
 print("="*80)
 
-print("\n1. RICHLY BRANCHING CONVERSATIONS:")
+print("\n1. CONTROVERSIAL CONVERSATIONS:")
 if not richly_branching_data.empty:
     print(f"   Sample size (n): {len(richly_branching_data)}")
     print(f"   Pearson correlation coefficient (r): {pearson_r_rich:.4f}")
@@ -223,7 +212,7 @@ if not richly_branching_data.empty:
 else:
     print("   No data available")
 
-print("\n2. POORLY BRANCHING CONVERSATIONS:")
+print("\n2. TECHNICAL CONVERSATIONS:")
 if not poorly_branching_data.empty:
     print(f"   Sample size (n): {len(poorly_branching_data)}")
     print(f"   Pearson correlation coefficient (r): {pearson_r_poor:.4f}")
@@ -269,7 +258,7 @@ print(f"   {subtree_df['conversation_type'].value_counts().to_dict()}")
 # Create a summary dataframe for easy reference with enhanced formatting
 if not richly_branching_data.empty and not poorly_branching_data.empty:
     summary_data = {
-        'Conversation_Type': ['Richly Branching', 'Poorly Branching'],
+        'Conversation_Type': ['Controversial', 'Technical'],
         'Sample_Size': [len(richly_branching_data), len(poorly_branching_data)],
         'Pearson_r': [pearson_r_rich, pearson_r_poor],
         'Pearson_p_value': [p_value_rich, p_value_poor],

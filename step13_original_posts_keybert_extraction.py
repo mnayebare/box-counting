@@ -27,10 +27,10 @@ def load_conversations_from_folder(folder_path):
             
             # Determine conversation type based on post_id
             conversation_type = ""
-            if "hb" in post_id.lower():
-                conversation_type = "richly branching"
-            elif "lb" in post_id.lower():
-                conversation_type = "poorly branching"
+            if "con" in post_id.lower():
+                conversation_type = "controversial"
+            elif "tec" in post_id.lower():
+                conversation_type = "technical"
             else:
                 conversation_type = "unknown"
             
@@ -93,7 +93,7 @@ def extract_replies_recursive(comment, replies_list, level=0, max_level=None):
 
 def main():
     # Read the CSV file
-    df = pd.read_csv('original_posts_fractal_analysis_results.csv')
+    df = pd.read_csv('original_posts_fractal_analysis.csv')
 
     # Display basic information about the dataset
     print("Dataset Info:")
@@ -105,14 +105,14 @@ def main():
     # Sort by fractal_dimension to get highest and lowest values
     df_sorted = df.sort_values('fractal_dimension', ascending=False)
 
-    # Get top 10 posts with highest fractal dimension
-    top_10_highest = df_sorted.head(10)[['post_id', 'fractal_dimension', 'conversation_type', 'thread_title']]
+    # Get top 42 posts with highest fractal dimension
+    top_10_highest = df_sorted.head(42)[['post_id', 'fractal_dimension', 'conversation_type', 'thread_title']]
 
     # Get top 10 posts with lowest fractal dimension
-    top_10_lowest = df_sorted.tail(10)[['post_id', 'fractal_dimension', 'conversation_type', 'thread_title']]
+    top_10_lowest = df_sorted.tail(42)[['post_id', 'fractal_dimension', 'conversation_type', 'thread_title']]
 
     print("\n" + "="*80)
-    print("TOP 10 POSTS WITH HIGHEST FRACTAL DIMENSION")
+    print("TOP 42 POSTS WITH HIGHEST FRACTAL DIMENSION")
     print("="*80)
     for i, row in top_10_highest.iterrows():
         print(f"{i + 1:2d}. Post ID: {row['post_id']}")
@@ -122,7 +122,7 @@ def main():
         print()
 
     print("\n" + "="*80)
-    print("TOP 10 POSTS WITH LOWEST FRACTAL DIMENSION")
+    print("TOP 42 POSTS WITH LOWEST FRACTAL DIMENSION")
     print("="*80)
     # Sort the lowest in ascending order for better readability
     top_10_lowest_sorted = top_10_lowest.sort_values('fractal_dimension', ascending=True)
@@ -172,13 +172,13 @@ def main():
         for json_post_id in conversations_dict.keys():
             if json_post_id == post_id:  # Exact match with the prefix
                 matched_posts.append((post_id, json_post_id))
-                print(f"✓ Exact match: {post_id}")
+                print(f"Exact match: {post_id}")
                 found_match = True
                 break
         
         if not found_match:
             unmatched_posts.append(post_id)
-            print(f"✗ No exact match found for: {post_id}")
+            print(f"No exact match found for: {post_id}")
     
     print(f"\nMatching summary:")
     print(f"  Matched: {len(matched_posts)} posts")
@@ -286,7 +286,7 @@ def main():
     # Save to CSV
     output_filename = 'fractal_dimension_replies_analysis.csv'
     final_df.to_csv(output_filename, index=False)
-    print(f"\n✓ Results saved to: {output_filename}")
+    print(f"\nResults saved to: {output_filename}")
     
     return final_df, highest_post_ids, lowest_post_ids
 

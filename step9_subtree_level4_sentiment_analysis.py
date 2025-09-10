@@ -122,7 +122,7 @@ class TSTSentimentAnalyzer:
                     data = json.load(f)
                 
                 post_id = json_file.replace('_reddit_comments_with_time.json', '').replace('.json', '')
-                conversation_type = "richly branching" if "hb" in post_id.lower() else "poorly branching"
+                conversation_type = "controversial" if "con" in post_id.lower() else "technical"
                 
                 conversations.append({
                     'post_id': post_id,

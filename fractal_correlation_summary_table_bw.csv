@@ -1,0 +1,3 @@
+Conversation_Type,Sample_Size,Pearson_r,Pearson_p_value,Original_Mean_FD,Original_SD_FD,Subtree_Mean_FD,Subtree_SD_FD
+Controversial,55,0.7447,0.0,1.3732,0.147,1.0565,0.2684
+Technical,45,0.7489,0.0,0.8211,0.2792,0.4814,0.2435
