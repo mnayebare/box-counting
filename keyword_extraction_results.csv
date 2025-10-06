@@ -55,7 +55,7 @@ lowest,search methods,0.3943
 lowest,dense retrieval,0.3937
 lowest,contrastive,0.3926
 lowest,x_ contrastive,0.3911
-lowest,15 decontextualization,0.389
 lowest,faster search,0.3853
 lowest,search improves,0.3852
 lowest,decoder good,0.3841
+lowest,bm25 search,0.3838

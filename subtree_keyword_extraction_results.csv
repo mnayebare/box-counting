@@ -22,8 +22,8 @@ highest,racist discriminating,0.5131
 highest,trained racist,0.5123
 highest,racism results,0.5108
 highest,reinforce racism,0.5107
-highest,sentencing aí,0.5102
 highest,sentencing ai,0.5102
+highest,sentencing aí,0.5102
 highest,biases race,0.5089
 highest,discrimination racism,0.5087
 highest,causes racism,0.5075
@@ -56,6 +56,6 @@ lowest,normally sampler,0.3558
 lowest,samples lie,0.349
 lowest,randomly sample,0.3476
 lowest,unseen sample,0.3469
-lowest,efficient tune,0.3448
 lowest,tune models,0.3412
 lowest,thousand samples,0.3359
+lowest,1m samples,0.3357

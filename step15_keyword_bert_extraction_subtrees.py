@@ -200,11 +200,11 @@ def main():
     # Sort by fractal_dimension to get highest and lowest values
     df_sorted = df.sort_values('fractal_dimension', ascending=False)
 
-    # Get top 42 posts with highest fractal dimension
-    top_10_highest = df_sorted.head(42)[['post_id', 'fractal_dimension', 'conversation_type', 'thread_title']]
+    # Get top 40 posts with highest fractal dimension
+    top_10_highest = df_sorted.head(40)[['post_id', 'fractal_dimension', 'conversation_type', 'thread_title']]
 
-    # Get top 42 posts with lowest fractal dimension
-    top_10_lowest = df_sorted.tail(42)[['post_id', 'fractal_dimension', 'conversation_type', 'thread_title']]
+    # Get top 40 posts with lowest fractal dimension
+    top_10_lowest = df_sorted.tail(40)[['post_id', 'fractal_dimension', 'conversation_type', 'thread_title']]
 
     print("\n" + "="*80)
     print("TOP 10 POSTS WITH HIGHEST FRACTAL DIMENSION")

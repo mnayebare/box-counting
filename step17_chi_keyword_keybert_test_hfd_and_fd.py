@@ -230,70 +230,6 @@ def dimension_type_analysis(original_file, subtree_file):
     
     return pd.DataFrame(dimension_results)
 
-def visualize_results(results_dict, overlap_keywords):
-    """
-    Create visualizations of the convergence analysis.
-    """
-    
-    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(15, 12))
-    
-    # 1. Observed vs Expected overlap
-    categories = ['Expected\n(Random)', 'Observed\n(Actual)']
-    values = [results_dict['expected_overlap'], results_dict['observed_overlap']]
-    colors = ['lightcoral', 'steelblue']
-    
-    bars1 = ax1.bar(categories, values, color=colors, alpha=0.7)
-    ax1.set_ylabel('Number of Overlapping Keywords')
-    ax1.set_title('Expected vs Observed Keyword Overlap')
-    ax1.grid(axis='y', alpha=0.3)
-    
-    # Add value labels on bars
-    for bar, value in zip(bars1, values):
-        ax1.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.5, 
-                f'{value:.1f}', ha='center', va='bottom', fontweight='bold')
-    
-    # 2. P-value significance
-    p_val = results_dict['p_value']
-    significance_levels = [0.05, 0.01, 0.001]
-    significance_labels = ['p < 0.05', 'p < 0.01', 'p < 0.001']
-    colors_sig = ['yellow', 'orange', 'red']
-    
-    ax2.barh(range(len(significance_levels)), significance_levels, color=colors_sig, alpha=0.5)
-    ax2.axvline(x=p_val, color='blue', linestyle='--', linewidth=3, label=f'Actual p-value: {p_val:.4f}')
-    ax2.set_yticks(range(len(significance_levels)))
-    ax2.set_yticklabels(significance_labels)
-    ax2.set_xlabel('P-value')
-    ax2.set_title('Statistical Significance Test')
-    ax2.legend()
-    ax2.grid(axis='x', alpha=0.3)
-    
-    # 3. Keyword overlap heatmap (simplified)
-    overlap_data = np.array([[len(overlap_keywords), 60-len(overlap_keywords)],
-                            [60-len(overlap_keywords), 107-60-60+len(overlap_keywords)]])
-    
-    sns.heatmap(overlap_data, annot=True, fmt='d', cmap='Blues',
-                xticklabels=['In Subtree', 'Not in Subtree'],
-                yticklabels=['In Original', 'Not in Original'], ax=ax3)
-    ax3.set_title('Keyword Distribution Heatmap')
-    
-    # 4. Chi-square interpretation
-    chi_sq = results_dict['chi_square']
-    critical_values = [3.841, 6.635, 10.828]  # for df=1
-    critical_labels = ['p=0.05', 'p=0.01', 'p=0.001']
-    
-    ax4.barh(range(len(critical_values)), critical_values, color='lightgray', alpha=0.7)
-    ax4.axvline(x=chi_sq, color='red', linestyle='-', linewidth=3, 
-               label=f'Chi-square: {chi_sq:.3f}')
-    ax4.set_yticks(range(len(critical_values)))
-    ax4.set_yticklabels(critical_labels)
-    ax4.set_xlabel('Chi-square Value')
-    ax4.set_title('Chi-square Critical Values')
-    ax4.legend()
-    ax4.grid(axis='x', alpha=0.3)
-    
-    plt.tight_layout()
-    plt.show()
-
 # Main analysis function
 def main():
     """
@@ -320,9 +256,7 @@ def main():
         print(f"\n=== OVERLAPPING KEYWORDS ({len(overlap)}) ===")
         for i, keyword in enumerate(sorted(overlap), 1):
             print(f"{i:2d}. {keyword}")
-        
-        # Visualizations
-        visualize_results(independence_results, overlap)
+    
         
         # Summary
         print(f"\n=== RESEARCH IMPLICATIONS ===")

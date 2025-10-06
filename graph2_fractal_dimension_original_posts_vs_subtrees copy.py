@@ -18,22 +18,25 @@ def load_and_prepare_data(original_posts_file, subtree_file):
     # Combine the datasets
     combined_df = pd.concat([original_df, subtree_df], ignore_index=True)
     
+    # Create category labels for plotting
+    combined_df['category'] = combined_df['data_source'] + '\n' + combined_df['conversation_type'].str.title()
+    
     return combined_df, original_df, subtree_df
 
 def create_fractal_dimension_plot(combined_df, save_path=None):
     """
-    Create box plot comparing fractal dimensions by conversation type only - formatted for research paper
+    Create box plot comparing fractal dimensions only - formatted for research paper
     """
     # Set up the plot style for publication
     plt.style.use('default')
     
     # Create figure with appropriate aspect ratio for box plots
-    fig, ax = plt.subplots(1, 1, figsize=(8, 6))
+    fig, ax = plt.subplots(1, 1, figsize=(6, 5))
     
     # Create grayscale box plot with white background
     box_plot = sns.boxplot(
         data=combined_df, 
-        x='conversation_type', 
+        x='category', 
         y='fractal_dimension',
         ax=ax,
         color='white',  # White background for boxes
@@ -54,24 +57,21 @@ def create_fractal_dimension_plot(combined_df, save_path=None):
     # Overlay individual points in black
     sns.stripplot(
         data=combined_df, 
-        x='conversation_type', 
+        x='category', 
         y='fractal_dimension',
         ax=ax,
-        size=4,  # Slightly larger points for visibility
+        size=3,  # Smaller points
         alpha=0.6,
         color='black'
     )
     
     # Customize the plot for publication standards
-    ax.set_title('Fractal Dimensions Distribution:\nControversial vs Technical Posts', 
+    ax.set_title('Fractal Dimensions Distribution:\nControversial Vs Technical Posts', 
                  fontsize=14, fontweight='bold', pad=15)
-    ax.set_xlabel('Conversation Type', fontsize=12, fontweight='bold')
+    ax.set_xlabel('Category', fontsize=12, fontweight='bold')
     ax.set_ylabel('Fractal Dimension', fontsize=12, fontweight='bold')
     ax.grid(True, alpha=0.3, linestyle='--', linewidth=0.5, color='black')
-    
-    # Capitalize the x-axis labels
-    ax.set_xticklabels([label.get_text().title() for label in ax.get_xticklabels()])
-    ax.tick_params(axis='x', labelsize=11)
+    ax.tick_params(axis='x', rotation=45, labelsize=10)
     ax.tick_params(axis='y', labelsize=10)
     
     # Add border around the entire plot
@@ -94,17 +94,17 @@ def create_fractal_dimension_plot(combined_df, save_path=None):
 
 def print_fractal_summary_statistics(combined_df):
     """
-    Print summary statistics for fractal dimensions by conversation type
+    Print summary statistics for fractal dimensions only
     """
     print("=" * 80)
-    print("FRACTAL DIMENSION SUMMARY STATISTICS BY CONVERSATION TYPE")
+    print("FRACTAL DIMENSION SUMMARY STATISTICS")
     print("=" * 80)
     
-    for conv_type in combined_df['conversation_type'].unique():
-        data = combined_df[combined_df['conversation_type'] == conv_type]
+    for category in combined_df['category'].unique():
+        data = combined_df[combined_df['category'] == category]
         fractal_data = data['fractal_dimension']
         
-        print(f"\n{conv_type.upper()} POSTS:")
+        print(f"\n{category}:")
         print(f"  Count: {len(data)}")
         print(f"  Mean: {fractal_data.mean():.4f}")
         print(f"  Median: {fractal_data.median():.4f}")
@@ -113,61 +113,31 @@ def print_fractal_summary_statistics(combined_df):
         print(f"  Q1: {fractal_data.quantile(0.25):.4f}")
         print(f"  Q3: {fractal_data.quantile(0.75):.4f}")
 
-def compare_conversation_types(combined_df):
+def compare_groups(combined_df):
     """
-    Compare fractal dimensions between controversial and technical posts
+    Compare fractal dimensions between different groups
     """
     print("\n" + "=" * 80)
-    print("CONVERSATION TYPE COMPARISON")
+    print("GROUP COMPARISONS")
     print("=" * 80)
     
-    # Compare Controversial vs Technical
-    controversial_fractal = combined_df[combined_df['conversation_type'] == 'controversial']['fractal_dimension']
-    technical_fractal = combined_df[combined_df['conversation_type'] == 'technical']['fractal_dimension']
+    # Compare Original Posts vs Subtrees
+    original_fractal = combined_df[combined_df['data_source'] == 'Original Posts']['fractal_dimension']
+    subtree_fractal = combined_df[combined_df['data_source'] == 'Subtrees']['fractal_dimension']
+    
+    print(f"\nOriginal Posts vs Subtrees:")
+    print(f"  Original Posts - Mean: {original_fractal.mean():.4f}, Std: {original_fractal.std():.4f}")
+    print(f"  Subtrees - Mean: {subtree_fractal.mean():.4f}, Std: {subtree_fractal.std():.4f}")
+    print(f"  Difference in means: {abs(original_fractal.mean() - subtree_fractal.mean()):.4f}")
+    
+    # Compare Poorly vs Richly Branching
+    poorly_fractal = combined_df[combined_df['conversation_type'] == 'technical']['fractal_dimension']
+    richly_fractal = combined_df[combined_df['conversation_type'] == 'controversial']['fractal_dimension']
     
     print(f"\nControversial vs Technical Posts:")
-    print(f"  Controversial - Mean: {controversial_fractal.mean():.4f}, Std: {controversial_fractal.std():.4f}")
-    print(f"  Technical - Mean: {technical_fractal.mean():.4f}, Std: {technical_fractal.std():.4f}")
-    print(f"  Difference in means: {abs(controversial_fractal.mean() - technical_fractal.mean()):.4f}")
-    
-    # Statistical test
-    from scipy.stats import mannwhitneyu
-    try:
-        statistic, p_value = mannwhitneyu(controversial_fractal, technical_fractal, alternative='two-sided')
-        print(f"  Mann-Whitney U test:")
-        print(f"    U-statistic: {statistic:.2f}")
-        print(f"    p-value: {p_value:.4f}")
-        if p_value < 0.05:
-            print(f"    Result: Statistically significant difference (p < 0.05)")
-        else:
-            print(f"    Result: No statistically significant difference (p ≥ 0.05)")
-    except ImportError:
-        print("  (scipy not available for statistical testing)")
-
-def print_data_breakdown(combined_df):
-    """
-    Print breakdown of data by source and conversation type
-    """
-    print("\n" + "=" * 80)
-    print("DATA BREAKDOWN")
-    print("=" * 80)
-    
-    print(f"\nTotal records: {len(combined_df)}")
-    
-    print(f"\nBy conversation type:")
-    conv_counts = combined_df['conversation_type'].value_counts()
-    for conv_type, count in conv_counts.items():
-        print(f"  {conv_type.title()}: {count}")
-    
-    print(f"\nBy data source:")
-    source_counts = combined_df['data_source'].value_counts()
-    for source, count in source_counts.items():
-        print(f"  {source}: {count}")
-    
-    print(f"\nDetailed breakdown:")
-    breakdown = combined_df.groupby(['conversation_type', 'data_source']).size()
-    for (conv_type, source), count in breakdown.items():
-        print(f"  {conv_type.title()} {source}: {count}")
+    print(f"  Controversial - Mean: {poorly_fractal.mean():.4f}, Std: {poorly_fractal.std():.4f}")
+    print(f"  Technical - Mean: {richly_fractal.mean():.4f}, Std: {richly_fractal.std():.4f}")
+    print(f"  Difference in means: {abs(poorly_fractal.mean() - richly_fractal.mean()):.4f}")
 
 def main():
     """
@@ -185,18 +155,22 @@ def main():
         print(f"Loaded {len(original_df)} original posts and {len(subtree_df)} subtrees")
         print(f"Total records: {len(combined_df)}")
         
-        # Create fractal dimension plot (now shows only 2 box plots)
+        # Create fractal dimension plot
         print("\nCreating fractal dimension comparison plot...")
-        fig = create_fractal_dimension_plot(combined_df, save_path="fractal_dimension_controversial_vs_technical.png")
+        fig = create_fractal_dimension_plot(combined_df, save_path="fractal_dimension_comparison.png")
         
         # Print summary statistics
         print_fractal_summary_statistics(combined_df)
         
-        # Compare conversation types
-        compare_conversation_types(combined_df)
+        # Compare groups
+        compare_groups(combined_df)
         
-        # Print data breakdown
-        print_data_breakdown(combined_df)
+        # Print conversation type distribution
+        print("\n" + "=" * 80)
+        print("DATA DISTRIBUTION")
+        print("=" * 80)
+        distribution = combined_df.groupby(['data_source', 'conversation_type']).size().unstack(fill_value=0)
+        print(distribution)
         
     except FileNotFoundError as e:
         print(f"Error: Could not find CSV file. Please check the file paths.")
